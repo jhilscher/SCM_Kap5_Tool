@@ -8,6 +8,7 @@ namespace ToolFahrrad_v1.Komponenten
 {
     class Arbeitsplatz
     {
+        // Private Felder
         protected int nummer;
         protected int anzSchichten = 1;
         protected int anzUeberMin = 0;
