@@ -13,9 +13,7 @@ namespace ToolFahrrad_v1.Komponenten
         protected int anzSchichten = 1;
         protected int anzUeberMin = 0;
         int warteschlangenZeit = 0;
-        /// <summary>
-        /// benötigte Zeit zur hersetllung von  teil mit der Key nummer
-        /// </summary>
+        // Benoetigte Zeit zur Hersetllung von Teil mit der Key nummer
         private Dictionary<int, int> werkZeit;
         public Dictionary<int, int> WerkZeitJeStk
         {
