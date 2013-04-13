@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace ToolFahrrad_v1.Komponenten
+namespace ToolFahrrad_v1
 {
     /*Abstract class Teil as basic class for inheritance */
     public abstract class Teil
@@ -30,10 +30,14 @@ namespace ToolFahrrad_v1.Komponenten
             this.verbrauchPrognose2 = 0;
         }
         // Getter / Setter
+        public int Nummer
+        {
+            get { return nr; }
+        }
         public string Bezeichnung
         {
-            get { return this.bezeichnung; }
-            set { this.bezeichnung = value; }
+            get { return bezeichnung; }
+            set { bezeichnung = value; }
         }
         public int Lagerstand
         {
@@ -42,7 +46,7 @@ namespace ToolFahrrad_v1.Komponenten
         }
         public string Verwendung
         {
-            get { return this.verwendung; }
+            get { return verwendung; }
             set
             {
                 if (value == "K" || value == "D" || value == "H" || value == "KDH")
@@ -51,39 +55,39 @@ namespace ToolFahrrad_v1.Komponenten
                 }
                 else
                 {
-                    throw new InputException("Bei dem Teil {0} ist eine nicht zulässige Verwendung eingegeben ({1})", this.nr, value);
+                    throw new InputException("Bei dem Teil " + this.nr + " ist eine nicht zulässige Verwendung eingegeben (" + value + ")");
                 }
             }
         }
         public int Pufferwert
         {
-            get { return this.pufferwert; }
-            set { this.pufferwert = value; }
+            get { return pufferwert; }
+            set { pufferwert = value; }
         }
         public int VerbrauchAktuell
         {
-            get{ return this.verbrauchAktuell; }
-            set{ this.verbrauchAktuell = value; }
+            get{ return verbrauchAktuell; }
+            set{ verbrauchAktuell = value; }
         }
         public int VerbrauchPrognose1
         {
-            get{ return this.verbrauchPrognose1; }
-            set{ this.verbrauchPrognose1 = value; }
+            get{ return verbrauchPrognose1; }
+            set{ verbrauchPrognose1 = value; }
         }
         public int VerbrauchPrognose2
         {
-            get{ return this.verbrauchPrognose2; }
-            set{ this.verbrauchPrognose2 = value; }
+            get{ return verbrauchPrognose2; }
+            set{ verbrauchPrognose2 = value; }
         }
         // Method generates hashcode of class member nr
         public int GetHashcode()
         {
-            return this.nr.GetHashCode();
+            return nr.GetHashCode();
         }
         // Method compares two objects from type Teil and returns bool value
         public bool Equals(Teil k)
         {
-            if (this.nr == k.nr)
+            if (nr == k.nr)
             {
                 return true;
             }

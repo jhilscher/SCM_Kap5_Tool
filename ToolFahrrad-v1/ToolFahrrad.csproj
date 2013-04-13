@@ -50,8 +50,14 @@
     <Compile Include="Design\ToolFahrrad.Designer.cs">
       <DependentUpon>ToolFahrrad.cs</DependentUpon>
     </Compile>
+    <Compile Include="Exceptions\InputException.cs" />
+    <Compile Include="Exceptions\UnknownTeilException.cs" />
     <Compile Include="Komponenten\Arbeitsplatz.cs" />
     <Compile Include="Exceptions\InvalidValueException.cs" />
+    <Compile Include="Komponenten\Bestellposition.cs" />
+    <Compile Include="Komponenten\ETeil.cs" />
+    <Compile Include="Komponenten\KTeil.cs" />
+    <Compile Include="Komponenten\main.cs" />
     <Compile Include="Komponenten\Teil.cs" />
     <Compile Include="StartTool.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
