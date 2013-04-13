@@ -52,6 +52,7 @@
     </Compile>
     <Compile Include="Komponenten\Arbeitsplatz.cs" />
     <Compile Include="Exceptions\InvalidValueException.cs" />
+    <Compile Include="Komponenten\Teil.cs" />
     <Compile Include="StartTool.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Design\ToolFahrrad.resx">
