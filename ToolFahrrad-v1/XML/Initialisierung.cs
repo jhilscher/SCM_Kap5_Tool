@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ToolFahrrad_v1.XML
+namespace ToolFahrrad_v1
 {
     class Initialisierung
     {
@@ -53,6 +53,11 @@ namespace ToolFahrrad_v1.XML
                                             1,2,1,3,1,1,1,2,0,0, 0,0,0,0,0,0,2,72,2};
 
         DataContainer instance = DataContainer.Instance;
+
+        public Initialisierung()
+        {
+
+        }
 
         public void Initialisieren()
         {
