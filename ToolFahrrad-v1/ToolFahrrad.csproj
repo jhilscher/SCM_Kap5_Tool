@@ -57,7 +57,6 @@
     <Compile Include="Komponenten\Bestellposition.cs" />
     <Compile Include="Komponenten\ETeil.cs" />
     <Compile Include="Komponenten\KTeil.cs" />
-    <Compile Include="Komponenten\main.cs" />
     <Compile Include="Komponenten\Teil.cs" />
     <Compile Include="StartTool.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
