@@ -8,22 +8,22 @@ namespace ToolFahrrad_v1.XML
 {
     class Initialisierung
     {
-        private static bool[] TKTeil = {false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,
+        protected static bool[] TKTeil = {false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,
                                        false,false,false,false,false,true,true,true,true,true,false,true,true,false,false,false,
                                        true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,
                                        false,false,false,true,true,false,false,false,true,true,true};
         //Bestellkosten des KTeils
-        private static double[] BKKTeil = {0,0,0,0,0,0,0,0,0,0, 0,0,0,0,0,0,0,0,0,0, 50,50,50,100,50,0,75,50,0,0,
+        protected static double[] BKKTeil = {0,0,0,0,0,0,0,0,0,0, 0,0,0,0,0,0,0,0,0,0, 50,50,50,100,50,0,75,50,0,0,
                                          0,50,75,50,75,100,50,50,75,50, 50,50,75,50,50,50,50,75,0,0, 0,50,50,0,0,0,50,50,50};
         //Preis des KTeils
-        private static double[] PKTeil = {0,0,0,0,0,0,0,0,0,0, 0,0,0,0,0,0,0,0,0,0, 5.00,6.50,6.50,0.06,0.06,0,0.1,1.2,0,0,
+        protected static double[] PKTeil = {0,0,0,0,0,0,0,0,0,0, 0,0,0,0,0,0,0,0,0,0, 5.00,6.50,6.50,0.06,0.06,0,0.1,1.2,0,0,
                                           0,0.75,22,0.1,1,8,1.5,1.5,1.5,2.5, 0.06,0.1,5,0.5,0.06,0.1,3.5,1.5,0,0, 0,22,0.1,0,0,0,22,0.1,0.15};
         //Verwendung des Teils
-        private static string[] VwTeil = {"K","D","H","K","D","H","K","D","H","K","D","H","K","D","H","KDH","KDH","K","D","H","K","D","H","KDH",
+        protected static string[] VwTeil = {"K","D","H","K","D","H","K","D","H","K","D","H","K","D","H","KDH","KDH","K","D","H","K","D","H","KDH",
                                           "KDH","KDH","KDH","KDH","H","H","H","KDH","H","H","KDH","KDH","KDH","KDH","KDH","KDH","KDH","KDH","KDH",
                                           "KDH","KDH","KDH","KDH","KDH","K","K","K","K","K","D","D","D","D","D","KDH"};
         //Bezeichnung des Teils
-        private static string[] TBez = {"Kinderfahrrad","Damenfahrrad","Herrenfahrrad","HinterradgruppeK","HinterradgruppeD",
+        protected static string[] TBez = {"Kinderfahrrad","Damenfahrrad","Herrenfahrrad","HinterradgruppeK","HinterradgruppeD",
                                        "HinterradgruppeH","VorderradgruppeK","VorderradgruppeD","VorderradgruppeH","SchutzblechK h",
                                        "SchutzblechD h","SchutzblechH h","SchutzblechK v","SchutzblechD v","SchutzblechH v",
                                        "Lenker","Sattel","RahmenK","RahmenD","RahmenH","KetteK","KetteD","KetteH","Mutter","Scheibe",
@@ -33,23 +33,23 @@ namespace ToolFahrrad_v1.XML
                                        "Fahrrad o. PedalK","FelgeK","SpeicheK","VorderradD","Rahmen u. RäderD","Fahrrad o. PedalD",
                                        "FelgeD","SpeicheD","Schweißdraht"};
         //Diskontmenge bei KTeil
-        private static int[] DMKTeil = {0,0,0,0,0,0,0,0,0,0, 0,0,0,0,0,0,0,0,0,0, 300,300,300,6100,3600,0,1800,4500,0,0, 
+        protected static int[] DMKTeil = {0,0,0,0,0,0,0,0,0,0, 0,0,0,0,0,0,0,0,0,0, 300,300,300,6100,3600,0,1800,4500,0,0, 
                                        0,2700,900,22000,3600,900,900,300,1800,900, 900,1800,2700,900,900,900,900,1800,0,0,
                                        0,600,22000,0,0,0,600,22000,1800};
         //Bestelldauer bei KTeil
-        private static double[] BDKTeil = {0,0,0,0,0,0,0,0,0,0, 0,0,0,0,0,0,0,0,0,0, 1.8,1.7,1.2,3.2,0.9,0,0.9,1.7,0,0, 0,2.1,1.9,1.6,2.2,1.2,1.5,1.7,1.5,1.7,
+        protected static double[] BDKTeil = {0,0,0,0,0,0,0,0,0,0, 0,0,0,0,0,0,0,0,0,0, 1.8,1.7,1.2,3.2,0.9,0,0.9,1.7,0,0, 0,2.1,1.9,1.6,2.2,1.2,1.5,1.7,1.5,1.7,
                                         0.9,1.2,2,1,1.7,0.9,1.4,1,0,0, 0,1.6,1.6,0,0,0,1.7,1.6,0.7};
         //Abweichung Bestelldauer bei KTeil
-        private static double[] ABDKTeil = {0,0,0,0,0,0,0,0,0,0, 0,0,0,0,0,0,0,0,0,0, 0.4,0.4,0.2,0.3,0.2,0,0.2,0.4,0,0, 0,0.5,0.5,0.3,0.4,0.1,0.3,0.4,0.3,0.2,
+        protected static double[] ABDKTeil = {0,0,0,0,0,0,0,0,0,0, 0,0,0,0,0,0,0,0,0,0, 0.4,0.4,0.2,0.3,0.2,0,0.2,0.4,0,0, 0,0.5,0.5,0.3,0.4,0.1,0.3,0.4,0.3,0.2,
                                          0.2,0.3,0.5,0.2,0.3,0.3,0.1,0.2,0,0, 0,0.4,0.2,0,0,0,0.3,0.5,0.2};
         //??        //Schlüssel Verbrauch P1
-        private static int[] TVerbrauchP1 = {0,0,0,0,0,0,0,0,0,0, 0,0,0,0,0,0,0,0,0,0, 1,0,0,7,4,0,2,5,0,0, 0,3,0,0,4,1,1,1,2,1,
+        protected static int[] TVerbrauchP1 = {0,0,0,0,0,0,0,0,0,0, 0,0,0,0,0,0,0,0,0,0, 1,0,0,7,4,0,2,5,0,0, 0,3,0,0,4,1,1,1,2,1,
                                             1,2,1,3,1,1,1,2,0,0, 0,2,72,0,0,0,0,0,2};
         //??        //Schlüssel Verbrauch P2
-        private static int[] TVerbrauchP2 = {0,0,0,0,0,0,0,0,0,0, 0,0,0,0,0,0,0,0,0,0, 0,1,0,7,4,0,2,6,0,0, 0,3,2,72,4,1,1,1,2,1,
+        protected static int[] TVerbrauchP2 = {0,0,0,0,0,0,0,0,0,0, 0,0,0,0,0,0,0,0,0,0, 0,1,0,7,4,0,2,6,0,0, 0,3,2,72,4,1,1,1,2,1,
                                             1,2,1,3,1,1,1,2,0,0, 0,0,0,0,0,0,0,0,2};
         //??        //Schlüssel Verbrauch P3
-        private static int[] TVerbrauchP3 = {0,0,0,0,0,0,0,0,0,0, 0,0,0,0,0,0,0,0,0,0, 0,0,1,7,4,0,2,7,0,0, 0,3,0,0,4,1,1,1,2,1,
+        protected static int[] TVerbrauchP3 = {0,0,0,0,0,0,0,0,0,0, 0,0,0,0,0,0,0,0,0,0, 0,0,1,7,4,0,2,7,0,0, 0,3,0,0,4,1,1,1,2,1,
                                             1,2,1,3,1,1,1,2,0,0, 0,0,0,0,0,0,2,72,2};
 
         DataContainer instance = DataContainer.Instance;
