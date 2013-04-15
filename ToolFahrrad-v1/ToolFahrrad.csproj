@@ -60,6 +60,7 @@
     <Compile Include="Komponenten\Teil.cs" />
     <Compile Include="StartTool.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="XML\Initialisierung.cs" />
     <EmbeddedResource Include="Design\ToolFahrrad.resx">
       <DependentUpon>ToolFahrrad.cs</DependentUpon>
     </EmbeddedResource>
