@@ -52,6 +52,7 @@
       <DependentUpon>ToolFahrrad.cs</DependentUpon>
     </Compile>
     <Compile Include="Exceptions\InputException.cs" />
+    <Compile Include="Exceptions\UnknownFileException.cs" />
     <Compile Include="Exceptions\UnknownTeilException.cs" />
     <Compile Include="Komponenten\Arbeitsplatz.cs" />
     <Compile Include="Exceptions\InvalidValueException.cs" />
@@ -62,6 +63,7 @@
     <Compile Include="StartTool.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="XML\Initialisierung.cs" />
+    <Compile Include="XML\XML.cs" />
     <EmbeddedResource Include="Design\ToolFahrrad.resx">
       <DependentUpon>ToolFahrrad.cs</DependentUpon>
     </EmbeddedResource>

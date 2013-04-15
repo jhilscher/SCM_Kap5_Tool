@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace ToolFahrrad_v1.Komponenten
+namespace ToolFahrrad_v1
 {
     class InvalidValueException : Exception
     {

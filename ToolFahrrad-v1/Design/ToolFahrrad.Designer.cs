@@ -30,8 +30,12 @@
         {
             this.Tabs = new System.Windows.Forms.TabControl();
             this.xmlInput = new System.Windows.Forms.TabPage();
+            this.pfadText = new System.Windows.Forms.Label();
+            this.xml_suchen = new System.Windows.Forms.Button();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
             this.Tabs.SuspendLayout();
+            this.xmlInput.SuspendLayout();
             this.SuspendLayout();
             // 
             // Tabs
@@ -47,12 +51,33 @@
             // xmlInput
             // 
             this.xmlInput.BackColor = System.Drawing.Color.Transparent;
+            this.xmlInput.Controls.Add(this.pfadText);
+            this.xmlInput.Controls.Add(this.xml_suchen);
             this.xmlInput.Location = new System.Drawing.Point(4, 22);
             this.xmlInput.Name = "xmlInput";
             this.xmlInput.Padding = new System.Windows.Forms.Padding(3);
             this.xmlInput.Size = new System.Drawing.Size(806, 411);
             this.xmlInput.TabIndex = 0;
             this.xmlInput.Text = "XML laden";
+            // 
+            // pfadText
+            // 
+            this.pfadText.AutoSize = true;
+            this.pfadText.Location = new System.Drawing.Point(147, 25);
+            this.pfadText.MinimumSize = new System.Drawing.Size(145, 0);
+            this.pfadText.Name = "pfadText";
+            this.pfadText.Size = new System.Drawing.Size(145, 13);
+            this.pfadText.TabIndex = 2;
+            // 
+            // xml_suchen
+            // 
+            this.xml_suchen.Location = new System.Drawing.Point(29, 19);
+            this.xml_suchen.Name = "xml_suchen";
+            this.xml_suchen.Size = new System.Drawing.Size(75, 23);
+            this.xml_suchen.TabIndex = 1;
+            this.xml_suchen.Text = "XML öffnen";
+            this.xml_suchen.UseVisualStyleBackColor = true;
+            this.xml_suchen.Click += new System.EventHandler(this.button1_Click);
             // 
             // tabPage2
             // 
@@ -64,6 +89,10 @@
             this.tabPage2.Text = "tabPage2";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
+            // openFileDialog
+            // 
+            this.openFileDialog.FileName = "openFileDialog";
+            // 
             // Fahrrad
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -73,6 +102,8 @@
             this.Name = "Fahrrad";
             this.Text = "Simulation";
             this.Tabs.ResumeLayout(false);
+            this.xmlInput.ResumeLayout(false);
+            this.xmlInput.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -82,6 +113,9 @@
         private System.Windows.Forms.TabControl Tabs;
         private System.Windows.Forms.TabPage xmlInput;
         private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.Button xml_suchen;
+        private System.Windows.Forms.OpenFileDialog openFileDialog;
+        private System.Windows.Forms.Label pfadText;
     }
 }
 
