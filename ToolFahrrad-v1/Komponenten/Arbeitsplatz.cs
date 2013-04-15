@@ -85,6 +85,5 @@ namespace ToolFahrrad_v1
                 throw new InvalidValueException(string.Format("Am Arbeitsplatz {0} ist bereits eine Werkzeit für das Teil {1} hinterlegt", this.nummer, teil));
             }
         }
-
     }
 }
