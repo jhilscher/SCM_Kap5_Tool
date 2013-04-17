@@ -6,7 +6,7 @@ using System.Text;
 namespace ToolFahrrad_v1
 {
     /** This class is sub class from Teil and describes a produced Teil */
-    class ETeil : Teil
+    public class ETeil : Teil
     {
         // Class members
         int produktion = 0;
@@ -75,7 +75,7 @@ namespace ToolFahrrad_v1
                 if (this.istTeil == null)
                 {
                     List<ETeil> res = new List<ETeil>();
-                    foreach (ETeil et in DataContainer.Instance.ETeilList)
+                    foreach (ETeil et in DataContainer.Instance.ListeETeile)
                     {
                         if (et.Zusammensetzung.ContainsKey(et))
                         {

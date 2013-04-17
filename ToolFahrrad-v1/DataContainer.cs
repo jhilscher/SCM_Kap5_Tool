@@ -234,7 +234,7 @@ namespace ToolFahrrad_v1
                 {
                     DataRow row = table.NewRow();
                     row["Arbeitsplatz"] = platz.Key;
-                    row["Schichten"] = platz.Value.Schichten;
+                    row["Schichten"] = platz.Value.AnzSchichten;
                     row["Minuten"] = platz.Value.UeberMin;
                     table.Rows.Add(row);
                 }
@@ -246,7 +246,7 @@ namespace ToolFahrrad_v1
         {
             foreach (DataRow row in table.Rows)
             {
-                this.liste_arbeitsplaetze[Convert.ToInt32(row[0])].Schichten = Convert.ToInt32(row[1]);
+                this.liste_arbeitsplaetze[Convert.ToInt32(row[0])].AnzSchichten = Convert.ToInt32(row[1]);
                 this.liste_arbeitsplaetze[Convert.ToInt32(row[0])].UeberMin = Convert.ToInt32(row[2]);
             }
         }
@@ -364,13 +364,13 @@ namespace ToolFahrrad_v1
         // Setter for Arbeitsplatz in member liste_arbeitsplaetze
         public void NeuArbeitsplatz(Arbeitsplatz ap)
         {
-            if (this.liste_arbeitsplaetze.ContainsKey(ap.Nummer) == false)
+            if (this.liste_arbeitsplaetze.ContainsKey(ap.GetNummerArbeitsplatz) == false)
             {
-                this.liste_arbeitsplaetze[ap.Nummer] = ap;
+                this.liste_arbeitsplaetze[ap.GetNummerArbeitsplatz] = ap;
             }
             else
             {
-                throw new Exception(string.Format("Arbeitsplatz mit der Nr.:{0} bereits vorhanden!", ap.Nummer));
+                throw new Exception(string.Format("Arbeitsplatz mit der Nr.:{0} bereits vorhanden!", ap.GetNummerArbeitsplatz));
             }
         }
         // Perform optimization
@@ -380,7 +380,7 @@ namespace ToolFahrrad_v1
             pp.Aufloesen();
             pp.Planen();
             Bestellverwaltung bv = new Bestellverwaltung();
-            bv.erzeugen_bestellungenlist();
+            bv.erzeugen_liste_bestellungen();
         }
         // Reset of Arbeitsplatz
         public void Reset()
@@ -388,7 +388,7 @@ namespace ToolFahrrad_v1
             foreach (KeyValuePair<int, Arbeitsplatz> ap in this.liste_arbeitsplaetze)
             {
                 ap.Value.UeberMin = 0;
-                ap.Value.Schichten = 1;
+                ap.Value.AnzSchichten = 1;
             }
             foreach (ETeil et in this.ListeETeile)
             {

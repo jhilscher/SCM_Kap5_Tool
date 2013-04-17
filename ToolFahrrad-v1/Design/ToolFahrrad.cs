@@ -16,7 +16,7 @@ namespace ToolFahrrad_v1
     {
         public Fahrrad()
         {
-            Thread.CurrentThread.CurrentUICulture = new CultureInfo("en-EN");
+            //Thread.CurrentThread.CurrentUICulture = new CultureInfo("en-EN");
             InitializeComponent();            
         }
 

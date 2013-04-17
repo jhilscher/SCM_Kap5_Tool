@@ -2,46 +2,41 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace ToolFahrrad_v1
 {
-    class Produktionsplanung
+    public class Produktionsplanung
     {
-        DataContainer cont;
-        bool aufgeöst = false;
-
+        // Class members
+        DataContainer dc;
+        bool aufgeloest = false;
+        // Constructor
         public Produktionsplanung()
         {
-            this.cont = DataContainer.Instance;
+            dc = DataContainer.Instance;
         }
-
-        /// <summary>
-        /// löst die Prognosen für Produkte berechnet die benötigten E und Kteile
-        /// </summary>
+        // Aufloesung Prognosen für Produkte, berechnet die benoetigten E- und KTeile
         public void Aufloesen()
         {
-            if (this.cont == null)
+            if (dc == null)
             {
-                this.cont = DataContainer.Instance;
+                dc = DataContainer.Instance;
             }
-            this.RekursAufloesen(this.cont.GetTeil(1) as ETeil);
-            this.RekursAufloesen(this.cont.GetTeil(2) as ETeil);
-            this.RekursAufloesen(this.cont.GetTeil(3) as ETeil);
-            aufgeöst = true;
-
+            RekursAufloesen(dc.GetTeil(1) as ETeil);
+            RekursAufloesen(dc.GetTeil(2) as ETeil);
+            RekursAufloesen(dc.GetTeil(3) as ETeil);
+            aufgeloest = true;
         }
-
         private void KategorieBestimmen()
         {
-            (cont.GetTeil(1) as ETeil).Kategorie = 1;
-            (cont.GetTeil(2) as ETeil).Kategorie = 1;
-            (cont.GetTeil(3) as ETeil).Kategorie = 1;
-            foreach (ETeil teil in cont.ListeETeile)
+            (dc.GetTeil(1) as ETeil).Kategorie = 1;
+            (dc.GetTeil(2) as ETeil).Kategorie = 1;
+            (dc.GetTeil(3) as ETeil).Kategorie = 1;
+            foreach (ETeil teil in dc.ListeETeile)
             {
                 if (teil.Kategorie == 0)
                 {
-                    if (teil.IstTeilVon.Contains(cont.GetTeil(1) as ETeil) || teil.IstTeilVon.Contains(cont.GetTeil(2) as ETeil) || teil.IstTeilVon.Contains(cont.GetTeil(3) as ETeil))
+                    if (teil.IstTeilVon.Contains(dc.GetTeil(1) as ETeil) || teil.IstTeilVon.Contains(dc.GetTeil(2) as ETeil) || teil.IstTeilVon.Contains(dc.GetTeil(3) as ETeil))
                     {
                         teil.Kategorie = 2;
                     }
@@ -52,66 +47,52 @@ namespace ToolFahrrad_v1
                 }
             }
 
-        }//KategorieBestimmen
-
-
+        }
         public void Planen()
         {
-            if (this.cont == null)
+            if (dc == null)
             {
-                this.cont = DataContainer.Instance;
+                dc = DataContainer.Instance;
             }
-            this.KategorieBestimmen();
-
-            if (!aufgeöst)
+            KategorieBestimmen();
+            if (aufgeloest == false)
             {
-                this.Aufloesen();
+                Aufloesen();
             }
-            this.PrimaereProduktionsplanung();
-            //  do
-            //  { }
-            //  while (!this.AnpassungMenge());
-            if (cont.UeberstundenErlaubt)
+            PrimaereProduktionsplanung();
+            if (dc.UeberstundenErlaubt)
             {
-                this.SetUeberstunde();
+                SetUeberstunde();
             }
             else
             {
-                this.AnpassungMengeAnZeit();
+                AnpassungMengeAnZeit();
             }
             Dictionary<int, int[]> tmp = new Dictionary<int, int[]>();
-            foreach (Arbeitsplatz arbPl in this.cont.ArbeitsplatzList)
+            foreach (Arbeitsplatz arbPl in dc.ArbeitsplatzList)
             {
-                this.ReihenfolgeAnpassung(arbPl, ref tmp);
+                ReihenfolgeAnpassung(arbPl, ref tmp);
             }
-            this.ReihenfolgePart2(tmp);
+            ReihenfolgePart2(tmp);
         }
-
-
-        /// <summary>
-        /// Rekursive Prozedur zum iterieren über die Zusammensetzung der Teile
-        /// </summary>
-        /// <param name="teil">The teil.</param>
+        // Rekursive Prozedur zum iterieren über die Zusammensetzung der Teile
         private void RekursAufloesen(ETeil teil)
         {
             foreach (KeyValuePair<Teil, int> kvp in teil.Zusammensetzung)
             {
                 kvp.Key.VerbrauchPrognose1 += kvp.Value * teil.VerbrauchPrognose1;
                 kvp.Key.VerbrauchPrognose2 += kvp.Value * teil.VerbrauchPrognose2;
-
                 if (kvp.Key is ETeil)
                 {
-
-                    this.RekursAufloesen(kvp.Key as ETeil);
+                    RekursAufloesen(kvp.Key as ETeil);
                 }
-
             }
             return;
         }
-
+        // ---
         private void PrimaereProduktionsplanung()
         {
-            foreach (ETeil et in this.cont.ListeETeile)
+            foreach (ETeil et in dc.ListeETeile)
             {
                 if (et.Kategorie == 1)
                 {
@@ -146,10 +127,8 @@ namespace ToolFahrrad_v1
                     }
                 }
             }
-
         }
-
-
+        // ---
         public String Nachpruefen(Teil teil, int mengeNeu)
         {
             StringBuilder sb = new StringBuilder();
@@ -166,73 +145,11 @@ namespace ToolFahrrad_v1
             }
             return sb.ToString();
         }
-
-        /*    private void PrimäreProduktionsplanung()
-            {
-                foreach (ETeil et in this.cont.ETeilList)
-                {
-                    if (et.Kategorie==1)
-                    {
-                        et.Produktionsmenge = et.VerbrauchAktuel;
-                        foreach (KeyValuePair<Teil, int> teil in et.Zusammensetzung)
-                        {
-                            if (teil.Key is ETeil && !teil.Key.Verwendung.Equals("KDH"))
-                            {
-                                (teil.Key as ETeil).Produktionsmenge += teil.Key.VerbrauchPrognose1;
-                            }
-                            else
-                            {
-                                teil.Key.VerbrauchAktuel += teil.Value*teil.Key.VerbrauchPrognose1;
-                            }
-
-                            if (teil.Key is ETeil && teil.Key.Verwendung.Equals("KDH"))
-                            {
-                                if (teil.Key.Lagerstand + (teil.Key as ETeil).Produktionsmenge < teil.Key.VerbrauchAktuel + teil.Key.VerbrauchPrognose1)
-                                {
-                                    this.cont.Sonderproduktion = true;
-                                    (teil.Key as ETeil).Produktionsmenge = teil.Key.VerbrauchPrognose1 + teil.Key.VerbrauchPrognose2;
-                                }
-                            }
-                        }
-                    }//if
-                    else
-                    {
-                        foreach (KeyValuePair<Teil, int> teil in et.Zusammensetzung)
-                        {
-                            if (teil.Key is ETeil && !teil.Key.Verwendung.Equals("KDH"))
-                            {
-                                (teil.Key as ETeil).Produktionsmenge = teil.Key.VerbrauchPrognose2;
-                            }
-                            else
-                            {
-                                teil.Key.VerbrauchAktuel += teil.Value*teil.Key.VerbrauchPrognose1;
-                            }
-
-                            if (teil.Key is ETeil && teil.Key.Verwendung.Equals("KDH"))
-                            {
-                                if (teil.Key.Lagerstand + (teil.Key as ETeil).Produktionsmenge < teil.Key.VerbrauchAktuel + teil.Key.VerbrauchPrognose1)
-                                {
-                                    this.cont.Sonderproduktion = true;
-                                    (teil.Key as ETeil).Produktionsmenge = teil.Key.VerbrauchPrognose1 + teil.Key.VerbrauchPrognose2;
-                                }
-                            }
-                        }
-                    }//else  
-
-                    et.Produktionsmenge += et.Pufferwert;
-                }//foreach Eteil
-            }//Primäre Produktionsplanung */
-
-
-
-        /// <summary>
-        /// Anpassung der Menge.
-        /// </summary>
-        /// <returns></returns>
+        // Anpassung der Menge
         private bool AnpassungMenge()
         {
             int count = 0;
-            foreach (KTeil kteil in this.cont.ListeKTeile)
+            foreach (KTeil kteil in dc.ListeKTeile)
             {
                 count++;
                 //wenn kteile nicht ausrechen muss von irgendeinem Teil weniger 
@@ -240,16 +157,15 @@ namespace ToolFahrrad_v1
                 {
                     int nrToChange = 0;
                     double time = 4800;
-
                     foreach (ETeil et in kteil.IstTeilVon)
                     {
                         if (et.Produktionsmenge > 0)
                         {
                             foreach (Arbeitsplatz arpl in et.BenutzteArbeitsplaetze)
                             {
-                                if (arpl.ZuVerfuegungStehendeZeit - arpl.BenoetigteZeit < time)
+                                if (arpl.GetVerfuegbareZeit - arpl.GetBenoetigteZeit < time)
                                 {
-                                    time = arpl.ZuVerfuegungStehendeZeit - arpl.BenoetigteZeit;
+                                    time = arpl.GetVerfuegbareZeit - arpl.GetBenoetigteZeit;
                                     nrToChange = et.Nummer;
                                 }
                             }
@@ -258,80 +174,66 @@ namespace ToolFahrrad_v1
                         {
                             time = 4800;
                         }
-
                     }
                     if (nrToChange > 0)
                     {
-                        (this.cont.GetTeil(nrToChange) as ETeil).Produktionsmenge = (this.cont.GetTeil(nrToChange) as ETeil).Produktionsmenge - 10;
+                        (dc.GetTeil(nrToChange) as ETeil).Produktionsmenge = (dc.GetTeil(nrToChange) as ETeil).Produktionsmenge - 10;
                         return false;
                     }
-                }//if
-            }//foreach
-
+                }
+            }
             count = 0;
-            foreach (ETeil eteil in this.cont.ListeETeile)
+            foreach (ETeil eteil in dc.ListeETeile)
             {
                 count++;
                 if (eteil.Lagerstand + eteil.Produktionsmenge + eteil.InWartschlange < eteil.VerbrauchAktuell)
                 {
                     int nrToChange = 0;
                     int time = 2400;
-
                     foreach (ETeil et in eteil.IstTeilVon)
                     {
                         foreach (Arbeitsplatz arpl in et.BenutzteArbeitsplaetze)
                         {
-                            if (arpl.ZuVerfuegungStehendeZeit - arpl.BenoetigteZeit < time)
+                            if (arpl.GetVerfuegbareZeit - arpl.GetBenoetigteZeit < time)
                             {
-                                time = arpl.ZuVerfuegungStehendeZeit - arpl.BenoetigteZeit;
+                                time = arpl.GetVerfuegbareZeit - arpl.GetBenoetigteZeit;
                                 nrToChange = et.Nummer;
                             }
-                        }//foreach Arbeitsplatz
-                    }//foreach Eteil
+                        }
+                    }
                     if (nrToChange != 0)
                     {
-                        (this.cont.GetTeil(nrToChange) as ETeil).Produktionsmenge = (this.cont.GetTeil(nrToChange) as ETeil).Produktionsmenge - 10;
+                        (dc.GetTeil(nrToChange) as ETeil).Produktionsmenge = (dc.GetTeil(nrToChange) as ETeil).Produktionsmenge - 10;
                         return false;
                     }
-                }//if
-            }
-            return true;
-        }// AnpassungMenge
-
-        /// <summary>
-        /// Setzt die benötigten Überstunden und doppelschichten 
-        /// </summary>
-        /// <returns></returns>
-        private bool SetUeberstunde()
-        {
-            foreach (Arbeitsplatz arbl in this.cont.ArbeitsplatzList)
-            {
-                if (arbl.BenoetigteZeit + arbl.Ruestzeit > arbl.ZuVerfuegungStehendeZeit)
-                {
-                    arbl.AddUeberMinute(Convert.ToInt32(arbl.BenoetigteZeit + arbl.Ruestzeit - arbl.ZuVerfuegungStehendeZeit) / 5);
                 }
-                // TODO Anpassung um die Zeit besser auszunutzen
             }
-
             return true;
         }
-
-        /// <summary>
-        /// findet die Reihenfolge für einen Aebreitsplatz
-        /// </summary>
-        /// <param name="arb">Arbeitsplatz objekt</param>
-        /// <param name="tmp">temporäres Dictionary</param>
-        private void ReihenfolgeAnpassung(Arbeitsplatz arb, ref Dictionary<int, int[]> tmp)
+        // Setzt die benoetigten Ueberstunden und doppelschichten um
+        private bool SetUeberstunde()
+        {
+            foreach (Arbeitsplatz arbl in dc.ArbeitsplatzList)
+            {
+                if (arbl.GetBenoetigteZeit + arbl.GetRuestZeit > arbl.GetVerfuegbareZeit)
+                {
+                    arbl.AddUeberMinute(Convert.ToInt32(arbl.GetBenoetigteZeit + arbl.GetRuestZeit - arbl.GetVerfuegbareZeit) / 5);
+                }
+            }
+            return true;
+        }
+        // Findet die Reihenfolge für einen Aebreitsplatz
+        private void ReihenfolgeAnpassung(Arbeitsplatz ap, ref Dictionary<int, int[]> tmp)
         {
             int lastPos;
             int counter = 0;
             bool lastposChgd;
             bool notInserted;
-            if (!tmp.ContainsKey(arb.Nummer))
+            if (!tmp.ContainsKey(ap.GetNummerArbeitsplatz))
             {
-                tmp[arb.Nummer] = new int[arb.HergestelteTeile.Count];
-                lastPos = arb.HergestelteTeile.Count - 1;
-                foreach (ETeil hergestellt in arb.HergestelteTeile) // alle Teile die an diesem Arbeitsplatz hergestellt werden
+                tmp[ap.GetNummerArbeitsplatz] = new int[ap.GetHergestellteTeile.Count];
+                lastPos = ap.GetHergestellteTeile.Count - 1;
+                foreach (ETeil hergestellt in ap.GetHergestellteTeile) // alle Teile die an diesem Arbeitsplatz hergestellt werden
                 {
                     lastposChgd = false;
                     notInserted = true;
@@ -341,41 +243,39 @@ namespace ToolFahrrad_v1
                         {
                             if (bestandTeil.Key.Lagerstand - bestandTeil.Key.VerbrauchAktuell < 0) // Falls Verbrauch höher Lagerstand dieses Teil am Arbeitsplatz bevorzugen
                             {
-                                tmp[arb.Nummer][lastPos] = hergestellt.Nummer;
+                                tmp[ap.GetNummerArbeitsplatz][lastPos] = hergestellt.Nummer;
                                 lastposChgd = true;
                                 notInserted = false;
                             }
                             if (bestandTeil.Key.Lagerstand - bestandTeil.Key.VerbrauchAktuell >= 0) // Falls Verbrauch kleiner/gleich Lagerstand
                             {
-                                bool präferenz = false;
+                                bool praeferenz = false;
                                 foreach (ETeil nachfolger in (bestandTeil.Key as ETeil).IstTeilVon) // Teile die von ersten Teil abhängig sind prüfen
                                 {
                                     if (nachfolger.Lagerstand - nachfolger.VerbrauchAktuell < 0)
                                     {
-                                        präferenz = true; // Diese Teile bevorzugen da nicht mehr vorhanden
+                                        praeferenz = true; // Diese Teile bevorzugen da nicht mehr vorhanden
                                         break;
                                     }
                                 }
-                                if (präferenz)
+                                if (praeferenz)
                                 {
-                                    int c = tmp[arb.Nummer][0];
-                                    tmp[arb.Nummer][0] = hergestellt.Nummer;
-                                    tmp[arb.Nummer][counter] = c;
+                                    int c = tmp[ap.GetNummerArbeitsplatz][0];
+                                    tmp[ap.GetNummerArbeitsplatz][0] = hergestellt.Nummer;
+                                    tmp[ap.GetNummerArbeitsplatz][counter] = c;
                                     notInserted = false;
-
                                 }
                                 else
                                 {
-                                    tmp[arb.Nummer][counter] = hergestellt.Nummer;
+                                    tmp[ap.GetNummerArbeitsplatz][counter] = hergestellt.Nummer;
                                     notInserted = false;
-
                                 }
                             }
                         }
-                    }//foreach KeyValuePair<Teil,int>
+                    }
                     if (notInserted)
                     {
-                        tmp[arb.Nummer][counter] = hergestellt.Nummer;
+                        tmp[ap.GetNummerArbeitsplatz][counter] = hergestellt.Nummer;
                     }
                     if (lastposChgd)
                     {
@@ -385,10 +285,10 @@ namespace ToolFahrrad_v1
                     {
                         counter++;
                     }
-                }//foreach Eteil
-            }//if
+                }
+            }
         }
-
+        // ---
         private void AnpassungMengeAnZeit()
         {
             double diff = 0;
@@ -397,45 +297,33 @@ namespace ToolFahrrad_v1
             int sumProd = 0;
             double zwischenWert = 0;
             int val;
-
-            foreach (Arbeitsplatz arbl in this.cont.ArbeitsplatzList)
+            foreach (Arbeitsplatz ap in dc.ArbeitsplatzList)
             {
                 sumProd = 0;
-                diff = arbl.ZuVerfuegungStehendeZeit - arbl.BenoetigteZeit - arbl.Ruestzeit;
+                diff = ap.GetVerfuegbareZeit - ap.GetBenoetigteZeit - ap.GetRuestZeit;
                 if (diff < 0)
                 {
-                    foreach (ETeil teil in arbl.HergestelteTeile)
+                    foreach (ETeil teil in ap.GetHergestellteTeile)
                     {
                         sumProd += teil.Produktionsmenge;
                     }
-
-                    foreach (ETeil teil in arbl.HergestelteTeile)
+                    foreach (ETeil teil in ap.GetHergestellteTeile)
                     {
                         zwischenWert = Convert.ToInt32((-diff / teil.Produktionsmenge) * sumProd);
-                        val = Convert.ToInt32(Math.Round(zwischenWert / arbl.WerkZeitJeStk[teil.Nummer]));
+                        val = Convert.ToInt32(Math.Round(zwischenWert / ap.WerkZeitJeStk[teil.Nummer]));
                         if (val < teil.Produktionsmenge)
                         {
                             teil.Produktionsmenge -= val;
                         }
-                        else
-                        {
-
-                        }
                     }
                 }
             }
-
         }
-
-        /// <summary>
-        /// wenn ein Wert bereits eingereiht ist in die Reihenfolge dann wird die Position zurückgegeben ansonsten -1
-        /// </summary>
-        /// <param name="nr">The nr.</param>
-        /// <returns></returns>
+        // Wenn ein Wert bereits eingereiht ist in die Reihenfolge dann wird die Position zurueckgegeben ansonsten -1
         private int ReihenfolgeContains(int nr)
         {
             int pos = 0;
-            foreach (int i in cont.Reihenfolge)
+            foreach (int i in dc.Reihenfolge)
             {
                 if (i == nr)
                 {
@@ -445,32 +333,29 @@ namespace ToolFahrrad_v1
             }
             return -1;
         }
-
+        // ---
         private void ReihenfolgePart2(Dictionary<int, int[]> tmp)
         {
             int counter = 0;
             int oldPos = 0;
-
-            cont.Reihenfolge = new int[cont.ListeETeile.Count];
-            foreach (KeyValuePair<int, int[]> abPl in tmp)
+            dc.Reihenfolge = new int[dc.ListeETeile.Count];
+            foreach (KeyValuePair<int, int[]> ap in tmp)
             {
-                foreach (int teilNr in abPl.Value)
+                foreach (int teilNr in ap.Value)
                 {
-                    if ((this.cont.GetTeil(teilNr) as ETeil).BenutzteArbeitsplaetze.Count == 1)
+                    if ((dc.GetTeil(teilNr) as ETeil).BenutzteArbeitsplaetze.Count == 1)
                     {
-                        cont.Reihenfolge[counter] = teilNr;
+                        dc.Reihenfolge[counter] = teilNr;
                         counter++;
                     }
                     else
                     {
-                        oldPos = this.ReihenfolgeContains(teilNr);
+                        oldPos = ReihenfolgeContains(teilNr);
                         if (oldPos == -1)
                         {
-                            cont.Reihenfolge[counter] = teilNr;
+                            dc.Reihenfolge[counter] = teilNr;
                             counter++;
                         }
-
-                        //TODO: anpassen in der Reihenfolge
                     }
                 }
             }

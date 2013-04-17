@@ -6,7 +6,7 @@ using System.Text;
 namespace ToolFahrrad_v1
 {
     /** This class is sub class from Teil and describes a buyed Teil */
-    class KTeil : Teil
+    public class KTeil : Teil
     {
         // Class members
         private double bestellkosten;
@@ -63,7 +63,7 @@ namespace ToolFahrrad_v1
                 if (istTeil == null)
                 {
                     List<ETeil> res = new List<ETeil>();
-                    foreach (ETeil teil in DataContainer.Instance.ETeilList)
+                    foreach (ETeil teil in DataContainer.Instance.ListeETeile)
                     {
                         if (teil.Nummer == 17)
                         { }
@@ -96,7 +96,23 @@ namespace ToolFahrrad_v1
         {
             get { return verbProg2OA; }
             set { verbProg2OA = value; }
-        }        
+        }
+        public void berechnung_verbrauch_prognose()
+        {
+            verbProg1MA = Convert.ToInt32(
+                lagerstand + erwartete_bestellung - verbrauch_aktuell * (
+                    lieferdauer + abweichung_lieferdauer));
+            verbProg1OA = Convert.ToInt32(
+                lagerstand + erwartete_bestellung - verbrauch_aktuell * (lieferdauer));
+            verbProg2MA = Convert.ToInt32(
+                lagerstand + erwartete_bestellung - (
+                    verbrauch_aktuell + (
+                        verbrauch_aktuell + verbrauch_prognose1 + verbrauch_prognose2) / 3) * (lieferdauer + abweichung_lieferdauer));
+            verbProg2OA = Convert.ToInt32(
+                lagerstand + erwartete_bestellung - (
+                    verbrauch_aktuell + (
+                        verbrauch_aktuell + verbrauch_prognose1 + verbrauch_prognose2) / 3) * (lieferdauer));
+        }
         // Equals function
         public bool Equals(KTeil kt)
         {

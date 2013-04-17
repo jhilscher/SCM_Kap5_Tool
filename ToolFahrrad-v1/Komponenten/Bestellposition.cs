@@ -6,7 +6,7 @@ using System.Text;
 namespace ToolFahrrad_v1
 {
     /** Class describes position of ordered KTeile */
-    class Bestellposition
+    public class Bestellposition
     {
         // Class members
         private KTeil kaufteil;
