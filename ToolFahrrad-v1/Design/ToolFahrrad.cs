@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Globalization;
+using System.Threading;
 
 namespace ToolFahrrad_v1
 {
@@ -14,7 +16,8 @@ namespace ToolFahrrad_v1
     {
         public Fahrrad()
         {
-            InitializeComponent();
+            Thread.CurrentThread.CurrentUICulture = new CultureInfo("en-EN");
+            InitializeComponent();            
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -24,5 +27,6 @@ namespace ToolFahrrad_v1
             if (openFileDialog.ShowDialog() == DialogResult.OK)
                 pfadText.Text = "xml wurde gefunden: " + openFileDialog.FileName;
         }
+
     }
 }

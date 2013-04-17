@@ -16,3 +16,4 @@ E:\Server\Projecte C#\GIT\tool2\ToolFahrrad-v1\obj\Debug\ToolFahrrad.csprojResol
 E:\Server\Projecte C#\GIT\tool2\ToolFahrrad-v1\obj\Debug\ToolFahrrad_v1.Fahrrad.resources
 E:\Server\Projecte C#\GIT\tool2\ToolFahrrad-v1\obj\Debug\ToolFahrrad_v1.Properties.Resources.resources
 E:\Server\Projecte C#\GIT\tool2\ToolFahrrad-v1\obj\Debug\ToolFahrrad.csproj.GenerateResource.Cache
+E:\Server\Projecte C#\GIT\tool2\ToolFahrrad-v1\obj\Debug\ToolFahrrad_v1.Fahrrad.en.resources

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Fahrrad));
             this.Tabs = new System.Windows.Forms.TabControl();
             this.xmlInput = new System.Windows.Forms.TabPage();
             this.pfadText = new System.Windows.Forms.Label();
@@ -42,51 +43,34 @@
             // 
             this.Tabs.Controls.Add(this.xmlInput);
             this.Tabs.Controls.Add(this.tabPage2);
-            this.Tabs.Location = new System.Drawing.Point(-4, 0);
+            resources.ApplyResources(this.Tabs, "Tabs");
             this.Tabs.Name = "Tabs";
             this.Tabs.SelectedIndex = 0;
-            this.Tabs.Size = new System.Drawing.Size(814, 437);
-            this.Tabs.TabIndex = 0;
             // 
             // xmlInput
             // 
             this.xmlInput.BackColor = System.Drawing.Color.Transparent;
             this.xmlInput.Controls.Add(this.pfadText);
             this.xmlInput.Controls.Add(this.xml_suchen);
-            this.xmlInput.Location = new System.Drawing.Point(4, 22);
+            resources.ApplyResources(this.xmlInput, "xmlInput");
             this.xmlInput.Name = "xmlInput";
-            this.xmlInput.Padding = new System.Windows.Forms.Padding(3);
-            this.xmlInput.Size = new System.Drawing.Size(806, 411);
-            this.xmlInput.TabIndex = 0;
-            this.xmlInput.Text = "XML laden";
             // 
             // pfadText
             // 
-            this.pfadText.AutoSize = true;
-            this.pfadText.Location = new System.Drawing.Point(147, 25);
-            this.pfadText.MinimumSize = new System.Drawing.Size(145, 0);
+            resources.ApplyResources(this.pfadText, "pfadText");
             this.pfadText.Name = "pfadText";
-            this.pfadText.Size = new System.Drawing.Size(145, 13);
-            this.pfadText.TabIndex = 2;
             // 
             // xml_suchen
             // 
-            this.xml_suchen.Location = new System.Drawing.Point(29, 19);
+            resources.ApplyResources(this.xml_suchen, "xml_suchen");
             this.xml_suchen.Name = "xml_suchen";
-            this.xml_suchen.Size = new System.Drawing.Size(75, 23);
-            this.xml_suchen.TabIndex = 1;
-            this.xml_suchen.Text = "XML öffnen";
             this.xml_suchen.UseVisualStyleBackColor = true;
             this.xml_suchen.Click += new System.EventHandler(this.button1_Click);
             // 
             // tabPage2
             // 
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            resources.ApplyResources(this.tabPage2, "tabPage2");
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(806, 411);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "tabPage2";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // openFileDialog
@@ -95,12 +79,10 @@
             // 
             // Fahrrad
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(810, 431);
             this.Controls.Add(this.Tabs);
             this.Name = "Fahrrad";
-            this.Text = "Simulation";
             this.Tabs.ResumeLayout(false);
             this.xmlInput.ResumeLayout(false);
             this.xmlInput.PerformLayout();
