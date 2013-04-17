@@ -88,7 +88,7 @@
     <Compile Include="Verwaltung\Bestellverwaltung.cs" />
     <Compile Include="Verwaltung\Produktionsplanung.cs" />
     <Compile Include="XML\Initialisierung.cs" />
-    <Compile Include="XML\XML.cs" />
+    <Compile Include="XML\XMLDatei.cs" />
     <EmbeddedResource Include="Design\ToolFahrrad.en.resx">
       <DependentUpon>ToolFahrrad.cs</DependentUpon>
     </EmbeddedResource>

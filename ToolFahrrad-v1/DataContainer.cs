@@ -21,7 +21,19 @@ namespace ToolFahrrad_v1
         private Produktionsplanung pp;
         private string openFile;
         private string saveFile;
-        // Constructor
+        private int[] arrayAktuelleWoche;
+        public int[] ArrayAktuelleWoche
+        {
+            get { return arrayAktuelleWoche; }
+            set { this.arrayAktuelleWoche = value; }
+        }
+        private int[,] arrayPrognose;
+        public int[,] ArrayPrognose
+        {
+            get { return arrayPrognose; }
+            set { arrayPrognose = value; }
+        }
+        /// // Constructor
         private DataContainer()
         {
             this.liste_bestellungen = new List<Bestellposition>();

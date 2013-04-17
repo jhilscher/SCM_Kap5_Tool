@@ -117,359 +117,61 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="&gt;&gt;xmlInput.Name" xml:space="preserve">
-    <value>xmlInput</value>
-  </data>
-  <data name="&gt;&gt;xmlInput.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;xmlInput.Parent" xml:space="preserve">
-    <value>Tabs</value>
-  </data>
-  <data name="&gt;&gt;xmlInput.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;tabPage2.Name" xml:space="preserve">
-    <value>tabPage2</value>
-  </data>
-  <data name="&gt;&gt;tabPage2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tabPage2.Parent" xml:space="preserve">
-    <value>Tabs</value>
-  </data>
-  <data name="&gt;&gt;tabPage2.ZOrder" xml:space="preserve">
-    <value>1</value>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="prognoseText.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="Tabs.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 27</value>
+  <data name="prognoseText.Location" type="System.Drawing.Point, System.Drawing">
+    <value>51, 217</value>
   </data>
-  <data name="Tabs.Size" type="System.Drawing.Size, System.Drawing">
-    <value>802, 392</value>
+  <data name="prognoseText.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>300, 0</value>
   </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="Tabs.TabIndex" type="System.Int32, mscorlib">
+  <data name="prognoseText.Size" type="System.Drawing.Size, System.Drawing">
+    <value>300, 13</value>
+  </data>
+  <data name="prognoseText.TabIndex" type="System.Int32, mscorlib">
+    <value>45</value>
+  </data>
+  <data name="&gt;&gt;prognoseText.Name" xml:space="preserve">
+    <value>prognoseText</value>
+  </data>
+  <data name="&gt;&gt;prognoseText.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;prognoseText.Parent" xml:space="preserve">
+    <value>xmlInput</value>
+  </data>
+  <data name="&gt;&gt;prognoseText.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="&gt;&gt;Tabs.Name" xml:space="preserve">
-    <value>Tabs</value>
+  <data name="prognoseSpeichern.Location" type="System.Drawing.Point, System.Drawing">
+    <value>599, 214</value>
   </data>
-  <data name="&gt;&gt;Tabs.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabControl, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="prognoseSpeichern.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 23</value>
   </data>
-  <data name="&gt;&gt;Tabs.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="prognoseSpeichern.TabIndex" type="System.Int32, mscorlib">
+    <value>44</value>
   </data>
-  <data name="&gt;&gt;Tabs.ZOrder" xml:space="preserve">
-    <value>1</value>
+  <data name="prognoseSpeichern.Text" xml:space="preserve">
+    <value>Speichern</value>
   </data>
-  <data name="&gt;&gt;upDownP33.Name" xml:space="preserve">
-    <value>upDownP33</value>
+  <data name="&gt;&gt;prognoseSpeichern.Name" xml:space="preserve">
+    <value>prognoseSpeichern</value>
   </data>
-  <data name="&gt;&gt;upDownP33.Type" xml:space="preserve">
-    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;upDownP33.Parent" xml:space="preserve">
-    <value>xmlInput</value>
-  </data>
-  <data name="&gt;&gt;upDownP33.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;upDownP23.Name" xml:space="preserve">
-    <value>upDownP23</value>
-  </data>
-  <data name="&gt;&gt;upDownP23.Type" xml:space="preserve">
-    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;upDownP23.Parent" xml:space="preserve">
-    <value>xmlInput</value>
-  </data>
-  <data name="&gt;&gt;upDownP23.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;upDownP13.Name" xml:space="preserve">
-    <value>upDownP13</value>
-  </data>
-  <data name="&gt;&gt;upDownP13.Type" xml:space="preserve">
-    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;upDownP13.Parent" xml:space="preserve">
-    <value>xmlInput</value>
-  </data>
-  <data name="&gt;&gt;upDownP13.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;upDownAW3.Name" xml:space="preserve">
-    <value>upDownAW3</value>
-  </data>
-  <data name="&gt;&gt;upDownAW3.Type" xml:space="preserve">
-    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;upDownAW3.Parent" xml:space="preserve">
-    <value>xmlInput</value>
-  </data>
-  <data name="&gt;&gt;upDownAW3.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;upDownP32.Name" xml:space="preserve">
-    <value>upDownP32</value>
-  </data>
-  <data name="&gt;&gt;upDownP32.Type" xml:space="preserve">
-    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;upDownP32.Parent" xml:space="preserve">
-    <value>xmlInput</value>
-  </data>
-  <data name="&gt;&gt;upDownP32.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;upDownP22.Name" xml:space="preserve">
-    <value>upDownP22</value>
-  </data>
-  <data name="&gt;&gt;upDownP22.Type" xml:space="preserve">
-    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;upDownP22.Parent" xml:space="preserve">
-    <value>xmlInput</value>
-  </data>
-  <data name="&gt;&gt;upDownP22.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="&gt;&gt;upDownP12.Name" xml:space="preserve">
-    <value>upDownP12</value>
-  </data>
-  <data name="&gt;&gt;upDownP12.Type" xml:space="preserve">
-    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;upDownP12.Parent" xml:space="preserve">
-    <value>xmlInput</value>
-  </data>
-  <data name="&gt;&gt;upDownP12.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="&gt;&gt;upDownAW2.Name" xml:space="preserve">
-    <value>upDownAW2</value>
-  </data>
-  <data name="&gt;&gt;upDownAW2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;upDownAW2.Parent" xml:space="preserve">
-    <value>xmlInput</value>
-  </data>
-  <data name="&gt;&gt;upDownAW2.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="&gt;&gt;upDownP31.Name" xml:space="preserve">
-    <value>upDownP31</value>
-  </data>
-  <data name="&gt;&gt;upDownP31.Type" xml:space="preserve">
-    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;upDownP31.Parent" xml:space="preserve">
-    <value>xmlInput</value>
-  </data>
-  <data name="&gt;&gt;upDownP31.ZOrder" xml:space="preserve">
-    <value>8</value>
-  </data>
-  <data name="&gt;&gt;upDownP21.Name" xml:space="preserve">
-    <value>upDownP21</value>
-  </data>
-  <data name="&gt;&gt;upDownP21.Type" xml:space="preserve">
-    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;upDownP21.Parent" xml:space="preserve">
-    <value>xmlInput</value>
-  </data>
-  <data name="&gt;&gt;upDownP21.ZOrder" xml:space="preserve">
-    <value>9</value>
-  </data>
-  <data name="&gt;&gt;upDownP11.Name" xml:space="preserve">
-    <value>upDownP11</value>
-  </data>
-  <data name="&gt;&gt;upDownP11.Type" xml:space="preserve">
-    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;upDownP11.Parent" xml:space="preserve">
-    <value>xmlInput</value>
-  </data>
-  <data name="&gt;&gt;upDownP11.ZOrder" xml:space="preserve">
-    <value>10</value>
-  </data>
-  <data name="&gt;&gt;upDownAW1.Name" xml:space="preserve">
-    <value>upDownAW1</value>
-  </data>
-  <data name="&gt;&gt;upDownAW1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;upDownAW1.Parent" xml:space="preserve">
-    <value>xmlInput</value>
-  </data>
-  <data name="&gt;&gt;upDownAW1.ZOrder" xml:space="preserve">
-    <value>11</value>
-  </data>
-  <data name="&gt;&gt;titleXmlLaden.Name" xml:space="preserve">
-    <value>titleXmlLaden</value>
-  </data>
-  <data name="&gt;&gt;titleXmlLaden.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;titleXmlLaden.Parent" xml:space="preserve">
-    <value>xmlInput</value>
-  </data>
-  <data name="&gt;&gt;titleXmlLaden.ZOrder" xml:space="preserve">
-    <value>12</value>
-  </data>
-  <data name="&gt;&gt;prognose1.Name" xml:space="preserve">
-    <value>prognose1</value>
-  </data>
-  <data name="&gt;&gt;prognose1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;prognose1.Parent" xml:space="preserve">
-    <value>xmlInput</value>
-  </data>
-  <data name="&gt;&gt;prognose1.ZOrder" xml:space="preserve">
-    <value>13</value>
-  </data>
-  <data name="&gt;&gt;prognose2.Name" xml:space="preserve">
-    <value>prognose2</value>
-  </data>
-  <data name="&gt;&gt;prognose2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;prognose2.Parent" xml:space="preserve">
-    <value>xmlInput</value>
-  </data>
-  <data name="&gt;&gt;prognose2.ZOrder" xml:space="preserve">
-    <value>14</value>
-  </data>
-  <data name="&gt;&gt;prognose3.Name" xml:space="preserve">
-    <value>prognose3</value>
-  </data>
-  <data name="&gt;&gt;prognose3.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;prognose3.Parent" xml:space="preserve">
-    <value>xmlInput</value>
-  </data>
-  <data name="&gt;&gt;prognose3.ZOrder" xml:space="preserve">
-    <value>15</value>
-  </data>
-  <data name="&gt;&gt;aktulleWoche.Name" xml:space="preserve">
-    <value>aktulleWoche</value>
-  </data>
-  <data name="&gt;&gt;aktulleWoche.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;aktulleWoche.Parent" xml:space="preserve">
-    <value>xmlInput</value>
-  </data>
-  <data name="&gt;&gt;aktulleWoche.ZOrder" xml:space="preserve">
-    <value>16</value>
-  </data>
-  <data name="&gt;&gt;p3.Name" xml:space="preserve">
-    <value>p3</value>
-  </data>
-  <data name="&gt;&gt;p3.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;p3.Parent" xml:space="preserve">
-    <value>xmlInput</value>
-  </data>
-  <data name="&gt;&gt;p3.ZOrder" xml:space="preserve">
-    <value>17</value>
-  </data>
-  <data name="&gt;&gt;p2.Name" xml:space="preserve">
-    <value>p2</value>
-  </data>
-  <data name="&gt;&gt;p2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;p2.Parent" xml:space="preserve">
-    <value>xmlInput</value>
-  </data>
-  <data name="&gt;&gt;p2.ZOrder" xml:space="preserve">
-    <value>18</value>
-  </data>
-  <data name="&gt;&gt;p1.Name" xml:space="preserve">
-    <value>p1</value>
-  </data>
-  <data name="&gt;&gt;p1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;p1.Parent" xml:space="preserve">
-    <value>xmlInput</value>
-  </data>
-  <data name="&gt;&gt;p1.ZOrder" xml:space="preserve">
-    <value>19</value>
-  </data>
-  <data name="&gt;&gt;titlePrognose.Name" xml:space="preserve">
-    <value>titlePrognose</value>
-  </data>
-  <data name="&gt;&gt;titlePrognose.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;titlePrognose.Parent" xml:space="preserve">
-    <value>xmlInput</value>
-  </data>
-  <data name="&gt;&gt;titlePrognose.ZOrder" xml:space="preserve">
-    <value>20</value>
-  </data>
-  <data name="&gt;&gt;pfadText.Name" xml:space="preserve">
-    <value>pfadText</value>
-  </data>
-  <data name="&gt;&gt;pfadText.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;pfadText.Parent" xml:space="preserve">
-    <value>xmlInput</value>
-  </data>
-  <data name="&gt;&gt;pfadText.ZOrder" xml:space="preserve">
-    <value>21</value>
-  </data>
-  <data name="&gt;&gt;xml_suchen.Name" xml:space="preserve">
-    <value>xml_suchen</value>
-  </data>
-  <data name="&gt;&gt;xml_suchen.Type" xml:space="preserve">
+  <data name="&gt;&gt;prognoseSpeichern.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;xml_suchen.Parent" xml:space="preserve">
+  <data name="&gt;&gt;prognoseSpeichern.Parent" xml:space="preserve">
     <value>xmlInput</value>
   </data>
-  <data name="&gt;&gt;xml_suchen.ZOrder" xml:space="preserve">
-    <value>22</value>
-  </data>
-  <data name="xmlInput.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 22</value>
-  </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="xmlInput.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 3, 3, 3</value>
-  </data>
-  <data name="xmlInput.Size" type="System.Drawing.Size, System.Drawing">
-    <value>794, 366</value>
-  </data>
-  <data name="xmlInput.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="xmlInput.Text" xml:space="preserve">
-    <value>XML laden</value>
-  </data>
-  <data name="&gt;&gt;xmlInput.Name" xml:space="preserve">
-    <value>xmlInput</value>
-  </data>
-  <data name="&gt;&gt;xmlInput.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;xmlInput.Parent" xml:space="preserve">
-    <value>Tabs</value>
-  </data>
-  <data name="&gt;&gt;xmlInput.ZOrder" xml:space="preserve">
-    <value>0</value>
+  <data name="&gt;&gt;prognoseSpeichern.ZOrder" xml:space="preserve">
+    <value>1</value>
   </data>
   <data name="upDownP33.Location" type="System.Drawing.Point, System.Drawing">
-    <value>595, 190</value>
+    <value>595, 176</value>
   </data>
   <data name="upDownP33.Size" type="System.Drawing.Size, System.Drawing">
     <value>79, 20</value>
@@ -487,10 +189,10 @@
     <value>xmlInput</value>
   </data>
   <data name="&gt;&gt;upDownP33.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>2</value>
   </data>
   <data name="upDownP23.Location" type="System.Drawing.Point, System.Drawing">
-    <value>451, 188</value>
+    <value>451, 174</value>
   </data>
   <data name="upDownP23.Size" type="System.Drawing.Size, System.Drawing">
     <value>79, 20</value>
@@ -508,10 +210,10 @@
     <value>xmlInput</value>
   </data>
   <data name="&gt;&gt;upDownP23.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>3</value>
   </data>
   <data name="upDownP13.Location" type="System.Drawing.Point, System.Drawing">
-    <value>307, 190</value>
+    <value>307, 176</value>
   </data>
   <data name="upDownP13.Size" type="System.Drawing.Size, System.Drawing">
     <value>79, 20</value>
@@ -529,10 +231,10 @@
     <value>xmlInput</value>
   </data>
   <data name="&gt;&gt;upDownP13.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>4</value>
   </data>
   <data name="upDownAW3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>163, 190</value>
+    <value>163, 176</value>
   </data>
   <data name="upDownAW3.Size" type="System.Drawing.Size, System.Drawing">
     <value>79, 20</value>
@@ -550,10 +252,10 @@
     <value>xmlInput</value>
   </data>
   <data name="&gt;&gt;upDownAW3.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>5</value>
   </data>
   <data name="upDownP32.Location" type="System.Drawing.Point, System.Drawing">
-    <value>595, 150</value>
+    <value>595, 136</value>
   </data>
   <data name="upDownP32.Size" type="System.Drawing.Size, System.Drawing">
     <value>79, 20</value>
@@ -571,10 +273,10 @@
     <value>xmlInput</value>
   </data>
   <data name="&gt;&gt;upDownP32.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>6</value>
   </data>
   <data name="upDownP22.Location" type="System.Drawing.Point, System.Drawing">
-    <value>451, 150</value>
+    <value>451, 136</value>
   </data>
   <data name="upDownP22.Size" type="System.Drawing.Size, System.Drawing">
     <value>79, 20</value>
@@ -592,10 +294,10 @@
     <value>xmlInput</value>
   </data>
   <data name="&gt;&gt;upDownP22.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>7</value>
   </data>
   <data name="upDownP12.Location" type="System.Drawing.Point, System.Drawing">
-    <value>307, 150</value>
+    <value>307, 136</value>
   </data>
   <data name="upDownP12.Size" type="System.Drawing.Size, System.Drawing">
     <value>79, 20</value>
@@ -613,10 +315,10 @@
     <value>xmlInput</value>
   </data>
   <data name="&gt;&gt;upDownP12.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>8</value>
   </data>
   <data name="upDownAW2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>163, 150</value>
+    <value>163, 136</value>
   </data>
   <data name="upDownAW2.Size" type="System.Drawing.Size, System.Drawing">
     <value>79, 20</value>
@@ -634,10 +336,10 @@
     <value>xmlInput</value>
   </data>
   <data name="&gt;&gt;upDownAW2.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>9</value>
   </data>
   <data name="upDownP31.Location" type="System.Drawing.Point, System.Drawing">
-    <value>595, 110</value>
+    <value>595, 96</value>
   </data>
   <data name="upDownP31.Size" type="System.Drawing.Size, System.Drawing">
     <value>79, 20</value>
@@ -655,10 +357,10 @@
     <value>xmlInput</value>
   </data>
   <data name="&gt;&gt;upDownP31.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>10</value>
   </data>
   <data name="upDownP21.Location" type="System.Drawing.Point, System.Drawing">
-    <value>451, 110</value>
+    <value>451, 96</value>
   </data>
   <data name="upDownP21.Size" type="System.Drawing.Size, System.Drawing">
     <value>79, 20</value>
@@ -676,10 +378,10 @@
     <value>xmlInput</value>
   </data>
   <data name="&gt;&gt;upDownP21.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>11</value>
   </data>
   <data name="upDownP11.Location" type="System.Drawing.Point, System.Drawing">
-    <value>307, 110</value>
+    <value>307, 96</value>
   </data>
   <data name="upDownP11.Size" type="System.Drawing.Size, System.Drawing">
     <value>79, 20</value>
@@ -697,10 +399,10 @@
     <value>xmlInput</value>
   </data>
   <data name="&gt;&gt;upDownP11.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>12</value>
   </data>
   <data name="upDownAW1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>163, 110</value>
+    <value>163, 96</value>
   </data>
   <data name="upDownAW1.Size" type="System.Drawing.Size, System.Drawing">
     <value>79, 20</value>
@@ -718,7 +420,7 @@
     <value>xmlInput</value>
   </data>
   <data name="&gt;&gt;upDownAW1.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>13</value>
   </data>
   <data name="titleXmlLaden.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -726,11 +428,12 @@
   <data name="titleXmlLaden.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 24pt</value>
   </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="titleXmlLaden.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="titleXmlLaden.Location" type="System.Drawing.Point, System.Drawing">
-    <value>28, 254</value>
+    <value>28, 257</value>
   </data>
   <data name="titleXmlLaden.Size" type="System.Drawing.Size, System.Drawing">
     <value>180, 37</value>
@@ -751,7 +454,7 @@
     <value>xmlInput</value>
   </data>
   <data name="&gt;&gt;titleXmlLaden.ZOrder" xml:space="preserve">
-    <value>12</value>
+    <value>14</value>
   </data>
   <data name="prognose1.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -760,7 +463,7 @@
     <value>NoControl</value>
   </data>
   <data name="prognose1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>304, 82</value>
+    <value>304, 68</value>
   </data>
   <data name="prognose1.Size" type="System.Drawing.Size, System.Drawing">
     <value>61, 13</value>
@@ -781,7 +484,7 @@
     <value>xmlInput</value>
   </data>
   <data name="&gt;&gt;prognose1.ZOrder" xml:space="preserve">
-    <value>13</value>
+    <value>15</value>
   </data>
   <data name="prognose2.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -790,7 +493,7 @@
     <value>NoControl</value>
   </data>
   <data name="prognose2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>448, 82</value>
+    <value>448, 68</value>
   </data>
   <data name="prognose2.Size" type="System.Drawing.Size, System.Drawing">
     <value>61, 13</value>
@@ -811,7 +514,7 @@
     <value>xmlInput</value>
   </data>
   <data name="&gt;&gt;prognose2.ZOrder" xml:space="preserve">
-    <value>14</value>
+    <value>16</value>
   </data>
   <data name="prognose3.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -820,7 +523,7 @@
     <value>NoControl</value>
   </data>
   <data name="prognose3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>592, 82</value>
+    <value>592, 68</value>
   </data>
   <data name="prognose3.Size" type="System.Drawing.Size, System.Drawing">
     <value>61, 13</value>
@@ -841,7 +544,7 @@
     <value>xmlInput</value>
   </data>
   <data name="&gt;&gt;prognose3.ZOrder" xml:space="preserve">
-    <value>15</value>
+    <value>17</value>
   </data>
   <data name="aktulleWoche.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -850,7 +553,7 @@
     <value>NoControl</value>
   </data>
   <data name="aktulleWoche.Location" type="System.Drawing.Point, System.Drawing">
-    <value>160, 82</value>
+    <value>160, 68</value>
   </data>
   <data name="aktulleWoche.Size" type="System.Drawing.Size, System.Drawing">
     <value>82, 13</value>
@@ -871,7 +574,7 @@
     <value>xmlInput</value>
   </data>
   <data name="&gt;&gt;aktulleWoche.ZOrder" xml:space="preserve">
-    <value>16</value>
+    <value>18</value>
   </data>
   <data name="p3.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -880,7 +583,7 @@
     <value>NoControl</value>
   </data>
   <data name="p3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>48, 190</value>
+    <value>48, 176</value>
   </data>
   <data name="p3.Size" type="System.Drawing.Size, System.Drawing">
     <value>70, 13</value>
@@ -901,7 +604,7 @@
     <value>xmlInput</value>
   </data>
   <data name="&gt;&gt;p3.ZOrder" xml:space="preserve">
-    <value>17</value>
+    <value>19</value>
   </data>
   <data name="p2.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -910,7 +613,7 @@
     <value>NoControl</value>
   </data>
   <data name="p2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>48, 150</value>
+    <value>48, 136</value>
   </data>
   <data name="p2.Size" type="System.Drawing.Size, System.Drawing">
     <value>74, 13</value>
@@ -931,13 +634,13 @@
     <value>xmlInput</value>
   </data>
   <data name="&gt;&gt;p2.ZOrder" xml:space="preserve">
-    <value>18</value>
+    <value>20</value>
   </data>
   <data name="p1.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="p1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>48, 110</value>
+    <value>48, 96</value>
   </data>
   <data name="p1.Size" type="System.Drawing.Size, System.Drawing">
     <value>72, 13</value>
@@ -958,7 +661,7 @@
     <value>xmlInput</value>
   </data>
   <data name="&gt;&gt;p1.ZOrder" xml:space="preserve">
-    <value>19</value>
+    <value>21</value>
   </data>
   <data name="titlePrognose.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -988,13 +691,13 @@
     <value>xmlInput</value>
   </data>
   <data name="&gt;&gt;titlePrognose.ZOrder" xml:space="preserve">
-    <value>20</value>
+    <value>22</value>
   </data>
   <data name="pfadText.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="pfadText.Location" type="System.Drawing.Point, System.Drawing">
-    <value>146, 291</value>
+    <value>157, 318</value>
   </data>
   <data name="pfadText.MinimumSize" type="System.Drawing.Size, System.Drawing">
     <value>145, 0</value>
@@ -1015,10 +718,10 @@
     <value>xmlInput</value>
   </data>
   <data name="&gt;&gt;pfadText.ZOrder" xml:space="preserve">
-    <value>21</value>
+    <value>23</value>
   </data>
   <data name="xml_suchen.Location" type="System.Drawing.Point, System.Drawing">
-    <value>35, 309</value>
+    <value>35, 312</value>
   </data>
   <data name="xml_suchen.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 23</value>
@@ -1039,7 +742,34 @@
     <value>xmlInput</value>
   </data>
   <data name="&gt;&gt;xml_suchen.ZOrder" xml:space="preserve">
-    <value>22</value>
+    <value>24</value>
+  </data>
+  <data name="xmlInput.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 22</value>
+  </data>
+  <data name="xmlInput.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
+  </data>
+  <data name="xmlInput.Size" type="System.Drawing.Size, System.Drawing">
+    <value>794, 366</value>
+  </data>
+  <data name="xmlInput.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="xmlInput.Text" xml:space="preserve">
+    <value>XML laden</value>
+  </data>
+  <data name="&gt;&gt;xmlInput.Name" xml:space="preserve">
+    <value>xmlInput</value>
+  </data>
+  <data name="&gt;&gt;xmlInput.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;xmlInput.Parent" xml:space="preserve">
+    <value>Tabs</value>
+  </data>
+  <data name="&gt;&gt;xmlInput.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <data name="tabPage2.Location" type="System.Drawing.Point, System.Drawing">
     <value>4, 22</value>
@@ -1068,30 +798,33 @@
   <data name="&gt;&gt;tabPage2.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
+  <data name="Tabs.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 27</value>
+  </data>
+  <data name="Tabs.Size" type="System.Drawing.Size, System.Drawing">
+    <value>802, 392</value>
+  </data>
+  <data name="Tabs.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;Tabs.Name" xml:space="preserve">
+    <value>Tabs</value>
+  </data>
+  <data name="&gt;&gt;Tabs.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabControl, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Tabs.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;Tabs.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
   <metadata name="openFileDialog.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
   <metadata name="menu.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>233, 17</value>
   </metadata>
-  <data name="deutschToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>118, 22</value>
-  </data>
-  <data name="deutschToolStripMenuItem.Text" xml:space="preserve">
-    <value>Deutsch</value>
-  </data>
-  <data name="englischToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>152, 22</value>
-  </data>
-  <data name="englischToolStripMenuItem.Text" xml:space="preserve">
-    <value>Englisch</value>
-  </data>
-  <data name="spracheToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>61, 20</value>
-  </data>
-  <data name="spracheToolStripMenuItem.Text" xml:space="preserve">
-    <value>Sprache</value>
-  </data>
   <data name="menu.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
   </data>
@@ -1115,6 +848,24 @@
   </data>
   <data name="&gt;&gt;menu.ZOrder" xml:space="preserve">
     <value>0</value>
+  </data>
+  <data name="spracheToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>61, 20</value>
+  </data>
+  <data name="spracheToolStripMenuItem.Text" xml:space="preserve">
+    <value>Sprache</value>
+  </data>
+  <data name="deutschToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>118, 22</value>
+  </data>
+  <data name="deutschToolStripMenuItem.Text" xml:space="preserve">
+    <value>Deutsch</value>
+  </data>
+  <data name="englischToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>118, 22</value>
+  </data>
+  <data name="englischToolStripMenuItem.Text" xml:space="preserve">
+    <value>Englisch</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>

@@ -60,6 +60,8 @@
             this.spracheToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.deutschToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.englischToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.prognoseSpeichern = new System.Windows.Forms.Button();
+            this.prognoseText = new System.Windows.Forms.Label();
             this.Tabs.SuspendLayout();
             this.xmlInput.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.upDownP33)).BeginInit();
@@ -88,6 +90,8 @@
             // xmlInput
             // 
             this.xmlInput.BackColor = System.Drawing.Color.Transparent;
+            this.xmlInput.Controls.Add(this.prognoseText);
+            this.xmlInput.Controls.Add(this.prognoseSpeichern);
             this.xmlInput.Controls.Add(this.upDownP33);
             this.xmlInput.Controls.Add(this.upDownP23);
             this.xmlInput.Controls.Add(this.upDownP13);
@@ -405,6 +409,7 @@
             // pfadText
             // 
             resources.ApplyResources(this.pfadText, "pfadText");
+            this.pfadText.ForeColor = System.Drawing.Color.ForestGreen;
             this.pfadText.Name = "pfadText";
             // 
             // xml_suchen
@@ -449,6 +454,19 @@
             // 
             this.englischToolStripMenuItem.Name = "englischToolStripMenuItem";
             resources.ApplyResources(this.englischToolStripMenuItem, "englischToolStripMenuItem");
+            // 
+            // prognoseSpeichern
+            // 
+            resources.ApplyResources(this.prognoseSpeichern, "prognoseSpeichern");
+            this.prognoseSpeichern.Name = "prognoseSpeichern";
+            this.prognoseSpeichern.UseVisualStyleBackColor = true;
+            this.prognoseSpeichern.Click += new System.EventHandler(this.prognoseSpeichern_Click);
+            // 
+            // prognoseText
+            // 
+            resources.ApplyResources(this.prognoseText, "prognoseText");
+            this.prognoseText.ForeColor = System.Drawing.Color.ForestGreen;
+            this.prognoseText.Name = "prognoseText";
             // 
             // Fahrrad
             // 
@@ -512,6 +530,8 @@
         private System.Windows.Forms.Label prognose1;
         private System.Windows.Forms.Label prognose2;
         private System.Windows.Forms.Label prognose3;
+        private System.Windows.Forms.Button prognoseSpeichern;
+        private System.Windows.Forms.Label prognoseText;
     }
 }
 
