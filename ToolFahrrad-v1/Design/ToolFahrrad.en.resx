@@ -120,4 +120,13 @@
   <data name="xml_suchen.Text" xml:space="preserve">
     <value>XML open</value>
   </data>
+  <data name="spracheToolStripMenuItem.Text" xml:space="preserve">
+    <value>Language</value>
+  </data>
+  <data name="deutchToolStripMenuItem.Text" xml:space="preserve">
+    <value>Germany</value>
+  </data>
+  <data name="englischToolStripMenuItem.Text" xml:space="preserve">
+    <value>English</value>
+  </data>
 </root>
