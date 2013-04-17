@@ -10,7 +10,17 @@ namespace ToolFahrrad_v1
         // Private Felder
         protected int nummer;
         protected int anzSchichten = 1;
+        public int Schichten
+        {
+            get { return this.anzSchichten; }
+            set { this.anzSchichten = value; }
+        }
         protected int anzUeberMin = 0;
+        public int UeberMin
+        {
+            get { return this.anzUeberMin; }
+            set { this.anzUeberMin = value; }
+        }
         int warteschlangenZeit = 0;
         // Benoetigte Zeit zur Hersetllung von Teil mit der Key nummer
         private Dictionary<int, int> werkZeit;
