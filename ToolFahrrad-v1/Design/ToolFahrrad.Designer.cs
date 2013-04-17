@@ -31,6 +31,18 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Fahrrad));
             this.Tabs = new System.Windows.Forms.TabControl();
             this.xmlInput = new System.Windows.Forms.TabPage();
+            this.upDownP33 = new System.Windows.Forms.NumericUpDown();
+            this.upDownP23 = new System.Windows.Forms.NumericUpDown();
+            this.upDownP13 = new System.Windows.Forms.NumericUpDown();
+            this.upDownAW3 = new System.Windows.Forms.NumericUpDown();
+            this.upDownP32 = new System.Windows.Forms.NumericUpDown();
+            this.upDownP22 = new System.Windows.Forms.NumericUpDown();
+            this.upDownP12 = new System.Windows.Forms.NumericUpDown();
+            this.upDownAW2 = new System.Windows.Forms.NumericUpDown();
+            this.upDownP31 = new System.Windows.Forms.NumericUpDown();
+            this.upDownP21 = new System.Windows.Forms.NumericUpDown();
+            this.upDownP11 = new System.Windows.Forms.NumericUpDown();
+            this.upDownAW1 = new System.Windows.Forms.NumericUpDown();
             this.titleXmlLaden = new System.Windows.Forms.Label();
             this.prognose1 = new System.Windows.Forms.Label();
             this.prognose2 = new System.Windows.Forms.Label();
@@ -43,41 +55,32 @@
             this.pfadText = new System.Windows.Forms.Label();
             this.xml_suchen = new System.Windows.Forms.Button();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.settings = new System.Windows.Forms.TabPage();
             this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
-            this.upDownAW1 = new System.Windows.Forms.NumericUpDown();
-            this.upDownP11 = new System.Windows.Forms.NumericUpDown();
-            this.upDownP21 = new System.Windows.Forms.NumericUpDown();
-            this.upDownP31 = new System.Windows.Forms.NumericUpDown();
-            this.upDownAW2 = new System.Windows.Forms.NumericUpDown();
-            this.upDownP12 = new System.Windows.Forms.NumericUpDown();
-            this.upDownP22 = new System.Windows.Forms.NumericUpDown();
-            this.upDownP32 = new System.Windows.Forms.NumericUpDown();
-            this.upDownAW3 = new System.Windows.Forms.NumericUpDown();
-            this.upDownP13 = new System.Windows.Forms.NumericUpDown();
-            this.upDownP23 = new System.Windows.Forms.NumericUpDown();
-            this.upDownP33 = new System.Windows.Forms.NumericUpDown();
+            this.menu = new System.Windows.Forms.MenuStrip();
+            this.spracheToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.deutschToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.englischToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.Tabs.SuspendLayout();
             this.xmlInput.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.upDownAW1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.upDownP11)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.upDownP21)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.upDownP31)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.upDownAW2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.upDownP12)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.upDownP22)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.upDownP32)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.upDownAW3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.upDownP13)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.upDownP23)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.upDownP33)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.upDownP23)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.upDownP13)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.upDownAW3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.upDownP32)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.upDownP22)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.upDownP12)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.upDownAW2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.upDownP31)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.upDownP21)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.upDownP11)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.upDownAW1)).BeginInit();
+            this.menu.SuspendLayout();
             this.SuspendLayout();
             // 
             // Tabs
             // 
             this.Tabs.Controls.Add(this.xmlInput);
             this.Tabs.Controls.Add(this.tabPage2);
-            this.Tabs.Controls.Add(this.settings);
             resources.ApplyResources(this.Tabs, "Tabs");
             this.Tabs.Name = "Tabs";
             this.Tabs.SelectedIndex = 0;
@@ -110,6 +113,249 @@
             this.xmlInput.Controls.Add(this.xml_suchen);
             resources.ApplyResources(this.xmlInput, "xmlInput");
             this.xmlInput.Name = "xmlInput";
+            // 
+            // upDownP33
+            // 
+            this.upDownP33.Increment = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            resources.ApplyResources(this.upDownP33, "upDownP33");
+            this.upDownP33.Maximum = new decimal(new int[] {
+            10000,
+            0,
+            0,
+            0});
+            this.upDownP33.Name = "upDownP33";
+            this.upDownP33.Value = new decimal(new int[] {
+            100,
+            0,
+            0,
+            0});
+            // 
+            // upDownP23
+            // 
+            this.upDownP23.Increment = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            resources.ApplyResources(this.upDownP23, "upDownP23");
+            this.upDownP23.Maximum = new decimal(new int[] {
+            10000,
+            0,
+            0,
+            0});
+            this.upDownP23.Name = "upDownP23";
+            this.upDownP23.Value = new decimal(new int[] {
+            100,
+            0,
+            0,
+            0});
+            // 
+            // upDownP13
+            // 
+            this.upDownP13.Increment = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            resources.ApplyResources(this.upDownP13, "upDownP13");
+            this.upDownP13.Maximum = new decimal(new int[] {
+            10000,
+            0,
+            0,
+            0});
+            this.upDownP13.Name = "upDownP13";
+            this.upDownP13.Value = new decimal(new int[] {
+            100,
+            0,
+            0,
+            0});
+            // 
+            // upDownAW3
+            // 
+            this.upDownAW3.BackColor = System.Drawing.Color.Honeydew;
+            this.upDownAW3.Increment = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            resources.ApplyResources(this.upDownAW3, "upDownAW3");
+            this.upDownAW3.Maximum = new decimal(new int[] {
+            10000,
+            0,
+            0,
+            0});
+            this.upDownAW3.Name = "upDownAW3";
+            this.upDownAW3.Value = new decimal(new int[] {
+            100,
+            0,
+            0,
+            0});
+            // 
+            // upDownP32
+            // 
+            this.upDownP32.Increment = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            resources.ApplyResources(this.upDownP32, "upDownP32");
+            this.upDownP32.Maximum = new decimal(new int[] {
+            10000,
+            0,
+            0,
+            0});
+            this.upDownP32.Name = "upDownP32";
+            this.upDownP32.Value = new decimal(new int[] {
+            100,
+            0,
+            0,
+            0});
+            // 
+            // upDownP22
+            // 
+            this.upDownP22.Increment = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            resources.ApplyResources(this.upDownP22, "upDownP22");
+            this.upDownP22.Maximum = new decimal(new int[] {
+            10000,
+            0,
+            0,
+            0});
+            this.upDownP22.Name = "upDownP22";
+            this.upDownP22.Value = new decimal(new int[] {
+            100,
+            0,
+            0,
+            0});
+            // 
+            // upDownP12
+            // 
+            this.upDownP12.Increment = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            resources.ApplyResources(this.upDownP12, "upDownP12");
+            this.upDownP12.Maximum = new decimal(new int[] {
+            10000,
+            0,
+            0,
+            0});
+            this.upDownP12.Name = "upDownP12";
+            this.upDownP12.Value = new decimal(new int[] {
+            100,
+            0,
+            0,
+            0});
+            // 
+            // upDownAW2
+            // 
+            this.upDownAW2.BackColor = System.Drawing.Color.Honeydew;
+            this.upDownAW2.Increment = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            resources.ApplyResources(this.upDownAW2, "upDownAW2");
+            this.upDownAW2.Maximum = new decimal(new int[] {
+            10000,
+            0,
+            0,
+            0});
+            this.upDownAW2.Name = "upDownAW2";
+            this.upDownAW2.Value = new decimal(new int[] {
+            100,
+            0,
+            0,
+            0});
+            // 
+            // upDownP31
+            // 
+            this.upDownP31.Increment = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            resources.ApplyResources(this.upDownP31, "upDownP31");
+            this.upDownP31.Maximum = new decimal(new int[] {
+            10000,
+            0,
+            0,
+            0});
+            this.upDownP31.Name = "upDownP31";
+            this.upDownP31.Value = new decimal(new int[] {
+            100,
+            0,
+            0,
+            0});
+            // 
+            // upDownP21
+            // 
+            this.upDownP21.Increment = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            resources.ApplyResources(this.upDownP21, "upDownP21");
+            this.upDownP21.Maximum = new decimal(new int[] {
+            10000,
+            0,
+            0,
+            0});
+            this.upDownP21.Name = "upDownP21";
+            this.upDownP21.Value = new decimal(new int[] {
+            100,
+            0,
+            0,
+            0});
+            // 
+            // upDownP11
+            // 
+            this.upDownP11.Increment = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            resources.ApplyResources(this.upDownP11, "upDownP11");
+            this.upDownP11.Maximum = new decimal(new int[] {
+            10000,
+            0,
+            0,
+            0});
+            this.upDownP11.Name = "upDownP11";
+            this.upDownP11.Value = new decimal(new int[] {
+            100,
+            0,
+            0,
+            0});
+            // 
+            // upDownAW1
+            // 
+            this.upDownAW1.BackColor = System.Drawing.Color.Honeydew;
+            this.upDownAW1.Increment = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            resources.ApplyResources(this.upDownAW1, "upDownAW1");
+            this.upDownAW1.Maximum = new decimal(new int[] {
+            10000,
+            0,
+            0,
+            0});
+            this.upDownAW1.Name = "upDownAW1";
+            this.upDownAW1.Value = new decimal(new int[] {
+            100,
+            0,
+            0,
+            0});
             // 
             // titleXmlLaden
             // 
@@ -174,98 +420,62 @@
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // settings
-            // 
-            this.settings.BackColor = System.Drawing.Color.Transparent;
-            resources.ApplyResources(this.settings, "settings");
-            this.settings.Name = "settings";
-            // 
             // openFileDialog
             // 
             this.openFileDialog.FileName = "openFileDialog";
             // 
-            // upDownAW1
+            // menu
             // 
-            resources.ApplyResources(this.upDownAW1, "upDownAW1");
-            this.upDownAW1.Name = "upDownAW1";
+            this.menu.BackColor = System.Drawing.Color.Transparent;
+            this.menu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.spracheToolStripMenuItem});
+            resources.ApplyResources(this.menu, "menu");
+            this.menu.Name = "menu";
             // 
-            // upDownP11
+            // spracheToolStripMenuItem
             // 
-            resources.ApplyResources(this.upDownP11, "upDownP11");
-            this.upDownP11.Name = "upDownP11";
+            this.spracheToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.deutschToolStripMenuItem,
+            this.englischToolStripMenuItem});
+            this.spracheToolStripMenuItem.Name = "spracheToolStripMenuItem";
+            resources.ApplyResources(this.spracheToolStripMenuItem, "spracheToolStripMenuItem");
             // 
-            // upDownP21
+            // deutschToolStripMenuItem
             // 
-            resources.ApplyResources(this.upDownP21, "upDownP21");
-            this.upDownP21.Name = "upDownP21";
+            this.deutschToolStripMenuItem.Name = "deutschToolStripMenuItem";
+            resources.ApplyResources(this.deutschToolStripMenuItem, "deutschToolStripMenuItem");
             // 
-            // upDownP31
+            // englischToolStripMenuItem
             // 
-            resources.ApplyResources(this.upDownP31, "upDownP31");
-            this.upDownP31.Name = "upDownP31";
-            // 
-            // upDownAW2
-            // 
-            resources.ApplyResources(this.upDownAW2, "upDownAW2");
-            this.upDownAW2.Name = "upDownAW2";
-            // 
-            // upDownP12
-            // 
-            resources.ApplyResources(this.upDownP12, "upDownP12");
-            this.upDownP12.Name = "upDownP12";
-            // 
-            // upDownP22
-            // 
-            resources.ApplyResources(this.upDownP22, "upDownP22");
-            this.upDownP22.Name = "upDownP22";
-            // 
-            // upDownP32
-            // 
-            resources.ApplyResources(this.upDownP32, "upDownP32");
-            this.upDownP32.Name = "upDownP32";
-            // 
-            // upDownAW3
-            // 
-            resources.ApplyResources(this.upDownAW3, "upDownAW3");
-            this.upDownAW3.Name = "upDownAW3";
-            // 
-            // upDownP13
-            // 
-            resources.ApplyResources(this.upDownP13, "upDownP13");
-            this.upDownP13.Name = "upDownP13";
-            // 
-            // upDownP23
-            // 
-            resources.ApplyResources(this.upDownP23, "upDownP23");
-            this.upDownP23.Name = "upDownP23";
-            // 
-            // upDownP33
-            // 
-            resources.ApplyResources(this.upDownP33, "upDownP33");
-            this.upDownP33.Name = "upDownP33";
+            this.englischToolStripMenuItem.Name = "englischToolStripMenuItem";
+            resources.ApplyResources(this.englischToolStripMenuItem, "englischToolStripMenuItem");
             // 
             // Fahrrad
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.menu);
             this.Controls.Add(this.Tabs);
             this.Name = "Fahrrad";
             this.Tabs.ResumeLayout(false);
             this.xmlInput.ResumeLayout(false);
             this.xmlInput.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.upDownAW1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.upDownP11)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.upDownP21)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.upDownP31)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.upDownAW2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.upDownP12)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.upDownP22)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.upDownP32)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.upDownAW3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.upDownP13)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.upDownP23)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.upDownP33)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.upDownP23)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.upDownP13)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.upDownAW3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.upDownP32)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.upDownP22)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.upDownP12)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.upDownAW2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.upDownP31)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.upDownP21)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.upDownP11)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.upDownAW1)).EndInit();
+            this.menu.ResumeLayout(false);
+            this.menu.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -279,26 +489,29 @@
         private System.Windows.Forms.Label pfadText;
         private System.Windows.Forms.Label titlePrognose;
         private System.Windows.Forms.Label titleXmlLaden;
-        private System.Windows.Forms.Label prognose1;
-        private System.Windows.Forms.Label prognose2;
-        private System.Windows.Forms.Label prognose3;
         private System.Windows.Forms.Label aktulleWoche;
         private System.Windows.Forms.Label p3;
         private System.Windows.Forms.Label p2;
         private System.Windows.Forms.Label p1;
-        private System.Windows.Forms.TabPage settings;
+        private System.Windows.Forms.NumericUpDown upDownAW3;
+        private System.Windows.Forms.NumericUpDown upDownAW2;
+        private System.Windows.Forms.NumericUpDown upDownAW1;
+        private System.Windows.Forms.MenuStrip menu;
+        private System.Windows.Forms.ToolStripMenuItem spracheToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem deutschToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem englischToolStripMenuItem;
         private System.Windows.Forms.NumericUpDown upDownP33;
         private System.Windows.Forms.NumericUpDown upDownP23;
         private System.Windows.Forms.NumericUpDown upDownP13;
-        private System.Windows.Forms.NumericUpDown upDownAW3;
         private System.Windows.Forms.NumericUpDown upDownP32;
         private System.Windows.Forms.NumericUpDown upDownP22;
         private System.Windows.Forms.NumericUpDown upDownP12;
-        private System.Windows.Forms.NumericUpDown upDownAW2;
         private System.Windows.Forms.NumericUpDown upDownP31;
         private System.Windows.Forms.NumericUpDown upDownP21;
         private System.Windows.Forms.NumericUpDown upDownP11;
-        private System.Windows.Forms.NumericUpDown upDownAW1;
+        private System.Windows.Forms.Label prognose1;
+        private System.Windows.Forms.Label prognose2;
+        private System.Windows.Forms.Label prognose3;
     }
 }
 
