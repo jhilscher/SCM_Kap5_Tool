@@ -57,13 +57,8 @@
             this.upDownP13 = new System.Windows.Forms.NumericUpDown();
             this.upDownP23 = new System.Windows.Forms.NumericUpDown();
             this.upDownP33 = new System.Windows.Forms.NumericUpDown();
-            this.menu = new System.Windows.Forms.MenuStrip();
-            this.spracheToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.deutschToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.englischToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.Tabs.SuspendLayout();
             this.xmlInput.SuspendLayout();
-            this.settings.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.upDownAW1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.upDownP11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.upDownP21)).BeginInit();
@@ -76,7 +71,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.upDownP13)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.upDownP23)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.upDownP33)).BeginInit();
-            this.menu.SuspendLayout();
             this.SuspendLayout();
             // 
             // Tabs
@@ -183,7 +177,6 @@
             // settings
             // 
             this.settings.BackColor = System.Drawing.Color.Transparent;
-            this.settings.Controls.Add(this.menu);
             resources.ApplyResources(this.settings, "settings");
             this.settings.Name = "settings";
             // 
@@ -251,44 +244,15 @@
             resources.ApplyResources(this.upDownP33, "upDownP33");
             this.upDownP33.Name = "upDownP33";
             // 
-            // menu
-            // 
-            this.menu.BackColor = System.Drawing.Color.Transparent;
-            this.menu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.spracheToolStripMenuItem});
-            resources.ApplyResources(this.menu, "menu");
-            this.menu.Name = "menu";
-            // 
-            // spracheToolStripMenuItem
-            // 
-            this.spracheToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.deutschToolStripMenuItem,
-            this.englischToolStripMenuItem});
-            this.spracheToolStripMenuItem.Name = "spracheToolStripMenuItem";
-            resources.ApplyResources(this.spracheToolStripMenuItem, "spracheToolStripMenuItem");
-            // 
-            // deutschToolStripMenuItem
-            // 
-            this.deutschToolStripMenuItem.Name = "deutschToolStripMenuItem";
-            resources.ApplyResources(this.deutschToolStripMenuItem, "deutschToolStripMenuItem");
-            // 
-            // englischToolStripMenuItem
-            // 
-            this.englischToolStripMenuItem.Name = "englischToolStripMenuItem";
-            resources.ApplyResources(this.englischToolStripMenuItem, "englischToolStripMenuItem");
-            // 
             // Fahrrad
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.Tabs);
-            this.MainMenuStrip = this.menu;
             this.Name = "Fahrrad";
             this.Tabs.ResumeLayout(false);
             this.xmlInput.ResumeLayout(false);
             this.xmlInput.PerformLayout();
-            this.settings.ResumeLayout(false);
-            this.settings.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.upDownAW1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.upDownP11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.upDownP21)).EndInit();
@@ -301,8 +265,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.upDownP13)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.upDownP23)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.upDownP33)).EndInit();
-            this.menu.ResumeLayout(false);
-            this.menu.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -337,10 +299,6 @@
         private System.Windows.Forms.NumericUpDown upDownP21;
         private System.Windows.Forms.NumericUpDown upDownP11;
         private System.Windows.Forms.NumericUpDown upDownAW1;
-        private System.Windows.Forms.MenuStrip menu;
-        private System.Windows.Forms.ToolStripMenuItem spracheToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem deutschToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem englischToolStripMenuItem;
     }
 }
 
