@@ -17,10 +17,10 @@ namespace ToolFahrrad_v1
         public Fahrrad()
         {
             Thread.CurrentThread.CurrentUICulture = new CultureInfo("en-EN");
-            InitializeComponent();            
+            InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void xml_suchen_Click(object sender, EventArgs e)
         {
             OpenFileDialog openFileDialog = new OpenFileDialog();
             openFileDialog.Filter = "xml-Datei öffnen (*.xml)|*.xml";
