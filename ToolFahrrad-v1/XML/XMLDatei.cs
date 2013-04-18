@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.IO;
+using System.Xml;
 
 namespace ToolFahrrad_v1
 {
@@ -11,6 +12,7 @@ namespace ToolFahrrad_v1
     {
 
         private static DataContainer dc = DataContainer.Instance;
+        private List<Lager> lager = new List<Lager>();
         /// <summary>
         /// Read Datei und 
         /// </summary>
@@ -20,23 +22,48 @@ namespace ToolFahrrad_v1
         }
         public bool ReadDatei(string pfad)
         {
-            string[,] att;
-
             bool res = false;
-            string zeile;
+            string zeile = string.Empty;
+            string xmlText = string.Empty;
+            //xml saubern
             using (StreamReader sr = new StreamReader(pfad, Encoding.UTF8))
             {
                 while ((zeile = sr.ReadLine()) != null)
                 {
+                    zeile = zeile.Replace("- <", "<");
                     if (zeile.Contains("results"))
                         res = true;
-                    if (zeile.Contains("article")) 
-                    {
-                        
-                    }
+                    xmlText += zeile;
                 }
             }
+
+            XmlDocument doc = new XmlDocument();
+            doc.LoadXml(xmlText);
+
+            //Lager
+            XmlNodeList items = doc.GetElementsByTagName("warehousestock");
+            foreach (XmlNode node in items)
+            {
+                foreach (XmlNode attr in node.ChildNodes)
+                {
+                    Lager lg = new Lager();
+                    if (attr.Name == "article")
+                    {                        
+                        lg.Id = Convert.ToInt32(attr.Attributes[0].Value);
+                        lg.Amount = Convert.ToInt32(attr.Attributes[1].Value);
+                        lg.Startamount = Convert.ToInt32(attr.Attributes[2].Value);
+                        lg.Pct = Convert.ToDouble(attr.Attributes[3].Value);
+                        lg.Price = Convert.ToDouble(attr.Attributes[4].Value);
+                        lg.Stockvalue = Convert.ToDouble(attr.Attributes[5].Value);                        
+                    }
+                    else
+                        lg.Totalstockvalue = Convert.ToDouble(attr.InnerText); 
+                    lager.Add(lg);
+                }
+            }
+
             return res;
+
         }
 
 
