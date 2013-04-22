@@ -31,6 +31,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Fahrrad));
             this.Tabs = new System.Windows.Forms.TabControl();
             this.xmlInput = new System.Windows.Forms.TabPage();
+            this.prognoseText = new System.Windows.Forms.Label();
+            this.prognoseSpeichern = new System.Windows.Forms.Button();
             this.upDownP33 = new System.Windows.Forms.NumericUpDown();
             this.upDownP23 = new System.Windows.Forms.NumericUpDown();
             this.upDownP13 = new System.Windows.Forms.NumericUpDown();
@@ -60,8 +62,6 @@
             this.spracheToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.deutschToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.englischToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.prognoseSpeichern = new System.Windows.Forms.Button();
-            this.prognoseText = new System.Windows.Forms.Label();
             this.Tabs.SuspendLayout();
             this.xmlInput.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.upDownP33)).BeginInit();
@@ -118,6 +118,19 @@
             resources.ApplyResources(this.xmlInput, "xmlInput");
             this.xmlInput.Name = "xmlInput";
             // 
+            // prognoseText
+            // 
+            resources.ApplyResources(this.prognoseText, "prognoseText");
+            this.prognoseText.ForeColor = System.Drawing.Color.ForestGreen;
+            this.prognoseText.Name = "prognoseText";
+            // 
+            // prognoseSpeichern
+            // 
+            resources.ApplyResources(this.prognoseSpeichern, "prognoseSpeichern");
+            this.prognoseSpeichern.Name = "prognoseSpeichern";
+            this.prognoseSpeichern.UseVisualStyleBackColor = true;
+            this.prognoseSpeichern.Click += new System.EventHandler(this.prognoseSpeichern_Click);
+            // 
             // upDownP33
             // 
             this.upDownP33.Increment = new decimal(new int[] {
@@ -137,6 +150,7 @@
             0,
             0,
             0});
+            this.upDownP33.ValueChanged += new System.EventHandler(this.upDownP33_ValueChanged);
             // 
             // upDownP23
             // 
@@ -157,6 +171,7 @@
             0,
             0,
             0});
+            this.upDownP23.ValueChanged += new System.EventHandler(this.upDownP23_ValueChanged);
             // 
             // upDownP13
             // 
@@ -177,6 +192,7 @@
             0,
             0,
             0});
+            this.upDownP13.ValueChanged += new System.EventHandler(this.upDownP13_ValueChanged);
             // 
             // upDownAW3
             // 
@@ -198,6 +214,7 @@
             0,
             0,
             0});
+            this.upDownAW3.ValueChanged += new System.EventHandler(this.upDownAW3_ValueChanged);
             // 
             // upDownP32
             // 
@@ -218,6 +235,7 @@
             0,
             0,
             0});
+            this.upDownP32.ValueChanged += new System.EventHandler(this.upDownP32_ValueChanged);
             // 
             // upDownP22
             // 
@@ -238,6 +256,7 @@
             0,
             0,
             0});
+            this.upDownP22.ValueChanged += new System.EventHandler(this.upDownP22_ValueChanged);
             // 
             // upDownP12
             // 
@@ -258,6 +277,7 @@
             0,
             0,
             0});
+            this.upDownP12.ValueChanged += new System.EventHandler(this.upDownP12_ValueChanged);
             // 
             // upDownAW2
             // 
@@ -279,6 +299,7 @@
             0,
             0,
             0});
+            this.upDownAW2.ValueChanged += new System.EventHandler(this.upDownAW2_ValueChanged);
             // 
             // upDownP31
             // 
@@ -299,6 +320,7 @@
             0,
             0,
             0});
+            this.upDownP31.ValueChanged += new System.EventHandler(this.upDownP31_ValueChanged);
             // 
             // upDownP21
             // 
@@ -319,6 +341,7 @@
             0,
             0,
             0});
+            this.upDownP21.ValueChanged += new System.EventHandler(this.upDownP21_ValueChanged);
             // 
             // upDownP11
             // 
@@ -339,6 +362,7 @@
             0,
             0,
             0});
+            this.upDownP11.ValueChanged += new System.EventHandler(this.upDownP11_ValueChanged);
             // 
             // upDownAW1
             // 
@@ -360,6 +384,7 @@
             0,
             0,
             0});
+            this.upDownAW1.ValueChanged += new System.EventHandler(this.upDownAW1_ValueChanged);
             // 
             // titleXmlLaden
             // 
@@ -421,9 +446,9 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.BackColor = System.Drawing.Color.Transparent;
             resources.ApplyResources(this.tabPage2, "tabPage2");
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // openFileDialog
             // 
@@ -454,19 +479,6 @@
             // 
             this.englischToolStripMenuItem.Name = "englischToolStripMenuItem";
             resources.ApplyResources(this.englischToolStripMenuItem, "englischToolStripMenuItem");
-            // 
-            // prognoseSpeichern
-            // 
-            resources.ApplyResources(this.prognoseSpeichern, "prognoseSpeichern");
-            this.prognoseSpeichern.Name = "prognoseSpeichern";
-            this.prognoseSpeichern.UseVisualStyleBackColor = true;
-            this.prognoseSpeichern.Click += new System.EventHandler(this.prognoseSpeichern_Click);
-            // 
-            // prognoseText
-            // 
-            resources.ApplyResources(this.prognoseText, "prognoseText");
-            this.prognoseText.ForeColor = System.Drawing.Color.ForestGreen;
-            this.prognoseText.Name = "prognoseText";
             // 
             // Fahrrad
             // 

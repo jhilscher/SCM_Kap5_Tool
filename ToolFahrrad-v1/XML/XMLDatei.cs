@@ -12,20 +12,26 @@ namespace ToolFahrrad_v1
     {
 
         private static DataContainer dc = DataContainer.Instance;
-        private List<Lager> lager = new List<Lager>();
-        /// <summary>
-        /// Read Datei und 
-        /// </summary>
+        private List<Warehousestock> lagerBestand;
+        private List<Inwardstockmovement> lagerBewegung;
+
+
         public XMLDatei()
         {
 
         }
+
         public bool ReadDatei(string pfad)
         {
             bool res = false;
+
+            lagerBestand = new List<Warehousestock>();
+            lagerBewegung = new List<Inwardstockmovement>();
+            
             string zeile = string.Empty;
             string xmlText = string.Empty;
-            //xml saubern
+
+            //xml saubern und in xmlText speichern
             using (StreamReader sr = new StreamReader(pfad, Encoding.UTF8))
             {
                 while ((zeile = sr.ReadLine()) != null)
@@ -37,33 +43,56 @@ namespace ToolFahrrad_v1
                 }
             }
 
+            // xmlLoad
             XmlDocument doc = new XmlDocument();
             doc.LoadXml(xmlText);
 
-            //Lager
-            XmlNodeList items = doc.GetElementsByTagName("warehousestock");
-            foreach (XmlNode node in items)
+            //LagerBestand
+            XmlNodeList itemsLBest = doc.GetElementsByTagName("warehousestock");
+            foreach (XmlNode node in itemsLBest)
             {
                 foreach (XmlNode attr in node.ChildNodes)
                 {
-                    Lager lg = new Lager();
+                    Warehousestock whs = new Warehousestock();
                     if (attr.Name == "article")
                     {                        
-                        lg.Id = Convert.ToInt32(attr.Attributes[0].Value);
-                        lg.Amount = Convert.ToInt32(attr.Attributes[1].Value);
-                        lg.Startamount = Convert.ToInt32(attr.Attributes[2].Value);
-                        lg.Pct = Convert.ToDouble(attr.Attributes[3].Value);
-                        lg.Price = Convert.ToDouble(attr.Attributes[4].Value);
-                        lg.Stockvalue = Convert.ToDouble(attr.Attributes[5].Value);                        
+                        whs.Id = Convert.ToInt32(attr.Attributes[0].Value);
+                        whs.Amount = Convert.ToInt32(attr.Attributes[1].Value);
+                        whs.Startamount = Convert.ToInt32(attr.Attributes[2].Value);
+                        whs.Pct = Convert.ToDouble(attr.Attributes[3].Value);
+                        whs.Price = Convert.ToDouble(attr.Attributes[4].Value);
+                        whs.Stockvalue = Convert.ToDouble(attr.Attributes[5].Value);                        
                     }
                     else
-                        lg.Totalstockvalue = Convert.ToDouble(attr.InnerText); 
-                    lager.Add(lg);
+                        whs.Totalstockvalue = Convert.ToDouble(attr.InnerText); 
+                    lagerBestand.Add(whs);
                 }
             }
-
+            //LagerBewegung
+            XmlNodeList itemsLBew = doc.GetElementsByTagName("inwardstockmovement");
+            foreach (XmlNode node in itemsLBew)
+            {
+                foreach (XmlNode attr in node.ChildNodes)
+                {
+                    if (attr.Name == "order")
+                    {
+                        Inwardstockmovement ism = new Inwardstockmovement();
+                        ism.Orderperiod = Convert.ToInt32(attr.Attributes[0].Value);
+                        ism.Id = Convert.ToInt32(attr.Attributes[1].Value);
+                        ism.Mode = Convert.ToInt32(attr.Attributes[2].Value);
+                        ism.Article = Convert.ToInt32(attr.Attributes[3].Value);
+                        ism.Amount = Convert.ToInt32(attr.Attributes[4].Value);
+                        ism.Time = Convert.ToInt32(attr.Attributes[5].Value);
+                        ism.Materialcosts = Convert.ToDouble(attr.Attributes[6].Value);
+                        ism.Ordercosts = Convert.ToDouble(attr.Attributes[7].Value);
+                        ism.Entirecosts = Convert.ToDouble(attr.Attributes[8].Value);
+                        ism.Piececosts = Convert.ToDouble(attr.Attributes[9].Value);
+                        lagerBewegung.Add(ism);
+                    }
+                }
+            }
+            
             return res;
-
         }
 
 

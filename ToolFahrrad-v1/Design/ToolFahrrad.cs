@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Globalization;
 using System.Threading;
+using System.Drawing;
 
 namespace ToolFahrrad_v1
 {
@@ -37,9 +38,14 @@ namespace ToolFahrrad_v1
             {
                 if (xml.ReadDatei(openFileDialog.FileName) == true)
                 {
-                    pfadText.Text = "xml wurde gefunden: " + openFileDialog.FileName;
+                    pfadText.ForeColor = Color.ForestGreen;
+                    pfadText.Text = "xml (" + openFileDialog.FileName + ") wurde geöffnet und Daten wurde gespeichert";
                 }
-                
+                else
+                {
+                    pfadText.ForeColor = Color.Red;
+                    pfadText.Text = "xml (" + openFileDialog.FileName + ") wurde mit Fehler geöffnet \nund Daten wurde nicht gespeichert";
+                }
             }
         }
 
@@ -59,7 +65,72 @@ namespace ToolFahrrad_v1
                                                     { Convert.ToInt32(upDownP21.Value), Convert.ToInt32(upDownP22.Value), Convert.ToInt32(upDownP23.Value) }, 
                                                     { Convert.ToInt32(upDownP31.Value), Convert.ToInt32(upDownP32.Value), Convert.ToInt32(upDownP33.Value) } 
                                                 };
-            prognoseText.Text = "erfolgreich gespeichert";
+            prognoseText.Visible = true;
+        }
+
+        private void TextVisibleFalse()
+        {
+            prognoseText.Visible = false;
+        }
+
+        private void upDownAW1_ValueChanged(object sender, EventArgs e)
+        {
+            TextVisibleFalse();
+        }
+
+        private void upDownAW2_ValueChanged(object sender, EventArgs e)
+        {
+            TextVisibleFalse();
+        }
+
+        private void upDownAW3_ValueChanged(object sender, EventArgs e)
+        {
+            TextVisibleFalse();
+        }
+
+        private void upDownP13_ValueChanged(object sender, EventArgs e)
+        {
+            TextVisibleFalse();
+        }
+
+        private void upDownP12_ValueChanged(object sender, EventArgs e)
+        {
+            TextVisibleFalse();
+        }
+
+        private void upDownP11_ValueChanged(object sender, EventArgs e)
+        {
+            TextVisibleFalse();
+        }
+
+        private void upDownP21_ValueChanged(object sender, EventArgs e)
+        {
+            TextVisibleFalse();
+        }
+
+        private void upDownP22_ValueChanged(object sender, EventArgs e)
+        {
+            TextVisibleFalse();
+        }
+
+        private void upDownP23_ValueChanged(object sender, EventArgs e)
+        {
+            TextVisibleFalse();
+        }
+
+        private void upDownP33_ValueChanged(object sender, EventArgs e)
+        {
+            TextVisibleFalse();
+        }
+
+        private void upDownP32_ValueChanged(object sender, EventArgs e)
+        {
+            TextVisibleFalse();
+        }
+
+        private void upDownP31_ValueChanged(object sender, EventArgs e)
+        {
+            TextVisibleFalse();
         }
     }
 }

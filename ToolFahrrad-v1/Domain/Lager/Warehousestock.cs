@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ToolFahrrad_v1
 {
-    public class Lager
+    public class Warehousestock
     {
         private int id;
         public int Id
@@ -57,7 +57,7 @@ namespace ToolFahrrad_v1
             set { totalstockvalue = value; }
         }
 
-        public Lager()
+        public Warehousestock()
         {
 
         }
