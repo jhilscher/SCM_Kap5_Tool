@@ -38,13 +38,17 @@ namespace ToolFahrrad_v1
             {
                 if (xml.ReadDatei(openFileDialog.FileName) == true)
                 {
+                    xmlTextBox.Text = openFileDialog.FileName;
                     pfadText.ForeColor = Color.ForestGreen;
-                    pfadText.Text = "xml (" + openFileDialog.FileName + ") wurde geöffnet und Daten wurde gespeichert";
+                    bildOK.Visible = true;
+                    pfadText.Visible = false;
                 }
                 else
                 {
+                    xmlTextBox.Text = openFileDialog.FileName;
                     pfadText.ForeColor = Color.Red;
-                    pfadText.Text = "xml (" + openFileDialog.FileName + ") wurde mit Fehler geöffnet \nund Daten wurde nicht gespeichert";
+                    bildOK.Visible = false;
+                    pfadText.Visible = true;
                 }
             }
         }
@@ -65,12 +69,12 @@ namespace ToolFahrrad_v1
                                                     { Convert.ToInt32(upDownP21.Value), Convert.ToInt32(upDownP22.Value), Convert.ToInt32(upDownP23.Value) }, 
                                                     { Convert.ToInt32(upDownP31.Value), Convert.ToInt32(upDownP32.Value), Convert.ToInt32(upDownP33.Value) } 
                                                 };
-            prognoseText.Visible = true;
+            bildSpeichOk.Visible = true;
         }
 
         private void TextVisibleFalse()
         {
-            prognoseText.Visible = false;
+            bildSpeichOk.Visible = false;
         }
 
         private void upDownAW1_ValueChanged(object sender, EventArgs e)

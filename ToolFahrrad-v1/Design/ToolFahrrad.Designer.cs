@@ -31,7 +31,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Fahrrad));
             this.Tabs = new System.Windows.Forms.TabControl();
             this.xmlInput = new System.Windows.Forms.TabPage();
-            this.prognoseText = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.prognoseSpeichern = new System.Windows.Forms.Button();
             this.upDownP33 = new System.Windows.Forms.NumericUpDown();
             this.upDownP23 = new System.Windows.Forms.NumericUpDown();
@@ -62,8 +63,13 @@
             this.spracheToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.deutschToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.englischToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.xmlTextBox = new System.Windows.Forms.TextBox();
+            this.bildOK = new System.Windows.Forms.PictureBox();
+            this.bildSpeichOk = new System.Windows.Forms.PictureBox();
             this.Tabs.SuspendLayout();
             this.xmlInput.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.upDownP33)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.upDownP23)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.upDownP13)).BeginInit();
@@ -77,6 +83,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.upDownP11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.upDownAW1)).BeginInit();
             this.menu.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bildOK)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bildSpeichOk)).BeginInit();
             this.SuspendLayout();
             // 
             // Tabs
@@ -90,7 +98,11 @@
             // xmlInput
             // 
             this.xmlInput.BackColor = System.Drawing.Color.Transparent;
-            this.xmlInput.Controls.Add(this.prognoseText);
+            this.xmlInput.Controls.Add(this.bildSpeichOk);
+            this.xmlInput.Controls.Add(this.bildOK);
+            this.xmlInput.Controls.Add(this.xmlTextBox);
+            this.xmlInput.Controls.Add(this.pictureBox2);
+            this.xmlInput.Controls.Add(this.pictureBox1);
             this.xmlInput.Controls.Add(this.prognoseSpeichern);
             this.xmlInput.Controls.Add(this.upDownP33);
             this.xmlInput.Controls.Add(this.upDownP23);
@@ -118,11 +130,17 @@
             resources.ApplyResources(this.xmlInput, "xmlInput");
             this.xmlInput.Name = "xmlInput";
             // 
-            // prognoseText
+            // pictureBox2
             // 
-            resources.ApplyResources(this.prognoseText, "prognoseText");
-            this.prognoseText.ForeColor = System.Drawing.Color.ForestGreen;
-            this.prognoseText.Name = "prognoseText";
+            resources.ApplyResources(this.pictureBox2, "pictureBox2");
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            resources.ApplyResources(this.pictureBox1, "pictureBox1");
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.TabStop = false;
             // 
             // prognoseSpeichern
             // 
@@ -434,7 +452,7 @@
             // pfadText
             // 
             resources.ApplyResources(this.pfadText, "pfadText");
-            this.pfadText.ForeColor = System.Drawing.Color.ForestGreen;
+            this.pfadText.ForeColor = System.Drawing.Color.Red;
             this.pfadText.Name = "pfadText";
             // 
             // xml_suchen
@@ -480,16 +498,36 @@
             this.englischToolStripMenuItem.Name = "englischToolStripMenuItem";
             resources.ApplyResources(this.englischToolStripMenuItem, "englischToolStripMenuItem");
             // 
+            // xmlTextBox
+            // 
+            resources.ApplyResources(this.xmlTextBox, "xmlTextBox");
+            this.xmlTextBox.Name = "xmlTextBox";
+            // 
+            // bildOK
+            // 
+            resources.ApplyResources(this.bildOK, "bildOK");
+            this.bildOK.Name = "bildOK";
+            this.bildOK.TabStop = false;
+            // 
+            // bildSpeichOk
+            // 
+            resources.ApplyResources(this.bildSpeichOk, "bildSpeichOk");
+            this.bildSpeichOk.Name = "bildSpeichOk";
+            this.bildSpeichOk.TabStop = false;
+            // 
             // Fahrrad
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.menu);
             this.Controls.Add(this.Tabs);
+            this.HelpButton = true;
             this.Name = "Fahrrad";
             this.Tabs.ResumeLayout(false);
             this.xmlInput.ResumeLayout(false);
             this.xmlInput.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.upDownP33)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.upDownP23)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.upDownP13)).EndInit();
@@ -504,6 +542,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.upDownAW1)).EndInit();
             this.menu.ResumeLayout(false);
             this.menu.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bildOK)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bildSpeichOk)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -543,7 +583,11 @@
         private System.Windows.Forms.Label prognose2;
         private System.Windows.Forms.Label prognose3;
         private System.Windows.Forms.Button prognoseSpeichern;
-        private System.Windows.Forms.Label prognoseText;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.TextBox xmlTextBox;
+        private System.Windows.Forms.PictureBox bildOK;
+        private System.Windows.Forms.PictureBox bildSpeichOk;
     }
 }
 

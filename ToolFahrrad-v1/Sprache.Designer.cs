@@ -46,6 +46,7 @@
             // de
             // 
             this.de.AutoSize = true;
+            this.de.Checked = true;
             this.de.Location = new System.Drawing.Point(13, 13);
             this.de.Name = "de";
             this.de.Size = new System.Drawing.Size(65, 17);
@@ -61,11 +62,10 @@
             this.en.Name = "en";
             this.en.Size = new System.Drawing.Size(65, 17);
             this.en.TabIndex = 4;
-            this.en.TabStop = true;
             this.en.Text = "Englisch";
             this.en.UseVisualStyleBackColor = true;
             // 
-            // sprache
+            // Sprache
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -73,7 +73,7 @@
             this.Controls.Add(this.en);
             this.Controls.Add(this.de);
             this.Controls.Add(this.spracheOK);
-            this.Name = "sprache";
+            this.Name = "Sprache";
             this.Text = "sprache";
             this.ResumeLayout(false);
             this.PerformLayout();

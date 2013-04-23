@@ -41,6 +41,9 @@ namespace ToolFahrrad_v1
                         res = true;
                     xmlText += zeile;
                 }
+
+                if (res == false)
+                    return res;
             }
 
             // xmlLoad
