@@ -105,11 +105,11 @@ namespace ToolFahrrad_v1
             (instance.GetTeil(26) as ETeil).AddBestandteil(44, 2);
             (instance.GetTeil(26) as ETeil).AddBestandteil(48, 2);
 
-            (instance.GetTeil(1) as ETeil).AddBestandteil(22, 1);
+            (instance.GetTeil(1) as ETeil).AddBestandteil(21, 1);
             (instance.GetTeil(1) as ETeil).AddBestandteil(24, 1);
             (instance.GetTeil(1) as ETeil).AddBestandteil(27, 1);
             (instance.GetTeil(1) as ETeil).AddBestandteil(26, 1);
-            (instance.GetTeil(1) as ETeil).AddBestandteil(56, 1);
+            (instance.GetTeil(1) as ETeil).AddBestandteil(51, 1);
 
             (instance.GetTeil(56) as ETeil).AddBestandteil(24, 1);
             (instance.GetTeil(56) as ETeil).AddBestandteil(27, 1);
@@ -144,17 +144,17 @@ namespace ToolFahrrad_v1
             (instance.GetTeil(14) as ETeil).AddBestandteil(32, 1);
             (instance.GetTeil(14) as ETeil).AddBestandteil(39, 1);
 
-            (instance.GetTeil(2) as ETeil).AddBestandteil(21, 1);
+            (instance.GetTeil(2) as ETeil).AddBestandteil(22, 1);
             (instance.GetTeil(2) as ETeil).AddBestandteil(24, 1);
             (instance.GetTeil(2) as ETeil).AddBestandteil(27, 1);
             (instance.GetTeil(2) as ETeil).AddBestandteil(26, 1);
-            (instance.GetTeil(2) as ETeil).AddBestandteil(51, 1);
+            (instance.GetTeil(2) as ETeil).AddBestandteil(56, 1);
 
             (instance.GetTeil(51) as ETeil).AddBestandteil(16, 1);
             (instance.GetTeil(51) as ETeil).AddBestandteil(17, 1);
             (instance.GetTeil(51) as ETeil).AddBestandteil(50, 1);
-            (instance.GetTeil(51) as ETeil).AddBestandteil(4, 1);
-            (instance.GetTeil(51) as ETeil).AddBestandteil(49, 1);
+            (instance.GetTeil(51) as ETeil).AddBestandteil(24, 1);
+            (instance.GetTeil(51) as ETeil).AddBestandteil(27, 1);
             (instance.GetTeil(50) as ETeil).AddBestandteil(24, 2);
             (instance.GetTeil(50) as ETeil).AddBestandteil(25, 2);
             (instance.GetTeil(50) as ETeil).AddBestandteil(4, 1);
@@ -219,7 +219,6 @@ namespace ToolFahrrad_v1
             (instance.GetTeil(20) as ETeil).AddBestandteil(59, 2);
             (instance.GetTeil(15) as ETeil).AddBestandteil(32, 1);
             (instance.GetTeil(15) as ETeil).AddBestandteil(39, 1);
-
 
             (instance.GetTeil(26) as ETeil).AddArbeitsplatz(15);
             (instance.GetTeil(26) as ETeil).AddArbeitsplatz(7);
