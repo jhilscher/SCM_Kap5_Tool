@@ -18,6 +18,8 @@ namespace ToolFahrrad_v1
         private Sprache sprache;
         DataContainer instance = DataContainer.Instance;
         XMLDatei xml = new XMLDatei();
+        private bool okPrognose = false;
+        private bool okXml = false;
         public Fahrrad()
         {
             sprache = new Sprache();
@@ -42,6 +44,7 @@ namespace ToolFahrrad_v1
                     pfadText.ForeColor = Color.ForestGreen;
                     bildOK.Visible = true;
                     pfadText.Visible = false;
+                    okXml = true;
                 }
                 else
                 {
@@ -49,6 +52,7 @@ namespace ToolFahrrad_v1
                     pfadText.ForeColor = Color.Red;
                     bildOK.Visible = false;
                     pfadText.Visible = true;
+                    okXml = false;
                 }
             }
         }
@@ -70,11 +74,14 @@ namespace ToolFahrrad_v1
                                                     { Convert.ToInt32(upDownP31.Value), Convert.ToInt32(upDownP32.Value), Convert.ToInt32(upDownP33.Value) } 
                                                 };
             bildSpeichOk.Visible = true;
+            okPrognose = true;
         }
+
 
         private void TextVisibleFalse()
         {
             bildSpeichOk.Visible = false;
+            okPrognose = false;
         }
 
         private void upDownAW1_ValueChanged(object sender, EventArgs e)
@@ -135,6 +142,54 @@ namespace ToolFahrrad_v1
         private void upDownP31_ValueChanged(object sender, EventArgs e)
         {
             TextVisibleFalse();
+        }
+
+
+        /// <summary>
+        /// Info Seite
+        /// </summary>
+        private void Info()
+        {
+            ListViewItem lvi;
+            //    lvi = new ListViewItem("ID");
+            //lvi.SubItems.Add("12");
+            //lvi.SubItems.Add("124");
+
+            //listView1.Items.Add(lvi);
+            //lvi = new ListViewItem("ID3");
+            //lvi.SubItems.Add("123");
+            //lvi.SubItems.Add("1243");
+
+            //listView1.Items.Add(lvi);
+
+
+             if (okPrognose == true && okXml == true)
+            {
+                foreach (var a in instance.Liste_teile) 
+                {
+                    lvi = new ListViewItem(a.Value.Nummer + "");
+                    lvi.UseItemStyleForSubItems = false;
+                    lvi.SubItems.Add(a.Value.Bezeichnung);
+                    lvi.SubItems.Add(a.Value.Lagerstand + "");
+                    lvi.SubItems.Add(a.Value.Verhaeltnis + "");
+                    if (a.Value.Verhaeltnis <= 30)
+                        lvi.SubItems[3].BackColor = Color.Salmon;
+                    if (a.Value.Verhaeltnis > 30 && a.Value.Verhaeltnis < 50)
+                        lvi.SubItems[3].BackColor = Color.PaleGreen;
+                    if (a.Value.Verhaeltnis > 100)
+                        lvi.SubItems[3].BackColor = Color.NavajoWhite;
+                    //else
+                    //    lvi.BackColor = Color.Green;
+                    
+
+                    listView1.Items.Add(lvi);
+                }
+            }
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Info();
         }
     }
 }

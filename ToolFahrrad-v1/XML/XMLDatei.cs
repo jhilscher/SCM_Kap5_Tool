@@ -12,10 +12,6 @@ namespace ToolFahrrad_v1
     {
 
         private static DataContainer dc = DataContainer.Instance;
-        private List<Warehousestock> lagerBestand;
-        private List<Inwardstockmovement> lagerBewegung;
-
-
         public XMLDatei()
         {
 
@@ -25,12 +21,10 @@ namespace ToolFahrrad_v1
         {
             bool res = false;
 
-            lagerBestand = new List<Warehousestock>();
-            lagerBewegung = new List<Inwardstockmovement>();
-            
+            DataContainer dc = DataContainer.Instance;
             string zeile = string.Empty;
             string xmlText = string.Empty;
-
+            int zahl = 1;
             //xml saubern und in xmlText speichern
             using (StreamReader sr = new StreamReader(pfad, Encoding.UTF8))
             {
@@ -41,7 +35,6 @@ namespace ToolFahrrad_v1
                         res = true;
                     xmlText += zeile;
                 }
-
                 if (res == false)
                     return res;
             }
@@ -56,21 +49,16 @@ namespace ToolFahrrad_v1
             {
                 foreach (XmlNode attr in node.ChildNodes)
                 {
-                    Warehousestock whs = new Warehousestock();
                     if (attr.Name == "article")
-                    {                        
-                        whs.Id = Convert.ToInt32(attr.Attributes[0].Value);
-                        whs.Amount = Convert.ToInt32(attr.Attributes[1].Value);
-                        whs.Startamount = Convert.ToInt32(attr.Attributes[2].Value);
-                        whs.Pct = Convert.ToDouble(attr.Attributes[3].Value);
-                        whs.Price = Convert.ToDouble(attr.Attributes[4].Value);
-                        whs.Stockvalue = Convert.ToDouble(attr.Attributes[5].Value);                        
+                    {
+                        dc.GetTeil(zahl).Lagerstand = Convert.ToInt32(attr.Attributes[1].Value);
+                        dc.GetTeil(zahl).Verhaeltnis = Convert.ToDouble(attr.Attributes[3].Value);
+                        dc.GetTeil(zahl).Preis = Convert.ToDouble(attr.Attributes[4].Value);
                     }
-                    else
-                        whs.Totalstockvalue = Convert.ToDouble(attr.InnerText); 
-                    lagerBestand.Add(whs);
+                    ++zahl;
                 }
             }
+
             //LagerBewegung
             XmlNodeList itemsLBew = doc.GetElementsByTagName("inwardstockmovement");
             foreach (XmlNode node in itemsLBew)
@@ -79,22 +67,10 @@ namespace ToolFahrrad_v1
                 {
                     if (attr.Name == "order")
                     {
-                        Inwardstockmovement ism = new Inwardstockmovement();
-                        ism.Orderperiod = Convert.ToInt32(attr.Attributes[0].Value);
-                        ism.Id = Convert.ToInt32(attr.Attributes[1].Value);
-                        ism.Mode = Convert.ToInt32(attr.Attributes[2].Value);
-                        ism.Article = Convert.ToInt32(attr.Attributes[3].Value);
-                        ism.Amount = Convert.ToInt32(attr.Attributes[4].Value);
-                        ism.Time = Convert.ToInt32(attr.Attributes[5].Value);
-                        ism.Materialcosts = Convert.ToDouble(attr.Attributes[6].Value);
-                        ism.Ordercosts = Convert.ToDouble(attr.Attributes[7].Value);
-                        ism.Entirecosts = Convert.ToDouble(attr.Attributes[8].Value);
-                        ism.Piececosts = Convert.ToDouble(attr.Attributes[9].Value);
-                        lagerBewegung.Add(ism);
+                        
                     }
                 }
             }
-            
             return res;
         }
 

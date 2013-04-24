@@ -14,6 +14,8 @@ namespace ToolFahrrad_v1
         [STAThread]
         static void Main()
         {
+            Initialisierung init = new Initialisierung();
+            init.Initialisieren();
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Fahrrad());

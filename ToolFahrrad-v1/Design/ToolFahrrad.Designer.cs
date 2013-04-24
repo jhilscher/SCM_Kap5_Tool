@@ -31,6 +31,9 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Fahrrad));
             this.Tabs = new System.Windows.Forms.TabControl();
             this.xmlInput = new System.Windows.Forms.TabPage();
+            this.bildSpeichOk = new System.Windows.Forms.PictureBox();
+            this.bildOK = new System.Windows.Forms.PictureBox();
+            this.xmlTextBox = new System.Windows.Forms.TextBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.prognoseSpeichern = new System.Windows.Forms.Button();
@@ -58,16 +61,23 @@
             this.pfadText = new System.Windows.Forms.Label();
             this.xml_suchen = new System.Windows.Forms.Button();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.listView1 = new System.Windows.Forms.ListView();
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
             this.menu = new System.Windows.Forms.MenuStrip();
             this.spracheToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.deutschToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.englischToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.xmlTextBox = new System.Windows.Forms.TextBox();
-            this.bildOK = new System.Windows.Forms.PictureBox();
-            this.bildSpeichOk = new System.Windows.Forms.PictureBox();
             this.Tabs.SuspendLayout();
             this.xmlInput.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bildSpeichOk)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bildOK)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.upDownP33)).BeginInit();
@@ -82,9 +92,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.upDownP21)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.upDownP11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.upDownAW1)).BeginInit();
+            this.tabPage2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.menu.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bildOK)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bildSpeichOk)).BeginInit();
             this.SuspendLayout();
             // 
             // Tabs
@@ -129,6 +139,23 @@
             this.xmlInput.Controls.Add(this.xml_suchen);
             resources.ApplyResources(this.xmlInput, "xmlInput");
             this.xmlInput.Name = "xmlInput";
+            // 
+            // bildSpeichOk
+            // 
+            resources.ApplyResources(this.bildSpeichOk, "bildSpeichOk");
+            this.bildSpeichOk.Name = "bildSpeichOk";
+            this.bildSpeichOk.TabStop = false;
+            // 
+            // bildOK
+            // 
+            resources.ApplyResources(this.bildOK, "bildOK");
+            this.bildOK.Name = "bildOK";
+            this.bildOK.TabStop = false;
+            // 
+            // xmlTextBox
+            // 
+            resources.ApplyResources(this.xmlTextBox, "xmlTextBox");
+            this.xmlTextBox.Name = "xmlTextBox";
             // 
             // pictureBox2
             // 
@@ -464,9 +491,64 @@
             // 
             // tabPage2
             // 
-            this.tabPage2.BackColor = System.Drawing.Color.Transparent;
             resources.ApplyResources(this.tabPage2, "tabPage2");
+            this.tabPage2.BackColor = System.Drawing.Color.Transparent;
+            this.tabPage2.Controls.Add(this.listView1);
+            this.tabPage2.Controls.Add(this.pictureBox3);
+            this.tabPage2.Controls.Add(this.label1);
+            this.tabPage2.Controls.Add(this.comboBox1);
             this.tabPage2.Name = "tabPage2";
+            // 
+            // listView1
+            // 
+            this.listView1.BackColor = System.Drawing.SystemColors.Control;
+            this.listView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader1,
+            this.columnHeader2,
+            this.columnHeader3,
+            this.columnHeader4});
+            resources.ApplyResources(this.listView1, "listView1");
+            this.listView1.Name = "listView1";
+            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.listView1.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader1
+            // 
+            resources.ApplyResources(this.columnHeader1, "columnHeader1");
+            // 
+            // columnHeader2
+            // 
+            resources.ApplyResources(this.columnHeader2, "columnHeader2");
+            // 
+            // columnHeader3
+            // 
+            resources.ApplyResources(this.columnHeader3, "columnHeader3");
+            // 
+            // columnHeader4
+            // 
+            resources.ApplyResources(this.columnHeader4, "columnHeader4");
+            // 
+            // pictureBox3
+            // 
+            resources.ApplyResources(this.pictureBox3, "pictureBox3");
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.TabStop = false;
+            // 
+            // label1
+            // 
+            resources.ApplyResources(this.label1, "label1");
+            this.label1.Name = "label1";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            resources.GetString("comboBox1.Items")});
+            resources.ApplyResources(this.comboBox1, "comboBox1");
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // openFileDialog
             // 
@@ -498,27 +580,10 @@
             this.englischToolStripMenuItem.Name = "englischToolStripMenuItem";
             resources.ApplyResources(this.englischToolStripMenuItem, "englischToolStripMenuItem");
             // 
-            // xmlTextBox
-            // 
-            resources.ApplyResources(this.xmlTextBox, "xmlTextBox");
-            this.xmlTextBox.Name = "xmlTextBox";
-            // 
-            // bildOK
-            // 
-            resources.ApplyResources(this.bildOK, "bildOK");
-            this.bildOK.Name = "bildOK";
-            this.bildOK.TabStop = false;
-            // 
-            // bildSpeichOk
-            // 
-            resources.ApplyResources(this.bildSpeichOk, "bildSpeichOk");
-            this.bildSpeichOk.Name = "bildSpeichOk";
-            this.bildSpeichOk.TabStop = false;
-            // 
             // Fahrrad
             // 
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             resources.ApplyResources(this, "$this");
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.menu);
             this.Controls.Add(this.Tabs);
             this.HelpButton = true;
@@ -526,6 +591,8 @@
             this.Tabs.ResumeLayout(false);
             this.xmlInput.ResumeLayout(false);
             this.xmlInput.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bildSpeichOk)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bildOK)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.upDownP33)).EndInit();
@@ -540,10 +607,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.upDownP21)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.upDownP11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.upDownAW1)).EndInit();
+            this.tabPage2.ResumeLayout(false);
+            this.tabPage2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.menu.ResumeLayout(false);
             this.menu.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bildOK)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bildSpeichOk)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -588,6 +656,14 @@
         private System.Windows.Forms.TextBox xmlTextBox;
         private System.Windows.Forms.PictureBox bildOK;
         private System.Windows.Forms.PictureBox bildSpeichOk;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ColumnHeader columnHeader1;
+        private System.Windows.Forms.ColumnHeader columnHeader2;
+        private System.Windows.Forms.ColumnHeader columnHeader3;
+        private System.Windows.Forms.ColumnHeader columnHeader4;
     }
 }
 

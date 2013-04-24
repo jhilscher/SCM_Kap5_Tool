@@ -68,7 +68,6 @@
     <Compile Include="Design\ToolFahrrad.Designer.cs">
       <DependentUpon>ToolFahrrad.cs</DependentUpon>
     </Compile>
-    <Compile Include="Domain\Lager\Inwardstockmovement.cs" />
     <Compile Include="Exceptions\InputException.cs" />
     <Compile Include="Exceptions\UnknownFileException.cs" />
     <Compile Include="Exceptions\UnknownTeilException.cs" />
@@ -87,7 +86,6 @@
     <Compile Include="StartTool.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Verwaltung\Bestellverwaltung.cs" />
-    <Compile Include="Domain\Lager\Warehousestock.cs" />
     <Compile Include="Verwaltung\Produktionsplanung.cs" />
     <Compile Include="XML\Initialisierung.cs" />
     <Compile Include="XML\XMLDatei.cs" />

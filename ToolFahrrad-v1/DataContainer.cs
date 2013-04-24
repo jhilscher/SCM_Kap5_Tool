@@ -13,6 +13,10 @@ namespace ToolFahrrad_v1
         private static DataContainer instance = new DataContainer();
         private List<Bestellposition> liste_bestellungen;
         private Dictionary<int, Teil> liste_teile;
+        public Dictionary<int, Teil> Liste_teile
+        {
+            get { return liste_teile; }
+        }
         private Dictionary<int, Arbeitsplatz> liste_arbeitsplaetze;
         private int[] liste_reihenfolge;
         private bool sonderproduktion = false;
