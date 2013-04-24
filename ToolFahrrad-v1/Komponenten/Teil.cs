@@ -19,6 +19,7 @@ namespace ToolFahrrad_v1
         protected int verbrauch_aktuell;
         protected int verbrauch_prognose1;
         protected int verbrauch_prognose2;
+        protected int verbrauch_prognose3;
         // Constructor
         public Teil(int nummer, string bez)
         {
@@ -93,6 +94,12 @@ namespace ToolFahrrad_v1
             get{ return verbrauch_prognose2; }
             set{ verbrauch_prognose2 = value; }
         }
+        public int VerbrauchPrognose3
+        {
+            get { return verbrauch_prognose3; }
+            set { verbrauch_prognose3 = value; }
+        }
+
         // Method generates hashcode of class member nr
         public int GetHashcode()
         {

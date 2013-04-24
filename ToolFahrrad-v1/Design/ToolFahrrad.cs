@@ -67,12 +67,22 @@ namespace ToolFahrrad_v1
 
         private void prognoseSpeichern_Click(object sender, EventArgs e)
         {
-            instance.ArrayAktuelleWoche = new int[] { Convert.ToInt32(upDownAW1.Value), Convert.ToInt32(upDownAW2.Value), Convert.ToInt32(upDownAW3.Value) };
-            instance.ArrayPrognose = new int[,] { 
-                                                    { Convert.ToInt32(upDownP11.Value), Convert.ToInt32(upDownP12.Value), Convert.ToInt32(upDownP13.Value) }, 
-                                                    { Convert.ToInt32(upDownP21.Value), Convert.ToInt32(upDownP22.Value), Convert.ToInt32(upDownP23.Value) }, 
-                                                    { Convert.ToInt32(upDownP31.Value), Convert.ToInt32(upDownP32.Value), Convert.ToInt32(upDownP33.Value) } 
-                                                };
+            instance.GetTeil(1).VerbrauchAktuell = Convert.ToInt32(upDownAW1.Value);
+            instance.GetTeil(2).VerbrauchAktuell = Convert.ToInt32(upDownAW2.Value);
+            instance.GetTeil(3).VerbrauchAktuell = Convert.ToInt32(upDownAW3.Value);
+
+            instance.GetTeil(1).VerbrauchPrognose1 = Convert.ToInt32(upDownP11.Value);
+            instance.GetTeil(1).VerbrauchPrognose2 = Convert.ToInt32(upDownP12.Value);
+            instance.GetTeil(1).VerbrauchPrognose3 = Convert.ToInt32(upDownP13.Value);
+
+            instance.GetTeil(2).VerbrauchPrognose1 = Convert.ToInt32(upDownP21.Value);
+            instance.GetTeil(2).VerbrauchPrognose2 = Convert.ToInt32(upDownP22.Value);
+            instance.GetTeil(2).VerbrauchPrognose3 = Convert.ToInt32(upDownP23.Value);
+
+            instance.GetTeil(3).VerbrauchPrognose1 = Convert.ToInt32(upDownP31.Value);
+            instance.GetTeil(3).VerbrauchPrognose2 = Convert.ToInt32(upDownP32.Value);
+            instance.GetTeil(3).VerbrauchPrognose3 = Convert.ToInt32(upDownP33.Value);
+
             bildSpeichOk.Visible = true;
             okPrognose = true;
         }
@@ -163,24 +173,24 @@ namespace ToolFahrrad_v1
             //listView1.Items.Add(lvi);
 
 
-             if (okPrognose == true && okXml == true)
+            if (okPrognose == true && okXml == true)
             {
-                foreach (var a in instance.Liste_teile) 
+                foreach (var a in instance.Liste_teile)
                 {
                     lvi = new ListViewItem(a.Value.Nummer + "");
                     lvi.UseItemStyleForSubItems = false;
-                    lvi.SubItems.Add(a.Value.Bezeichnung);
+                    lvi.SubItems.Add(a.Value.Verwendung + " - " + a.Value.Bezeichnung);
                     lvi.SubItems.Add(a.Value.Lagerstand + "");
                     lvi.SubItems.Add(a.Value.Verhaeltnis + "");
                     if (a.Value.Verhaeltnis <= 30)
                         lvi.SubItems[3].BackColor = Color.Salmon;
-                    if (a.Value.Verhaeltnis > 30 && a.Value.Verhaeltnis < 50)
-                        lvi.SubItems[3].BackColor = Color.PaleGreen;
-                    if (a.Value.Verhaeltnis > 100)
+                    else if (a.Value.Verhaeltnis > 30 && a.Value.Verhaeltnis < 50)
                         lvi.SubItems[3].BackColor = Color.NavajoWhite;
-                    //else
-                    //    lvi.BackColor = Color.Green;
-                    
+                    else if (a.Value.Verhaeltnis > 100)
+                        lvi.SubItems[3].BackColor = Color.Khaki;
+                    else
+                        lvi.SubItems[3].BackColor = Color.PaleGreen;
+
 
                     listView1.Items.Add(lvi);
                 }
