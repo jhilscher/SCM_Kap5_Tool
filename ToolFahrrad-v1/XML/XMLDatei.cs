@@ -20,7 +20,7 @@ namespace ToolFahrrad_v1
         public bool ReadDatei(string pfad)
         {
             bool res = false;
-
+            XmlNodeList items;
             DataContainer dc = DataContainer.Instance;
             string zeile = string.Empty;
             string xmlText = string.Empty;
@@ -44,8 +44,8 @@ namespace ToolFahrrad_v1
             doc.LoadXml(xmlText);
 
             //LagerBestand
-            XmlNodeList itemsLBest = doc.GetElementsByTagName("warehousestock");
-            foreach (XmlNode node in itemsLBest)
+            items = doc.GetElementsByTagName("warehousestock");
+            foreach (XmlNode node in items)
             {
                 foreach (XmlNode attr in node.ChildNodes)
                 {
@@ -53,24 +53,75 @@ namespace ToolFahrrad_v1
                     {
                         dc.GetTeil(zahl).Lagerstand = Convert.ToInt32(attr.Attributes[1].Value);
                         dc.GetTeil(zahl).Verhaeltnis = Convert.ToDouble(attr.Attributes[3].Value);
-                        dc.GetTeil(zahl).Preis = Convert.ToDouble(attr.Attributes[4].Value);
                     }
                     ++zahl;
                 }
             }
 
-            //LagerBewegung
-            XmlNodeList itemsLBew = doc.GetElementsByTagName("inwardstockmovement");
-            foreach (XmlNode node in itemsLBew)
+            //LagerZugang
+            items = doc.GetElementsByTagName("futureinwardstockmovement");
+            foreach (XmlNode node in items)
             {
                 foreach (XmlNode attr in node.ChildNodes)
                 {
                     if (attr.Name == "order")
                     {
-                        
+                        foreach (var a in dc.ListeKTeile)
+                        {
+                            if (Convert.ToInt32(attr.Attributes[3].Value).Equals(a.Nummer))
+                            {
+                                a.LagerZugang = Convert.ToInt32(attr.Attributes[4].Value);
+                            }
+                        }
                     }
                 }
             }
+
+            //Warteliste
+            items = doc.GetElementsByTagName("waitinglistworkstations");
+            foreach (XmlNode node in items)
+            {
+                foreach (XmlNode attr in node.ChildNodes)
+                {
+                    if (attr.Name == "workplace")
+                    {
+                        foreach (XmlNode attr2 in attr)
+                        {
+                            if (attr2.Name == "waitinglist")
+                            {
+                                foreach (var a in dc.ListeETeile)
+                                {
+                                    if (Convert.ToInt32(attr2.Attributes[4].Value).Equals(a.Nummer))
+                                    {
+                                        a.InWartschlange = Convert.ToInt32(attr2.Attributes[5].Value);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            //in der Bearbeitung
+            items = doc.GetElementsByTagName("ordersinwork");
+            foreach (XmlNode node in items)
+            {
+                foreach (XmlNode attr in node.ChildNodes)
+                {
+                    if (attr.Name == "workplace")
+                    {
+                        foreach (var a in dc.ListeETeile)
+                        {
+                            if (Convert.ToInt32(attr.Attributes[4].Value).Equals(a.Nummer))
+                            {
+                                a.InBearbeitung = Convert.ToInt32(attr.Attributes[5].Value);
+                            }
+                        }
+                    }
+                }
+            }
+
+
             return res;
         }
 

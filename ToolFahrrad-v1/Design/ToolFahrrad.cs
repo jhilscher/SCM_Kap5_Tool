@@ -158,48 +158,88 @@ namespace ToolFahrrad_v1
         /// <summary>
         /// Info Seite
         /// </summary>
-        private void Info()
+        private void Info(int action)
         {
-            ListViewItem lvi;
-            //    lvi = new ListViewItem("ID");
-            //lvi.SubItems.Add("12");
-            //lvi.SubItems.Add("124");
-
-            //listView1.Items.Add(lvi);
-            //lvi = new ListViewItem("ID3");
-            //lvi.SubItems.Add("123");
-            //lvi.SubItems.Add("1243");
-
-            //listView1.Items.Add(lvi);
-
-
-            if (okPrognose == true && okXml == true)
+            listView1.Items.Clear();
+            if (!listView1.Columns.Count.Equals(0))
             {
-                foreach (var a in instance.Liste_teile)
+                while (listView1.Columns.Count > 0)
                 {
-                    lvi = new ListViewItem(a.Value.Nummer + "");
+                    listView1.Columns.RemoveAt(0);
+                }
+            }
+            listView1.Columns.Add("NR.", 50, HorizontalAlignment.Center);
+            listView1.Columns.Add("Bezeichnung", 160);
+            listView1.Columns.Add("Bestand", 90, HorizontalAlignment.Center);
+            listView1.Columns.Add("in %", 90, HorizontalAlignment.Center);
+            ListViewItem lvi;
+            if (action == 0) //Kaufteile
+            {
+                listView1.Columns.Add("Zugang", 90, HorizontalAlignment.Center);
+                foreach (var a in instance.ListeKTeile)
+                {
+                    lvi = new ListViewItem(a.Nummer + "");
                     lvi.UseItemStyleForSubItems = false;
-                    lvi.SubItems.Add(a.Value.Verwendung + " - " + a.Value.Bezeichnung);
-                    lvi.SubItems.Add(a.Value.Lagerstand + "");
-                    lvi.SubItems.Add(a.Value.Verhaeltnis + "");
-                    if (a.Value.Verhaeltnis <= 30)
+                    lvi.SubItems.Add(a.Verwendung + " - " + a.Bezeichnung);
+                    lvi.SubItems.Add(a.Lagerstand + "");
+                    lvi.SubItems.Add(a.Verhaeltnis + "");
+                    if (a.LagerZugang.Equals(0))
+                        lvi.SubItems.Add("");
+                    else
+                        lvi.SubItems.Add(a.LagerZugang + "");
+
+                    if (a.Verhaeltnis <= 30)
                         lvi.SubItems[3].BackColor = Color.Salmon;
-                    else if (a.Value.Verhaeltnis > 30 && a.Value.Verhaeltnis < 50)
+                    else if (a.Verhaeltnis > 30 && a.Verhaeltnis < 50)
                         lvi.SubItems[3].BackColor = Color.NavajoWhite;
-                    else if (a.Value.Verhaeltnis > 100)
+                    else if (a.Verhaeltnis > 100)
                         lvi.SubItems[3].BackColor = Color.Khaki;
                     else
                         lvi.SubItems[3].BackColor = Color.PaleGreen;
-
-
                     listView1.Items.Add(lvi);
                 }
             }
+            else if (action == 1)
+            {
+                listView1.Columns.Add("Warteschlange", 90, HorizontalAlignment.Center);
+                listView1.Columns.Add("in Bearbeitung", 90, HorizontalAlignment.Center);
+                foreach (var a in instance.ListeETeile)
+                {
+                    lvi = new ListViewItem(a.Nummer + "");
+                    lvi.UseItemStyleForSubItems = false;
+                    lvi.SubItems.Add(a.Verwendung + " - " + a.Bezeichnung);
+                    lvi.SubItems.Add(a.Lagerstand + "");
+                    lvi.SubItems.Add(a.Verhaeltnis + "");
+                    if (a.InWartschlange.Equals(0))
+                        lvi.SubItems.Add("");
+                    else
+                        lvi.SubItems.Add(a.InWartschlange + "");
+                    if (a.InBearbeitung.Equals(0))
+                        lvi.SubItems.Add("");
+                    else
+                        lvi.SubItems.Add(a.InBearbeitung + "");
+
+
+                    if (a.Verhaeltnis <= 30)
+                        lvi.SubItems[3].BackColor = Color.Salmon;
+                    else if (a.Verhaeltnis > 30 && a.Verhaeltnis < 50)
+                        lvi.SubItems[3].BackColor = Color.NavajoWhite;
+                    else if (a.Verhaeltnis > 100)
+                        lvi.SubItems[3].BackColor = Color.Khaki;
+                    else
+                        lvi.SubItems[3].BackColor = Color.PaleGreen;
+                    listView1.Items.Add(lvi);
+                }
+            }
+
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            Info();
+            if (okPrognose == true && okXml == true)
+            {
+                Info(comboBox1.SelectedIndex);
+            }
         }
     }
 }

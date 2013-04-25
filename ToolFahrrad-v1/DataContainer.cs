@@ -13,10 +13,6 @@ namespace ToolFahrrad_v1
         private static DataContainer instance = new DataContainer();
         private List<Bestellposition> liste_bestellungen;
         private Dictionary<int, Teil> liste_teile;
-        public Dictionary<int, Teil> Liste_teile
-        {
-            get { return liste_teile; }
-        }
         private Dictionary<int, Arbeitsplatz> liste_arbeitsplaetze;
         private int[] liste_reihenfolge;
         private bool sonderproduktion = false;
@@ -25,7 +21,7 @@ namespace ToolFahrrad_v1
         private Produktionsplanung pp;
         private string openFile;
         private string saveFile;
-                /// // Constructor
+        /// // Constructor
         private DataContainer()
         {
             this.liste_bestellungen = new List<Bestellposition>();
@@ -110,7 +106,8 @@ namespace ToolFahrrad_v1
             get { return this.ueberstunden_erlaubt; }
             set { this.ueberstunden_erlaubt = value; }
         }
-        // Getter for Teil with given number
+
+                // Getter for Teil with given number
         public Teil GetTeil(int nr)
         {
             if (this.liste_teile.ContainsKey(nr))

@@ -12,8 +12,7 @@ namespace ToolFahrrad_v1
         protected int nr;
         protected string bezeichnung;
         protected int lagerstand;
-        private double verhaeltnis;       
-        private double preis;      
+        private double verhaeltnis;            
         protected string verwendung;
         protected int pufferwert;
         protected int verbrauch_aktuell;
@@ -28,7 +27,6 @@ namespace ToolFahrrad_v1
             this.bezeichnung = bez;
             this.lagerstand = 0;
             this.verhaeltnis = 0.0;
-            this.preis = 0.0;
             this.pufferwert = 0;
             this.verbrauch_aktuell = 0;
             this.verbrauch_prognose1 = 0;
@@ -54,12 +52,7 @@ namespace ToolFahrrad_v1
             get { return verhaeltnis; }
             set { verhaeltnis = value; }
         }
-        public double Preis
-        {
-            get { return preis; }
-            set { preis = value; }
-        }
-        public string Verwendung
+           public string Verwendung
         {
             get { return verwendung; }
             set

@@ -15,6 +15,12 @@ namespace ToolFahrrad_v1
         private double lieferdauer;
         private double abweichung_lieferdauer;
         private int diskontmenge;
+        private int lagerZugang;
+        public int LagerZugang
+        {
+            get { return lagerZugang; }
+            set { lagerZugang = value; }
+        }
         private List<ETeil> istTeil = null;
         // Members for Verbrauch Prognose 1&2; MA=Mittlere Abweichung; OA=Obere Abweichung
         private int verbProg1MA;
@@ -22,28 +28,29 @@ namespace ToolFahrrad_v1
         private int verbProg2MA;
         private int verbProg2OA;
         // Constructor
-        public KTeil(int nummer, string bez) : base(nummer, bez)
+        public KTeil(int nummer, string bez)
+            : base(nummer, bez)
         { }
         // Getter / Setter
         public double Bestellkosten
         {
-            get{ return bestellkosten; }
-            set{ bestellkosten = value; }
+            get { return bestellkosten; }
+            set { bestellkosten = value; }
         }
         public int ErwarteteBestellung
         {
-            get{ return erwartete_bestellung; }
-            set{ erwartete_bestellung = value; }
+            get { return erwartete_bestellung; }
+            set { erwartete_bestellung = value; }
         }
         public double Preis
         {
-            get{ return this.preis; }
-            set{ this.preis = value; }
+            get { return this.preis; }
+            set { this.preis = value; }
         }
         public double Lieferdauer
         {
-            get{ return this.lieferdauer; }
-            set{ this.lieferdauer = value; }
+            get { return this.lieferdauer; }
+            set { this.lieferdauer = value; }
         }
         public double Abweichung_lieferdauer
         {

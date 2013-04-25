@@ -9,9 +9,15 @@ namespace ToolFahrrad_v1
     public class ETeil : Teil
     {
         // Class members
-        int produktion = 0;
-        int in_warteschlange = 0;
-        int kategorie = 0;
+        private int produktion = 0;
+        private int in_warteschlange = 0;
+        private int in_bearbeitung = 0;
+        public int InBearbeitung
+        {
+            get { return in_bearbeitung; }
+            set { in_bearbeitung = value; }
+        }
+        private int kategorie = 0;
         Dictionary<Teil, int> zusammensetzung;
         Dictionary<int, int> pos;
         List<int> benutzte_arbeitsplaetze;
