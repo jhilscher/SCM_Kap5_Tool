@@ -38,16 +38,18 @@ namespace ToolFahrrad_v1
                 {
                     xmlTextBox.Text = openFileDialog.FileName;
                     pfadText.ForeColor = Color.ForestGreen;
-                    bildOK.Visible = true;
+                    xmlOffenOK.Visible = true;
                     pfadText.Visible = false;
                     okXml = true;
                     infoLable.Text = infoLable.Text + " aus der Periode " + xml.period;
+                    if (this.okPrognose == true)
+                        toolAusfueren.Visible = true;
                 }
                 else
                 {
                     xmlTextBox.Text = openFileDialog.FileName;
                     pfadText.ForeColor = Color.Red;
-                    bildOK.Visible = false;
+                    toolAusfueren.Visible = false;
                     pfadText.Visible = true;
                     okXml = false;
                 }
@@ -82,6 +84,8 @@ namespace ToolFahrrad_v1
 
             bildSpeichOk.Visible = true;
             okPrognose = true;
+            if (okXml == true)
+                toolAusfueren.Visible = true;
         }
 
 
@@ -238,6 +242,11 @@ namespace ToolFahrrad_v1
             {
                 Info(comboBox1.SelectedIndex);
             }
+        }
+
+        private void toolAusfueren_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
