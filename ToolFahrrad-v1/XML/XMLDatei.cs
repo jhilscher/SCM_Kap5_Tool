@@ -10,6 +10,7 @@ namespace ToolFahrrad_v1
 {
     public class XMLDatei
     {
+        public string period = "";
 
         private static DataContainer dc = DataContainer.Instance;
         public XMLDatei()
@@ -42,6 +43,13 @@ namespace ToolFahrrad_v1
             // xmlLoad
             XmlDocument doc = new XmlDocument();
             doc.LoadXml(xmlText);
+
+            //Period
+            items = doc.GetElementsByTagName("results");
+            foreach (XmlNode node in items)
+            {
+                period = node.Attributes[2].Value;
+            }
 
             //LagerBestand
             items = doc.GetElementsByTagName("warehousestock");

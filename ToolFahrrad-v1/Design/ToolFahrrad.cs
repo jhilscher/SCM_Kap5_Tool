@@ -15,21 +15,17 @@ namespace ToolFahrrad_v1
 {
     public partial class Fahrrad : Form
     {
-        private Sprache sprache;
         DataContainer instance = DataContainer.Instance;
         XMLDatei xml = new XMLDatei();
         private bool okPrognose = false;
         private bool okXml = false;
         public Fahrrad()
         {
-            sprache = new Sprache();
-            Application.Run(sprache);
-            if (sprache.GetCheck == "EN")
-            {
-                Thread.CurrentThread.CurrentUICulture = new CultureInfo("en");
-            }
+            //if (sprache.GetCheck == "EN")
+            //{
+            //    Thread.CurrentThread.CurrentUICulture = new CultureInfo("en");
+            //}
             InitializeComponent();
-
         }
 
         private void xml_suchen_Click(object sender, EventArgs e)
@@ -45,6 +41,7 @@ namespace ToolFahrrad_v1
                     bildOK.Visible = true;
                     pfadText.Visible = false;
                     okXml = true;
+                    infoLable.Text = infoLable.Text + " aus der Periode " + xml.period;
                 }
                 else
                 {
@@ -160,6 +157,7 @@ namespace ToolFahrrad_v1
         /// </summary>
         private void Info(int action)
         {
+            
             listView1.Items.Clear();
             if (!listView1.Columns.Count.Equals(0))
             {
@@ -236,7 +234,7 @@ namespace ToolFahrrad_v1
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (okPrognose == true && okXml == true)
+            if (okXml == true)
             {
                 Info(comboBox1.SelectedIndex);
             }

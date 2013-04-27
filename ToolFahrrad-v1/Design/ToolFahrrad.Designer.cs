@@ -30,7 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Fahrrad));
             this.Tabs = new System.Windows.Forms.TabControl();
-            this.xmlInput = new System.Windows.Forms.TabPage();
+            this.tab_xml = new System.Windows.Forms.TabPage();
             this.bildSpeichOk = new System.Windows.Forms.PictureBox();
             this.bildOK = new System.Windows.Forms.PictureBox();
             this.xmlTextBox = new System.Windows.Forms.TextBox();
@@ -60,10 +60,10 @@
             this.titlePrognose = new System.Windows.Forms.Label();
             this.pfadText = new System.Windows.Forms.Label();
             this.xml_suchen = new System.Windows.Forms.Button();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.tab_info = new System.Windows.Forms.TabPage();
             this.listView1 = new System.Windows.Forms.ListView();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.infoLable = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
             this.menu = new System.Windows.Forms.MenuStrip();
@@ -71,7 +71,7 @@
             this.deutschToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.englischToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.Tabs.SuspendLayout();
-            this.xmlInput.SuspendLayout();
+            this.tab_xml.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bildSpeichOk)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bildOK)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -88,53 +88,53 @@
             ((System.ComponentModel.ISupportInitialize)(this.upDownP21)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.upDownP11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.upDownAW1)).BeginInit();
-            this.tabPage2.SuspendLayout();
+            this.tab_info.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.menu.SuspendLayout();
             this.SuspendLayout();
             // 
             // Tabs
             // 
-            this.Tabs.Controls.Add(this.xmlInput);
-            this.Tabs.Controls.Add(this.tabPage2);
+            this.Tabs.Controls.Add(this.tab_xml);
+            this.Tabs.Controls.Add(this.tab_info);
             resources.ApplyResources(this.Tabs, "Tabs");
             this.Tabs.Name = "Tabs";
             this.Tabs.SelectedIndex = 0;
             // 
-            // xmlInput
+            // tab_xml
             // 
-            this.xmlInput.BackColor = System.Drawing.Color.Transparent;
-            this.xmlInput.Controls.Add(this.bildSpeichOk);
-            this.xmlInput.Controls.Add(this.bildOK);
-            this.xmlInput.Controls.Add(this.xmlTextBox);
-            this.xmlInput.Controls.Add(this.pictureBox2);
-            this.xmlInput.Controls.Add(this.pictureBox1);
-            this.xmlInput.Controls.Add(this.prognoseSpeichern);
-            this.xmlInput.Controls.Add(this.upDownP33);
-            this.xmlInput.Controls.Add(this.upDownP23);
-            this.xmlInput.Controls.Add(this.upDownP13);
-            this.xmlInput.Controls.Add(this.upDownAW3);
-            this.xmlInput.Controls.Add(this.upDownP32);
-            this.xmlInput.Controls.Add(this.upDownP22);
-            this.xmlInput.Controls.Add(this.upDownP12);
-            this.xmlInput.Controls.Add(this.upDownAW2);
-            this.xmlInput.Controls.Add(this.upDownP31);
-            this.xmlInput.Controls.Add(this.upDownP21);
-            this.xmlInput.Controls.Add(this.upDownP11);
-            this.xmlInput.Controls.Add(this.upDownAW1);
-            this.xmlInput.Controls.Add(this.titleXmlLaden);
-            this.xmlInput.Controls.Add(this.prognose1);
-            this.xmlInput.Controls.Add(this.prognose2);
-            this.xmlInput.Controls.Add(this.prognose3);
-            this.xmlInput.Controls.Add(this.aktulleWoche);
-            this.xmlInput.Controls.Add(this.p3);
-            this.xmlInput.Controls.Add(this.p2);
-            this.xmlInput.Controls.Add(this.p1);
-            this.xmlInput.Controls.Add(this.titlePrognose);
-            this.xmlInput.Controls.Add(this.pfadText);
-            this.xmlInput.Controls.Add(this.xml_suchen);
-            resources.ApplyResources(this.xmlInput, "xmlInput");
-            this.xmlInput.Name = "xmlInput";
+            this.tab_xml.BackColor = System.Drawing.Color.Transparent;
+            this.tab_xml.Controls.Add(this.bildSpeichOk);
+            this.tab_xml.Controls.Add(this.bildOK);
+            this.tab_xml.Controls.Add(this.xmlTextBox);
+            this.tab_xml.Controls.Add(this.pictureBox2);
+            this.tab_xml.Controls.Add(this.pictureBox1);
+            this.tab_xml.Controls.Add(this.prognoseSpeichern);
+            this.tab_xml.Controls.Add(this.upDownP33);
+            this.tab_xml.Controls.Add(this.upDownP23);
+            this.tab_xml.Controls.Add(this.upDownP13);
+            this.tab_xml.Controls.Add(this.upDownAW3);
+            this.tab_xml.Controls.Add(this.upDownP32);
+            this.tab_xml.Controls.Add(this.upDownP22);
+            this.tab_xml.Controls.Add(this.upDownP12);
+            this.tab_xml.Controls.Add(this.upDownAW2);
+            this.tab_xml.Controls.Add(this.upDownP31);
+            this.tab_xml.Controls.Add(this.upDownP21);
+            this.tab_xml.Controls.Add(this.upDownP11);
+            this.tab_xml.Controls.Add(this.upDownAW1);
+            this.tab_xml.Controls.Add(this.titleXmlLaden);
+            this.tab_xml.Controls.Add(this.prognose1);
+            this.tab_xml.Controls.Add(this.prognose2);
+            this.tab_xml.Controls.Add(this.prognose3);
+            this.tab_xml.Controls.Add(this.aktulleWoche);
+            this.tab_xml.Controls.Add(this.p3);
+            this.tab_xml.Controls.Add(this.p2);
+            this.tab_xml.Controls.Add(this.p1);
+            this.tab_xml.Controls.Add(this.titlePrognose);
+            this.tab_xml.Controls.Add(this.pfadText);
+            this.tab_xml.Controls.Add(this.xml_suchen);
+            resources.ApplyResources(this.tab_xml, "tab_xml");
+            this.tab_xml.Name = "tab_xml";
             // 
             // bildSpeichOk
             // 
@@ -485,15 +485,15 @@
             this.xml_suchen.UseVisualStyleBackColor = true;
             this.xml_suchen.Click += new System.EventHandler(this.xml_suchen_Click);
             // 
-            // tabPage2
+            // tab_info
             // 
-            resources.ApplyResources(this.tabPage2, "tabPage2");
-            this.tabPage2.BackColor = System.Drawing.Color.Transparent;
-            this.tabPage2.Controls.Add(this.listView1);
-            this.tabPage2.Controls.Add(this.pictureBox3);
-            this.tabPage2.Controls.Add(this.label1);
-            this.tabPage2.Controls.Add(this.comboBox1);
-            this.tabPage2.Name = "tabPage2";
+            resources.ApplyResources(this.tab_info, "tab_info");
+            this.tab_info.BackColor = System.Drawing.Color.Transparent;
+            this.tab_info.Controls.Add(this.listView1);
+            this.tab_info.Controls.Add(this.pictureBox3);
+            this.tab_info.Controls.Add(this.infoLable);
+            this.tab_info.Controls.Add(this.comboBox1);
+            this.tab_info.Name = "tab_info";
             // 
             // listView1
             // 
@@ -510,10 +510,10 @@
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.TabStop = false;
             // 
-            // label1
+            // infoLable
             // 
-            resources.ApplyResources(this.label1, "label1");
-            this.label1.Name = "label1";
+            resources.ApplyResources(this.infoLable, "infoLable");
+            this.infoLable.Name = "infoLable";
             // 
             // comboBox1
             // 
@@ -565,8 +565,8 @@
             this.HelpButton = true;
             this.Name = "Fahrrad";
             this.Tabs.ResumeLayout(false);
-            this.xmlInput.ResumeLayout(false);
-            this.xmlInput.PerformLayout();
+            this.tab_xml.ResumeLayout(false);
+            this.tab_xml.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bildSpeichOk)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bildOK)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
@@ -583,8 +583,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.upDownP21)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.upDownP11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.upDownAW1)).EndInit();
-            this.tabPage2.ResumeLayout(false);
-            this.tabPage2.PerformLayout();
+            this.tab_info.ResumeLayout(false);
+            this.tab_info.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.menu.ResumeLayout(false);
             this.menu.PerformLayout();
@@ -596,8 +596,8 @@
         #endregion
 
         private System.Windows.Forms.TabControl Tabs;
-        private System.Windows.Forms.TabPage xmlInput;
-        private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.TabPage tab_xml;
+        private System.Windows.Forms.TabPage tab_info;
         private System.Windows.Forms.Button xml_suchen;
         private System.Windows.Forms.OpenFileDialog openFileDialog;
         private System.Windows.Forms.Label pfadText;
@@ -634,7 +634,7 @@
         private System.Windows.Forms.PictureBox bildSpeichOk;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label infoLable;
         private System.Windows.Forms.ListView listView1;
     }
 }
