@@ -8,88 +8,94 @@ namespace ToolFahrrad_v1
 {
     class Initialisierung
     {
-        protected static bool[] TKTeil = {false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,
-                                       false,false,false,false,false,true,true,true,true,true,false,true,true,false,false,false,
-                                       true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,
-                                       false,false,false,true,true,false,false,false,true,true,true};
-        //Bestellkosten des KTeils
-        protected static double[] BKKTeil = {0,0,0,0,0,0,0,0,0,0, 0,0,0,0,0,0,0,0,0,0, 50,50,50,100,50,0,75,50,0,0,
-                                         0,50,75,50,75,100,50,50,75,50, 50,50,75,50,50,50,50,75,0,0, 0,50,50,0,0,0,50,50,50};
-        //Preis des KTeils
-        protected static double[] PKTeil = {0,0,0,0,0,0,0,0,0,0, 0,0,0,0,0,0,0,0,0,0, 5.00,6.50,6.50,0.06,0.06,0,0.1,1.2,0,0,
-                                          0,0.75,22,0.1,1,8,1.5,1.5,1.5,2.5, 0.06,0.1,5,0.5,0.06,0.1,3.5,1.5,0,0, 0,22,0.1,0,0,0,22,0.1,0.15};
-        //Verwendung des Teils
-        protected static string[] VwTeil = {"K","D","H","K","D","H","K","D","H","K","D","H","K","D","H","KDH","KDH","K","D","H","K","D","H","KDH",
-                                          "KDH","KDH","KDH","KDH","H","H","H","KDH","H","H","KDH","KDH","KDH","KDH","KDH","KDH","KDH","KDH","KDH",
-                                          "KDH","KDH","KDH","KDH","KDH","K","K","K","K","K","D","D","D","D","D","KDH"};
-        //Bezeichnung des Teils
-        protected static string[] TBez = {"Kinderfahrrad","Damenfahrrad","Herrenfahrrad","HinterradgruppeK","HinterradgruppeD",
-                                       "HinterradgruppeH","VorderradgruppeK","VorderradgruppeD","VorderradgruppeH","SchutzblechK h",
-                                       "SchutzblechD h","SchutzblechH h","SchutzblechK v","SchutzblechD v","SchutzblechH v",
-                                       "Lenker","Sattel","RahmenK","RahmenD","RahmenH","KetteK","KetteD","KetteH","Mutter","Scheibe",
-                                       "Pedal","Schraube","Rohr","VorderradH","Rahmen u. RäderH","Fahrrad o. PedalH","Farbe","FelgeH",
-                                       "SpeicheH","Nabe","Freilauf","Gabel","Welle","Blech","Lenker","Mutter","Griff","Sattel",
-                                       "Stange","Mutter","Schraube","Zahnkranz","Pedal","VorderradK","Rahmen u. RäderK",
-                                       "Fahrrad o. PedalK","FelgeK","SpeicheK","VorderradD","Rahmen u. RäderD","Fahrrad o. PedalD",
-                                       "FelgeD","SpeicheD","Schweißdraht"};
-        //Diskontmenge bei KTeil
-        protected static int[] DMKTeil = {0,0,0,0,0,0,0,0,0,0, 0,0,0,0,0,0,0,0,0,0, 300,300,300,6100,3600,0,1800,4500,0,0, 
-                                       0,2700,900,22000,3600,900,900,300,1800,900, 900,1800,2700,900,900,900,900,1800,0,0,
-                                       0,600,22000,0,0,0,600,22000,1800};
-        //Bestelldauer bei KTeil
-        protected static double[] BDKTeil = {0,0,0,0,0,0,0,0,0,0, 0,0,0,0,0,0,0,0,0,0, 1.8,1.7,1.2,3.2,0.9,0,0.9,1.7,0,0, 0,2.1,1.9,1.6,2.2,1.2,1.5,1.7,1.5,1.7,
-                                        0.9,1.2,2,1,1.7,0.9,1.4,1,0,0, 0,1.6,1.6,0,0,0,1.7,1.6,0.7};
-        //Abweichung Bestelldauer bei KTeil
-        protected static double[] ABDKTeil = {0,0,0,0,0,0,0,0,0,0, 0,0,0,0,0,0,0,0,0,0, 0.4,0.4,0.2,0.3,0.2,0,0.2,0.4,0,0, 0,0.5,0.5,0.3,0.4,0.1,0.3,0.4,0.3,0.2,
-                                         0.2,0.3,0.5,0.2,0.3,0.3,0.1,0.2,0,0, 0,0.4,0.2,0,0,0,0.3,0.5,0.2};
-        //??        //Schlüssel Verbrauch P1
-        protected static int[] TVerbrauchP1 = {0,0,0,0,0,0,0,0,0,0, 0,0,0,0,0,0,0,0,0,0, 1,0,0,7,4,0,2,5,0,0, 0,3,0,0,4,1,1,1,2,1,
-                                            1,2,1,3,1,1,1,2,0,0, 0,2,72,0,0,0,0,0,2};
-        //??        //Schlüssel Verbrauch P2
-        protected static int[] TVerbrauchP2 = {0,0,0,0,0,0,0,0,0,0, 0,0,0,0,0,0,0,0,0,0, 0,1,0,7,4,0,2,6,0,0, 0,3,2,72,4,1,1,1,2,1,
-                                            1,2,1,3,1,1,1,2,0,0, 0,0,0,0,0,0,0,0,2};
-        //??        //Schlüssel Verbrauch P3
-        protected static int[] TVerbrauchP3 = {0,0,0,0,0,0,0,0,0,0, 0,0,0,0,0,0,0,0,0,0, 0,0,1,7,4,0,2,7,0,0, 0,3,0,0,4,1,1,1,2,1,
-                                            1,2,1,3,1,1,1,2,0,0, 0,0,0,0,0,0,2,72,2};
-
+        // Array of flags to identificate KTeil
+        protected static bool[] TKTeil =
+            {false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,
+             false,false,false,true,true,true,true,true,false,true,true,false,false,false,true,true,true,true,true,
+             true,true,true,true,true,true,true,true,true,true,true,true,false,false,false,true,true,false,false,false,
+             true,true,true};
+        // Array with ordering costs of each KTeil
+        protected static double[] BKKTeil =
+            {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,50,50,50,100,50,0,75,50,0,0,0,50,75,50,75,100,50,50,75,50,50,50,
+             75,50,50,50,50,75,0,0,0,50,50,0,0,0,50,50,50};
+        // Array with price of each KTeil
+        protected static double[] PKTeil =
+            {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5.00,6.50,6.50,0.06,0.06,0,0.1,1.2,0,0,0,0.75,22,0.1,1,8,1.5,1.5,
+             1.5,2.5,0.06,0.1,5,0.5,0.06,0.1,3.5,1.5,0,0,0,22,0.1,0,0,0,22,0.1,0.15};
+        // Array with usage indicator of each Teil (K=Kinderfahrrad, D=Damenfahrrad, H=Herrenfahrrad, KDH=all)
+        protected static string[] VwTeil =
+            {"K","D","H","K","D","H","K","D","H","K","D","H","K","D","H","KDH","KDH","K","D","H","K","D","H","KDH",
+             "KDH","KDH","KDH","KDH","H","H","H","KDH","H","H","KDH","KDH","KDH","KDH","KDH","KDH","KDH","KDH","KDH",
+             "KDH","KDH","KDH","KDH","KDH","K","K","K","K","K","D","D","D","D","D","KDH"};
+        // Array with title of each Teil
+        protected static string[] TBez =
+            {"Kinderfahrrad","Damenfahrrad","Herrenfahrrad","HinterradgruppeK","HinterradgruppeD","HinterradgruppeH",
+             "VorderradgruppeK","VorderradgruppeD","VorderradgruppeH","SchutzblechK h","SchutzblechD h",
+             "SchutzblechH h","SchutzblechK v","SchutzblechD v","SchutzblechH v","Lenker","Sattel","RahmenK","RahmenD",
+             "RahmenH","KetteK","KetteD","KetteH","Mutter","Scheibe","Pedal","Schraube","Rohr","VorderradH",
+             "Rahmen u. RäderH","Fahrrad o. PedalH","Farbe","FelgeH","SpeicheH","Nabe","Freilauf","Gabel","Welle",
+             "Blech","Lenker","Mutter","Griff","Sattel","Stange","Mutter","Schraube","Zahnkranz","Pedal","VorderradK",
+             "Rahmen u. RäderK","Fahrrad o. PedalK","FelgeK","SpeicheK","VorderradD","Rahmen u. RäderD",
+             "Fahrrad o. PedalD","FelgeD","SpeicheD","Schweißdraht"};
+        // Array with discount of each KTeil
+        protected static int[] DMKTeil =
+            {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,300,300,300,6100,3600,0,1800,4500,0,0,0,2700,900,22000,3600,900,
+             900,300,1800,900,900,1800,2700,900,900,900,900,1800,0,0,0,600,22000,0,0,0,600,22000,1800};
+        // Array with order duration of each KTeil
+        protected static double[] BDKTeil =
+            {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1.8,1.7,1.2,3.2,0.9,0,0.9,1.7,0,0,0,2.1,1.9,1.6,2.2,1.2,1.5,1.7,
+             1.5,1.7,0.9,1.2,2,1,1.7,0.9,1.4,1,0,0,0,1.6,1.6,0,0,0,1.7,1.6,0.7};
+        // Array with variance of the order duration of each KTeil
+        protected static double[] ABDKTeil =
+            {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0.4,0.4,0.2,0.3,0.2,0,0.2,0.4,0,0,0,0.5,0.5,0.3,0.4,0.1,0.3,0.4,
+             0.3,0.2,0.2,0.3,0.5,0.2,0.3,0.3,0.1,0.2,0,0,0,0.4,0.2,0,0,0,0.3,0.5,0.2};
+        // Array with key consumption of Teil P1
+        protected static int[] TVerbrauchP1 =
+            {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,7,4,0,2,5,0,0,0,3,0,0,4,1,1,1,2,1,1,2,1,3,1,1,1,2,0,0,0,2,
+             72,0,0,0,0,0,2};
+        // Array with key consumption of Teil P2
+        protected static int[] TVerbrauchP2 =
+            {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,7,4,0,2,6,0,0,0,3,2,72,4,1,1,1,2,1,1,2,1,3,1,1,1,2,0,0,0,0,
+             0,0,0,0,0,0,2};
+        // Array with key consumption of Teil P3
+        protected static int[] TVerbrauchP3 =
+            {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,7,4,0,2,7,0,0,0,3,0,0,4,1,1,1,2,1,1,2,1,3,1,1,1,2,0,0,0,0,0,
+             0,0,0,2,72,2};
+        // Get instance of Class DataContainer
         DataContainer instance = DataContainer.Instance;
-
+        // Public standard constructor
         public Initialisierung()
-        {
-
-        }
-
+        {}
+        // Public method to initialize each Teil
         public void Initialisieren()
         {
-            for (int i = 0; i < 59; i++)
+            // Create new object of class Teil
+            for (int indexTeil = 0; indexTeil < 59; indexTeil++)
             {
-                if (TKTeil[i])
+                if (TKTeil[indexTeil])
                 {
-                    instance.NewTeil(i + 1, TBez[i], PKTeil[i], BKKTeil[i], BDKTeil[i], ABDKTeil[i], DMKTeil[i], 0, VwTeil[i]);
+                    instance.NewTeil(indexTeil + 1, TBez[indexTeil], PKTeil[indexTeil], BKKTeil[indexTeil],
+                                     BDKTeil[indexTeil], ABDKTeil[indexTeil], DMKTeil[indexTeil], 0, VwTeil[indexTeil]);
                 }
                 else
                 {
-                    instance.NewTeil(i + 1, TBez[i], 0, VwTeil[i]);
+                    instance.NewTeil(indexTeil + 1, TBez[indexTeil], 0, VwTeil[indexTeil]);
                 }
             }
-
-            for (int c = 1; c < 16; c++)
+            // Create new object of class Arbeitsplatz
+            for (int indexAp = 1; indexAp < 16; indexAp++)
             {
-                if (c != 5)
+                if (indexAp != 5)
                 {
-                    instance.NeuArbeitsplatz(new Arbeitsplatz(c));
+                    instance.NeuArbeitsplatz(new Arbeitsplatz(indexAp));
                 }
-
             }
-            this.InitEteil();
-            this.InitializeArbPl();
+            // Initialization of ETeil objects
+            InitEteil();
+            // Initialization of Arbeitsplatz objects
+            InitializeArbPl();
         }
-
-
-        /// <summary>
-        /// InitEteil Methode
-        /// Hilfsmethode - Initialisiert die Graphen für die ETeile
-        /// </summary>
+        // Initialization of each ETeil object
         public void InitEteil()
         {
             (instance.GetTeil(16) as ETeil).AddBestandteil(24, 1);
@@ -104,19 +110,16 @@ namespace ToolFahrrad_v1
             (instance.GetTeil(26) as ETeil).AddBestandteil(47, 1);
             (instance.GetTeil(26) as ETeil).AddBestandteil(44, 2);
             (instance.GetTeil(26) as ETeil).AddBestandteil(48, 2);
-
             (instance.GetTeil(1) as ETeil).AddBestandteil(21, 1);
             (instance.GetTeil(1) as ETeil).AddBestandteil(24, 1);
             (instance.GetTeil(1) as ETeil).AddBestandteil(27, 1);
             (instance.GetTeil(1) as ETeil).AddBestandteil(26, 1);
             (instance.GetTeil(1) as ETeil).AddBestandteil(51, 1);
-
             (instance.GetTeil(56) as ETeil).AddBestandteil(24, 1);
             (instance.GetTeil(56) as ETeil).AddBestandteil(27, 1);
             (instance.GetTeil(56) as ETeil).AddBestandteil(55, 1);
             (instance.GetTeil(56) as ETeil).AddBestandteil(16, 1);
             (instance.GetTeil(56) as ETeil).AddBestandteil(17, 1);
-
             (instance.GetTeil(55) as ETeil).AddBestandteil(24, 2);
             (instance.GetTeil(55) as ETeil).AddBestandteil(25, 2);
             (instance.GetTeil(55) as ETeil).AddBestandteil(5, 1);
@@ -143,13 +146,11 @@ namespace ToolFahrrad_v1
             (instance.GetTeil(19) as ETeil).AddBestandteil(59, 2);
             (instance.GetTeil(14) as ETeil).AddBestandteil(32, 1);
             (instance.GetTeil(14) as ETeil).AddBestandteil(39, 1);
-
             (instance.GetTeil(2) as ETeil).AddBestandteil(22, 1);
             (instance.GetTeil(2) as ETeil).AddBestandteil(24, 1);
             (instance.GetTeil(2) as ETeil).AddBestandteil(27, 1);
             (instance.GetTeil(2) as ETeil).AddBestandteil(26, 1);
             (instance.GetTeil(2) as ETeil).AddBestandteil(56, 1);
-
             (instance.GetTeil(51) as ETeil).AddBestandteil(16, 1);
             (instance.GetTeil(51) as ETeil).AddBestandteil(17, 1);
             (instance.GetTeil(51) as ETeil).AddBestandteil(50, 1);
@@ -160,7 +161,6 @@ namespace ToolFahrrad_v1
             (instance.GetTeil(50) as ETeil).AddBestandteil(4, 1);
             (instance.GetTeil(50) as ETeil).AddBestandteil(10, 1);
             (instance.GetTeil(50) as ETeil).AddBestandteil(49, 1);
-
             (instance.GetTeil(10) as ETeil).AddBestandteil(32, 1);
             (instance.GetTeil(10) as ETeil).AddBestandteil(39, 1);
             (instance.GetTeil(4) as ETeil).AddBestandteil(35, 2);
@@ -182,7 +182,6 @@ namespace ToolFahrrad_v1
             (instance.GetTeil(18) as ETeil).AddBestandteil(59, 2);
             (instance.GetTeil(13) as ETeil).AddBestandteil(32, 1);
             (instance.GetTeil(13) as ETeil).AddBestandteil(39, 1);
-
             (instance.GetTeil(3) as ETeil).AddBestandteil(23, 1);
             (instance.GetTeil(3) as ETeil).AddBestandteil(24, 1);
             (instance.GetTeil(3) as ETeil).AddBestandteil(27, 1);
@@ -219,13 +218,12 @@ namespace ToolFahrrad_v1
             (instance.GetTeil(20) as ETeil).AddBestandteil(59, 2);
             (instance.GetTeil(15) as ETeil).AddBestandteil(32, 1);
             (instance.GetTeil(15) as ETeil).AddBestandteil(39, 1);
-
+            // -------------------------------------------------
             (instance.GetTeil(26) as ETeil).AddArbeitsplatz(15);
             (instance.GetTeil(26) as ETeil).AddArbeitsplatz(7);
             (instance.GetTeil(16) as ETeil).AddArbeitsplatz(6);
             (instance.GetTeil(16) as ETeil).AddArbeitsplatz(14);
             (instance.GetTeil(17) as ETeil).AddArbeitsplatz(15);
-
             (instance.GetTeil(1) as ETeil).AddArbeitsplatz(4);
             (instance.GetTeil(56) as ETeil).AddArbeitsplatz(3);
             (instance.GetTeil(55) as ETeil).AddArbeitsplatz(2);
@@ -248,7 +246,6 @@ namespace ToolFahrrad_v1
             (instance.GetTeil(14) as ETeil).AddArbeitsplatz(8);
             (instance.GetTeil(14) as ETeil).AddArbeitsplatz(7);
             (instance.GetTeil(14) as ETeil).AddArbeitsplatz(9);
-
             (instance.GetTeil(2) as ETeil).AddArbeitsplatz(4);
             (instance.GetTeil(51) as ETeil).AddArbeitsplatz(3);
             (instance.GetTeil(50) as ETeil).AddArbeitsplatz(2);
@@ -271,7 +268,6 @@ namespace ToolFahrrad_v1
             (instance.GetTeil(13) as ETeil).AddArbeitsplatz(8);
             (instance.GetTeil(13) as ETeil).AddArbeitsplatz(7);
             (instance.GetTeil(13) as ETeil).AddArbeitsplatz(9);
-
             (instance.GetTeil(3) as ETeil).AddArbeitsplatz(4);
             (instance.GetTeil(31) as ETeil).AddArbeitsplatz(3);
             (instance.GetTeil(30) as ETeil).AddArbeitsplatz(2);
@@ -295,7 +291,7 @@ namespace ToolFahrrad_v1
             (instance.GetTeil(15) as ETeil).AddArbeitsplatz(7);
             (instance.GetTeil(15) as ETeil).AddArbeitsplatz(9);
         }
-
+        // Initialization of each Arbeitsplatz object
         public void InitializeArbPl()
         {
             DataContainer dc = DataContainer.Instance;
@@ -306,7 +302,6 @@ namespace ToolFahrrad_v1
             dc.GetArbeitsplatz(1).AddRuestzeit(54, 20);
             dc.GetArbeitsplatz(1).AddRuestzeit(29, 20);
             dc.GetArbeitsplatz(1).AnzRuestung = 4;
-
             dc.GetArbeitsplatz(2).AddWerkzeit(50, 5);
             dc.GetArbeitsplatz(2).AddWerkzeit(55, 5);
             dc.GetArbeitsplatz(2).AddWerkzeit(30, 5);
@@ -314,7 +309,6 @@ namespace ToolFahrrad_v1
             dc.GetArbeitsplatz(2).AddRuestzeit(55, 30);
             dc.GetArbeitsplatz(2).AddRuestzeit(30, 20);
             dc.GetArbeitsplatz(2).AnzRuestung = 5;
-
             dc.GetArbeitsplatz(3).AddWerkzeit(51, 5);
             dc.GetArbeitsplatz(3).AddWerkzeit(56, 6);
             dc.GetArbeitsplatz(3).AddWerkzeit(31, 6);
@@ -322,7 +316,6 @@ namespace ToolFahrrad_v1
             dc.GetArbeitsplatz(3).AddRuestzeit(56, 20);
             dc.GetArbeitsplatz(3).AddRuestzeit(31, 20);
             dc.GetArbeitsplatz(3).AnzRuestung = 3;
-
             dc.GetArbeitsplatz(4).AddWerkzeit(1, 6);
             dc.GetArbeitsplatz(4).AddWerkzeit(2, 7);
             dc.GetArbeitsplatz(4).AddWerkzeit(3, 7);
@@ -330,7 +323,6 @@ namespace ToolFahrrad_v1
             dc.GetArbeitsplatz(4).AddRuestzeit(2, 30);
             dc.GetArbeitsplatz(4).AddRuestzeit(3, 30);
             dc.GetArbeitsplatz(4).AnzRuestung = 4;
-
             dc.GetArbeitsplatz(6).AddWerkzeit(16, 3);
             dc.GetArbeitsplatz(6).AddWerkzeit(18, 2);
             dc.GetArbeitsplatz(6).AddWerkzeit(19, 3);
@@ -344,7 +336,6 @@ namespace ToolFahrrad_v1
             dc.GetArbeitsplatz(6).NaechsterArbeitsplatz[19] = 8;
             dc.GetArbeitsplatz(6).NaechsterArbeitsplatz[20] = 8;
             dc.GetArbeitsplatz(6).AnzRuestung = 4;
-
             dc.GetArbeitsplatz(7).AddWerkzeit(13, 2);
             dc.GetArbeitsplatz(7).AddWerkzeit(18, 2);
             dc.GetArbeitsplatz(7).AddWerkzeit(26, 2);
@@ -376,8 +367,6 @@ namespace ToolFahrrad_v1
             dc.GetArbeitsplatz(7).NaechsterArbeitsplatz[15] = 9;
             dc.GetArbeitsplatz(7).NaechsterArbeitsplatz[12] = 9;
             dc.GetArbeitsplatz(7).AnzRuestung = 20;
-
-
             dc.GetArbeitsplatz(8).AddWerkzeit(13, 1);
             dc.GetArbeitsplatz(8).AddWerkzeit(18, 3);
             dc.GetArbeitsplatz(8).AddWerkzeit(10, 1);
@@ -406,8 +395,6 @@ namespace ToolFahrrad_v1
             dc.GetArbeitsplatz(8).NaechsterArbeitsplatz[15] = 7;
             dc.GetArbeitsplatz(8).NaechsterArbeitsplatz[12] = 7;
             dc.GetArbeitsplatz(8).AnzRuestung = 18;
-
-
             dc.GetArbeitsplatz(9).AddWerkzeit(13, 3);
             dc.GetArbeitsplatz(9).AddWerkzeit(18, 2);
             dc.GetArbeitsplatz(9).AddWerkzeit(10, 3);
@@ -427,8 +414,6 @@ namespace ToolFahrrad_v1
             dc.GetArbeitsplatz(9).AddRuestzeit(20, 25);
             dc.GetArbeitsplatz(9).AddRuestzeit(12, 15);
             dc.GetArbeitsplatz(9).AnzRuestung = 11;
-
-
             dc.GetArbeitsplatz(10).AddWerkzeit(7, 4);
             dc.GetArbeitsplatz(10).AddWerkzeit(4, 4);
             dc.GetArbeitsplatz(10).AddWerkzeit(8, 4);
@@ -448,8 +433,6 @@ namespace ToolFahrrad_v1
             dc.GetArbeitsplatz(10).NaechsterArbeitsplatz[9] = 11;
             dc.GetArbeitsplatz(10).NaechsterArbeitsplatz[6] = 11;
             dc.GetArbeitsplatz(10).AnzRuestung = 6;
-
-
             dc.GetArbeitsplatz(11).AddWerkzeit(7, 3);
             dc.GetArbeitsplatz(11).AddWerkzeit(4, 3);
             dc.GetArbeitsplatz(11).AddWerkzeit(8, 3);
@@ -463,7 +446,6 @@ namespace ToolFahrrad_v1
             dc.GetArbeitsplatz(11).AddRuestzeit(9, 20);
             dc.GetArbeitsplatz(11).AddRuestzeit(6, 20);
             dc.GetArbeitsplatz(11).AnzRuestung = 6;
-
             dc.GetArbeitsplatz(12).AddWerkzeit(13, 3);
             dc.GetArbeitsplatz(12).AddWerkzeit(10, 3);
             dc.GetArbeitsplatz(12).AddWerkzeit(14, 3);
@@ -483,8 +465,6 @@ namespace ToolFahrrad_v1
             dc.GetArbeitsplatz(12).NaechsterArbeitsplatz[15] = 8;
             dc.GetArbeitsplatz(12).NaechsterArbeitsplatz[12] = 8;
             dc.GetArbeitsplatz(12).AnzRuestung = 6;
-
-
             dc.GetArbeitsplatz(13).AddWerkzeit(13, 2);
             dc.GetArbeitsplatz(13).AddWerkzeit(10, 2);
             dc.GetArbeitsplatz(13).AddWerkzeit(14, 2);
@@ -504,11 +484,9 @@ namespace ToolFahrrad_v1
             dc.GetArbeitsplatz(13).NaechsterArbeitsplatz[15] = 12;
             dc.GetArbeitsplatz(13).NaechsterArbeitsplatz[12] = 12;
             dc.GetArbeitsplatz(13).AnzRuestung = 6;
-
             dc.GetArbeitsplatz(14).AddWerkzeit(16, 3);
             dc.GetArbeitsplatz(14).AddRuestzeit(16, 0);
             dc.GetArbeitsplatz(14).AnzRuestung = 1;
-
             dc.GetArbeitsplatz(15).AddWerkzeit(17, 3);
             dc.GetArbeitsplatz(15).AddWerkzeit(26, 3);
             dc.GetArbeitsplatz(15).AddRuestzeit(17, 15);
