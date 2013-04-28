@@ -50,14 +50,17 @@ namespace ToolFahrrad_v1
         }
         public int berechneMenge(KTeil kt)
         {
+            // "Felge cpl K&D&H"
             if (kt.Preis == 22)
             {
                 return (( Convert.ToInt32(Math.Round((double)((kt.VerbrauchAktuell + 50 / 4) / 10)))) * 10);
             }
+            // 6,5: "Kette D&H"; 8: "Freilauf KDH"
             else if (kt.Preis == 6.5 || kt.Preis == 8)
             {
                 return (( Convert.ToInt32(Math.Round((double)((kt.VerbrauchAktuell + 50 / 3) / 10)))) * 10);
             }
+            // "Kette K" or "Sattel KDH"
             else if (kt.Preis == 5)
             {
                 return (( Convert.ToInt32(Math.Round(((double)(kt.VerbrauchAktuell + 50 / 2) / 10)))) * 10);
