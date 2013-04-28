@@ -9,43 +9,43 @@ namespace ToolFahrrad_v1
     public class ETeil : Teil
     {
         // Class members
-        private int produktion = 0;
-        private int in_warteschlange = 0;
-        private int in_bearbeitung = 0;
-        public int InBearbeitung
-        {
-            get { return in_bearbeitung; }
-            set { in_bearbeitung = value; }
-        }
+        private int produktionsMenge = 0;
+        private int inWarteschlange = 0;
+        private int inBearbeitung = 0;
         private int kategorie = 0;
         Dictionary<Teil, int> zusammensetzung;
-        Dictionary<int, int> pos;
-        List<int> benutzte_arbeitsplaetze;
+        Dictionary<int, int> position;
+        List<int> benutzteArbeitsplaetze;
         List<ETeil> istTeil = null;
         // Constructor
         public ETeil(int nummer, string bez) : base(nummer, bez)
         {
-            this.zusammensetzung = new Dictionary<Teil, int>();
-            this.pos = new Dictionary<int, int>();
-            this.benutzte_arbeitsplaetze = new List<int>();
+            zusammensetzung = new Dictionary<Teil, int>();
+            position = new Dictionary<int, int>();
+            benutzteArbeitsplaetze = new List<int>();
         }
         // Getter / Setter
-        public int Produktionsmenge
+        public int ProduktionsMenge
         {
-            get { return produktion; }
+            get { return produktionsMenge; }
             set
             {
-                this.produktion = value;
+                this.produktionsMenge = value;
                 foreach (KeyValuePair<Teil, int> kvp in zusammensetzung)
                 {
-                    kvp.Key.VerbrauchAktuell = kvp.Value * produktion;
+                    kvp.Key.VerbrauchAktuell = kvp.Value * produktionsMenge;
                 }
             }
         }
         public int InWartschlange
         {
-            get { return in_warteschlange; }
-            set { in_warteschlange = value; }
+            get { return inWarteschlange; }
+            set { inWarteschlange = value; }
+        }
+        public int InBearbeitung
+        {
+            get { return inBearbeitung; }
+            set { inBearbeitung = value; }
         }
         public int Kategorie
         {
@@ -59,7 +59,7 @@ namespace ToolFahrrad_v1
         // Position and Menge in Reihenfolgenplanung
         public Dictionary<int, int> Position
         {
-            get { return this.pos; }
+            get { return position; }
         }
         // Used stations
         public List<Arbeitsplatz> BenutzteArbeitsplaetze
@@ -67,7 +67,7 @@ namespace ToolFahrrad_v1
             get
             {
                 List<Arbeitsplatz> res = new List<Arbeitsplatz>();
-                foreach (int arpl in benutzte_arbeitsplaetze)
+                foreach (int arpl in benutzteArbeitsplaetze)
                 {
                     res.Add(DataContainer.Instance.GetArbeitsplatz(arpl));
                 }
@@ -88,15 +88,15 @@ namespace ToolFahrrad_v1
                             res.Add(et);
                         }
                     }
-                    this.istTeil = res;
+                    istTeil = res;
                 }
-                return this.istTeil;
+                return istTeil;
             }
         }
         // Functions
         public void AddArbeitsplatz(int nr)
         {
-            this.benutzte_arbeitsplaetze.Add(nr);
+            benutzteArbeitsplaetze.Add(nr);
         }
         public void AddBestandteil(Teil t, int menge)
         {
@@ -104,8 +104,8 @@ namespace ToolFahrrad_v1
         }
         public void AddBestandteil(int t, int menge)
         {
-            DataContainer container = DataContainer.Instance;
-            zusammensetzung[container.GetTeil(t)] = menge;
+            DataContainer dc = DataContainer.Instance;
+            zusammensetzung[dc.GetTeil(t)] = menge;
         }
         // Equals function
         public bool Equals(ETeil et)

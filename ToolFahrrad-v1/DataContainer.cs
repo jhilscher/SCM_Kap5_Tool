@@ -197,7 +197,7 @@ namespace ToolFahrrad_v1
                 {
                     DataRow row = table.NewRow();
                     row["Teil"] = pos;
-                    row["Menge"] = (this.liste_teile[pos] as ETeil).Produktionsmenge;
+                    row["Menge"] = (this.liste_teile[pos] as ETeil).ProduktionsMenge;
                     table.Rows.Add(row);
                 }
                 return table;
@@ -212,13 +212,13 @@ namespace ToolFahrrad_v1
             {
                 this.liste_reihenfolge[count] = Convert.ToInt32(row[0]);
                 count++;
-                if ((this.liste_teile[Convert.ToInt32(row[0])] as ETeil).Produktionsmenge < Convert.ToInt32(row[1]))
+                if ((this.liste_teile[Convert.ToInt32(row[0])] as ETeil).ProduktionsMenge < Convert.ToInt32(row[1]))
                 {
                     pp.Nachpruefen(this.liste_teile[Convert.ToInt32(row[0])], Convert.ToInt32(row[1]));
                 }
                 else
                 {
-                    (this.liste_teile[Convert.ToInt32(row[0])] as ETeil).Produktionsmenge = Convert.ToInt32(row[1]);
+                    (this.liste_teile[Convert.ToInt32(row[0])] as ETeil).ProduktionsMenge = Convert.ToInt32(row[1]);
                 }
             }
         }
@@ -306,8 +306,8 @@ namespace ToolFahrrad_v1
                 kt.Preis = p;
                 kt.Bestellkosten = bk;
                 kt.Lieferdauer = ld;
-                kt.Abweichung_lieferdauer = abw;
-                kt.Diskontmenge = dm;
+                kt.AbweichungLieferdauer = abw;
+                kt.DiskontMenge = dm;
                 kt.Lagerstand = bs;
                 kt.Verwendung = vw;
                 this.liste_teile[nr] = kt;
@@ -381,7 +381,7 @@ namespace ToolFahrrad_v1
             pp.Aufloesen();
             pp.Planen();
             Bestellverwaltung bv = new Bestellverwaltung();
-            bv.erzeugen_liste_bestellungen();
+            bv.erzeugeBestellListe();
         }
         // Reset of Arbeitsplatz
         public void Reset()
@@ -393,10 +393,11 @@ namespace ToolFahrrad_v1
             }
             foreach (ETeil et in this.ListeETeile)
             {
-                et.Produktionsmenge = 0;
+                et.ProduktionsMenge = 0;
                 et.VerbrauchAktuell = 0;
                 et.VerbrauchPrognose1 = 0;
                 et.VerbrauchPrognose2 = 0;
+                et.VerbrauchPrognose3 = 0;
             }
         }
     }

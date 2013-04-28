@@ -227,21 +227,21 @@ namespace ToolFahrrad_v1
             WriteFile("<SalesWishes>");
             WriteFile("<SalesWish>");
             WriteFile("<SalesItemInternalNumber>\"1\"</SalesItemInternalNumber>");
-            WriteFile("<SalesQuantity>" + (dc.GetTeil(1) as ETeil).Produktionsmenge + "</SalesQuantity>");
+            WriteFile("<SalesQuantity>" + (dc.GetTeil(1) as ETeil).ProduktionsMenge + "</SalesQuantity>");
             WriteFile("<DirectSaleQuantity>0</DirectSaleQuantity>");
             WriteFile("<DirectSalePrice>0.0</DirectSalePrice>");
             WriteFile("<DirectSalePenalty>0.0</DirectSalePenalty>");
             WriteFile("</SalesWish>");
             WriteFile("<SalesWish>");
             WriteFile("<SalesItemInternalNumber>2</SalesItemInternalNumber>");
-            WriteFile("<SalesQuantity>" + (dc.GetTeil(2) as ETeil).Produktionsmenge + "</SalesQuantity>");
+            WriteFile("<SalesQuantity>" + (dc.GetTeil(2) as ETeil).ProduktionsMenge + "</SalesQuantity>");
             WriteFile("<DirectSaleQuantity>0</DirectSaleQuantity>");
             WriteFile("<DirectSalePrice>0.0</DirectSalePrice>");
             WriteFile("<DirectSalePenalty>0.0</DirectSalePenalty>");
             WriteFile("</SalesWish>");
             WriteFile("<SalesWish>");
             WriteFile("<SalesItemInternalNumber>2</SalesItemInternalNumber>");
-            WriteFile("<SalesQuantity>" + (dc.GetTeil(3) as ETeil).Produktionsmenge + "</SalesQuantity>");
+            WriteFile("<SalesQuantity>" + (dc.GetTeil(3) as ETeil).ProduktionsMenge + "</SalesQuantity>");
             WriteFile("<DirectSaleQuantity>0</DirectSaleQuantity>");
             WriteFile("<DirectSalePrice>0.0</DirectSalePrice>");
             WriteFile("<DirectSalePenalty>0.0</DirectSalePenalty>");
@@ -265,7 +265,7 @@ namespace ToolFahrrad_v1
             {
                 WriteFile("<ProductionOrder>");
                 WriteFile("<ItemInternalNumber>" + z + "</ItemInternalNumber>");
-                WriteFile("<Quantity>" + (dc.GetTeil(z) as ETeil).Produktionsmenge + "</Quantity>");
+                WriteFile("<Quantity>" + (dc.GetTeil(z) as ETeil).ProduktionsMenge + "</Quantity>");
                 WriteFile("</ProductionOrder>");
             }
             WriteFile("</ProductionOrders>");
