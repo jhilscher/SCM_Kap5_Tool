@@ -59,7 +59,8 @@ namespace ToolFahrrad_v1
                     xmlOffenOK.Visible = true;
                     pfadText.Visible = false;
                     okXml = true;
-                    infoLable.Text = infoLable.Text + " aus der Periode " + xml.period;
+                    if (!infoLable.Text.Contains("aus der Periode"))
+                        infoLable.Text = infoLable.Text + " aus der Periode " + xml.period;
                     if (this.okPrognose == true)
                         toolAusfueren.Visible = true;
                 }
@@ -68,6 +69,8 @@ namespace ToolFahrrad_v1
                     xmlTextBox.Text = openFileDialog.FileName;
                     pfadText.ForeColor = Color.Red;
                     toolAusfueren.Visible = false;
+                    xmlOffenOK.Visible = false;
+                    save.Visible = false;
                     pfadText.Visible = true;
                     okXml = false;
                 }
@@ -118,8 +121,10 @@ namespace ToolFahrrad_v1
 
         private void TextVisibleFalse()
         {
-            bildSpeichOk.Visible = false;
-            okPrognose = false;
+            this.bildSpeichOk.Visible = false;
+            this.okPrognose = false;
+            this.toolAusfueren.Visible = false;
+            this.save.Visible = false;
         }
 
         private void upDownAW1_ValueChanged(object sender, EventArgs e)
@@ -211,12 +216,12 @@ namespace ToolFahrrad_v1
             }
             listView1.Columns.Add("NR.", 50, HorizontalAlignment.Center);
             listView1.Columns.Add("Bezeichnung", 160);
-            listView1.Columns.Add("Bestand", 90, HorizontalAlignment.Center);
-            listView1.Columns.Add("in %", 90, HorizontalAlignment.Center);
+            listView1.Columns.Add("Bestand", 70, HorizontalAlignment.Center);
+            listView1.Columns.Add("in %", 70, HorizontalAlignment.Center);
             ListViewItem lvi;
             if (action == 0) //Kaufteile
             {
-                listView1.Columns.Add("Zugang", 90, HorizontalAlignment.Center);
+                listView1.Columns.Add("Zugang", 70, HorizontalAlignment.Center);
                 foreach (var a in instance.ListeKTeile)
                 {
                     lvi = new ListViewItem(a.Nummer + "");
@@ -242,8 +247,9 @@ namespace ToolFahrrad_v1
             }
             else if (action == 1)
             {
-                listView1.Columns.Add("Warteschlange", 90, HorizontalAlignment.Center);
-                listView1.Columns.Add("in Bearbeitung", 90, HorizontalAlignment.Center);
+                listView1.Columns.Add("Warteschlange", 70, HorizontalAlignment.Center);
+                listView1.Columns.Add("in Bearbeitung", 70, HorizontalAlignment.Center);
+                listView1.Columns.Add("Produktion", 70, HorizontalAlignment.Center);
                 foreach (var a in instance.ListeETeile)
                 {
                     lvi = new ListViewItem(a.Nummer + "");
@@ -255,12 +261,15 @@ namespace ToolFahrrad_v1
                         lvi.SubItems.Add("");
                     else
                         lvi.SubItems.Add(a.InWartschlange + "");
+
                     if (a.InBearbeitung.Equals(0))
                         lvi.SubItems.Add("");
                     else
                         lvi.SubItems.Add(a.InBearbeitung + "");
 
+                    lvi.SubItems.Add(a.ProduktionsMenge + "");
 
+                    //Color
                     if (a.Verhaeltnis <= 30)
                         lvi.SubItems[3].BackColor = Color.Salmon;
                     else if (a.Verhaeltnis > 30 && a.Verhaeltnis < 50)
@@ -269,6 +278,7 @@ namespace ToolFahrrad_v1
                         lvi.SubItems[3].BackColor = Color.Khaki;
                     else
                         lvi.SubItems[3].BackColor = Color.PaleGreen;
+                    lvi.SubItems[6].BackColor = Color.SkyBlue;
                     listView1.Items.Add(lvi);
                 }
             }
@@ -286,6 +296,8 @@ namespace ToolFahrrad_v1
         private void toolAusfueren_Click(object sender, EventArgs e)
         {
             pp.Planen();
+            this.toolAusfueren.Visible = false;
+            this.save.Visible = true;
         }
     }
 }

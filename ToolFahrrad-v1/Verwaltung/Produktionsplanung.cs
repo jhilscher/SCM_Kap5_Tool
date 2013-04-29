@@ -31,10 +31,10 @@ namespace ToolFahrrad_v1
         public void Planen()
         {
             if (dc == null)
+            {
                 dc = DataContainer.Instance;
-            if (aufgeloest == false)
-                Aufloesen();
-            PrimaereProduktionsplanung();
+            }
+            Aufloesen();
             if (dc.UeberstundenErlaubt)
             {
                 SetUeberstunde();
@@ -64,48 +64,6 @@ namespace ToolFahrrad_v1
                     }
                 }
             }
-        }
-        // ---
-        private void PrimaereProduktionsplanung()
-        {
-
-
-
-            //foreach (ETeil et in dc.ListeETeile)
-            //{
-            //    if (et.Kategorie == 1)
-            //    {
-            //        if (et.Lagerstand - et.Pufferwert < et.VerbrauchAktuell)
-            //        {
-            //            et.ProduktionsMenge = et.VerbrauchAktuell - et.Lagerstand + et.Pufferwert;
-            //        }
-            //    }
-            //    else if (et.Kategorie == 2)
-            //    {
-            //        if (et.Nummer == 26)
-            //        {
-            //            if (et.Lagerstand < et.VerbrauchAktuell + et.VerbrauchPrognose1)
-            //            {
-            //                et.ProduktionsMenge = et.VerbrauchPrognose2;
-            //            }
-            //        }
-            //        else
-            //        {
-            //            if (et.Lagerstand - et.Pufferwert < et.VerbrauchPrognose1)
-            //            {
-            //                et.ProduktionsMenge = et.VerbrauchPrognose1 - et.Lagerstand + et.Pufferwert;
-            //            }
-            //        }
-
-            //    }
-            //    else if (et.Kategorie == 3)
-            //    {
-            //        if (et.Lagerstand - et.Pufferwert < et.VerbrauchPrognose2)
-            //        {
-            //            et.ProduktionsMenge = et.VerbrauchPrognose2 - et.Lagerstand + et.Pufferwert;
-            //        }
-            //    }
-            //}
         }
         // ---
         public String Nachpruefen(Teil teil, int mengeNeu)

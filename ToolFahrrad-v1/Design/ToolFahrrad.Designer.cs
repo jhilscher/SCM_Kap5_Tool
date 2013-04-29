@@ -80,6 +80,7 @@
             this.einstellungenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.hilfeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
+            this.save = new System.Windows.Forms.PictureBox();
             this.Tabs.SuspendLayout();
             this.tab_xml.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pufferP3)).BeginInit();
@@ -106,6 +107,7 @@
             this.tab_info.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.menu.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.save)).BeginInit();
             this.SuspendLayout();
             // 
             // Tabs
@@ -221,6 +223,7 @@
             // 
             // panelXML
             // 
+            this.panelXML.Controls.Add(this.save);
             this.panelXML.Controls.Add(this.xmlOffenOK);
             this.panelXML.Controls.Add(this.toolAusfueren);
             this.panelXML.Controls.Add(this.xmlTextBox);
@@ -677,6 +680,14 @@
             this.hilfeToolStripMenuItem.Name = "hilfeToolStripMenuItem";
             resources.ApplyResources(this.hilfeToolStripMenuItem, "hilfeToolStripMenuItem");
             // 
+            // save
+            // 
+            this.save.Cursor = System.Windows.Forms.Cursors.Default;
+            resources.ApplyResources(this.save, "save");
+            this.save.Name = "save";
+            this.save.TabStop = false;
+            this.toolTip.SetToolTip(this.save, resources.GetString("save.ToolTip"));
+            // 
             // Fahrrad
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -715,6 +726,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.menu.ResumeLayout(false);
             this.menu.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.save)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -772,6 +784,7 @@
         private System.Windows.Forms.NumericUpDown pufferP2;
         private System.Windows.Forms.NumericUpDown pufferP1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.PictureBox save;
     }
 }
 
