@@ -12,7 +12,12 @@ namespace ToolFahrrad_v1
         private int produktionsMenge = 0;
         private int inWarteschlange = 0;
         private int inBearbeitung = 0;
-        private int kategorie = 0;
+        private bool istEndProdukt = false;
+        public bool IstEndProdukt
+        {
+            get { return istEndProdukt; }
+            set { istEndProdukt = value; }
+        }
         Dictionary<Teil, int> zusammensetzung;
         Dictionary<int, int> position;
         List<int> benutzteArbeitsplaetze;
@@ -46,11 +51,6 @@ namespace ToolFahrrad_v1
         {
             get { return inBearbeitung; }
             set { inBearbeitung = value; }
-        }
-        public int Kategorie
-        {
-            get { return kategorie; }
-            set { kategorie = value; }
         }
         public Dictionary<Teil, int> Zusammensetzung
         {

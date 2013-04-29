@@ -27,34 +27,15 @@ namespace ToolFahrrad_v1
             RekursAufloesen(dc.GetTeil(3) as ETeil);
             aufgeloest = true;
         }
-        private void KategorieBestimmen()
-        {
-            (dc.GetTeil(1) as ETeil).Kategorie = 1;
-            (dc.GetTeil(2) as ETeil).Kategorie = 1;
-            (dc.GetTeil(3) as ETeil).Kategorie = 1;
-            foreach (ETeil teil in dc.ListeETeile)
-            {
-                if (teil.Kategorie == 0)
-                {
-                    if (teil.IstTeilVon.Contains(dc.GetTeil(1) as ETeil) || teil.IstTeilVon.Contains(dc.GetTeil(2) as ETeil) || teil.IstTeilVon.Contains(dc.GetTeil(3) as ETeil))
-                    {
-                        teil.Kategorie = 2;
-                    }
-                    else
-                    {
-                        teil.Kategorie = 3;
-                    }
-                }
-            }
 
-        }
+
         public void Planen()
         {
             if (dc == null)
             {
                 dc = DataContainer.Instance;
             }
-            KategorieBestimmen();
+
             if (aufgeloest == false)
             {
                 Aufloesen();
@@ -92,41 +73,44 @@ namespace ToolFahrrad_v1
         // ---
         private void PrimaereProduktionsplanung()
         {
-            foreach (ETeil et in dc.ListeETeile)
-            {
-                if (et.Kategorie == 1)
-                {
-                    if (et.Lagerstand - et.Pufferwert < et.VerbrauchAktuell)
-                    {
-                        et.ProduktionsMenge = et.VerbrauchAktuell - et.Lagerstand + et.Pufferwert;
-                    }
-                }
-                else if (et.Kategorie == 2)
-                {
-                    if (et.Nummer == 26)
-                    {
-                        if (et.Lagerstand < et.VerbrauchAktuell + et.VerbrauchPrognose1)
-                        {
-                            et.ProduktionsMenge = et.VerbrauchPrognose2;
-                        }
-                    }
-                    else
-                    {
-                        if (et.Lagerstand - et.Pufferwert < et.VerbrauchPrognose1)
-                        {
-                            et.ProduktionsMenge = et.VerbrauchPrognose1 - et.Lagerstand + et.Pufferwert;
-                        }
-                    }
 
-                }
-                else if (et.Kategorie == 3)
-                {
-                    if (et.Lagerstand - et.Pufferwert < et.VerbrauchPrognose2)
-                    {
-                        et.ProduktionsMenge = et.VerbrauchPrognose2 - et.Lagerstand + et.Pufferwert;
-                    }
-                }
-            }
+
+
+            //foreach (ETeil et in dc.ListeETeile)
+            //{
+            //    if (et.Kategorie == 1)
+            //    {
+            //        if (et.Lagerstand - et.Pufferwert < et.VerbrauchAktuell)
+            //        {
+            //            et.ProduktionsMenge = et.VerbrauchAktuell - et.Lagerstand + et.Pufferwert;
+            //        }
+            //    }
+            //    else if (et.Kategorie == 2)
+            //    {
+            //        if (et.Nummer == 26)
+            //        {
+            //            if (et.Lagerstand < et.VerbrauchAktuell + et.VerbrauchPrognose1)
+            //            {
+            //                et.ProduktionsMenge = et.VerbrauchPrognose2;
+            //            }
+            //        }
+            //        else
+            //        {
+            //            if (et.Lagerstand - et.Pufferwert < et.VerbrauchPrognose1)
+            //            {
+            //                et.ProduktionsMenge = et.VerbrauchPrognose1 - et.Lagerstand + et.Pufferwert;
+            //            }
+            //        }
+
+            //    }
+            //    else if (et.Kategorie == 3)
+            //    {
+            //        if (et.Lagerstand - et.Pufferwert < et.VerbrauchPrognose2)
+            //        {
+            //            et.ProduktionsMenge = et.VerbrauchPrognose2 - et.Lagerstand + et.Pufferwert;
+            //        }
+            //    }
+            //}
         }
         // ---
         public String Nachpruefen(Teil teil, int mengeNeu)

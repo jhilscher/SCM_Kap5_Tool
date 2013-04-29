@@ -19,7 +19,7 @@ namespace ToolFahrrad_v1
         protected int verbrauchPrognose1;
         protected int verbrauchPrognose2;
         protected int verbrauchPrognose3;
-        // Constructor
+                // Constructor
         public Teil(int nummer, string bez)
         {
             nr = nummer;

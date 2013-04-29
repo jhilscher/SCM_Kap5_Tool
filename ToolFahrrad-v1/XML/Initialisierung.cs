@@ -98,6 +98,9 @@ namespace ToolFahrrad_v1
         // Initialization of each ETeil object
         public void InitEteil()
         {
+            (instance.GetTeil(1) as ETeil).IstEndProdukt = true;
+            (instance.GetTeil(2) as ETeil).IstEndProdukt = true;
+            (instance.GetTeil(3) as ETeil).IstEndProdukt = true;
             (instance.GetTeil(16) as ETeil).AddBestandteil(24, 1);
             (instance.GetTeil(16) as ETeil).AddBestandteil(28, 2);
             (instance.GetTeil(16) as ETeil).AddBestandteil(40, 1);
