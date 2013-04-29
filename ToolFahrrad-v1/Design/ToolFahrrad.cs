@@ -84,9 +84,9 @@ namespace ToolFahrrad_v1
 
         private void prognoseSpeichern_Click(object sender, EventArgs e)
         {
-            instance.GetTeil(1).VerbrauchAktuell = Convert.ToInt32(upDownAW1.Value);
-            instance.GetTeil(2).VerbrauchAktuell = Convert.ToInt32(upDownAW2.Value);
-            instance.GetTeil(3).VerbrauchAktuell = Convert.ToInt32(upDownAW3.Value);
+            instance.GetTeil(1).VertriebAktuell = Convert.ToInt32(upDownAW1.Value);
+            instance.GetTeil(2).VertriebAktuell = Convert.ToInt32(upDownAW2.Value);
+            instance.GetTeil(3).VertriebAktuell = Convert.ToInt32(upDownAW3.Value);
 
             instance.GetTeil(1).Pufferwert = Convert.ToInt32(pufferP1.Value);
             instance.GetTeil(2).Pufferwert = Convert.ToInt32(pufferP2.Value);

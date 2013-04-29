@@ -22,10 +22,15 @@ namespace ToolFahrrad_v1
             {
                 dc = DataContainer.Instance;
             }
-            RekursAufloesen(dc.GetTeil(1) as ETeil);
+            for (int index = 1; index < 4; index++)
+            {
+                RekursAufloesen(null, dc.GetTeil(index) as ETeil);
+            }
+            aufgeloest = true;
+            /**RekursAufloesen(dc.GetTeil(1) as ETeil);
             RekursAufloesen(dc.GetTeil(2) as ETeil);
             RekursAufloesen(dc.GetTeil(3) as ETeil);
-            aufgeloest = true;
+            */
         }
 
 
@@ -52,9 +57,21 @@ namespace ToolFahrrad_v1
             ReihenfolgePart2(tmp);
         }
         // Rekursive Prozedur zum iterieren über die Zusammensetzung der Teile
-        private void RekursAufloesen(ETeil teil)
+        private void RekursAufloesen(ETeil vTeil, ETeil kTeil)
         {
-            foreach (KeyValuePair<Teil, int> kvp in teil.Zusammensetzung)
+            kTeil.SetProduktionsMenge(vTeil);
+            if (kTeil.Zusammensetzung.Count() != 0)
+            {
+                foreach (KeyValuePair<Teil, int> kvp in kTeil.Zusammensetzung)
+                {
+                    if (kvp.Key is ETeil)
+                    {
+                        RekursAufloesen(kTeil,kvp.Key as ETeil);
+                    }
+                }
+            }
+            
+            /**foreach (KeyValuePair<Teil, int> kvp in teil.Zusammensetzung)
             {
                 kvp.Key.VerbrauchPrognose1 += kvp.Value * teil.VerbrauchPrognose1;
                 kvp.Key.VerbrauchPrognose2 += kvp.Value * teil.VerbrauchPrognose2;
@@ -62,7 +79,7 @@ namespace ToolFahrrad_v1
                 {
                     RekursAufloesen(kvp.Key as ETeil);
                 }
-            }
+            }*/
             return;
         }
         // ---
@@ -132,7 +149,7 @@ namespace ToolFahrrad_v1
             {
                 count++;
                 //wenn kteile nicht ausrechen muss von irgendeinem Teil weniger 
-                if (kteil.Lagerstand < kteil.VerbrauchAktuell)
+                if (kteil.Lagerstand < kteil.VertriebAktuell)
                 {
                     int nrToChange = 0;
                     double time = 4800;
@@ -165,7 +182,7 @@ namespace ToolFahrrad_v1
             foreach (ETeil eteil in dc.ListeETeile)
             {
                 count++;
-                if (eteil.Lagerstand + eteil.ProduktionsMenge + eteil.InWartschlange < eteil.VerbrauchAktuell)
+                if (eteil.Lagerstand + eteil.ProduktionsMenge + eteil.InWartschlange < eteil.VertriebAktuell)
                 {
                     int nrToChange = 0;
                     int time = 2400;
@@ -220,18 +237,18 @@ namespace ToolFahrrad_v1
                     {
                         if (bestandTeil.Key is ETeil)
                         {
-                            if (bestandTeil.Key.Lagerstand - bestandTeil.Key.VerbrauchAktuell < 0) // Falls Verbrauch höher Lagerstand dieses Teil am Arbeitsplatz bevorzugen
+                            if (bestandTeil.Key.Lagerstand - bestandTeil.Key.VertriebAktuell < 0) // Falls Verbrauch höher Lagerstand dieses Teil am Arbeitsplatz bevorzugen
                             {
                                 tmp[ap.GetNummerArbeitsplatz][lastPos] = hergestellt.Nummer;
                                 lastposChgd = true;
                                 notInserted = false;
                             }
-                            if (bestandTeil.Key.Lagerstand - bestandTeil.Key.VerbrauchAktuell >= 0) // Falls Verbrauch kleiner/gleich Lagerstand
+                            if (bestandTeil.Key.Lagerstand - bestandTeil.Key.VertriebAktuell >= 0) // Falls Verbrauch kleiner/gleich Lagerstand
                             {
                                 bool praeferenz = false;
                                 foreach (ETeil nachfolger in (bestandTeil.Key as ETeil).IstTeilVon) // Teile die von ersten Teil abhängig sind prüfen
                                 {
-                                    if (nachfolger.Lagerstand - nachfolger.VerbrauchAktuell < 0)
+                                    if (nachfolger.Lagerstand - nachfolger.VertriebAktuell < 0)
                                     {
                                         praeferenz = true; // Diese Teile bevorzugen da nicht mehr vorhanden
                                         break;

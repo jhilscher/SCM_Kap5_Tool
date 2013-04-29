@@ -120,28 +120,28 @@ namespace ToolFahrrad_v1
         {
             // Future period 1
             verbProg1MA = Convert.ToInt32(
-                lagerstand + erwarteteBestellung - verbrauchAktuell * (lieferdauer + abweichungLieferdauer));
+                lagerstand + erwarteteBestellung - vertriebAktuell * (lieferdauer + abweichungLieferdauer));
             verbProg1OA = Convert.ToInt32(
-                lagerstand + erwarteteBestellung - verbrauchAktuell * lieferdauer);
+                lagerstand + erwarteteBestellung - vertriebAktuell * lieferdauer);
             // Future period 2
             verbProg2MA = Convert.ToInt32(
                 lagerstand + erwarteteBestellung - (
-                    verbrauchAktuell + (verbrauchAktuell + verbrauchPrognose1 + verbrauchPrognose2) / 3) *
+                    vertriebAktuell + (vertriebAktuell + verbrauchPrognose1 + verbrauchPrognose2) / 3) *
                     (lieferdauer + abweichungLieferdauer));
             verbProg2OA = Convert.ToInt32(
                 lagerstand + erwarteteBestellung - (
-                    verbrauchAktuell + (verbrauchAktuell + verbrauchPrognose1 + verbrauchPrognose2) / 3) *
+                    vertriebAktuell + (vertriebAktuell + verbrauchPrognose1 + verbrauchPrognose2) / 3) *
                     lieferdauer);
             // Future period 3
             verbProg3MA = Convert.ToInt32(
                 lagerstand + erwarteteBestellung - (
-                    verbrauchAktuell + (
-                        verbrauchAktuell + verbrauchPrognose1 + verbrauchPrognose2 + verbrauchPrognose3) / 4) *
+                    vertriebAktuell + (
+                        vertriebAktuell + verbrauchPrognose1 + verbrauchPrognose2 + verbrauchPrognose3) / 4) *
                         (lieferdauer + abweichungLieferdauer));
             verbProg3OA = Convert.ToInt32(
                 lagerstand + erwarteteBestellung - (
-                    verbrauchAktuell + (
-                        verbrauchAktuell + verbrauchPrognose1 + verbrauchPrognose2 + verbrauchPrognose3) / 4) *
+                    vertriebAktuell + (
+                        vertriebAktuell + verbrauchPrognose1 + verbrauchPrognose2 + verbrauchPrognose3) / 4) *
                         lieferdauer);
         }
         // Equals function

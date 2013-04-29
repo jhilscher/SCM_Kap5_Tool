@@ -394,7 +394,7 @@ namespace ToolFahrrad_v1
             foreach (ETeil et in ListeETeile)
             {
                 et.ProduktionsMenge = 0;
-                et.VerbrauchAktuell = 0;
+                et.VertriebAktuell = 0;
                 et.VerbrauchPrognose1 = 0;
                 et.VerbrauchPrognose2 = 0;
                 et.VerbrauchPrognose3 = 0;
