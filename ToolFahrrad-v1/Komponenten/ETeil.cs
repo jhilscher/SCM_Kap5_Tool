@@ -94,7 +94,7 @@ namespace ToolFahrrad_v1
             }
         }
         // Functions
-        public void SetProduktionsMenge(ETeil vTeil)
+        public void SetProduktionsMenge(int index, ETeil vTeil)
         {
             if (istEndProdukt == true)
             {
@@ -106,7 +106,10 @@ namespace ToolFahrrad_v1
                 vertriebAktuell = vTeil.ProduktionsMenge + vTeil.InWartschlange;
                 pufferwert = vTeil.Pufferwert;
                 // Calculation
-                produktionsMenge = vertriebAktuell + pufferwert - lagerstand - inWarteschlange - inBearbeitung;
+                if (Verwendung.Contains("KDH") == false || (Verwendung.Contains("KDH") == true && index == 1))
+                {
+                    produktionsMenge = vertriebAktuell + pufferwert - lagerstand - inWarteschlange - inBearbeitung;
+                }
             }
         }
         public void AddArbeitsplatz(int nr)

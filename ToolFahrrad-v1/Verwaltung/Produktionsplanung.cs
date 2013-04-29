@@ -24,16 +24,10 @@ namespace ToolFahrrad_v1
             }
             for (int index = 1; index < 4; index++)
             {
-                RekursAufloesen(null, dc.GetTeil(index) as ETeil);
+                RekursAufloesen(index, null, dc.GetTeil(index) as ETeil);
             }
             aufgeloest = true;
-            /**RekursAufloesen(dc.GetTeil(1) as ETeil);
-            RekursAufloesen(dc.GetTeil(2) as ETeil);
-            RekursAufloesen(dc.GetTeil(3) as ETeil);
-            */
         }
-
-
         public void Planen()
         {
             if (dc == null)
@@ -57,30 +51,19 @@ namespace ToolFahrrad_v1
             ReihenfolgePart2(tmp);
         }
         // Rekursive Prozedur zum iterieren über die Zusammensetzung der Teile
-        private void RekursAufloesen(ETeil vTeil, ETeil kTeil)
+        private void RekursAufloesen(int index, ETeil vTeil, ETeil kTeil)
         {
-            kTeil.SetProduktionsMenge(vTeil);
+            kTeil.SetProduktionsMenge(index, vTeil);
             if (kTeil.Zusammensetzung.Count() != 0)
             {
                 foreach (KeyValuePair<Teil, int> kvp in kTeil.Zusammensetzung)
                 {
                     if (kvp.Key is ETeil)
                     {
-                        RekursAufloesen(kTeil,kvp.Key as ETeil);
+                        RekursAufloesen(index, kTeil,kvp.Key as ETeil);
                     }
                 }
             }
-            
-            /**foreach (KeyValuePair<Teil, int> kvp in teil.Zusammensetzung)
-            {
-                kvp.Key.VerbrauchPrognose1 += kvp.Value * teil.VerbrauchPrognose1;
-                kvp.Key.VerbrauchPrognose2 += kvp.Value * teil.VerbrauchPrognose2;
-                if (kvp.Key is ETeil)
-                {
-                    RekursAufloesen(kvp.Key as ETeil);
-                }
-            }*/
-            return;
         }
         // ---
         private void PrimaereProduktionsplanung()
