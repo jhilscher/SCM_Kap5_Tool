@@ -54,11 +54,11 @@ namespace ToolFahrrad_v1
         {
             get
             {
-                DataContainer data = DataContainer.Instance;
+                DataContainer dc = DataContainer.Instance;
                 int res = 0;
                 foreach (KeyValuePair<int, int> kvp in werk_zeiten)
                 {
-                    res += kvp.Value * (data.GetTeil(kvp.Key) as ETeil).Produktionsmenge;
+                    res += kvp.Value * (dc.GetTeil(kvp.Key) as ETeil).ProduktionsMenge;
                 }
                 res += warteschlangen_zeit;
                 return res;

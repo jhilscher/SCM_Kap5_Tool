@@ -8,67 +8,67 @@ namespace ToolFahrrad_v1
     public class Bestellverwaltung
     {
         // Instance of DataContainer class
-            DataContainer dc = DataContainer.Instance;
-            // Constructor
-            public Bestellverwaltung()
+        DataContainer dc = DataContainer.Instance;
+        // Constructor
+        public Bestellverwaltung()
+        {
+            foreach (KTeil kt in dc.ListeKTeile)
             {
-                foreach (KTeil kt in this.dc.ListeKTeile)
+                // Calculate forecast of consumption of KTeil
+                kt.berechnungVerbrauchPrognose();
+            }
+        }
+        // Create list of orders
+        public void erzeugeBestellListe()
+        {
+            foreach (KTeil kt in dc.ListeKTeile)
+            {
+                if (kt.VerbrauchPrognose1OA <= 0)
                 {
-                    kt.berechnung_verbrauch_prognose();
+                    Bestellposition bp = new Bestellposition(kt, berechneMenge(kt), true);
+                    this.dc.Bestellungen.Add(bp);
+                }
+                else if (kt.VerbrauchPrognose1MA <= 0)
+                {
+                    Bestellposition bp = new Bestellposition(kt, berechneMenge(kt), true);
+                    this.dc.Bestellungen.Add(bp);
+                }
+                else if (kt.VerbrauchPrognose2OA <= 0)
+                {
+                    Bestellposition bp = new Bestellposition(kt, berechneMenge(kt), false);
+                    this.dc.Bestellungen.Add(bp);
+                }
+                else if (kt.VerbrauchPrognose3MA <= 0 )
+                {
+                    
+                }
+                else if (kt.VerbrauchPrognose3OA <= 0)
+                {
+                    
                 }
             }
-            public void erzeugen_liste_bestellungen()
+        }
+        public int berechneMenge(KTeil kt)
+        {
+            // "Felge cpl K&D&H"
+            if (kt.Preis == 22)
             {
-                /*DataContainer data = DataContainer.Instance;
-                List<Kaufteil> kaufteillist = data.KaufteilList;
-                List<Bestellposition> bestellungenlist = data.Bestellung;*/
-                //berechnung_verbrauch_prognose(data);
-                foreach (KTeil kt in dc.ListeKTeile)
-                {
-                    if (kt.VerbrauchPrognose1OA <= 0)
-                    {
-                        Bestellposition bp = new Bestellposition(kt, menge_rechnung(kt), true);
-                        this.dc.Bestellungen.Add(bp);
-                    }
-                    else if (kt.VerbrauchPrognose1MA <= 0)
-                    {
-                        Bestellposition bp = new Bestellposition(kt, menge_rechnung(kt), true);
-                        this.dc.Bestellungen.Add(bp);
-                    }
-                    else if (kt.VerbrauchPrognose2OA <= 0)
-                    {
-                        Bestellposition bp = new Bestellposition(kt, menge_rechnung(kt), false);
-                        this.dc.Bestellungen.Add(bp);
-                    }
-                    /*else if (k.verbrauch_prognose_after_after_mit_abweichung <= 0)
-                    {
-                        Bestellposition bp = new Bestellposition(k, menge_rechnung(k),false);
-                        bestellungenlist.Add();
-                    }*/
-                }
+                return (( Convert.ToInt32(Math.Round((double)((kt.VerbrauchAktuell + 50 / 4) / 10)))) * 10);
             }
-            public int menge_rechnung(KTeil kt)
+            // 6,5: "Kette D&H"; 8: "Freilauf KDH"
+            else if (kt.Preis == 6.5 || kt.Preis == 8)
             {
-                int val;
-                if (kt.Preis == 22)
-                {
-                    val = Convert.ToInt32(Math.Round((double)((kt.VerbrauchAktuell + 50 / 4) / 10)));
-                    return val * 10;
-                }
-                else if (kt.Preis == 6.5 || kt.Preis == 8)
-                {
-                    val = Convert.ToInt32(Math.Round((double)((kt.VerbrauchAktuell + 50 / 3) / 10)));
-                    return val * 10;
-                }
-                else if (kt.Preis == 5)
-                {
-                    val = Convert.ToInt32(Math.Round(((double)(kt.VerbrauchAktuell + 50 / 2) / 10)));
-                    return val * 10;
-                }
-                else
-                {
-                    return (int)(kt.Diskontmenge);
-                }
+                return (( Convert.ToInt32(Math.Round((double)((kt.VerbrauchAktuell + 50 / 3) / 10)))) * 10);
+            }
+            // "Kette K" or "Sattel KDH"
+            else if (kt.Preis == 5)
+            {
+                return (( Convert.ToInt32(Math.Round(((double)(kt.VerbrauchAktuell + 50 / 2) / 10)))) * 10);
+            }
+            else
+            {
+                return (int)(kt.DiskontMenge);
+            }
         }
     }
 }

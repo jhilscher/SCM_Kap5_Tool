@@ -11,22 +11,22 @@ namespace ToolFahrrad_v1
     {
         // Class members
         private static DataContainer instance = new DataContainer();
-        private List<Bestellposition> liste_bestellungen;
-        private Dictionary<int, Teil> liste_teile;
-        private Dictionary<int, Arbeitsplatz> liste_arbeitsplaetze;
-        private int[] liste_reihenfolge;
-        private bool sonderproduktion = false;
-        private bool puffer_geandert = false;
-        private bool ueberstunden_erlaubt = true;
+        private List<Bestellposition> listeBestellungen;
+        private Dictionary<int, Teil> listeTeile;
+        private Dictionary<int, Arbeitsplatz> listeArbeitsplaetze;
+        private int[] listeReihenfolge;
+        private bool sonderProduktion = false;
+        private bool pufferGeaendert = false;
+        private bool ueberstundenErlaubt = true;
         private Produktionsplanung pp;
         private string openFile;
         private string saveFile;
-        /// // Constructor
+        // Constructor
         private DataContainer()
         {
-            this.liste_bestellungen = new List<Bestellposition>();
-            this.liste_teile = new Dictionary<int, Teil>();
-            this.liste_arbeitsplaetze = new Dictionary<int, Arbeitsplatz>();
+            listeBestellungen = new List<Bestellposition>();
+            listeTeile = new Dictionary<int, Teil>();
+            listeArbeitsplaetze = new Dictionary<int, Arbeitsplatz>();
             openFile = Application.StartupPath + "//output.xml";
             saveFile = Application.StartupPath + "//input.xml";
         }
@@ -38,8 +38,8 @@ namespace ToolFahrrad_v1
         // Getter / Setter for Reihenfolge of production
         public int[] Reihenfolge
         {
-            get { return this.liste_reihenfolge; }
-            set { this.liste_reihenfolge = value; }
+            get { return listeReihenfolge; }
+            set { listeReihenfolge = value; }
         }
         // Getter of list all KTeil
         public List<KTeil> ListeKTeile
@@ -47,7 +47,7 @@ namespace ToolFahrrad_v1
             get
             {
                 List<KTeil> res = new List<KTeil>();
-                foreach (KeyValuePair<int, Teil> kvp in this.liste_teile)
+                foreach (KeyValuePair<int, Teil> kvp in listeTeile)
                 {
                     if (kvp.Value is KTeil)
                     {
@@ -63,7 +63,7 @@ namespace ToolFahrrad_v1
             get
             {
                 List<ETeil> res = new List<ETeil>();
-                foreach (KeyValuePair<int, Teil> kvp in this.liste_teile)
+                foreach (KeyValuePair<int, Teil> kvp in listeTeile)
                 {
                     if (kvp.Value is ETeil)
                     {
@@ -76,43 +76,43 @@ namespace ToolFahrrad_v1
         // Getter of all Bestellpositionen
         public List<Bestellposition> Bestellungen
         {
-            get { return this.liste_bestellungen; }
+            get { return listeBestellungen; }
         }
         // Path of input file
         public string OpenFile
         {
-            get { return this.openFile; }
-            set { this.openFile = value; }
+            get { return openFile; }
+            set { openFile = value; }
         }
         // Path of output file
         public string SaveFile
         {
-            get { return this.saveFile; }
+            get { return saveFile; }
             set
             {
-                this.saveFile = value;
-                this.saveFile += @"\\Input.xml";
+                saveFile = value;
+                saveFile += @"\\Input.xml";
             }
         }
         // Getter / Setter bool flag sonderproduktion
         public bool Sonderproduktion
         {
-            get { return this.sonderproduktion; }
-            set { this.sonderproduktion = value; }
+            get { return sonderProduktion; }
+            set { sonderProduktion = value; }
         }
         // Getter / Setter bool flag ueberstunden
         public bool UeberstundenErlaubt
         {
-            get { return this.ueberstunden_erlaubt; }
-            set { this.ueberstunden_erlaubt = value; }
+            get { return ueberstundenErlaubt; }
+            set { ueberstundenErlaubt = value; }
         }
 
                 // Getter for Teil with given number
         public Teil GetTeil(int nr)
         {
-            if (this.liste_teile.ContainsKey(nr))
+            if (listeTeile.ContainsKey(nr))
             {
-                return this.liste_teile[nr];
+                return listeTeile[nr];
             }
             else
             {
@@ -122,7 +122,7 @@ namespace ToolFahrrad_v1
         // Setter of Puffer for Teil
         public void SetPuffer(int nr, int wert)
         {
-            if (this.liste_teile.ContainsKey(nr) == false)
+            if (listeTeile.ContainsKey(nr) == false)
             {
                 throw new UnknownTeilException(nr);
             }
@@ -130,14 +130,14 @@ namespace ToolFahrrad_v1
             {
                 throw new InputException("Puffer darf nicht negativ sein!");
             }
-            if (this.liste_teile[nr].Pufferwert < 0)
+            if (listeTeile[nr].Pufferwert < 0)
             {
-                this.liste_teile[nr].Pufferwert = wert;
+                listeTeile[nr].Pufferwert = wert;
             }
-            if (this.liste_teile[nr].Pufferwert != wert)
+            if (listeTeile[nr].Pufferwert != wert)
             {
-                this.liste_teile[nr].Pufferwert = wert;
-                this.puffer_geandert = true;
+                listeTeile[nr].Pufferwert = wert;
+                pufferGeaendert = true;
             }
         }
         // Getter data table of KTeil
@@ -149,7 +149,7 @@ namespace ToolFahrrad_v1
                 table.Columns.Add(new DataColumn("KTeil"));
                 table.Columns.Add(new DataColumn("Anzahl"));
                 table.Columns.Add(new DataColumn("Typ"));
-                foreach (Bestellposition pos in this.liste_bestellungen)
+                foreach (Bestellposition pos in listeBestellungen)
                 {
                     DataRow row = table.NewRow();
                     row["KTeil"] = pos.Kaufteil.Nummer;
@@ -170,18 +170,18 @@ namespace ToolFahrrad_v1
         // Reload of data table Bestellung
         public void ReloadDataTableKTeil(DataTable table)
         {
-            this.liste_bestellungen.Clear();
+            listeBestellungen.Clear();
             foreach (DataRow row in table.Rows)
             {
-                Teil teil = this.liste_teile[Convert.ToInt32(row["KTeil"])];
+                Teil teil = listeTeile[Convert.ToInt32(row["KTeil"])];
                 int menge = Convert.ToInt32(row["Anzahl"]);
                 if (row["Typ"].ToString().Equals("Eil"))
                 {
-                    this.liste_bestellungen.Add(new Bestellposition(teil as KTeil, menge, true));
+                    listeBestellungen.Add(new Bestellposition(teil as KTeil, menge, true));
                 }
                 else
                 {
-                    this.liste_bestellungen.Add(new Bestellposition(teil as KTeil, menge, false));
+                    listeBestellungen.Add(new Bestellposition(teil as KTeil, menge, false));
                 }
             }
         }
@@ -193,11 +193,11 @@ namespace ToolFahrrad_v1
                 DataTable table = new DataTable();
                 table.Columns.Add(new DataColumn("Teil"));
                 table.Columns.Add(new DataColumn("Menge"));
-                foreach (int pos in this.liste_reihenfolge)
+                foreach (int pos in listeReihenfolge)
                 {
                     DataRow row = table.NewRow();
                     row["Teil"] = pos;
-                    row["Menge"] = (this.liste_teile[pos] as ETeil).Produktionsmenge;
+                    row["Menge"] = (listeTeile[pos] as ETeil).ProduktionsMenge;
                     table.Rows.Add(row);
                 }
                 return table;
@@ -206,19 +206,19 @@ namespace ToolFahrrad_v1
         // Reload of data table Produktion
         public void ReloadDataTableProduktion(DataTable table)
         {
-            this.liste_reihenfolge = new int[table.Rows.Count];
+            listeReihenfolge = new int[table.Rows.Count];
             int count = 0;
             foreach (DataRow row in table.Rows)
             {
-                this.liste_reihenfolge[count] = Convert.ToInt32(row[0]);
+                listeReihenfolge[count] = Convert.ToInt32(row[0]);
                 count++;
-                if ((this.liste_teile[Convert.ToInt32(row[0])] as ETeil).Produktionsmenge < Convert.ToInt32(row[1]))
+                if ((listeTeile[Convert.ToInt32(row[0])] as ETeil).ProduktionsMenge < Convert.ToInt32(row[1]))
                 {
-                    pp.Nachpruefen(this.liste_teile[Convert.ToInt32(row[0])], Convert.ToInt32(row[1]));
+                    pp.Nachpruefen(listeTeile[Convert.ToInt32(row[0])], Convert.ToInt32(row[1]));
                 }
                 else
                 {
-                    (this.liste_teile[Convert.ToInt32(row[0])] as ETeil).Produktionsmenge = Convert.ToInt32(row[1]);
+                    (listeTeile[Convert.ToInt32(row[0])] as ETeil).ProduktionsMenge = Convert.ToInt32(row[1]);
                 }
             }
         }
@@ -231,7 +231,7 @@ namespace ToolFahrrad_v1
                 table.Columns.Add(new DataColumn("Arbeitsplatz"));
                 table.Columns.Add(new DataColumn("Schichten"));
                 table.Columns.Add(new DataColumn("Minuten"));
-                foreach (KeyValuePair<int, Arbeitsplatz> platz in this.liste_arbeitsplaetze)
+                foreach (KeyValuePair<int, Arbeitsplatz> platz in listeArbeitsplaetze)
                 {
                     DataRow row = table.NewRow();
                     row["Arbeitsplatz"] = platz.Key;
@@ -247,50 +247,50 @@ namespace ToolFahrrad_v1
         {
             foreach (DataRow row in table.Rows)
             {
-                this.liste_arbeitsplaetze[Convert.ToInt32(row[0])].AnzSchichten = Convert.ToInt32(row[1]);
-                this.liste_arbeitsplaetze[Convert.ToInt32(row[0])].UeberMin = Convert.ToInt32(row[2]);
+                listeArbeitsplaetze[Convert.ToInt32(row[0])].AnzSchichten = Convert.ToInt32(row[1]);
+                listeArbeitsplaetze[Convert.ToInt32(row[0])].UeberMin = Convert.ToInt32(row[2]);
             }
         }
         // Add new Bestellposition to bestellungen
         public void AddBestellposition(Bestellposition bpos)
         {
-            this.liste_bestellungen.Add(bpos);
+            listeBestellungen.Add(bpos);
         }
         // Add new Teil to bestellungen (as Bestellposition)
         public void AddBestellposition(int kteilNr, int menge, bool eil)
         {
-            if (this.liste_teile.ContainsKey(kteilNr) == false)
+            if (listeTeile.ContainsKey(kteilNr) == false)
             {
                 throw new UnknownTeilException(kteilNr);
             }
-            if ((this.liste_teile[kteilNr] is KTeil) == false)
+            if ((listeTeile[kteilNr] is KTeil) == false)
             {
                 throw new InputException(string.Format("Teil mit Nr.:{0} ist kein KTeil!", kteilNr));
             }
-            this.liste_bestellungen.Add(new Bestellposition(this.liste_teile[kteilNr] as KTeil, menge, eil));
+            listeBestellungen.Add(new Bestellposition(listeTeile[kteilNr] as KTeil, menge, eil));
         }
         // Setter for Preis
         public void SetPreis(Dictionary<int, double> kostenDict)
         {
             foreach (KeyValuePair<int, double> kostKvp in kostenDict)
             {
-                if (this.liste_teile.ContainsKey(kostKvp.Key) == false)
+                if (listeTeile.ContainsKey(kostKvp.Key) == false)
                 {
                     throw new UnknownTeilException(kostKvp.Key);
                 }
-                if ((this.liste_teile[kostKvp.Key] is KTeil) == false)
+                if ((listeTeile[kostKvp.Key] is KTeil) == false)
                 {
                     throw new InputException(string.Format("Teil mit Nr.:{0} ist kein KTeil!", kostKvp.Key));
                 }
-                (this.liste_teile[kostKvp.Key] as KTeil).Preis = kostKvp.Value;
+                (listeTeile[kostKvp.Key] as KTeil).Preis = kostKvp.Value;
             }
         }
         // Add new KTeil to member liste_teile
         public void AddKTeil(KTeil teil)
         {
-            if (this.liste_teile.ContainsKey(teil.Nummer) == false)
+            if (listeTeile.ContainsKey(teil.Nummer) == false)
             {
-                this.liste_teile[teil.Nummer] = teil;
+                listeTeile[teil.Nummer] = teil;
             }
             else
             {
@@ -300,17 +300,17 @@ namespace ToolFahrrad_v1
         // Create new KTeil and add this to member liste_teile
         public void NewTeil(int nr, string bez, double p, double bk, double ld, double abw, int dm, int bs, string vw)
         {
-            if (this.liste_teile.ContainsKey(nr) == false)
+            if (listeTeile.ContainsKey(nr) == false)
             {
                 KTeil kt = new KTeil(nr, bez);
                 kt.Preis = p;
                 kt.Bestellkosten = bk;
                 kt.Lieferdauer = ld;
-                kt.Abweichung_lieferdauer = abw;
-                kt.Diskontmenge = dm;
+                kt.AbweichungLieferdauer = abw;
+                kt.DiskontMenge = dm;
                 kt.Lagerstand = bs;
                 kt.Verwendung = vw;
-                this.liste_teile[nr] = kt;
+                listeTeile[nr] = kt;
             }
             else
             {
@@ -320,9 +320,9 @@ namespace ToolFahrrad_v1
         // Add new ETeil to member liste_teile
         public void AddETeil(ETeil teil)
         {
-            if (this.liste_teile.ContainsKey(teil.Nummer) == false)
+            if (listeTeile.ContainsKey(teil.Nummer) == false)
             {
-                this.liste_teile[teil.Nummer] = teil;
+                listeTeile[teil.Nummer] = teil;
             }
             else
             {
@@ -332,12 +332,12 @@ namespace ToolFahrrad_v1
         // Create new ETeil and add this to member liste_teile
         public void NewTeil(int nr, string bez, int bs, string vw)
         {
-            if (this.liste_teile.ContainsKey(nr) == false)
+            if (listeTeile.ContainsKey(nr) == false)
             {
                 ETeil et = new ETeil(nr, bez);
                 et.Lagerstand = bs;
                 et.Verwendung = vw;
-                this.liste_teile[nr] = et;
+                listeTeile[nr] = et;
             }
             else
             {
@@ -347,7 +347,7 @@ namespace ToolFahrrad_v1
         // Getter for Arbeitsplatz with given number
         public Arbeitsplatz GetArbeitsplatz(int nr)
         {
-            return this.liste_arbeitsplaetze[nr];
+            return listeArbeitsplaetze[nr];
         }
         // Getter for member liste_arbeitsplaetze
         public List<Arbeitsplatz> ArbeitsplatzList
@@ -355,7 +355,7 @@ namespace ToolFahrrad_v1
             get
             {
                 List<Arbeitsplatz> ap_liste = new List<Arbeitsplatz>();
-                foreach (KeyValuePair<int, Arbeitsplatz> kvp in this.liste_arbeitsplaetze)
+                foreach (KeyValuePair<int, Arbeitsplatz> kvp in listeArbeitsplaetze)
                 {
                     ap_liste.Add(kvp.Value);
                 }
@@ -365,9 +365,9 @@ namespace ToolFahrrad_v1
         // Setter for Arbeitsplatz in member liste_arbeitsplaetze
         public void NeuArbeitsplatz(Arbeitsplatz ap)
         {
-            if (this.liste_arbeitsplaetze.ContainsKey(ap.GetNummerArbeitsplatz) == false)
+            if (listeArbeitsplaetze.ContainsKey(ap.GetNummerArbeitsplatz) == false)
             {
-                this.liste_arbeitsplaetze[ap.GetNummerArbeitsplatz] = ap;
+                listeArbeitsplaetze[ap.GetNummerArbeitsplatz] = ap;
             }
             else
             {
@@ -381,22 +381,23 @@ namespace ToolFahrrad_v1
             pp.Aufloesen();
             pp.Planen();
             Bestellverwaltung bv = new Bestellverwaltung();
-            bv.erzeugen_liste_bestellungen();
+            bv.erzeugeBestellListe();
         }
         // Reset of Arbeitsplatz
         public void Reset()
         {
-            foreach (KeyValuePair<int, Arbeitsplatz> ap in this.liste_arbeitsplaetze)
+            foreach (KeyValuePair<int, Arbeitsplatz> ap in listeArbeitsplaetze)
             {
                 ap.Value.UeberMin = 0;
                 ap.Value.AnzSchichten = 1;
             }
-            foreach (ETeil et in this.ListeETeile)
+            foreach (ETeil et in ListeETeile)
             {
-                et.Produktionsmenge = 0;
+                et.ProduktionsMenge = 0;
                 et.VerbrauchAktuell = 0;
                 et.VerbrauchPrognose1 = 0;
                 et.VerbrauchPrognose2 = 0;
+                et.VerbrauchPrognose3 = 0;
             }
         }
     }

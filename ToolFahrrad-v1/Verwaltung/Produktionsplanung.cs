@@ -98,7 +98,7 @@ namespace ToolFahrrad_v1
                 {
                     if (et.Lagerstand - et.Pufferwert < et.VerbrauchAktuell)
                     {
-                        et.Produktionsmenge = et.VerbrauchAktuell - et.Lagerstand + et.Pufferwert;
+                        et.ProduktionsMenge = et.VerbrauchAktuell - et.Lagerstand + et.Pufferwert;
                     }
                 }
                 else if (et.Kategorie == 2)
@@ -107,14 +107,14 @@ namespace ToolFahrrad_v1
                     {
                         if (et.Lagerstand < et.VerbrauchAktuell + et.VerbrauchPrognose1)
                         {
-                            et.Produktionsmenge = et.VerbrauchPrognose2;
+                            et.ProduktionsMenge = et.VerbrauchPrognose2;
                         }
                     }
                     else
                     {
                         if (et.Lagerstand - et.Pufferwert < et.VerbrauchPrognose1)
                         {
-                            et.Produktionsmenge = et.VerbrauchPrognose1 - et.Lagerstand + et.Pufferwert;
+                            et.ProduktionsMenge = et.VerbrauchPrognose1 - et.Lagerstand + et.Pufferwert;
                         }
                     }
 
@@ -123,7 +123,7 @@ namespace ToolFahrrad_v1
                 {
                     if (et.Lagerstand - et.Pufferwert < et.VerbrauchPrognose2)
                     {
-                        et.Produktionsmenge = et.VerbrauchPrognose2 - et.Lagerstand + et.Pufferwert;
+                        et.ProduktionsMenge = et.VerbrauchPrognose2 - et.Lagerstand + et.Pufferwert;
                     }
                 }
             }
@@ -159,7 +159,7 @@ namespace ToolFahrrad_v1
                     double time = 4800;
                     foreach (ETeil et in kteil.IstTeilVon)
                     {
-                        if (et.Produktionsmenge > 0)
+                        if (et.ProduktionsMenge > 0)
                         {
                             foreach (Arbeitsplatz arpl in et.BenutzteArbeitsplaetze)
                             {
@@ -177,7 +177,7 @@ namespace ToolFahrrad_v1
                     }
                     if (nrToChange > 0)
                     {
-                        (dc.GetTeil(nrToChange) as ETeil).Produktionsmenge = (dc.GetTeil(nrToChange) as ETeil).Produktionsmenge - 10;
+                        (dc.GetTeil(nrToChange) as ETeil).ProduktionsMenge = (dc.GetTeil(nrToChange) as ETeil).ProduktionsMenge - 10;
                         return false;
                     }
                 }
@@ -186,7 +186,7 @@ namespace ToolFahrrad_v1
             foreach (ETeil eteil in dc.ListeETeile)
             {
                 count++;
-                if (eteil.Lagerstand + eteil.Produktionsmenge + eteil.InWartschlange < eteil.VerbrauchAktuell)
+                if (eteil.Lagerstand + eteil.ProduktionsMenge + eteil.InWartschlange < eteil.VerbrauchAktuell)
                 {
                     int nrToChange = 0;
                     int time = 2400;
@@ -203,7 +203,7 @@ namespace ToolFahrrad_v1
                     }
                     if (nrToChange != 0)
                     {
-                        (dc.GetTeil(nrToChange) as ETeil).Produktionsmenge = (dc.GetTeil(nrToChange) as ETeil).Produktionsmenge - 10;
+                        (dc.GetTeil(nrToChange) as ETeil).ProduktionsMenge = (dc.GetTeil(nrToChange) as ETeil).ProduktionsMenge - 10;
                         return false;
                     }
                 }
@@ -305,15 +305,15 @@ namespace ToolFahrrad_v1
                 {
                     foreach (ETeil teil in ap.GetHergestellteTeile)
                     {
-                        sumProd += teil.Produktionsmenge;
+                        sumProd += teil.ProduktionsMenge;
                     }
                     foreach (ETeil teil in ap.GetHergestellteTeile)
                     {
-                        zwischenWert = Convert.ToInt32((-diff / teil.Produktionsmenge) * sumProd);
+                        zwischenWert = Convert.ToInt32((-diff / teil.ProduktionsMenge) * sumProd);
                         val = Convert.ToInt32(Math.Round(zwischenWert / ap.WerkZeitJeStk[teil.Nummer]));
-                        if (val < teil.Produktionsmenge)
+                        if (val < teil.ProduktionsMenge)
                         {
-                            teil.Produktionsmenge -= val;
+                            teil.ProduktionsMenge -= val;
                         }
                     }
                 }

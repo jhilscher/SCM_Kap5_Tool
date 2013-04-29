@@ -10,27 +10,23 @@ namespace ToolFahrrad_v1
     {
         // Class members
         private double bestellkosten;
-        private int erwartete_bestellung;
+        private int erwarteteBestellung;
         private double preis;
         private double lieferdauer;
-        private double abweichung_lieferdauer;
-        private int diskontmenge;
+        private double abweichungLieferdauer;
+        private int diskontMenge;
         private int lagerZugang;
-        public int LagerZugang
-        {
-            get { return lagerZugang; }
-            set { lagerZugang = value; }
-        }
         private List<ETeil> istTeil = null;
-        // Members for Verbrauch Prognose 1&2; MA=Mittlere Abweichung; OA=Obere Abweichung
+        // Members for consumption forecast at period 1,2,3; MA=Mit Abweichung; OA=Ohne Abweichung
         private int verbProg1MA;
         private int verbProg1OA;
         private int verbProg2MA;
         private int verbProg2OA;
+        private int verbProg3MA;
+        private int verbProg3OA;
         // Constructor
-        public KTeil(int nummer, string bez)
-            : base(nummer, bez)
-        { }
+        public KTeil(int nummer, string bez) : base(nummer, bez)
+        {}
         // Getter / Setter
         public double Bestellkosten
         {
@@ -39,8 +35,8 @@ namespace ToolFahrrad_v1
         }
         public int ErwarteteBestellung
         {
-            get { return erwartete_bestellung; }
-            set { erwartete_bestellung = value; }
+            get { return erwarteteBestellung; }
+            set { erwarteteBestellung = value; }
         }
         public double Preis
         {
@@ -52,15 +48,20 @@ namespace ToolFahrrad_v1
             get { return this.lieferdauer; }
             set { this.lieferdauer = value; }
         }
-        public double Abweichung_lieferdauer
+        public double AbweichungLieferdauer
         {
-            get { return abweichung_lieferdauer; }
-            set { abweichung_lieferdauer = value; }
+            get { return abweichungLieferdauer; }
+            set { abweichungLieferdauer = value; }
         }
-        public int Diskontmenge
+        public int DiskontMenge
         {
-            get { return diskontmenge; }
-            set { diskontmenge = value; }
+            get { return diskontMenge; }
+            set { diskontMenge = value; }
+        }
+        public int LagerZugang
+        {
+            get { return lagerZugang; }
+            set { lagerZugang = value; }
         }
         // Function shows where KTeil is used
         public List<ETeil> IstTeilVon
@@ -73,7 +74,7 @@ namespace ToolFahrrad_v1
                     foreach (ETeil teil in DataContainer.Instance.ListeETeile)
                     {
                         if (teil.Nummer == 17)
-                        { }
+                        {}
                         if (teil.Zusammensetzung.ContainsKey(this))
                         {
                             res.Add(teil);
@@ -104,21 +105,44 @@ namespace ToolFahrrad_v1
             get { return verbProg2OA; }
             set { verbProg2OA = value; }
         }
-        public void berechnung_verbrauch_prognose()
+        public int VerbrauchPrognose3MA
         {
+            get { return verbProg3MA; }
+            set { verbProg3MA = value; }
+        }
+        public int VerbrauchPrognose3OA
+        {
+            get { return verbProg3OA; }
+            set { verbProg3OA = value; }
+        }
+        // Public function to calculate forecast consumption for next 3 periods
+        public void berechnungVerbrauchPrognose()
+        {
+            // Future period 1
             verbProg1MA = Convert.ToInt32(
-                lagerstand + erwartete_bestellung - verbrauch_aktuell * (
-                    lieferdauer + abweichung_lieferdauer));
+                lagerstand + erwarteteBestellung - verbrauchAktuell * (lieferdauer + abweichungLieferdauer));
             verbProg1OA = Convert.ToInt32(
-                lagerstand + erwartete_bestellung - verbrauch_aktuell * (lieferdauer));
+                lagerstand + erwarteteBestellung - verbrauchAktuell * lieferdauer);
+            // Future period 2
             verbProg2MA = Convert.ToInt32(
-                lagerstand + erwartete_bestellung - (
-                    verbrauch_aktuell + (
-                        verbrauch_aktuell + verbrauch_prognose1 + verbrauch_prognose2) / 3) * (lieferdauer + abweichung_lieferdauer));
+                lagerstand + erwarteteBestellung - (
+                    verbrauchAktuell + (verbrauchAktuell + verbrauchPrognose1 + verbrauchPrognose2) / 3) *
+                    (lieferdauer + abweichungLieferdauer));
             verbProg2OA = Convert.ToInt32(
-                lagerstand + erwartete_bestellung - (
-                    verbrauch_aktuell + (
-                        verbrauch_aktuell + verbrauch_prognose1 + verbrauch_prognose2) / 3) * (lieferdauer));
+                lagerstand + erwarteteBestellung - (
+                    verbrauchAktuell + (verbrauchAktuell + verbrauchPrognose1 + verbrauchPrognose2) / 3) *
+                    lieferdauer);
+            // Future period 3
+            verbProg3MA = Convert.ToInt32(
+                lagerstand + erwarteteBestellung - (
+                    verbrauchAktuell + (
+                        verbrauchAktuell + verbrauchPrognose1 + verbrauchPrognose2 + verbrauchPrognose3) / 4) *
+                        (lieferdauer + abweichungLieferdauer));
+            verbProg3OA = Convert.ToInt32(
+                lagerstand + erwarteteBestellung - (
+                    verbrauchAktuell + (
+                        verbrauchAktuell + verbrauchPrognose1 + verbrauchPrognose2 + verbrauchPrognose3) / 4) *
+                        lieferdauer);
         }
         // Equals function
         public bool Equals(KTeil kt)
