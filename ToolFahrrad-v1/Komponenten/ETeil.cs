@@ -38,7 +38,7 @@ namespace ToolFahrrad_v1
                 this.produktionsMenge = value;
                 foreach (KeyValuePair<Teil, int> kvp in zusammensetzung)
                 {
-                    kvp.Key.VerbrauchAktuell = kvp.Value * produktionsMenge;
+                    kvp.Key.VertriebAktuell = kvp.Value * produktionsMenge;
                 }
             }
         }
@@ -94,6 +94,21 @@ namespace ToolFahrrad_v1
             }
         }
         // Functions
+        public void SetProduktionsMenge(ETeil vTeil)
+        {
+            if (istEndProdukt == true)
+            {
+                produktionsMenge = vertriebAktuell + pufferwert - lagerstand - inWarteschlange - inBearbeitung;
+            }
+            else
+            {
+                // Set members
+                vertriebAktuell = vTeil.ProduktionsMenge + vTeil.InWartschlange;
+                pufferwert = vTeil.Pufferwert;
+                // Calculation
+                produktionsMenge = vertriebAktuell + pufferwert - lagerstand - inWarteschlange - inBearbeitung;
+            }
+        }
         public void AddArbeitsplatz(int nr)
         {
             benutzteArbeitsplaetze.Add(nr);
