@@ -181,6 +181,18 @@ namespace ToolFahrrad_v1
         {
             TextVisibleFalse();
         }
+        private void pufferP1_ValueChanged(object sender, EventArgs e)
+        {
+            TextVisibleFalse();
+        }
+        private void pufferP2_ValueChanged(object sender, EventArgs e)
+        {
+            TextVisibleFalse();
+        }
+        private void pufferP3_ValueChanged(object sender, EventArgs e)
+        {
+            TextVisibleFalse();
+        }
 
 
         /// <summary>

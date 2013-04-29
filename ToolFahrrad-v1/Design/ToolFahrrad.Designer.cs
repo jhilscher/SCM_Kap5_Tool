@@ -32,6 +32,10 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Fahrrad));
             this.Tabs = new System.Windows.Forms.TabControl();
             this.tab_xml = new System.Windows.Forms.TabPage();
+            this.pufferP3 = new System.Windows.Forms.NumericUpDown();
+            this.pufferP2 = new System.Windows.Forms.NumericUpDown();
+            this.pufferP1 = new System.Windows.Forms.NumericUpDown();
+            this.label1 = new System.Windows.Forms.Label();
             this.panelXML = new System.Windows.Forms.Panel();
             this.xmlOffenOK = new System.Windows.Forms.PictureBox();
             this.toolAusfueren = new System.Windows.Forms.PictureBox();
@@ -76,12 +80,11 @@
             this.einstellungenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.hilfeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
-            this.pufferP3 = new System.Windows.Forms.NumericUpDown();
-            this.pufferP2 = new System.Windows.Forms.NumericUpDown();
-            this.pufferP1 = new System.Windows.Forms.NumericUpDown();
-            this.label1 = new System.Windows.Forms.Label();
             this.Tabs.SuspendLayout();
             this.tab_xml.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pufferP3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pufferP2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pufferP1)).BeginInit();
             this.panelXML.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.xmlOffenOK)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.toolAusfueren)).BeginInit();
@@ -103,9 +106,6 @@
             this.tab_info.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.menu.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pufferP3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pufferP2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pufferP1)).BeginInit();
             this.SuspendLayout();
             // 
             // Tabs
@@ -149,6 +149,75 @@
             this.tab_xml.Controls.Add(this.titlePrognose);
             resources.ApplyResources(this.tab_xml, "tab_xml");
             this.tab_xml.Name = "tab_xml";
+            // 
+            // pufferP3
+            // 
+            this.pufferP3.BackColor = System.Drawing.Color.MistyRose;
+            this.pufferP3.Increment = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            resources.ApplyResources(this.pufferP3, "pufferP3");
+            this.pufferP3.Maximum = new decimal(new int[] {
+            10000,
+            0,
+            0,
+            0});
+            this.pufferP3.Name = "pufferP3";
+            this.pufferP3.Value = new decimal(new int[] {
+            100,
+            0,
+            0,
+            0});
+            // 
+            // pufferP2
+            // 
+            this.pufferP2.BackColor = System.Drawing.Color.MistyRose;
+            this.pufferP2.Increment = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            resources.ApplyResources(this.pufferP2, "pufferP2");
+            this.pufferP2.Maximum = new decimal(new int[] {
+            10000,
+            0,
+            0,
+            0});
+            this.pufferP2.Name = "pufferP2";
+            this.pufferP2.Value = new decimal(new int[] {
+            100,
+            0,
+            0,
+            0});
+            // 
+            // pufferP1
+            // 
+            this.pufferP1.BackColor = System.Drawing.Color.MistyRose;
+            this.pufferP1.Increment = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            resources.ApplyResources(this.pufferP1, "pufferP1");
+            this.pufferP1.Maximum = new decimal(new int[] {
+            10000,
+            0,
+            0,
+            0});
+            this.pufferP1.Name = "pufferP1";
+            this.pufferP1.Value = new decimal(new int[] {
+            100,
+            0,
+            0,
+            0});
+            this.pufferP1.ValueChanged += new System.EventHandler(this.pufferP1_ValueChanged);
+            // 
+            // label1
+            // 
+            resources.ApplyResources(this.label1, "label1");
+            this.label1.Name = "label1";
             // 
             // panelXML
             // 
@@ -608,71 +677,6 @@
             this.hilfeToolStripMenuItem.Name = "hilfeToolStripMenuItem";
             resources.ApplyResources(this.hilfeToolStripMenuItem, "hilfeToolStripMenuItem");
             // 
-            // pufferP3
-            // 
-            this.pufferP3.Increment = new decimal(new int[] {
-            10,
-            0,
-            0,
-            0});
-            resources.ApplyResources(this.pufferP3, "pufferP3");
-            this.pufferP3.Maximum = new decimal(new int[] {
-            10000,
-            0,
-            0,
-            0});
-            this.pufferP3.Name = "pufferP3";
-            this.pufferP3.Value = new decimal(new int[] {
-            100,
-            0,
-            0,
-            0});
-            // 
-            // pufferP2
-            // 
-            this.pufferP2.Increment = new decimal(new int[] {
-            10,
-            0,
-            0,
-            0});
-            resources.ApplyResources(this.pufferP2, "pufferP2");
-            this.pufferP2.Maximum = new decimal(new int[] {
-            10000,
-            0,
-            0,
-            0});
-            this.pufferP2.Name = "pufferP2";
-            this.pufferP2.Value = new decimal(new int[] {
-            100,
-            0,
-            0,
-            0});
-            // 
-            // pufferP1
-            // 
-            this.pufferP1.Increment = new decimal(new int[] {
-            10,
-            0,
-            0,
-            0});
-            resources.ApplyResources(this.pufferP1, "pufferP1");
-            this.pufferP1.Maximum = new decimal(new int[] {
-            10000,
-            0,
-            0,
-            0});
-            this.pufferP1.Name = "pufferP1";
-            this.pufferP1.Value = new decimal(new int[] {
-            100,
-            0,
-            0,
-            0});
-            // 
-            // label1
-            // 
-            resources.ApplyResources(this.label1, "label1");
-            this.label1.Name = "label1";
-            // 
             // Fahrrad
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -684,6 +688,9 @@
             this.Tabs.ResumeLayout(false);
             this.tab_xml.ResumeLayout(false);
             this.tab_xml.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pufferP3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pufferP2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pufferP1)).EndInit();
             this.panelXML.ResumeLayout(false);
             this.panelXML.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.xmlOffenOK)).EndInit();
@@ -708,9 +715,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.menu.ResumeLayout(false);
             this.menu.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pufferP3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pufferP2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pufferP1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
