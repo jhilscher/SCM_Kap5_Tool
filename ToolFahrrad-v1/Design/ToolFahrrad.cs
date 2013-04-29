@@ -29,6 +29,23 @@ namespace ToolFahrrad_v1
             InitializeComponent();
         }
 
+
+        // F1
+
+        //protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
+        //{
+        //    if (keyData == Keys.F1)
+        //    {
+        //        MessageBox.Show("You pressed the F1 key");
+        //        return true;    // indicate that you handled this keystroke
+        //    }
+
+        //    // Call the base class
+        //    return base.ProcessCmdKey(ref msg, keyData);
+        //}
+
+
+
         private void xml_suchen_Click(object sender, EventArgs e)
         {
             OpenFileDialog openFileDialog = new OpenFileDialog();
@@ -71,6 +88,10 @@ namespace ToolFahrrad_v1
             instance.GetTeil(2).VerbrauchAktuell = Convert.ToInt32(upDownAW2.Value);
             instance.GetTeil(3).VerbrauchAktuell = Convert.ToInt32(upDownAW3.Value);
 
+            instance.GetTeil(1).Pufferwert = Convert.ToInt32(pufferP1.Value);
+            instance.GetTeil(2).Pufferwert = Convert.ToInt32(pufferP2.Value);
+            instance.GetTeil(3).Pufferwert = Convert.ToInt32(pufferP3.Value);
+
             instance.GetTeil(1).VerbrauchPrognose1 = Convert.ToInt32(upDownP11.Value);
             instance.GetTeil(1).VerbrauchPrognose2 = Convert.ToInt32(upDownP12.Value);
             instance.GetTeil(1).VerbrauchPrognose3 = Convert.ToInt32(upDownP13.Value);
@@ -82,6 +103,10 @@ namespace ToolFahrrad_v1
             instance.GetTeil(3).VerbrauchPrognose1 = Convert.ToInt32(upDownP31.Value);
             instance.GetTeil(3).VerbrauchPrognose2 = Convert.ToInt32(upDownP32.Value);
             instance.GetTeil(3).VerbrauchPrognose3 = Convert.ToInt32(upDownP33.Value);
+
+
+
+
 
             bildSpeichOk.Visible = true;
             this.panelXML.Visible = true;
@@ -163,7 +188,7 @@ namespace ToolFahrrad_v1
         /// </summary>
         private void Info(int action)
         {
-            
+
             listView1.Items.Clear();
             if (!listView1.Columns.Count.Equals(0))
             {
@@ -248,7 +273,7 @@ namespace ToolFahrrad_v1
 
         private void toolAusfueren_Click(object sender, EventArgs e)
         {
-            pp.Aufloesen();
+            pp.Planen();
         }
     }
 }

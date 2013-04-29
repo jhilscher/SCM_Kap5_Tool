@@ -73,9 +73,13 @@
             this.spracheToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.deutschToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.englischToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolTip = new System.Windows.Forms.ToolTip(this.components);
             this.einstellungenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.hilfeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolTip = new System.Windows.Forms.ToolTip(this.components);
+            this.pufferP3 = new System.Windows.Forms.NumericUpDown();
+            this.pufferP2 = new System.Windows.Forms.NumericUpDown();
+            this.pufferP1 = new System.Windows.Forms.NumericUpDown();
+            this.label1 = new System.Windows.Forms.Label();
             this.Tabs.SuspendLayout();
             this.tab_xml.SuspendLayout();
             this.panelXML.SuspendLayout();
@@ -99,6 +103,9 @@
             this.tab_info.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.menu.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pufferP3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pufferP2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pufferP1)).BeginInit();
             this.SuspendLayout();
             // 
             // Tabs
@@ -112,6 +119,10 @@
             // tab_xml
             // 
             this.tab_xml.BackColor = System.Drawing.Color.Transparent;
+            this.tab_xml.Controls.Add(this.pufferP3);
+            this.tab_xml.Controls.Add(this.pufferP2);
+            this.tab_xml.Controls.Add(this.pufferP1);
+            this.tab_xml.Controls.Add(this.label1);
             this.tab_xml.Controls.Add(this.panelXML);
             this.tab_xml.Controls.Add(this.bildSpeichOk);
             this.tab_xml.Controls.Add(this.pictureBox1);
@@ -597,6 +608,71 @@
             this.hilfeToolStripMenuItem.Name = "hilfeToolStripMenuItem";
             resources.ApplyResources(this.hilfeToolStripMenuItem, "hilfeToolStripMenuItem");
             // 
+            // pufferP3
+            // 
+            this.pufferP3.Increment = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            resources.ApplyResources(this.pufferP3, "pufferP3");
+            this.pufferP3.Maximum = new decimal(new int[] {
+            10000,
+            0,
+            0,
+            0});
+            this.pufferP3.Name = "pufferP3";
+            this.pufferP3.Value = new decimal(new int[] {
+            100,
+            0,
+            0,
+            0});
+            // 
+            // pufferP2
+            // 
+            this.pufferP2.Increment = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            resources.ApplyResources(this.pufferP2, "pufferP2");
+            this.pufferP2.Maximum = new decimal(new int[] {
+            10000,
+            0,
+            0,
+            0});
+            this.pufferP2.Name = "pufferP2";
+            this.pufferP2.Value = new decimal(new int[] {
+            100,
+            0,
+            0,
+            0});
+            // 
+            // pufferP1
+            // 
+            this.pufferP1.Increment = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            resources.ApplyResources(this.pufferP1, "pufferP1");
+            this.pufferP1.Maximum = new decimal(new int[] {
+            10000,
+            0,
+            0,
+            0});
+            this.pufferP1.Name = "pufferP1";
+            this.pufferP1.Value = new decimal(new int[] {
+            100,
+            0,
+            0,
+            0});
+            // 
+            // label1
+            // 
+            resources.ApplyResources(this.label1, "label1");
+            this.label1.Name = "label1";
+            // 
             // Fahrrad
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -632,6 +708,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.menu.ResumeLayout(false);
             this.menu.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pufferP3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pufferP2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pufferP1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -685,6 +764,10 @@
         private System.Windows.Forms.Panel panelXML;
         private System.Windows.Forms.ToolStripMenuItem einstellungenToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem hilfeToolStripMenuItem;
+        private System.Windows.Forms.NumericUpDown pufferP3;
+        private System.Windows.Forms.NumericUpDown pufferP2;
+        private System.Windows.Forms.NumericUpDown pufferP1;
+        private System.Windows.Forms.Label label1;
     }
 }
 

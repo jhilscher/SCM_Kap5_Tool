@@ -118,6 +118,101 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="pufferP3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>298, 176</value>
+  </data>
+  <data name="pufferP3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>79, 20</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="pufferP3.TabIndex" type="System.Int32, mscorlib">
+    <value>56</value>
+  </data>
+  <data name="&gt;&gt;pufferP3.Name" xml:space="preserve">
+    <value>pufferP3</value>
+  </data>
+  <data name="&gt;&gt;pufferP3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pufferP3.Parent" xml:space="preserve">
+    <value>tab_xml</value>
+  </data>
+  <data name="&gt;&gt;pufferP3.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="pufferP2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>298, 136</value>
+  </data>
+  <data name="pufferP2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>79, 20</value>
+  </data>
+  <data name="pufferP2.TabIndex" type="System.Int32, mscorlib">
+    <value>55</value>
+  </data>
+  <data name="&gt;&gt;pufferP2.Name" xml:space="preserve">
+    <value>pufferP2</value>
+  </data>
+  <data name="&gt;&gt;pufferP2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pufferP2.Parent" xml:space="preserve">
+    <value>tab_xml</value>
+  </data>
+  <data name="&gt;&gt;pufferP2.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="pufferP1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>298, 96</value>
+  </data>
+  <data name="pufferP1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>79, 20</value>
+  </data>
+  <data name="pufferP1.TabIndex" type="System.Int32, mscorlib">
+    <value>54</value>
+  </data>
+  <data name="&gt;&gt;pufferP1.Name" xml:space="preserve">
+    <value>pufferP1</value>
+  </data>
+  <data name="&gt;&gt;pufferP1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pufferP1.Parent" xml:space="preserve">
+    <value>tab_xml</value>
+  </data>
+  <data name="&gt;&gt;pufferP1.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="label1.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="label1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>295, 68</value>
+  </data>
+  <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>35, 13</value>
+  </data>
+  <data name="label1.TabIndex" type="System.Int32, mscorlib">
+    <value>53</value>
+  </data>
+  <data name="label1.Text" xml:space="preserve">
+    <value>Puffer</value>
+  </data>
+  <data name="&gt;&gt;label1.Name" xml:space="preserve">
+    <value>label1</value>
+  </data>
+  <data name="&gt;&gt;label1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label1.Parent" xml:space="preserve">
+    <value>tab_xml</value>
+  </data>
+  <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
   <data name="xmlOffenOK.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29m
@@ -128,7 +223,6 @@
         RK5CYII=
 </value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="xmlOffenOK.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
@@ -138,7 +232,6 @@
   <data name="xmlOffenOK.Size" type="System.Drawing.Size, System.Drawing">
     <value>24, 20</value>
   </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="xmlOffenOK.TabIndex" type="System.Int32, mscorlib">
     <value>51</value>
   </data>
@@ -370,7 +463,7 @@
     <value>tab_xml</value>
   </data>
   <data name="&gt;&gt;panelXML.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>4</value>
   </data>
   <data name="bildSpeichOk.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -386,7 +479,7 @@
     <value>NoControl</value>
   </data>
   <data name="bildSpeichOk.Location" type="System.Drawing.Point, System.Drawing">
-    <value>686, 215</value>
+    <value>795, 215</value>
   </data>
   <data name="bildSpeichOk.Size" type="System.Drawing.Size, System.Drawing">
     <value>24, 20</value>
@@ -410,7 +503,7 @@
     <value>tab_xml</value>
   </data>
   <data name="&gt;&gt;bildSpeichOk.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>5</value>
   </data>
   <data name="pictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -445,10 +538,10 @@
     <value>tab_xml</value>
   </data>
   <data name="&gt;&gt;pictureBox1.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>6</value>
   </data>
   <data name="prognoseSpeichern.Location" type="System.Drawing.Point, System.Drawing">
-    <value>599, 214</value>
+    <value>708, 214</value>
   </data>
   <data name="prognoseSpeichern.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 23</value>
@@ -472,10 +565,10 @@
     <value>tab_xml</value>
   </data>
   <data name="&gt;&gt;prognoseSpeichern.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>7</value>
   </data>
   <data name="upDownP33.Location" type="System.Drawing.Point, System.Drawing">
-    <value>595, 176</value>
+    <value>704, 176</value>
   </data>
   <data name="upDownP33.Size" type="System.Drawing.Size, System.Drawing">
     <value>79, 20</value>
@@ -493,10 +586,10 @@
     <value>tab_xml</value>
   </data>
   <data name="&gt;&gt;upDownP33.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>8</value>
   </data>
   <data name="upDownP23.Location" type="System.Drawing.Point, System.Drawing">
-    <value>451, 174</value>
+    <value>568, 174</value>
   </data>
   <data name="upDownP23.Size" type="System.Drawing.Size, System.Drawing">
     <value>79, 20</value>
@@ -514,10 +607,10 @@
     <value>tab_xml</value>
   </data>
   <data name="&gt;&gt;upDownP23.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>9</value>
   </data>
   <data name="upDownP13.Location" type="System.Drawing.Point, System.Drawing">
-    <value>307, 176</value>
+    <value>433, 176</value>
   </data>
   <data name="upDownP13.Size" type="System.Drawing.Size, System.Drawing">
     <value>79, 20</value>
@@ -535,7 +628,7 @@
     <value>tab_xml</value>
   </data>
   <data name="&gt;&gt;upDownP13.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>10</value>
   </data>
   <data name="upDownAW3.Location" type="System.Drawing.Point, System.Drawing">
     <value>163, 176</value>
@@ -556,10 +649,10 @@
     <value>tab_xml</value>
   </data>
   <data name="&gt;&gt;upDownAW3.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>11</value>
   </data>
   <data name="upDownP32.Location" type="System.Drawing.Point, System.Drawing">
-    <value>595, 136</value>
+    <value>704, 136</value>
   </data>
   <data name="upDownP32.Size" type="System.Drawing.Size, System.Drawing">
     <value>79, 20</value>
@@ -577,10 +670,10 @@
     <value>tab_xml</value>
   </data>
   <data name="&gt;&gt;upDownP32.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>12</value>
   </data>
   <data name="upDownP22.Location" type="System.Drawing.Point, System.Drawing">
-    <value>451, 136</value>
+    <value>568, 136</value>
   </data>
   <data name="upDownP22.Size" type="System.Drawing.Size, System.Drawing">
     <value>79, 20</value>
@@ -598,10 +691,10 @@
     <value>tab_xml</value>
   </data>
   <data name="&gt;&gt;upDownP22.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>13</value>
   </data>
   <data name="upDownP12.Location" type="System.Drawing.Point, System.Drawing">
-    <value>307, 136</value>
+    <value>433, 136</value>
   </data>
   <data name="upDownP12.Size" type="System.Drawing.Size, System.Drawing">
     <value>79, 20</value>
@@ -619,7 +712,7 @@
     <value>tab_xml</value>
   </data>
   <data name="&gt;&gt;upDownP12.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>14</value>
   </data>
   <data name="upDownAW2.Location" type="System.Drawing.Point, System.Drawing">
     <value>163, 136</value>
@@ -640,10 +733,10 @@
     <value>tab_xml</value>
   </data>
   <data name="&gt;&gt;upDownAW2.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>15</value>
   </data>
   <data name="upDownP31.Location" type="System.Drawing.Point, System.Drawing">
-    <value>595, 96</value>
+    <value>704, 96</value>
   </data>
   <data name="upDownP31.Size" type="System.Drawing.Size, System.Drawing">
     <value>79, 20</value>
@@ -661,10 +754,10 @@
     <value>tab_xml</value>
   </data>
   <data name="&gt;&gt;upDownP31.ZOrder" xml:space="preserve">
-    <value>12</value>
+    <value>16</value>
   </data>
   <data name="upDownP21.Location" type="System.Drawing.Point, System.Drawing">
-    <value>451, 96</value>
+    <value>568, 96</value>
   </data>
   <data name="upDownP21.Size" type="System.Drawing.Size, System.Drawing">
     <value>79, 20</value>
@@ -682,10 +775,10 @@
     <value>tab_xml</value>
   </data>
   <data name="&gt;&gt;upDownP21.ZOrder" xml:space="preserve">
-    <value>13</value>
+    <value>17</value>
   </data>
   <data name="upDownP11.Location" type="System.Drawing.Point, System.Drawing">
-    <value>307, 96</value>
+    <value>433, 96</value>
   </data>
   <data name="upDownP11.Size" type="System.Drawing.Size, System.Drawing">
     <value>79, 20</value>
@@ -703,7 +796,7 @@
     <value>tab_xml</value>
   </data>
   <data name="&gt;&gt;upDownP11.ZOrder" xml:space="preserve">
-    <value>14</value>
+    <value>18</value>
   </data>
   <data name="upDownAW1.Location" type="System.Drawing.Point, System.Drawing">
     <value>163, 96</value>
@@ -724,7 +817,7 @@
     <value>tab_xml</value>
   </data>
   <data name="&gt;&gt;upDownAW1.ZOrder" xml:space="preserve">
-    <value>15</value>
+    <value>19</value>
   </data>
   <data name="prognose1.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -733,7 +826,7 @@
     <value>NoControl</value>
   </data>
   <data name="prognose1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>304, 68</value>
+    <value>430, 68</value>
   </data>
   <data name="prognose1.Size" type="System.Drawing.Size, System.Drawing">
     <value>61, 13</value>
@@ -754,7 +847,7 @@
     <value>tab_xml</value>
   </data>
   <data name="&gt;&gt;prognose1.ZOrder" xml:space="preserve">
-    <value>16</value>
+    <value>20</value>
   </data>
   <data name="prognose2.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -763,7 +856,7 @@
     <value>NoControl</value>
   </data>
   <data name="prognose2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>448, 68</value>
+    <value>565, 68</value>
   </data>
   <data name="prognose2.Size" type="System.Drawing.Size, System.Drawing">
     <value>61, 13</value>
@@ -784,7 +877,7 @@
     <value>tab_xml</value>
   </data>
   <data name="&gt;&gt;prognose2.ZOrder" xml:space="preserve">
-    <value>17</value>
+    <value>21</value>
   </data>
   <data name="prognose3.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -793,7 +886,7 @@
     <value>NoControl</value>
   </data>
   <data name="prognose3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>592, 68</value>
+    <value>701, 68</value>
   </data>
   <data name="prognose3.Size" type="System.Drawing.Size, System.Drawing">
     <value>61, 13</value>
@@ -814,7 +907,7 @@
     <value>tab_xml</value>
   </data>
   <data name="&gt;&gt;prognose3.ZOrder" xml:space="preserve">
-    <value>18</value>
+    <value>22</value>
   </data>
   <data name="aktulleWoche.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -844,7 +937,7 @@
     <value>tab_xml</value>
   </data>
   <data name="&gt;&gt;aktulleWoche.ZOrder" xml:space="preserve">
-    <value>19</value>
+    <value>23</value>
   </data>
   <data name="p3.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -874,7 +967,7 @@
     <value>tab_xml</value>
   </data>
   <data name="&gt;&gt;p3.ZOrder" xml:space="preserve">
-    <value>20</value>
+    <value>24</value>
   </data>
   <data name="p2.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -904,7 +997,7 @@
     <value>tab_xml</value>
   </data>
   <data name="&gt;&gt;p2.ZOrder" xml:space="preserve">
-    <value>21</value>
+    <value>25</value>
   </data>
   <data name="p1.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -931,7 +1024,7 @@
     <value>tab_xml</value>
   </data>
   <data name="&gt;&gt;p1.ZOrder" xml:space="preserve">
-    <value>22</value>
+    <value>26</value>
   </data>
   <data name="titlePrognose.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -961,7 +1054,7 @@
     <value>tab_xml</value>
   </data>
   <data name="&gt;&gt;titlePrognose.ZOrder" xml:space="preserve">
-    <value>23</value>
+    <value>27</value>
   </data>
   <data name="tab_xml.Location" type="System.Drawing.Point, System.Drawing">
     <value>4, 22</value>
@@ -1176,13 +1269,13 @@
     <value>148, 19</value>
   </metadata>
   <data name="deutschToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>152, 22</value>
+    <value>118, 22</value>
   </data>
   <data name="deutschToolStripMenuItem.Text" xml:space="preserve">
     <value>Deutsch</value>
   </data>
   <data name="englischToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>152, 22</value>
+    <value>118, 22</value>
   </data>
   <data name="englischToolStripMenuItem.Text" xml:space="preserve">
     <value>Englisch</value>
@@ -1197,7 +1290,7 @@
     <value>152, 22</value>
   </data>
   <data name="hilfeToolStripMenuItem.Text" xml:space="preserve">
-    <value>Hilfe</value>
+    <value>Hilfe - (F1)</value>
   </data>
   <data name="einstellungenToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>90, 20</value>
@@ -7443,12 +7536,6 @@
   <data name="&gt;&gt;englischToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;toolTip.Name" xml:space="preserve">
-    <value>toolTip</value>
-  </data>
-  <data name="&gt;&gt;toolTip.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolTip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="&gt;&gt;einstellungenToolStripMenuItem.Name" xml:space="preserve">
     <value>einstellungenToolStripMenuItem</value>
   </data>
@@ -7460,6 +7547,12 @@
   </data>
   <data name="&gt;&gt;hilfeToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toolTip.Name" xml:space="preserve">
+    <value>toolTip</value>
+  </data>
+  <data name="&gt;&gt;toolTip.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolTip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>Fahrrad</value>
