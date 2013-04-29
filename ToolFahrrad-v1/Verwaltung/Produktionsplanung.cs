@@ -32,14 +32,9 @@ namespace ToolFahrrad_v1
         public void Planen()
         {
             if (dc == null)
-            {
                 dc = DataContainer.Instance;
-            }
-
             if (aufgeloest == false)
-            {
                 Aufloesen();
-            }
             PrimaereProduktionsplanung();
             if (dc.UeberstundenErlaubt)
             {
