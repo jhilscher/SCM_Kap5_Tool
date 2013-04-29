@@ -17,6 +17,7 @@ namespace ToolFahrrad_v1
     {
         DataContainer instance = DataContainer.Instance;
         XMLDatei xml = new XMLDatei();
+        Produktionsplanung pp = new Produktionsplanung();
         private bool okPrognose = false;
         private bool okXml = false;
         public Fahrrad()
@@ -83,9 +84,10 @@ namespace ToolFahrrad_v1
             instance.GetTeil(3).VerbrauchPrognose3 = Convert.ToInt32(upDownP33.Value);
 
             bildSpeichOk.Visible = true;
-            okPrognose = true;
-            if (okXml == true)
-                toolAusfueren.Visible = true;
+            this.panelXML.Visible = true;
+            this.okPrognose = true;
+            if (this.okXml == true)
+                this.toolAusfueren.Visible = true;
         }
 
 
@@ -246,7 +248,7 @@ namespace ToolFahrrad_v1
 
         private void toolAusfueren_Click(object sender, EventArgs e)
         {
-
+            pp.Aufloesen();
         }
     }
 }

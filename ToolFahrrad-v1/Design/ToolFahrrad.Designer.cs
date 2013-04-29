@@ -32,10 +32,15 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Fahrrad));
             this.Tabs = new System.Windows.Forms.TabControl();
             this.tab_xml = new System.Windows.Forms.TabPage();
-            this.bildSpeichOk = new System.Windows.Forms.PictureBox();
+            this.panelXML = new System.Windows.Forms.Panel();
+            this.xmlOffenOK = new System.Windows.Forms.PictureBox();
             this.toolAusfueren = new System.Windows.Forms.PictureBox();
             this.xmlTextBox = new System.Windows.Forms.TextBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.titleXmlLaden = new System.Windows.Forms.Label();
+            this.pfadText = new System.Windows.Forms.Label();
+            this.xml_suchen = new System.Windows.Forms.Button();
+            this.bildSpeichOk = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.prognoseSpeichern = new System.Windows.Forms.Button();
             this.upDownP33 = new System.Windows.Forms.NumericUpDown();
@@ -50,7 +55,6 @@
             this.upDownP21 = new System.Windows.Forms.NumericUpDown();
             this.upDownP11 = new System.Windows.Forms.NumericUpDown();
             this.upDownAW1 = new System.Windows.Forms.NumericUpDown();
-            this.titleXmlLaden = new System.Windows.Forms.Label();
             this.prognose1 = new System.Windows.Forms.Label();
             this.prognose2 = new System.Windows.Forms.Label();
             this.prognose3 = new System.Windows.Forms.Label();
@@ -59,8 +63,6 @@
             this.p2 = new System.Windows.Forms.Label();
             this.p1 = new System.Windows.Forms.Label();
             this.titlePrognose = new System.Windows.Forms.Label();
-            this.pfadText = new System.Windows.Forms.Label();
-            this.xml_suchen = new System.Windows.Forms.Button();
             this.tab_info = new System.Windows.Forms.TabPage();
             this.listView1 = new System.Windows.Forms.ListView();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
@@ -72,12 +74,15 @@
             this.deutschToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.englischToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
-            this.xmlOffenOK = new System.Windows.Forms.PictureBox();
+            this.einstellungenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.hilfeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.Tabs.SuspendLayout();
             this.tab_xml.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bildSpeichOk)).BeginInit();
+            this.panelXML.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.xmlOffenOK)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.toolAusfueren)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bildSpeichOk)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.upDownP33)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.upDownP23)).BeginInit();
@@ -94,7 +99,6 @@
             this.tab_info.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.menu.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.xmlOffenOK)).BeginInit();
             this.SuspendLayout();
             // 
             // Tabs
@@ -108,11 +112,8 @@
             // tab_xml
             // 
             this.tab_xml.BackColor = System.Drawing.Color.Transparent;
-            this.tab_xml.Controls.Add(this.xmlOffenOK);
+            this.tab_xml.Controls.Add(this.panelXML);
             this.tab_xml.Controls.Add(this.bildSpeichOk);
-            this.tab_xml.Controls.Add(this.toolAusfueren);
-            this.tab_xml.Controls.Add(this.xmlTextBox);
-            this.tab_xml.Controls.Add(this.pictureBox2);
             this.tab_xml.Controls.Add(this.pictureBox1);
             this.tab_xml.Controls.Add(this.prognoseSpeichern);
             this.tab_xml.Controls.Add(this.upDownP33);
@@ -127,7 +128,6 @@
             this.tab_xml.Controls.Add(this.upDownP21);
             this.tab_xml.Controls.Add(this.upDownP11);
             this.tab_xml.Controls.Add(this.upDownAW1);
-            this.tab_xml.Controls.Add(this.titleXmlLaden);
             this.tab_xml.Controls.Add(this.prognose1);
             this.tab_xml.Controls.Add(this.prognose2);
             this.tab_xml.Controls.Add(this.prognose3);
@@ -136,17 +136,27 @@
             this.tab_xml.Controls.Add(this.p2);
             this.tab_xml.Controls.Add(this.p1);
             this.tab_xml.Controls.Add(this.titlePrognose);
-            this.tab_xml.Controls.Add(this.pfadText);
-            this.tab_xml.Controls.Add(this.xml_suchen);
             resources.ApplyResources(this.tab_xml, "tab_xml");
             this.tab_xml.Name = "tab_xml";
             // 
-            // bildSpeichOk
+            // panelXML
             // 
-            resources.ApplyResources(this.bildSpeichOk, "bildSpeichOk");
-            this.bildSpeichOk.Name = "bildSpeichOk";
-            this.bildSpeichOk.TabStop = false;
-            this.toolTip.SetToolTip(this.bildSpeichOk, resources.GetString("bildSpeichOk.ToolTip"));
+            this.panelXML.Controls.Add(this.xmlOffenOK);
+            this.panelXML.Controls.Add(this.toolAusfueren);
+            this.panelXML.Controls.Add(this.xmlTextBox);
+            this.panelXML.Controls.Add(this.pictureBox2);
+            this.panelXML.Controls.Add(this.titleXmlLaden);
+            this.panelXML.Controls.Add(this.pfadText);
+            this.panelXML.Controls.Add(this.xml_suchen);
+            resources.ApplyResources(this.panelXML, "panelXML");
+            this.panelXML.Name = "panelXML";
+            // 
+            // xmlOffenOK
+            // 
+            resources.ApplyResources(this.xmlOffenOK, "xmlOffenOK");
+            this.xmlOffenOK.Name = "xmlOffenOK";
+            this.xmlOffenOK.TabStop = false;
+            this.toolTip.SetToolTip(this.xmlOffenOK, resources.GetString("xmlOffenOK.ToolTip"));
             // 
             // toolAusfueren
             // 
@@ -167,6 +177,32 @@
             resources.ApplyResources(this.pictureBox2, "pictureBox2");
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.TabStop = false;
+            // 
+            // titleXmlLaden
+            // 
+            resources.ApplyResources(this.titleXmlLaden, "titleXmlLaden");
+            this.titleXmlLaden.Name = "titleXmlLaden";
+            // 
+            // pfadText
+            // 
+            resources.ApplyResources(this.pfadText, "pfadText");
+            this.pfadText.ForeColor = System.Drawing.Color.Red;
+            this.pfadText.Name = "pfadText";
+            // 
+            // xml_suchen
+            // 
+            resources.ApplyResources(this.xml_suchen, "xml_suchen");
+            this.xml_suchen.Name = "xml_suchen";
+            this.toolTip.SetToolTip(this.xml_suchen, resources.GetString("xml_suchen.ToolTip"));
+            this.xml_suchen.UseVisualStyleBackColor = true;
+            this.xml_suchen.Click += new System.EventHandler(this.xml_suchen_Click);
+            // 
+            // bildSpeichOk
+            // 
+            resources.ApplyResources(this.bildSpeichOk, "bildSpeichOk");
+            this.bildSpeichOk.Name = "bildSpeichOk";
+            this.bildSpeichOk.TabStop = false;
+            this.toolTip.SetToolTip(this.bildSpeichOk, resources.GetString("bildSpeichOk.ToolTip"));
             // 
             // pictureBox1
             // 
@@ -437,11 +473,6 @@
             0});
             this.upDownAW1.ValueChanged += new System.EventHandler(this.upDownAW1_ValueChanged);
             // 
-            // titleXmlLaden
-            // 
-            resources.ApplyResources(this.titleXmlLaden, "titleXmlLaden");
-            this.titleXmlLaden.Name = "titleXmlLaden";
-            // 
             // prognose1
             // 
             resources.ApplyResources(this.prognose1, "prognose1");
@@ -481,20 +512,6 @@
             // 
             resources.ApplyResources(this.titlePrognose, "titlePrognose");
             this.titlePrognose.Name = "titlePrognose";
-            // 
-            // pfadText
-            // 
-            resources.ApplyResources(this.pfadText, "pfadText");
-            this.pfadText.ForeColor = System.Drawing.Color.Red;
-            this.pfadText.Name = "pfadText";
-            // 
-            // xml_suchen
-            // 
-            resources.ApplyResources(this.xml_suchen, "xml_suchen");
-            this.xml_suchen.Name = "xml_suchen";
-            this.toolTip.SetToolTip(this.xml_suchen, resources.GetString("xml_suchen.ToolTip"));
-            this.xml_suchen.UseVisualStyleBackColor = true;
-            this.xml_suchen.Click += new System.EventHandler(this.xml_suchen_Click);
             // 
             // tab_info
             // 
@@ -545,7 +562,8 @@
             // 
             this.menu.BackColor = System.Drawing.Color.Transparent;
             this.menu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.spracheToolStripMenuItem});
+            this.spracheToolStripMenuItem,
+            this.einstellungenToolStripMenuItem});
             resources.ApplyResources(this.menu, "menu");
             this.menu.Name = "menu";
             // 
@@ -567,12 +585,17 @@
             this.englischToolStripMenuItem.Name = "englischToolStripMenuItem";
             resources.ApplyResources(this.englischToolStripMenuItem, "englischToolStripMenuItem");
             // 
-            // xmlOffenOK
+            // einstellungenToolStripMenuItem
             // 
-            resources.ApplyResources(this.xmlOffenOK, "xmlOffenOK");
-            this.xmlOffenOK.Name = "xmlOffenOK";
-            this.xmlOffenOK.TabStop = false;
-            this.toolTip.SetToolTip(this.xmlOffenOK, resources.GetString("xmlOffenOK.ToolTip"));
+            this.einstellungenToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.hilfeToolStripMenuItem});
+            this.einstellungenToolStripMenuItem.Name = "einstellungenToolStripMenuItem";
+            resources.ApplyResources(this.einstellungenToolStripMenuItem, "einstellungenToolStripMenuItem");
+            // 
+            // hilfeToolStripMenuItem
+            // 
+            this.hilfeToolStripMenuItem.Name = "hilfeToolStripMenuItem";
+            resources.ApplyResources(this.hilfeToolStripMenuItem, "hilfeToolStripMenuItem");
             // 
             // Fahrrad
             // 
@@ -585,9 +608,12 @@
             this.Tabs.ResumeLayout(false);
             this.tab_xml.ResumeLayout(false);
             this.tab_xml.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bildSpeichOk)).EndInit();
+            this.panelXML.ResumeLayout(false);
+            this.panelXML.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.xmlOffenOK)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.toolAusfueren)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bildSpeichOk)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.upDownP33)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.upDownP23)).EndInit();
@@ -606,7 +632,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.menu.ResumeLayout(false);
             this.menu.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.xmlOffenOK)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -657,6 +682,9 @@
         private System.Windows.Forms.ListView listView1;
         private System.Windows.Forms.ToolTip toolTip;
         private System.Windows.Forms.PictureBox xmlOffenOK;
+        private System.Windows.Forms.Panel panelXML;
+        private System.Windows.Forms.ToolStripMenuItem einstellungenToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem hilfeToolStripMenuItem;
     }
 }
 
