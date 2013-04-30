@@ -130,6 +130,24 @@ namespace ToolFahrrad_v1
             }
 
 
+            //Arbeitsplatz
+            items = doc.GetElementsByTagName("idletimecosts");
+            foreach (XmlNode node in items)
+            {
+                foreach (XmlNode attr in node.ChildNodes)
+                {
+                    if (attr.Name == "workplace")
+                    {
+                        dc.GetArbeitsplatz(Convert.ToInt32(attr.Attributes[0].Value)).AnzRuestung = Convert.ToInt32(attr.Attributes[1].Value);
+                        dc.GetArbeitsplatz(Convert.ToInt32(attr.Attributes[0].Value)).Leerzeit = Convert.ToInt32(attr.Attributes[2].Value);
+
+                        //dc.GetTeil(zahl).Lagerstand = Convert.ToInt32(attr.Attributes[1].Value);
+                        //dc.GetTeil(zahl).Verhaeltnis = Convert.ToDouble(attr.Attributes[3].Value);
+                    }
+                    ++zahl;
+                }
+            }
+
             return res;
         }
 

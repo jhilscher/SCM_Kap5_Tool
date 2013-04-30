@@ -304,28 +304,24 @@ namespace ToolFahrrad_v1
             dc.GetArbeitsplatz(1).AddRuestzeit(49, 20);
             dc.GetArbeitsplatz(1).AddRuestzeit(54, 20);
             dc.GetArbeitsplatz(1).AddRuestzeit(29, 20);
-            dc.GetArbeitsplatz(1).AnzRuestung = 4;
             dc.GetArbeitsplatz(2).AddWerkzeit(50, 5);
             dc.GetArbeitsplatz(2).AddWerkzeit(55, 5);
             dc.GetArbeitsplatz(2).AddWerkzeit(30, 5);
             dc.GetArbeitsplatz(2).AddRuestzeit(50, 30);
             dc.GetArbeitsplatz(2).AddRuestzeit(55, 30);
             dc.GetArbeitsplatz(2).AddRuestzeit(30, 20);
-            dc.GetArbeitsplatz(2).AnzRuestung = 5;
             dc.GetArbeitsplatz(3).AddWerkzeit(51, 5);
             dc.GetArbeitsplatz(3).AddWerkzeit(56, 6);
             dc.GetArbeitsplatz(3).AddWerkzeit(31, 6);
             dc.GetArbeitsplatz(3).AddRuestzeit(51, 20);
             dc.GetArbeitsplatz(3).AddRuestzeit(56, 20);
             dc.GetArbeitsplatz(3).AddRuestzeit(31, 20);
-            dc.GetArbeitsplatz(3).AnzRuestung = 3;
             dc.GetArbeitsplatz(4).AddWerkzeit(1, 6);
             dc.GetArbeitsplatz(4).AddWerkzeit(2, 7);
             dc.GetArbeitsplatz(4).AddWerkzeit(3, 7);
             dc.GetArbeitsplatz(4).AddRuestzeit(1, 30);
             dc.GetArbeitsplatz(4).AddRuestzeit(2, 30);
             dc.GetArbeitsplatz(4).AddRuestzeit(3, 30);
-            dc.GetArbeitsplatz(4).AnzRuestung = 4;
             dc.GetArbeitsplatz(6).AddWerkzeit(16, 3);
             dc.GetArbeitsplatz(6).AddWerkzeit(18, 2);
             dc.GetArbeitsplatz(6).AddWerkzeit(19, 3);
@@ -338,7 +334,6 @@ namespace ToolFahrrad_v1
             dc.GetArbeitsplatz(6).NaechsterArbeitsplatz[18] = 8;
             dc.GetArbeitsplatz(6).NaechsterArbeitsplatz[19] = 8;
             dc.GetArbeitsplatz(6).NaechsterArbeitsplatz[20] = 8;
-            dc.GetArbeitsplatz(6).AnzRuestung = 4;
             dc.GetArbeitsplatz(7).AddWerkzeit(13, 2);
             dc.GetArbeitsplatz(7).AddWerkzeit(18, 2);
             dc.GetArbeitsplatz(7).AddWerkzeit(26, 2);
@@ -369,7 +364,6 @@ namespace ToolFahrrad_v1
             dc.GetArbeitsplatz(7).NaechsterArbeitsplatz[11] = 9;
             dc.GetArbeitsplatz(7).NaechsterArbeitsplatz[15] = 9;
             dc.GetArbeitsplatz(7).NaechsterArbeitsplatz[12] = 9;
-            dc.GetArbeitsplatz(7).AnzRuestung = 20;
             dc.GetArbeitsplatz(8).AddWerkzeit(13, 1);
             dc.GetArbeitsplatz(8).AddWerkzeit(18, 3);
             dc.GetArbeitsplatz(8).AddWerkzeit(10, 1);
@@ -397,7 +391,6 @@ namespace ToolFahrrad_v1
             dc.GetArbeitsplatz(8).NaechsterArbeitsplatz[11] = 7;
             dc.GetArbeitsplatz(8).NaechsterArbeitsplatz[15] = 7;
             dc.GetArbeitsplatz(8).NaechsterArbeitsplatz[12] = 7;
-            dc.GetArbeitsplatz(8).AnzRuestung = 18;
             dc.GetArbeitsplatz(9).AddWerkzeit(13, 3);
             dc.GetArbeitsplatz(9).AddWerkzeit(18, 2);
             dc.GetArbeitsplatz(9).AddWerkzeit(10, 3);
@@ -416,7 +409,6 @@ namespace ToolFahrrad_v1
             dc.GetArbeitsplatz(9).AddRuestzeit(15, 15);
             dc.GetArbeitsplatz(9).AddRuestzeit(20, 25);
             dc.GetArbeitsplatz(9).AddRuestzeit(12, 15);
-            dc.GetArbeitsplatz(9).AnzRuestung = 11;
             dc.GetArbeitsplatz(10).AddWerkzeit(7, 4);
             dc.GetArbeitsplatz(10).AddWerkzeit(4, 4);
             dc.GetArbeitsplatz(10).AddWerkzeit(8, 4);
@@ -435,7 +427,6 @@ namespace ToolFahrrad_v1
             dc.GetArbeitsplatz(10).NaechsterArbeitsplatz[5] = 11;
             dc.GetArbeitsplatz(10).NaechsterArbeitsplatz[9] = 11;
             dc.GetArbeitsplatz(10).NaechsterArbeitsplatz[6] = 11;
-            dc.GetArbeitsplatz(10).AnzRuestung = 6;
             dc.GetArbeitsplatz(11).AddWerkzeit(7, 3);
             dc.GetArbeitsplatz(11).AddWerkzeit(4, 3);
             dc.GetArbeitsplatz(11).AddWerkzeit(8, 3);
@@ -448,7 +439,6 @@ namespace ToolFahrrad_v1
             dc.GetArbeitsplatz(11).AddRuestzeit(5, 10);
             dc.GetArbeitsplatz(11).AddRuestzeit(9, 20);
             dc.GetArbeitsplatz(11).AddRuestzeit(6, 20);
-            dc.GetArbeitsplatz(11).AnzRuestung = 6;
             dc.GetArbeitsplatz(12).AddWerkzeit(13, 3);
             dc.GetArbeitsplatz(12).AddWerkzeit(10, 3);
             dc.GetArbeitsplatz(12).AddWerkzeit(14, 3);
@@ -467,7 +457,6 @@ namespace ToolFahrrad_v1
             dc.GetArbeitsplatz(12).NaechsterArbeitsplatz[11] = 8;
             dc.GetArbeitsplatz(12).NaechsterArbeitsplatz[15] = 8;
             dc.GetArbeitsplatz(12).NaechsterArbeitsplatz[12] = 8;
-            dc.GetArbeitsplatz(12).AnzRuestung = 6;
             dc.GetArbeitsplatz(13).AddWerkzeit(13, 2);
             dc.GetArbeitsplatz(13).AddWerkzeit(10, 2);
             dc.GetArbeitsplatz(13).AddWerkzeit(14, 2);
@@ -486,15 +475,12 @@ namespace ToolFahrrad_v1
             dc.GetArbeitsplatz(13).NaechsterArbeitsplatz[11] = 12;
             dc.GetArbeitsplatz(13).NaechsterArbeitsplatz[15] = 12;
             dc.GetArbeitsplatz(13).NaechsterArbeitsplatz[12] = 12;
-            dc.GetArbeitsplatz(13).AnzRuestung = 6;
             dc.GetArbeitsplatz(14).AddWerkzeit(16, 3);
             dc.GetArbeitsplatz(14).AddRuestzeit(16, 0);
-            dc.GetArbeitsplatz(14).AnzRuestung = 1;
             dc.GetArbeitsplatz(15).AddWerkzeit(17, 3);
             dc.GetArbeitsplatz(15).AddWerkzeit(26, 3);
             dc.GetArbeitsplatz(15).AddRuestzeit(17, 15);
             dc.GetArbeitsplatz(15).AddRuestzeit(26, 15);
-            dc.GetArbeitsplatz(15).AnzRuestung = 2;
         }
     }
 }

@@ -13,6 +13,15 @@ namespace ToolFahrrad_v1
         protected int anz_uebermin = 0;
         private int anz_ruestung = 0;
         int warteschlangen_zeit = 0;
+        private int leerzeit = 0;
+
+        public int Leerzeit
+        {
+            get { return leerzeit; }
+            set { leerzeit = value; }
+        }
+
+
         // Needed time to produce Teil with given number
         private Dictionary<int, int> werk_zeiten;
         protected Dictionary<int, int> ruest_zeiten;
@@ -32,6 +41,7 @@ namespace ToolFahrrad_v1
         }
         public int AnzRuestung
         {
+            get { return anz_ruestung; }
             set { anz_ruestung = value; }
         }
         public Dictionary<int, int> WerkZeitJeStk

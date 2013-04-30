@@ -37,6 +37,7 @@
             this.pufferP1 = new System.Windows.Forms.NumericUpDown();
             this.label1 = new System.Windows.Forms.Label();
             this.panelXML = new System.Windows.Forms.Panel();
+            this.save = new System.Windows.Forms.PictureBox();
             this.xmlOffenOK = new System.Windows.Forms.PictureBox();
             this.toolAusfueren = new System.Windows.Forms.PictureBox();
             this.xmlTextBox = new System.Windows.Forms.TextBox();
@@ -80,13 +81,13 @@
             this.einstellungenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.hilfeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
-            this.save = new System.Windows.Forms.PictureBox();
             this.Tabs.SuspendLayout();
             this.tab_xml.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pufferP3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pufferP2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pufferP1)).BeginInit();
             this.panelXML.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.save)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xmlOffenOK)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.toolAusfueren)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -107,7 +108,6 @@
             this.tab_info.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.menu.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.save)).BeginInit();
             this.SuspendLayout();
             // 
             // Tabs
@@ -233,6 +233,14 @@
             this.panelXML.Controls.Add(this.xml_suchen);
             resources.ApplyResources(this.panelXML, "panelXML");
             this.panelXML.Name = "panelXML";
+            // 
+            // save
+            // 
+            this.save.Cursor = System.Windows.Forms.Cursors.Default;
+            resources.ApplyResources(this.save, "save");
+            this.save.Name = "save";
+            this.save.TabStop = false;
+            this.toolTip.SetToolTip(this.save, resources.GetString("save.ToolTip"));
             // 
             // xmlOffenOK
             // 
@@ -632,7 +640,8 @@
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
             resources.GetString("comboBox1.Items"),
-            resources.GetString("comboBox1.Items1")});
+            resources.GetString("comboBox1.Items1"),
+            resources.GetString("comboBox1.Items2")});
             resources.ApplyResources(this.comboBox1, "comboBox1");
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
@@ -680,14 +689,6 @@
             this.hilfeToolStripMenuItem.Name = "hilfeToolStripMenuItem";
             resources.ApplyResources(this.hilfeToolStripMenuItem, "hilfeToolStripMenuItem");
             // 
-            // save
-            // 
-            this.save.Cursor = System.Windows.Forms.Cursors.Default;
-            resources.ApplyResources(this.save, "save");
-            this.save.Name = "save";
-            this.save.TabStop = false;
-            this.toolTip.SetToolTip(this.save, resources.GetString("save.ToolTip"));
-            // 
             // Fahrrad
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -704,6 +705,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pufferP1)).EndInit();
             this.panelXML.ResumeLayout(false);
             this.panelXML.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.save)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.xmlOffenOK)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.toolAusfueren)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
@@ -726,7 +728,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.menu.ResumeLayout(false);
             this.menu.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.save)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
