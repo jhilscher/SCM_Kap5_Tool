@@ -290,27 +290,31 @@ namespace ToolFahrrad_v1
             {
                 listView1.Columns.Add("Rüst", 70, HorizontalAlignment.Center);
                 listView1.Columns.Add("Leerzeit", 70, HorizontalAlignment.Center);
+                listView1.Columns.Add("Kapazitätsbedarf", 70, HorizontalAlignment.Center);
                 foreach (var a in instance.ArbeitsplatzList)
                 {
                     lvi = new ListViewItem(a.GetNummerArbeitsplatz + "");
                     lvi.SubItems.Add(a.AnzRuestung + "");
                     lvi.SubItems.Add(a.Leerzeit + "");
+                    lvi.SubItems.Add(a.GetBenoetigteZeit + "");
                     listView1.Items.Add(lvi);
                 }
             }
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
+        {            
             if (okXml == true)
             {
                 Info(comboBox1.SelectedIndex);
+                this.editLink.Visible = true;
             }
         }
 
         private void toolAusfueren_Click(object sender, EventArgs e)
-        {
+        {            
             pp.Aufloesen();
+            double a = instance.GetArbeitsplatz(1).GetRuestZeit;
             this.toolAusfueren.Visible = false;
             this.save.Visible = true;
         }

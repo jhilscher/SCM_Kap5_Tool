@@ -81,6 +81,7 @@
             this.einstellungenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.hilfeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
+            this.editLink = new System.Windows.Forms.LinkLabel();
             this.Tabs.SuspendLayout();
             this.tab_xml.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pufferP3)).BeginInit();
@@ -608,6 +609,7 @@
             // 
             resources.ApplyResources(this.tab_info, "tab_info");
             this.tab_info.BackColor = System.Drawing.Color.Transparent;
+            this.tab_info.Controls.Add(this.editLink);
             this.tab_info.Controls.Add(this.listView1);
             this.tab_info.Controls.Add(this.pictureBox3);
             this.tab_info.Controls.Add(this.infoLable);
@@ -616,8 +618,14 @@
             // 
             // listView1
             // 
+            this.listView1.Activation = System.Windows.Forms.ItemActivation.TwoClick;
+            this.listView1.AllowDrop = true;
             this.listView1.BackColor = System.Drawing.SystemColors.Control;
             this.listView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.listView1.FullRowSelect = true;
+            this.listView1.GridLines = true;
+            this.listView1.HideSelection = false;
+            this.listView1.LabelEdit = true;
             resources.ApplyResources(this.listView1, "listView1");
             this.listView1.Name = "listView1";
             this.listView1.UseCompatibleStateImageBehavior = false;
@@ -688,6 +696,12 @@
             // 
             this.hilfeToolStripMenuItem.Name = "hilfeToolStripMenuItem";
             resources.ApplyResources(this.hilfeToolStripMenuItem, "hilfeToolStripMenuItem");
+            // 
+            // editLink
+            // 
+            resources.ApplyResources(this.editLink, "editLink");
+            this.editLink.Name = "editLink";
+            this.editLink.TabStop = true;
             // 
             // Fahrrad
             // 
@@ -786,6 +800,7 @@
         private System.Windows.Forms.NumericUpDown pufferP1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox save;
+        private System.Windows.Forms.LinkLabel editLink;
     }
 }
 

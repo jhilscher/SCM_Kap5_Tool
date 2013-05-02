@@ -7,6 +7,7 @@ namespace ToolFahrrad_v1
 {
     public class Arbeitsplatz
     {
+        DataContainer dc;
         // Class members
         protected int nr;
         protected int anz_schichten = 1;
@@ -48,32 +49,62 @@ namespace ToolFahrrad_v1
         {
             get { return werk_zeiten; }
         }
+
+        /// <summary>
+        /// Kapazitätsplan
+        /// </summary>
         public double GetRuestZeit
         {
             get
             {
+                dc = DataContainer.Instance;
                 double sum = 0;
                 foreach (KeyValuePair<int, int> kvp in ruest_zeiten)
                 {
-                    sum += kvp.Value;
+                    if((dc.GetTeil(kvp.Key) as ETeil).ProduktionsMenge > 0)
+                        sum += kvp.Value;
                 }
-                return (sum / ruest_zeiten.Count) * anz_ruestung;
+                return sum;
             }
+
+            //get
+            //{
+            //    double sum = 0;
+            //    foreach (KeyValuePair<int, int> kvp in ruest_zeiten)
+            //    {
+            //        sum += kvp.Value;
+            //    }
+            //    return (sum / ruest_zeiten.Count) * anz_ruestung;
+            //}
         }
+
+        /// <summary>
+        /// Kapazitätsplan:
+        /// Kapazitätbedarf
+        /// </summary>
         public int GetBenoetigteZeit
         {
             get
             {
-                DataContainer dc = DataContainer.Instance;
-                int res = 0;
+                dc = DataContainer.Instance;
+                int result = 0;
                 foreach (KeyValuePair<int, int> kvp in werk_zeiten)
                 {
-                    res += kvp.Value * (dc.GetTeil(kvp.Key) as ETeil).ProduktionsMenge;
+                    int prMenge = (dc.GetTeil(kvp.Key) as ETeil).ProduktionsMenge;
+                    if (prMenge < 0)
+                        prMenge = 0;
+                    result += kvp.Value * prMenge;
                 }
-                res += warteschlangen_zeit;
-                return res;
+                result += warteschlangen_zeit;
+                return result;
             }
         }
+
+        /// <summary>
+        /// In Initialisierung
+        /// </summary>
+        /// <param name="teil">NR</param>
+        /// <param name="zeit">ZEIT</param>
         public void AddWerkzeit(int teil, int zeit)
         {
             if (zeit < 0)
@@ -101,6 +132,8 @@ namespace ToolFahrrad_v1
                 throw new InvalidValueException(string.Format("Am Arbeitsplatz {0} ist bereits eine Werkzeit für das Teil {1} hinterlegt!", nr, teil));
             }
         }
+
+
         public void AddRuestzeit(int teil, int zeit)
         {
             if (zeit < 0)
@@ -109,7 +142,7 @@ namespace ToolFahrrad_v1
             }
             if ((ruest_zeiten.ContainsKey(teil) && ruest_zeiten[teil] == 0) || ruest_zeiten.ContainsKey(teil) == false)
             {
-               ruest_zeiten[teil] = zeit;
+                ruest_zeiten[teil] = zeit;
                 if (werk_zeiten.ContainsKey(teil) == false)
                 {
                     werk_zeiten[teil] = 0;

@@ -1132,11 +1132,41 @@
   <data name="tab_info.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
     <value>Center</value>
   </data>
+  <data name="editLink.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="editLink.Location" type="System.Drawing.Point, System.Drawing">
+    <value>779, 49</value>
+  </data>
+  <data name="editLink.Size" type="System.Drawing.Size, System.Drawing">
+    <value>84, 18</value>
+  </data>
+  <data name="editLink.TabIndex" type="System.Int32, mscorlib">
+    <value>63</value>
+  </data>
+  <data name="editLink.Text" xml:space="preserve">
+    <value>Edit-modus</value>
+  </data>
+  <data name="editLink.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;editLink.Name" xml:space="preserve">
+    <value>editLink</value>
+  </data>
+  <data name="&gt;&gt;editLink.Type" xml:space="preserve">
+    <value>System.Windows.Forms.LinkLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;editLink.Parent" xml:space="preserve">
+    <value>tab_info</value>
+  </data>
+  <data name="&gt;&gt;editLink.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="listView1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 60</value>
+    <value>6, 85</value>
   </data>
   <data name="listView1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>864, 311</value>
+    <value>864, 280</value>
   </data>
   <data name="listView1.TabIndex" type="System.Int32, mscorlib">
     <value>62</value>
@@ -1151,7 +1181,7 @@
     <value>tab_info</value>
   </data>
   <data name="&gt;&gt;listView1.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="pictureBox3.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -1192,7 +1222,7 @@
     <value>tab_info</value>
   </data>
   <data name="&gt;&gt;pictureBox3.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="infoLable.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1225,7 +1255,7 @@
     <value>tab_info</value>
   </data>
   <data name="&gt;&gt;infoLable.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="comboBox1.Items" xml:space="preserve">
     <value>Kaufteile</value>
@@ -1255,7 +1285,7 @@
     <value>tab_info</value>
   </data>
   <data name="&gt;&gt;comboBox1.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="tab_info.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 11pt</value>
