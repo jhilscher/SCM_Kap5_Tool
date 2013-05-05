@@ -292,6 +292,7 @@ namespace ToolFahrrad_v1
             this.Information();
             this.toolAusfueren.Visible = false;
             this.save.Visible = true;
+            this.Tab.Visible = true;
         }
 
         private void pictureEditEteile_Click(object sender, EventArgs e)
@@ -300,6 +301,7 @@ namespace ToolFahrrad_v1
             dataGridViewETeil.Columns[7].ReadOnly = false;
             this.pictureSaveETeile.Visible = true;
             this.pictureResetETeil.Visible = true;
+            this.pictureReadOnly.Visible = true;
             this.pictureEditEteile.Visible = false;
         }
 
@@ -307,7 +309,7 @@ namespace ToolFahrrad_v1
         {
             DialogResult result;
             result = MessageBox.Show("Wollen Sie sicher was ändern?", "Änderungen", MessageBoxButtons.OKCancel);
-            
+            string text = string.Empty;
             if (result == System.Windows.Forms.DialogResult.OK)
             {
                 foreach (DataGridViewRow row in dataGridViewETeil.Rows)
@@ -315,19 +317,25 @@ namespace ToolFahrrad_v1
                     int prodMengeAlt = (instance.GetTeil(Convert.ToInt32(row.Cells[0].Value.ToString())) as ETeil).ProduktionsMenge;
                     int prodMengeNeu = Convert.ToInt32(row.Cells[7].Value.ToString());
                     if (!prodMengeAlt.Equals(prodMengeNeu))
+                    {
                         (instance.GetTeil(Convert.ToInt32(row.Cells[0].Value.ToString())) as ETeil).ProduktionsMenge = prodMengeNeu;
+                        text += row.Cells[1].Value.ToString() + ": von " + prodMengeAlt + " auf " + prodMengeNeu + "\n";
+                    }
                 }
 
-                this.pictureEditEteile.Visible = false;
+                this.pictureEditEteile.Visible = true;
                 this.pictureResetETeil.Visible = false;
                 this.pictureSaveETeile.Visible = false;
-                this.pictureAusführenEteil.Visible = true;
+                this.pictureReadOnly.Visible = false;
 
                 dataGridViewETeil.Columns[7].DefaultCellStyle.BackColor = Color.White;
                 dataGridViewETeil.Columns[7].ReadOnly = true;
 
-                // Ausfüren noch mal
-
+                Information();
+                if(!text.Equals(string.Empty))
+                    result = MessageBox.Show(text, "Message", MessageBoxButtons.OK);
+                else
+                    result = MessageBox.Show("keine Spalte wurde geändert", "Message", MessageBoxButtons.OK);
             }
         }
 
@@ -336,11 +344,15 @@ namespace ToolFahrrad_v1
             Information();
         }
 
-        private void pictureAusführenEteil_Click(object sender, EventArgs e)
+        private void pictureReadOnly_Click(object sender, EventArgs e)
         {
-            Information();
             this.pictureEditEteile.Visible = true;
-            this.pictureAusführenEteil.Visible = false;
+            this.pictureResetETeil.Visible = false;
+            this.pictureSaveETeile.Visible = false;
+            this.pictureReadOnly.Visible = false;
+
+            dataGridViewETeil.Columns[7].DefaultCellStyle.BackColor = Color.White;
+            dataGridViewETeil.Columns[7].ReadOnly = true;
         }
     }
 }

@@ -80,7 +80,6 @@
             this.colFarbe = new System.Windows.Forms.DataGridViewImageColumn();
             this.colZugang = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tab_eTeil = new System.Windows.Forms.TabPage();
-            this.pictureAusführenEteil = new System.Windows.Forms.PictureBox();
             this.pictureResetETeil = new System.Windows.Forms.PictureBox();
             this.pictureEditEteile = new System.Windows.Forms.PictureBox();
             this.pictureSaveETeile = new System.Windows.Forms.PictureBox();
@@ -114,6 +113,7 @@
             this.hilfeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
+            this.pictureReadOnly = new System.Windows.Forms.PictureBox();
             this.tabs.SuspendLayout();
             this.tab_xml.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pufferP3)).BeginInit();
@@ -143,7 +143,6 @@
             this.tab_kTeil.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewKTeil)).BeginInit();
             this.tab_eTeil.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureAusführenEteil)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureResetETeil)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEditEteile)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureSaveETeile)).BeginInit();
@@ -152,6 +151,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAPlatz)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.menu.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureReadOnly)).BeginInit();
             this.SuspendLayout();
             // 
             // tabs
@@ -736,22 +736,13 @@
             // tab_eTeil
             // 
             this.tab_eTeil.BackColor = System.Drawing.Color.Transparent;
-            this.tab_eTeil.Controls.Add(this.pictureAusführenEteil);
+            this.tab_eTeil.Controls.Add(this.pictureReadOnly);
             this.tab_eTeil.Controls.Add(this.pictureResetETeil);
             this.tab_eTeil.Controls.Add(this.pictureEditEteile);
             this.tab_eTeil.Controls.Add(this.pictureSaveETeile);
             this.tab_eTeil.Controls.Add(this.dataGridViewETeil);
             resources.ApplyResources(this.tab_eTeil, "tab_eTeil");
             this.tab_eTeil.Name = "tab_eTeil";
-            // 
-            // pictureAusführenEteil
-            // 
-            this.pictureAusführenEteil.Cursor = System.Windows.Forms.Cursors.Hand;
-            resources.ApplyResources(this.pictureAusführenEteil, "pictureAusführenEteil");
-            this.pictureAusführenEteil.Name = "pictureAusführenEteil";
-            this.pictureAusführenEteil.TabStop = false;
-            this.toolTip.SetToolTip(this.pictureAusführenEteil, resources.GetString("pictureAusführenEteil.ToolTip"));
-            this.pictureAusführenEteil.Click += new System.EventHandler(this.pictureAusführenEteil_Click);
             // 
             // pictureResetETeil
             // 
@@ -987,6 +978,15 @@
             this.imageList1.Images.SetKeyName(1, "yellow");
             this.imageList1.Images.SetKeyName(2, "green");
             // 
+            // pictureReadOnly
+            // 
+            this.pictureReadOnly.Cursor = System.Windows.Forms.Cursors.Hand;
+            resources.ApplyResources(this.pictureReadOnly, "pictureReadOnly");
+            this.pictureReadOnly.Name = "pictureReadOnly";
+            this.pictureReadOnly.TabStop = false;
+            this.toolTip.SetToolTip(this.pictureReadOnly, resources.GetString("pictureReadOnly.ToolTip"));
+            this.pictureReadOnly.Click += new System.EventHandler(this.pictureReadOnly_Click);
+            // 
             // Fahrrad
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -1027,7 +1027,6 @@
             this.tab_kTeil.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewKTeil)).EndInit();
             this.tab_eTeil.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureAusführenEteil)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureResetETeil)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEditEteile)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureSaveETeile)).EndInit();
@@ -1037,6 +1036,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.menu.ResumeLayout(false);
             this.menu.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureReadOnly)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1127,7 +1127,7 @@
         private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
         private System.Windows.Forms.Label lableDazu;
-        private System.Windows.Forms.PictureBox pictureAusführenEteil;
+        private System.Windows.Forms.PictureBox pictureReadOnly;
     }
 }
 
