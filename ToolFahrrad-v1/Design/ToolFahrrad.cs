@@ -220,7 +220,7 @@ namespace ToolFahrrad_v1
                 dataGridViewKTeil.Rows[index].Cells[0].Value = a.Nummer;
                 dataGridViewKTeil.Rows[index].Cells[1].Value = a.Verwendung + " - " + a.Bezeichnung;
                 dataGridViewKTeil.Rows[index].Cells[2].Value = a.Lagerstand;
-                dataGridViewKTeil.Rows[index].Cells[3].Value = a.Verhaeltnis;
+                dataGridViewKTeil.Rows[index].Cells[3].Value = a.Verhaeltnis + "%";
                 if (a.Verhaeltnis < 40)
                     dataGridViewKTeil.Rows[index].Cells[4].Value = imageList1.Images[0];
                 else if (a.Verhaeltnis <= 100)
@@ -244,7 +244,7 @@ namespace ToolFahrrad_v1
                 dataGridViewETeil.Rows[index].Cells[0].Value = a.Nummer;
                 dataGridViewETeil.Rows[index].Cells[1].Value = a.Verwendung + " - " + a.Bezeichnung;
                 dataGridViewETeil.Rows[index].Cells[2].Value = a.Lagerstand;
-                dataGridViewETeil.Rows[index].Cells[3].Value = a.Verhaeltnis;
+                dataGridViewETeil.Rows[index].Cells[3].Value = a.Verhaeltnis + "%";
                 if (a.Verhaeltnis < 40)
                     dataGridViewETeil.Rows[index].Cells[4].Value = imageList1.Images[0];
                 else if (a.Verhaeltnis <= 100)
