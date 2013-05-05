@@ -80,6 +80,7 @@
             this.colFarbe = new System.Windows.Forms.DataGridViewImageColumn();
             this.colZugang = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tab_eTeil = new System.Windows.Forms.TabPage();
+            this.pictureAusführenEteil = new System.Windows.Forms.PictureBox();
             this.pictureResetETeil = new System.Windows.Forms.PictureBox();
             this.pictureEditEteile = new System.Windows.Forms.PictureBox();
             this.pictureSaveETeile = new System.Windows.Forms.PictureBox();
@@ -142,6 +143,7 @@
             this.tab_kTeil.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewKTeil)).BeginInit();
             this.tab_eTeil.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureAusführenEteil)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureResetETeil)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEditEteile)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureSaveETeile)).BeginInit();
@@ -734,12 +736,22 @@
             // tab_eTeil
             // 
             this.tab_eTeil.BackColor = System.Drawing.Color.Transparent;
+            this.tab_eTeil.Controls.Add(this.pictureAusführenEteil);
             this.tab_eTeil.Controls.Add(this.pictureResetETeil);
             this.tab_eTeil.Controls.Add(this.pictureEditEteile);
             this.tab_eTeil.Controls.Add(this.pictureSaveETeile);
             this.tab_eTeil.Controls.Add(this.dataGridViewETeil);
             resources.ApplyResources(this.tab_eTeil, "tab_eTeil");
             this.tab_eTeil.Name = "tab_eTeil";
+            // 
+            // pictureAusführenEteil
+            // 
+            this.pictureAusführenEteil.Cursor = System.Windows.Forms.Cursors.Hand;
+            resources.ApplyResources(this.pictureAusführenEteil, "pictureAusführenEteil");
+            this.pictureAusführenEteil.Name = "pictureAusführenEteil";
+            this.pictureAusführenEteil.TabStop = false;
+            this.toolTip.SetToolTip(this.pictureAusführenEteil, resources.GetString("pictureAusführenEteil.ToolTip"));
+            this.pictureAusführenEteil.Click += new System.EventHandler(this.pictureAusführenEteil_Click);
             // 
             // pictureResetETeil
             // 
@@ -748,6 +760,7 @@
             this.pictureResetETeil.Name = "pictureResetETeil";
             this.pictureResetETeil.TabStop = false;
             this.toolTip.SetToolTip(this.pictureResetETeil, resources.GetString("pictureResetETeil.ToolTip"));
+            this.pictureResetETeil.Click += new System.EventHandler(this.pictureResetETeil_Click);
             // 
             // pictureEditEteile
             // 
@@ -765,6 +778,7 @@
             this.pictureSaveETeile.Name = "pictureSaveETeile";
             this.pictureSaveETeile.TabStop = false;
             this.toolTip.SetToolTip(this.pictureSaveETeile, resources.GetString("pictureSaveETeile.ToolTip"));
+            this.pictureSaveETeile.Click += new System.EventHandler(this.pictureSaveETeile_Click);
             // 
             // dataGridViewETeil
             // 
@@ -1013,6 +1027,7 @@
             this.tab_kTeil.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewKTeil)).EndInit();
             this.tab_eTeil.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureAusführenEteil)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureResetETeil)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEditEteile)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureSaveETeile)).EndInit();
@@ -1112,6 +1127,7 @@
         private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
         private System.Windows.Forms.Label lableDazu;
+        private System.Windows.Forms.PictureBox pictureAusführenEteil;
     }
 }
 

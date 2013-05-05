@@ -193,14 +193,22 @@ namespace ToolFahrrad_v1
         }
 
 
+        private void DataGriedViewRemove(DataGridView dgv)
+        {
+            if (dgv.DataSource != null)
+            {
+                dgv.DataSource = null;
+            }
+            else
+            {
+                dgv.Rows.Clear();
+            }
+        }
+
         private void Information()
         {
-            for (int i = 0; i < dataGridViewKTeil.Rows.Count; i++)
-            {
-                dataGridViewKTeil.Rows.RemoveAt(i);
-            }
-
             // KTeile
+            this.DataGriedViewRemove(dataGridViewKTeil);
             int index = 0;
             for (int i = 0; i < 6; ++i)
             {
@@ -224,6 +232,7 @@ namespace ToolFahrrad_v1
             }
 
             // Eteile
+            this.DataGriedViewRemove(dataGridViewETeil);
             index = 0;
             for (int i = 0; i < 8; ++i)
             {
@@ -248,12 +257,8 @@ namespace ToolFahrrad_v1
                 ++index;
             }
 
-            //foreach (DataGridViewRow row in dataGridViewETeil.Rows)
-            //{
-            //    string bbb = row.Cells[1].Value.ToString();
-            //}
-
             // Arbeitsplätze
+            this.DataGriedViewRemove(dataGridViewAPlatz);
             index = 0;
             for (int i = 0; i < 8; ++i)
             {
@@ -277,7 +282,7 @@ namespace ToolFahrrad_v1
                 ++index;
             }
         }
-        
+
         private void toolAusfueren_Click(object sender, EventArgs e)
         {
             pp.Aufloesen();
@@ -295,20 +300,47 @@ namespace ToolFahrrad_v1
             dataGridViewETeil.Columns[7].ReadOnly = false;
             this.pictureSaveETeile.Visible = true;
             this.pictureResetETeil.Visible = true;
+            this.pictureEditEteile.Visible = false;
+        }
 
+        private void pictureSaveETeile_Click(object sender, EventArgs e)
+        {
+            DialogResult result;
+            result = MessageBox.Show("Wollen Sie sicher was ändern?", "Änderungen", MessageBoxButtons.OKCancel);
+            
+            if (result == System.Windows.Forms.DialogResult.OK)
+            {
+                foreach (DataGridViewRow row in dataGridViewETeil.Rows)
+                {
+                    int prodMengeAlt = (instance.GetTeil(Convert.ToInt32(row.Cells[0].Value.ToString())) as ETeil).ProduktionsMenge;
+                    int prodMengeNeu = Convert.ToInt32(row.Cells[7].Value.ToString());
+                    if (!prodMengeAlt.Equals(prodMengeNeu))
+                        (instance.GetTeil(Convert.ToInt32(row.Cells[0].Value.ToString())) as ETeil).ProduktionsMenge = prodMengeNeu;
+                }
 
-            //DialogResult result;
-            //result = MessageBox.Show("Wollen Sie sicher was ändern?", "Änderungen", MessageBoxButtons.YesNo);
-            //if (result == System.Windows.Forms.DialogResult.Yes)
-            //{
-            //    MessageBox.Show("Records Deleted Successfully");
+                this.pictureEditEteile.Visible = false;
+                this.pictureResetETeil.Visible = false;
+                this.pictureSaveETeile.Visible = false;
+                this.pictureAusführenEteil.Visible = true;
 
-            //}
-            //else
-            //{
-            //    MessageBox.Show("No action");
+                dataGridViewETeil.Columns[7].DefaultCellStyle.BackColor = Color.White;
+                dataGridViewETeil.Columns[7].ReadOnly = true;
 
-            //}
+                // Ausfüren noch mal
+
+            }
+        }
+
+        private void pictureResetETeil_Click(object sender, EventArgs e)
+        {
+            Information();
+        }
+
+        private void pictureAusführenEteil_Click(object sender, EventArgs e)
+        {
+            Information();
+            this.pictureEditEteile.Visible = true;
+            this.pictureAusführenEteil.Visible = false;
         }
     }
 }
