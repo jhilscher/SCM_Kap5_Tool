@@ -9,7 +9,6 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Globalization;
 using System.Threading;
-using System.Drawing;
 
 namespace ToolFahrrad_v1
 {
@@ -59,8 +58,6 @@ namespace ToolFahrrad_v1
                     xmlOffenOK.Visible = true;
                     pfadText.Visible = false;
                     okXml = true;
-                    if (!infoLable.Text.Contains("aus der Periode"))
-                        infoLable.Text = infoLable.Text + " aus der Periode " + xml.period;
                     if (this.okPrognose == true)
                         toolAusfueren.Visible = true;
                 }
@@ -107,11 +104,7 @@ namespace ToolFahrrad_v1
             instance.GetTeil(3).VerbrauchPrognose2 = Convert.ToInt32(upDownP32.Value);
             instance.GetTeil(3).VerbrauchPrognose3 = Convert.ToInt32(upDownP33.Value);
 
-
-
-
-
-            bildSpeichOk.Visible = true;
+            this.bildSpeichOk.Visible = true;
             this.panelXML.Visible = true;
             this.okPrognose = true;
             if (this.okXml == true)
@@ -200,123 +193,122 @@ namespace ToolFahrrad_v1
         }
 
 
-        /// <summary>
-        /// Info Seite
-        /// </summary>
-        private void Info(int action)
+        private void Information()
         {
-
-            listView1.Items.Clear();
-            if (!listView1.Columns.Count.Equals(0))
+            for (int i = 0; i < dataGridViewKTeil.Rows.Count; i++)
             {
-                while (listView1.Columns.Count > 0)
-                {
-                    listView1.Columns.RemoveAt(0);
-                }
+                dataGridViewKTeil.Rows.RemoveAt(i);
             }
-            ListViewItem lvi;
-            listView1.Columns.Add("NR.", 50, HorizontalAlignment.Center);
-            if (action == 0 || action == 1)
+
+            // KTeile
+            int index = 0;
+            for (int i = 0; i < 6; ++i)
             {
-                listView1.Columns.Add("Bezeichnung", 160);
-                listView1.Columns.Add("Bestand", 70, HorizontalAlignment.Center);
-                listView1.Columns.Add("in %", 70, HorizontalAlignment.Center);
-                
-                if (action == 0) //Kaufteile
-                {
-                    listView1.Columns.Add("Zugang", 70, HorizontalAlignment.Center);
-                    foreach (var a in instance.ListeKTeile)
-                    {
-                        lvi = new ListViewItem(a.Nummer + "");
-                        lvi.UseItemStyleForSubItems = false;
-                        lvi.SubItems.Add(a.Verwendung + " - " + a.Bezeichnung);
-                        lvi.SubItems.Add(a.Lagerstand + "");
-                        lvi.SubItems.Add(a.Verhaeltnis + "");
-                        if (a.LagerZugang.Equals(0))
-                            lvi.SubItems.Add("");
-                        else
-                            lvi.SubItems.Add(a.LagerZugang + "");
-
-                        if (a.Verhaeltnis <= 30)
-                            lvi.SubItems[3].BackColor = Color.Salmon;
-                        else if (a.Verhaeltnis > 30 && a.Verhaeltnis < 50)
-                            lvi.SubItems[3].BackColor = Color.NavajoWhite;
-                        else if (a.Verhaeltnis > 100)
-                            lvi.SubItems[3].BackColor = Color.Khaki;
-                        else
-                            lvi.SubItems[3].BackColor = Color.PaleGreen;
-                        listView1.Items.Add(lvi);
-                    }
-                }
-                else if (action == 1)
-                {
-                    listView1.Columns.Add("Warteschlange", 70, HorizontalAlignment.Center);
-                    listView1.Columns.Add("in Bearbeitung", 70, HorizontalAlignment.Center);
-                    listView1.Columns.Add("Produktion", 70, HorizontalAlignment.Center);
-                    foreach (var a in instance.ListeETeile)
-                    {
-                        lvi = new ListViewItem(a.Nummer + "");
-                        lvi.UseItemStyleForSubItems = false;
-                        lvi.SubItems.Add(a.Verwendung + " - " + a.Bezeichnung);
-                        lvi.SubItems.Add(a.Lagerstand + "");
-                        lvi.SubItems.Add(a.Verhaeltnis + "");
-                        if (a.InWartschlange.Equals(0))
-                            lvi.SubItems.Add("");
-                        else
-                            lvi.SubItems.Add(a.InWartschlange + "");
-
-                        if (a.InBearbeitung.Equals(0))
-                            lvi.SubItems.Add("");
-                        else
-                            lvi.SubItems.Add(a.InBearbeitung + "");
-
-                        lvi.SubItems.Add(a.ProduktionsMenge + "");
-
-                        //Color
-                        if (a.Verhaeltnis <= 30)
-                            lvi.SubItems[3].BackColor = Color.Salmon;
-                        else if (a.Verhaeltnis > 30 && a.Verhaeltnis < 50)
-                            lvi.SubItems[3].BackColor = Color.NavajoWhite;
-                        else if (a.Verhaeltnis > 100)
-                            lvi.SubItems[3].BackColor = Color.Khaki;
-                        else
-                            lvi.SubItems[3].BackColor = Color.PaleGreen;
-                        lvi.SubItems[6].BackColor = Color.SkyBlue;
-                        listView1.Items.Add(lvi);
-                    }
-                }
+                this.dataGridViewKTeil.Columns[i].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
             }
-            else if (action == 2)
+            foreach (var a in instance.ListeKTeile)
             {
-                listView1.Columns.Add("Rüst", 70, HorizontalAlignment.Center);
-                listView1.Columns.Add("Leerzeit", 70, HorizontalAlignment.Center);
-                listView1.Columns.Add("Kapazitätsbedarf", 70, HorizontalAlignment.Center);
-                foreach (var a in instance.ArbeitsplatzList)
-                {
-                    lvi = new ListViewItem(a.GetNummerArbeitsplatz + "");
-                    lvi.SubItems.Add(a.AnzRuestung + "");
-                    lvi.SubItems.Add(a.Leerzeit + "");
-                    lvi.SubItems.Add(a.GetBenoetigteZeit + "");
-                    listView1.Items.Add(lvi);
-                }
+                dataGridViewKTeil.Rows.Add();
+                dataGridViewKTeil.Rows[index].Cells[0].Value = a.Nummer;
+                dataGridViewKTeil.Rows[index].Cells[1].Value = a.Verwendung + " - " + a.Bezeichnung;
+                dataGridViewKTeil.Rows[index].Cells[2].Value = a.Lagerstand;
+                dataGridViewKTeil.Rows[index].Cells[3].Value = a.Verhaeltnis;
+                if (a.Verhaeltnis < 40)
+                    dataGridViewKTeil.Rows[index].Cells[4].Value = imageList1.Images[0];
+                else if (a.Verhaeltnis <= 100)
+                    dataGridViewKTeil.Rows[index].Cells[4].Value = imageList1.Images[2];
+                else
+                    dataGridViewKTeil.Rows[index].Cells[4].Value = imageList1.Images[1];
+                dataGridViewKTeil.Rows[index].Cells[5].Value = a.LagerZugang;
+                ++index;
+            }
+
+            // Eteile
+            index = 0;
+            for (int i = 0; i < 8; ++i)
+            {
+                this.dataGridViewETeil.Columns[i].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            }
+            foreach (var a in instance.ListeETeile)
+            {
+                dataGridViewETeil.Rows.Add();
+                dataGridViewETeil.Rows[index].Cells[0].Value = a.Nummer;
+                dataGridViewETeil.Rows[index].Cells[1].Value = a.Verwendung + " - " + a.Bezeichnung;
+                dataGridViewETeil.Rows[index].Cells[2].Value = a.Lagerstand;
+                dataGridViewETeil.Rows[index].Cells[3].Value = a.Verhaeltnis;
+                if (a.Verhaeltnis < 40)
+                    dataGridViewETeil.Rows[index].Cells[4].Value = imageList1.Images[0];
+                else if (a.Verhaeltnis <= 100)
+                    dataGridViewETeil.Rows[index].Cells[4].Value = imageList1.Images[2];
+                else
+                    dataGridViewETeil.Rows[index].Cells[4].Value = imageList1.Images[1];
+                dataGridViewETeil.Rows[index].Cells[5].Value = a.InWartschlange;
+                dataGridViewETeil.Rows[index].Cells[6].Value = a.InBearbeitung;
+                dataGridViewETeil.Rows[index].Cells[7].Value = a.ProduktionsMenge;
+                ++index;
+            }
+
+            //foreach (DataGridViewRow row in dataGridViewETeil.Rows)
+            //{
+            //    string bbb = row.Cells[1].Value.ToString();
+            //}
+
+            // Arbeitsplätze
+            index = 0;
+            for (int i = 0; i < 8; ++i)
+            {
+                this.dataGridViewAPlatz.Columns[i].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            }
+            foreach (var a in instance.ArbeitsplatzList)
+            {
+                dataGridViewAPlatz.Rows.Add();
+                dataGridViewAPlatz.Rows[index].Cells[0].Value = a.GetNummerArbeitsplatz;
+                dataGridViewAPlatz.Rows[index].Cells[1].Value = a.Leerzeit + " (" + a.AnzRuestung + ") ";
+                dataGridViewAPlatz.Rows[index].Cells[3].Value = a.GetBenoetigteZeit;
+                dataGridViewAPlatz.Rows[index].Cells[4].Value = a.GetRuestZeit + " (" + a.WerkZeitJeStk.Count() + ") ";
+                dataGridViewAPlatz.Rows[index].Cells[5].Value = a.GetBenoetigteZeit + a.GetRuestZeit;
+                if ((a.GetRuestZeit + a.GetBenoetigteZeit) <= a.zeit)
+                    dataGridViewAPlatz.Rows[index].Cells[6].Value = imageList1.Images[2];
+                else if ((a.GetRuestZeit + a.GetBenoetigteZeit) > a.zeit && (a.GetRuestZeit + a.GetBenoetigteZeit) <= (a.zeit + a.zeit / 2))
+                    dataGridViewAPlatz.Rows[index].Cells[6].Value = imageList1.Images[1];
+                else
+                    dataGridViewAPlatz.Rows[index].Cells[6].Value = imageList1.Images[0];
+                dataGridViewAPlatz.Rows[index].Cells[7].Value = a.zeit - (a.GetRuestZeit + a.GetBenoetigteZeit);
+                ++index;
             }
         }
-
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {            
-            if (okXml == true)
-            {
-                Info(comboBox1.SelectedIndex);
-                this.editLink.Visible = true;
-            }
-        }
-
+        
         private void toolAusfueren_Click(object sender, EventArgs e)
-        {            
+        {
             pp.Aufloesen();
-            double a = instance.GetArbeitsplatz(1).GetRuestZeit;
+            if (!lableDazu.Text.Contains("aus der Periode"))
+                lableDazu.Text = lableDazu.Text + "aus der Periode " + xml.period;
+
+            this.Information();
             this.toolAusfueren.Visible = false;
             this.save.Visible = true;
+        }
+
+        private void pictureEditEteile_Click(object sender, EventArgs e)
+        {
+            dataGridViewETeil.Columns[7].DefaultCellStyle.BackColor = Color.LightBlue;
+            dataGridViewETeil.Columns[7].ReadOnly = false;
+            this.pictureSaveETeile.Visible = true;
+            this.pictureResetETeil.Visible = true;
+
+
+            //DialogResult result;
+            //result = MessageBox.Show("Wollen Sie sicher was ändern?", "Änderungen", MessageBoxButtons.YesNo);
+            //if (result == System.Windows.Forms.DialogResult.Yes)
+            //{
+            //    MessageBox.Show("Records Deleted Successfully");
+
+            //}
+            //else
+            //{
+            //    MessageBox.Show("No action");
+
+            //}
         }
     }
 }

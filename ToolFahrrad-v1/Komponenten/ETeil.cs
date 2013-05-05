@@ -93,7 +93,12 @@ namespace ToolFahrrad_v1
                 return istTeil;
             }
         }
-        // Functions
+        /// <summary>
+        /// Functions
+        /// </summary>
+        /// <param name="index"></param>
+        /// <param name="vTeil"></param>
+ 
         public void SetProduktionsMenge(int index, ETeil vTeil)
         {
             if (istEndProdukt == true)
@@ -106,6 +111,7 @@ namespace ToolFahrrad_v1
                 vertriebAktuell = vTeil.ProduktionsMenge + vTeil.InWartschlange;
                 pufferwert = vTeil.Pufferwert;
                 // Calculation
+                //TODO: das muss man ändern
                 if (Verwendung.Contains("KDH") == false || (Verwendung.Contains("KDH") == true && index == 1))
                 {
                     produktionsMenge = vertriebAktuell + pufferwert - lagerstand - inWarteschlange - inBearbeitung;

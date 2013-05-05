@@ -10,6 +10,7 @@ namespace ToolFahrrad_v1
         DataContainer dc;
         // Class members
         protected int nr;
+        public int zeit = 2400;
         protected int anz_schichten = 1;
         protected int anz_uebermin = 0;
         private int anz_ruestung = 0;
