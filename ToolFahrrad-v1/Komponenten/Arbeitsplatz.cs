@@ -13,9 +13,15 @@ namespace ToolFahrrad_v1
         public int zeit = 2400;
         protected int anz_schichten = 1;
         protected int anz_uebermin = 0;
-        private int anz_ruestung = 0;
-        int warteschlangen_zeit = 0;
+        private int ruestungVorPeriode = 0;
+        private int ruestungCustom = 0; //Mittelwert
+
+        public int RuestungCustom
+        {
+            get { return ruestungCustom; }
+        }
         private int leerzeit = 0;
+        int warteschlangen_zeit = 0;
 
         public int Leerzeit
         {
@@ -41,10 +47,10 @@ namespace ToolFahrrad_v1
         {
             get { return nr; }
         }
-        public int AnzRuestung
+        public int RuestungVorPeriode
         {
-            get { return anz_ruestung; }
-            set { anz_ruestung = value; }
+            get { return ruestungVorPeriode; }
+            set { ruestungVorPeriode = value; }
         }
         public Dictionary<int, int> WerkZeitJeStk
         {
@@ -60,12 +66,17 @@ namespace ToolFahrrad_v1
             {
                 dc = DataContainer.Instance;
                 double sum = 0;
+                int newRuest = 0;
                 foreach (KeyValuePair<int, int> kvp in ruest_zeiten)
-                {
-                    if((dc.GetTeil(kvp.Key) as ETeil).ProduktionsMenge > 0)
-                        sum += kvp.Value;
+                {                    
+                    sum += kvp.Value;
+                    if ((dc.GetTeil(kvp.Key) as ETeil).ProduktionsMenge > 0)
+                        ++newRuest;
                 }
-                return sum;
+                ruestungCustom = (newRuest + ruestungVorPeriode) / 2;
+                if (ruestungCustom < newRuest)
+                    ruestungCustom = newRuest;
+                return sum/ruest_zeiten.Count();
             }
 
             //get

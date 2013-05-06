@@ -228,6 +228,15 @@ namespace ToolFahrrad_v1
                 else
                     dataGridViewKTeil.Rows[index].Cells[4].Value = imageList1.Images[1];
                 dataGridViewKTeil.Rows[index].Cells[5].Value = a.LagerZugang;
+
+                //Farbe
+                for (int i = 0; i < 6; ++i)
+                {
+                    if (i == 4)
+                        dataGridViewETeil.Columns[i].DefaultCellStyle.BackColor = Color.LightYellow;
+                    else
+                        dataGridViewKTeil.Columns[i].DefaultCellStyle.BackColor = Color.FloralWhite;
+                }
                 ++index;
             }
 
@@ -254,6 +263,19 @@ namespace ToolFahrrad_v1
                 dataGridViewETeil.Rows[index].Cells[5].Value = a.InWartschlange;
                 dataGridViewETeil.Rows[index].Cells[6].Value = a.InBearbeitung;
                 dataGridViewETeil.Rows[index].Cells[7].Value = a.ProduktionsMenge;
+
+                //Farbe
+                for (int i = 0; i < 8; ++i)
+                {
+                    if(i == 4)
+                        dataGridViewETeil.Columns[i].DefaultCellStyle.BackColor = Color.LightYellow;
+                    else if(i == 7)
+                        dataGridViewETeil.Columns[7].DefaultCellStyle.BackColor = Color.Honeydew;
+                    else
+                        dataGridViewETeil.Columns[i].DefaultCellStyle.BackColor = Color.FloralWhite;
+
+                    
+                }
                 ++index;
             }
 
@@ -266,19 +288,35 @@ namespace ToolFahrrad_v1
             }
             foreach (var a in instance.ArbeitsplatzList)
             {
+                int gesammtZeit = (int)(a.GetRuestZeit * a.RuestungCustom);
+                int gesammt = gesammtZeit + a.GetBenoetigteZeit;
+
                 dataGridViewAPlatz.Rows.Add();
                 dataGridViewAPlatz.Rows[index].Cells[0].Value = a.GetNummerArbeitsplatz;
-                dataGridViewAPlatz.Rows[index].Cells[1].Value = a.Leerzeit + " (" + a.AnzRuestung + ") ";
-                dataGridViewAPlatz.Rows[index].Cells[3].Value = a.GetBenoetigteZeit;
-                dataGridViewAPlatz.Rows[index].Cells[4].Value = a.GetRuestZeit + " (" + a.WerkZeitJeStk.Count() + ") ";
-                dataGridViewAPlatz.Rows[index].Cells[5].Value = a.GetBenoetigteZeit + a.GetRuestZeit;
-                if ((a.GetRuestZeit + a.GetBenoetigteZeit) <= a.zeit)
+                dataGridViewAPlatz.Rows[index].Cells[1].Value = a.Leerzeit + " (" + a.RuestungVorPeriode + ") ";
+                dataGridViewAPlatz.Rows[index].Cells[2].Value = a.GetBenoetigteZeit + " min";
+                dataGridViewAPlatz.Rows[index].Cells[3].Value = (int)(a.GetRuestZeit * a.RuestungCustom) + " min";
+                dataGridViewAPlatz.Rows[index].Cells[4].Value = a.RuestungCustom;
+                dataGridViewAPlatz.Rows[index].Cells[5].Value = gesammt + " min";
+                if (gesammt <= a.zeit)
                     dataGridViewAPlatz.Rows[index].Cells[6].Value = imageList1.Images[2];
-                else if ((a.GetRuestZeit + a.GetBenoetigteZeit) > a.zeit && (a.GetRuestZeit + a.GetBenoetigteZeit) <= (a.zeit + a.zeit / 2))
+                else if (gesammt <= (a.zeit + a.zeit / 2))
                     dataGridViewAPlatz.Rows[index].Cells[6].Value = imageList1.Images[1];
                 else
                     dataGridViewAPlatz.Rows[index].Cells[6].Value = imageList1.Images[0];
-                dataGridViewAPlatz.Rows[index].Cells[7].Value = a.zeit - (a.GetRuestZeit + a.GetBenoetigteZeit);
+                dataGridViewAPlatz.Rows[index].Cells[7].Value = a.zeit - gesammt + " min";
+
+                //Farbe
+                for (int i = 0; i < 8; ++i)
+                {
+                    if (i < 2)
+                        dataGridViewAPlatz.Columns[i].DefaultCellStyle.BackColor = Color.FloralWhite;
+                    else if (i == 2 || i == 3 || (i >= 5 && i <= 7))
+                        dataGridViewAPlatz.Columns[i].DefaultCellStyle.BackColor = Color.LightYellow;
+                    else
+                        dataGridViewAPlatz.Columns[i].DefaultCellStyle.BackColor = Color.Honeydew;
+                }
+
                 ++index;
             }
         }
@@ -328,7 +366,7 @@ namespace ToolFahrrad_v1
                 this.pictureSaveETeile.Visible = false;
                 this.pictureReadOnly.Visible = false;
 
-                dataGridViewETeil.Columns[7].DefaultCellStyle.BackColor = Color.White;
+                dataGridViewETeil.Columns[7].DefaultCellStyle.BackColor = Color.Honeydew;
                 dataGridViewETeil.Columns[7].ReadOnly = true;
 
                 Information();
@@ -351,8 +389,19 @@ namespace ToolFahrrad_v1
             this.pictureSaveETeile.Visible = false;
             this.pictureReadOnly.Visible = false;
 
-            dataGridViewETeil.Columns[7].DefaultCellStyle.BackColor = Color.White;
+            dataGridViewETeil.Columns[7].DefaultCellStyle.BackColor = Color.Honeydew;
             dataGridViewETeil.Columns[7].ReadOnly = true;
+        }
+
+        private void save_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void gewichtungToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Einstellungen einstellungen = new Einstellungen();
+            einstellungen.Show();
         }
     }
 }

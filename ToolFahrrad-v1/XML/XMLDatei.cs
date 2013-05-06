@@ -138,7 +138,7 @@ namespace ToolFahrrad_v1
                 {
                     if (attr.Name == "workplace")
                     {
-                        dc.GetArbeitsplatz(Convert.ToInt32(attr.Attributes[0].Value)).AnzRuestung = Convert.ToInt32(attr.Attributes[1].Value);
+                        dc.GetArbeitsplatz(Convert.ToInt32(attr.Attributes[0].Value)).RuestungVorPeriode = Convert.ToInt32(attr.Attributes[1].Value);
                         dc.GetArbeitsplatz(Convert.ToInt32(attr.Attributes[0].Value)).Leerzeit = Convert.ToInt32(attr.Attributes[2].Value);
 
                         //dc.GetTeil(zahl).Lagerstand = Convert.ToInt32(attr.Attributes[1].Value);
