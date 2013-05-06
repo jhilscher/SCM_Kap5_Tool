@@ -75,11 +75,11 @@ namespace ToolFahrrad_v1
             {
                 if (kvp.Key is KTeil)
                 {
-                    if (kvp.Key.Lagerstand + (kvp.Key as KTeil).ErwarteteBestellung < kvp.Value * mengeNeu)
+                    /*if (kvp.Key.Lagerstand + (kvp.Key as KTeil).ErwarteteBestellung < kvp.Value * mengeNeu)
                     {
                         sb.Append(string.Format("Nicht genug Kaufteile (nr. {0}) um die manuell gesetzte Menge({1}) an  Teil {2} herzustellen", kvp.Key.Nummer, mengeNeu, teil.Nummer));
                         sb.Append(Environment.NewLine);
-                    }
+                    }*/
                 }
             }
             return sb.ToString();

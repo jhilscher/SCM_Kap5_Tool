@@ -9,13 +9,25 @@ namespace ToolFahrrad_v1
     {
         // Instance of DataContainer class
         DataContainer dc = DataContainer.Instance;
+        private double verwendeAbweichung = 0.5;
         // Constructor
         public Bestellverwaltung()
+        {
+            berechneVerbrauchKTeile();
+        }
+        // Getter / Setter
+        public double VerwendeAbweichung
+        {
+            get { return verwendeAbweichung * 100; }
+            set { verwendeAbweichung = value / 100; }
+        }
+        // Calculate forecast of consumption of KTeil
+        public void berechneVerbrauchKTeile( )
         {
             foreach (KTeil kt in dc.ListeKTeile)
             {
                 // Calculate forecast of consumption of KTeil
-                kt.berechnungVerbrauchPrognose();
+                kt.berechnungVerbrauchPrognose(verwendeAbweichung);
             }
         }
         // Create list of orders
@@ -23,7 +35,7 @@ namespace ToolFahrrad_v1
         {
             foreach (KTeil kt in dc.ListeKTeile)
             {
-                if (kt.VerbrauchPrognose1OA <= 0)
+                /*if (kt.VerbrauchPrognose1OA <= 0)
                 {
                     Bestellposition bp = new Bestellposition(kt, berechneMenge(kt), true);
                     this.dc.Bestellungen.Add(bp);
@@ -45,7 +57,7 @@ namespace ToolFahrrad_v1
                 else if (kt.VerbrauchPrognose3OA <= 0)
                 {
                     
-                }
+                }*/
             }
         }
         public int berechneMenge(KTeil kt)

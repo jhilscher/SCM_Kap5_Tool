@@ -10,42 +10,25 @@ namespace ToolFahrrad_v1
     {
         // Class members
         private double bestellkosten;
-        private int erwarteteBestellung;
         private double preis;
         private double lieferdauer;
         private double abweichungLieferdauer;
         private int diskontMenge;
         private int lagerZugang;
+        // ToDo speichern in welcher periode bestellt bei offenen bestellungen
+        private int periodeBestellung;
         private List<ETeil> istTeil = null;
-        // Members for consumption forecast at period 1,2,3; MA=Mit Abweichung; OA=Ohne Abweichung
-        private int verbProg1MA;
-        private int verbProg1OA;
-        private int verbProg2MA;
-        private int verbProg2OA;
-        private int verbProg3MA;
-        private int verbProg3OA;
-
-        //
-        private int verbrauchP1;
-        public int VerbrauchP1
-        {
-            get { return verbrauchP1; }
-            set { verbrauchP1 = value; }
-        }
-        private int verbrauchP2;
-        public int VerbrauchP2
-        {
-            get { return verbrauchP2; }
-            set { verbrauchP2 = value; }
-        }
-        private int verbrauchP3;
-        public int VerbrauchP3
-        {
-            get { return verbrauchP3; }
-            set { verbrauchP3 = value; }
-        }
-
-
+        private int bruttoBedarfAkt;
+        private int bruttoBedarfP1;
+        private int bruttoBedarfP2;
+        private int bruttoBedarfP3;
+        private int bestandP1;
+        private int bestandP2;
+        private int bestandP3;
+        private int bestandP4;
+        private int verwendungP1;
+        private int verwendungP2;
+        private int verwendungP3;
         // Constructor
         public KTeil(int nummer, string bez) : base(nummer, bez)
         {}
@@ -54,11 +37,6 @@ namespace ToolFahrrad_v1
         {
             get { return bestellkosten; }
             set { bestellkosten = value; }
-        }
-        public int ErwarteteBestellung
-        {
-            get { return erwarteteBestellung; }
-            set { erwarteteBestellung = value; }
         }
         public double Preis
         {
@@ -85,6 +63,11 @@ namespace ToolFahrrad_v1
             get { return lagerZugang; }
             set { lagerZugang = value; }
         }
+        public int PeriodeBestellung
+        {
+            get { return periodeBestellung; }
+            set { periodeBestellung = value; }
+        }
         // Function shows where KTeil is used
         public List<ETeil> IstTeilVon
         {
@@ -107,41 +90,66 @@ namespace ToolFahrrad_v1
                 return this.istTeil;
             }
         }
-        public int VerbrauchPrognose1MA
+        public int BruttoBedarfAkt
         {
-            get { return verbProg1MA; }
-            set { verbProg1MA = value; }
+            get { return bruttoBedarfAkt; }
+            set { bruttoBedarfAkt = value; }
         }
-        public int VerbrauchPrognose1OA
+        public int BruttoBedarfP1
         {
-            get { return verbProg1OA; }
-            set { verbProg1OA = value; }
+            get { return bruttoBedarfP1; }
+            set { bruttoBedarfP1 = value; }
         }
-        public int VerbrauchPrognose2MA
+        public int BruttoBedarfP2
         {
-            get { return verbProg2MA; }
-            set { verbProg2MA = value; }
+            get { return bruttoBedarfP2; }
+            set { bruttoBedarfP2 = value; }
         }
-        public int VerbrauchPrognose2OA
+        public int BruttoBedarfP3
         {
-            get { return verbProg2OA; }
-            set { verbProg2OA = value; }
+            get { return bruttoBedarfP3; }
+            set { bruttoBedarfP3 = value; }
         }
-        public int VerbrauchPrognose3MA
+        public int BestandP1
         {
-            get { return verbProg3MA; }
-            set { verbProg3MA = value; }
+            get { return bestandP1; }
+            set { bestandP1 = value; }
         }
-        public int VerbrauchPrognose3OA
+        public int BestandP2
         {
-            get { return verbProg3OA; }
-            set { verbProg3OA = value; }
+            get { return bestandP2; }
+            set { bestandP2 = value; }
+        }
+        public int BestandP3
+        {
+            get { return bestandP3; }
+            set { bestandP3 = value; }
+        }
+        public int BestandP4
+        {
+            get { return bestandP4; }
+            set { bestandP4 = value; }
+        }
+        public int VerwendungP1
+        {
+            get { return verwendungP1; }
+            set { verwendungP1 = value; }
+        }
+        public int VerwendungP2
+        {
+            get { return verwendungP2; }
+            set { verwendungP2 = value; }
+        }
+        public int VerwendungP3
+        {
+            get { return verwendungP3; }
+            set { verwendungP3 = value; }
         }
         // Public function to calculate forecast consumption for next 3 periods
-        public void berechnungVerbrauchPrognose()
+        public void berechnungVerbrauchPrognose(double verwendeAbweichung)
         {
             // Future period 1
-            verbProg1MA = Convert.ToInt32(
+/*            verbProg1MA = Convert.ToInt32(
                 lagerstand + erwarteteBestellung - vertriebAktuell * (lieferdauer + abweichungLieferdauer));
             verbProg1OA = Convert.ToInt32(
                 lagerstand + erwarteteBestellung - vertriebAktuell * lieferdauer);
@@ -164,7 +172,7 @@ namespace ToolFahrrad_v1
                 lagerstand + erwarteteBestellung - (
                     vertriebAktuell + (
                         vertriebAktuell + verbrauchPrognose1 + verbrauchPrognose2 + verbrauchPrognose3) / 4) *
-                        lieferdauer);
+                        lieferdauer);*/
         }
         // Equals function
         public bool Equals(KTeil kt)
