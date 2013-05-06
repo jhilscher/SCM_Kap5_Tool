@@ -103,7 +103,7 @@ namespace ToolFahrrad_v1
         {
             if (istEndProdukt == true)
             {
-                produktionsMenge = vertriebAktuell + pufferwert - lagerstand - inWarteschlange - inBearbeitung;
+                produktionsMenge = vertriebAktuell + Puffer - lagerstand - inWarteschlange - inBearbeitung;
             }
             else
             {
@@ -112,9 +112,13 @@ namespace ToolFahrrad_v1
                 pufferwert = vTeil.Pufferwert;
                 // Calculation
                 //TODO: das muss man ändern
-                if (Verwendung.Contains("KDH") == false || (Verwendung.Contains("KDH") == true && index == 1))
+                if (Verwendung.Contains("KDH") == false)
                 {
-                    produktionsMenge = vertriebAktuell + pufferwert - lagerstand - inWarteschlange - inBearbeitung;
+                    produktionsMenge = vertriebAktuell + Puffer - lagerstand - inWarteschlange - inBearbeitung;
+                }
+                else
+                {
+                    produktionsMenge += (vertriebAktuell + Puffer - lagerstand - inWarteschlange - inBearbeitung)/3;
                 }
             }
         }

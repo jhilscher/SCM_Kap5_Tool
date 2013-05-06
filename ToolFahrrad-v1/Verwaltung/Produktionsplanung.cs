@@ -15,19 +15,7 @@ namespace ToolFahrrad_v1
         {
             dc = DataContainer.Instance;
         }
-        // Aufloesung Prognosen für Produkte, berechnet die benoetigten E- und KTeile
-        public void Aufloesen()
-        {
-            if (dc == null)
-            {
-                dc = DataContainer.Instance;
-            }
-            for (int index = 1; index < 4; index++)
-            {
-                RekursAufloesen(index, null, dc.GetTeil(index) as ETeil);
-            }
-            aufgeloest = true;
-        }
+        // Aufloesung der Teile, setzen der Ueberstunden, anpassen Reihenfolge
         public void Planen()
         {
             if (dc == null)
@@ -50,7 +38,21 @@ namespace ToolFahrrad_v1
             }
             ReihenfolgePart2(tmp);
         }
-        // Rekursive Prozedur zum iterieren über die Zusammensetzung der Teile
+        // ------------------------------------------------------------------------------------------------------------
+        // Aufloesung Prognosen fuer Produkte, berechnet benoetigte E- und KTeile
+        public void Aufloesen()
+        {
+            if (dc == null)
+            {
+                dc = DataContainer.Instance;
+            }
+            for (int index = 1; index < 4; index++)
+            {
+                RekursAufloesen(index, null, dc.GetTeil(index) as ETeil);
+            }
+            aufgeloest = true;
+        }
+        // Rekursive Prozedur zum Iterieren ueber die Zusammensetzung der Teile
         private void RekursAufloesen(int index, ETeil vTeil, ETeil kTeil)
         {
             kTeil.SetProduktionsMenge(index, vTeil);
@@ -60,12 +62,12 @@ namespace ToolFahrrad_v1
                 {
                     if (kvp.Key is ETeil)
                     {
-                        RekursAufloesen(index, kTeil,kvp.Key as ETeil);
+                        RekursAufloesen(index, kTeil, kvp.Key as ETeil);
                     }
                 }
             }
         }
-        // ---
+        // Pruefung ob genug KTeile vorhanden sind, wenn nicht Info ausgeben
         public String Nachpruefen(Teil teil, int mengeNeu)
         {
             StringBuilder sb = new StringBuilder();
