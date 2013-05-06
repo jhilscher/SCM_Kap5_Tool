@@ -197,7 +197,7 @@ namespace ToolFahrrad_v1
                 {
                     DataRow row = table.NewRow();
                     row["Teil"] = pos;
-                    row["Menge"] = (listeTeile[pos] as ETeil).ProduktionsMenge;
+                    row["Menge"] = (listeTeile[pos] as ETeil).ProduktionsMengePer0;
                     table.Rows.Add(row);
                 }
                 return table;
@@ -212,13 +212,13 @@ namespace ToolFahrrad_v1
             {
                 listeReihenfolge[count] = Convert.ToInt32(row[0]);
                 count++;
-                if ((listeTeile[Convert.ToInt32(row[0])] as ETeil).ProduktionsMenge < Convert.ToInt32(row[1]))
+                if ((listeTeile[Convert.ToInt32(row[0])] as ETeil).ProduktionsMengePer0 < Convert.ToInt32(row[1]))
                 {
                     pp.Nachpruefen(listeTeile[Convert.ToInt32(row[0])], Convert.ToInt32(row[1]));
                 }
                 else
                 {
-                    (listeTeile[Convert.ToInt32(row[0])] as ETeil).ProduktionsMenge = Convert.ToInt32(row[1]);
+                    (listeTeile[Convert.ToInt32(row[0])] as ETeil).ProduktionsMengePer0 = Convert.ToInt32(row[1]);
                 }
             }
         }
@@ -310,9 +310,9 @@ namespace ToolFahrrad_v1
                 kt.DiskontMenge = dm;
                 kt.Lagerstand = bs;
                 kt.Verwendung = vw;
-                kt.VerwendungP1 = TVP1;
-                kt.VerwendungP2 = TVP2;
-                kt.VerwendungP3 = TVP3;
+                kt.VerwendungProdukt1 = TVP1;
+                kt.VerwendungProdukt2 = TVP2;
+                kt.VerwendungProdukt3 = TVP3;
                 listeTeile[nr] = kt;
             }
             else
@@ -396,11 +396,11 @@ namespace ToolFahrrad_v1
             }
             foreach (ETeil et in ListeETeile)
             {
-                et.ProduktionsMenge = 0;
-                et.VertriebAktuell = 0;
-                et.VerbrauchPrognose1 = 0;
-                et.VerbrauchPrognose2 = 0;
-                et.VerbrauchPrognose3 = 0;
+                et.ProduktionsMengePer0 = 0;
+                et.VertriebPer0 = 0;
+                et.VerbrauchPer1 = 0;
+                et.VerbrauchPer2 = 0;
+                et.VerbrauchPer3 = 0;
             }
         }
     }

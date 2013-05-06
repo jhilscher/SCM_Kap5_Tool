@@ -18,17 +18,17 @@ namespace ToolFahrrad_v1
         // ToDo speichern in welcher periode bestellt bei offenen bestellungen
         private int periodeBestellung;
         private List<ETeil> istTeil = null;
-        private int bruttoBedarfAkt;
-        private int bruttoBedarfP1;
-        private int bruttoBedarfP2;
-        private int bruttoBedarfP3;
-        private int bestandP1;
-        private int bestandP2;
-        private int bestandP3;
-        private int bestandP4;
-        private int verwendungP1;
-        private int verwendungP2;
-        private int verwendungP3;
+        private int bruttoBedarfPer0;
+        private int bruttoBedarfPer1;
+        private int bruttoBedarfPer2;
+        private int bruttoBedarfPer3;
+        private int bestandPer1;
+        private int bestandPer2;
+        private int bestandPer3;
+        private int bestandPer4;
+        private int verwendungProdukt1;
+        private int verwendungProdukt2;
+        private int verwendungProdukt3;
         // Constructor
         public KTeil(int nummer, string bez) : base(nummer, bez)
         {}
@@ -90,75 +90,75 @@ namespace ToolFahrrad_v1
                 return this.istTeil;
             }
         }
-        public int BruttoBedarfAkt
+        public int BruttoBedarfPer0
         {
-            get { return bruttoBedarfAkt; }
-            set { bruttoBedarfAkt = value; }
+            get { return bruttoBedarfPer0; }
+            set { bruttoBedarfPer0 = value; }
         }
-        public int BruttoBedarfP1
+        public int BruttoBedarfPer1
         {
-            get { return bruttoBedarfP1; }
-            set { bruttoBedarfP1 = value; }
+            get { return bruttoBedarfPer1; }
+            set { bruttoBedarfPer1 = value; }
         }
-        public int BruttoBedarfP2
+        public int BruttoBedarfPer2
         {
-            get { return bruttoBedarfP2; }
-            set { bruttoBedarfP2 = value; }
+            get { return bruttoBedarfPer2; }
+            set { bruttoBedarfPer2 = value; }
         }
-        public int BruttoBedarfP3
+        public int BruttoBedarfPer3
         {
-            get { return bruttoBedarfP3; }
-            set { bruttoBedarfP3 = value; }
+            get { return bruttoBedarfPer3; }
+            set { bruttoBedarfPer3 = value; }
         }
-        public int BestandP1
+        public int BestandPer1
         {
-            get { return bestandP1; }
-            set { bestandP1 = value; }
+            get { return bestandPer1; }
+            set { bestandPer1 = value; }
         }
-        public int BestandP2
+        public int BestandPer2
         {
-            get { return bestandP2; }
-            set { bestandP2 = value; }
+            get { return bestandPer2; }
+            set { bestandPer2 = value; }
         }
-        public int BestandP3
+        public int BestandPer3
         {
-            get { return bestandP3; }
-            set { bestandP3 = value; }
+            get { return bestandPer3; }
+            set { bestandPer3 = value; }
         }
-        public int BestandP4
+        public int BestandPer4
         {
-            get { return bestandP4; }
-            set { bestandP4 = value; }
+            get { return bestandPer4; }
+            set { bestandPer4 = value; }
         }
-        public int VerwendungP1
+        public int VerwendungProdukt1
         {
-            get { return verwendungP1; }
-            set { verwendungP1 = value; }
+            get { return verwendungProdukt1; }
+            set { verwendungProdukt1 = value; }
         }
-        public int VerwendungP2
+        public int VerwendungProdukt2
         {
-            get { return verwendungP2; }
-            set { verwendungP2 = value; }
+            get { return verwendungProdukt2; }
+            set { verwendungProdukt2 = value; }
         }
-        public int VerwendungP3
+        public int VerwendungProdukt3
         {
-            get { return verwendungP3; }
-            set { verwendungP3 = value; }
+            get { return verwendungProdukt3; }
+            set { verwendungProdukt3 = value; }
         }
         // Public function to initialize BruttoBedarf
         public void initBruttoBedarf(int index, int prodMengeAkt)
         {
             if (index == 1)
             {
-                bruttoBedarfAkt = prodMengeAkt * verwendungP1;
+                bruttoBedarfPer0 += prodMengeAkt * verwendungProdukt1;
             }
             else if (index == 2)
             {
-                bruttoBedarfAkt = prodMengeAkt * verwendungP2;
+                bruttoBedarfPer0 += prodMengeAkt * verwendungProdukt2;
             }
             else if (index == 3)
             {
-                bruttoBedarfAkt = prodMengeAkt * verwendungP3;
+                bruttoBedarfPer0 += prodMengeAkt * verwendungProdukt3;
             }
         }
         // Public function to calculate forecast consumption for next 3 periods

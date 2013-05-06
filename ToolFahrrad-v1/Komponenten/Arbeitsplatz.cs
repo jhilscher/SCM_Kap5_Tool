@@ -68,10 +68,13 @@ namespace ToolFahrrad_v1
                 double sum = 0;
                 int newRuest = 0;
                 foreach (KeyValuePair<int, int> kvp in ruest_zeiten)
-                {                    
-                    sum += kvp.Value;
-                    if ((dc.GetTeil(kvp.Key) as ETeil).ProduktionsMenge > 0)
-                        ++newRuest;
+                {    
+                sum += kvp.Value;                
+                    if((dc.GetTeil(kvp.Key) as ETeil).ProduktionsMengePer0 > 0)
+                    ++newRuest;
+
+                    //if ((dc.GetTeil(kvp.Key) as ETeil).ProduktionsMenge > 0)
+                        
                 }
                 ruestungCustom = (newRuest + ruestungVorPeriode) / 2;
                 if (ruestungCustom < newRuest)
@@ -102,7 +105,7 @@ namespace ToolFahrrad_v1
                 int result = 0;
                 foreach (KeyValuePair<int, int> kvp in werk_zeiten)
                 {
-                    int prMenge = (dc.GetTeil(kvp.Key) as ETeil).ProduktionsMenge;
+                    int prMenge = (dc.GetTeil(kvp.Key) as ETeil).ProduktionsMengePer0;
                     if (prMenge < 0)
                         prMenge = 0;
                     result += kvp.Value * prMenge;

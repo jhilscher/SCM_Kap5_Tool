@@ -60,7 +60,7 @@ namespace ToolFahrrad_v1
                     {
                         //ToDo: Produktionsmenge auch fuer Prog1, Prog2, Prog3!!!
                         KTeil kt = kvp.Key as KTeil;
-                        kt.initBruttoBedarf(index, et.ProduktionsMenge);
+                        kt.initBruttoBedarf(index, et.ProduktionsMengePer0);
                     }
                 }
             }
@@ -106,13 +106,13 @@ namespace ToolFahrrad_v1
             {
                 count++;
                 //wenn kteile nicht ausrechen muss von irgendeinem Teil weniger 
-                if (kteil.Lagerstand < kteil.VertriebAktuell)
+                if (kteil.Lagerstand < kteil.VertriebPer0)
                 {
                     int nrToChange = 0;
                     double time = 4800;
                     foreach (ETeil et in kteil.IstTeilVon)
                     {
-                        if (et.ProduktionsMenge > 0)
+                        if (et.ProduktionsMengePer0 > 0)
                         {
                             foreach (Arbeitsplatz arpl in et.BenutzteArbeitsplaetze)
                             {
@@ -130,7 +130,7 @@ namespace ToolFahrrad_v1
                     }
                     if (nrToChange > 0)
                     {
-                        (dc.GetTeil(nrToChange) as ETeil).ProduktionsMenge = (dc.GetTeil(nrToChange) as ETeil).ProduktionsMenge - 10;
+                        (dc.GetTeil(nrToChange) as ETeil).ProduktionsMengePer0 = (dc.GetTeil(nrToChange) as ETeil).ProduktionsMengePer0 - 10;
                         return false;
                     }
                 }
@@ -139,7 +139,7 @@ namespace ToolFahrrad_v1
             foreach (ETeil eteil in dc.ListeETeile)
             {
                 count++;
-                if (eteil.Lagerstand + eteil.ProduktionsMenge + eteil.InWartschlange < eteil.VertriebAktuell)
+                if (eteil.Lagerstand + eteil.ProduktionsMengePer0 + eteil.InWartschlange < eteil.VertriebPer0)
                 {
                     int nrToChange = 0;
                     int time = 2400;
@@ -156,7 +156,7 @@ namespace ToolFahrrad_v1
                     }
                     if (nrToChange != 0)
                     {
-                        (dc.GetTeil(nrToChange) as ETeil).ProduktionsMenge = (dc.GetTeil(nrToChange) as ETeil).ProduktionsMenge - 10;
+                        (dc.GetTeil(nrToChange) as ETeil).ProduktionsMengePer0 = (dc.GetTeil(nrToChange) as ETeil).ProduktionsMengePer0 - 10;
                         return false;
                     }
                 }
@@ -194,18 +194,18 @@ namespace ToolFahrrad_v1
                     {
                         if (bestandTeil.Key is ETeil)
                         {
-                            if (bestandTeil.Key.Lagerstand - bestandTeil.Key.VertriebAktuell < 0) // Falls Verbrauch höher Lagerstand dieses Teil am Arbeitsplatz bevorzugen
+                            if (bestandTeil.Key.Lagerstand - bestandTeil.Key.VertriebPer0 < 0) // Falls Verbrauch höher Lagerstand dieses Teil am Arbeitsplatz bevorzugen
                             {
                                 tmp[ap.GetNummerArbeitsplatz][lastPos] = hergestellt.Nummer;
                                 lastposChgd = true;
                                 notInserted = false;
                             }
-                            if (bestandTeil.Key.Lagerstand - bestandTeil.Key.VertriebAktuell >= 0) // Falls Verbrauch kleiner/gleich Lagerstand
+                            if (bestandTeil.Key.Lagerstand - bestandTeil.Key.VertriebPer0 >= 0) // Falls Verbrauch kleiner/gleich Lagerstand
                             {
                                 bool praeferenz = false;
                                 foreach (ETeil nachfolger in (bestandTeil.Key as ETeil).IstTeilVon) // Teile die von ersten Teil abhängig sind prüfen
                                 {
-                                    if (nachfolger.Lagerstand - nachfolger.VertriebAktuell < 0)
+                                    if (nachfolger.Lagerstand - nachfolger.VertriebPer0 < 0)
                                     {
                                         praeferenz = true; // Diese Teile bevorzugen da nicht mehr vorhanden
                                         break;
@@ -258,15 +258,15 @@ namespace ToolFahrrad_v1
                 {
                     foreach (ETeil teil in ap.GetHergestellteTeile)
                     {
-                        sumProd += teil.ProduktionsMenge;
+                        sumProd += teil.ProduktionsMengePer0;
                     }
                     foreach (ETeil teil in ap.GetHergestellteTeile)
                     {
-                        zwischenWert = Convert.ToInt32((-diff / teil.ProduktionsMenge) * sumProd);
+                        zwischenWert = Convert.ToInt32((-diff / teil.ProduktionsMengePer0) * sumProd);
                         val = Convert.ToInt32(Math.Round(zwischenWert / ap.WerkZeitJeStk[teil.Nummer]));
-                        if (val < teil.ProduktionsMenge)
+                        if (val < teil.ProduktionsMengePer0)
                         {
-                            teil.ProduktionsMenge -= val;
+                            teil.ProduktionsMengePer0 -= val;
                         }
                     }
                 }
