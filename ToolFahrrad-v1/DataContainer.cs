@@ -298,7 +298,7 @@ namespace ToolFahrrad_v1
             }
         }
         // Create new KTeil and add this to member liste_teile
-        public void NewTeil(int nr, string bez, double p, double bk, double ld, double abw, int dm, int bs, string vw)
+        public void NewTeil(int nr, string bez, double p, double bk, double ld, double abw, int dm, int bs, string vw, int TVP1, int TVP2, int TVP3)
         {
             if (listeTeile.ContainsKey(nr) == false)
             {
@@ -310,6 +310,9 @@ namespace ToolFahrrad_v1
                 kt.DiskontMenge = dm;
                 kt.Lagerstand = bs;
                 kt.Verwendung = vw;
+                kt.VerbrauchP1 = TVP1;
+                kt.VerbrauchP2 = TVP2;
+                kt.VerbrauchP3 = TVP3;
                 listeTeile[nr] = kt;
             }
             else

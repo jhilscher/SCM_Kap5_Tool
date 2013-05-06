@@ -24,6 +24,28 @@ namespace ToolFahrrad_v1
         private int verbProg2OA;
         private int verbProg3MA;
         private int verbProg3OA;
+
+        //
+        private int verbrauchP1;
+        public int VerbrauchP1
+        {
+            get { return verbrauchP1; }
+            set { verbrauchP1 = value; }
+        }
+        private int verbrauchP2;
+        public int VerbrauchP2
+        {
+            get { return verbrauchP2; }
+            set { verbrauchP2 = value; }
+        }
+        private int verbrauchP3;
+        public int VerbrauchP3
+        {
+            get { return verbrauchP3; }
+            set { verbrauchP3 = value; }
+        }
+
+
         // Constructor
         public KTeil(int nummer, string bez) : base(nummer, bez)
         {}
