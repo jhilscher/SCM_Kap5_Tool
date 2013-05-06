@@ -15,10 +15,10 @@ namespace ToolFahrrad_v1
         private double verhaeltnis;
         protected string verwendung;
         protected double pufferwert;
-        protected int vertriebAktuell;
-        protected int verbrauchPrognose1;
-        protected int verbrauchPrognose2;
-        protected int verbrauchPrognose3;
+        protected int vertriebPer0;
+        protected int verbrauchPer1;
+        protected int verbrauchPer2;
+        protected int verbrauchPer3;
                 // Constructor
         public Teil(int nummer, string bez)
         {
@@ -27,10 +27,10 @@ namespace ToolFahrrad_v1
             lagerstand = 0;
             verhaeltnis = 0.0;
             pufferwert = 0;
-            vertriebAktuell = 0;
-            verbrauchPrognose1 = 0;
-            verbrauchPrognose2 = 0;
-            verbrauchPrognose3 = 0;
+            vertriebPer0 = 0;
+            verbrauchPer1 = 0;
+            verbrauchPer2 = 0;
+            verbrauchPer3 = 0;
         }
         // Getter / Setter
         public int Nummer
@@ -85,27 +85,27 @@ namespace ToolFahrrad_v1
         }
         public int Puffer
         {
-            get { return (int)(vertriebAktuell * pufferwert); }
+            get { return (int)(vertriebPer0 * pufferwert); }
         }
-        public int VertriebAktuell
+        public int VertriebPer0
         {
-            get{ return vertriebAktuell; }
-            set{ vertriebAktuell = value; }
+            get{ return vertriebPer0; }
+            set{ vertriebPer0 = value; }
         }
-        public int VerbrauchPrognose1
+        public int VerbrauchPer1
         {
-            get{ return verbrauchPrognose1; }
-            set{ verbrauchPrognose1 = value; }
+            get{ return verbrauchPer1; }
+            set{ verbrauchPer1 = value; }
         }
-        public int VerbrauchPrognose2
+        public int VerbrauchPer2
         {
-            get{ return verbrauchPrognose2; }
-            set{ verbrauchPrognose2 = value; }
+            get{ return verbrauchPer2; }
+            set{ verbrauchPer2 = value; }
         }
-        public int VerbrauchPrognose3
+        public int VerbrauchPer3
         {
-            get { return verbrauchPrognose3; }
-            set { verbrauchPrognose3 = value; }
+            get { return verbrauchPer3; }
+            set { verbrauchPer3 = value; }
         }
         // Method generates hashcode of class member nr
         public int GetHashcode()

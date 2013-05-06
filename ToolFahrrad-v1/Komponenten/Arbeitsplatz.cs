@@ -62,7 +62,7 @@ namespace ToolFahrrad_v1
                 double sum = 0;
                 foreach (KeyValuePair<int, int> kvp in ruest_zeiten)
                 {
-                    if((dc.GetTeil(kvp.Key) as ETeil).ProduktionsMenge > 0)
+                    if((dc.GetTeil(kvp.Key) as ETeil).ProduktionsMengePer0 > 0)
                         sum += kvp.Value;
                 }
                 return sum;
@@ -91,7 +91,7 @@ namespace ToolFahrrad_v1
                 int result = 0;
                 foreach (KeyValuePair<int, int> kvp in werk_zeiten)
                 {
-                    int prMenge = (dc.GetTeil(kvp.Key) as ETeil).ProduktionsMenge;
+                    int prMenge = (dc.GetTeil(kvp.Key) as ETeil).ProduktionsMengePer0;
                     if (prMenge < 0)
                         prMenge = 0;
                     result += kvp.Value * prMenge;

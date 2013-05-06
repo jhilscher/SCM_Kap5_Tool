@@ -84,25 +84,25 @@ namespace ToolFahrrad_v1
 
         private void prognoseSpeichern_Click(object sender, EventArgs e)
         {
-            instance.GetTeil(1).VertriebAktuell = Convert.ToInt32(upDownAW1.Value);
-            instance.GetTeil(2).VertriebAktuell = Convert.ToInt32(upDownAW2.Value);
-            instance.GetTeil(3).VertriebAktuell = Convert.ToInt32(upDownAW3.Value);
+            instance.GetTeil(1).VertriebPer0 = Convert.ToInt32(upDownAW1.Value);
+            instance.GetTeil(2).VertriebPer0 = Convert.ToInt32(upDownAW2.Value);
+            instance.GetTeil(3).VertriebPer0 = Convert.ToInt32(upDownAW3.Value);
 
             instance.GetTeil(1).Pufferwert = Convert.ToInt32(pufferP1.Value);
             instance.GetTeil(2).Pufferwert = Convert.ToInt32(pufferP2.Value);
             instance.GetTeil(3).Pufferwert = Convert.ToInt32(pufferP3.Value);
 
-            instance.GetTeil(1).VerbrauchPrognose1 = Convert.ToInt32(upDownP11.Value);
-            instance.GetTeil(1).VerbrauchPrognose2 = Convert.ToInt32(upDownP12.Value);
-            instance.GetTeil(1).VerbrauchPrognose3 = Convert.ToInt32(upDownP13.Value);
+            instance.GetTeil(1).VerbrauchPer1 = Convert.ToInt32(upDownP11.Value);
+            instance.GetTeil(1).VerbrauchPer2 = Convert.ToInt32(upDownP12.Value);
+            instance.GetTeil(1).VerbrauchPer3 = Convert.ToInt32(upDownP13.Value);
 
-            instance.GetTeil(2).VerbrauchPrognose1 = Convert.ToInt32(upDownP21.Value);
-            instance.GetTeil(2).VerbrauchPrognose2 = Convert.ToInt32(upDownP22.Value);
-            instance.GetTeil(2).VerbrauchPrognose3 = Convert.ToInt32(upDownP23.Value);
+            instance.GetTeil(2).VerbrauchPer1 = Convert.ToInt32(upDownP21.Value);
+            instance.GetTeil(2).VerbrauchPer2 = Convert.ToInt32(upDownP22.Value);
+            instance.GetTeil(2).VerbrauchPer3 = Convert.ToInt32(upDownP23.Value);
 
-            instance.GetTeil(3).VerbrauchPrognose1 = Convert.ToInt32(upDownP31.Value);
-            instance.GetTeil(3).VerbrauchPrognose2 = Convert.ToInt32(upDownP32.Value);
-            instance.GetTeil(3).VerbrauchPrognose3 = Convert.ToInt32(upDownP33.Value);
+            instance.GetTeil(3).VerbrauchPer1 = Convert.ToInt32(upDownP31.Value);
+            instance.GetTeil(3).VerbrauchPer2 = Convert.ToInt32(upDownP32.Value);
+            instance.GetTeil(3).VerbrauchPer3 = Convert.ToInt32(upDownP33.Value);
 
             this.bildSpeichOk.Visible = true;
             this.panelXML.Visible = true;
@@ -253,7 +253,7 @@ namespace ToolFahrrad_v1
                     dataGridViewETeil.Rows[index].Cells[4].Value = imageList1.Images[1];
                 dataGridViewETeil.Rows[index].Cells[5].Value = a.InWartschlange;
                 dataGridViewETeil.Rows[index].Cells[6].Value = a.InBearbeitung;
-                dataGridViewETeil.Rows[index].Cells[7].Value = a.ProduktionsMenge;
+                dataGridViewETeil.Rows[index].Cells[7].Value = a.ProduktionsMengePer0;
                 ++index;
             }
 
@@ -314,11 +314,11 @@ namespace ToolFahrrad_v1
             {
                 foreach (DataGridViewRow row in dataGridViewETeil.Rows)
                 {
-                    int prodMengeAlt = (instance.GetTeil(Convert.ToInt32(row.Cells[0].Value.ToString())) as ETeil).ProduktionsMenge;
+                    int prodMengeAlt = (instance.GetTeil(Convert.ToInt32(row.Cells[0].Value.ToString())) as ETeil).ProduktionsMengePer0;
                     int prodMengeNeu = Convert.ToInt32(row.Cells[7].Value.ToString());
                     if (!prodMengeAlt.Equals(prodMengeNeu))
                     {
-                        (instance.GetTeil(Convert.ToInt32(row.Cells[0].Value.ToString())) as ETeil).ProduktionsMenge = prodMengeNeu;
+                        (instance.GetTeil(Convert.ToInt32(row.Cells[0].Value.ToString())) as ETeil).ProduktionsMengePer0 = prodMengeNeu;
                         text += row.Cells[1].Value.ToString() + ": von " + prodMengeAlt + " auf " + prodMengeNeu + "\n";
                     }
                 }

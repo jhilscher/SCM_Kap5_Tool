@@ -150,15 +150,15 @@ namespace ToolFahrrad_v1
         {
             if (index == 1)
             {
-                bruttoBedarfPer0 = prodMengeAkt * verwendungProdukt1;
+                bruttoBedarfPer0 += prodMengeAkt * verwendungProdukt1;
             }
             else if (index == 2)
             {
-                bruttoBedarfPer0 = prodMengeAkt * verwendungProdukt2;
+                bruttoBedarfPer0 += prodMengeAkt * verwendungProdukt2;
             }
             else if (index == 3)
             {
-                bruttoBedarfPer0 = prodMengeAkt * verwendungProdukt3;
+                bruttoBedarfPer0 += prodMengeAkt * verwendungProdukt3;
             }
         }
         // Public function to calculate forecast consumption for next 3 periods

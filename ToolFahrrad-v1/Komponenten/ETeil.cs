@@ -30,7 +30,7 @@ namespace ToolFahrrad_v1
             benutzteArbeitsplaetze = new List<int>();
         }
         // Getter / Setter
-        public int ProduktionsMenge
+        public int ProduktionsMengePer0
         {
             get { return produktionsMenge; }
             set
@@ -38,7 +38,7 @@ namespace ToolFahrrad_v1
                 produktionsMenge = value;
                 foreach (KeyValuePair<Teil, int> kvp in zusammensetzung)
                 {
-                    kvp.Key.VertriebAktuell = kvp.Value * produktionsMenge;
+                    kvp.Key.VertriebPer0 = kvp.Value * produktionsMenge;
                 }
             }
         }
@@ -93,31 +93,25 @@ namespace ToolFahrrad_v1
                 return istTeil;
             }
         }
-        /// <summary>
-        /// Functions
-        /// </summary>
-        /// <param name="index"></param>
-        /// <param name="vTeil"></param>
- 
         public void SetProduktionsMenge(int index, ETeil vaterTeil)
         {
             if (istEndProdukt == true)
             {
-                produktionsMenge = vertriebAktuell + Puffer - lagerstand - inWarteschlange - inBearbeitung;
+                produktionsMenge = vertriebPer0 + Puffer - lagerstand - inWarteschlange - inBearbeitung;
             }
             else
             {
                 // Set members
-                vertriebAktuell = vaterTeil.ProduktionsMenge + vaterTeil.InWartschlange;
+                vertriebPer0 = vaterTeil.ProduktionsMengePer0 + vaterTeil.InWartschlange;
                 pufferwert = vaterTeil.Pufferwert;
                 // Calculation
                 if (Verwendung.Contains("KDH") == false)
                 {
-                    produktionsMenge = vertriebAktuell + Puffer - lagerstand - inWarteschlange - inBearbeitung;
+                    produktionsMenge = vertriebPer0 + Puffer - lagerstand - inWarteschlange - inBearbeitung;
                 }
                 else
                 {
-                    produktionsMenge += (vertriebAktuell + Puffer - lagerstand - inWarteschlange - inBearbeitung)/3;
+                    produktionsMenge += (vertriebPer0 + Puffer - lagerstand - inWarteschlange - inBearbeitung)/3;
                 }
             }
         }
