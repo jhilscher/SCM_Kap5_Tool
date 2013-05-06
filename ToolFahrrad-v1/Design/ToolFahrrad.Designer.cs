@@ -95,6 +95,14 @@
             this.colPlanung = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tab_APlatz = new System.Windows.Forms.TabPage();
             this.dataGridViewAPlatz = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Ruestanzahl = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewImageColumn2 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
@@ -104,18 +112,10 @@
             this.englischToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.einstellungenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.hilfeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.handbuchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gewichtungToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Ruestanzahl = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewImageColumn2 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.handbuchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tabs.SuspendLayout();
             this.tab_xml.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pufferP3)).BeginInit();
@@ -878,6 +878,55 @@
             resources.ApplyResources(this.dataGridViewAPlatz, "dataGridViewAPlatz");
             this.dataGridViewAPlatz.Name = "dataGridViewAPlatz";
             // 
+            // dataGridViewTextBoxColumn5
+            // 
+            resources.ApplyResources(this.dataGridViewTextBoxColumn5, "dataGridViewTextBoxColumn5");
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.ReadOnly = true;
+            this.dataGridViewTextBoxColumn5.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            // 
+            // dataGridViewTextBoxColumn7
+            // 
+            resources.ApplyResources(this.dataGridViewTextBoxColumn7, "dataGridViewTextBoxColumn7");
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            this.dataGridViewTextBoxColumn7.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn8
+            // 
+            resources.ApplyResources(this.dataGridViewTextBoxColumn8, "dataGridViewTextBoxColumn8");
+            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            this.dataGridViewTextBoxColumn8.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn9
+            // 
+            resources.ApplyResources(this.dataGridViewTextBoxColumn9, "dataGridViewTextBoxColumn9");
+            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
+            this.dataGridViewTextBoxColumn9.ReadOnly = true;
+            // 
+            // Ruestanzahl
+            // 
+            resources.ApplyResources(this.Ruestanzahl, "Ruestanzahl");
+            this.Ruestanzahl.Name = "Ruestanzahl";
+            // 
+            // dataGridViewTextBoxColumn10
+            // 
+            resources.ApplyResources(this.dataGridViewTextBoxColumn10, "dataGridViewTextBoxColumn10");
+            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
+            this.dataGridViewTextBoxColumn10.ReadOnly = true;
+            // 
+            // dataGridViewImageColumn2
+            // 
+            resources.ApplyResources(this.dataGridViewImageColumn2, "dataGridViewImageColumn2");
+            this.dataGridViewImageColumn2.Name = "dataGridViewImageColumn2";
+            this.dataGridViewImageColumn2.ReadOnly = true;
+            this.dataGridViewImageColumn2.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // dataGridViewTextBoxColumn11
+            // 
+            resources.ApplyResources(this.dataGridViewTextBoxColumn11, "dataGridViewTextBoxColumn11");
+            this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
+            this.dataGridViewTextBoxColumn11.ReadOnly = true;
+            // 
             // pictureBox4
             // 
             resources.ApplyResources(this.pictureBox4, "pictureBox4");
@@ -935,6 +984,11 @@
             this.hilfeToolStripMenuItem.Name = "hilfeToolStripMenuItem";
             resources.ApplyResources(this.hilfeToolStripMenuItem, "hilfeToolStripMenuItem");
             // 
+            // handbuchToolStripMenuItem
+            // 
+            this.handbuchToolStripMenuItem.Name = "handbuchToolStripMenuItem";
+            resources.ApplyResources(this.handbuchToolStripMenuItem, "handbuchToolStripMenuItem");
+            // 
             // gewichtungToolStripMenuItem
             // 
             this.gewichtungToolStripMenuItem.Name = "gewichtungToolStripMenuItem";
@@ -948,60 +1002,6 @@
             this.imageList1.Images.SetKeyName(0, "red");
             this.imageList1.Images.SetKeyName(1, "yellow");
             this.imageList1.Images.SetKeyName(2, "green");
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            resources.ApplyResources(this.dataGridViewTextBoxColumn5, "dataGridViewTextBoxColumn5");
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            this.dataGridViewTextBoxColumn5.ReadOnly = true;
-            this.dataGridViewTextBoxColumn5.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            // 
-            // dataGridViewTextBoxColumn7
-            // 
-            resources.ApplyResources(this.dataGridViewTextBoxColumn7, "dataGridViewTextBoxColumn7");
-            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
-            this.dataGridViewTextBoxColumn7.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn8
-            // 
-            resources.ApplyResources(this.dataGridViewTextBoxColumn8, "dataGridViewTextBoxColumn8");
-            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
-            this.dataGridViewTextBoxColumn8.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn9
-            // 
-            resources.ApplyResources(this.dataGridViewTextBoxColumn9, "dataGridViewTextBoxColumn9");
-            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
-            this.dataGridViewTextBoxColumn9.ReadOnly = true;
-            // 
-            // Ruestanzahl
-            // 
-            resources.ApplyResources(this.Ruestanzahl, "Ruestanzahl");
-            this.Ruestanzahl.Name = "Ruestanzahl";
-            // 
-            // dataGridViewTextBoxColumn10
-            // 
-            resources.ApplyResources(this.dataGridViewTextBoxColumn10, "dataGridViewTextBoxColumn10");
-            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
-            this.dataGridViewTextBoxColumn10.ReadOnly = true;
-            // 
-            // dataGridViewImageColumn2
-            // 
-            resources.ApplyResources(this.dataGridViewImageColumn2, "dataGridViewImageColumn2");
-            this.dataGridViewImageColumn2.Name = "dataGridViewImageColumn2";
-            this.dataGridViewImageColumn2.ReadOnly = true;
-            this.dataGridViewImageColumn2.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // dataGridViewTextBoxColumn11
-            // 
-            resources.ApplyResources(this.dataGridViewTextBoxColumn11, "dataGridViewTextBoxColumn11");
-            this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
-            this.dataGridViewTextBoxColumn11.ReadOnly = true;
-            // 
-            // handbuchToolStripMenuItem
-            // 
-            this.handbuchToolStripMenuItem.Name = "handbuchToolStripMenuItem";
-            resources.ApplyResources(this.handbuchToolStripMenuItem, "handbuchToolStripMenuItem");
             // 
             // Fahrrad
             // 

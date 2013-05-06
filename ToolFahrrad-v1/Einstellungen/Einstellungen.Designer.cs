@@ -28,16 +28,23 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Einstellungen));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tab_abweichung = new System.Windows.Forms.TabPage();
+            this.lbl_text = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.lbl_info = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.lbl_100 = new System.Windows.Forms.Label();
+            this.lbl_50 = new System.Windows.Forms.Label();
+            this.btn_ok = new System.Windows.Forms.Button();
             this.lbl_10 = new System.Windows.Forms.Label();
             this.trackBarAbweichung = new System.Windows.Forms.TrackBar();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.btn_ok = new System.Windows.Forms.Button();
-            this.lbl_50 = new System.Windows.Forms.Label();
-            this.lbl_100 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tab_abweichung.SuspendLayout();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBarAbweichung)).BeginInit();
             this.SuspendLayout();
             // 
@@ -54,6 +61,8 @@
             // tab_abweichung
             // 
             this.tab_abweichung.BackColor = System.Drawing.Color.Transparent;
+            this.tab_abweichung.Controls.Add(this.lbl_text);
+            this.tab_abweichung.Controls.Add(this.panel1);
             this.tab_abweichung.Controls.Add(this.lbl_100);
             this.tab_abweichung.Controls.Add(this.lbl_50);
             this.tab_abweichung.Controls.Add(this.btn_ok);
@@ -65,6 +74,75 @@
             this.tab_abweichung.Size = new System.Drawing.Size(348, 239);
             this.tab_abweichung.TabIndex = 0;
             this.tab_abweichung.Text = "Abweichung";
+            // 
+            // lbl_text
+            // 
+            this.lbl_text.AutoSize = true;
+            this.lbl_text.Location = new System.Drawing.Point(15, 101);
+            this.lbl_text.MinimumSize = new System.Drawing.Size(100, 0);
+            this.lbl_text.Name = "lbl_text";
+            this.lbl_text.Size = new System.Drawing.Size(100, 13);
+            this.lbl_text.TabIndex = 8;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.lbl_info);
+            this.panel1.Controls.Add(this.pictureBox1);
+            this.panel1.Location = new System.Drawing.Point(18, 150);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(206, 60);
+            this.panel1.TabIndex = 7;
+            this.panel1.Visible = false;
+            // 
+            // lbl_info
+            // 
+            this.lbl_info.AutoSize = true;
+            this.lbl_info.Location = new System.Drawing.Point(54, 23);
+            this.lbl_info.Name = "lbl_info";
+            this.lbl_info.Size = new System.Drawing.Size(143, 13);
+            this.lbl_info.TabIndex = 6;
+            this.lbl_info.Text = "Abweichung wurde geändert";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(11, 11);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(37, 35);
+            this.pictureBox1.TabIndex = 5;
+            this.pictureBox1.TabStop = false;
+            // 
+            // lbl_100
+            // 
+            this.lbl_100.AutoSize = true;
+            this.lbl_100.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_100.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.lbl_100.Location = new System.Drawing.Point(317, 51);
+            this.lbl_100.Name = "lbl_100";
+            this.lbl_100.Size = new System.Drawing.Size(25, 13);
+            this.lbl_100.TabIndex = 4;
+            this.lbl_100.Text = "100";
+            // 
+            // lbl_50
+            // 
+            this.lbl_50.AutoSize = true;
+            this.lbl_50.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_50.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.lbl_50.Location = new System.Drawing.Point(165, 51);
+            this.lbl_50.Name = "lbl_50";
+            this.lbl_50.Size = new System.Drawing.Size(19, 13);
+            this.lbl_50.TabIndex = 3;
+            this.lbl_50.Text = "50";
+            // 
+            // btn_ok
+            // 
+            this.btn_ok.Location = new System.Drawing.Point(267, 96);
+            this.btn_ok.Name = "btn_ok";
+            this.btn_ok.Size = new System.Drawing.Size(75, 23);
+            this.btn_ok.TabIndex = 2;
+            this.btn_ok.Text = "Speichern";
+            this.btn_ok.UseVisualStyleBackColor = true;
+            this.btn_ok.Click += new System.EventHandler(this.btn_ok_Click);
             // 
             // lbl_10
             // 
@@ -85,6 +163,7 @@
             this.trackBarAbweichung.Size = new System.Drawing.Size(336, 45);
             this.trackBarAbweichung.TabIndex = 0;
             this.trackBarAbweichung.Value = 5;
+            this.trackBarAbweichung.Scroll += new System.EventHandler(this.trackBarAbweichung_Scroll);
             // 
             // tabPage2
             // 
@@ -96,49 +175,21 @@
             this.tabPage2.Text = "tabPage2";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // btn_ok
-            // 
-            this.btn_ok.Location = new System.Drawing.Point(267, 96);
-            this.btn_ok.Name = "btn_ok";
-            this.btn_ok.Size = new System.Drawing.Size(75, 23);
-            this.btn_ok.TabIndex = 2;
-            this.btn_ok.Text = "Speichern";
-            this.btn_ok.UseVisualStyleBackColor = true;
-            this.btn_ok.Click += new System.EventHandler(this.btn_ok_Click);
-            // 
-            // lbl_50
-            // 
-            this.lbl_50.AutoSize = true;
-            this.lbl_50.BackColor = System.Drawing.Color.Transparent;
-            this.lbl_50.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.lbl_50.Location = new System.Drawing.Point(165, 51);
-            this.lbl_50.Name = "lbl_50";
-            this.lbl_50.Size = new System.Drawing.Size(19, 13);
-            this.lbl_50.TabIndex = 3;
-            this.lbl_50.Text = "50";
-            // 
-            // lbl_100
-            // 
-            this.lbl_100.AutoSize = true;
-            this.lbl_100.BackColor = System.Drawing.Color.Transparent;
-            this.lbl_100.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.lbl_100.Location = new System.Drawing.Point(317, 51);
-            this.lbl_100.Name = "lbl_100";
-            this.lbl_100.Size = new System.Drawing.Size(25, 13);
-            this.lbl_100.TabIndex = 4;
-            this.lbl_100.Text = "100";
-            // 
             // Einstellungen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(371, 289);
             this.Controls.Add(this.tabControl1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Einstellungen";
             this.Text = "Einstellungen";
             this.tabControl1.ResumeLayout(false);
             this.tab_abweichung.ResumeLayout(false);
             this.tab_abweichung.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBarAbweichung)).EndInit();
             this.ResumeLayout(false);
 
@@ -154,5 +205,9 @@
         private System.Windows.Forms.Button btn_ok;
         private System.Windows.Forms.Label lbl_50;
         private System.Windows.Forms.Label lbl_100;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label lbl_info;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label lbl_text;
     }
 }

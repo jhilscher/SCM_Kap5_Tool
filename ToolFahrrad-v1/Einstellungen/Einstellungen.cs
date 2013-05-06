@@ -22,6 +22,13 @@ namespace ToolFahrrad_v1
         private void btn_ok_Click(object sender, EventArgs e)
         {
             bv.VerwendeAbweichung = trackBarAbweichung.Value * 10;
+            panel1.Visible = true;
+        }
+
+        private void trackBarAbweichung_Scroll(object sender, EventArgs e)
+        {
+            lbl_text.Text = "Abweichung = " + trackBarAbweichung.Value.ToString() +"0%";
+            panel1.Visible = false;
         }
     }
 }
