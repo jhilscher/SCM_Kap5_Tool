@@ -14,7 +14,7 @@ namespace ToolFahrrad_v1
         protected int lagerstand;
         private double verhaeltnis;
         protected string verwendung;
-        protected int pufferwert;
+        protected double pufferwert;
         protected int vertriebAktuell;
         protected int verbrauchPrognose1;
         protected int verbrauchPrognose2;
@@ -68,10 +68,14 @@ namespace ToolFahrrad_v1
                 }
             }
         }
-        public int Pufferwert
+        public double Pufferwert
         {
             get { return pufferwert; }
-            set { pufferwert = value; }
+            set { pufferwert = value / 100; }
+        }
+        public int Puffer
+        {
+            get { return (int)(vertriebAktuell * pufferwert); }
         }
         public int VertriebAktuell
         {
