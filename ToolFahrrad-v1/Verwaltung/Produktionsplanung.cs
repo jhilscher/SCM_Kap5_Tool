@@ -50,19 +50,33 @@ namespace ToolFahrrad_v1
             {
                 RekursAufloesen(index, null, dc.GetTeil(index) as ETeil);
             }
+            // Aufloesung der KTeile
+            for (int index = 1; index < 4; index++)
+            {
+                ETeil et = dc.GetTeil(index) as ETeil;
+                foreach (KeyValuePair<Teil, int> kvp in et.Zusammensetzung)
+                {
+                    if (kvp.Key is KTeil)
+                    {
+                        //ToDo: Produktionsmenge auch fuer Prog1, Prog2, Prog3!!!
+                        KTeil kt = kvp.Key as KTeil;
+                        kt.initBruttoBedarf(index, et.ProduktionsMenge);
+                    }
+                }
+            }
             aufgeloest = true;
         }
         // Rekursive Prozedur zum Iterieren ueber die Zusammensetzung der Teile
-        private void RekursAufloesen(int index, ETeil vTeil, ETeil kTeil)
+        private void RekursAufloesen(int index, ETeil vaterTeil, ETeil kindTeil)
         {
-            kTeil.SetProduktionsMenge(index, vTeil);
-            if (kTeil.Zusammensetzung.Count() != 0)
+            kindTeil.SetProduktionsMenge(index, vaterTeil);
+            if (kindTeil.Zusammensetzung.Count() != 0)
             {
-                foreach (KeyValuePair<Teil, int> kvp in kTeil.Zusammensetzung)
+                foreach (KeyValuePair<Teil, int> kvp in kindTeil.Zusammensetzung)
                 {
                     if (kvp.Key is ETeil)
                     {
-                        RekursAufloesen(index, kTeil, kvp.Key as ETeil);
+                        RekursAufloesen(index, kindTeil, kvp.Key as ETeil);
                     }
                 }
             }

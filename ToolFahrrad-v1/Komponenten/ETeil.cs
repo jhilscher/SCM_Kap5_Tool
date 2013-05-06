@@ -35,7 +35,7 @@ namespace ToolFahrrad_v1
             get { return produktionsMenge; }
             set
             {
-                this.produktionsMenge = value;
+                produktionsMenge = value;
                 foreach (KeyValuePair<Teil, int> kvp in zusammensetzung)
                 {
                     kvp.Key.VertriebAktuell = kvp.Value * produktionsMenge;
@@ -99,7 +99,7 @@ namespace ToolFahrrad_v1
         /// <param name="index"></param>
         /// <param name="vTeil"></param>
  
-        public void SetProduktionsMenge(int index, ETeil vTeil)
+        public void SetProduktionsMenge(int index, ETeil vaterTeil)
         {
             if (istEndProdukt == true)
             {
@@ -108,10 +108,9 @@ namespace ToolFahrrad_v1
             else
             {
                 // Set members
-                vertriebAktuell = vTeil.ProduktionsMenge + vTeil.InWartschlange;
-                pufferwert = vTeil.Pufferwert;
+                vertriebAktuell = vaterTeil.ProduktionsMenge + vaterTeil.InWartschlange;
+                pufferwert = vaterTeil.Pufferwert;
                 // Calculation
-                //TODO: das muss man ändern
                 if (Verwendung.Contains("KDH") == false)
                 {
                     produktionsMenge = vertriebAktuell + Puffer - lagerstand - inWarteschlange - inBearbeitung;

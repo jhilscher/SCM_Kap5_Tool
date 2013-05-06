@@ -145,6 +145,22 @@ namespace ToolFahrrad_v1
             get { return verwendungP3; }
             set { verwendungP3 = value; }
         }
+        // Public function to initialize BruttoBedarf
+        public void initBruttoBedarf(int index, int prodMengeAkt)
+        {
+            if (index == 1)
+            {
+                bruttoBedarfAkt = prodMengeAkt * verwendungP1;
+            }
+            else if (index == 2)
+            {
+                bruttoBedarfAkt = prodMengeAkt * verwendungP2;
+            }
+            else if (index == 3)
+            {
+                bruttoBedarfAkt = prodMengeAkt * verwendungP3;
+            }
+        }
         // Public function to calculate forecast consumption for next 3 periods
         public void berechnungVerbrauchPrognose(double verwendeAbweichung)
         {

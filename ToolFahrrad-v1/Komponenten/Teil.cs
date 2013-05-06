@@ -71,7 +71,17 @@ namespace ToolFahrrad_v1
         public double Pufferwert
         {
             get { return pufferwert; }
-            set { pufferwert = value / 100; }
+            set
+            {
+                if (value > 1)
+                {
+                    pufferwert = value / 100;
+                }
+                else
+                {
+                    pufferwert = value;
+                }
+            }
         }
         public int Puffer
         {
