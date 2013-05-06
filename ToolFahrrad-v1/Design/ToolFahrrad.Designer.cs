@@ -80,6 +80,7 @@
             this.colFarbe = new System.Windows.Forms.DataGridViewImageColumn();
             this.colZugang = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tab_eTeil = new System.Windows.Forms.TabPage();
+            this.pictureReadOnly = new System.Windows.Forms.PictureBox();
             this.pictureResetETeil = new System.Windows.Forms.PictureBox();
             this.pictureEditEteile = new System.Windows.Forms.PictureBox();
             this.pictureSaveETeile = new System.Windows.Forms.PictureBox();
@@ -113,7 +114,7 @@
             this.hilfeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
-            this.pictureReadOnly = new System.Windows.Forms.PictureBox();
+            this.gewichtungToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tabs.SuspendLayout();
             this.tab_xml.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pufferP3)).BeginInit();
@@ -143,6 +144,7 @@
             this.tab_kTeil.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewKTeil)).BeginInit();
             this.tab_eTeil.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureReadOnly)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureResetETeil)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEditEteile)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureSaveETeile)).BeginInit();
@@ -151,7 +153,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAPlatz)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.menu.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureReadOnly)).BeginInit();
             this.SuspendLayout();
             // 
             // tabs
@@ -212,7 +213,7 @@
             0});
             this.pufferP3.Name = "pufferP3";
             this.pufferP3.Value = new decimal(new int[] {
-            100,
+            20,
             0,
             0,
             0});
@@ -233,7 +234,7 @@
             0});
             this.pufferP2.Name = "pufferP2";
             this.pufferP2.Value = new decimal(new int[] {
-            100,
+            20,
             0,
             0,
             0});
@@ -254,7 +255,7 @@
             0});
             this.pufferP1.Name = "pufferP1";
             this.pufferP1.Value = new decimal(new int[] {
-            100,
+            20,
             0,
             0,
             0});
@@ -744,6 +745,15 @@
             resources.ApplyResources(this.tab_eTeil, "tab_eTeil");
             this.tab_eTeil.Name = "tab_eTeil";
             // 
+            // pictureReadOnly
+            // 
+            this.pictureReadOnly.Cursor = System.Windows.Forms.Cursors.Hand;
+            resources.ApplyResources(this.pictureReadOnly, "pictureReadOnly");
+            this.pictureReadOnly.Name = "pictureReadOnly";
+            this.pictureReadOnly.TabStop = false;
+            this.toolTip.SetToolTip(this.pictureReadOnly, resources.GetString("pictureReadOnly.ToolTip"));
+            this.pictureReadOnly.Click += new System.EventHandler(this.pictureReadOnly_Click);
+            // 
             // pictureResetETeil
             // 
             this.pictureResetETeil.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -961,7 +971,8 @@
             // einstellungenToolStripMenuItem
             // 
             this.einstellungenToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.hilfeToolStripMenuItem});
+            this.hilfeToolStripMenuItem,
+            this.gewichtungToolStripMenuItem});
             this.einstellungenToolStripMenuItem.Name = "einstellungenToolStripMenuItem";
             resources.ApplyResources(this.einstellungenToolStripMenuItem, "einstellungenToolStripMenuItem");
             // 
@@ -978,14 +989,10 @@
             this.imageList1.Images.SetKeyName(1, "yellow");
             this.imageList1.Images.SetKeyName(2, "green");
             // 
-            // pictureReadOnly
+            // gewichtungToolStripMenuItem
             // 
-            this.pictureReadOnly.Cursor = System.Windows.Forms.Cursors.Hand;
-            resources.ApplyResources(this.pictureReadOnly, "pictureReadOnly");
-            this.pictureReadOnly.Name = "pictureReadOnly";
-            this.pictureReadOnly.TabStop = false;
-            this.toolTip.SetToolTip(this.pictureReadOnly, resources.GetString("pictureReadOnly.ToolTip"));
-            this.pictureReadOnly.Click += new System.EventHandler(this.pictureReadOnly_Click);
+            this.gewichtungToolStripMenuItem.Name = "gewichtungToolStripMenuItem";
+            resources.ApplyResources(this.gewichtungToolStripMenuItem, "gewichtungToolStripMenuItem");
             // 
             // Fahrrad
             // 
@@ -1027,6 +1034,7 @@
             this.tab_kTeil.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewKTeil)).EndInit();
             this.tab_eTeil.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureReadOnly)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureResetETeil)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEditEteile)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureSaveETeile)).EndInit();
@@ -1036,7 +1044,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.menu.ResumeLayout(false);
             this.menu.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureReadOnly)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1128,6 +1135,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
         private System.Windows.Forms.Label lableDazu;
         private System.Windows.Forms.PictureBox pictureReadOnly;
+        private System.Windows.Forms.ToolStripMenuItem gewichtungToolStripMenuItem;
     }
 }
 
