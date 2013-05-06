@@ -310,9 +310,9 @@ namespace ToolFahrrad_v1
                 kt.DiskontMenge = dm;
                 kt.Lagerstand = bs;
                 kt.Verwendung = vw;
-                kt.VerwendungP1 = TVP1;
-                kt.VerwendungP2 = TVP2;
-                kt.VerwendungP3 = TVP3;
+                kt.VerwendungProdukt1 = TVP1;
+                kt.VerwendungProdukt2 = TVP2;
+                kt.VerwendungProdukt3 = TVP3;
                 listeTeile[nr] = kt;
             }
             else
