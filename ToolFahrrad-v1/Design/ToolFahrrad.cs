@@ -28,7 +28,17 @@ namespace ToolFahrrad_v1
             InitializeComponent();
         }
 
+        private void toolAusfueren_Click(object sender, EventArgs e)
+        {
+            pp.Aufloesen();
+            if (!lableDazu.Text.Contains("aus der Periode"))
+                lableDazu.Text = lableDazu.Text + "aus der Periode " + xml.period;
 
+            this.Information();
+            this.toolAusfueren.Visible = false;
+            this.save.Visible = true;
+            this.Tab.Visible = true;
+        }
         // F1
 
         //protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
@@ -300,7 +310,7 @@ namespace ToolFahrrad_v1
                 dataGridViewAPlatz.Rows[index].Cells[5].Value = gesammt + " min";
                 if (gesammt <= a.zeit)
                     dataGridViewAPlatz.Rows[index].Cells[6].Value = imageList1.Images[2];
-                else if (gesammt <= (a.zeit + a.zeit / 2))
+                else if (gesammt <= (a.zeit + a.ErsteSchicht))
                     dataGridViewAPlatz.Rows[index].Cells[6].Value = imageList1.Images[1];
                 else
                     dataGridViewAPlatz.Rows[index].Cells[6].Value = imageList1.Images[0];
@@ -319,18 +329,6 @@ namespace ToolFahrrad_v1
 
                 ++index;
             }
-        }
-
-        private void toolAusfueren_Click(object sender, EventArgs e)
-        {
-            pp.Aufloesen();
-            if (!lableDazu.Text.Contains("aus der Periode"))
-                lableDazu.Text = lableDazu.Text + "aus der Periode " + xml.period;
-
-            this.Information();
-            this.toolAusfueren.Visible = false;
-            this.save.Visible = true;
-            this.Tab.Visible = true;
         }
 
         private void pictureEditEteile_Click(object sender, EventArgs e)

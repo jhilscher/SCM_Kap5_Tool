@@ -13,6 +13,8 @@ namespace ToolFahrrad_v1
     public partial class Einstellungen : Form
     {
         Bestellverwaltung bv = new Bestellverwaltung();
+        DataContainer instance = DataContainer.Instance;
+        Arbeitsplatz ap = new Arbeitsplatz();
 
         public Einstellungen()
         {
@@ -29,6 +31,12 @@ namespace ToolFahrrad_v1
         {
             lbl_text.Text = "Abweichung = " + trackBarAbweichung.Value.ToString() +"0%";
             panel1.Visible = false;
+        }
+
+        private void btn_schicht_save_Click(object sender, EventArgs e)
+        {
+            ap.ErsteSchicht = (int)numericUpDown1.Value;
+            ap.ZweiteSchicht = (int)numericUpDown2.Value;
         }
     }
 }
