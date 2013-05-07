@@ -52,10 +52,16 @@ namespace ToolFahrrad_v1
         //    // Call the base class
         //    return base.ProcessCmdKey(ref msg, keyData);
         //}
-
-
-
+        
         private void xml_suchen_Click(object sender, EventArgs e)
+        {
+            xmlOeffnen();
+        }
+        private void dateiÖffnenToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            xmlOeffnen();
+        }
+        private void xmlOeffnen()
         {
             OpenFileDialog openFileDialog = new OpenFileDialog();
             openFileDialog.Filter = "xml-Datei öffnen (*.xml)|*.xml";
@@ -82,6 +88,7 @@ namespace ToolFahrrad_v1
                     okXml = false;
                 }
             }
+            this.panelXML.Visible = true;
         }
 
         private void englischToolStripMenuItem_Click_1(object sender, EventArgs e)
@@ -220,10 +227,6 @@ namespace ToolFahrrad_v1
             // KTeile
             this.DataGriedViewRemove(dataGridViewKTeil);
             int index = 0;
-            for (int i = 0; i < 6; ++i)
-            {
-                this.dataGridViewKTeil.Columns[i].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            }
             foreach (var a in instance.ListeKTeile)
             {
                 dataGridViewKTeil.Rows.Add();
@@ -253,10 +256,6 @@ namespace ToolFahrrad_v1
             // Eteile
             this.DataGriedViewRemove(dataGridViewETeil);
             index = 0;
-            for (int i = 0; i < 8; ++i)
-            {
-                this.dataGridViewETeil.Columns[i].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            }
             foreach (var a in instance.ListeETeile)
             {
                 dataGridViewETeil.Rows.Add();
@@ -277,14 +276,14 @@ namespace ToolFahrrad_v1
                 //Farbe
                 for (int i = 0; i < 8; ++i)
                 {
-                    if(i == 4)
+                    if (i == 4)
                         dataGridViewETeil.Columns[i].DefaultCellStyle.BackColor = Color.LightYellow;
-                    else if(i == 7)
+                    else if (i == 7)
                         dataGridViewETeil.Columns[7].DefaultCellStyle.BackColor = Color.Honeydew;
                     else
                         dataGridViewETeil.Columns[i].DefaultCellStyle.BackColor = Color.FloralWhite;
 
-                    
+
                 }
                 ++index;
             }
@@ -292,10 +291,6 @@ namespace ToolFahrrad_v1
             // Arbeitsplätze
             this.DataGriedViewRemove(dataGridViewAPlatz);
             index = 0;
-            for (int i = 0; i < 8; ++i)
-            {
-                this.dataGridViewAPlatz.Columns[i].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            }
             foreach (var a in instance.ArbeitsplatzList)
             {
                 int gesammtZeit = (int)(a.GetRuestZeit * a.RuestungCustom);
@@ -308,20 +303,29 @@ namespace ToolFahrrad_v1
                 dataGridViewAPlatz.Rows[index].Cells[3].Value = (int)(a.GetRuestZeit * a.RuestungCustom) + " min";
                 dataGridViewAPlatz.Rows[index].Cells[4].Value = a.RuestungCustom;
                 dataGridViewAPlatz.Rows[index].Cells[5].Value = gesammt + " min";
-                if (gesammt <= a.zeit)
+                if (gesammt <= a.zeit) // newTeim <= 2400 
                     dataGridViewAPlatz.Rows[index].Cells[6].Value = imageList1.Images[2];
-                else if (gesammt <= (a.zeit + a.ErsteSchicht))
-                    dataGridViewAPlatz.Rows[index].Cells[6].Value = imageList1.Images[1];
-                else
+                else if (gesammt > instance.ErsteSchicht) // newTime > 3600
+                {
                     dataGridViewAPlatz.Rows[index].Cells[6].Value = imageList1.Images[0];
+                    dataGridViewAPlatz.Rows[index].Cells[8].Value = true;
+                }
+                else if (gesammt > a.zeit && gesammt <= instance.ErsteSchicht) // 2400 < newTime < 3600 
+                {
+                    dataGridViewAPlatz.Rows[index].Cells[6].Value = imageList1.Images[1];
+                }
+                else
+                {
+                    dataGridViewAPlatz.Rows[index].Cells[6].Value = imageList1.Images[2];
+                }
                 dataGridViewAPlatz.Rows[index].Cells[7].Value = a.zeit - gesammt + " min";
 
                 //Farbe
-                for (int i = 0; i < 8; ++i)
+                for (int i = 0; i < 9; ++i)
                 {
                     if (i < 2)
                         dataGridViewAPlatz.Columns[i].DefaultCellStyle.BackColor = Color.FloralWhite;
-                    else if (i == 2 || i == 3 || (i >= 5 && i <= 7))
+                    else if (i == 2 || i == 3 || (i >= 5 && i <= 8))
                         dataGridViewAPlatz.Columns[i].DefaultCellStyle.BackColor = Color.LightYellow;
                     else
                         dataGridViewAPlatz.Columns[i].DefaultCellStyle.BackColor = Color.Honeydew;
@@ -368,7 +372,7 @@ namespace ToolFahrrad_v1
                 dataGridViewETeil.Columns[7].ReadOnly = true;
 
                 Information();
-                if(!text.Equals(string.Empty))
+                if (!text.Equals(string.Empty))
                     result = MessageBox.Show(text, "Message", MessageBoxButtons.OK);
                 else
                     result = MessageBox.Show("keine Spalte wurde geändert", "Message", MessageBoxButtons.OK);
@@ -401,5 +405,27 @@ namespace ToolFahrrad_v1
             Einstellungen einstellungen = new Einstellungen();
             einstellungen.Show();
         }
+
+        private void startSeiteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("http://scsim.de/");
+        }
+
+        private void englischToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            englischToolStripMenuItem1.Checked = true;
+            deutschToolStripMenuItem1.Checked = false;
+        }
+
+        private void deutschToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            englischToolStripMenuItem1.Checked = false;
+            deutschToolStripMenuItem1.Checked = true;
+        }
+
+        private void schließenToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
+        }        
     }
 }

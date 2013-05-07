@@ -11,18 +11,6 @@ namespace ToolFahrrad_v1
         // Class members
         protected int nr;
         public int zeit = 2400;
-        private int ersteSchicht = 3600;
-        private int zweiteSchicht = 6000;
-        public int ZweiteSchicht
-        {
-            get { return zweiteSchicht; }
-            set { zweiteSchicht = value; }
-        }
-        public int ErsteSchicht
-        {
-            get { return ersteSchicht; }
-            set { ersteSchicht = value; }
-        }
         protected int anz_schichten = 1;
         protected int anz_uebermin = 0;
         private int ruestungVorPeriode = 0;

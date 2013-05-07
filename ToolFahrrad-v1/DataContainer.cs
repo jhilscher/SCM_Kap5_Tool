@@ -21,6 +21,18 @@ namespace ToolFahrrad_v1
         private Produktionsplanung pp;
         private string openFile;
         private string saveFile;
+        private int ersteSchicht = 3600;
+        private int zweiteSchicht = 6000;
+        public int ZweiteSchicht
+        {
+            get { return zweiteSchicht; }
+            set { zweiteSchicht = value; }
+        }
+        public int ErsteSchicht
+        {
+            get { return ersteSchicht; }
+            set { ersteSchicht = value; }
+        }
         // Constructor
         private DataContainer()
         {

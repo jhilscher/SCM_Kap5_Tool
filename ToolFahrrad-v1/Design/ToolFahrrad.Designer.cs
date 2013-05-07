@@ -32,6 +32,9 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Fahrrad));
             this.tabs = new System.Windows.Forms.TabControl();
             this.tab_xml = new System.Windows.Forms.TabPage();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.pufferP3 = new System.Windows.Forms.NumericUpDown();
             this.pufferP2 = new System.Windows.Forms.NumericUpDown();
             this.pufferP1 = new System.Windows.Forms.NumericUpDown();
@@ -73,18 +76,30 @@
             this.Tab = new System.Windows.Forms.TabControl();
             this.tab_kTeil = new System.Windows.Forms.TabPage();
             this.dataGridViewKTeil = new System.Windows.Forms.DataGridView();
-            this.colNr = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colBestand = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colProzent = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colFarbe = new System.Windows.Forms.DataGridViewImageColumn();
-            this.colZugang = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tab_eTeil = new System.Windows.Forms.TabPage();
             this.pictureReadOnly = new System.Windows.Forms.PictureBox();
             this.pictureResetETeil = new System.Windows.Forms.PictureBox();
             this.pictureEditEteile = new System.Windows.Forms.PictureBox();
             this.pictureSaveETeile = new System.Windows.Forms.PictureBox();
             this.dataGridViewETeil = new System.Windows.Forms.DataGridView();
+            this.tab_APlatz = new System.Windows.Forms.TabPage();
+            this.dataGridViewAPlatz = new System.Windows.Forms.DataGridView();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
+            this.menu = new System.Windows.Forms.MenuStrip();
+            this.einstellungenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.hilfeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.handbuchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.gewichtungToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolTip = new System.Windows.Forms.ToolTip(this.components);
+            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
+            this.colNr = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colBestand = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colProzent = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colFarbe = new System.Windows.Forms.DataGridViewImageColumn();
+            this.colZugang = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -93,8 +108,6 @@
             this.colWarteschlange = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colBearbeitung = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colPlanung = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tab_APlatz = new System.Windows.Forms.TabPage();
-            this.dataGridViewAPlatz = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -103,19 +116,17 @@
             this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewImageColumn2 = new System.Windows.Forms.DataGridViewImageColumn();
             this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
-            this.menu = new System.Windows.Forms.MenuStrip();
-            this.spracheToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.deutschToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.englischToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.einstellungenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.hilfeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.handbuchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.gewichtungToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolTip = new System.Windows.Forms.ToolTip(this.components);
-            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
+            this.s1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.scimToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.startSeiteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.spracheToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.deutschToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.englischToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.dateiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.schließenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.dateiÖffnenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.xMLexportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.tabs.SuspendLayout();
             this.tab_xml.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pufferP3)).BeginInit();
@@ -167,6 +178,9 @@
             // tab_xml
             // 
             this.tab_xml.BackColor = System.Drawing.Color.Transparent;
+            this.tab_xml.Controls.Add(this.label5);
+            this.tab_xml.Controls.Add(this.label4);
+            this.tab_xml.Controls.Add(this.label3);
             this.tab_xml.Controls.Add(this.pufferP3);
             this.tab_xml.Controls.Add(this.pufferP2);
             this.tab_xml.Controls.Add(this.pufferP1);
@@ -198,15 +212,30 @@
             resources.ApplyResources(this.tab_xml, "tab_xml");
             this.tab_xml.Name = "tab_xml";
             // 
+            // label5
+            // 
+            resources.ApplyResources(this.label5, "label5");
+            this.label5.Name = "label5";
+            // 
+            // label4
+            // 
+            resources.ApplyResources(this.label4, "label4");
+            this.label4.Name = "label4";
+            // 
+            // label3
+            // 
+            resources.ApplyResources(this.label3, "label3");
+            this.label3.Name = "label3";
+            // 
             // pufferP3
             // 
             this.pufferP3.BackColor = System.Drawing.Color.MistyRose;
+            resources.ApplyResources(this.pufferP3, "pufferP3");
             this.pufferP3.Increment = new decimal(new int[] {
             10,
             0,
             0,
             0});
-            resources.ApplyResources(this.pufferP3, "pufferP3");
             this.pufferP3.Maximum = new decimal(new int[] {
             10000,
             0,
@@ -222,12 +251,12 @@
             // pufferP2
             // 
             this.pufferP2.BackColor = System.Drawing.Color.MistyRose;
+            resources.ApplyResources(this.pufferP2, "pufferP2");
             this.pufferP2.Increment = new decimal(new int[] {
             10,
             0,
             0,
             0});
-            resources.ApplyResources(this.pufferP2, "pufferP2");
             this.pufferP2.Maximum = new decimal(new int[] {
             10000,
             0,
@@ -243,12 +272,12 @@
             // pufferP1
             // 
             this.pufferP1.BackColor = System.Drawing.Color.MistyRose;
+            resources.ApplyResources(this.pufferP1, "pufferP1");
             this.pufferP1.Increment = new decimal(new int[] {
             10,
             0,
             0,
             0});
-            resources.ApplyResources(this.pufferP1, "pufferP1");
             this.pufferP1.Maximum = new decimal(new int[] {
             10000,
             0,
@@ -698,44 +727,6 @@
             resources.ApplyResources(this.dataGridViewKTeil, "dataGridViewKTeil");
             this.dataGridViewKTeil.Name = "dataGridViewKTeil";
             // 
-            // colNr
-            // 
-            resources.ApplyResources(this.colNr, "colNr");
-            this.colNr.Name = "colNr";
-            this.colNr.ReadOnly = true;
-            this.colNr.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            // 
-            // colName
-            // 
-            resources.ApplyResources(this.colName, "colName");
-            this.colName.Name = "colName";
-            this.colName.ReadOnly = true;
-            // 
-            // colBestand
-            // 
-            resources.ApplyResources(this.colBestand, "colBestand");
-            this.colBestand.Name = "colBestand";
-            this.colBestand.ReadOnly = true;
-            // 
-            // colProzent
-            // 
-            resources.ApplyResources(this.colProzent, "colProzent");
-            this.colProzent.Name = "colProzent";
-            this.colProzent.ReadOnly = true;
-            // 
-            // colFarbe
-            // 
-            resources.ApplyResources(this.colFarbe, "colFarbe");
-            this.colFarbe.Name = "colFarbe";
-            this.colFarbe.ReadOnly = true;
-            this.colFarbe.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // colZugang
-            // 
-            resources.ApplyResources(this.colZugang, "colZugang");
-            this.colZugang.Name = "colZugang";
-            this.colZugang.ReadOnly = true;
-            // 
             // tab_eTeil
             // 
             this.tab_eTeil.BackColor = System.Drawing.Color.Transparent;
@@ -802,6 +793,131 @@
             resources.ApplyResources(this.dataGridViewETeil, "dataGridViewETeil");
             this.dataGridViewETeil.Name = "dataGridViewETeil";
             // 
+            // tab_APlatz
+            // 
+            this.tab_APlatz.BackColor = System.Drawing.Color.Transparent;
+            this.tab_APlatz.Controls.Add(this.dataGridViewAPlatz);
+            resources.ApplyResources(this.tab_APlatz, "tab_APlatz");
+            this.tab_APlatz.Name = "tab_APlatz";
+            // 
+            // dataGridViewAPlatz
+            // 
+            this.dataGridViewAPlatz.AllowUserToAddRows = false;
+            this.dataGridViewAPlatz.AllowUserToDeleteRows = false;
+            this.dataGridViewAPlatz.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.dataGridViewAPlatz.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridViewAPlatz.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewAPlatz.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn5,
+            this.dataGridViewTextBoxColumn7,
+            this.dataGridViewTextBoxColumn8,
+            this.dataGridViewTextBoxColumn9,
+            this.Ruestanzahl,
+            this.dataGridViewTextBoxColumn10,
+            this.dataGridViewImageColumn2,
+            this.dataGridViewTextBoxColumn11,
+            this.s1});
+            resources.ApplyResources(this.dataGridViewAPlatz, "dataGridViewAPlatz");
+            this.dataGridViewAPlatz.Name = "dataGridViewAPlatz";
+            // 
+            // pictureBox4
+            // 
+            resources.ApplyResources(this.pictureBox4, "pictureBox4");
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.TabStop = false;
+            // 
+            // label2
+            // 
+            resources.ApplyResources(this.label2, "label2");
+            this.label2.Name = "label2";
+            // 
+            // openFileDialog
+            // 
+            this.openFileDialog.FileName = "openFileDialog";
+            // 
+            // menu
+            // 
+            this.menu.BackColor = System.Drawing.Color.Transparent;
+            this.menu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.dateiToolStripMenuItem,
+            this.einstellungenToolStripMenuItem,
+            this.scimToolStripMenuItem});
+            resources.ApplyResources(this.menu, "menu");
+            this.menu.Name = "menu";
+            // 
+            // einstellungenToolStripMenuItem
+            // 
+            this.einstellungenToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.hilfeToolStripMenuItem,
+            this.spracheToolStripMenuItem1,
+            this.gewichtungToolStripMenuItem});
+            this.einstellungenToolStripMenuItem.Name = "einstellungenToolStripMenuItem";
+            resources.ApplyResources(this.einstellungenToolStripMenuItem, "einstellungenToolStripMenuItem");
+            // 
+            // hilfeToolStripMenuItem
+            // 
+            this.hilfeToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.handbuchToolStripMenuItem});
+            resources.ApplyResources(this.hilfeToolStripMenuItem, "hilfeToolStripMenuItem");
+            this.hilfeToolStripMenuItem.Name = "hilfeToolStripMenuItem";
+            // 
+            // handbuchToolStripMenuItem
+            // 
+            this.handbuchToolStripMenuItem.Name = "handbuchToolStripMenuItem";
+            resources.ApplyResources(this.handbuchToolStripMenuItem, "handbuchToolStripMenuItem");
+            // 
+            // gewichtungToolStripMenuItem
+            // 
+            resources.ApplyResources(this.gewichtungToolStripMenuItem, "gewichtungToolStripMenuItem");
+            this.gewichtungToolStripMenuItem.Name = "gewichtungToolStripMenuItem";
+            this.gewichtungToolStripMenuItem.Click += new System.EventHandler(this.gewichtungToolStripMenuItem_Click);
+            // 
+            // imageList1
+            // 
+            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
+            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageList1.Images.SetKeyName(0, "red");
+            this.imageList1.Images.SetKeyName(1, "yellow");
+            this.imageList1.Images.SetKeyName(2, "green");
+            // 
+            // colNr
+            // 
+            resources.ApplyResources(this.colNr, "colNr");
+            this.colNr.Name = "colNr";
+            this.colNr.ReadOnly = true;
+            this.colNr.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            // 
+            // colName
+            // 
+            resources.ApplyResources(this.colName, "colName");
+            this.colName.Name = "colName";
+            this.colName.ReadOnly = true;
+            // 
+            // colBestand
+            // 
+            resources.ApplyResources(this.colBestand, "colBestand");
+            this.colBestand.Name = "colBestand";
+            this.colBestand.ReadOnly = true;
+            // 
+            // colProzent
+            // 
+            resources.ApplyResources(this.colProzent, "colProzent");
+            this.colProzent.Name = "colProzent";
+            this.colProzent.ReadOnly = true;
+            // 
+            // colFarbe
+            // 
+            resources.ApplyResources(this.colFarbe, "colFarbe");
+            this.colFarbe.Name = "colFarbe";
+            this.colFarbe.ReadOnly = true;
+            this.colFarbe.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // colZugang
+            // 
+            resources.ApplyResources(this.colZugang, "colZugang");
+            this.colZugang.Name = "colZugang";
+            this.colZugang.ReadOnly = true;
+            // 
             // dataGridViewTextBoxColumn1
             // 
             resources.ApplyResources(this.dataGridViewTextBoxColumn1, "dataGridViewTextBoxColumn1");
@@ -852,32 +968,6 @@
             this.colPlanung.Name = "colPlanung";
             this.colPlanung.ReadOnly = true;
             // 
-            // tab_APlatz
-            // 
-            this.tab_APlatz.BackColor = System.Drawing.Color.Transparent;
-            this.tab_APlatz.Controls.Add(this.dataGridViewAPlatz);
-            resources.ApplyResources(this.tab_APlatz, "tab_APlatz");
-            this.tab_APlatz.Name = "tab_APlatz";
-            // 
-            // dataGridViewAPlatz
-            // 
-            this.dataGridViewAPlatz.AllowUserToAddRows = false;
-            this.dataGridViewAPlatz.AllowUserToDeleteRows = false;
-            this.dataGridViewAPlatz.BackgroundColor = System.Drawing.SystemColors.Control;
-            this.dataGridViewAPlatz.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridViewAPlatz.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewAPlatz.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn5,
-            this.dataGridViewTextBoxColumn7,
-            this.dataGridViewTextBoxColumn8,
-            this.dataGridViewTextBoxColumn9,
-            this.Ruestanzahl,
-            this.dataGridViewTextBoxColumn10,
-            this.dataGridViewImageColumn2,
-            this.dataGridViewTextBoxColumn11});
-            resources.ApplyResources(this.dataGridViewAPlatz, "dataGridViewAPlatz");
-            this.dataGridViewAPlatz.Name = "dataGridViewAPlatz";
-            // 
             // dataGridViewTextBoxColumn5
             // 
             resources.ApplyResources(this.dataGridViewTextBoxColumn5, "dataGridViewTextBoxColumn5");
@@ -927,81 +1017,78 @@
             this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
             this.dataGridViewTextBoxColumn11.ReadOnly = true;
             // 
-            // pictureBox4
+            // s1
             // 
-            resources.ApplyResources(this.pictureBox4, "pictureBox4");
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.TabStop = false;
+            resources.ApplyResources(this.s1, "s1");
+            this.s1.Name = "s1";
+            this.s1.ReadOnly = true;
             // 
-            // label2
+            // scimToolStripMenuItem
             // 
-            resources.ApplyResources(this.label2, "label2");
-            this.label2.Name = "label2";
+            this.scimToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.startSeiteToolStripMenuItem});
+            this.scimToolStripMenuItem.Name = "scimToolStripMenuItem";
+            resources.ApplyResources(this.scimToolStripMenuItem, "scimToolStripMenuItem");
             // 
-            // openFileDialog
+            // startSeiteToolStripMenuItem
             // 
-            this.openFileDialog.FileName = "openFileDialog";
+            this.startSeiteToolStripMenuItem.Name = "startSeiteToolStripMenuItem";
+            resources.ApplyResources(this.startSeiteToolStripMenuItem, "startSeiteToolStripMenuItem");
+            this.startSeiteToolStripMenuItem.Click += new System.EventHandler(this.startSeiteToolStripMenuItem_Click);
             // 
-            // menu
+            // spracheToolStripMenuItem1
             // 
-            this.menu.BackColor = System.Drawing.Color.Transparent;
-            this.menu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.spracheToolStripMenuItem,
-            this.einstellungenToolStripMenuItem});
-            resources.ApplyResources(this.menu, "menu");
-            this.menu.Name = "menu";
+            this.spracheToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.deutschToolStripMenuItem1,
+            this.englischToolStripMenuItem1});
+            this.spracheToolStripMenuItem1.Name = "spracheToolStripMenuItem1";
+            resources.ApplyResources(this.spracheToolStripMenuItem1, "spracheToolStripMenuItem1");
             // 
-            // spracheToolStripMenuItem
+            // deutschToolStripMenuItem1
             // 
-            this.spracheToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.deutschToolStripMenuItem,
-            this.englischToolStripMenuItem});
-            this.spracheToolStripMenuItem.Name = "spracheToolStripMenuItem";
-            resources.ApplyResources(this.spracheToolStripMenuItem, "spracheToolStripMenuItem");
+            this.deutschToolStripMenuItem1.Checked = true;
+            this.deutschToolStripMenuItem1.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.deutschToolStripMenuItem1.Name = "deutschToolStripMenuItem1";
+            resources.ApplyResources(this.deutschToolStripMenuItem1, "deutschToolStripMenuItem1");
+            this.deutschToolStripMenuItem1.Click += new System.EventHandler(this.deutschToolStripMenuItem1_Click);
             // 
-            // deutschToolStripMenuItem
+            // englischToolStripMenuItem1
             // 
-            this.deutschToolStripMenuItem.Name = "deutschToolStripMenuItem";
-            resources.ApplyResources(this.deutschToolStripMenuItem, "deutschToolStripMenuItem");
+            this.englischToolStripMenuItem1.Name = "englischToolStripMenuItem1";
+            resources.ApplyResources(this.englischToolStripMenuItem1, "englischToolStripMenuItem1");
+            this.englischToolStripMenuItem1.Click += new System.EventHandler(this.englischToolStripMenuItem1_Click);
             // 
-            // englischToolStripMenuItem
+            // dateiToolStripMenuItem
             // 
-            this.englischToolStripMenuItem.Name = "englischToolStripMenuItem";
-            resources.ApplyResources(this.englischToolStripMenuItem, "englischToolStripMenuItem");
+            this.dateiToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.dateiÖffnenToolStripMenuItem,
+            this.xMLexportToolStripMenuItem,
+            this.toolStripSeparator1,
+            this.schließenToolStripMenuItem});
+            this.dateiToolStripMenuItem.Name = "dateiToolStripMenuItem";
+            resources.ApplyResources(this.dateiToolStripMenuItem, "dateiToolStripMenuItem");
             // 
-            // einstellungenToolStripMenuItem
+            // schließenToolStripMenuItem
             // 
-            this.einstellungenToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.hilfeToolStripMenuItem,
-            this.gewichtungToolStripMenuItem});
-            this.einstellungenToolStripMenuItem.Name = "einstellungenToolStripMenuItem";
-            resources.ApplyResources(this.einstellungenToolStripMenuItem, "einstellungenToolStripMenuItem");
+            resources.ApplyResources(this.schließenToolStripMenuItem, "schließenToolStripMenuItem");
+            this.schließenToolStripMenuItem.Name = "schließenToolStripMenuItem";
+            this.schließenToolStripMenuItem.Click += new System.EventHandler(this.schließenToolStripMenuItem_Click_1);
             // 
-            // hilfeToolStripMenuItem
+            // dateiÖffnenToolStripMenuItem
             // 
-            this.hilfeToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.handbuchToolStripMenuItem});
-            this.hilfeToolStripMenuItem.Name = "hilfeToolStripMenuItem";
-            resources.ApplyResources(this.hilfeToolStripMenuItem, "hilfeToolStripMenuItem");
+            resources.ApplyResources(this.dateiÖffnenToolStripMenuItem, "dateiÖffnenToolStripMenuItem");
+            this.dateiÖffnenToolStripMenuItem.Name = "dateiÖffnenToolStripMenuItem";
+            this.dateiÖffnenToolStripMenuItem.Click += new System.EventHandler(this.dateiÖffnenToolStripMenuItem_Click);
             // 
-            // handbuchToolStripMenuItem
+            // xMLexportToolStripMenuItem
             // 
-            this.handbuchToolStripMenuItem.Name = "handbuchToolStripMenuItem";
-            resources.ApplyResources(this.handbuchToolStripMenuItem, "handbuchToolStripMenuItem");
+            resources.ApplyResources(this.xMLexportToolStripMenuItem, "xMLexportToolStripMenuItem");
+            this.xMLexportToolStripMenuItem.Name = "xMLexportToolStripMenuItem";
             // 
-            // gewichtungToolStripMenuItem
+            // toolStripSeparator1
             // 
-            this.gewichtungToolStripMenuItem.Name = "gewichtungToolStripMenuItem";
-            resources.ApplyResources(this.gewichtungToolStripMenuItem, "gewichtungToolStripMenuItem");
-            this.gewichtungToolStripMenuItem.Click += new System.EventHandler(this.gewichtungToolStripMenuItem_Click);
-            // 
-            // imageList1
-            // 
-            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
-            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
-            this.imageList1.Images.SetKeyName(0, "red");
-            this.imageList1.Images.SetKeyName(1, "yellow");
-            this.imageList1.Images.SetKeyName(2, "green");
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            resources.ApplyResources(this.toolStripSeparator1, "toolStripSeparator1");
             // 
             // Fahrrad
             // 
@@ -1075,9 +1162,6 @@
         private System.Windows.Forms.NumericUpDown upDownAW2;
         private System.Windows.Forms.NumericUpDown upDownAW1;
         private System.Windows.Forms.MenuStrip menu;
-        private System.Windows.Forms.ToolStripMenuItem spracheToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem deutschToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem englischToolStripMenuItem;
         private System.Windows.Forms.NumericUpDown upDownP33;
         private System.Windows.Forms.NumericUpDown upDownP23;
         private System.Windows.Forms.NumericUpDown upDownP13;
@@ -1117,6 +1201,22 @@
         private System.Windows.Forms.DataGridView dataGridViewETeil;
         private System.Windows.Forms.PictureBox pictureSaveETeile;
         private System.Windows.Forms.PictureBox pictureEditEteile;
+        private System.Windows.Forms.PictureBox pictureResetETeil;
+        private System.Windows.Forms.TabPage tab_APlatz;
+        private System.Windows.Forms.DataGridView dataGridViewAPlatz;
+        private System.Windows.Forms.Label lableDazu;
+        private System.Windows.Forms.PictureBox pictureReadOnly;
+        private System.Windows.Forms.ToolStripMenuItem gewichtungToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem handbuchToolStripMenuItem;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colNr;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colBestand;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colProzent;
+        private System.Windows.Forms.DataGridViewImageColumn colFarbe;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colZugang;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
@@ -1125,18 +1225,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn colWarteschlange;
         private System.Windows.Forms.DataGridViewTextBoxColumn colBearbeitung;
         private System.Windows.Forms.DataGridViewTextBoxColumn colPlanung;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colNr;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colBestand;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colProzent;
-        private System.Windows.Forms.DataGridViewImageColumn colFarbe;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colZugang;
-        private System.Windows.Forms.PictureBox pictureResetETeil;
-        private System.Windows.Forms.TabPage tab_APlatz;
-        private System.Windows.Forms.DataGridView dataGridViewAPlatz;
-        private System.Windows.Forms.Label lableDazu;
-        private System.Windows.Forms.PictureBox pictureReadOnly;
-        private System.Windows.Forms.ToolStripMenuItem gewichtungToolStripMenuItem;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
@@ -1145,7 +1233,17 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
         private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
-        private System.Windows.Forms.ToolStripMenuItem handbuchToolStripMenuItem;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn s1;
+        private System.Windows.Forms.ToolStripMenuItem scimToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem startSeiteToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem spracheToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem deutschToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem englischToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem dateiToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem schließenToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem dateiÖffnenToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem xMLexportToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
     }
 }
 
