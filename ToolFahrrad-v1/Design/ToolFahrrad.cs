@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Globalization;
 using System.Threading;
+using System;
+using System.IO;
 
 namespace ToolFahrrad_v1
 {
@@ -426,6 +428,12 @@ namespace ToolFahrrad_v1
         private void schließenToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void handbuchToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            string path = Directory.GetCurrentDirectory() + @"\chm\dv_aspnetmmc.chm";
+            Help.ShowHelp(this, path, HelpNavigator.TableOfContents, "");
         }        
     }
 }

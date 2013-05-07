@@ -127,6 +127,7 @@
             this.dateiÖffnenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.xMLexportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.helpProvider1 = new System.Windows.Forms.HelpProvider();
             this.tabs.SuspendLayout();
             this.tab_xml.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pufferP3)).BeginInit();
@@ -865,6 +866,7 @@
             // 
             this.handbuchToolStripMenuItem.Name = "handbuchToolStripMenuItem";
             resources.ApplyResources(this.handbuchToolStripMenuItem, "handbuchToolStripMenuItem");
+            this.handbuchToolStripMenuItem.Click += new System.EventHandler(this.handbuchToolStripMenuItem_Click);
             // 
             // gewichtungToolStripMenuItem
             // 
@@ -1244,6 +1246,7 @@
         private System.Windows.Forms.ToolStripMenuItem dateiÖffnenToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem xMLexportToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+        private System.Windows.Forms.HelpProvider helpProvider1;
     }
 }
 

@@ -2499,13 +2499,58 @@
     <value>152, 22</value>
   </data>
   <data name="schließenToolStripMenuItem.Text" xml:space="preserve">
-    <value>Schließen</value>
+    <value>Beenden</value>
   </data>
   <data name="dateiToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>46, 20</value>
   </data>
   <data name="dateiToolStripMenuItem.Text" xml:space="preserve">
     <value>Datei</value>
+  </data>
+  <data name="handbuchToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>152, 22</value>
+  </data>
+  <data name="handbuchToolStripMenuItem.Text" xml:space="preserve">
+    <value>Handbuch</value>
+  </data>
+  <data name="hilfeToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAZdEVYdFNvZnR3YXJlAEFkb2JlIEltYWdlUmVhZHlxyWU8AAABHUlEQVQ4T53Tz0ZFURTH8U2j
+        iOgBIhpFo0a9R0RvcJ8kIiJ6kmjUNHqDiKaNotElon6ffc/Oucc+Uj++LGv91jpn/ysd7YaL8By+BsRy
+        arPaCOfhPVyG47A9IJZT4+Fdk8Rt8LXPcBKmkvsIPLxrQ0xtv9uG3IfXAbHc2KOn6iD4tbHhLSzC1oBY
+        rtV59egt18H6ToPCS9gJU8mp8fDq0VuewpEgegxnq7ArNR7So7csw6YgEtv1OanxkJ4a/2WA/WgDLKnG
+        0yVY35zUHlZhvRt1CTfBhjjn3zbRjeTh1aO3HAZH0i7J+BgtDXPHqLfqPxfJ2/iRa3kXWnPvKOXaEN7u
+        e2iPyXSb1G6iWE6t+5jG2gtXYfqc5fbDSKV8A/6FbDHCDU8cAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="hilfeToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>152, 22</value>
+  </data>
+  <data name="hilfeToolStripMenuItem.Text" xml:space="preserve">
+    <value>Support</value>
+  </data>
+  <data name="spracheToolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>152, 22</value>
+  </data>
+  <data name="spracheToolStripMenuItem1.Text" xml:space="preserve">
+    <value>Sprache</value>
+  </data>
+  <data name="gewichtungToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAZdEVYdFNvZnR3YXJlAEFkb2JlIEltYWdlUmVhZHlxyWU8AAAAvElEQVQ4T5WSQQoCMQxFC4Lg
+        DQTv4ZGEOZgrD+BK8B6uBFdeYvwP8qHU2tQPD8JPp2mSKR3dgr90EhdxFmtAjEcu1VX4wxZyqVz5Lo4B
+        MR65oejX1fYYIWL7w5nUzz9ghIjtp224BQ5SGXxx2gKqX9GSVkeL+LVGcluB6n/E3peoWFfdibd4Cl9O
+        jEcu1UY8RLtiPHKpvObeiofrtTzg3oqnBuwWOFyveLoFD/ElqArE00NEXhmV/Wx5pXwAASFOkU4LLTwA
+        AAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="gewichtungToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>152, 22</value>
+  </data>
+  <data name="gewichtungToolStripMenuItem.Text" xml:space="preserve">
+    <value>Einstellungen</value>
   </data>
   <data name="einstellungenToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>43, 20</value>
@@ -2542,45 +2587,6 @@
   </data>
   <data name="&gt;&gt;menu.ZOrder" xml:space="preserve">
     <value>0</value>
-  </data>
-  <data name="hilfeToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAZdEVYdFNvZnR3YXJlAEFkb2JlIEltYWdlUmVhZHlxyWU8AAABHUlEQVQ4T53Tz0ZFURTH8U2j
-        iOgBIhpFo0a9R0RvcJ8kIiJ6kmjUNHqDiKaNotElon6ffc/Oucc+Uj++LGv91jpn/ysd7YaL8By+BsRy
-        arPaCOfhPVyG47A9IJZT4+Fdk8Rt8LXPcBKmkvsIPLxrQ0xtv9uG3IfXAbHc2KOn6iD4tbHhLSzC1oBY
-        rtV59egt18H6ToPCS9gJU8mp8fDq0VuewpEgegxnq7ArNR7So7csw6YgEtv1OanxkJ4a/2WA/WgDLKnG
-        0yVY35zUHlZhvRt1CTfBhjjn3zbRjeTh1aO3HAZH0i7J+BgtDXPHqLfqPxfJ2/iRa3kXWnPvKOXaEN7u
-        e2iPyXSb1G6iWE6t+5jG2gtXYfqc5fbDSKV8A/6FbDHCDU8cAAAAAElFTkSuQmCC
-</value>
-  </data>
-  <data name="hilfeToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>152, 22</value>
-  </data>
-  <data name="hilfeToolStripMenuItem.Text" xml:space="preserve">
-    <value>Support</value>
-  </data>
-  <data name="handbuchToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>152, 22</value>
-  </data>
-  <data name="handbuchToolStripMenuItem.Text" xml:space="preserve">
-    <value>Handbuch</value>
-  </data>
-  <data name="gewichtungToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAZdEVYdFNvZnR3YXJlAEFkb2JlIEltYWdlUmVhZHlxyWU8AAAAvElEQVQ4T5WSQQoCMQxFC4Lg
-        DQTv4ZGEOZgrD+BK8B6uBFdeYvwP8qHU2tQPD8JPp2mSKR3dgr90EhdxFmtAjEcu1VX4wxZyqVz5Lo4B
-        MR65oejX1fYYIWL7w5nUzz9ghIjtp224BQ5SGXxx2gKqX9GSVkeL+LVGcluB6n/E3peoWFfdibd4Cl9O
-        jEcu1UY8RLtiPHKpvObeiofrtTzg3oqnBuwWOFyveLoFD/ElqArE00NEXhmV/Wx5pXwAASFOkU4LLTwA
-        AAAASUVORK5CYII=
-</value>
-  </data>
-  <data name="gewichtungToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>152, 22</value>
-  </data>
-  <data name="gewichtungToolStripMenuItem.Text" xml:space="preserve">
-    <value>Einstellungen</value>
   </data>
   <metadata name="toolTip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>23, 52</value>
@@ -2881,12 +2887,6 @@
   <data name="startSeiteToolStripMenuItem.Text" xml:space="preserve">
     <value>StartSeite</value>
   </data>
-  <data name="spracheToolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>152, 22</value>
-  </data>
-  <data name="spracheToolStripMenuItem1.Text" xml:space="preserve">
-    <value>Sprache</value>
-  </data>
   <data name="deutschToolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
     <value>152, 22</value>
   </data>
@@ -2899,6 +2899,9 @@
   <data name="englischToolStripMenuItem1.Text" xml:space="preserve">
     <value>Englisch</value>
   </data>
+  <metadata name="helpProvider1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>223, 52</value>
+  </metadata>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -5024,6 +5027,12 @@
   </data>
   <data name="&gt;&gt;toolStripSeparator1.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;helpProvider1.Name" xml:space="preserve">
+    <value>helpProvider1</value>
+  </data>
+  <data name="&gt;&gt;helpProvider1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.HelpProvider, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>Fahrrad</value>
