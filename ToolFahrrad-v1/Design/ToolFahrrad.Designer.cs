@@ -72,42 +72,29 @@
             this.p1 = new System.Windows.Forms.Label();
             this.titlePrognose = new System.Windows.Forms.Label();
             this.tab_produktion = new System.Windows.Forms.TabPage();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.lableDazu = new System.Windows.Forms.Label();
             this.Tab = new System.Windows.Forms.TabControl();
             this.tab_kTeil = new System.Windows.Forms.TabPage();
             this.dataGridViewKTeil = new System.Windows.Forms.DataGridView();
-            this.tab_eTeil = new System.Windows.Forms.TabPage();
-            this.pictureReadOnly = new System.Windows.Forms.PictureBox();
-            this.pictureResetETeil = new System.Windows.Forms.PictureBox();
-            this.pictureEditEteile = new System.Windows.Forms.PictureBox();
-            this.pictureSaveETeile = new System.Windows.Forms.PictureBox();
-            this.dataGridViewETeil = new System.Windows.Forms.DataGridView();
-            this.tab_APlatz = new System.Windows.Forms.TabPage();
-            this.dataGridViewAPlatz = new System.Windows.Forms.DataGridView();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
-            this.menu = new System.Windows.Forms.MenuStrip();
-            this.einstellungenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.hilfeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.handbuchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.gewichtungToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolTip = new System.Windows.Forms.ToolTip(this.components);
-            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.colNr = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colBestand = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colProzent = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colFarbe = new System.Windows.Forms.DataGridViewImageColumn();
             this.colZugang = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.colWarteschlange = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colBearbeitung = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colPlanung = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tab_eTeil = new System.Windows.Forms.TabPage();
+            this.picReadOnlyETeile = new System.Windows.Forms.PictureBox();
+            this.picResetETeil = new System.Windows.Forms.PictureBox();
+            this.picEditEteile = new System.Windows.Forms.PictureBox();
+            this.picSaveETeile = new System.Windows.Forms.PictureBox();
+            this.dataGridViewETeil = new System.Windows.Forms.DataGridView();
+            this.tab_APlatz = new System.Windows.Forms.TabPage();
+            this.picReadOnlyAPlatz = new System.Windows.Forms.PictureBox();
+            this.picResetAPlatz = new System.Windows.Forms.PictureBox();
+            this.picEditAPlatz = new System.Windows.Forms.PictureBox();
+            this.picSaveAPlatz = new System.Windows.Forms.PictureBox();
+            this.dataGridViewAPlatz = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -117,17 +104,38 @@
             this.dataGridViewImageColumn2 = new System.Windows.Forms.DataGridViewImageColumn();
             this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.s1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.scimToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.startSeiteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.spracheToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.deutschToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.englischToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
+            this.menu = new System.Windows.Forms.MenuStrip();
             this.dateiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.schließenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dateiÖffnenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.xMLexportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.schließenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.einstellungenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.hilfeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.handbuchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.spracheToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.deutschToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.englischToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.gewichtungToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.scimToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.startSeiteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolTip = new System.Windows.Forms.ToolTip(this.components);
+            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.helpProvider1 = new System.Windows.Forms.HelpProvider();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.colWarteschlange = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colBearbeitung = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colPlanung = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.reserve = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.rbPlanung = new System.Windows.Forms.RadioButton();
+            this.rbReserve = new System.Windows.Forms.RadioButton();
             this.tabs.SuspendLayout();
             this.tab_xml.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pufferP3)).BeginInit();
@@ -153,16 +161,21 @@
             ((System.ComponentModel.ISupportInitialize)(this.upDownP11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.upDownAW1)).BeginInit();
             this.tab_produktion.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.Tab.SuspendLayout();
             this.tab_kTeil.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewKTeil)).BeginInit();
             this.tab_eTeil.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureReadOnly)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureResetETeil)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureEditEteile)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureSaveETeile)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picReadOnlyETeile)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picResetETeil)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picEditEteile)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picSaveETeile)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewETeil)).BeginInit();
             this.tab_APlatz.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picReadOnlyAPlatz)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picResetAPlatz)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picEditAPlatz)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picSaveAPlatz)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAPlatz)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.menu.SuspendLayout();
@@ -684,12 +697,23 @@
             // tab_produktion
             // 
             this.tab_produktion.BackColor = System.Drawing.Color.Transparent;
+            this.tab_produktion.Controls.Add(this.pictureBox3);
             this.tab_produktion.Controls.Add(this.lableDazu);
             this.tab_produktion.Controls.Add(this.Tab);
             this.tab_produktion.Controls.Add(this.pictureBox4);
             this.tab_produktion.Controls.Add(this.label2);
             resources.ApplyResources(this.tab_produktion, "tab_produktion");
             this.tab_produktion.Name = "tab_produktion";
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Cursor = System.Windows.Forms.Cursors.Hand;
+            resources.ApplyResources(this.pictureBox3, "pictureBox3");
+            this.pictureBox3.Name = "pictureBox3";
+            this.helpProvider1.SetShowHelp(this.pictureBox3, ((bool)(resources.GetObject("pictureBox3.ShowHelp"))));
+            this.pictureBox3.TabStop = false;
+            this.toolTip.SetToolTip(this.pictureBox3, resources.GetString("pictureBox3.ToolTip"));
+            this.pictureBox3.Click += new System.EventHandler(this.toolAusführen2_Click);
             // 
             // lableDazu
             // 
@@ -727,160 +751,6 @@
             this.colZugang});
             resources.ApplyResources(this.dataGridViewKTeil, "dataGridViewKTeil");
             this.dataGridViewKTeil.Name = "dataGridViewKTeil";
-            // 
-            // tab_eTeil
-            // 
-            this.tab_eTeil.BackColor = System.Drawing.Color.Transparent;
-            this.tab_eTeil.Controls.Add(this.pictureReadOnly);
-            this.tab_eTeil.Controls.Add(this.pictureResetETeil);
-            this.tab_eTeil.Controls.Add(this.pictureEditEteile);
-            this.tab_eTeil.Controls.Add(this.pictureSaveETeile);
-            this.tab_eTeil.Controls.Add(this.dataGridViewETeil);
-            resources.ApplyResources(this.tab_eTeil, "tab_eTeil");
-            this.tab_eTeil.Name = "tab_eTeil";
-            // 
-            // pictureReadOnly
-            // 
-            this.pictureReadOnly.Cursor = System.Windows.Forms.Cursors.Hand;
-            resources.ApplyResources(this.pictureReadOnly, "pictureReadOnly");
-            this.pictureReadOnly.Name = "pictureReadOnly";
-            this.pictureReadOnly.TabStop = false;
-            this.toolTip.SetToolTip(this.pictureReadOnly, resources.GetString("pictureReadOnly.ToolTip"));
-            this.pictureReadOnly.Click += new System.EventHandler(this.pictureReadOnly_Click);
-            // 
-            // pictureResetETeil
-            // 
-            this.pictureResetETeil.Cursor = System.Windows.Forms.Cursors.Hand;
-            resources.ApplyResources(this.pictureResetETeil, "pictureResetETeil");
-            this.pictureResetETeil.Name = "pictureResetETeil";
-            this.pictureResetETeil.TabStop = false;
-            this.toolTip.SetToolTip(this.pictureResetETeil, resources.GetString("pictureResetETeil.ToolTip"));
-            this.pictureResetETeil.Click += new System.EventHandler(this.pictureResetETeil_Click);
-            // 
-            // pictureEditEteile
-            // 
-            this.pictureEditEteile.Cursor = System.Windows.Forms.Cursors.Hand;
-            resources.ApplyResources(this.pictureEditEteile, "pictureEditEteile");
-            this.pictureEditEteile.Name = "pictureEditEteile";
-            this.pictureEditEteile.TabStop = false;
-            this.toolTip.SetToolTip(this.pictureEditEteile, resources.GetString("pictureEditEteile.ToolTip"));
-            this.pictureEditEteile.Click += new System.EventHandler(this.pictureEditEteile_Click);
-            // 
-            // pictureSaveETeile
-            // 
-            this.pictureSaveETeile.Cursor = System.Windows.Forms.Cursors.Hand;
-            resources.ApplyResources(this.pictureSaveETeile, "pictureSaveETeile");
-            this.pictureSaveETeile.Name = "pictureSaveETeile";
-            this.pictureSaveETeile.TabStop = false;
-            this.toolTip.SetToolTip(this.pictureSaveETeile, resources.GetString("pictureSaveETeile.ToolTip"));
-            this.pictureSaveETeile.Click += new System.EventHandler(this.pictureSaveETeile_Click);
-            // 
-            // dataGridViewETeil
-            // 
-            this.dataGridViewETeil.AllowUserToAddRows = false;
-            this.dataGridViewETeil.AllowUserToDeleteRows = false;
-            this.dataGridViewETeil.BackgroundColor = System.Drawing.SystemColors.Control;
-            this.dataGridViewETeil.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridViewETeil.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewETeil.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2,
-            this.dataGridViewTextBoxColumn3,
-            this.dataGridViewTextBoxColumn4,
-            this.dataGridViewImageColumn1,
-            this.colWarteschlange,
-            this.colBearbeitung,
-            this.colPlanung});
-            resources.ApplyResources(this.dataGridViewETeil, "dataGridViewETeil");
-            this.dataGridViewETeil.Name = "dataGridViewETeil";
-            // 
-            // tab_APlatz
-            // 
-            this.tab_APlatz.BackColor = System.Drawing.Color.Transparent;
-            this.tab_APlatz.Controls.Add(this.dataGridViewAPlatz);
-            resources.ApplyResources(this.tab_APlatz, "tab_APlatz");
-            this.tab_APlatz.Name = "tab_APlatz";
-            // 
-            // dataGridViewAPlatz
-            // 
-            this.dataGridViewAPlatz.AllowUserToAddRows = false;
-            this.dataGridViewAPlatz.AllowUserToDeleteRows = false;
-            this.dataGridViewAPlatz.BackgroundColor = System.Drawing.SystemColors.Control;
-            this.dataGridViewAPlatz.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridViewAPlatz.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewAPlatz.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn5,
-            this.dataGridViewTextBoxColumn7,
-            this.dataGridViewTextBoxColumn8,
-            this.dataGridViewTextBoxColumn9,
-            this.Ruestanzahl,
-            this.dataGridViewTextBoxColumn10,
-            this.dataGridViewImageColumn2,
-            this.dataGridViewTextBoxColumn11,
-            this.s1});
-            resources.ApplyResources(this.dataGridViewAPlatz, "dataGridViewAPlatz");
-            this.dataGridViewAPlatz.Name = "dataGridViewAPlatz";
-            // 
-            // pictureBox4
-            // 
-            resources.ApplyResources(this.pictureBox4, "pictureBox4");
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.TabStop = false;
-            // 
-            // label2
-            // 
-            resources.ApplyResources(this.label2, "label2");
-            this.label2.Name = "label2";
-            // 
-            // openFileDialog
-            // 
-            this.openFileDialog.FileName = "openFileDialog";
-            // 
-            // menu
-            // 
-            this.menu.BackColor = System.Drawing.Color.Transparent;
-            this.menu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.dateiToolStripMenuItem,
-            this.einstellungenToolStripMenuItem,
-            this.scimToolStripMenuItem});
-            resources.ApplyResources(this.menu, "menu");
-            this.menu.Name = "menu";
-            // 
-            // einstellungenToolStripMenuItem
-            // 
-            this.einstellungenToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.hilfeToolStripMenuItem,
-            this.spracheToolStripMenuItem1,
-            this.gewichtungToolStripMenuItem});
-            this.einstellungenToolStripMenuItem.Name = "einstellungenToolStripMenuItem";
-            resources.ApplyResources(this.einstellungenToolStripMenuItem, "einstellungenToolStripMenuItem");
-            // 
-            // hilfeToolStripMenuItem
-            // 
-            this.hilfeToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.handbuchToolStripMenuItem});
-            resources.ApplyResources(this.hilfeToolStripMenuItem, "hilfeToolStripMenuItem");
-            this.hilfeToolStripMenuItem.Name = "hilfeToolStripMenuItem";
-            // 
-            // handbuchToolStripMenuItem
-            // 
-            this.handbuchToolStripMenuItem.Name = "handbuchToolStripMenuItem";
-            resources.ApplyResources(this.handbuchToolStripMenuItem, "handbuchToolStripMenuItem");
-            this.handbuchToolStripMenuItem.Click += new System.EventHandler(this.handbuchToolStripMenuItem_Click);
-            // 
-            // gewichtungToolStripMenuItem
-            // 
-            resources.ApplyResources(this.gewichtungToolStripMenuItem, "gewichtungToolStripMenuItem");
-            this.gewichtungToolStripMenuItem.Name = "gewichtungToolStripMenuItem";
-            this.gewichtungToolStripMenuItem.Click += new System.EventHandler(this.gewichtungToolStripMenuItem_Click);
-            // 
-            // imageList1
-            // 
-            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
-            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
-            this.imageList1.Images.SetKeyName(0, "red");
-            this.imageList1.Images.SetKeyName(1, "yellow");
-            this.imageList1.Images.SetKeyName(2, "green");
             // 
             // colNr
             // 
@@ -920,55 +790,142 @@
             this.colZugang.Name = "colZugang";
             this.colZugang.ReadOnly = true;
             // 
-            // dataGridViewTextBoxColumn1
+            // tab_eTeil
             // 
-            resources.ApplyResources(this.dataGridViewTextBoxColumn1, "dataGridViewTextBoxColumn1");
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            this.dataGridViewTextBoxColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.tab_eTeil.BackColor = System.Drawing.Color.Transparent;
+            this.tab_eTeil.Controls.Add(this.rbReserve);
+            this.tab_eTeil.Controls.Add(this.rbPlanung);
+            this.tab_eTeil.Controls.Add(this.picReadOnlyETeile);
+            this.tab_eTeil.Controls.Add(this.picResetETeil);
+            this.tab_eTeil.Controls.Add(this.picEditEteile);
+            this.tab_eTeil.Controls.Add(this.picSaveETeile);
+            this.tab_eTeil.Controls.Add(this.dataGridViewETeil);
+            resources.ApplyResources(this.tab_eTeil, "tab_eTeil");
+            this.tab_eTeil.Name = "tab_eTeil";
             // 
-            // dataGridViewTextBoxColumn2
+            // picReadOnlyETeile
             // 
-            resources.ApplyResources(this.dataGridViewTextBoxColumn2, "dataGridViewTextBoxColumn2");
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            this.picReadOnlyETeile.Cursor = System.Windows.Forms.Cursors.Hand;
+            resources.ApplyResources(this.picReadOnlyETeile, "picReadOnlyETeile");
+            this.picReadOnlyETeile.Name = "picReadOnlyETeile";
+            this.picReadOnlyETeile.TabStop = false;
+            this.toolTip.SetToolTip(this.picReadOnlyETeile, resources.GetString("picReadOnlyETeile.ToolTip"));
+            this.picReadOnlyETeile.Click += new System.EventHandler(this.pictureReadOnly_Click);
             // 
-            // dataGridViewTextBoxColumn3
+            // picResetETeil
             // 
-            resources.ApplyResources(this.dataGridViewTextBoxColumn3, "dataGridViewTextBoxColumn3");
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            this.picResetETeil.Cursor = System.Windows.Forms.Cursors.Hand;
+            resources.ApplyResources(this.picResetETeil, "picResetETeil");
+            this.picResetETeil.Name = "picResetETeil";
+            this.picResetETeil.TabStop = false;
+            this.toolTip.SetToolTip(this.picResetETeil, resources.GetString("picResetETeil.ToolTip"));
+            this.picResetETeil.Click += new System.EventHandler(this.pictureResetETeil_Click);
             // 
-            // dataGridViewTextBoxColumn4
+            // picEditEteile
             // 
-            resources.ApplyResources(this.dataGridViewTextBoxColumn4, "dataGridViewTextBoxColumn4");
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.ReadOnly = true;
+            this.picEditEteile.Cursor = System.Windows.Forms.Cursors.Hand;
+            resources.ApplyResources(this.picEditEteile, "picEditEteile");
+            this.picEditEteile.Name = "picEditEteile";
+            this.picEditEteile.TabStop = false;
+            this.toolTip.SetToolTip(this.picEditEteile, resources.GetString("picEditEteile.ToolTip"));
+            this.picEditEteile.Click += new System.EventHandler(this.pictureEditEteile_Click);
             // 
-            // dataGridViewImageColumn1
+            // picSaveETeile
             // 
-            resources.ApplyResources(this.dataGridViewImageColumn1, "dataGridViewImageColumn1");
-            this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
-            this.dataGridViewImageColumn1.ReadOnly = true;
-            this.dataGridViewImageColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.picSaveETeile.Cursor = System.Windows.Forms.Cursors.Hand;
+            resources.ApplyResources(this.picSaveETeile, "picSaveETeile");
+            this.picSaveETeile.Name = "picSaveETeile";
+            this.picSaveETeile.TabStop = false;
+            this.toolTip.SetToolTip(this.picSaveETeile, resources.GetString("picSaveETeile.ToolTip"));
+            this.picSaveETeile.Click += new System.EventHandler(this.pictureSaveETeile_Click);
             // 
-            // colWarteschlange
+            // dataGridViewETeil
             // 
-            resources.ApplyResources(this.colWarteschlange, "colWarteschlange");
-            this.colWarteschlange.Name = "colWarteschlange";
-            this.colWarteschlange.ReadOnly = true;
+            this.dataGridViewETeil.AllowUserToAddRows = false;
+            this.dataGridViewETeil.AllowUserToDeleteRows = false;
+            this.dataGridViewETeil.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.dataGridViewETeil.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridViewETeil.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewETeil.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn3,
+            this.dataGridViewTextBoxColumn4,
+            this.dataGridViewImageColumn1,
+            this.colWarteschlange,
+            this.colBearbeitung,
+            this.colPlanung,
+            this.reserve});
+            resources.ApplyResources(this.dataGridViewETeil, "dataGridViewETeil");
+            this.dataGridViewETeil.Name = "dataGridViewETeil";
             // 
-            // colBearbeitung
+            // tab_APlatz
             // 
-            resources.ApplyResources(this.colBearbeitung, "colBearbeitung");
-            this.colBearbeitung.Name = "colBearbeitung";
-            this.colBearbeitung.ReadOnly = true;
+            this.tab_APlatz.BackColor = System.Drawing.Color.Transparent;
+            this.tab_APlatz.Controls.Add(this.picReadOnlyAPlatz);
+            this.tab_APlatz.Controls.Add(this.picResetAPlatz);
+            this.tab_APlatz.Controls.Add(this.picEditAPlatz);
+            this.tab_APlatz.Controls.Add(this.picSaveAPlatz);
+            this.tab_APlatz.Controls.Add(this.dataGridViewAPlatz);
+            resources.ApplyResources(this.tab_APlatz, "tab_APlatz");
+            this.tab_APlatz.Name = "tab_APlatz";
             // 
-            // colPlanung
+            // picReadOnlyAPlatz
             // 
-            resources.ApplyResources(this.colPlanung, "colPlanung");
-            this.colPlanung.Name = "colPlanung";
-            this.colPlanung.ReadOnly = true;
+            this.picReadOnlyAPlatz.Cursor = System.Windows.Forms.Cursors.Hand;
+            resources.ApplyResources(this.picReadOnlyAPlatz, "picReadOnlyAPlatz");
+            this.picReadOnlyAPlatz.Name = "picReadOnlyAPlatz";
+            this.helpProvider1.SetShowHelp(this.picReadOnlyAPlatz, ((bool)(resources.GetObject("picReadOnlyAPlatz.ShowHelp"))));
+            this.picReadOnlyAPlatz.TabStop = false;
+            this.toolTip.SetToolTip(this.picReadOnlyAPlatz, resources.GetString("picReadOnlyAPlatz.ToolTip"));
+            // 
+            // picResetAPlatz
+            // 
+            this.picResetAPlatz.Cursor = System.Windows.Forms.Cursors.Hand;
+            resources.ApplyResources(this.picResetAPlatz, "picResetAPlatz");
+            this.picResetAPlatz.Name = "picResetAPlatz";
+            this.helpProvider1.SetShowHelp(this.picResetAPlatz, ((bool)(resources.GetObject("picResetAPlatz.ShowHelp"))));
+            this.picResetAPlatz.TabStop = false;
+            this.toolTip.SetToolTip(this.picResetAPlatz, resources.GetString("picResetAPlatz.ToolTip"));
+            // 
+            // picEditAPlatz
+            // 
+            this.picEditAPlatz.Cursor = System.Windows.Forms.Cursors.Hand;
+            resources.ApplyResources(this.picEditAPlatz, "picEditAPlatz");
+            this.picEditAPlatz.Name = "picEditAPlatz";
+            this.helpProvider1.SetShowHelp(this.picEditAPlatz, ((bool)(resources.GetObject("picEditAPlatz.ShowHelp"))));
+            this.picEditAPlatz.TabStop = false;
+            this.toolTip.SetToolTip(this.picEditAPlatz, resources.GetString("picEditAPlatz.ToolTip"));
+            this.picEditAPlatz.Click += new System.EventHandler(this.picEditAPlatz_Click);
+            // 
+            // picSaveAPlatz
+            // 
+            this.picSaveAPlatz.Cursor = System.Windows.Forms.Cursors.Hand;
+            resources.ApplyResources(this.picSaveAPlatz, "picSaveAPlatz");
+            this.picSaveAPlatz.Name = "picSaveAPlatz";
+            this.helpProvider1.SetShowHelp(this.picSaveAPlatz, ((bool)(resources.GetObject("picSaveAPlatz.ShowHelp"))));
+            this.picSaveAPlatz.TabStop = false;
+            this.toolTip.SetToolTip(this.picSaveAPlatz, resources.GetString("picSaveAPlatz.ToolTip"));
+            // 
+            // dataGridViewAPlatz
+            // 
+            this.dataGridViewAPlatz.AllowUserToAddRows = false;
+            this.dataGridViewAPlatz.AllowUserToDeleteRows = false;
+            this.dataGridViewAPlatz.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.dataGridViewAPlatz.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridViewAPlatz.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewAPlatz.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn5,
+            this.dataGridViewTextBoxColumn7,
+            this.dataGridViewTextBoxColumn8,
+            this.dataGridViewTextBoxColumn9,
+            this.Ruestanzahl,
+            this.dataGridViewTextBoxColumn10,
+            this.dataGridViewImageColumn2,
+            this.dataGridViewTextBoxColumn11,
+            this.s1});
+            resources.ApplyResources(this.dataGridViewAPlatz, "dataGridViewAPlatz");
+            this.dataGridViewAPlatz.Name = "dataGridViewAPlatz";
             // 
             // dataGridViewTextBoxColumn5
             // 
@@ -1025,18 +982,84 @@
             this.s1.Name = "s1";
             this.s1.ReadOnly = true;
             // 
-            // scimToolStripMenuItem
+            // pictureBox4
             // 
-            this.scimToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.startSeiteToolStripMenuItem});
-            this.scimToolStripMenuItem.Name = "scimToolStripMenuItem";
-            resources.ApplyResources(this.scimToolStripMenuItem, "scimToolStripMenuItem");
+            resources.ApplyResources(this.pictureBox4, "pictureBox4");
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.TabStop = false;
             // 
-            // startSeiteToolStripMenuItem
+            // label2
             // 
-            this.startSeiteToolStripMenuItem.Name = "startSeiteToolStripMenuItem";
-            resources.ApplyResources(this.startSeiteToolStripMenuItem, "startSeiteToolStripMenuItem");
-            this.startSeiteToolStripMenuItem.Click += new System.EventHandler(this.startSeiteToolStripMenuItem_Click);
+            resources.ApplyResources(this.label2, "label2");
+            this.label2.Name = "label2";
+            // 
+            // openFileDialog
+            // 
+            this.openFileDialog.FileName = "openFileDialog";
+            // 
+            // menu
+            // 
+            this.menu.BackColor = System.Drawing.Color.Transparent;
+            this.menu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.dateiToolStripMenuItem,
+            this.einstellungenToolStripMenuItem,
+            this.scimToolStripMenuItem});
+            resources.ApplyResources(this.menu, "menu");
+            this.menu.Name = "menu";
+            // 
+            // dateiToolStripMenuItem
+            // 
+            this.dateiToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.dateiÖffnenToolStripMenuItem,
+            this.xMLexportToolStripMenuItem,
+            this.toolStripSeparator1,
+            this.schließenToolStripMenuItem});
+            this.dateiToolStripMenuItem.Name = "dateiToolStripMenuItem";
+            resources.ApplyResources(this.dateiToolStripMenuItem, "dateiToolStripMenuItem");
+            // 
+            // dateiÖffnenToolStripMenuItem
+            // 
+            resources.ApplyResources(this.dateiÖffnenToolStripMenuItem, "dateiÖffnenToolStripMenuItem");
+            this.dateiÖffnenToolStripMenuItem.Name = "dateiÖffnenToolStripMenuItem";
+            this.dateiÖffnenToolStripMenuItem.Click += new System.EventHandler(this.dateiÖffnenToolStripMenuItem_Click);
+            // 
+            // xMLexportToolStripMenuItem
+            // 
+            resources.ApplyResources(this.xMLexportToolStripMenuItem, "xMLexportToolStripMenuItem");
+            this.xMLexportToolStripMenuItem.Name = "xMLexportToolStripMenuItem";
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            resources.ApplyResources(this.toolStripSeparator1, "toolStripSeparator1");
+            // 
+            // schließenToolStripMenuItem
+            // 
+            resources.ApplyResources(this.schließenToolStripMenuItem, "schließenToolStripMenuItem");
+            this.schließenToolStripMenuItem.Name = "schließenToolStripMenuItem";
+            this.schließenToolStripMenuItem.Click += new System.EventHandler(this.schließenToolStripMenuItem_Click_1);
+            // 
+            // einstellungenToolStripMenuItem
+            // 
+            this.einstellungenToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.hilfeToolStripMenuItem,
+            this.spracheToolStripMenuItem1,
+            this.gewichtungToolStripMenuItem});
+            this.einstellungenToolStripMenuItem.Name = "einstellungenToolStripMenuItem";
+            resources.ApplyResources(this.einstellungenToolStripMenuItem, "einstellungenToolStripMenuItem");
+            // 
+            // hilfeToolStripMenuItem
+            // 
+            this.hilfeToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.handbuchToolStripMenuItem});
+            resources.ApplyResources(this.hilfeToolStripMenuItem, "hilfeToolStripMenuItem");
+            this.hilfeToolStripMenuItem.Name = "hilfeToolStripMenuItem";
+            // 
+            // handbuchToolStripMenuItem
+            // 
+            this.handbuchToolStripMenuItem.Name = "handbuchToolStripMenuItem";
+            resources.ApplyResources(this.handbuchToolStripMenuItem, "handbuchToolStripMenuItem");
+            this.handbuchToolStripMenuItem.Click += new System.EventHandler(this.handbuchToolStripMenuItem_Click);
             // 
             // spracheToolStripMenuItem1
             // 
@@ -1060,37 +1083,101 @@
             resources.ApplyResources(this.englischToolStripMenuItem1, "englischToolStripMenuItem1");
             this.englischToolStripMenuItem1.Click += new System.EventHandler(this.englischToolStripMenuItem1_Click);
             // 
-            // dateiToolStripMenuItem
+            // gewichtungToolStripMenuItem
             // 
-            this.dateiToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.dateiÖffnenToolStripMenuItem,
-            this.xMLexportToolStripMenuItem,
-            this.toolStripSeparator1,
-            this.schließenToolStripMenuItem});
-            this.dateiToolStripMenuItem.Name = "dateiToolStripMenuItem";
-            resources.ApplyResources(this.dateiToolStripMenuItem, "dateiToolStripMenuItem");
+            resources.ApplyResources(this.gewichtungToolStripMenuItem, "gewichtungToolStripMenuItem");
+            this.gewichtungToolStripMenuItem.Name = "gewichtungToolStripMenuItem";
+            this.gewichtungToolStripMenuItem.Click += new System.EventHandler(this.gewichtungToolStripMenuItem_Click);
             // 
-            // schließenToolStripMenuItem
+            // scimToolStripMenuItem
             // 
-            resources.ApplyResources(this.schließenToolStripMenuItem, "schließenToolStripMenuItem");
-            this.schließenToolStripMenuItem.Name = "schließenToolStripMenuItem";
-            this.schließenToolStripMenuItem.Click += new System.EventHandler(this.schließenToolStripMenuItem_Click_1);
+            this.scimToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.startSeiteToolStripMenuItem});
+            this.scimToolStripMenuItem.Name = "scimToolStripMenuItem";
+            resources.ApplyResources(this.scimToolStripMenuItem, "scimToolStripMenuItem");
             // 
-            // dateiÖffnenToolStripMenuItem
+            // startSeiteToolStripMenuItem
             // 
-            resources.ApplyResources(this.dateiÖffnenToolStripMenuItem, "dateiÖffnenToolStripMenuItem");
-            this.dateiÖffnenToolStripMenuItem.Name = "dateiÖffnenToolStripMenuItem";
-            this.dateiÖffnenToolStripMenuItem.Click += new System.EventHandler(this.dateiÖffnenToolStripMenuItem_Click);
+            this.startSeiteToolStripMenuItem.Name = "startSeiteToolStripMenuItem";
+            resources.ApplyResources(this.startSeiteToolStripMenuItem, "startSeiteToolStripMenuItem");
+            this.startSeiteToolStripMenuItem.Click += new System.EventHandler(this.startSeiteToolStripMenuItem_Click);
             // 
-            // xMLexportToolStripMenuItem
+            // imageList1
             // 
-            resources.ApplyResources(this.xMLexportToolStripMenuItem, "xMLexportToolStripMenuItem");
-            this.xMLexportToolStripMenuItem.Name = "xMLexportToolStripMenuItem";
+            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
+            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageList1.Images.SetKeyName(0, "red");
+            this.imageList1.Images.SetKeyName(1, "yellow");
+            this.imageList1.Images.SetKeyName(2, "green");
             // 
-            // toolStripSeparator1
+            // dataGridViewTextBoxColumn1
             // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            resources.ApplyResources(this.toolStripSeparator1, "toolStripSeparator1");
+            resources.ApplyResources(this.dataGridViewTextBoxColumn1, "dataGridViewTextBoxColumn1");
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.dataGridViewTextBoxColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            resources.ApplyResources(this.dataGridViewTextBoxColumn2, "dataGridViewTextBoxColumn2");
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            resources.ApplyResources(this.dataGridViewTextBoxColumn3, "dataGridViewTextBoxColumn3");
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            resources.ApplyResources(this.dataGridViewTextBoxColumn4, "dataGridViewTextBoxColumn4");
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
+            // 
+            // dataGridViewImageColumn1
+            // 
+            resources.ApplyResources(this.dataGridViewImageColumn1, "dataGridViewImageColumn1");
+            this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
+            this.dataGridViewImageColumn1.ReadOnly = true;
+            this.dataGridViewImageColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // colWarteschlange
+            // 
+            resources.ApplyResources(this.colWarteschlange, "colWarteschlange");
+            this.colWarteschlange.Name = "colWarteschlange";
+            this.colWarteschlange.ReadOnly = true;
+            // 
+            // colBearbeitung
+            // 
+            resources.ApplyResources(this.colBearbeitung, "colBearbeitung");
+            this.colBearbeitung.Name = "colBearbeitung";
+            this.colBearbeitung.ReadOnly = true;
+            // 
+            // colPlanung
+            // 
+            resources.ApplyResources(this.colPlanung, "colPlanung");
+            this.colPlanung.Name = "colPlanung";
+            this.colPlanung.ReadOnly = true;
+            // 
+            // reserve
+            // 
+            resources.ApplyResources(this.reserve, "reserve");
+            this.reserve.Name = "reserve";
+            // 
+            // rbPlanung
+            // 
+            resources.ApplyResources(this.rbPlanung, "rbPlanung");
+            this.rbPlanung.Checked = true;
+            this.rbPlanung.Name = "rbPlanung";
+            this.rbPlanung.UseVisualStyleBackColor = true;
+            // 
+            // rbReserve
+            // 
+            resources.ApplyResources(this.rbReserve, "rbReserve");
+            this.rbReserve.Name = "rbReserve";
+            this.helpProvider1.SetShowHelp(this.rbReserve, ((bool)(resources.GetObject("rbReserve.ShowHelp"))));
+            this.rbReserve.UseVisualStyleBackColor = true;
             // 
             // Fahrrad
             // 
@@ -1128,16 +1215,22 @@
             ((System.ComponentModel.ISupportInitialize)(this.upDownAW1)).EndInit();
             this.tab_produktion.ResumeLayout(false);
             this.tab_produktion.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.Tab.ResumeLayout(false);
             this.tab_kTeil.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewKTeil)).EndInit();
             this.tab_eTeil.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureReadOnly)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureResetETeil)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureEditEteile)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureSaveETeile)).EndInit();
+            this.tab_eTeil.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picReadOnlyETeile)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picResetETeil)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picEditEteile)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picSaveETeile)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewETeil)).EndInit();
             this.tab_APlatz.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.picReadOnlyAPlatz)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picResetAPlatz)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picEditAPlatz)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picSaveAPlatz)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAPlatz)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.menu.ResumeLayout(false);
@@ -1201,13 +1294,13 @@
         private System.Windows.Forms.DataGridView dataGridViewKTeil;
         private System.Windows.Forms.ImageList imageList1;
         private System.Windows.Forms.DataGridView dataGridViewETeil;
-        private System.Windows.Forms.PictureBox pictureSaveETeile;
-        private System.Windows.Forms.PictureBox pictureEditEteile;
-        private System.Windows.Forms.PictureBox pictureResetETeil;
+        private System.Windows.Forms.PictureBox picSaveETeile;
+        private System.Windows.Forms.PictureBox picEditEteile;
+        private System.Windows.Forms.PictureBox picResetETeil;
         private System.Windows.Forms.TabPage tab_APlatz;
         private System.Windows.Forms.DataGridView dataGridViewAPlatz;
         private System.Windows.Forms.Label lableDazu;
-        private System.Windows.Forms.PictureBox pictureReadOnly;
+        private System.Windows.Forms.PictureBox picReadOnlyETeile;
         private System.Windows.Forms.ToolStripMenuItem gewichtungToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem handbuchToolStripMenuItem;
         private System.Windows.Forms.Label label5;
@@ -1219,14 +1312,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn colProzent;
         private System.Windows.Forms.DataGridViewImageColumn colFarbe;
         private System.Windows.Forms.DataGridViewTextBoxColumn colZugang;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colWarteschlange;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colBearbeitung;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colPlanung;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
@@ -1247,6 +1332,22 @@
         private System.Windows.Forms.ToolStripMenuItem xMLexportToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.HelpProvider helpProvider1;
+        private System.Windows.Forms.PictureBox picReadOnlyAPlatz;
+        private System.Windows.Forms.PictureBox picResetAPlatz;
+        private System.Windows.Forms.PictureBox picEditAPlatz;
+        private System.Windows.Forms.PictureBox picSaveAPlatz;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colWarteschlange;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colBearbeitung;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colPlanung;
+        private System.Windows.Forms.DataGridViewTextBoxColumn reserve;
+        private System.Windows.Forms.RadioButton rbReserve;
+        private System.Windows.Forms.RadioButton rbPlanung;
     }
 }
 

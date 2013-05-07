@@ -29,7 +29,11 @@ namespace ToolFahrrad_v1
             //}
             InitializeComponent();
         }
-
+        /// <summary>
+        /// Ausführen
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void toolAusfueren_Click(object sender, EventArgs e)
         {
             pp.Aufloesen();
@@ -41,6 +45,11 @@ namespace ToolFahrrad_v1
             this.save.Visible = true;
             this.Tab.Visible = true;
         }
+        private void toolAusführen2_Click(object sender, System.EventArgs e)
+        {
+            this.Information();
+        }
+
         // F1
 
         //protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
@@ -54,7 +63,7 @@ namespace ToolFahrrad_v1
         //    // Call the base class
         //    return base.ProcessCmdKey(ref msg, keyData);
         //}
-        
+
         private void xml_suchen_Click(object sender, EventArgs e)
         {
             xmlOeffnen();
@@ -274,14 +283,17 @@ namespace ToolFahrrad_v1
                 dataGridViewETeil.Rows[index].Cells[5].Value = a.InWartschlange;
                 dataGridViewETeil.Rows[index].Cells[6].Value = a.InBearbeitung;
                 dataGridViewETeil.Rows[index].Cells[7].Value = a.ProduktionsMengePer0;
+                dataGridViewETeil.Rows[index].Cells[8].Value = a.Puffer;
 
                 //Farbe
-                for (int i = 0; i < 8; ++i)
+                for (int i = 0; i < 9; ++i)
                 {
                     if (i == 4)
                         dataGridViewETeil.Columns[i].DefaultCellStyle.BackColor = Color.LightYellow;
-                    else if (i == 7)
-                        dataGridViewETeil.Columns[7].DefaultCellStyle.BackColor = Color.Honeydew;
+                    else if (i == 7 || i == 8)
+                    {
+                        dataGridViewETeil.Columns[i].DefaultCellStyle.BackColor = Color.Honeydew;
+                    }
                     else
                         dataGridViewETeil.Columns[i].DefaultCellStyle.BackColor = Color.FloralWhite;
 
@@ -337,15 +349,43 @@ namespace ToolFahrrad_v1
             }
         }
 
+        /// <summary>
+        /// EDIT
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void pictureEditEteile_Click(object sender, EventArgs e)
         {
-            dataGridViewETeil.Columns[7].DefaultCellStyle.BackColor = Color.LightBlue;
-            dataGridViewETeil.Columns[7].ReadOnly = false;
-            this.pictureSaveETeile.Visible = true;
-            this.pictureResetETeil.Visible = true;
-            this.pictureReadOnly.Visible = true;
-            this.pictureEditEteile.Visible = false;
+            if (rbPlanung.Checked == true)
+            {
+                dataGridViewETeil.Columns[7].DefaultCellStyle.BackColor = Color.LightBlue;
+                dataGridViewETeil.Columns[7].ReadOnly = false;
+
+                dataGridViewETeil.Columns[8].DefaultCellStyle.BackColor = Color.Honeydew;
+                dataGridViewETeil.Columns[8].ReadOnly = true;
+            }
+            else if (rbReserve.Checked == true)
+            {
+                dataGridViewETeil.Columns[8].DefaultCellStyle.BackColor = Color.LightBlue;
+                dataGridViewETeil.Columns[8].ReadOnly = false;
+
+                dataGridViewETeil.Columns[7].DefaultCellStyle.BackColor = Color.Honeydew;
+                dataGridViewETeil.Columns[7].ReadOnly = true;
+            }
+            this.picSaveETeile.Visible = true;
+            this.picResetETeil.Visible = true;
+            this.picReadOnlyETeile.Visible = true;
         }
+        private void picEditAPlatz_Click(object sender, System.EventArgs e)
+        {
+            dataGridViewAPlatz.Columns[4].DefaultCellStyle.BackColor = Color.LightBlue;
+            dataGridViewAPlatz.Columns[4].ReadOnly = false;
+            this.picSaveAPlatz.Visible = true;
+            this.picResetAPlatz.Visible = true;
+            this.picReadOnlyAPlatz.Visible = true;
+            this.picEditAPlatz.Visible = false;
+        }
+
 
         private void pictureSaveETeile_Click(object sender, EventArgs e)
         {
@@ -365,10 +405,10 @@ namespace ToolFahrrad_v1
                     }
                 }
 
-                this.pictureEditEteile.Visible = true;
-                this.pictureResetETeil.Visible = false;
-                this.pictureSaveETeile.Visible = false;
-                this.pictureReadOnly.Visible = false;
+                this.picEditEteile.Visible = true;
+                this.picResetETeil.Visible = false;
+                this.picSaveETeile.Visible = false;
+                this.picReadOnlyETeile.Visible = false;
 
                 dataGridViewETeil.Columns[7].DefaultCellStyle.BackColor = Color.Honeydew;
                 dataGridViewETeil.Columns[7].ReadOnly = true;
@@ -384,17 +424,29 @@ namespace ToolFahrrad_v1
         private void pictureResetETeil_Click(object sender, EventArgs e)
         {
             Information();
+            if (rbPlanung.Checked == true)
+            {
+                dataGridViewETeil.Columns[7].DefaultCellStyle.BackColor = Color.LightBlue;
+                dataGridViewETeil.Columns[8].DefaultCellStyle.BackColor = Color.Honeydew;
+            }
+            else if (rbReserve.Checked == true)
+            {
+                dataGridViewETeil.Columns[8].DefaultCellStyle.BackColor = Color.LightBlue;
+                dataGridViewETeil.Columns[7].DefaultCellStyle.BackColor = Color.Honeydew;
+            }
         }
 
         private void pictureReadOnly_Click(object sender, EventArgs e)
         {
-            this.pictureEditEteile.Visible = true;
-            this.pictureResetETeil.Visible = false;
-            this.pictureSaveETeile.Visible = false;
-            this.pictureReadOnly.Visible = false;
+            this.picEditEteile.Visible = true;
+            this.picResetETeil.Visible = false;
+            this.picSaveETeile.Visible = false;
+            this.picReadOnlyETeile.Visible = false;
 
             dataGridViewETeil.Columns[7].DefaultCellStyle.BackColor = Color.Honeydew;
             dataGridViewETeil.Columns[7].ReadOnly = true;
+            dataGridViewETeil.Columns[8].DefaultCellStyle.BackColor = Color.Honeydew;
+            dataGridViewETeil.Columns[8].ReadOnly = true;
         }
 
         private void save_Click(object sender, EventArgs e)
@@ -434,6 +486,10 @@ namespace ToolFahrrad_v1
         {
             string path = Directory.GetCurrentDirectory() + @"\chm\dv_aspnetmmc.chm";
             Help.ShowHelp(this, path, HelpNavigator.TableOfContents, "");
-        }        
+        }
+
+
+
+
     }
 }
