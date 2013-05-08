@@ -32,9 +32,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Fahrrad));
             this.tabs = new System.Windows.Forms.TabControl();
             this.tab_xml = new System.Windows.Forms.TabPage();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.pufferP3 = new System.Windows.Forms.NumericUpDown();
             this.pufferP2 = new System.Windows.Forms.NumericUpDown();
             this.pufferP1 = new System.Windows.Forms.NumericUpDown();
@@ -72,7 +69,6 @@
             this.p1 = new System.Windows.Forms.Label();
             this.titlePrognose = new System.Windows.Forms.Label();
             this.tab_produktion = new System.Windows.Forms.TabPage();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.lableDazu = new System.Windows.Forms.Label();
             this.Tab = new System.Windows.Forms.TabControl();
             this.tab_kTeil = new System.Windows.Forms.TabPage();
@@ -85,8 +81,6 @@
             this.colZugang = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tab_eTeil = new System.Windows.Forms.TabPage();
             this.cbMitOhne = new System.Windows.Forms.CheckBox();
-            this.rbReserve = new System.Windows.Forms.RadioButton();
-            this.rbPlanung = new System.Windows.Forms.RadioButton();
             this.picReadOnlyETeile = new System.Windows.Forms.PictureBox();
             this.picResetETeil = new System.Windows.Forms.PictureBox();
             this.picEditEteile = new System.Windows.Forms.PictureBox();
@@ -137,6 +131,7 @@
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.helpProvider1 = new System.Windows.Forms.HelpProvider();
+            this.rbReserve = new System.Windows.Forms.RadioButton();
             this.tabs.SuspendLayout();
             this.tab_xml.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pufferP3)).BeginInit();
@@ -162,7 +157,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.upDownP11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.upDownAW1)).BeginInit();
             this.tab_produktion.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.Tab.SuspendLayout();
             this.tab_kTeil.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewKTeil)).BeginInit();
@@ -193,9 +187,6 @@
             // tab_xml
             // 
             this.tab_xml.BackColor = System.Drawing.Color.Transparent;
-            this.tab_xml.Controls.Add(this.label5);
-            this.tab_xml.Controls.Add(this.label4);
-            this.tab_xml.Controls.Add(this.label3);
             this.tab_xml.Controls.Add(this.pufferP3);
             this.tab_xml.Controls.Add(this.pufferP2);
             this.tab_xml.Controls.Add(this.pufferP1);
@@ -226,21 +217,6 @@
             this.tab_xml.Controls.Add(this.titlePrognose);
             resources.ApplyResources(this.tab_xml, "tab_xml");
             this.tab_xml.Name = "tab_xml";
-            // 
-            // label5
-            // 
-            resources.ApplyResources(this.label5, "label5");
-            this.label5.Name = "label5";
-            // 
-            // label4
-            // 
-            resources.ApplyResources(this.label4, "label4");
-            this.label4.Name = "label4";
-            // 
-            // label3
-            // 
-            resources.ApplyResources(this.label3, "label3");
-            this.label3.Name = "label3";
             // 
             // pufferP3
             // 
@@ -698,23 +674,12 @@
             // tab_produktion
             // 
             this.tab_produktion.BackColor = System.Drawing.Color.Transparent;
-            this.tab_produktion.Controls.Add(this.pictureBox3);
             this.tab_produktion.Controls.Add(this.lableDazu);
             this.tab_produktion.Controls.Add(this.Tab);
             this.tab_produktion.Controls.Add(this.pictureBox4);
             this.tab_produktion.Controls.Add(this.label2);
             resources.ApplyResources(this.tab_produktion, "tab_produktion");
             this.tab_produktion.Name = "tab_produktion";
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Cursor = System.Windows.Forms.Cursors.Hand;
-            resources.ApplyResources(this.pictureBox3, "pictureBox3");
-            this.pictureBox3.Name = "pictureBox3";
-            this.helpProvider1.SetShowHelp(this.pictureBox3, ((bool)(resources.GetObject("pictureBox3.ShowHelp"))));
-            this.pictureBox3.TabStop = false;
-            this.toolTip.SetToolTip(this.pictureBox3, resources.GetString("pictureBox3.ToolTip"));
-            this.pictureBox3.Click += new System.EventHandler(this.toolAusführen2_Click);
             // 
             // lableDazu
             // 
@@ -796,7 +761,6 @@
             this.tab_eTeil.BackColor = System.Drawing.Color.Transparent;
             this.tab_eTeil.Controls.Add(this.cbMitOhne);
             this.tab_eTeil.Controls.Add(this.rbReserve);
-            this.tab_eTeil.Controls.Add(this.rbPlanung);
             this.tab_eTeil.Controls.Add(this.picReadOnlyETeile);
             this.tab_eTeil.Controls.Add(this.picResetETeil);
             this.tab_eTeil.Controls.Add(this.picEditEteile);
@@ -808,27 +772,15 @@
             // cbMitOhne
             // 
             resources.ApplyResources(this.cbMitOhne, "cbMitOhne");
+            this.cbMitOhne.Checked = true;
+            this.cbMitOhne.CheckState = System.Windows.Forms.CheckState.Checked;
             this.helpProvider1.SetHelpKeyword(this.cbMitOhne, resources.GetString("cbMitOhne.HelpKeyword"));
             this.helpProvider1.SetHelpNavigator(this.cbMitOhne, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("cbMitOhne.HelpNavigator"))));
             this.helpProvider1.SetHelpString(this.cbMitOhne, resources.GetString("cbMitOhne.HelpString"));
             this.cbMitOhne.Name = "cbMitOhne";
             this.helpProvider1.SetShowHelp(this.cbMitOhne, ((bool)(resources.GetObject("cbMitOhne.ShowHelp"))));
             this.cbMitOhne.UseVisualStyleBackColor = true;
-            // 
-            // rbReserve
-            // 
-            resources.ApplyResources(this.rbReserve, "rbReserve");
-            this.rbReserve.Name = "rbReserve";
-            this.helpProvider1.SetShowHelp(this.rbReserve, ((bool)(resources.GetObject("rbReserve.ShowHelp"))));
-            this.rbReserve.UseVisualStyleBackColor = true;
-            // 
-            // rbPlanung
-            // 
-            resources.ApplyResources(this.rbPlanung, "rbPlanung");
-            this.rbPlanung.Checked = true;
-            this.rbPlanung.Name = "rbPlanung";
-            this.rbPlanung.TabStop = true;
-            this.rbPlanung.UseVisualStyleBackColor = true;
+            this.cbMitOhne.CheckedChanged += new System.EventHandler(this.cbMitOhne_CheckedChanged);
             // 
             // picReadOnlyETeile
             // 
@@ -1196,6 +1148,15 @@
             // 
             resources.ApplyResources(this.helpProvider1, "helpProvider1");
             // 
+            // rbReserve
+            // 
+            resources.ApplyResources(this.rbReserve, "rbReserve");
+            this.rbReserve.Checked = true;
+            this.rbReserve.Name = "rbReserve";
+            this.helpProvider1.SetShowHelp(this.rbReserve, ((bool)(resources.GetObject("rbReserve.ShowHelp"))));
+            this.rbReserve.TabStop = true;
+            this.rbReserve.UseVisualStyleBackColor = true;
+            // 
             // Fahrrad
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -1236,7 +1197,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.upDownAW1)).EndInit();
             this.tab_produktion.ResumeLayout(false);
             this.tab_produktion.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.Tab.ResumeLayout(false);
             this.tab_kTeil.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewKTeil)).EndInit();
@@ -1324,9 +1284,6 @@
         private System.Windows.Forms.PictureBox picReadOnlyETeile;
         private System.Windows.Forms.ToolStripMenuItem gewichtungToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem handbuchToolStripMenuItem;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DataGridViewTextBoxColumn colNr;
         private System.Windows.Forms.DataGridViewTextBoxColumn colName;
         private System.Windows.Forms.DataGridViewTextBoxColumn colBestand;
@@ -1357,7 +1314,6 @@
         private System.Windows.Forms.PictureBox picResetAPlatz;
         private System.Windows.Forms.PictureBox picEditAPlatz;
         private System.Windows.Forms.PictureBox picSaveAPlatz;
-        private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
@@ -1367,9 +1323,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn colBearbeitung;
         private System.Windows.Forms.DataGridViewTextBoxColumn colPlanung;
         private System.Windows.Forms.DataGridViewTextBoxColumn reserve;
-        private System.Windows.Forms.RadioButton rbReserve;
-        private System.Windows.Forms.RadioButton rbPlanung;
         private System.Windows.Forms.CheckBox cbMitOhne;
+        private System.Windows.Forms.RadioButton rbReserve;
     }
 }
 

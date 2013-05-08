@@ -129,7 +129,7 @@ namespace ToolFahrrad_v1
                 Aufgeloest = true;
             }
         }
-        // Public function to change members puffer (0) or produktionsMenge (1)
+        // Public function to change members puffer (0)
         public void FeldGeandert(int member, int value)
         {
             if (aufgeloest == true)
@@ -146,24 +146,8 @@ namespace ToolFahrrad_v1
                             if (kvp.Key is ETeil)
                             {
                                 ETeil et = kvp.Key as ETeil;
-                                et.FeldGeandert(member, value);
-                            }
-                        }
-                    }
-                }
-                // produktionsMenge
-                else if (member == 1)
-                {
-                    produktionsMenge = value;
-                    if (zusammensetzung.Count() != 0 && DataContainer.Instance.BerechneKindTeil == true)
-                    {
-                        foreach (KeyValuePair<Teil, int> kvp in zusammensetzung)
-                        {
-                            if (kvp.Key is ETeil)
-                            {
-                                ETeil et = kvp.Key as ETeil;
-                                et.FeldGeandert(member, value);
-                            }
+                                et.FeldGeandert(member, value);                               
+                            }                            
                         }
                     }
                 }

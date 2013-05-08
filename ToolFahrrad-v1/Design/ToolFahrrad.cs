@@ -45,10 +45,6 @@ namespace ToolFahrrad_v1
             this.save.Visible = true;
             this.Tab.Visible = true;
         }
-        private void toolAusführen2_Click(object sender, System.EventArgs e)
-        {
-            this.Information();
-        }
 
         // F1
 
@@ -288,16 +284,14 @@ namespace ToolFahrrad_v1
                 //Farbe
                 for (int i = 0; i < 9; ++i)
                 {
-                    if (i == 4)
+                    if (i == 4 || i == 7)
                         dataGridViewETeil.Columns[i].DefaultCellStyle.BackColor = Color.LightYellow;
-                    else if (i == 7 || i == 8)
+                    else if (i == 8)
                     {
                         dataGridViewETeil.Columns[i].DefaultCellStyle.BackColor = Color.Honeydew;
                     }
                     else
                         dataGridViewETeil.Columns[i].DefaultCellStyle.BackColor = Color.FloralWhite;
-
-
                 }
                 ++index;
             }
@@ -356,21 +350,10 @@ namespace ToolFahrrad_v1
         /// <param name="e"></param>
         private void pictureEditEteile_Click(object sender, EventArgs e)
         {
-            if (rbPlanung.Checked == true)
-            {
-                dataGridViewETeil.Columns[7].DefaultCellStyle.BackColor = Color.LightBlue;
-                dataGridViewETeil.Columns[7].ReadOnly = false;
-
-                dataGridViewETeil.Columns[8].DefaultCellStyle.BackColor = Color.Honeydew;
-                dataGridViewETeil.Columns[8].ReadOnly = true;
-            }
-            else if (rbReserve.Checked == true)
+            if (rbReserve.Checked == true)
             {
                 dataGridViewETeil.Columns[8].DefaultCellStyle.BackColor = Color.LightBlue;
                 dataGridViewETeil.Columns[8].ReadOnly = false;
-
-                dataGridViewETeil.Columns[7].DefaultCellStyle.BackColor = Color.Honeydew;
-                dataGridViewETeil.Columns[7].ReadOnly = true;
             }
             this.picSaveETeile.Visible = true;
             this.picResetETeil.Visible = true;
@@ -396,15 +379,15 @@ namespace ToolFahrrad_v1
             {
                 foreach (DataGridViewRow row in dataGridViewETeil.Rows)
                 {
-                    int prodMengeAlt = (instance.GetTeil(Convert.ToInt32(row.Cells[0].Value.ToString())) as ETeil).ProduktionsMengePer0;
-                    int prodMengeNeu = Convert.ToInt32(row.Cells[7].Value.ToString());
-                    if (!prodMengeAlt.Equals(prodMengeNeu))
+                    if (rbReserve.Checked == true)
                     {
-
-                        //ETeil et = instande.GetTeil(...);
-                        //et.PufferGeandert(...)
-                        (instance.GetTeil(Convert.ToInt32(row.Cells[0].Value.ToString())) as ETeil).ProduktionsMengePer0 = prodMengeNeu;
-                        text += row.Cells[1].Value.ToString() + ": von " + prodMengeAlt + " auf " + prodMengeNeu + "\n";
+                        int reserveAlt = (instance.GetTeil(Convert.ToInt32(row.Cells[0].Value.ToString())) as ETeil).Puffer;
+                        int reserveNeu = Convert.ToInt32(row.Cells[8].Value.ToString());
+                        if (!reserveAlt.Equals(reserveNeu))
+                        {
+                            (instance.GetTeil(Convert.ToInt32(row.Cells[0].Value.ToString())) as ETeil).FeldGeandert(0, reserveNeu);
+                            text = "Alle Änderungen wurde durchgeführt";
+                        }
                     }
                 }
 
@@ -413,9 +396,10 @@ namespace ToolFahrrad_v1
                 this.picSaveETeile.Visible = false;
                 this.picReadOnlyETeile.Visible = false;
 
-                dataGridViewETeil.Columns[7].DefaultCellStyle.BackColor = Color.Honeydew;
-                dataGridViewETeil.Columns[7].ReadOnly = true;
+                dataGridViewETeil.Columns[8].DefaultCellStyle.BackColor = Color.Honeydew;
+                dataGridViewETeil.Columns[8].ReadOnly = true;
 
+                pp.Aufloesen();
                 Information();
                 if (!text.Equals(string.Empty))
                     result = MessageBox.Show(text, "Message", MessageBoxButtons.OK);
@@ -427,15 +411,9 @@ namespace ToolFahrrad_v1
         private void pictureResetETeil_Click(object sender, EventArgs e)
         {
             Information();
-            if (rbPlanung.Checked == true)
+            if (rbReserve.Checked == true)
             {
-                dataGridViewETeil.Columns[7].DefaultCellStyle.BackColor = Color.LightBlue;
                 dataGridViewETeil.Columns[8].DefaultCellStyle.BackColor = Color.Honeydew;
-            }
-            else if (rbReserve.Checked == true)
-            {
-                dataGridViewETeil.Columns[8].DefaultCellStyle.BackColor = Color.LightBlue;
-                dataGridViewETeil.Columns[7].DefaultCellStyle.BackColor = Color.Honeydew;
             }
         }
 
@@ -487,12 +465,16 @@ namespace ToolFahrrad_v1
 
         private void handbuchToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            string path = Directory.GetCurrentDirectory() + @"\chm\dv_aspnetmmc.chm";
-            Help.ShowHelp(this, path, HelpNavigator.TableOfContents, "");
+            //string path = Directory.GetCurrentDirectory() + @"\chm\dv_aspnetmmc.chm";
+            //Help.ShowHelp(this, path, HelpNavigator.TableOfContents, "");
         }
 
-
-
-
+        private void cbMitOhne_CheckedChanged(object sender, System.EventArgs e)
+        {
+            if (cbMitOhne.Checked == true)
+                instance.BerechneKindTeil = true;
+            else
+                instance.BerechneKindTeil = false;
+        }
     }
 }
