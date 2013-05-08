@@ -36,7 +36,16 @@ namespace ToolFahrrad_v1
         /// <param name="e"></param>
         private void toolAusfueren_Click(object sender, EventArgs e)
         {
-                        pp.Aufloesen();
+            if ((instance.GetTeil(4) as ETeil).Puffer != -1)
+            {
+                foreach (Teil t in instance.ListeETeile)
+                {
+                    t.Aufgeloest = false;
+                    if ((instance.GetTeil(t.Nummer) as ETeil).IstEndProdukt == false)
+                        (instance.GetTeil(t.Nummer) as ETeil).Puffer = -1;
+                }
+            }
+            pp.Aufloesen();
             if (!lableDazu.Text.Contains("aus der Periode"))
                 lableDazu.Text = lableDazu.Text + "aus der Periode " + xml.period;
 
