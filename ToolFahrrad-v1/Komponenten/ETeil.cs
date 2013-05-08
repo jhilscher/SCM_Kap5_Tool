@@ -24,7 +24,8 @@ namespace ToolFahrrad_v1
         List<int> benutzteArbeitsplaetze;
         List<ETeil> istTeil = null;
         // Constructor
-        public ETeil(int nummer, string bez) : base(nummer, bez)
+        public ETeil(int nummer, string bez)
+            : base(nummer, bez)
         {
             puffer = -1;
             zusammensetzung = new Dictionary<Teil, int>();
@@ -132,26 +133,26 @@ namespace ToolFahrrad_v1
         // Public function to change members puffer (0)
         public void FeldGeandert(int member, int value)
         {
-            if (aufgeloest == true)
+            //if (aufgeloest == true )
+            //{
+            aufgeloest = false;
+            // puffer
+            if (member == 0)
             {
-                aufgeloest = false;
-                // puffer
-                if (member == 0)
+                puffer = value;
+                if (zusammensetzung.Count() != 0 && DataContainer.Instance.BerechneKindTeil == true)
                 {
-                    puffer = value;
-                    if (zusammensetzung.Count() != 0 && DataContainer.Instance.BerechneKindTeil == true)
+                    foreach (KeyValuePair<Teil, int> kvp in zusammensetzung)
                     {
-                        foreach (KeyValuePair<Teil, int> kvp in zusammensetzung)
+                        if (kvp.Key is ETeil)
                         {
-                            if (kvp.Key is ETeil)
-                            {
-                                ETeil et = kvp.Key as ETeil;
-                                et.FeldGeandert(member, value);                               
-                            }                            
+                            ETeil et = kvp.Key as ETeil;
+                            et.FeldGeandert(member, value);
                         }
                     }
                 }
             }
+            //}
         }
         public void AddArbeitsplatz(int nr)
         {

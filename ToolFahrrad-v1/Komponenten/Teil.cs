@@ -33,7 +33,7 @@ namespace ToolFahrrad_v1
             verbrauchPer3 = 0;
         }
         // Getter / Setter
-        protected bool Aufgeloest
+        public bool Aufgeloest
         {
             get { return aufgeloest; }
             set { aufgeloest = value; }

@@ -36,7 +36,7 @@ namespace ToolFahrrad_v1
         /// <param name="e"></param>
         private void toolAusfueren_Click(object sender, EventArgs e)
         {
-            pp.Aufloesen();
+                        pp.Aufloesen();
             if (!lableDazu.Text.Contains("aus der Periode"))
                 lableDazu.Text = lableDazu.Text + "aus der Periode " + xml.period;
 
@@ -377,20 +377,30 @@ namespace ToolFahrrad_v1
             string text = string.Empty;
             if (result == System.Windows.Forms.DialogResult.OK)
             {
+                Dictionary<int, string> ids = new Dictionary<int, string>();
                 foreach (DataGridViewRow row in dataGridViewETeil.Rows)
                 {
                     if (rbReserve.Checked == true)
-                    {
+                    {                        
                         int reserveAlt = (instance.GetTeil(Convert.ToInt32(row.Cells[0].Value.ToString())) as ETeil).Puffer;
                         int reserveNeu = Convert.ToInt32(row.Cells[8].Value.ToString());
                         if (!reserveAlt.Equals(reserveNeu))
                         {
-                            (instance.GetTeil(Convert.ToInt32(row.Cells[0].Value.ToString())) as ETeil).FeldGeandert(0, reserveNeu);
-                            text = "Alle Änderungen wurde durchgeführt";
+                            ids.Add(Convert.ToInt32(row.Cells[0].Value.ToString()), reserveAlt + ">" + reserveNeu + ">" + row.Cells[1].Value.ToString());
                         }
                     }
                 }
 
+                if (ids.Count() > 0)
+                {
+                    foreach (KeyValuePair<int, string> pair in ids)
+                    {
+                        string[] change = pair.Value.Split('>');
+                        (instance.GetTeil(pair.Key) as ETeil).FeldGeandert(0, Convert.ToInt32(change[1]));
+                        text += change[2] + ": von " + change[0] + " auf " + change[1] + "\n";
+                    }
+                }
+                
                 this.picEditEteile.Visible = true;
                 this.picResetETeil.Visible = false;
                 this.picSaveETeile.Visible = false;
