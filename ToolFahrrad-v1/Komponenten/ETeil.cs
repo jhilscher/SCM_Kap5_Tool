@@ -9,6 +9,7 @@ namespace ToolFahrrad_v1
     public class ETeil : Teil
     {
         // Class members
+        private int puffer;
         private int produktionsMenge = 0;
         private int inWarteschlange = 0;
         private int inBearbeitung = 0;
@@ -25,11 +26,17 @@ namespace ToolFahrrad_v1
         // Constructor
         public ETeil(int nummer, string bez) : base(nummer, bez)
         {
+            puffer = -1;
             zusammensetzung = new Dictionary<Teil, int>();
             position = new Dictionary<int, int>();
             benutzteArbeitsplaetze = new List<int>();
         }
         // Getter / Setter
+        public int Puffer
+        {
+            get { return puffer; }
+            set { puffer = value; }
+        }
         public int ProduktionsMengePer0
         {
             get { return produktionsMenge; }
@@ -95,23 +102,70 @@ namespace ToolFahrrad_v1
         }
         public void SetProduktionsMenge(int index, ETeil vaterTeil)
         {
-            if (istEndProdukt == true)
+            if (Aufgeloest == false)
             {
-                produktionsMenge = vertriebPer0 + Puffer - lagerstand - inWarteschlange - inBearbeitung;
-            }
-            else
-            {
-                // Set members
-                vertriebPer0 = vaterTeil.ProduktionsMengePer0 + vaterTeil.InWartschlange;
-                pufferwert = vaterTeil.Pufferwert;
-                // Calculation
-                if (Verwendung.Contains("KDH") == false)
+                if (istEndProdukt == true)
                 {
                     produktionsMenge = vertriebPer0 + Puffer - lagerstand - inWarteschlange - inBearbeitung;
                 }
                 else
                 {
-                    produktionsMenge += (vertriebPer0 + Puffer - lagerstand - inWarteschlange - inBearbeitung)/3;
+                    // Set members
+                    vertriebPer0 = vaterTeil.ProduktionsMengePer0 + vaterTeil.InWartschlange;
+                    if (puffer == -1)
+                    {
+                        puffer = vaterTeil.Puffer;
+                    }
+                    // Calculation
+                    if (Verwendung.Contains("KDH") == false)
+                    {
+                        produktionsMenge = vertriebPer0 + Puffer - lagerstand - inWarteschlange - inBearbeitung;
+                    }
+                    else
+                    {
+                        produktionsMenge += (vertriebPer0 + Puffer - lagerstand - inWarteschlange - inBearbeitung) / 3;
+                    }
+                }
+                Aufgeloest = true;
+            }
+        }
+        // Public function to change members puffer (0) or produktionsMenge (1)
+        public void FeldGeandert(int member, int value)
+        {
+            if (aufgeloest == true)
+            {
+                aufgeloest = false;
+                // puffer
+                if (member == 0)
+                {
+                    puffer = value;
+                    if (zusammensetzung.Count() != 0 && DataContainer.Instance.BerechneKindTeil == true)
+                    {
+                        foreach (KeyValuePair<Teil, int> kvp in zusammensetzung)
+                        {
+                            if (kvp.Key is ETeil)
+                            {
+                                ETeil et = kvp.Key as ETeil;
+                                et.FeldGeandert(member, value);
+                            }
+                        }
+                    }
+                }
+                // produktionsMenge
+                else if (member == 1)
+                {
+                    produktionsMenge = value;
+                    if (zusammensetzung.Count() != 0 && DataContainer.Instance.BerechneKindTeil == true)
+                    {
+                        foreach (KeyValuePair<Teil, int> kvp in zusammensetzung)
+                        {
+                            if (kvp.Key is ETeil)
+                            {
+                                ETeil et = kvp.Key as ETeil;
+                                et.FeldGeandert(member, value);
+                            }
+                        }
+                    }
                 }
             }
         }

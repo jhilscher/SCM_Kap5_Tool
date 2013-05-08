@@ -9,30 +9,35 @@ namespace ToolFahrrad_v1
     public abstract class Teil
     {
         // Class members
+        protected bool aufgeloest;
         protected int nr;
         protected string bezeichnung;
         protected int lagerstand;
         private double verhaeltnis;
         protected string verwendung;
-        protected double pufferwert;
         protected int vertriebPer0;
         protected int verbrauchPer1;
         protected int verbrauchPer2;
         protected int verbrauchPer3;
-                // Constructor
+        // Constructor
         public Teil(int nummer, string bez)
         {
+            aufgeloest = false;
             nr = nummer;
             bezeichnung = bez;
             lagerstand = 0;
             verhaeltnis = 0.0;
-            pufferwert = 0;
             vertriebPer0 = 0;
             verbrauchPer1 = 0;
             verbrauchPer2 = 0;
             verbrauchPer3 = 0;
         }
         // Getter / Setter
+        protected bool Aufgeloest
+        {
+            get { return aufgeloest; }
+            set { aufgeloest = value; }
+        }
         public int Nummer
         {
             get { return nr; }
@@ -67,25 +72,6 @@ namespace ToolFahrrad_v1
                                              " ist eine nicht zulaessige Verwendung eingegeben (" + value + ")");
                 }
             }
-        }
-        public double Pufferwert
-        {
-            get { return pufferwert; }
-            set
-            {
-                if (value > 1)
-                {
-                    pufferwert = value / 100;
-                }
-                else
-                {
-                    pufferwert = value;
-                }
-            }
-        }
-        public int Puffer
-        {
-            get { return (int)(vertriebPer0 * pufferwert); }
         }
         public int VertriebPer0
         {

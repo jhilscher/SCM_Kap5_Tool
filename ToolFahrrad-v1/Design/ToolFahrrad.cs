@@ -116,9 +116,9 @@ namespace ToolFahrrad_v1
             instance.GetTeil(2).VertriebPer0 = Convert.ToInt32(upDownAW2.Value);
             instance.GetTeil(3).VertriebPer0 = Convert.ToInt32(upDownAW3.Value);
 
-            instance.GetTeil(1).Pufferwert = Convert.ToInt32(pufferP1.Value);
-            instance.GetTeil(2).Pufferwert = Convert.ToInt32(pufferP2.Value);
-            instance.GetTeil(3).Pufferwert = Convert.ToInt32(pufferP3.Value);
+            (instance.GetTeil(1) as ETeil).Puffer = Convert.ToInt32(pufferP1.Value);
+            (instance.GetTeil(2) as ETeil).Puffer = Convert.ToInt32(pufferP2.Value);
+            (instance.GetTeil(3) as ETeil).Puffer = Convert.ToInt32(pufferP3.Value);
 
             instance.GetTeil(1).VerbrauchPer1 = Convert.ToInt32(upDownP11.Value);
             instance.GetTeil(1).VerbrauchPer2 = Convert.ToInt32(upDownP12.Value);
@@ -400,6 +400,9 @@ namespace ToolFahrrad_v1
                     int prodMengeNeu = Convert.ToInt32(row.Cells[7].Value.ToString());
                     if (!prodMengeAlt.Equals(prodMengeNeu))
                     {
+
+                        //ETeil et = instande.GetTeil(...);
+                        //et.PufferGeandert(...)
                         (instance.GetTeil(Convert.ToInt32(row.Cells[0].Value.ToString())) as ETeil).ProduktionsMengePer0 = prodMengeNeu;
                         text += row.Cells[1].Value.ToString() + ": von " + prodMengeAlt + " auf " + prodMengeNeu + "\n";
                     }

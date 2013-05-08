@@ -10,13 +10,13 @@ namespace ToolFahrrad_v1
     class DataContainer
     {
         // Class members
+        private bool berechneKindTeil;
         private static DataContainer instance = new DataContainer();
         private List<Bestellposition> listeBestellungen;
         private Dictionary<int, Teil> listeTeile;
         private Dictionary<int, Arbeitsplatz> listeArbeitsplaetze;
         private int[] listeReihenfolge;
         private bool sonderProduktion = false;
-        private bool pufferGeaendert = false;
         private bool ueberstundenErlaubt = true;
         private Produktionsplanung pp;
         private string openFile;
@@ -36,11 +36,17 @@ namespace ToolFahrrad_v1
         // Constructor
         private DataContainer()
         {
+            berechneKindTeil = true;
             listeBestellungen = new List<Bestellposition>();
             listeTeile = new Dictionary<int, Teil>();
             listeArbeitsplaetze = new Dictionary<int, Arbeitsplatz>();
             openFile = Application.StartupPath + "//output.xml";
             saveFile = Application.StartupPath + "//input.xml";
+        }
+        public bool BerechneKindTeil
+        {
+            get { return berechneKindTeil; }
+            set { berechneKindTeil = value; }
         }
         // Getter for instance of DataContainer
         public static DataContainer Instance
@@ -129,27 +135,6 @@ namespace ToolFahrrad_v1
             else
             {
                 throw new UnknownTeilException(nr);
-            }
-        }
-        // Setter of Puffer for Teil
-        public void SetPuffer(int nr, int wert)
-        {
-            if (listeTeile.ContainsKey(nr) == false)
-            {
-                throw new UnknownTeilException(nr);
-            }
-            if (wert < 0)
-            {
-                throw new InputException("Puffer darf nicht negativ sein!");
-            }
-            if (listeTeile[nr].Pufferwert < 0)
-            {
-                listeTeile[nr].Pufferwert = wert;
-            }
-            if (listeTeile[nr].Pufferwert != wert)
-            {
-                listeTeile[nr].Pufferwert = wert;
-                pufferGeaendert = true;
             }
         }
         // Getter data table of KTeil
