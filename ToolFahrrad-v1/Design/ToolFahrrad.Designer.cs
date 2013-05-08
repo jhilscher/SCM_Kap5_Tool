@@ -84,11 +84,23 @@
             this.colFarbe = new System.Windows.Forms.DataGridViewImageColumn();
             this.colZugang = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tab_eTeil = new System.Windows.Forms.TabPage();
+            this.cbMitOhne = new System.Windows.Forms.CheckBox();
+            this.rbReserve = new System.Windows.Forms.RadioButton();
+            this.rbPlanung = new System.Windows.Forms.RadioButton();
             this.picReadOnlyETeile = new System.Windows.Forms.PictureBox();
             this.picResetETeil = new System.Windows.Forms.PictureBox();
             this.picEditEteile = new System.Windows.Forms.PictureBox();
             this.picSaveETeile = new System.Windows.Forms.PictureBox();
             this.dataGridViewETeil = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.colWarteschlange = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colBearbeitung = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colPlanung = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.reserve = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tab_APlatz = new System.Windows.Forms.TabPage();
             this.picReadOnlyAPlatz = new System.Windows.Forms.PictureBox();
             this.picResetAPlatz = new System.Windows.Forms.PictureBox();
@@ -125,17 +137,6 @@
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.helpProvider1 = new System.Windows.Forms.HelpProvider();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.colWarteschlange = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colBearbeitung = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colPlanung = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.reserve = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.rbPlanung = new System.Windows.Forms.RadioButton();
-            this.rbReserve = new System.Windows.Forms.RadioButton();
             this.tabs.SuspendLayout();
             this.tab_xml.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pufferP3)).BeginInit();
@@ -793,6 +794,7 @@
             // tab_eTeil
             // 
             this.tab_eTeil.BackColor = System.Drawing.Color.Transparent;
+            this.tab_eTeil.Controls.Add(this.cbMitOhne);
             this.tab_eTeil.Controls.Add(this.rbReserve);
             this.tab_eTeil.Controls.Add(this.rbPlanung);
             this.tab_eTeil.Controls.Add(this.picReadOnlyETeile);
@@ -802,6 +804,31 @@
             this.tab_eTeil.Controls.Add(this.dataGridViewETeil);
             resources.ApplyResources(this.tab_eTeil, "tab_eTeil");
             this.tab_eTeil.Name = "tab_eTeil";
+            // 
+            // cbMitOhne
+            // 
+            resources.ApplyResources(this.cbMitOhne, "cbMitOhne");
+            this.helpProvider1.SetHelpKeyword(this.cbMitOhne, resources.GetString("cbMitOhne.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.cbMitOhne, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("cbMitOhne.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.cbMitOhne, resources.GetString("cbMitOhne.HelpString"));
+            this.cbMitOhne.Name = "cbMitOhne";
+            this.helpProvider1.SetShowHelp(this.cbMitOhne, ((bool)(resources.GetObject("cbMitOhne.ShowHelp"))));
+            this.cbMitOhne.UseVisualStyleBackColor = true;
+            // 
+            // rbReserve
+            // 
+            resources.ApplyResources(this.rbReserve, "rbReserve");
+            this.rbReserve.Name = "rbReserve";
+            this.helpProvider1.SetShowHelp(this.rbReserve, ((bool)(resources.GetObject("rbReserve.ShowHelp"))));
+            this.rbReserve.UseVisualStyleBackColor = true;
+            // 
+            // rbPlanung
+            // 
+            resources.ApplyResources(this.rbPlanung, "rbPlanung");
+            this.rbPlanung.Checked = true;
+            this.rbPlanung.Name = "rbPlanung";
+            this.rbPlanung.TabStop = true;
+            this.rbPlanung.UseVisualStyleBackColor = true;
             // 
             // picReadOnlyETeile
             // 
@@ -858,6 +885,61 @@
             this.reserve});
             resources.ApplyResources(this.dataGridViewETeil, "dataGridViewETeil");
             this.dataGridViewETeil.Name = "dataGridViewETeil";
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            resources.ApplyResources(this.dataGridViewTextBoxColumn1, "dataGridViewTextBoxColumn1");
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.dataGridViewTextBoxColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            resources.ApplyResources(this.dataGridViewTextBoxColumn2, "dataGridViewTextBoxColumn2");
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            resources.ApplyResources(this.dataGridViewTextBoxColumn3, "dataGridViewTextBoxColumn3");
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            resources.ApplyResources(this.dataGridViewTextBoxColumn4, "dataGridViewTextBoxColumn4");
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
+            // 
+            // dataGridViewImageColumn1
+            // 
+            resources.ApplyResources(this.dataGridViewImageColumn1, "dataGridViewImageColumn1");
+            this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
+            this.dataGridViewImageColumn1.ReadOnly = true;
+            this.dataGridViewImageColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // colWarteschlange
+            // 
+            resources.ApplyResources(this.colWarteschlange, "colWarteschlange");
+            this.colWarteschlange.Name = "colWarteschlange";
+            this.colWarteschlange.ReadOnly = true;
+            // 
+            // colBearbeitung
+            // 
+            resources.ApplyResources(this.colBearbeitung, "colBearbeitung");
+            this.colBearbeitung.Name = "colBearbeitung";
+            this.colBearbeitung.ReadOnly = true;
+            // 
+            // colPlanung
+            // 
+            resources.ApplyResources(this.colPlanung, "colPlanung");
+            this.colPlanung.Name = "colPlanung";
+            this.colPlanung.ReadOnly = true;
+            // 
+            // reserve
+            // 
+            resources.ApplyResources(this.reserve, "reserve");
+            this.reserve.Name = "reserve";
             // 
             // tab_APlatz
             // 
@@ -1110,74 +1192,9 @@
             this.imageList1.Images.SetKeyName(1, "yellow");
             this.imageList1.Images.SetKeyName(2, "green");
             // 
-            // dataGridViewTextBoxColumn1
+            // helpProvider1
             // 
-            resources.ApplyResources(this.dataGridViewTextBoxColumn1, "dataGridViewTextBoxColumn1");
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            this.dataGridViewTextBoxColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            resources.ApplyResources(this.dataGridViewTextBoxColumn2, "dataGridViewTextBoxColumn2");
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            resources.ApplyResources(this.dataGridViewTextBoxColumn3, "dataGridViewTextBoxColumn3");
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            resources.ApplyResources(this.dataGridViewTextBoxColumn4, "dataGridViewTextBoxColumn4");
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.ReadOnly = true;
-            // 
-            // dataGridViewImageColumn1
-            // 
-            resources.ApplyResources(this.dataGridViewImageColumn1, "dataGridViewImageColumn1");
-            this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
-            this.dataGridViewImageColumn1.ReadOnly = true;
-            this.dataGridViewImageColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // colWarteschlange
-            // 
-            resources.ApplyResources(this.colWarteschlange, "colWarteschlange");
-            this.colWarteschlange.Name = "colWarteschlange";
-            this.colWarteschlange.ReadOnly = true;
-            // 
-            // colBearbeitung
-            // 
-            resources.ApplyResources(this.colBearbeitung, "colBearbeitung");
-            this.colBearbeitung.Name = "colBearbeitung";
-            this.colBearbeitung.ReadOnly = true;
-            // 
-            // colPlanung
-            // 
-            resources.ApplyResources(this.colPlanung, "colPlanung");
-            this.colPlanung.Name = "colPlanung";
-            this.colPlanung.ReadOnly = true;
-            // 
-            // reserve
-            // 
-            resources.ApplyResources(this.reserve, "reserve");
-            this.reserve.Name = "reserve";
-            // 
-            // rbPlanung
-            // 
-            resources.ApplyResources(this.rbPlanung, "rbPlanung");
-            this.rbPlanung.Checked = true;
-            this.rbPlanung.Name = "rbPlanung";
-            this.rbPlanung.UseVisualStyleBackColor = true;
-            // 
-            // rbReserve
-            // 
-            resources.ApplyResources(this.rbReserve, "rbReserve");
-            this.rbReserve.Name = "rbReserve";
-            this.helpProvider1.SetShowHelp(this.rbReserve, ((bool)(resources.GetObject("rbReserve.ShowHelp"))));
-            this.rbReserve.UseVisualStyleBackColor = true;
+            resources.ApplyResources(this.helpProvider1, "helpProvider1");
             // 
             // Fahrrad
             // 
@@ -1186,7 +1203,11 @@
             this.Controls.Add(this.menu);
             this.Controls.Add(this.tabs);
             this.HelpButton = true;
+            this.helpProvider1.SetHelpKeyword(this, resources.GetString("$this.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("$this.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this, resources.GetString("$this.HelpString"));
             this.Name = "Fahrrad";
+            this.helpProvider1.SetShowHelp(this, ((bool)(resources.GetObject("$this.ShowHelp"))));
             this.tabs.ResumeLayout(false);
             this.tab_xml.ResumeLayout(false);
             this.tab_xml.PerformLayout();
@@ -1348,6 +1369,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn reserve;
         private System.Windows.Forms.RadioButton rbReserve;
         private System.Windows.Forms.RadioButton rbPlanung;
+        private System.Windows.Forms.CheckBox cbMitOhne;
     }
 }
 
