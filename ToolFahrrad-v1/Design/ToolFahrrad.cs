@@ -213,25 +213,31 @@ namespace ToolFahrrad_v1
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void pictureEditEteile_Click(object sender, EventArgs e)
+        private void picEditEteile_Click(object sender, EventArgs e)
         {
+            Dictionary<PictureBox, bool> dic = new Dictionary<PictureBox, bool>() 
+            {
+                {this.picSaveETeile, true},
+                {this.picResetETeil, true},
+                {this.picReadOnlyETeile, true}
+            };
             if (rbReserve.Checked == true)
             {
-                dataGridViewETeil.Columns[8].DefaultCellStyle.BackColor = Color.LightBlue;
-                dataGridViewETeil.Columns[8].ReadOnly = false;
+                picEdit(dic, 8, dataGridViewETeil);
             }
-            this.picSaveETeile.Visible = true;
-            this.picResetETeil.Visible = true;
-            this.picReadOnlyETeile.Visible = true;
         }
-        private void picEditAPlatz_Click(object sender, System.EventArgs e)
+        private void picEditAPlatz_Click(object sender, EventArgs e)
         {
-            dataGridViewAPlatz.Columns[4].DefaultCellStyle.BackColor = Color.LightBlue;
-            dataGridViewAPlatz.Columns[4].ReadOnly = false;
-            this.picSaveAPlatz.Visible = true;
-            this.picResetAPlatz.Visible = true;
-            this.picReadOnlyAPlatz.Visible = true;
-            this.picEditAPlatz.Visible = false;
+            Dictionary<PictureBox, bool> dic = new Dictionary<PictureBox, bool>() 
+            {
+                {this.picSaveAPlatz, true},
+                {this.picResetAPlatz, true},
+                {this.picReadOnlyAPlatz, true}
+            };
+            if (rbRuestzeit.Checked == true)
+            {
+                picEdit(dic, 4, dataGridViewAPlatz);
+            }
         }
 
         /// <summary>
@@ -295,10 +301,12 @@ namespace ToolFahrrad_v1
         private void pictureResetETeil_Click(object sender, EventArgs e)
         {
             Information();
-            if (rbReserve.Checked == true)
-            {
-                dataGridViewETeil.Columns[8].DefaultCellStyle.BackColor = Color.Honeydew;
-            }
+            dataGridViewETeil.Columns[8].DefaultCellStyle.BackColor = Color.Honeydew;
+        }
+        private void picResetAPlatz_Click(object sender, EventArgs e)
+        {
+            Information();
+            dataGridViewAPlatz.Columns[4].DefaultCellStyle.BackColor = Color.Honeydew;
         }
 
         /// <summary>
@@ -308,16 +316,27 @@ namespace ToolFahrrad_v1
         /// <param name="e"></param>
         private void pictureReadOnly_Click(object sender, EventArgs e)
         {
-            this.picEditEteile.Visible = true;
-            this.picResetETeil.Visible = false;
-            this.picSaveETeile.Visible = false;
-            this.picReadOnlyETeile.Visible = false;
-
-            dataGridViewETeil.Columns[7].DefaultCellStyle.BackColor = Color.Honeydew;
-            dataGridViewETeil.Columns[7].ReadOnly = true;
-            dataGridViewETeil.Columns[8].DefaultCellStyle.BackColor = Color.Honeydew;
-            dataGridViewETeil.Columns[8].ReadOnly = true;
+            Dictionary<PictureBox, bool> dic = new Dictionary<PictureBox, bool>() 
+            {
+                {this.picEditEteile, true},
+                {this.picResetETeil, false},
+                {this.picSaveETeile, false},
+                {this.picReadOnlyETeile, false}
+            };
+            picReadOnly(dic, 8, dataGridViewETeil);
         }
+        private void picReadOnlyAPlatz_Click(object sender, EventArgs e)
+        {
+            Dictionary<PictureBox, bool> dic = new Dictionary<PictureBox, bool>() 
+            {
+                {this.picEditsAPlatz, true},
+                {this.picResetAPlatz, false},
+                {this.picSaveAPlatz, false},
+                {this.picReadOnlyAPlatz, false}
+            };
+            picReadOnly(dic, 4, dataGridViewAPlatz);
+        }
+        
 
         /// <summary>
         /// CHECK
@@ -511,6 +530,25 @@ namespace ToolFahrrad_v1
 
                 ++index;
             }
+        }
+
+        private void picEdit(Dictionary<PictureBox, bool> dic, int index, DataGridView dataGrid)
+        {
+            dataGrid.Columns[index].DefaultCellStyle.BackColor = Color.LightBlue;
+            dataGrid.Columns[index].ReadOnly = false;
+            foreach (KeyValuePair<PictureBox, bool> pair in dic)
+            {
+                pair.Key.Visible = pair.Value;
+            }
+        }
+        private void picReadOnly(Dictionary<PictureBox, bool> dic, int index, DataGridView dataGrid)
+        {
+            foreach (KeyValuePair<PictureBox, bool> pair in dic)
+            {
+                pair.Key.Visible = pair.Value;
+            }
+            dataGrid.Columns[index].DefaultCellStyle.BackColor = Color.Honeydew;
+            dataGrid.Columns[index].ReadOnly = true;
         }
     }
 }

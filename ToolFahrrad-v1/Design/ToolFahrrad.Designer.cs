@@ -97,9 +97,10 @@
             this.colPlanung = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.reserve = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tab_APlatz = new System.Windows.Forms.TabPage();
+            this.picEditsAPlatz = new System.Windows.Forms.PictureBox();
+            this.rbRuestzeit = new System.Windows.Forms.RadioButton();
             this.picReadOnlyAPlatz = new System.Windows.Forms.PictureBox();
             this.picResetAPlatz = new System.Windows.Forms.PictureBox();
-            this.picEditAPlatz = new System.Windows.Forms.PictureBox();
             this.picSaveAPlatz = new System.Windows.Forms.PictureBox();
             this.dataGridViewAPlatz = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -167,9 +168,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.picSaveETeile)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewETeil)).BeginInit();
             this.tab_APlatz.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picEditsAPlatz)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picReadOnlyAPlatz)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picResetAPlatz)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picEditAPlatz)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picSaveAPlatz)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAPlatz)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -815,7 +816,7 @@
             this.picEditEteile.Name = "picEditEteile";
             this.picEditEteile.TabStop = false;
             this.toolTip.SetToolTip(this.picEditEteile, resources.GetString("picEditEteile.ToolTip"));
-            this.picEditEteile.Click += new System.EventHandler(this.pictureEditEteile_Click);
+            this.picEditEteile.Click += new System.EventHandler(this.picEditEteile_Click);
             // 
             // picSaveETeile
             // 
@@ -905,13 +906,33 @@
             // tab_APlatz
             // 
             this.tab_APlatz.BackColor = System.Drawing.Color.Transparent;
+            this.tab_APlatz.Controls.Add(this.picEditsAPlatz);
+            this.tab_APlatz.Controls.Add(this.rbRuestzeit);
             this.tab_APlatz.Controls.Add(this.picReadOnlyAPlatz);
             this.tab_APlatz.Controls.Add(this.picResetAPlatz);
-            this.tab_APlatz.Controls.Add(this.picEditAPlatz);
             this.tab_APlatz.Controls.Add(this.picSaveAPlatz);
             this.tab_APlatz.Controls.Add(this.dataGridViewAPlatz);
             resources.ApplyResources(this.tab_APlatz, "tab_APlatz");
             this.tab_APlatz.Name = "tab_APlatz";
+            // 
+            // picEditsAPlatz
+            // 
+            this.picEditsAPlatz.Cursor = System.Windows.Forms.Cursors.Hand;
+            resources.ApplyResources(this.picEditsAPlatz, "picEditsAPlatz");
+            this.picEditsAPlatz.Name = "picEditsAPlatz";
+            this.helpProvider1.SetShowHelp(this.picEditsAPlatz, ((bool)(resources.GetObject("picEditsAPlatz.ShowHelp"))));
+            this.picEditsAPlatz.TabStop = false;
+            this.toolTip.SetToolTip(this.picEditsAPlatz, resources.GetString("picEditsAPlatz.ToolTip"));
+            this.picEditsAPlatz.Click += new System.EventHandler(this.picEditAPlatz_Click);
+            // 
+            // rbRuestzeit
+            // 
+            resources.ApplyResources(this.rbRuestzeit, "rbRuestzeit");
+            this.rbRuestzeit.Checked = true;
+            this.rbRuestzeit.Name = "rbRuestzeit";
+            this.helpProvider1.SetShowHelp(this.rbRuestzeit, ((bool)(resources.GetObject("rbRuestzeit.ShowHelp"))));
+            this.rbRuestzeit.TabStop = true;
+            this.rbRuestzeit.UseVisualStyleBackColor = true;
             // 
             // picReadOnlyAPlatz
             // 
@@ -921,6 +942,7 @@
             this.helpProvider1.SetShowHelp(this.picReadOnlyAPlatz, ((bool)(resources.GetObject("picReadOnlyAPlatz.ShowHelp"))));
             this.picReadOnlyAPlatz.TabStop = false;
             this.toolTip.SetToolTip(this.picReadOnlyAPlatz, resources.GetString("picReadOnlyAPlatz.ToolTip"));
+            this.picReadOnlyAPlatz.Click += new System.EventHandler(this.picReadOnlyAPlatz_Click);
             // 
             // picResetAPlatz
             // 
@@ -930,16 +952,7 @@
             this.helpProvider1.SetShowHelp(this.picResetAPlatz, ((bool)(resources.GetObject("picResetAPlatz.ShowHelp"))));
             this.picResetAPlatz.TabStop = false;
             this.toolTip.SetToolTip(this.picResetAPlatz, resources.GetString("picResetAPlatz.ToolTip"));
-            // 
-            // picEditAPlatz
-            // 
-            this.picEditAPlatz.Cursor = System.Windows.Forms.Cursors.Hand;
-            resources.ApplyResources(this.picEditAPlatz, "picEditAPlatz");
-            this.picEditAPlatz.Name = "picEditAPlatz";
-            this.helpProvider1.SetShowHelp(this.picEditAPlatz, ((bool)(resources.GetObject("picEditAPlatz.ShowHelp"))));
-            this.picEditAPlatz.TabStop = false;
-            this.toolTip.SetToolTip(this.picEditAPlatz, resources.GetString("picEditAPlatz.ToolTip"));
-            this.picEditAPlatz.Click += new System.EventHandler(this.picEditAPlatz_Click);
+            this.picResetAPlatz.Click += new System.EventHandler(this.picResetAPlatz_Click);
             // 
             // picSaveAPlatz
             // 
@@ -1209,9 +1222,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.picSaveETeile)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewETeil)).EndInit();
             this.tab_APlatz.ResumeLayout(false);
+            this.tab_APlatz.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picEditsAPlatz)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picReadOnlyAPlatz)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picResetAPlatz)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picEditAPlatz)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picSaveAPlatz)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAPlatz)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
@@ -1304,7 +1318,6 @@
         private System.Windows.Forms.HelpProvider helpProvider1;
         private System.Windows.Forms.PictureBox picReadOnlyAPlatz;
         private System.Windows.Forms.PictureBox picResetAPlatz;
-        private System.Windows.Forms.PictureBox picEditAPlatz;
         private System.Windows.Forms.PictureBox picSaveAPlatz;
         private System.Windows.Forms.CheckBox cbMitOhne;
         private System.Windows.Forms.RadioButton rbReserve;
@@ -1326,6 +1339,8 @@
         private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
         private System.Windows.Forms.DataGridViewCheckBoxColumn s1;
+        private System.Windows.Forms.RadioButton rbRuestzeit;
+        private System.Windows.Forms.PictureBox picEditsAPlatz;
     }
 }
 
