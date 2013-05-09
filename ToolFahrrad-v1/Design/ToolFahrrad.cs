@@ -9,7 +9,6 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Globalization;
 using System.Threading;
-using System;
 using System.IO;
 
 namespace ToolFahrrad_v1
