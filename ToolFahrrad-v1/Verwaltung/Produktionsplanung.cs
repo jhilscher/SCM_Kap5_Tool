@@ -51,6 +51,15 @@ namespace ToolFahrrad_v1
                 RekursAufloesen(index, null, dc.GetTeil(index) as ETeil);
             }
             // Aufloesung der KTeile
+            // Prüfung, ob Bruttobedarf schon gerechnet wurde
+            // wenn ja - dann wieder auf null setzen. 
+            if ((dc.GetTeil(21) as KTeil).BruttoBedarfPer0 != 0)
+            {
+                foreach (KTeil k in dc.ListeKTeile)
+                {
+                    k.BruttoBedarfPer0 = 0;
+                }
+            }
             for (int index = 1; index < 4; index++)
             {
                 ETeil et = dc.GetTeil(index) as ETeil;
