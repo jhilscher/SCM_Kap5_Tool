@@ -52,6 +52,10 @@ namespace ToolFahrrad_v1
             if (!lableDazu.Text.Contains("aus der Periode"))
                 lableDazu.Text = lableDazu.Text + "aus der Periode " + xml.period;
 
+            foreach (Arbeitsplatz a in instance.ArbeitsplatzList)
+            {
+                a.Geaendert = false;
+            }
             this.Information();
             this.toolAusfueren.Visible = false;
             this.save.Visible = true;
@@ -166,7 +170,7 @@ namespace ToolFahrrad_v1
         {
             xmlOeffnen();
         }
-        
+
         /// <summary>
         /// MENU
         /// </summary>
@@ -236,7 +240,7 @@ namespace ToolFahrrad_v1
             };
             if (rbRuestzeit.Checked == true)
             {
-                picEdit(dic, 4, dataGridViewAPlatz);
+                picEdit(dic, 5, dataGridViewAPlatz);
             }
         }
 
@@ -247,8 +251,7 @@ namespace ToolFahrrad_v1
         /// <param name="e"></param>
         private void pictureSaveETeile_Click(object sender, EventArgs e)
         {
-            DialogResult result;
-            result = MessageBox.Show("Wollen Sie sicher was ändern?", "Änderungen", MessageBoxButtons.OKCancel);
+            DialogResult result = GetMessage(null, "Änderungen");
             string text = string.Empty;
             if (result == System.Windows.Forms.DialogResult.OK)
             {
@@ -256,7 +259,7 @@ namespace ToolFahrrad_v1
                 foreach (DataGridViewRow row in dataGridViewETeil.Rows)
                 {
                     if (rbReserve.Checked == true)
-                    {                        
+                    {
                         int reserveAlt = (instance.GetTeil(Convert.ToInt32(row.Cells[0].Value.ToString())) as ETeil).Puffer;
                         int reserveNeu = Convert.ToInt32(row.Cells[8].Value.ToString());
                         if (!reserveAlt.Equals(reserveNeu))
@@ -275,23 +278,70 @@ namespace ToolFahrrad_v1
                         text += change[2] + ": von " + change[0] + " auf " + change[1] + "\n";
                     }
                 }
-                
-                this.picEditEteile.Visible = true;
-                this.picResetETeil.Visible = false;
-                this.picSaveETeile.Visible = false;
-                this.picReadOnlyETeile.Visible = false;
 
-                dataGridViewETeil.Columns[8].DefaultCellStyle.BackColor = Color.Honeydew;
-                dataGridViewETeil.Columns[8].ReadOnly = true;
+                Dictionary<PictureBox, bool> dic = new Dictionary<PictureBox, bool>() 
+                {
+                    {this.picEditsAPlatz, true},
+                    {this.picResetAPlatz, false},
+                    {this.picSaveAPlatz, false},
+                    {this.picReadOnlyAPlatz, false}
+                };
+                picSave(dic, 5, dataGridViewAPlatz);
 
                 pp.Aufloesen();
                 Information();
                 if (!text.Equals(string.Empty))
-                    result = MessageBox.Show(text, "Message", MessageBoxButtons.OK);
+                    result = GetMessage(text, "Message");
                 else
-                    result = MessageBox.Show("keine Spalte wurde geändert", "Message", MessageBoxButtons.OK);
+                    result = GetMessage("keine Spalte wurde geändert", "Message");
             }
         }
+        private void picSaveAPlatz_Click(object sender, EventArgs e)
+        {
+            DialogResult result = GetMessage(null, "Änderungen");
+            string text = string.Empty;
+            if (result == System.Windows.Forms.DialogResult.OK)
+            {
+                Dictionary<int, string> ids = new Dictionary<int, string>();
+                foreach (DataGridViewRow row in dataGridViewAPlatz.Rows)
+                {
+                    if (rbRuestzeit.Checked == true)
+                    {
+                        int ruestAlt = (instance.GetArbeitsplatz(Convert.ToInt32(row.Cells[0].Value.ToString()))).RuestungCustom;
+                        int ruestNeu = Convert.ToInt32(row.Cells[5].Value.ToString());
+                        if (!ruestAlt.Equals(ruestNeu))
+                        {
+                            ids.Add(Convert.ToInt32(row.Cells[0].Value.ToString()), ruestAlt + ">" + ruestNeu);
+                        }
+                    }
+                }
+
+                if (ids.Count() > 0)
+                {
+                    foreach (KeyValuePair<int, string> pair in ids)
+                    {
+                        string[] change = pair.Value.Split('>');
+                        (instance.GetArbeitsplatz(pair.Key)).CustomRuestungGeaendert(Convert.ToInt32(change[1]));
+                        text += pair.Key + ": von " + change[0] + " auf " + change[1] + "\n";
+                    }
+                }
+                Dictionary<PictureBox, bool> dic = new Dictionary<PictureBox, bool>() 
+                {
+                    {this.picEditsAPlatz, true},
+                    {this.picResetAPlatz, false},
+                    {this.picSaveAPlatz, false},
+                    {this.picReadOnlyAPlatz, false}
+                };
+                picSave(dic, 5, dataGridViewAPlatz);
+                Information();
+                if (!text.Equals(string.Empty))
+                    result = GetMessage(text, "Message");
+                else
+                    result = GetMessage("keine Spalte wurde geändert", "Message");
+            }
+        }
+
+
 
         /// <summary>
         /// RESET
@@ -334,9 +384,9 @@ namespace ToolFahrrad_v1
                 {this.picSaveAPlatz, false},
                 {this.picReadOnlyAPlatz, false}
             };
-            picReadOnly(dic, 4, dataGridViewAPlatz);
+            picReadOnly(dic, 5, dataGridViewAPlatz);
         }
-        
+
 
         /// <summary>
         /// CHECK
@@ -495,34 +545,36 @@ namespace ToolFahrrad_v1
 
                 dataGridViewAPlatz.Rows.Add();
                 dataGridViewAPlatz.Rows[index].Cells[0].Value = a.GetNummerArbeitsplatz;
+                (instance.GetArbeitsplatz(a.GetNummerArbeitsplatz)).CustomRuestungGeaendert(-1);
                 dataGridViewAPlatz.Rows[index].Cells[1].Value = a.Leerzeit + " (" + a.RuestungVorPeriode + ") ";
                 dataGridViewAPlatz.Rows[index].Cells[2].Value = a.GetBenoetigteZeit + " min";
                 dataGridViewAPlatz.Rows[index].Cells[3].Value = (int)(a.GetRuestZeit * a.RuestungCustom) + " min";
-                dataGridViewAPlatz.Rows[index].Cells[4].Value = a.RuestungCustom;
-                dataGridViewAPlatz.Rows[index].Cells[5].Value = gesammt + " min";
+                dataGridViewAPlatz.Rows[index].Cells[4].Value = a.RuestNew;
+                dataGridViewAPlatz.Rows[index].Cells[5].Value = a.RuestungCustom;
+                dataGridViewAPlatz.Rows[index].Cells[6].Value = gesammt + " min";
                 if (gesammt <= a.zeit) // newTeim <= 2400 
-                    dataGridViewAPlatz.Rows[index].Cells[6].Value = imageList1.Images[2];
+                    dataGridViewAPlatz.Rows[index].Cells[7].Value = imageList1.Images[2];
                 else if (gesammt > instance.ErsteSchicht) // newTime > 3600
                 {
-                    dataGridViewAPlatz.Rows[index].Cells[6].Value = imageList1.Images[0];
-                    dataGridViewAPlatz.Rows[index].Cells[8].Value = true;
+                    dataGridViewAPlatz.Rows[index].Cells[7].Value = imageList1.Images[0];
+                    dataGridViewAPlatz.Rows[index].Cells[9].Value = true;
                 }
                 else if (gesammt > a.zeit && gesammt <= instance.ErsteSchicht) // 2400 < newTime < 3600 
                 {
-                    dataGridViewAPlatz.Rows[index].Cells[6].Value = imageList1.Images[1];
+                    dataGridViewAPlatz.Rows[index].Cells[7].Value = imageList1.Images[1];
                 }
                 else
                 {
-                    dataGridViewAPlatz.Rows[index].Cells[6].Value = imageList1.Images[2];
+                    dataGridViewAPlatz.Rows[index].Cells[7].Value = imageList1.Images[2];
                 }
-                dataGridViewAPlatz.Rows[index].Cells[7].Value = a.zeit - gesammt + " min";
+                dataGridViewAPlatz.Rows[index].Cells[8].Value = a.zeit - gesammt + " min";
 
                 //Farbe
-                for (int i = 0; i < 9; ++i)
+                for (int i = 0; i < 10; ++i)
                 {
-                    if (i < 2)
+                    if (i < 2 || i == 4)
                         dataGridViewAPlatz.Columns[i].DefaultCellStyle.BackColor = Color.FloralWhite;
-                    else if (i == 2 || i == 3 || (i >= 5 && i <= 8))
+                    else if (i == 2 || i == 3 || (i >= 6 && i <= 9))
                         dataGridViewAPlatz.Columns[i].DefaultCellStyle.BackColor = Color.LightYellow;
                     else
                         dataGridViewAPlatz.Columns[i].DefaultCellStyle.BackColor = Color.Honeydew;
@@ -549,6 +601,22 @@ namespace ToolFahrrad_v1
             }
             dataGrid.Columns[index].DefaultCellStyle.BackColor = Color.Honeydew;
             dataGrid.Columns[index].ReadOnly = true;
+        }
+        private void picSave(Dictionary<PictureBox, bool> dic, int index, DataGridView dataGrid)
+        {
+            foreach (KeyValuePair<PictureBox, bool> pair in dic)
+            {
+                pair.Key.Visible = pair.Value;
+            }
+            dataGrid.Columns[index].DefaultCellStyle.BackColor = Color.Honeydew;
+            dataGrid.Columns[index].ReadOnly = true;
+        }
+        private System.Windows.Forms.DialogResult GetMessage(string t, string s)
+        {
+            if (s.Contains("Änderungen"))
+                return MessageBox.Show("Wollen Sie sicher was ändern?", s, MessageBoxButtons.OKCancel);
+            else
+                return MessageBox.Show(t, s, MessageBoxButtons.OK);
         }
     }
 }

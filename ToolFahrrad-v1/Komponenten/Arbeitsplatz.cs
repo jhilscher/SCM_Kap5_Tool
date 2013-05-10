@@ -14,8 +14,19 @@ namespace ToolFahrrad_v1
         protected int anz_schichten = 1;
         protected int anz_uebermin = 0;
         private int ruestungVorPeriode = 0;
+        private int ruestNew = 0;
+        public int RuestNew
+        {
+            get { return ruestNew; }
+        }
         private int ruestungCustom = 0; //Mittelwert
+        private bool geaendert;
 
+        public bool Geaendert
+        {
+            get { return geaendert; }
+            set { geaendert = value; }
+        }
         public int RuestungCustom
         {
             get { return ruestungCustom; }
@@ -30,7 +41,7 @@ namespace ToolFahrrad_v1
         }
         public Arbeitsplatz()
         {
- 
+
         }
 
         // Needed time to produce Teil with given number
@@ -40,6 +51,7 @@ namespace ToolFahrrad_v1
         // Constructor
         public Arbeitsplatz(int nr_neu)
         {
+            this.geaendert = false;
             this.nr = nr_neu;
             this.ruest_zeiten = new Dictionary<int, int>();
             this.werk_zeiten = new Dictionary<int, int>();
@@ -64,36 +76,43 @@ namespace ToolFahrrad_v1
         /// Kapazitätsplan
         /// </summary>
         public double GetRuestZeit
-        {
+        {            
             get
             {
+                if (geaendert == true)
+                    this.ruestNew = 0;
+
                 dc = DataContainer.Instance;
                 double sum = 0;
-                int newRuest = 0;
                 foreach (KeyValuePair<int, int> kvp in ruest_zeiten)
-                {    
-                sum += kvp.Value;                
-                    if((dc.GetTeil(kvp.Key) as ETeil).ProduktionsMengePer0 > 0)
-                    ++newRuest;
-
-                    //if ((dc.GetTeil(kvp.Key) as ETeil).ProduktionsMenge > 0)
-                        
+                {
+                    sum += kvp.Value;
+                    if ((dc.GetTeil(kvp.Key) as ETeil).ProduktionsMengePer0 > 0)
+                        ++this.ruestNew;
                 }
-                ruestungCustom = (newRuest + ruestungVorPeriode) / 2;
-                if (ruestungCustom < newRuest)
-                    ruestungCustom = newRuest;
-                return sum/ruest_zeiten.Count();
-            }
+                return sum / ruest_zeiten.Count();
 
-            //get
-            //{
-            //    double sum = 0;
-            //    foreach (KeyValuePair<int, int> kvp in ruest_zeiten)
-            //    {
-            //        sum += kvp.Value;
-            //    }
-            //    return (sum / ruest_zeiten.Count) * anz_ruestung;
-            //}
+                //ruestungCustom = (newRuest + ruestungVorPeriode) / 2;
+                //if (ruestungCustom < newRuest)
+                //    ruestungCustom = newRuest;
+
+            }
+        }
+
+        public void CustomRuestungGeaendert(int ruest)
+        {
+            if (geaendert == false)
+            {
+                this.ruestungCustom = (ruestNew + ruestungVorPeriode) / 2;
+                if (ruestungCustom < ruestNew)
+                    ruestungCustom = ruestNew;
+                geaendert = true;
+            }
+            else 
+            {
+                if(ruest != -1)
+                    this.ruestungCustom = ruest;
+            }
         }
 
         /// <summary>
