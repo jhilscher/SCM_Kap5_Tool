@@ -132,8 +132,9 @@
             this.Ruestanzahl = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewImageColumn2 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.s1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.s3 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.ueber = new System.Windows.Forms.DataGridViewImageColumn();
             this.tabs.SuspendLayout();
             this.tab_xml.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pufferP3)).BeginInit();
@@ -981,8 +982,9 @@
             this.Ruestanzahl,
             this.dataGridViewTextBoxColumn10,
             this.dataGridViewImageColumn2,
-            this.dataGridViewTextBoxColumn11,
-            this.s1});
+            this.s1,
+            this.s3,
+            this.ueber});
             resources.ApplyResources(this.dataGridViewAPlatz, "dataGridViewAPlatz");
             this.dataGridViewAPlatz.Name = "dataGridViewAPlatz";
             // 
@@ -1168,17 +1170,27 @@
             this.dataGridViewImageColumn2.ReadOnly = true;
             this.dataGridViewImageColumn2.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             // 
-            // dataGridViewTextBoxColumn11
-            // 
-            resources.ApplyResources(this.dataGridViewTextBoxColumn11, "dataGridViewTextBoxColumn11");
-            this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
-            this.dataGridViewTextBoxColumn11.ReadOnly = true;
-            // 
             // s1
             // 
             resources.ApplyResources(this.s1, "s1");
             this.s1.Name = "s1";
             this.s1.ReadOnly = true;
+            this.s1.TrueValue = "123";
+            // 
+            // s3
+            // 
+            resources.ApplyResources(this.s3, "s3");
+            this.s3.Name = "s3";
+            this.s3.ReadOnly = true;
+            this.s3.TrueValue = "";
+            // 
+            // ueber
+            // 
+            resources.ApplyResources(this.ueber, "ueber");
+            this.ueber.Name = "ueber";
+            this.ueber.ReadOnly = true;
+            this.ueber.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.ueber.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
             // Fahrrad
             // 
@@ -1349,8 +1361,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Ruestanzahl;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
         private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
         private System.Windows.Forms.DataGridViewCheckBoxColumn s1;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn s3;
+        private System.Windows.Forms.DataGridViewImageColumn ueber;
     }
 }
 

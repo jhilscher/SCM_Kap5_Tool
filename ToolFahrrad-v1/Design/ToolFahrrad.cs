@@ -552,14 +552,30 @@ namespace ToolFahrrad_v1
                 dataGridViewAPlatz.Rows[index].Cells[4].Value = a.RuestNew;
                 dataGridViewAPlatz.Rows[index].Cells[5].Value = a.RuestungCustom;
                 dataGridViewAPlatz.Rows[index].Cells[6].Value = gesammt + " min";
+                dataGridViewAPlatz.Rows[index].Cells[10].Value = imageList1.Images[2];
                 if (gesammt <= a.zeit) // newTeim <= 2400 
                     dataGridViewAPlatz.Rows[index].Cells[7].Value = imageList1.Images[2];
-                else if (gesammt > instance.ErsteSchicht) // newTime > 3600
+                else if (gesammt > instance.ErsteSchicht) // gesammt > 3600
                 {
-                    dataGridViewAPlatz.Rows[index].Cells[7].Value = imageList1.Images[0];
-                    dataGridViewAPlatz.Rows[index].Cells[9].Value = true;
+                    if (gesammt > 7200)
+                        dataGridViewAPlatz.Rows[index].Cells[10].Value = imageList1.Images[0];
+                    else if (gesammt > instance.ZweiteSchicht && gesammt < 7200)
+                        dataGridViewAPlatz.Rows[index].Cells[10].Value = imageList1.Images[1];
+                    else
+                        dataGridViewAPlatz.Rows[index].Cells[10].Value = imageList1.Images[2];
+
+                    if (gesammt < instance.ZweiteSchicht)
+                    {
+                        dataGridViewAPlatz.Rows[index].Cells[7].Value = imageList1.Images[0];
+                        dataGridViewAPlatz.Rows[index].Cells[8].Value = true;
+                    }
+                    else if (gesammt > instance.ZweiteSchicht)
+                    {
+                        dataGridViewAPlatz.Rows[index].Cells[7].Value = imageList1.Images[0];
+                        dataGridViewAPlatz.Rows[index].Cells[9].Value = true;
+                    }
                 }
-                else if (gesammt > a.zeit && gesammt <= instance.ErsteSchicht) // 2400 < newTime < 3600 
+                else if (gesammt > a.zeit && gesammt <= instance.ErsteSchicht) // 2400 < newTime < 3600 Überstunden
                 {
                     dataGridViewAPlatz.Rows[index].Cells[7].Value = imageList1.Images[1];
                 }
@@ -567,14 +583,13 @@ namespace ToolFahrrad_v1
                 {
                     dataGridViewAPlatz.Rows[index].Cells[7].Value = imageList1.Images[2];
                 }
-                dataGridViewAPlatz.Rows[index].Cells[8].Value = a.zeit - gesammt + " min";
 
                 //Farbe
-                for (int i = 0; i < 10; ++i)
+                for (int i = 0; i < 11; ++i)
                 {
                     if (i < 2 || i == 4)
                         dataGridViewAPlatz.Columns[i].DefaultCellStyle.BackColor = Color.FloralWhite;
-                    else if (i == 2 || i == 3 || (i >= 6 && i <= 9))
+                    else if (i == 2 || i == 3 || (i >= 6 && i <= 11))
                         dataGridViewAPlatz.Columns[i].DefaultCellStyle.BackColor = Color.LightYellow;
                     else
                         dataGridViewAPlatz.Columns[i].DefaultCellStyle.BackColor = Color.Honeydew;

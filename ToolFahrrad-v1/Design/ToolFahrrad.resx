@@ -713,17 +713,23 @@
   <data name="rbRuestzeit.Location" type="System.Drawing.Point, System.Drawing">
     <value>745, 45</value>
   </data>
+  <metadata name="helpProvider1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>223, 52</value>
+  </metadata>
+  <data name="helpProvider1.HelpNamespace" xml:space="preserve">
+    <value>E:\Server\Projecte C#\GIT\tool2\ToolFahrrad-v1\bin\Debug\chm\Benutzerhandbuch.chm</value>
+  </data>
   <data name="rbRuestzeit.ShowHelp" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="rbRuestzeit.Size" type="System.Drawing.Size, System.Drawing">
-    <value>63, 17</value>
+    <value>86, 17</value>
   </data>
   <data name="rbRuestzeit.TabIndex" type="System.Int32, mscorlib">
     <value>65</value>
   </data>
   <data name="rbRuestzeit.Text" xml:space="preserve">
-    <value>Rüstzeit</value>
+    <value>Rüstungszeit</value>
   </data>
   <data name="&gt;&gt;rbRuestzeit.Name" xml:space="preserve">
     <value>rbRuestzeit</value>
@@ -868,111 +874,36 @@
   <metadata name="dataGridViewTextBoxColumn5.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <data name="dataGridViewTextBoxColumn5.HeaderText" xml:space="preserve">
-    <value>Nr.</value>
-  </data>
-  <data name="dataGridViewTextBoxColumn5.Width" type="System.Int32, mscorlib">
-    <value>40</value>
-  </data>
   <metadata name="dataGridViewTextBoxColumn7.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <data name="dataGridViewTextBoxColumn7.HeaderText" xml:space="preserve">
-    <value>Leerzeit</value>
-  </data>
-  <data name="dataGridViewTextBoxColumn7.ToolTipText" xml:space="preserve">
-    <value>Leerzeit in Vorperiode (mit Rüstungsanzahl)</value>
-  </data>
-  <data name="dataGridViewTextBoxColumn7.Width" type="System.Int32, mscorlib">
-    <value>70</value>
-  </data>
   <metadata name="dataGridViewTextBoxColumn8.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <data name="dataGridViewTextBoxColumn8.HeaderText" xml:space="preserve">
-    <value>Kapazitätsbedarf</value>
-  </data>
-  <data name="dataGridViewTextBoxColumn8.Width" type="System.Int32, mscorlib">
-    <value>90</value>
-  </data>
   <metadata name="dataGridViewTextBoxColumn9.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <data name="dataGridViewTextBoxColumn9.HeaderText" xml:space="preserve">
-    <value>Rüstzeit</value>
-  </data>
-  <data name="dataGridViewTextBoxColumn9.ToolTipText" xml:space="preserve">
-    <value>gerechnet mit RAM</value>
-  </data>
-  <data name="dataGridViewTextBoxColumn9.Width" type="System.Int32, mscorlib">
-    <value>65</value>
-  </data>
   <metadata name="rap.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <data name="rap.HeaderText" xml:space="preserve">
-    <value>RAP</value>
-  </data>
-  <data name="rap.ToolTipText" xml:space="preserve">
-    <value>Rüstungsanzahl (Aktuelle Periode)</value>
-  </data>
-  <data name="rap.Width" type="System.Int32, mscorlib">
-    <value>45</value>
-  </data>
   <metadata name="Ruestanzahl.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <data name="Ruestanzahl.HeaderText" xml:space="preserve">
-    <value>RAM</value>
-  </data>
-  <data name="Ruestanzahl.ToolTipText" xml:space="preserve">
-    <value>Rüstungsanzahl (Mittelwert)</value>
-  </data>
-  <data name="Ruestanzahl.Width" type="System.Int32, mscorlib">
-    <value>50</value>
-  </data>
   <metadata name="dataGridViewTextBoxColumn10.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <data name="dataGridViewTextBoxColumn10.HeaderText" xml:space="preserve">
-    <value>Gesamt</value>
-  </data>
-  <data name="dataGridViewTextBoxColumn10.Width" type="System.Int32, mscorlib">
-    <value>65</value>
-  </data>
   <metadata name="dataGridViewImageColumn2.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <data name="dataGridViewImageColumn2.HeaderText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="dataGridViewImageColumn2.ToolTipText" xml:space="preserve">
-    <value>rot &lt; 40% ; gelb &gt; 100% ; grün &lt;= 100%</value>
-  </data>
-  <data name="dataGridViewImageColumn2.Width" type="System.Int32, mscorlib">
-    <value>19</value>
-  </data>
-  <metadata name="dataGridViewTextBoxColumn11.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="dataGridViewTextBoxColumn11.HeaderText" xml:space="preserve">
-    <value>Minuten</value>
-  </data>
-  <data name="dataGridViewTextBoxColumn11.Width" type="System.Int32, mscorlib">
-    <value>65</value>
-  </data>
   <metadata name="s1.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <data name="s1.HeaderText" xml:space="preserve">
-    <value>S2</value>
-  </data>
-  <data name="s1.ToolTipText" xml:space="preserve">
-    <value>Schicht 2 benötigt</value>
-  </data>
-  <data name="s1.Width" type="System.Int32, mscorlib">
-    <value>25</value>
-  </data>
+  <metadata name="s3.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="ueber.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="dataGridViewAPlatz.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 3</value>
   </data>
@@ -2941,11 +2872,128 @@
         AQEBAAEBAgAB4AEPAeABDwHgAQ8CAAs=
 </value>
   </data>
-  <metadata name="helpProvider1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>223, 52</value>
+  <metadata name="dataGridViewTextBoxColumn5.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
   </metadata>
-  <data name="helpProvider1.HelpNamespace" xml:space="preserve">
-    <value>E:\Server\Projecte C#\GIT\tool2\ToolFahrrad-v1\bin\Debug\chm\Benutzerhandbuch.chm</value>
+  <data name="dataGridViewTextBoxColumn5.HeaderText" xml:space="preserve">
+    <value>Nr.</value>
+  </data>
+  <data name="dataGridViewTextBoxColumn5.Width" type="System.Int32, mscorlib">
+    <value>40</value>
+  </data>
+  <metadata name="dataGridViewTextBoxColumn7.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="dataGridViewTextBoxColumn7.HeaderText" xml:space="preserve">
+    <value>Leerzeit</value>
+  </data>
+  <data name="dataGridViewTextBoxColumn7.ToolTipText" xml:space="preserve">
+    <value>Leerzeit in Vorperiode (mit Rüstungsanzahl)</value>
+  </data>
+  <data name="dataGridViewTextBoxColumn7.Width" type="System.Int32, mscorlib">
+    <value>70</value>
+  </data>
+  <metadata name="dataGridViewTextBoxColumn8.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="dataGridViewTextBoxColumn8.HeaderText" xml:space="preserve">
+    <value>Kapazitätsbedarf</value>
+  </data>
+  <data name="dataGridViewTextBoxColumn8.Width" type="System.Int32, mscorlib">
+    <value>90</value>
+  </data>
+  <metadata name="dataGridViewTextBoxColumn9.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="dataGridViewTextBoxColumn9.HeaderText" xml:space="preserve">
+    <value>Rüstzeit</value>
+  </data>
+  <data name="dataGridViewTextBoxColumn9.ToolTipText" xml:space="preserve">
+    <value>gerechnet mit RAM</value>
+  </data>
+  <data name="dataGridViewTextBoxColumn9.Width" type="System.Int32, mscorlib">
+    <value>65</value>
+  </data>
+  <metadata name="rap.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="rap.HeaderText" xml:space="preserve">
+    <value>RAP</value>
+  </data>
+  <data name="rap.ToolTipText" xml:space="preserve">
+    <value>Rüstungsanzahl (Aktuelle Periode)</value>
+  </data>
+  <data name="rap.Width" type="System.Int32, mscorlib">
+    <value>45</value>
+  </data>
+  <metadata name="Ruestanzahl.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="Ruestanzahl.HeaderText" xml:space="preserve">
+    <value>RAM</value>
+  </data>
+  <data name="Ruestanzahl.ToolTipText" xml:space="preserve">
+    <value>Rüstungsanzahl (Mittelwert)</value>
+  </data>
+  <data name="Ruestanzahl.Width" type="System.Int32, mscorlib">
+    <value>50</value>
+  </data>
+  <metadata name="dataGridViewTextBoxColumn10.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="dataGridViewTextBoxColumn10.HeaderText" xml:space="preserve">
+    <value>Gesamt</value>
+  </data>
+  <data name="dataGridViewTextBoxColumn10.Width" type="System.Int32, mscorlib">
+    <value>65</value>
+  </data>
+  <metadata name="dataGridViewImageColumn2.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="dataGridViewImageColumn2.HeaderText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="dataGridViewImageColumn2.ToolTipText" xml:space="preserve">
+    <value>rot = Schicht ; gelb = Überstunden; grün = ohne Überstunden</value>
+  </data>
+  <data name="dataGridViewImageColumn2.Width" type="System.Int32, mscorlib">
+    <value>19</value>
+  </data>
+  <metadata name="s1.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="s1.HeaderText" xml:space="preserve">
+    <value>S2</value>
+  </data>
+  <data name="s1.ToolTipText" xml:space="preserve">
+    <value>2. Schicht ab 3600 min benötigt</value>
+  </data>
+  <data name="s1.Width" type="System.Int32, mscorlib">
+    <value>25</value>
+  </data>
+  <metadata name="s3.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="s3.HeaderText" xml:space="preserve">
+    <value>S3</value>
+  </data>
+  <data name="s3.ToolTipText" xml:space="preserve">
+    <value>3. Schicht ab 6000 min benötigt</value>
+  </data>
+  <data name="s3.Width" type="System.Int32, mscorlib">
+    <value>25</value>
+  </data>
+  <metadata name="ueber.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="ueber.HeaderText" xml:space="preserve">
+    <value>L</value>
+  </data>
+  <data name="ueber.ToolTipText" xml:space="preserve">
+    <value>Limit = 7200 min.</value>
+  </data>
+  <data name="ueber.Width" type="System.Int32, mscorlib">
+    <value>19</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -5091,17 +5139,23 @@
   <data name="&gt;&gt;dataGridViewImageColumn2.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridViewImageColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;dataGridViewTextBoxColumn11.Name" xml:space="preserve">
-    <value>dataGridViewTextBoxColumn11</value>
-  </data>
-  <data name="&gt;&gt;dataGridViewTextBoxColumn11.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="&gt;&gt;s1.Name" xml:space="preserve">
     <value>s1</value>
   </data>
   <data name="&gt;&gt;s1.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridViewCheckBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;s3.Name" xml:space="preserve">
+    <value>s3</value>
+  </data>
+  <data name="&gt;&gt;s3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewCheckBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ueber.Name" xml:space="preserve">
+    <value>ueber</value>
+  </data>
+  <data name="&gt;&gt;ueber.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewImageColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>Fahrrad</value>
