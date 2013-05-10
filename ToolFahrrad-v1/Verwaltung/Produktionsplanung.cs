@@ -48,11 +48,10 @@ namespace ToolFahrrad_v1
             }
             for (int index = 1; index < 4; index++)
             {
-                RekursAufloesen(index, null, dc.GetTeil(index) as ETeil);
+                RekursAufloesenETeile(index, null, dc.GetTeil(index) as ETeil);
             }
             // Aufloesung der KTeile
             // Prüfung, ob Bruttobedarf schon gerechnet wurde
-            // wenn ja - dann wieder auf null setzen. 
             if ((dc.GetTeil(21) as KTeil).BruttoBedarfPer0 != 0)
             {
                 foreach (KTeil k in dc.ListeKTeile)
@@ -62,21 +61,24 @@ namespace ToolFahrrad_v1
             }
             for (int index = 1; index < 4; index++)
             {
-                ETeil et = dc.GetTeil(index) as ETeil;
-                foreach (KeyValuePair<Teil, int> kvp in et.Zusammensetzung)
-                {
-                    if (kvp.Key is KTeil)
-                    {
-                        //ToDo: Produktionsmenge auch fuer Prog1, Prog2, Prog3!!!
-                        KTeil kt = kvp.Key as KTeil;
-                        kt.initBruttoBedarf(index, et.ProduktionsMengePer0);
-                    }
-                }
+                RekursAufloesenKTeile(index, null, dc.GetTeil(index) as ETeil);
+
+
+                //ETeil et = dc.GetTeil(index) as ETeil;
+                //foreach (KeyValuePair<Teil, int> kvp in et.Zusammensetzung)
+                //{
+                //    if (kvp.Key is KTeil)
+                //    {
+                //        //ToDo: Produktionsmenge auch fuer Prog1, Prog2, Prog3!!!
+                //        KTeil kt = kvp.Key as KTeil;
+                //        kt.initBruttoBedarf(index, et.ProduktionsMengePer0);
+                //    }
+                //}
             }
             aufgeloest = true;
         }
         // Rekursive Prozedur zum Iterieren ueber die Zusammensetzung der Teile
-        private void RekursAufloesen(int index, ETeil vaterTeil, ETeil kindTeil)
+        private void RekursAufloesenETeile(int index, ETeil vaterTeil, ETeil kindTeil)
         {
             kindTeil.SetProduktionsMenge(index, vaterTeil);
             if (kindTeil.Zusammensetzung.Count() != 0)
@@ -85,11 +87,28 @@ namespace ToolFahrrad_v1
                 {
                     if (kvp.Key is ETeil)
                     {
-                        RekursAufloesen(index, kindTeil, kvp.Key as ETeil);
+                        RekursAufloesenETeile(index, kindTeil, kvp.Key as ETeil);
                     }
                 }
             }
         }
+        private void RekursAufloesenKTeile(int index, ETeil vaterTeil, ETeil kindTeil)
+        {
+            foreach (KeyValuePair<Teil, int> kvp in kindTeil.Zusammensetzung)
+            {
+                if (kvp.Key is KTeil)
+                {
+                    KTeil kt = kvp.Key as KTeil;
+                    if (kindTeil.ProduktionsMengePer0 > 0)
+                        kt.initBruttoBedarf(index, kindTeil.ProduktionsMengePer0, kvp.Value);
+                }
+                else
+                {
+                    RekursAufloesenKTeile(index, kindTeil, kvp.Key as ETeil);
+                }
+            }
+        }
+
         // Pruefung ob genug KTeile vorhanden sind, wenn nicht Info ausgeben
         public String Nachpruefen(Teil teil, int mengeNeu)
         {

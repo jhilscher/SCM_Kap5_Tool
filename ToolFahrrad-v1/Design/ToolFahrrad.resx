@@ -516,6 +516,90 @@
   <data name="&gt;&gt;lableDazu.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <metadata name="colNr.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="colNr.HeaderText" xml:space="preserve">
+    <value>Nr.</value>
+  </data>
+  <data name="colNr.ToolTipText" xml:space="preserve">
+    <value>Nummer des Teils</value>
+  </data>
+  <data name="colNr.Width" type="System.Int32, mscorlib">
+    <value>40</value>
+  </data>
+  <metadata name="colName.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="colName.HeaderText" xml:space="preserve">
+    <value>Bezeichnung</value>
+  </data>
+  <data name="colName.Width" type="System.Int32, mscorlib">
+    <value>110</value>
+  </data>
+  <metadata name="colBestand.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="colBestand.HeaderText" xml:space="preserve">
+    <value>Lagerbestand</value>
+  </data>
+  <data name="colBestand.Width" type="System.Int32, mscorlib">
+    <value>80</value>
+  </data>
+  <metadata name="colProzent.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="colProzent.HeaderText" xml:space="preserve">
+    <value>Prozentual</value>
+  </data>
+  <data name="colProzent.Width" type="System.Int32, mscorlib">
+    <value>70</value>
+  </data>
+  <metadata name="colFarbe.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="colFarbe.HeaderText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="colFarbe.ToolTipText" xml:space="preserve">
+    <value>rot &lt; 40% ; gelb &gt; 100% ; grün &lt;= 100%</value>
+  </data>
+  <data name="colFarbe.Width" type="System.Int32, mscorlib">
+    <value>19</value>
+  </data>
+  <metadata name="colZugang.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="colZugang.HeaderText" xml:space="preserve">
+    <value>Zugang</value>
+  </data>
+  <data name="colZugang.Width" type="System.Int32, mscorlib">
+    <value>65</value>
+  </data>
+  <metadata name="bbP0.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="bbP0.HeaderText" xml:space="preserve">
+    <value>Per0</value>
+  </data>
+  <data name="bbP0.ToolTipText" xml:space="preserve">
+    <value>Bruttobedarf für nächste Periode</value>
+  </data>
+  <data name="bbP0.Width" type="System.Int32, mscorlib">
+    <value>50</value>
+  </data>
+  <data name="dataGridViewKTeil.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="dataGridViewKTeil.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 3</value>
+  </data>
+  <data name="dataGridViewKTeil.Size" type="System.Drawing.Size, System.Drawing">
+    <value>859, 286</value>
+  </data>
+  <data name="dataGridViewKTeil.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
   <data name="&gt;&gt;dataGridViewKTeil.Name" xml:space="preserve">
     <value>dataGridViewKTeil</value>
   </data>
@@ -666,32 +750,6 @@
   <data name="&gt;&gt;tab_eTeil.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="picEditsAPlatz.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29m
-        dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAB1SURBVDhP1Y7BCYAwEARTj2A31iNYj90Igt3oDd5C
-        FIN3/hyYhyGzpiQZ3U8Q7m56pI7TI0+xfB1RPLn3Ac6a1LGoR9IxtM4v/DTuTS4hgQjFwMXF5KJGwjEo
-        Bo2EYz1/MPnr6t+hGPRU3EzCzgwzm+nopJQDTiFDvWKcMqYAAAAASUVORK5CYII=
-</value>
-  </data>
-  <data name="picEditsAPlatz.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="picEditsAPlatz.Location" type="System.Drawing.Point, System.Drawing">
-    <value>745, 10</value>
-  </data>
-  <data name="picEditsAPlatz.ShowHelp" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="picEditsAPlatz.Size" type="System.Drawing.Size, System.Drawing">
-    <value>17, 17</value>
-  </data>
-  <data name="picEditsAPlatz.TabIndex" type="System.Int32, mscorlib">
-    <value>66</value>
-  </data>
-  <data name="picEditsAPlatz.ToolTip" xml:space="preserve">
-    <value>Information ändern</value>
-  </data>
   <data name="&gt;&gt;picEditsAPlatz.Name" xml:space="preserve">
     <value>picEditsAPlatz</value>
   </data>
@@ -703,33 +761,6 @@
   </data>
   <data name="&gt;&gt;picEditsAPlatz.ZOrder" xml:space="preserve">
     <value>0</value>
-  </data>
-  <data name="rbRuestzeit.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="rbRuestzeit.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="rbRuestzeit.Location" type="System.Drawing.Point, System.Drawing">
-    <value>745, 45</value>
-  </data>
-  <metadata name="helpProvider1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>223, 52</value>
-  </metadata>
-  <data name="helpProvider1.HelpNamespace" xml:space="preserve">
-    <value>E:\Server\Projecte C#\GIT\tool2\ToolFahrrad-v1\bin\Debug\chm\Benutzerhandbuch.chm</value>
-  </data>
-  <data name="rbRuestzeit.ShowHelp" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="rbRuestzeit.Size" type="System.Drawing.Size, System.Drawing">
-    <value>86, 17</value>
-  </data>
-  <data name="rbRuestzeit.TabIndex" type="System.Int32, mscorlib">
-    <value>65</value>
-  </data>
-  <data name="rbRuestzeit.Text" xml:space="preserve">
-    <value>Rüstungszeit</value>
   </data>
   <data name="&gt;&gt;rbRuestzeit.Name" xml:space="preserve">
     <value>rbRuestzeit</value>
@@ -743,37 +774,6 @@
   <data name="&gt;&gt;rbRuestzeit.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="picReadOnlyAPlatz.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29m
-        dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAADfSURBVDhPtZPNCQIxFIQXBE+CV8EOBK+eBAsQLMNK
-        BEGwGDsQBJvwKgiCJwvQ+UJGspr9OzjwQZg3b3fzki3+ob5Yi7O4R1jjUavVRFzEqwJqZLKaiacgeBQr
-        MY6wxqNGhmxJI3EVBLYYFaJGhiw9Hx2E39zDiCIIG8H+qZ0EWXqClgID5hiJ7IO/bCHs0RsmbGOIITF5
-        ewYPkbFHb+cHDIS98IDcFjyslJ1AP1tA30NkYHtxi7CuHCLirP3ZbY6RLD0l5S4SZw2NF8maiqarTKZW
-        6c/0iLBu9TN1VFG8AaDxaInjO1KaAAAAAElFTkSuQmCC
-</value>
-  </data>
-  <data name="picReadOnlyAPlatz.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="picReadOnlyAPlatz.Location" type="System.Drawing.Point, System.Drawing">
-    <value>793, 10</value>
-  </data>
-  <data name="picReadOnlyAPlatz.ShowHelp" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="picReadOnlyAPlatz.Size" type="System.Drawing.Size, System.Drawing">
-    <value>17, 17</value>
-  </data>
-  <data name="picReadOnlyAPlatz.TabIndex" type="System.Int32, mscorlib">
-    <value>64</value>
-  </data>
-  <data name="picReadOnlyAPlatz.ToolTip" xml:space="preserve">
-    <value>Information lesen</value>
-  </data>
-  <data name="picReadOnlyAPlatz.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
   <data name="&gt;&gt;picReadOnlyAPlatz.Name" xml:space="preserve">
     <value>picReadOnlyAPlatz</value>
   </data>
@@ -785,37 +785,6 @@
   </data>
   <data name="&gt;&gt;picReadOnlyAPlatz.ZOrder" xml:space="preserve">
     <value>2</value>
-  </data>
-  <data name="picResetAPlatz.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29m
-        dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAADOSURBVDhPzZIxCsJAEEVTWQmClWDlbWwFwRtYCZ4w
-        IAiCIAiC4AG8gZVVfC9kQ0wGFbTww4PdP3+XyWyyoii+4ufqwQo2cK9wrWftpcZwBPuKsGYmlLefwOAV
-        FmBYXOtZMxN2YosGLjDUaEnvDGbMdrQFi/NyF2sGZsx25LAsDspdrD6YMdvRuwtysN5Er9YONG0zUqo3
-        2UOtNWg6qGiII3DA6bBrvVrtZ3SYBmQCyvWh4ulwkm+eLmnifKbwkezEz/H39fANfLYl/KWy7AFhXnQd
-        DEtoLQAAAABJRU5ErkJggg==
-</value>
-  </data>
-  <data name="picResetAPlatz.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="picResetAPlatz.Location" type="System.Drawing.Point, System.Drawing">
-    <value>818, 10</value>
-  </data>
-  <data name="picResetAPlatz.ShowHelp" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="picResetAPlatz.Size" type="System.Drawing.Size, System.Drawing">
-    <value>17, 17</value>
-  </data>
-  <data name="picResetAPlatz.TabIndex" type="System.Int32, mscorlib">
-    <value>63</value>
-  </data>
-  <data name="picResetAPlatz.ToolTip" xml:space="preserve">
-    <value>Änderungen zurücksetzen</value>
-  </data>
-  <data name="picResetAPlatz.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
   </data>
   <data name="&gt;&gt;picResetAPlatz.Name" xml:space="preserve">
     <value>picResetAPlatz</value>
@@ -829,36 +798,6 @@
   <data name="&gt;&gt;picResetAPlatz.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
-  <data name="picSaveAPlatz.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29m
-        dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAACsSURBVDhPnZNRCsIwEAUDvZlfvVlB8Dx+9UiCN9Ad
-        ydu+prWNDgx52XSD4KYEQzgRjDl8fZEzoIfecg05cNomvFTJwHojPOvGUZMrlFnp3XwAqrlCOevtB6Ca
-        O1bJoPoSjHuoeitnoH0Gbu9Fv2R1wb/uFn8xA/9xL5qH1QVwNIFSk6j9EuraI2TeK54JmX2UVTwTWB8E
-        HoQXewTWz2PiSfIi4WgCpSYxesrwBjTZs3EhGb7+AAAAAElFTkSuQmCC
-</value>
-  </data>
-  <data name="picSaveAPlatz.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="picSaveAPlatz.Location" type="System.Drawing.Point, System.Drawing">
-    <value>841, 10</value>
-  </data>
-  <data name="picSaveAPlatz.ShowHelp" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="picSaveAPlatz.Size" type="System.Drawing.Size, System.Drawing">
-    <value>17, 17</value>
-  </data>
-  <data name="picSaveAPlatz.TabIndex" type="System.Int32, mscorlib">
-    <value>61</value>
-  </data>
-  <data name="picSaveAPlatz.ToolTip" xml:space="preserve">
-    <value>Information speichern</value>
-  </data>
-  <data name="picSaveAPlatz.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
   <data name="&gt;&gt;picSaveAPlatz.Name" xml:space="preserve">
     <value>picSaveAPlatz</value>
   </data>
@@ -870,48 +809,6 @@
   </data>
   <data name="&gt;&gt;picSaveAPlatz.ZOrder" xml:space="preserve">
     <value>4</value>
-  </data>
-  <metadata name="dataGridViewTextBoxColumn5.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="dataGridViewTextBoxColumn7.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="dataGridViewTextBoxColumn8.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="dataGridViewTextBoxColumn9.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="rap.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="Ruestanzahl.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="dataGridViewTextBoxColumn10.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="dataGridViewImageColumn2.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="s1.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="s3.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="ueber.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="dataGridViewAPlatz.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 3</value>
-  </data>
-  <data name="dataGridViewAPlatz.Size" type="System.Drawing.Size, System.Drawing">
-    <value>737, 286</value>
-  </data>
-  <data name="dataGridViewAPlatz.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
   </data>
   <data name="&gt;&gt;dataGridViewAPlatz.Name" xml:space="preserve">
     <value>dataGridViewAPlatz</value>
@@ -2182,108 +2079,6 @@
   <data name="&gt;&gt;titlePrognose.ZOrder" xml:space="preserve">
     <value>27</value>
   </data>
-  <metadata name="colNr.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="colName.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="colBestand.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="colProzent.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="colFarbe.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="colZugang.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="dataGridViewKTeil.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="dataGridViewKTeil.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 3</value>
-  </data>
-  <data name="dataGridViewKTeil.Size" type="System.Drawing.Size, System.Drawing">
-    <value>859, 286</value>
-  </data>
-  <data name="dataGridViewKTeil.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;dataGridViewKTeil.Name" xml:space="preserve">
-    <value>dataGridViewKTeil</value>
-  </data>
-  <data name="&gt;&gt;dataGridViewKTeil.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;dataGridViewKTeil.Parent" xml:space="preserve">
-    <value>tab_kTeil</value>
-  </data>
-  <data name="&gt;&gt;dataGridViewKTeil.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <metadata name="colNr.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="colNr.HeaderText" xml:space="preserve">
-    <value>Nr.</value>
-  </data>
-  <data name="colNr.ToolTipText" xml:space="preserve">
-    <value>Nummer des Teils</value>
-  </data>
-  <data name="colNr.Width" type="System.Int32, mscorlib">
-    <value>40</value>
-  </data>
-  <metadata name="colName.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="colName.HeaderText" xml:space="preserve">
-    <value>Bezeichnung</value>
-  </data>
-  <data name="colName.Width" type="System.Int32, mscorlib">
-    <value>110</value>
-  </data>
-  <metadata name="colBestand.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="colBestand.HeaderText" xml:space="preserve">
-    <value>Lagerbestand</value>
-  </data>
-  <data name="colBestand.Width" type="System.Int32, mscorlib">
-    <value>80</value>
-  </data>
-  <metadata name="colProzent.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="colProzent.HeaderText" xml:space="preserve">
-    <value>Prozentual</value>
-  </data>
-  <data name="colProzent.Width" type="System.Int32, mscorlib">
-    <value>70</value>
-  </data>
-  <metadata name="colFarbe.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="colFarbe.HeaderText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="colFarbe.ToolTipText" xml:space="preserve">
-    <value>rot &lt; 40% ; gelb &gt; 100% ; grün &lt;= 100%</value>
-  </data>
-  <data name="colFarbe.Width" type="System.Int32, mscorlib">
-    <value>19</value>
-  </data>
-  <metadata name="colZugang.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="colZugang.HeaderText" xml:space="preserve">
-    <value>Zugang</value>
-  </data>
-  <data name="colZugang.Width" type="System.Int32, mscorlib">
-    <value>65</value>
-  </data>
   <metadata name="helpProvider1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>223, 52</value>
   </metadata>
@@ -2645,6 +2440,382 @@
   <data name="reserve.Width" type="System.Int32, mscorlib">
     <value>65</value>
   </data>
+  <data name="picEditsAPlatz.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29m
+        dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAB1SURBVDhP1Y7BCYAwEARTj2A31iNYj90Igt3oDd5C
+        FIN3/hyYhyGzpiQZ3U8Q7m56pI7TI0+xfB1RPLn3Ac6a1LGoR9IxtM4v/DTuTS4hgQjFwMXF5KJGwjEo
+        Bo2EYz1/MPnr6t+hGPRU3EzCzgwzm+nopJQDTiFDvWKcMqYAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="picEditsAPlatz.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="picEditsAPlatz.Location" type="System.Drawing.Point, System.Drawing">
+    <value>745, 10</value>
+  </data>
+  <data name="picEditsAPlatz.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="picEditsAPlatz.Size" type="System.Drawing.Size, System.Drawing">
+    <value>17, 17</value>
+  </data>
+  <data name="picEditsAPlatz.TabIndex" type="System.Int32, mscorlib">
+    <value>66</value>
+  </data>
+  <data name="picEditsAPlatz.ToolTip" xml:space="preserve">
+    <value>Information ändern</value>
+  </data>
+  <data name="&gt;&gt;picEditsAPlatz.Name" xml:space="preserve">
+    <value>picEditsAPlatz</value>
+  </data>
+  <data name="&gt;&gt;picEditsAPlatz.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;picEditsAPlatz.Parent" xml:space="preserve">
+    <value>tab_APlatz</value>
+  </data>
+  <data name="&gt;&gt;picEditsAPlatz.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="rbRuestzeit.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="rbRuestzeit.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="rbRuestzeit.Location" type="System.Drawing.Point, System.Drawing">
+    <value>745, 45</value>
+  </data>
+  <data name="rbRuestzeit.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="rbRuestzeit.Size" type="System.Drawing.Size, System.Drawing">
+    <value>86, 17</value>
+  </data>
+  <data name="rbRuestzeit.TabIndex" type="System.Int32, mscorlib">
+    <value>65</value>
+  </data>
+  <data name="rbRuestzeit.Text" xml:space="preserve">
+    <value>Rüstungszeit</value>
+  </data>
+  <data name="&gt;&gt;rbRuestzeit.Name" xml:space="preserve">
+    <value>rbRuestzeit</value>
+  </data>
+  <data name="&gt;&gt;rbRuestzeit.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;rbRuestzeit.Parent" xml:space="preserve">
+    <value>tab_APlatz</value>
+  </data>
+  <data name="&gt;&gt;rbRuestzeit.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="picReadOnlyAPlatz.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29m
+        dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAADfSURBVDhPtZPNCQIxFIQXBE+CV8EOBK+eBAsQLMNK
+        BEGwGDsQBJvwKgiCJwvQ+UJGspr9OzjwQZg3b3fzki3+ob5Yi7O4R1jjUavVRFzEqwJqZLKaiacgeBQr
+        MY6wxqNGhmxJI3EVBLYYFaJGhiw9Hx2E39zDiCIIG8H+qZ0EWXqClgID5hiJ7IO/bCHs0RsmbGOIITF5
+        ewYPkbFHb+cHDIS98IDcFjyslJ1AP1tA30NkYHtxi7CuHCLirP3ZbY6RLD0l5S4SZw2NF8maiqarTKZW
+        6c/0iLBu9TN1VFG8AaDxaInjO1KaAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="picReadOnlyAPlatz.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="picReadOnlyAPlatz.Location" type="System.Drawing.Point, System.Drawing">
+    <value>793, 10</value>
+  </data>
+  <data name="picReadOnlyAPlatz.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="picReadOnlyAPlatz.Size" type="System.Drawing.Size, System.Drawing">
+    <value>17, 17</value>
+  </data>
+  <data name="picReadOnlyAPlatz.TabIndex" type="System.Int32, mscorlib">
+    <value>64</value>
+  </data>
+  <data name="picReadOnlyAPlatz.ToolTip" xml:space="preserve">
+    <value>Information lesen</value>
+  </data>
+  <data name="picReadOnlyAPlatz.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;picReadOnlyAPlatz.Name" xml:space="preserve">
+    <value>picReadOnlyAPlatz</value>
+  </data>
+  <data name="&gt;&gt;picReadOnlyAPlatz.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;picReadOnlyAPlatz.Parent" xml:space="preserve">
+    <value>tab_APlatz</value>
+  </data>
+  <data name="&gt;&gt;picReadOnlyAPlatz.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="picResetAPlatz.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29m
+        dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAADOSURBVDhPzZIxCsJAEEVTWQmClWDlbWwFwRtYCZ4w
+        IAiCIAiC4AG8gZVVfC9kQ0wGFbTww4PdP3+XyWyyoii+4ufqwQo2cK9wrWftpcZwBPuKsGYmlLefwOAV
+        FmBYXOtZMxN2YosGLjDUaEnvDGbMdrQFi/NyF2sGZsx25LAsDspdrD6YMdvRuwtysN5Er9YONG0zUqo3
+        2UOtNWg6qGiII3DA6bBrvVrtZ3SYBmQCyvWh4ulwkm+eLmnifKbwkezEz/H39fANfLYl/KWy7AFhXnQd
+        DEtoLQAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="picResetAPlatz.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="picResetAPlatz.Location" type="System.Drawing.Point, System.Drawing">
+    <value>818, 10</value>
+  </data>
+  <data name="picResetAPlatz.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="picResetAPlatz.Size" type="System.Drawing.Size, System.Drawing">
+    <value>17, 17</value>
+  </data>
+  <data name="picResetAPlatz.TabIndex" type="System.Int32, mscorlib">
+    <value>63</value>
+  </data>
+  <data name="picResetAPlatz.ToolTip" xml:space="preserve">
+    <value>Änderungen zurücksetzen</value>
+  </data>
+  <data name="picResetAPlatz.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;picResetAPlatz.Name" xml:space="preserve">
+    <value>picResetAPlatz</value>
+  </data>
+  <data name="&gt;&gt;picResetAPlatz.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;picResetAPlatz.Parent" xml:space="preserve">
+    <value>tab_APlatz</value>
+  </data>
+  <data name="&gt;&gt;picResetAPlatz.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="picSaveAPlatz.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29m
+        dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAACsSURBVDhPnZNRCsIwEAUDvZlfvVlB8Dx+9UiCN9Ad
+        ydu+prWNDgx52XSD4KYEQzgRjDl8fZEzoIfecg05cNomvFTJwHojPOvGUZMrlFnp3XwAqrlCOevtB6Ca
+        O1bJoPoSjHuoeitnoH0Gbu9Fv2R1wb/uFn8xA/9xL5qH1QVwNIFSk6j9EuraI2TeK54JmX2UVTwTWB8E
+        HoQXewTWz2PiSfIi4WgCpSYxesrwBjTZs3EhGb7+AAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="picSaveAPlatz.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="picSaveAPlatz.Location" type="System.Drawing.Point, System.Drawing">
+    <value>841, 10</value>
+  </data>
+  <data name="picSaveAPlatz.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="picSaveAPlatz.Size" type="System.Drawing.Size, System.Drawing">
+    <value>17, 17</value>
+  </data>
+  <data name="picSaveAPlatz.TabIndex" type="System.Int32, mscorlib">
+    <value>61</value>
+  </data>
+  <data name="picSaveAPlatz.ToolTip" xml:space="preserve">
+    <value>Information speichern</value>
+  </data>
+  <data name="picSaveAPlatz.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;picSaveAPlatz.Name" xml:space="preserve">
+    <value>picSaveAPlatz</value>
+  </data>
+  <data name="&gt;&gt;picSaveAPlatz.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;picSaveAPlatz.Parent" xml:space="preserve">
+    <value>tab_APlatz</value>
+  </data>
+  <data name="&gt;&gt;picSaveAPlatz.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <metadata name="dataGridViewTextBoxColumn5.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="dataGridViewTextBoxColumn7.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="dataGridViewTextBoxColumn8.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="dataGridViewTextBoxColumn9.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="rap.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="Ruestanzahl.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="dataGridViewTextBoxColumn10.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="dataGridViewImageColumn2.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="s1.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="s3.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="ueber.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="dataGridViewAPlatz.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 3</value>
+  </data>
+  <data name="dataGridViewAPlatz.Size" type="System.Drawing.Size, System.Drawing">
+    <value>737, 286</value>
+  </data>
+  <data name="dataGridViewAPlatz.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewAPlatz.Name" xml:space="preserve">
+    <value>dataGridViewAPlatz</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewAPlatz.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewAPlatz.Parent" xml:space="preserve">
+    <value>tab_APlatz</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewAPlatz.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <metadata name="dataGridViewTextBoxColumn5.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="dataGridViewTextBoxColumn5.HeaderText" xml:space="preserve">
+    <value>Nr.</value>
+  </data>
+  <data name="dataGridViewTextBoxColumn5.Width" type="System.Int32, mscorlib">
+    <value>40</value>
+  </data>
+  <metadata name="dataGridViewTextBoxColumn7.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="dataGridViewTextBoxColumn7.HeaderText" xml:space="preserve">
+    <value>Leerzeit</value>
+  </data>
+  <data name="dataGridViewTextBoxColumn7.ToolTipText" xml:space="preserve">
+    <value>Leerzeit in Vorperiode (mit Rüstungsanzahl)</value>
+  </data>
+  <data name="dataGridViewTextBoxColumn7.Width" type="System.Int32, mscorlib">
+    <value>70</value>
+  </data>
+  <metadata name="dataGridViewTextBoxColumn8.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="dataGridViewTextBoxColumn8.HeaderText" xml:space="preserve">
+    <value>Kapazitätsbedarf</value>
+  </data>
+  <data name="dataGridViewTextBoxColumn8.Width" type="System.Int32, mscorlib">
+    <value>90</value>
+  </data>
+  <metadata name="dataGridViewTextBoxColumn9.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="dataGridViewTextBoxColumn9.HeaderText" xml:space="preserve">
+    <value>Rüstzeit</value>
+  </data>
+  <data name="dataGridViewTextBoxColumn9.ToolTipText" xml:space="preserve">
+    <value>gerechnet mit RAM</value>
+  </data>
+  <data name="dataGridViewTextBoxColumn9.Width" type="System.Int32, mscorlib">
+    <value>65</value>
+  </data>
+  <metadata name="rap.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="rap.HeaderText" xml:space="preserve">
+    <value>RAP</value>
+  </data>
+  <data name="rap.ToolTipText" xml:space="preserve">
+    <value>Rüstungsanzahl (Aktuelle Periode)</value>
+  </data>
+  <data name="rap.Width" type="System.Int32, mscorlib">
+    <value>45</value>
+  </data>
+  <metadata name="Ruestanzahl.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="Ruestanzahl.HeaderText" xml:space="preserve">
+    <value>RAM</value>
+  </data>
+  <data name="Ruestanzahl.ToolTipText" xml:space="preserve">
+    <value>Rüstungsanzahl (Mittelwert)</value>
+  </data>
+  <data name="Ruestanzahl.Width" type="System.Int32, mscorlib">
+    <value>50</value>
+  </data>
+  <metadata name="dataGridViewTextBoxColumn10.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="dataGridViewTextBoxColumn10.HeaderText" xml:space="preserve">
+    <value>Gesamt</value>
+  </data>
+  <data name="dataGridViewTextBoxColumn10.Width" type="System.Int32, mscorlib">
+    <value>65</value>
+  </data>
+  <metadata name="dataGridViewImageColumn2.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="dataGridViewImageColumn2.HeaderText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="dataGridViewImageColumn2.ToolTipText" xml:space="preserve">
+    <value>rot = Schicht ; gelb = Überstunden; grün = ohne Überstunden</value>
+  </data>
+  <data name="dataGridViewImageColumn2.Width" type="System.Int32, mscorlib">
+    <value>19</value>
+  </data>
+  <metadata name="s1.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="s1.HeaderText" xml:space="preserve">
+    <value>S2</value>
+  </data>
+  <data name="s1.ToolTipText" xml:space="preserve">
+    <value>2. Schicht ab 3600 min benötigt</value>
+  </data>
+  <data name="s1.Width" type="System.Int32, mscorlib">
+    <value>25</value>
+  </data>
+  <metadata name="s3.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="s3.HeaderText" xml:space="preserve">
+    <value>S3</value>
+  </data>
+  <data name="s3.ToolTipText" xml:space="preserve">
+    <value>3. Schicht ab 6000 min benötigt</value>
+  </data>
+  <data name="s3.Width" type="System.Int32, mscorlib">
+    <value>25</value>
+  </data>
+  <metadata name="ueber.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="ueber.HeaderText" xml:space="preserve">
+    <value>L</value>
+  </data>
+  <data name="ueber.ToolTipText" xml:space="preserve">
+    <value>Limit = 7200 min.</value>
+  </data>
+  <data name="ueber.Width" type="System.Int32, mscorlib">
+    <value>19</value>
+  </data>
   <metadata name="openFileDialog.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
@@ -2821,7 +2992,7 @@
         AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
         LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
         ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAABS
-        CwAAAk1TRnQBSQFMAgEBAwEAAdgBAAHYAQABEAEAARABAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
+        CwAAAk1TRnQBSQFMAgEBAwEAAeABAAHgAQABEAEAARABAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
         AwABQAMAARADAAEBAQABCAYAAQQYAAGAAgABgAMAAoABAAGAAwABgAEAAYABAAKAAgADwAEAAcAB3AHA
         AQAB8AHKAaYBAAEzBQABMwEAATMBAAEzAQACMwIAAxYBAAMcAQADIgEAAykBAANVAQADTQEAA0IBAAM5
         AQABgAF8Af8BAAJQAf8BAAGTAQAB1gEAAf8B7AHMAQABxgHWAe8BAAHWAucBAAGQAakBrQIAAf8BMwMA
@@ -2872,128 +3043,11 @@
         AQEBAAEBAgAB4AEPAeABDwHgAQ8CAAs=
 </value>
   </data>
-  <metadata name="dataGridViewTextBoxColumn5.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
+  <metadata name="helpProvider1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>223, 52</value>
   </metadata>
-  <data name="dataGridViewTextBoxColumn5.HeaderText" xml:space="preserve">
-    <value>Nr.</value>
-  </data>
-  <data name="dataGridViewTextBoxColumn5.Width" type="System.Int32, mscorlib">
-    <value>40</value>
-  </data>
-  <metadata name="dataGridViewTextBoxColumn7.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="dataGridViewTextBoxColumn7.HeaderText" xml:space="preserve">
-    <value>Leerzeit</value>
-  </data>
-  <data name="dataGridViewTextBoxColumn7.ToolTipText" xml:space="preserve">
-    <value>Leerzeit in Vorperiode (mit Rüstungsanzahl)</value>
-  </data>
-  <data name="dataGridViewTextBoxColumn7.Width" type="System.Int32, mscorlib">
-    <value>70</value>
-  </data>
-  <metadata name="dataGridViewTextBoxColumn8.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="dataGridViewTextBoxColumn8.HeaderText" xml:space="preserve">
-    <value>Kapazitätsbedarf</value>
-  </data>
-  <data name="dataGridViewTextBoxColumn8.Width" type="System.Int32, mscorlib">
-    <value>90</value>
-  </data>
-  <metadata name="dataGridViewTextBoxColumn9.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="dataGridViewTextBoxColumn9.HeaderText" xml:space="preserve">
-    <value>Rüstzeit</value>
-  </data>
-  <data name="dataGridViewTextBoxColumn9.ToolTipText" xml:space="preserve">
-    <value>gerechnet mit RAM</value>
-  </data>
-  <data name="dataGridViewTextBoxColumn9.Width" type="System.Int32, mscorlib">
-    <value>65</value>
-  </data>
-  <metadata name="rap.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="rap.HeaderText" xml:space="preserve">
-    <value>RAP</value>
-  </data>
-  <data name="rap.ToolTipText" xml:space="preserve">
-    <value>Rüstungsanzahl (Aktuelle Periode)</value>
-  </data>
-  <data name="rap.Width" type="System.Int32, mscorlib">
-    <value>45</value>
-  </data>
-  <metadata name="Ruestanzahl.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="Ruestanzahl.HeaderText" xml:space="preserve">
-    <value>RAM</value>
-  </data>
-  <data name="Ruestanzahl.ToolTipText" xml:space="preserve">
-    <value>Rüstungsanzahl (Mittelwert)</value>
-  </data>
-  <data name="Ruestanzahl.Width" type="System.Int32, mscorlib">
-    <value>50</value>
-  </data>
-  <metadata name="dataGridViewTextBoxColumn10.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="dataGridViewTextBoxColumn10.HeaderText" xml:space="preserve">
-    <value>Gesamt</value>
-  </data>
-  <data name="dataGridViewTextBoxColumn10.Width" type="System.Int32, mscorlib">
-    <value>65</value>
-  </data>
-  <metadata name="dataGridViewImageColumn2.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="dataGridViewImageColumn2.HeaderText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="dataGridViewImageColumn2.ToolTipText" xml:space="preserve">
-    <value>rot = Schicht ; gelb = Überstunden; grün = ohne Überstunden</value>
-  </data>
-  <data name="dataGridViewImageColumn2.Width" type="System.Int32, mscorlib">
-    <value>19</value>
-  </data>
-  <metadata name="s1.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="s1.HeaderText" xml:space="preserve">
-    <value>S2</value>
-  </data>
-  <data name="s1.ToolTipText" xml:space="preserve">
-    <value>2. Schicht ab 3600 min benötigt</value>
-  </data>
-  <data name="s1.Width" type="System.Int32, mscorlib">
-    <value>25</value>
-  </data>
-  <metadata name="s3.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="s3.HeaderText" xml:space="preserve">
-    <value>S3</value>
-  </data>
-  <data name="s3.ToolTipText" xml:space="preserve">
-    <value>3. Schicht ab 6000 min benötigt</value>
-  </data>
-  <data name="s3.Width" type="System.Int32, mscorlib">
-    <value>25</value>
-  </data>
-  <metadata name="ueber.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="ueber.HeaderText" xml:space="preserve">
-    <value>L</value>
-  </data>
-  <data name="ueber.ToolTipText" xml:space="preserve">
-    <value>Limit = 7200 min.</value>
-  </data>
-  <data name="ueber.Width" type="System.Int32, mscorlib">
-    <value>19</value>
+  <data name="helpProvider1.HelpNamespace" xml:space="preserve">
+    <value>E:\Server\Projecte C#\GIT\tool2\ToolFahrrad-v1\bin\Debug\chm\Benutzerhandbuch.chm</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -4893,42 +4947,6 @@
   <data name="$this.Text" xml:space="preserve">
     <value>Simulation</value>
   </data>
-  <data name="&gt;&gt;colNr.Name" xml:space="preserve">
-    <value>colNr</value>
-  </data>
-  <data name="&gt;&gt;colNr.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;colName.Name" xml:space="preserve">
-    <value>colName</value>
-  </data>
-  <data name="&gt;&gt;colName.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;colBestand.Name" xml:space="preserve">
-    <value>colBestand</value>
-  </data>
-  <data name="&gt;&gt;colBestand.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;colProzent.Name" xml:space="preserve">
-    <value>colProzent</value>
-  </data>
-  <data name="&gt;&gt;colProzent.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;colFarbe.Name" xml:space="preserve">
-    <value>colFarbe</value>
-  </data>
-  <data name="&gt;&gt;colFarbe.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewImageColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;colZugang.Name" xml:space="preserve">
-    <value>colZugang</value>
-  </data>
-  <data name="&gt;&gt;colZugang.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="&gt;&gt;dataGridViewTextBoxColumn1.Name" xml:space="preserve">
     <value>dataGridViewTextBoxColumn1</value>
   </data>
@@ -4982,6 +5000,72 @@
   </data>
   <data name="&gt;&gt;reserve.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewTextBoxColumn5.Name" xml:space="preserve">
+    <value>dataGridViewTextBoxColumn5</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewTextBoxColumn5.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewTextBoxColumn7.Name" xml:space="preserve">
+    <value>dataGridViewTextBoxColumn7</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewTextBoxColumn7.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewTextBoxColumn8.Name" xml:space="preserve">
+    <value>dataGridViewTextBoxColumn8</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewTextBoxColumn8.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewTextBoxColumn9.Name" xml:space="preserve">
+    <value>dataGridViewTextBoxColumn9</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewTextBoxColumn9.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;rap.Name" xml:space="preserve">
+    <value>rap</value>
+  </data>
+  <data name="&gt;&gt;rap.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Ruestanzahl.Name" xml:space="preserve">
+    <value>Ruestanzahl</value>
+  </data>
+  <data name="&gt;&gt;Ruestanzahl.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewTextBoxColumn10.Name" xml:space="preserve">
+    <value>dataGridViewTextBoxColumn10</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewTextBoxColumn10.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewImageColumn2.Name" xml:space="preserve">
+    <value>dataGridViewImageColumn2</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewImageColumn2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewImageColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;s1.Name" xml:space="preserve">
+    <value>s1</value>
+  </data>
+  <data name="&gt;&gt;s1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewCheckBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;s3.Name" xml:space="preserve">
+    <value>s3</value>
+  </data>
+  <data name="&gt;&gt;s3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewCheckBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ueber.Name" xml:space="preserve">
+    <value>ueber</value>
+  </data>
+  <data name="&gt;&gt;ueber.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewImageColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;openFileDialog.Name" xml:space="preserve">
     <value>openFileDialog</value>
@@ -5091,71 +5175,47 @@
   <data name="&gt;&gt;helpProvider1.Type" xml:space="preserve">
     <value>System.Windows.Forms.HelpProvider, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;dataGridViewTextBoxColumn5.Name" xml:space="preserve">
-    <value>dataGridViewTextBoxColumn5</value>
+  <data name="&gt;&gt;colNr.Name" xml:space="preserve">
+    <value>colNr</value>
   </data>
-  <data name="&gt;&gt;dataGridViewTextBoxColumn5.Type" xml:space="preserve">
+  <data name="&gt;&gt;colNr.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;dataGridViewTextBoxColumn7.Name" xml:space="preserve">
-    <value>dataGridViewTextBoxColumn7</value>
+  <data name="&gt;&gt;colName.Name" xml:space="preserve">
+    <value>colName</value>
   </data>
-  <data name="&gt;&gt;dataGridViewTextBoxColumn7.Type" xml:space="preserve">
+  <data name="&gt;&gt;colName.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;dataGridViewTextBoxColumn8.Name" xml:space="preserve">
-    <value>dataGridViewTextBoxColumn8</value>
+  <data name="&gt;&gt;colBestand.Name" xml:space="preserve">
+    <value>colBestand</value>
   </data>
-  <data name="&gt;&gt;dataGridViewTextBoxColumn8.Type" xml:space="preserve">
+  <data name="&gt;&gt;colBestand.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;dataGridViewTextBoxColumn9.Name" xml:space="preserve">
-    <value>dataGridViewTextBoxColumn9</value>
+  <data name="&gt;&gt;colProzent.Name" xml:space="preserve">
+    <value>colProzent</value>
   </data>
-  <data name="&gt;&gt;dataGridViewTextBoxColumn9.Type" xml:space="preserve">
+  <data name="&gt;&gt;colProzent.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;rap.Name" xml:space="preserve">
-    <value>rap</value>
+  <data name="&gt;&gt;colFarbe.Name" xml:space="preserve">
+    <value>colFarbe</value>
   </data>
-  <data name="&gt;&gt;rap.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Ruestanzahl.Name" xml:space="preserve">
-    <value>Ruestanzahl</value>
-  </data>
-  <data name="&gt;&gt;Ruestanzahl.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;dataGridViewTextBoxColumn10.Name" xml:space="preserve">
-    <value>dataGridViewTextBoxColumn10</value>
-  </data>
-  <data name="&gt;&gt;dataGridViewTextBoxColumn10.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;dataGridViewImageColumn2.Name" xml:space="preserve">
-    <value>dataGridViewImageColumn2</value>
-  </data>
-  <data name="&gt;&gt;dataGridViewImageColumn2.Type" xml:space="preserve">
+  <data name="&gt;&gt;colFarbe.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridViewImageColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;s1.Name" xml:space="preserve">
-    <value>s1</value>
+  <data name="&gt;&gt;colZugang.Name" xml:space="preserve">
+    <value>colZugang</value>
   </data>
-  <data name="&gt;&gt;s1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewCheckBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;colZugang.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;s3.Name" xml:space="preserve">
-    <value>s3</value>
+  <data name="&gt;&gt;bbP0.Name" xml:space="preserve">
+    <value>bbP0</value>
   </data>
-  <data name="&gt;&gt;s3.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewCheckBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;ueber.Name" xml:space="preserve">
-    <value>ueber</value>
-  </data>
-  <data name="&gt;&gt;ueber.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewImageColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;bbP0.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>Fahrrad</value>

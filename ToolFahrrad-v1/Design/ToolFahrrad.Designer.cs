@@ -73,12 +73,6 @@
             this.Tab = new System.Windows.Forms.TabControl();
             this.tab_kTeil = new System.Windows.Forms.TabPage();
             this.dataGridViewKTeil = new System.Windows.Forms.DataGridView();
-            this.colNr = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colBestand = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colProzent = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colFarbe = new System.Windows.Forms.DataGridViewImageColumn();
-            this.colZugang = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tab_eTeil = new System.Windows.Forms.TabPage();
             this.cbMitOhne = new System.Windows.Forms.CheckBox();
             this.rbReserve = new System.Windows.Forms.RadioButton();
@@ -103,6 +97,17 @@
             this.picResetAPlatz = new System.Windows.Forms.PictureBox();
             this.picSaveAPlatz = new System.Windows.Forms.PictureBox();
             this.dataGridViewAPlatz = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.rap = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Ruestanzahl = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewImageColumn2 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.s1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.s3 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.ueber = new System.Windows.Forms.DataGridViewImageColumn();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
@@ -124,17 +129,13 @@
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.helpProvider1 = new System.Windows.Forms.HelpProvider();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.rap = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Ruestanzahl = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewImageColumn2 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.s1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.s3 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.ueber = new System.Windows.Forms.DataGridViewImageColumn();
+            this.colNr = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colBestand = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colProzent = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colFarbe = new System.Windows.Forms.DataGridViewImageColumn();
+            this.colZugang = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bbP0 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabs.SuspendLayout();
             this.tab_xml.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pufferP3)).BeginInit();
@@ -716,47 +717,10 @@
             this.colBestand,
             this.colProzent,
             this.colFarbe,
-            this.colZugang});
+            this.colZugang,
+            this.bbP0});
             resources.ApplyResources(this.dataGridViewKTeil, "dataGridViewKTeil");
             this.dataGridViewKTeil.Name = "dataGridViewKTeil";
-            // 
-            // colNr
-            // 
-            resources.ApplyResources(this.colNr, "colNr");
-            this.colNr.Name = "colNr";
-            this.colNr.ReadOnly = true;
-            this.colNr.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            // 
-            // colName
-            // 
-            resources.ApplyResources(this.colName, "colName");
-            this.colName.Name = "colName";
-            this.colName.ReadOnly = true;
-            // 
-            // colBestand
-            // 
-            resources.ApplyResources(this.colBestand, "colBestand");
-            this.colBestand.Name = "colBestand";
-            this.colBestand.ReadOnly = true;
-            // 
-            // colProzent
-            // 
-            resources.ApplyResources(this.colProzent, "colProzent");
-            this.colProzent.Name = "colProzent";
-            this.colProzent.ReadOnly = true;
-            // 
-            // colFarbe
-            // 
-            resources.ApplyResources(this.colFarbe, "colFarbe");
-            this.colFarbe.Name = "colFarbe";
-            this.colFarbe.ReadOnly = true;
-            this.colFarbe.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // colZugang
-            // 
-            resources.ApplyResources(this.colZugang, "colZugang");
-            this.colZugang.Name = "colZugang";
-            this.colZugang.ReadOnly = true;
             // 
             // tab_eTeil
             // 
@@ -988,6 +952,78 @@
             resources.ApplyResources(this.dataGridViewAPlatz, "dataGridViewAPlatz");
             this.dataGridViewAPlatz.Name = "dataGridViewAPlatz";
             // 
+            // dataGridViewTextBoxColumn5
+            // 
+            resources.ApplyResources(this.dataGridViewTextBoxColumn5, "dataGridViewTextBoxColumn5");
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.ReadOnly = true;
+            this.dataGridViewTextBoxColumn5.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            // 
+            // dataGridViewTextBoxColumn7
+            // 
+            resources.ApplyResources(this.dataGridViewTextBoxColumn7, "dataGridViewTextBoxColumn7");
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            this.dataGridViewTextBoxColumn7.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn8
+            // 
+            resources.ApplyResources(this.dataGridViewTextBoxColumn8, "dataGridViewTextBoxColumn8");
+            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            this.dataGridViewTextBoxColumn8.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn9
+            // 
+            resources.ApplyResources(this.dataGridViewTextBoxColumn9, "dataGridViewTextBoxColumn9");
+            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
+            this.dataGridViewTextBoxColumn9.ReadOnly = true;
+            // 
+            // rap
+            // 
+            resources.ApplyResources(this.rap, "rap");
+            this.rap.Name = "rap";
+            this.rap.ReadOnly = true;
+            // 
+            // Ruestanzahl
+            // 
+            resources.ApplyResources(this.Ruestanzahl, "Ruestanzahl");
+            this.Ruestanzahl.Name = "Ruestanzahl";
+            this.Ruestanzahl.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn10
+            // 
+            resources.ApplyResources(this.dataGridViewTextBoxColumn10, "dataGridViewTextBoxColumn10");
+            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
+            this.dataGridViewTextBoxColumn10.ReadOnly = true;
+            // 
+            // dataGridViewImageColumn2
+            // 
+            resources.ApplyResources(this.dataGridViewImageColumn2, "dataGridViewImageColumn2");
+            this.dataGridViewImageColumn2.Name = "dataGridViewImageColumn2";
+            this.dataGridViewImageColumn2.ReadOnly = true;
+            this.dataGridViewImageColumn2.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // s1
+            // 
+            resources.ApplyResources(this.s1, "s1");
+            this.s1.Name = "s1";
+            this.s1.ReadOnly = true;
+            this.s1.TrueValue = "123";
+            // 
+            // s3
+            // 
+            resources.ApplyResources(this.s3, "s3");
+            this.s3.Name = "s3";
+            this.s3.ReadOnly = true;
+            this.s3.TrueValue = "";
+            // 
+            // ueber
+            // 
+            resources.ApplyResources(this.ueber, "ueber");
+            this.ueber.Name = "ueber";
+            this.ueber.ReadOnly = true;
+            this.ueber.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.ueber.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
             // pictureBox4
             // 
             resources.ApplyResources(this.pictureBox4, "pictureBox4");
@@ -1120,77 +1156,49 @@
             // 
             resources.ApplyResources(this.helpProvider1, "helpProvider1");
             // 
-            // dataGridViewTextBoxColumn5
+            // colNr
             // 
-            resources.ApplyResources(this.dataGridViewTextBoxColumn5, "dataGridViewTextBoxColumn5");
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            this.dataGridViewTextBoxColumn5.ReadOnly = true;
-            this.dataGridViewTextBoxColumn5.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            resources.ApplyResources(this.colNr, "colNr");
+            this.colNr.Name = "colNr";
+            this.colNr.ReadOnly = true;
+            this.colNr.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             // 
-            // dataGridViewTextBoxColumn7
+            // colName
             // 
-            resources.ApplyResources(this.dataGridViewTextBoxColumn7, "dataGridViewTextBoxColumn7");
-            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
-            this.dataGridViewTextBoxColumn7.ReadOnly = true;
+            resources.ApplyResources(this.colName, "colName");
+            this.colName.Name = "colName";
+            this.colName.ReadOnly = true;
             // 
-            // dataGridViewTextBoxColumn8
+            // colBestand
             // 
-            resources.ApplyResources(this.dataGridViewTextBoxColumn8, "dataGridViewTextBoxColumn8");
-            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
-            this.dataGridViewTextBoxColumn8.ReadOnly = true;
+            resources.ApplyResources(this.colBestand, "colBestand");
+            this.colBestand.Name = "colBestand";
+            this.colBestand.ReadOnly = true;
             // 
-            // dataGridViewTextBoxColumn9
+            // colProzent
             // 
-            resources.ApplyResources(this.dataGridViewTextBoxColumn9, "dataGridViewTextBoxColumn9");
-            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
-            this.dataGridViewTextBoxColumn9.ReadOnly = true;
+            resources.ApplyResources(this.colProzent, "colProzent");
+            this.colProzent.Name = "colProzent";
+            this.colProzent.ReadOnly = true;
             // 
-            // rap
+            // colFarbe
             // 
-            resources.ApplyResources(this.rap, "rap");
-            this.rap.Name = "rap";
-            this.rap.ReadOnly = true;
+            resources.ApplyResources(this.colFarbe, "colFarbe");
+            this.colFarbe.Name = "colFarbe";
+            this.colFarbe.ReadOnly = true;
+            this.colFarbe.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             // 
-            // Ruestanzahl
+            // colZugang
             // 
-            resources.ApplyResources(this.Ruestanzahl, "Ruestanzahl");
-            this.Ruestanzahl.Name = "Ruestanzahl";
-            this.Ruestanzahl.ReadOnly = true;
+            resources.ApplyResources(this.colZugang, "colZugang");
+            this.colZugang.Name = "colZugang";
+            this.colZugang.ReadOnly = true;
             // 
-            // dataGridViewTextBoxColumn10
+            // bbP0
             // 
-            resources.ApplyResources(this.dataGridViewTextBoxColumn10, "dataGridViewTextBoxColumn10");
-            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
-            this.dataGridViewTextBoxColumn10.ReadOnly = true;
-            // 
-            // dataGridViewImageColumn2
-            // 
-            resources.ApplyResources(this.dataGridViewImageColumn2, "dataGridViewImageColumn2");
-            this.dataGridViewImageColumn2.Name = "dataGridViewImageColumn2";
-            this.dataGridViewImageColumn2.ReadOnly = true;
-            this.dataGridViewImageColumn2.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // s1
-            // 
-            resources.ApplyResources(this.s1, "s1");
-            this.s1.Name = "s1";
-            this.s1.ReadOnly = true;
-            this.s1.TrueValue = "123";
-            // 
-            // s3
-            // 
-            resources.ApplyResources(this.s3, "s3");
-            this.s3.Name = "s3";
-            this.s3.ReadOnly = true;
-            this.s3.TrueValue = "";
-            // 
-            // ueber
-            // 
-            resources.ApplyResources(this.ueber, "ueber");
-            this.ueber.Name = "ueber";
-            this.ueber.ReadOnly = true;
-            this.ueber.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.ueber.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            resources.ApplyResources(this.bbP0, "bbP0");
+            this.bbP0.Name = "bbP0";
+            this.bbP0.ReadOnly = true;
             // 
             // Fahrrad
             // 
@@ -1320,12 +1328,6 @@
         private System.Windows.Forms.PictureBox picReadOnlyETeile;
         private System.Windows.Forms.ToolStripMenuItem gewichtungToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem handbuchToolStripMenuItem;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colNr;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colBestand;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colProzent;
-        private System.Windows.Forms.DataGridViewImageColumn colFarbe;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colZugang;
         private System.Windows.Forms.ToolStripMenuItem scimToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem startSeiteToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem spracheToolStripMenuItem1;
@@ -1364,6 +1366,13 @@
         private System.Windows.Forms.DataGridViewCheckBoxColumn s1;
         private System.Windows.Forms.DataGridViewCheckBoxColumn s3;
         private System.Windows.Forms.DataGridViewImageColumn ueber;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colNr;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colBestand;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colProzent;
+        private System.Windows.Forms.DataGridViewImageColumn colFarbe;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colZugang;
+        private System.Windows.Forms.DataGridViewTextBoxColumn bbP0;
     }
 }
 

@@ -487,11 +487,12 @@ namespace ToolFahrrad_v1
                 else
                     dataGridViewKTeil.Rows[index].Cells[4].Value = imageList1.Images[1];
                 dataGridViewKTeil.Rows[index].Cells[5].Value = a.LagerZugang;
+                dataGridViewKTeil.Rows[index].Cells[6].Value = a.BruttoBedarfPer0;
 
                 //Farbe
                 for (int i = 0; i < 6; ++i)
                 {
-                    if (i == 4)
+                    if (i == 4 || i == 6)
                         dataGridViewETeil.Columns[i].DefaultCellStyle.BackColor = Color.LightYellow;
                     else
                         dataGridViewKTeil.Columns[i].DefaultCellStyle.BackColor = Color.FloralWhite;
