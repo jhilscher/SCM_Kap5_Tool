@@ -490,10 +490,10 @@ namespace ToolFahrrad_v1
                 dataGridViewKTeil.Rows[index].Cells[6].Value = a.BruttoBedarfPer0;
 
                 //Farbe
-                for (int i = 0; i < 6; ++i)
+                for (int i = 0; i < 7; ++i)
                 {
                     if (i == 4 || i == 6)
-                        dataGridViewETeil.Columns[i].DefaultCellStyle.BackColor = Color.LightYellow;
+                        dataGridViewKTeil.Columns[i].DefaultCellStyle.BackColor = Color.LightYellow;
                     else
                         dataGridViewKTeil.Columns[i].DefaultCellStyle.BackColor = Color.FloralWhite;
                 }

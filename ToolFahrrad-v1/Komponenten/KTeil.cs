@@ -26,9 +26,6 @@ namespace ToolFahrrad_v1
         private int bestandPer2;
         private int bestandPer3;
         private int bestandPer4;
-        //private int verwendungProdukt1;
-        //private int verwendungProdukt2;
-        //private int verwendungProdukt3;
         // Constructor
         public KTeil(int nummer, string bez) : base(nummer, bez)
         {}
@@ -130,21 +127,6 @@ namespace ToolFahrrad_v1
             get { return bestandPer4; }
             set { bestandPer4 = value; }
         }
-        //public int VerwendungProdukt1
-        //{
-        //    get { return verwendungProdukt1; }
-        //    set { verwendungProdukt1 = value; }
-        //}
-        //public int VerwendungProdukt2
-        //{
-        //    get { return verwendungProdukt2; }
-        //    set { verwendungProdukt2 = value; }
-        //}
-        //public int VerwendungProdukt3
-        //{
-        //    get { return verwendungProdukt3; }
-        //    set { verwendungProdukt3 = value; }
-        //}
         // Public function to initialize BruttoBedarf
         public void initBruttoBedarf(int index, int prodMengeAkt, int menge)
         {

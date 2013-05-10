@@ -75,8 +75,7 @@ namespace ToolFahrrad_v1
                 if (TKTeil[indexTeil])
                 {
                     instance.NewTeil(indexTeil + 1, TBez[indexTeil], PKTeil[indexTeil], BKKTeil[indexTeil],
-                                     BDKTeil[indexTeil], ABDKTeil[indexTeil], DMKTeil[indexTeil], 0, VwTeil[indexTeil],
-                                     TVerbrauchP1[indexTeil], TVerbrauchP2[indexTeil], TVerbrauchP3[indexTeil]);
+                                     BDKTeil[indexTeil], ABDKTeil[indexTeil], DMKTeil[indexTeil], 0, VwTeil[indexTeil]);
                 }
                 else
                 {
