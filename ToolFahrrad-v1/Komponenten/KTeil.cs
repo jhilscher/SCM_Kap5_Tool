@@ -27,8 +27,9 @@ namespace ToolFahrrad_v1
         private int bestandPer3;
         private int bestandPer4;
         // Constructor
-        public KTeil(int nummer, string bez) : base(nummer, bez)
-        {}
+        public KTeil(int nummer, string bez)
+            : base(nummer, bez)
+        { }
         // Getter / Setter
         public double Bestellkosten
         {
@@ -76,7 +77,7 @@ namespace ToolFahrrad_v1
                     foreach (ETeil teil in DataContainer.Instance.ListeETeile)
                     {
                         if (teil.Nummer == 17)
-                        {}
+                        { }
                         if (teil.Zusammensetzung.ContainsKey(this))
                         {
                             res.Add(teil);
@@ -128,49 +129,59 @@ namespace ToolFahrrad_v1
             set { bestandPer4 = value; }
         }
         // Public function to initialize BruttoBedarf
-        public void initBruttoBedarf(int index, int prodMengeAkt, int menge)
+        public void initBruttoBedarf(int index, ETeil teil, int menge)
         {
             if (index == 1)
             {
-                bruttoBedarfPer0 += prodMengeAkt * menge;
+                bruttoBedarf(teil, menge);
             }
             else if (index == 2)
             {
-                bruttoBedarfPer0 += prodMengeAkt * menge;
+                bruttoBedarf(teil, menge);
             }
             else if (index == 3)
             {
-                bruttoBedarfPer0 += prodMengeAkt * menge;
+                bruttoBedarf(teil, menge);
             }
         }
+
+        private void bruttoBedarf(ETeil teil, int menge)
+        {
+            if (teil.ProduktionsMengePer0 > 0)
+                bruttoBedarfPer0 += teil.ProduktionsMengePer0 * menge;
+            bruttoBedarfPer1 += teil.VerbrauchPer1 * menge;
+            bruttoBedarfPer2 += teil.VerbrauchPer2 * menge;
+            bruttoBedarfPer3 += teil.VerbrauchPer3 * menge;
+        }
+
         // Public function to calculate forecast consumption for next 3 periods
         public void berechnungVerbrauchPrognose(double verwendeAbweichung)
         {
             // Future period 1
-/*            verbProg1MA = Convert.ToInt32(
-                lagerstand + erwarteteBestellung - vertriebAktuell * (lieferdauer + abweichungLieferdauer));
-            verbProg1OA = Convert.ToInt32(
-                lagerstand + erwarteteBestellung - vertriebAktuell * lieferdauer);
-            // Future period 2
-            verbProg2MA = Convert.ToInt32(
-                lagerstand + erwarteteBestellung - (
-                    vertriebAktuell + (vertriebAktuell + verbrauchPrognose1 + verbrauchPrognose2) / 3) *
-                    (lieferdauer + abweichungLieferdauer));
-            verbProg2OA = Convert.ToInt32(
-                lagerstand + erwarteteBestellung - (
-                    vertriebAktuell + (vertriebAktuell + verbrauchPrognose1 + verbrauchPrognose2) / 3) *
-                    lieferdauer);
-            // Future period 3
-            verbProg3MA = Convert.ToInt32(
-                lagerstand + erwarteteBestellung - (
-                    vertriebAktuell + (
-                        vertriebAktuell + verbrauchPrognose1 + verbrauchPrognose2 + verbrauchPrognose3) / 4) *
-                        (lieferdauer + abweichungLieferdauer));
-            verbProg3OA = Convert.ToInt32(
-                lagerstand + erwarteteBestellung - (
-                    vertriebAktuell + (
-                        vertriebAktuell + verbrauchPrognose1 + verbrauchPrognose2 + verbrauchPrognose3) / 4) *
-                        lieferdauer);*/
+            /*            verbProg1MA = Convert.ToInt32(
+                            lagerstand + erwarteteBestellung - vertriebAktuell * (lieferdauer + abweichungLieferdauer));
+                        verbProg1OA = Convert.ToInt32(
+                            lagerstand + erwarteteBestellung - vertriebAktuell * lieferdauer);
+                        // Future period 2
+                        verbProg2MA = Convert.ToInt32(
+                            lagerstand + erwarteteBestellung - (
+                                vertriebAktuell + (vertriebAktuell + verbrauchPrognose1 + verbrauchPrognose2) / 3) *
+                                (lieferdauer + abweichungLieferdauer));
+                        verbProg2OA = Convert.ToInt32(
+                            lagerstand + erwarteteBestellung - (
+                                vertriebAktuell + (vertriebAktuell + verbrauchPrognose1 + verbrauchPrognose2) / 3) *
+                                lieferdauer);
+                        // Future period 3
+                        verbProg3MA = Convert.ToInt32(
+                            lagerstand + erwarteteBestellung - (
+                                vertriebAktuell + (
+                                    vertriebAktuell + verbrauchPrognose1 + verbrauchPrognose2 + verbrauchPrognose3) / 4) *
+                                    (lieferdauer + abweichungLieferdauer));
+                        verbProg3OA = Convert.ToInt32(
+                            lagerstand + erwarteteBestellung - (
+                                vertriebAktuell + (
+                                    vertriebAktuell + verbrauchPrognose1 + verbrauchPrognose2 + verbrauchPrognose3) / 4) *
+                                    lieferdauer);*/
         }
         // Equals function
         public bool Equals(KTeil kt)

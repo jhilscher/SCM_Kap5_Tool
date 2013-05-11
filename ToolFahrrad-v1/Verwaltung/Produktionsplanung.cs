@@ -52,11 +52,15 @@ namespace ToolFahrrad_v1
             }
             // Aufloesung der KTeile
             // Prüfung, ob Bruttobedarf schon gerechnet wurde
-            if ((dc.GetTeil(21) as KTeil).BruttoBedarfPer0 != 0)
+            if ((dc.GetTeil(21) as KTeil).BruttoBedarfPer0 != 0 || (dc.GetTeil(21) as KTeil).BruttoBedarfPer1 != 0 || 
+                (dc.GetTeil(21) as KTeil).BruttoBedarfPer2 != 0 || (dc.GetTeil(21) as KTeil).BruttoBedarfPer3 != 0)
             {
                 foreach (KTeil k in dc.ListeKTeile)
                 {
                     k.BruttoBedarfPer0 = 0;
+                    k.BruttoBedarfPer1 = 0;
+                    k.BruttoBedarfPer2 = 0;
+                    k.BruttoBedarfPer3 = 0;
                 }
             }
             for (int index = 1; index < 4; index++)
@@ -94,13 +98,18 @@ namespace ToolFahrrad_v1
         }
         private void RekursAufloesenKTeile(int index, ETeil vaterTeil, ETeil kindTeil)
         {
+            if (vaterTeil != null)
+            {
+                kindTeil.VerbrauchPer1 = vaterTeil.VerbrauchPer1;
+                kindTeil.VerbrauchPer2 = vaterTeil.VerbrauchPer2;
+                kindTeil.VerbrauchPer3 = vaterTeil.VerbrauchPer3;
+            }
             foreach (KeyValuePair<Teil, int> kvp in kindTeil.Zusammensetzung)
             {
                 if (kvp.Key is KTeil)
                 {
                     KTeil kt = kvp.Key as KTeil;
-                    if (kindTeil.ProduktionsMengePer0 > 0)
-                        kt.initBruttoBedarf(index, kindTeil.ProduktionsMengePer0, kvp.Value);
+                        kt.initBruttoBedarf(index, kindTeil, kvp.Value);
                 }
                 else
                 {

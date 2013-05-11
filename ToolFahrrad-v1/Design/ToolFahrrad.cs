@@ -139,15 +139,15 @@ namespace ToolFahrrad_v1
             (instance.GetTeil(3) as ETeil).Puffer = Convert.ToInt32(pufferP3.Value);
 
             instance.GetTeil(1).VerbrauchPer1 = Convert.ToInt32(upDownP11.Value);
-            instance.GetTeil(1).VerbrauchPer2 = Convert.ToInt32(upDownP12.Value);
-            instance.GetTeil(1).VerbrauchPer3 = Convert.ToInt32(upDownP13.Value);
+            instance.GetTeil(1).VerbrauchPer2 = Convert.ToInt32(upDownP21.Value);
+            instance.GetTeil(1).VerbrauchPer3 = Convert.ToInt32(upDownP31.Value);
 
-            instance.GetTeil(2).VerbrauchPer1 = Convert.ToInt32(upDownP21.Value);
+            instance.GetTeil(2).VerbrauchPer1 = Convert.ToInt32(upDownP12.Value);
             instance.GetTeil(2).VerbrauchPer2 = Convert.ToInt32(upDownP22.Value);
-            instance.GetTeil(2).VerbrauchPer3 = Convert.ToInt32(upDownP23.Value);
+            instance.GetTeil(2).VerbrauchPer3 = Convert.ToInt32(upDownP32.Value);
 
-            instance.GetTeil(3).VerbrauchPer1 = Convert.ToInt32(upDownP31.Value);
-            instance.GetTeil(3).VerbrauchPer2 = Convert.ToInt32(upDownP32.Value);
+            instance.GetTeil(3).VerbrauchPer1 = Convert.ToInt32(upDownP13.Value);
+            instance.GetTeil(3).VerbrauchPer2 = Convert.ToInt32(upDownP23.Value);
             instance.GetTeil(3).VerbrauchPer3 = Convert.ToInt32(upDownP33.Value);
 
             this.bildSpeichOk.Visible = true;
@@ -488,11 +488,14 @@ namespace ToolFahrrad_v1
                     dataGridViewKTeil.Rows[index].Cells[4].Value = imageList1.Images[1];
                 dataGridViewKTeil.Rows[index].Cells[5].Value = a.LagerZugang;
                 dataGridViewKTeil.Rows[index].Cells[6].Value = a.BruttoBedarfPer0;
+                dataGridViewKTeil.Rows[index].Cells[7].Value = a.BruttoBedarfPer1;
+                dataGridViewKTeil.Rows[index].Cells[8].Value = a.BruttoBedarfPer2;
+                dataGridViewKTeil.Rows[index].Cells[9].Value = a.BruttoBedarfPer3;
 
                 //Farbe
-                for (int i = 0; i < 7; ++i)
+                for (int i = 0; i < 10; ++i)
                 {
-                    if (i == 4 || i == 6)
+                    if (i == 4 || i > 5)
                         dataGridViewKTeil.Columns[i].DefaultCellStyle.BackColor = Color.LightYellow;
                     else
                         dataGridViewKTeil.Columns[i].DefaultCellStyle.BackColor = Color.FloralWhite;

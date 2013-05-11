@@ -136,6 +136,9 @@
             this.colFarbe = new System.Windows.Forms.DataGridViewImageColumn();
             this.colZugang = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bbP0 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.per2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.per3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.per4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabs.SuspendLayout();
             this.tab_xml.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pufferP3)).BeginInit();
@@ -708,6 +711,7 @@
             // dataGridViewKTeil
             // 
             this.dataGridViewKTeil.AllowUserToAddRows = false;
+            this.dataGridViewKTeil.AllowUserToDeleteRows = false;
             this.dataGridViewKTeil.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dataGridViewKTeil.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridViewKTeil.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -718,7 +722,10 @@
             this.colProzent,
             this.colFarbe,
             this.colZugang,
-            this.bbP0});
+            this.bbP0,
+            this.per2,
+            this.per3,
+            this.per4});
             resources.ApplyResources(this.dataGridViewKTeil, "dataGridViewKTeil");
             this.dataGridViewKTeil.Name = "dataGridViewKTeil";
             // 
@@ -1200,6 +1207,24 @@
             this.bbP0.Name = "bbP0";
             this.bbP0.ReadOnly = true;
             // 
+            // per2
+            // 
+            resources.ApplyResources(this.per2, "per2");
+            this.per2.Name = "per2";
+            this.per2.ReadOnly = true;
+            // 
+            // per3
+            // 
+            resources.ApplyResources(this.per3, "per3");
+            this.per3.Name = "per3";
+            this.per3.ReadOnly = true;
+            // 
+            // per4
+            // 
+            resources.ApplyResources(this.per4, "per4");
+            this.per4.Name = "per4";
+            this.per4.ReadOnly = true;
+            // 
             // Fahrrad
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -1373,6 +1398,9 @@
         private System.Windows.Forms.DataGridViewImageColumn colFarbe;
         private System.Windows.Forms.DataGridViewTextBoxColumn colZugang;
         private System.Windows.Forms.DataGridViewTextBoxColumn bbP0;
+        private System.Windows.Forms.DataGridViewTextBoxColumn per2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn per3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn per4;
     }
 }
 
