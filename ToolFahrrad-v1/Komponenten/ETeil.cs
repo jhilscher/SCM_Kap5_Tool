@@ -148,7 +148,9 @@ namespace ToolFahrrad_v1
                     else
                     {
                         if (index == 1 && puffer != -1)
+                        {
                             kdhUpdate = true;
+                        }
                         if (puffer == -1)
                         {
                             puffer = 0;
@@ -168,7 +170,6 @@ namespace ToolFahrrad_v1
                         }
                     }
                 }
-
             }
         }
         // Public function to change members puffer (0)

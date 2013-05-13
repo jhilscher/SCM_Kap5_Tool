@@ -44,6 +44,8 @@ namespace ToolFahrrad_v1
                 foreach (Teil t in instance.ListeETeile)
                 {
                     t.Aufgeloest = false;
+                    (t as ETeil).InBearbeitung = 0;
+                    (t as ETeil).InWartschlange = 0;
                     if ((instance.GetTeil(t.Nummer) as ETeil).IstEndProdukt == false)
                         (instance.GetTeil(t.Nummer) as ETeil).Puffer = -1;
                 }
