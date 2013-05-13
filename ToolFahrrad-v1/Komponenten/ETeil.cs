@@ -68,7 +68,17 @@ namespace ToolFahrrad_v1
         public int InBearbeitung
         {
             get { return inBearbeitung; }
-            set { inBearbeitung = value; }
+            set
+            {
+                if (inBearbeitung != 0)
+                {
+                    inBearbeitung += value;
+                }
+                else
+                {
+                    inBearbeitung = value;
+                }
+            }
         }
         public Dictionary<Teil, int> Zusammensetzung
         {
