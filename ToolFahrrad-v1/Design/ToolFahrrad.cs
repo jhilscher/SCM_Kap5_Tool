@@ -281,10 +281,10 @@ namespace ToolFahrrad_v1
 
                 Dictionary<PictureBox, bool> dic = new Dictionary<PictureBox, bool>() 
                 {
-                    {this.picEditsAPlatz, true},
-                    {this.picResetAPlatz, false},
-                    {this.picSaveAPlatz, false},
-                    {this.picReadOnlyAPlatz, false}
+                    {this.picEditEteile, true},
+                    {this.picResetETeil, false},
+                    {this.picSaveETeile, false},
+                    {this.picReadOnlyETeile, false}
                 };
                 picSave(dic, 5, dataGridViewAPlatz);
 
@@ -637,5 +637,11 @@ namespace ToolFahrrad_v1
             else
                 return MessageBox.Show(t, s, MessageBoxButtons.OK);
         }
+
+        private void dataGridViewKTeil_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            //string a = dataGridViewKTeil.Rows[2].Cells[1].Value.ToString();
+        }
+
     }
 }
