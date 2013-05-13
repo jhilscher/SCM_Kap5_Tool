@@ -10,10 +10,16 @@ namespace ToolFahrrad_v1
         // Class members
         DataContainer dc;
         bool aufgeloest = false;
+        int aktPeriode;
         // Constructor
         public Produktionsplanung()
         {
             dc = DataContainer.Instance;
+        }
+        public int AktPeriode
+        {
+            get { return aktPeriode; }
+            set { aktPeriode = value; }
         }
         // Aufloesung der Teile, setzen der Ueberstunden, anpassen Reihenfolge
         public void Planen()
@@ -66,18 +72,6 @@ namespace ToolFahrrad_v1
             for (int index = 1; index < 4; index++)
             {
                 RekursAufloesenKTeile(index, null, dc.GetTeil(index) as ETeil);
-
-
-                //ETeil et = dc.GetTeil(index) as ETeil;
-                //foreach (KeyValuePair<Teil, int> kvp in et.Zusammensetzung)
-                //{
-                //    if (kvp.Key is KTeil)
-                //    {
-                //        //ToDo: Produktionsmenge auch fuer Prog1, Prog2, Prog3!!!
-                //        KTeil kt = kvp.Key as KTeil;
-                //        kt.initBruttoBedarf(index, et.ProduktionsMengePer0);
-                //    }
-                //}
             }
             aufgeloest = true;
         }
@@ -109,7 +103,8 @@ namespace ToolFahrrad_v1
                 if (kvp.Key is KTeil)
                 {
                     KTeil kt = kvp.Key as KTeil;
-                        kt.initBruttoBedarf(index, kindTeil, kvp.Value);
+                    kt.initBruttoBedarf(index, kindTeil, kvp.Value);
+                    kt.berechnungVerbrauchPrognose(aktPeriode, dc.VerwendeAbweichung);
                 }
                 else
                 {
@@ -117,7 +112,6 @@ namespace ToolFahrrad_v1
                 }
             }
         }
-
         // Pruefung ob genug KTeile vorhanden sind, wenn nicht Info ausgeben
         public String Nachpruefen(Teil teil, int mengeNeu)
         {

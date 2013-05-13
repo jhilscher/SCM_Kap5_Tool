@@ -155,44 +155,53 @@ namespace ToolFahrrad_v1
                 bruttoBedarf(teil, menge);
             }
         }
-
+        // Set Bruttobedarf, when periode0 check that Produktionsmenge is > 0
         private void bruttoBedarf(ETeil teil, int menge)
         {
             if (teil.ProduktionsMengePer0 > 0)
+            {
                 bruttoBedarfPer0 += teil.ProduktionsMengePer0 * menge;
+            }
             bruttoBedarfPer1 += teil.VerbrauchPer1 * menge;
             bruttoBedarfPer2 += teil.VerbrauchPer2 * menge;
             bruttoBedarfPer3 += teil.VerbrauchPer3 * menge;
         }
-
         // Public function to calculate forecast consumption for next 3 periods
-        public void berechnungVerbrauchPrognose(double verwendeAbweichung)
+        public void berechnungVerbrauchPrognose(int aktPeriode, double verwendeAbweichung)
         {
-            // Future period 1
-            /*            verbProg1MA = Convert.ToInt32(
-                            lagerstand + erwarteteBestellung - vertriebAktuell * (lieferdauer + abweichungLieferdauer));
-                        verbProg1OA = Convert.ToInt32(
-                            lagerstand + erwarteteBestellung - vertriebAktuell * lieferdauer);
-                        // Future period 2
-                        verbProg2MA = Convert.ToInt32(
-                            lagerstand + erwarteteBestellung - (
-                                vertriebAktuell + (vertriebAktuell + verbrauchPrognose1 + verbrauchPrognose2) / 3) *
-                                (lieferdauer + abweichungLieferdauer));
-                        verbProg2OA = Convert.ToInt32(
-                            lagerstand + erwarteteBestellung - (
-                                vertriebAktuell + (vertriebAktuell + verbrauchPrognose1 + verbrauchPrognose2) / 3) *
-                                lieferdauer);
-                        // Future period 3
-                        verbProg3MA = Convert.ToInt32(
-                            lagerstand + erwarteteBestellung - (
-                                vertriebAktuell + (
-                                    vertriebAktuell + verbrauchPrognose1 + verbrauchPrognose2 + verbrauchPrognose3) / 4) *
-                                    (lieferdauer + abweichungLieferdauer));
-                        verbProg3OA = Convert.ToInt32(
-                            lagerstand + erwarteteBestellung - (
-                                vertriebAktuell + (
-                                    vertriebAktuell + verbrauchPrognose1 + verbrauchPrognose2 + verbrauchPrognose3) / 4) *
-                                    lieferdauer);*/
+            // Future period: 0+1
+            bestandPer1 = lagerstand + eingetroffeneBestellmenge(aktPeriode, verwendeAbweichung) - bruttoBedarfPer0;
+            // Future peroid: 0+2
+            bestandPer2 = bestandPer1 + eingetroffeneBestellmenge(aktPeriode + 1, verwendeAbweichung) - bruttoBedarfPer1;
+            // Future peroid: 0+3
+            bestandPer3 = bestandPer2 + eingetroffeneBestellmenge(aktPeriode + 2, verwendeAbweichung) - bruttoBedarfPer2;
+            // Future peroid: 0+4
+            bestandPer4 = bestandPer3 + eingetroffeneBestellmenge(aktPeriode + 3, verwendeAbweichung) - bruttoBedarfPer3;
+        }
+        // Private function to calculate period when ordered KTeil will arrive
+        private int eingetroffeneBestellmenge(int aktPeriode, double abweichung)
+        {
+            int menge = 0;
+            if(offeneBestellungen.Count() != 0)
+            {
+                foreach (List<int> ob in offeneBestellungen)
+                {
+                    int zeitpunktEintreffen = 0;
+                    if (ob[1] == 5)
+                    {
+                        zeitpunktEintreffen = (int)(ob[0] + lieferdauer + abweichungLieferdauer * abweichung);
+                    }
+                    else if (ob[1] == 4)
+                    {
+                        zeitpunktEintreffen = (int)(ob[0] + lieferdauer / 2);
+                    }
+                    if (zeitpunktEintreffen == aktPeriode)
+                    {
+                        menge += ob[2];
+                    }
+                }
+            }
+            return menge;
         }
         // Equals function
         public bool Equals(KTeil kt)
