@@ -53,7 +53,17 @@ namespace ToolFahrrad_v1
         public int InWartschlange
         {
             get { return inWarteschlange; }
-            set { inWarteschlange = value; }
+            set
+            {
+                if (inWarteschlange != 0)
+                {
+                    inWarteschlange += value;
+                }
+                else
+                {
+                    inWarteschlange = value;
+                }
+            }
         }
         public int InBearbeitung
         {
