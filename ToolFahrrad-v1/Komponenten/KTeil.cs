@@ -15,6 +15,7 @@ namespace ToolFahrrad_v1
         private double abweichungLieferdauer;
         private int diskontMenge;
         private int lagerZugang;
+        private List<List<int>> offeneBestellungen;
         // ToDo speichern in welcher periode bestellt bei offenen bestellungen
         private int periodeBestellung;
         private List<ETeil> istTeil = null;
@@ -29,7 +30,9 @@ namespace ToolFahrrad_v1
         // Constructor
         public KTeil(int nummer, string bez)
             : base(nummer, bez)
-        { }
+        {
+            offeneBestellungen = new List<List<int>>();
+        }
         // Getter / Setter
         public double Bestellkosten
         {
@@ -65,6 +68,14 @@ namespace ToolFahrrad_v1
         {
             get { return periodeBestellung; }
             set { periodeBestellung = value; }
+        }
+        public void AddOffeneBestellung(int periode, int mode, int menge)
+        {
+            List<int> neueOffeneBestellung = new List<int>();
+            neueOffeneBestellung.Add(periode);
+            neueOffeneBestellung.Add(mode);
+            neueOffeneBestellung.Add(menge);
+            offeneBestellungen.Add(neueOffeneBestellung);
         }
         // Function shows where KTeil is used
         public List<ETeil> IstTeilVon
