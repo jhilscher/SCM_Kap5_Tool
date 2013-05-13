@@ -9,17 +9,10 @@ namespace ToolFahrrad_v1
     {
         // Instance of DataContainer class
         DataContainer dc = DataContainer.Instance;
-        private double verwendeAbweichung = 0.5;
         // Constructor
         public Bestellverwaltung()
         {
             berechneVerbrauchKTeile();
-        }
-        // Getter / Setter
-        public double VerwendeAbweichung
-        {
-            get { return verwendeAbweichung * 100; }
-            set { verwendeAbweichung = value / 100; }
         }
         // Calculate forecast of consumption of KTeil
         public void berechneVerbrauchKTeile( )
@@ -27,7 +20,7 @@ namespace ToolFahrrad_v1
             foreach (KTeil kt in dc.ListeKTeile)
             {
                 // Calculate forecast of consumption of KTeil
-                kt.berechnungVerbrauchPrognose(verwendeAbweichung);
+                kt.berechnungVerbrauchPrognose(dc.VerwendeAbweichung);
             }
         }
         // Create list of orders

@@ -41,24 +41,24 @@
             this.lbl_10 = new System.Windows.Forms.Label();
             this.trackBarAbweichung = new System.Windows.Forms.TrackBar();
             this.tab_schicht = new System.Windows.Forms.TabPage();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.btn_schicht_save = new System.Windows.Forms.Button();
             this.lbl_3schicht = new System.Windows.Forms.Label();
             this.lbl_2schicht = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.tabControl1.SuspendLayout();
             this.tab_abweichung.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBarAbweichung)).BeginInit();
             this.tab_schicht.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -164,9 +164,9 @@
             this.lbl_10.ForeColor = System.Drawing.SystemColors.ControlDark;
             this.lbl_10.Location = new System.Drawing.Point(11, 51);
             this.lbl_10.Name = "lbl_10";
-            this.lbl_10.Size = new System.Drawing.Size(19, 13);
+            this.lbl_10.Size = new System.Drawing.Size(13, 13);
             this.lbl_10.TabIndex = 1;
-            this.lbl_10.Text = "10";
+            this.lbl_10.Text = "0";
             // 
             // trackBarAbweichung
             // 
@@ -193,6 +193,34 @@
             this.tab_schicht.Size = new System.Drawing.Size(348, 239);
             this.tab_schicht.TabIndex = 1;
             this.tab_schicht.Text = "Schichten";
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.label1);
+            this.panel2.Controls.Add(this.pictureBox2);
+            this.panel2.Location = new System.Drawing.Point(3, 176);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(206, 60);
+            this.panel2.TabIndex = 52;
+            this.panel2.Visible = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(54, 21);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(132, 13);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "Schichten wurde geändert";
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(11, 11);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(37, 35);
+            this.pictureBox2.TabIndex = 5;
+            this.pictureBox2.TabStop = false;
             // 
             // numericUpDown2
             // 
@@ -280,34 +308,6 @@
             this.lbl_2schicht.TabIndex = 0;
             this.lbl_2schicht.Text = "2. Schicht ab: ";
             // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.label1);
-            this.panel2.Controls.Add(this.pictureBox2);
-            this.panel2.Location = new System.Drawing.Point(3, 176);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(206, 60);
-            this.panel2.TabIndex = 52;
-            this.panel2.Visible = false;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(54, 21);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(132, 13);
-            this.label1.TabIndex = 6;
-            this.label1.Text = "Schichten wurde geändert";
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(11, 11);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(37, 35);
-            this.pictureBox2.TabIndex = 5;
-            this.pictureBox2.TabStop = false;
-            // 
             // Einstellungen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -326,11 +326,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.trackBarAbweichung)).EndInit();
             this.tab_schicht.ResumeLayout(false);
             this.tab_schicht.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             this.ResumeLayout(false);
 
         }

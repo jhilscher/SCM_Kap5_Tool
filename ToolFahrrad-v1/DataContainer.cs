@@ -23,6 +23,13 @@ namespace ToolFahrrad_v1
         private string saveFile;
         private int ersteSchicht = 3600;
         private int zweiteSchicht = 6000;
+        private double verwendeAbweichung = 0.5;
+        // Getter / Setter
+        public double VerwendeAbweichung
+        {
+            get { return verwendeAbweichung * 100; }
+            set { verwendeAbweichung = value / 100; }
+        }
         public int ZweiteSchicht
         {
             get { return zweiteSchicht; }
