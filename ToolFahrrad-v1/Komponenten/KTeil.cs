@@ -189,7 +189,7 @@ namespace ToolFahrrad_v1
                     int zeitpunktEintreffen = 0;
                     if (ob[1] == 5)
                     {
-                        zeitpunktEintreffen = (int)(ob[0] + lieferdauer + abweichungLieferdauer * abweichung);
+                        zeitpunktEintreffen = (int)(ob[0] + lieferdauer + abweichungLieferdauer * abweichung/100);
                     }
                     else if (ob[1] == 4)
                     {

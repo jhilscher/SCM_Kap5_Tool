@@ -150,6 +150,7 @@ namespace ToolFahrrad_v1
                         if (index == 1 && puffer != -1)
                         {
                             kdhUpdate = true;
+                            produktionsMenge = 0;
                         }
                         if (puffer == -1)
                         {
@@ -160,7 +161,7 @@ namespace ToolFahrrad_v1
                             puffer += vaterTeil.Puffer;
                         if (index != 3)
                         {
-                            produktionsMenge += vertriebPer0 - inWarteschlange - inBearbeitung;
+                            produktionsMenge += vertriebPer0;
                             Aufgeloest = false;
                         }
                         else

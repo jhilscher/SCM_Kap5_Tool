@@ -495,6 +495,11 @@ namespace ToolFahrrad_v1
                 dataGridViewKTeil.Rows[index].Cells[8].Value = a.BruttoBedarfPer2;
                 dataGridViewKTeil.Rows[index].Cells[9].Value = a.BruttoBedarfPer3;
 
+                dataGridViewKTeil.Rows[index].Cells[10].Value = a.BestandPer1;
+                dataGridViewKTeil.Rows[index].Cells[11].Value = a.BestandPer2;
+                dataGridViewKTeil.Rows[index].Cells[12].Value = a.BestandPer3;
+                dataGridViewKTeil.Rows[index].Cells[13].Value = a.BestandPer4;
+
                 //Farbe
                 for (int i = 0; i < 10; ++i)
                 {
