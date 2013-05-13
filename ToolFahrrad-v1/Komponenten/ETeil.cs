@@ -123,21 +123,37 @@ namespace ToolFahrrad_v1
                 {
                     // Set members
                     vertriebPer0 = vaterTeil.ProduktionsMengePer0 + vaterTeil.InWartschlange;
-                    if (puffer == -1)
-                    {
-                        puffer = vaterTeil.Puffer;
-                    }
+
                     // Calculation
                     if (Verwendung.Contains("KDH") == false)
                     {
+                        if (puffer == -1)
+                        {
+                            puffer = vaterTeil.Puffer;
+                        }
                         produktionsMenge = vertriebPer0 + Puffer - lagerstand - inWarteschlange - inBearbeitung;
+                        Aufgeloest = true;
                     }
                     else
                     {
-                        produktionsMenge += (vertriebPer0 + Puffer - lagerstand - inWarteschlange - inBearbeitung) / 3;
+                        if (puffer == -1)
+                        {
+                            puffer = 0;
+                            puffer += vaterTeil.Puffer;
+                        }
+                        if (index != 3)
+                        {
+                            produktionsMenge += vertriebPer0 - inWarteschlange - inBearbeitung;
+                            Aufgeloest = false;
+                        }
+                        else
+                        {
+                            produktionsMenge += vertriebPer0 + Puffer - lagerstand - inWarteschlange - inBearbeitung;
+                            Aufgeloest = true;
+                        }
                     }
                 }
-                Aufgeloest = true;
+                
             }
         }
         // Public function to change members puffer (0)
