@@ -48,6 +48,7 @@ namespace ToolFahrrad_v1
                         (instance.GetTeil(t.Nummer) as ETeil).Puffer = -1;
                 }
             }
+            pp.AktPeriode = Convert.ToInt32(xml.period);
             pp.Aufloesen();
             if (!lableDazu.Text.Contains("aus der Periode"))
                 lableDazu.Text = lableDazu.Text + "aus der Periode " + xml.period;

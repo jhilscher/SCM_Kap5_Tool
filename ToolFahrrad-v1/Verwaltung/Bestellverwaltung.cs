@@ -17,11 +17,11 @@ namespace ToolFahrrad_v1
         // Calculate forecast of consumption of KTeil
         public void berechneVerbrauchKTeile( )
         {
-            foreach (KTeil kt in dc.ListeKTeile)
+            /*foreach (KTeil kt in dc.ListeKTeile)
             {
                 // Calculate forecast of consumption of KTeil
-                kt.berechnungVerbrauchPrognose(dc.VerwendeAbweichung);
-            }
+                kt.berechnungVerbrauchPrognose(aktPeriode, dc.VerwendeAbweichung);
+            }*/
         }
         // Create list of orders
         public void erzeugeBestellListe()
