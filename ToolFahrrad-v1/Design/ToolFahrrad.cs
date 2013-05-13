@@ -501,7 +501,7 @@ namespace ToolFahrrad_v1
                 dataGridViewKTeil.Rows[index].Cells[13].Value = a.BestandPer4;
 
                 //Farbe
-                for (int i = 0; i < 10; ++i)
+                for (int i = 0; i < 14; ++i)
                 {
                     if (i == 4 || i > 5)
                         dataGridViewKTeil.Columns[i].DefaultCellStyle.BackColor = Color.LightYellow;

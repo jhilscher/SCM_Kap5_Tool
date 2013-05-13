@@ -156,7 +156,7 @@ namespace ToolFahrrad_v1
                         {
                             puffer = 0;
                             produktionsMenge = 0;
-                        }                        
+                        }
                         if (kdhUpdate == false)
                             puffer += vaterTeil.Puffer;
                         if (index != 3)
@@ -176,13 +176,12 @@ namespace ToolFahrrad_v1
         // Public function to change members puffer (0)
         public void FeldGeandert(int member, int value)
         {
-            //if (aufgeloest == true )
-            //{
             aufgeloest = false;
             // puffer
             if (member == 0)
             {
-                puffer = value;
+                if(!Verwendung.Contains("KDH"))
+                    puffer = value;
                 if (zusammensetzung.Count() != 0 && DataContainer.Instance.BerechneKindTeil == true)
                 {
                     foreach (KeyValuePair<Teil, int> kvp in zusammensetzung)
@@ -195,7 +194,6 @@ namespace ToolFahrrad_v1
                     }
                 }
             }
-            //}
         }
         public void AddArbeitsplatz(int nr)
         {

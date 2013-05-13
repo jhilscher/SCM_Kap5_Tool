@@ -56,9 +56,9 @@ namespace ToolFahrrad_v1
             {
                 RekursAufloesenETeile(index, null, dc.GetTeil(index) as ETeil);
             }
-            // Aufloesung der KTeile
+                       // Aufloesung der KTeile
             // Prüfung, ob Bruttobedarf schon gerechnet wurde
-            if ((dc.GetTeil(21) as KTeil).BruttoBedarfPer0 != 0 || (dc.GetTeil(21) as KTeil).BruttoBedarfPer1 != 0 || 
+            if ((dc.GetTeil(21) as KTeil).BruttoBedarfPer0 != 0 || (dc.GetTeil(21) as KTeil).BruttoBedarfPer1 != 0 ||
                 (dc.GetTeil(21) as KTeil).BruttoBedarfPer2 != 0 || (dc.GetTeil(21) as KTeil).BruttoBedarfPer3 != 0)
             {
                 foreach (KTeil k in dc.ListeKTeile)
@@ -75,6 +75,8 @@ namespace ToolFahrrad_v1
             }
             aufgeloest = true;
         }
+
+
         // Rekursive Prozedur zum Iterieren ueber die Zusammensetzung der Teile
         private void RekursAufloesenETeile(int index, ETeil vaterTeil, ETeil kindTeil)
         {
