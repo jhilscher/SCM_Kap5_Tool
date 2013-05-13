@@ -648,6 +648,14 @@ namespace ToolFahrrad_v1
 
         private void dataGridViewKTeil_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            if (e.ColumnIndex == 0)
+            {
+                TeilInformation ti = new TeilInformation(Convert.ToInt32(dataGridViewKTeil.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString()));
+                ti.GetTeilvonETeilMitMenge();
+                ti.Show();
+            }
+
+
             //string a = dataGridViewKTeil.Rows[2].Cells[1].Value.ToString();
         }
 

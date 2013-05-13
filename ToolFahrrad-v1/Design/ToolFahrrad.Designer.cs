@@ -129,7 +129,7 @@
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.helpProvider1 = new System.Windows.Forms.HelpProvider();
-            this.colNr = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colNr = new System.Windows.Forms.DataGridViewLinkColumn();
             this.colName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colBestand = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colProzent = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -1178,6 +1178,7 @@
             this.colNr.Name = "colNr";
             this.colNr.ReadOnly = true;
             this.colNr.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.colNr.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
             // colName
             // 
@@ -1420,7 +1421,7 @@
         private System.Windows.Forms.DataGridViewCheckBoxColumn s1;
         private System.Windows.Forms.DataGridViewCheckBoxColumn s3;
         private System.Windows.Forms.DataGridViewImageColumn ueber;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colNr;
+        private System.Windows.Forms.DataGridViewLinkColumn colNr;
         private System.Windows.Forms.DataGridViewTextBoxColumn colName;
         private System.Windows.Forms.DataGridViewTextBoxColumn colBestand;
         private System.Windows.Forms.DataGridViewTextBoxColumn colProzent;
