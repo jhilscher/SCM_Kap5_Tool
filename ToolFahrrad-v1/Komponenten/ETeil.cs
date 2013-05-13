@@ -10,6 +10,7 @@ namespace ToolFahrrad_v1
     {
         // Class members
         private int puffer;
+        private bool kdhUpdate = false;
         private int produktionsMenge = 0;
         private int inWarteschlange = 0;
         private int inBearbeitung = 0;
@@ -136,11 +137,15 @@ namespace ToolFahrrad_v1
                     }
                     else
                     {
+                        if (index == 1 && puffer != -1)
+                            kdhUpdate = true;
                         if (puffer == -1)
                         {
                             puffer = 0;
+                            produktionsMenge = 0;
+                        }                        
+                        if (kdhUpdate == false)
                             puffer += vaterTeil.Puffer;
-                        }
                         if (index != 3)
                         {
                             produktionsMenge += vertriebPer0 - inWarteschlange - inBearbeitung;
@@ -153,7 +158,7 @@ namespace ToolFahrrad_v1
                         }
                     }
                 }
-                
+
             }
         }
         // Public function to change members puffer (0)
