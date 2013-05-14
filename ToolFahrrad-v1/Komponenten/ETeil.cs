@@ -11,6 +11,11 @@ namespace ToolFahrrad_v1
         // Class members
         private int puffer;
         private bool kdhUpdate = false;
+        public bool KdhUpdate
+        {
+            get { return kdhUpdate; }
+            set { kdhUpdate = value; }
+        }
         private int produktionsMenge = 0;
         private int inWarteschlange = 0;
         private int inBearbeitung = 0;
@@ -174,22 +179,24 @@ namespace ToolFahrrad_v1
             }
         }
         // Public function to change members puffer (0)
-        public void FeldGeandert(int member, int value)
+        public void FeldGeandert(int member, int value, int p)
         {
             aufgeloest = false;
             // puffer
             if (member == 0)
             {
-                if(!Verwendung.Contains("KDH"))
+                if (Verwendung.Contains("KDH") && p.Equals(0))
                     puffer = value;
-                if (zusammensetzung.Count() != 0 && DataContainer.Instance.BerechneKindTeil == true)
+                else if (zusammensetzung.Count() != 0 && DataContainer.Instance.BerechneKindTeil == true)
                 {
+                    if (!Verwendung.Contains("KDH"))
+                        puffer = value;
                     foreach (KeyValuePair<Teil, int> kvp in zusammensetzung)
                     {
                         if (kvp.Key is ETeil)
                         {
                             ETeil et = kvp.Key as ETeil;
-                            et.FeldGeandert(member, value);
+                            et.FeldGeandert(member, value, 1);
                         }
                     }
                 }

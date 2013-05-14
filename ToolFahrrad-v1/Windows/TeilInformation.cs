@@ -31,7 +31,7 @@ namespace ToolFahrrad_v1
                 {
                     if (kvp.Key.Nummer == _nummer)
                     {
-                        ausgabe.Text += "in Teil " + e.Nummer + " wird " + kvp.Value + " mal verwendet\n";
+                        ausgabe.Text += "wird in Teil " + e.Nummer + "  " + kvp.Value + " mal verwendet\n";
                     }
                 }
             }

@@ -16,6 +16,10 @@ namespace ToolFahrrad_v1
         private int diskontMenge;
         private int lagerZugang;
         private List<List<int>> offeneBestellungen;
+        public List<List<int>> OffeneBestellungen
+        {
+            get { return offeneBestellungen; }
+        }
         // ToDo speichern in welcher periode bestellt bei offenen bestellungen
         private int periodeBestellung;
         private List<ETeil> istTeil = null;

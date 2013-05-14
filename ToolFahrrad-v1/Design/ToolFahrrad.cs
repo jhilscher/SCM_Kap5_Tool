@@ -44,6 +44,7 @@ namespace ToolFahrrad_v1
                 foreach (Teil t in instance.ListeETeile)
                 {
                     t.Aufgeloest = false;
+                    (t as ETeil).KdhUpdate = false;
                     (t as ETeil).InBearbeitung = 0;
                     (t as ETeil).InWartschlange = 0;
                     if ((instance.GetTeil(t.Nummer) as ETeil).IstEndProdukt == false)
@@ -277,7 +278,7 @@ namespace ToolFahrrad_v1
                     foreach (KeyValuePair<int, string> pair in ids)
                     {
                         string[] change = pair.Value.Split('>');
-                        (instance.GetTeil(pair.Key) as ETeil).FeldGeandert(0, Convert.ToInt32(change[1]));
+                        (instance.GetTeil(pair.Key) as ETeil).FeldGeandert(0, Convert.ToInt32(change[1]), 0);
                         text += change[2] + ": von " + change[0] + " auf " + change[1] + "\n";
                     }
                 }
@@ -287,7 +288,7 @@ namespace ToolFahrrad_v1
                     {this.picEditEteile, true},
                     {this.picResetETeil, false},
                     {this.picSaveETeile, false},
-                    {this.picReadOnlyETeile, false}
+                    {this.picReadOnlyETeile, true}
                 };
                 picSave(dic, 5, dataGridViewAPlatz);
 
@@ -478,6 +479,14 @@ namespace ToolFahrrad_v1
             int index = 0;
             foreach (var a in instance.ListeKTeile)
             {
+                //Lagerzugang berechnen
+                int lagerZugang = 0;
+                List<List<int>> list = a.OffeneBestellungen;
+                foreach (List<int> l in list)
+                {
+                    lagerZugang += l[2];
+                }
+
                 dataGridViewKTeil.Rows.Add();
                 dataGridViewKTeil.Rows[index].Cells[0].Value = a.Nummer;
                 dataGridViewKTeil.Rows[index].Cells[1].Value = a.Verwendung + " - " + a.Bezeichnung;
@@ -489,7 +498,7 @@ namespace ToolFahrrad_v1
                     dataGridViewKTeil.Rows[index].Cells[4].Value = imageList1.Images[2];
                 else
                     dataGridViewKTeil.Rows[index].Cells[4].Value = imageList1.Images[1];
-                dataGridViewKTeil.Rows[index].Cells[5].Value = a.LagerZugang;
+                dataGridViewKTeil.Rows[index].Cells[5].Value = lagerZugang;
                 dataGridViewKTeil.Rows[index].Cells[6].Value = a.BruttoBedarfPer0;
                 dataGridViewKTeil.Rows[index].Cells[7].Value = a.BruttoBedarfPer1;
                 dataGridViewKTeil.Rows[index].Cells[8].Value = a.BruttoBedarfPer2;
@@ -544,6 +553,12 @@ namespace ToolFahrrad_v1
                     else
                         dataGridViewETeil.Columns[i].DefaultCellStyle.BackColor = Color.FloralWhite;
                 }
+
+                if (a.Nummer == 16 || a.Nummer == 17 || a.Nummer == 26)
+                {
+                    dataGridViewETeil.Rows[index].DefaultCellStyle.BackColor = Color.Yellow;
+                }
+
                 ++index;
             }
 
