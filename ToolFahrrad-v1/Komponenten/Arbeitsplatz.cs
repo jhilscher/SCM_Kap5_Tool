@@ -18,6 +18,7 @@ namespace ToolFahrrad_v1
         public int RuestNew
         {
             get { return ruestNew; }
+            set { ruestNew = value; }
         }
         private int ruestungCustom = 0; //Mittelwert
         private bool geaendert;

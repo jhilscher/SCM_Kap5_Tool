@@ -39,6 +39,13 @@ namespace ToolFahrrad_v1
         /// <param name="e"></param>
         private void toolAusfueren_Click(object sender, EventArgs e)
         {
+            ausführen();
+            this.toolAusfueren.Visible = false;
+            this.save.Visible = true;
+            this.Tab.Visible = true;
+        }
+        private void ausführen()
+        {
             if ((instance.GetTeil(4) as ETeil).Puffer != -1)
             {
                 foreach (Teil t in instance.ListeETeile)
@@ -59,11 +66,9 @@ namespace ToolFahrrad_v1
             foreach (Arbeitsplatz a in instance.ArbeitsplatzList)
             {
                 a.Geaendert = false;
+                a.RuestNew = 0;
             }
             this.Information();
-            this.toolAusfueren.Visible = false;
-            this.save.Visible = true;
-            this.Tab.Visible = true;
         }
 
         /// <summary>
@@ -198,13 +203,33 @@ namespace ToolFahrrad_v1
         }
         private void englischToolStripMenuItem1_Click(object sender, EventArgs e)
         {
+            ChangeLanguage("englisch");
             englischToolStripMenuItem1.Checked = true;
             deutschToolStripMenuItem1.Checked = false;
         }
         private void deutschToolStripMenuItem1_Click(object sender, EventArgs e)
         {
+            ChangeLanguage("deutsch");
             englischToolStripMenuItem1.Checked = false;
             deutschToolStripMenuItem1.Checked = true;
+        }
+        private void ChangeLanguage(string language)
+        {
+            switch (language)
+            {
+                case "deutsch":
+                    Thread.CurrentThread.CurrentUICulture = new CultureInfo("de");
+                    Controls.Clear();
+                    Events.Dispose();
+                    InitializeComponent();
+                    break;
+                case "englisch":
+                    Thread.CurrentThread.CurrentUICulture = new CultureInfo("en");
+                    Controls.Clear();
+                    Events.Dispose();
+                    InitializeComponent();
+                    break;
+            }
         }
         private void schließenToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
@@ -275,12 +300,18 @@ namespace ToolFahrrad_v1
 
                 if (ids.Count() > 0)
                 {
+                    int a = 0;
                     foreach (KeyValuePair<int, string> pair in ids)
                     {
+                        if (instance.GetTeil(pair.Key).Verwendung == "KDH")
+                            ++a;
                         string[] change = pair.Value.Split('>');
                         (instance.GetTeil(pair.Key) as ETeil).FeldGeandert(0, Convert.ToInt32(change[1]), 0);
                         text += change[2] + ": von " + change[0] + " auf " + change[1] + "\n";
                     }
+
+                    if (a == 0)
+                        ausführen();
                 }
 
                 Dictionary<PictureBox, bool> dic = new Dictionary<PictureBox, bool>() 
@@ -288,9 +319,10 @@ namespace ToolFahrrad_v1
                     {this.picEditEteile, true},
                     {this.picResetETeil, false},
                     {this.picSaveETeile, false},
-                    {this.picReadOnlyETeile, true}
+                    {this.picReadOnlyETeile, false}
                 };
-                picSave(dic, 5, dataGridViewAPlatz);
+
+                picSave(dic, 8, dataGridViewAPlatz);
 
                 pp.Aufloesen();
                 Information();
@@ -477,6 +509,14 @@ namespace ToolFahrrad_v1
             // KTeile
             this.DataGriedViewRemove(dataGridViewKTeil);
             int index = 0;
+            for (int i = 6; i < 10; ++i)
+            {
+                dataGridViewKTeil.Columns[i].HeaderText = "P" + (Convert.ToInt32(xml.period) + (i - 6));
+            }
+            for (int i = 10; i < 14; ++i)
+            {
+                dataGridViewKTeil.Columns[i].HeaderText = "B" + (Convert.ToInt32(xml.period) + (i - 9));
+            }
             foreach (var a in instance.ListeKTeile)
             {
                 //Lagerzugang berechnen
@@ -512,8 +552,10 @@ namespace ToolFahrrad_v1
                 //Farbe
                 for (int i = 0; i < 14; ++i)
                 {
-                    if (i == 4 || i > 5)
+                    if (i == 4 || (i > 5 && i < 10))
                         dataGridViewKTeil.Columns[i].DefaultCellStyle.BackColor = Color.LightYellow;
+                    else if (i > 9)
+                        dataGridViewKTeil.Columns[i].DefaultCellStyle.BackColor = Color.Cornsilk;
                     else
                         dataGridViewKTeil.Columns[i].DefaultCellStyle.BackColor = Color.FloralWhite;
                 }
@@ -523,6 +565,7 @@ namespace ToolFahrrad_v1
             // Eteile
             this.DataGriedViewRemove(dataGridViewETeil);
             index = 0;
+
             foreach (var a in instance.ListeETeile)
             {
                 dataGridViewETeil.Rows.Add();
