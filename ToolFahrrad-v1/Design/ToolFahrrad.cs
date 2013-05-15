@@ -300,18 +300,12 @@ namespace ToolFahrrad_v1
 
                 if (ids.Count() > 0)
                 {
-                    int a = 0;
                     foreach (KeyValuePair<int, string> pair in ids)
                     {
-                        if (instance.GetTeil(pair.Key).Verwendung == "KDH")
-                            ++a;
                         string[] change = pair.Value.Split('>');
                         (instance.GetTeil(pair.Key) as ETeil).FeldGeandert(0, Convert.ToInt32(change[1]), 0);
                         text += change[2] + ": von " + change[0] + " auf " + change[1] + "\n";
                     }
-
-                    if (a == 0)
-                        ausführen();
                 }
 
                 Dictionary<PictureBox, bool> dic = new Dictionary<PictureBox, bool>() 
@@ -322,7 +316,7 @@ namespace ToolFahrrad_v1
                     {this.picReadOnlyETeile, false}
                 };
 
-                picSave(dic, 8, dataGridViewAPlatz);
+                picSave(dic, 8, dataGridViewETeil);
 
                 pp.Aufloesen();
                 Information();
