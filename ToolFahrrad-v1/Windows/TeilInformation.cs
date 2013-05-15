@@ -23,7 +23,9 @@ namespace ToolFahrrad_v1
 
         internal void GetTeilvonETeilMitMenge()
         {
-            ausgabe.Text = String.Empty;
+            ausgabe.Text = "Lieferdauer: " + (dc.GetTeil(_nummer) as KTeil).Lieferdauer + " (" + (dc.GetTeil(_nummer) as KTeil).AbweichungLieferdauer + ")\n" +
+                            "Diskontmenge: " + (dc.GetTeil(_nummer) as KTeil).DiskontMenge + "\n" +
+                            "Bestellkosten: " + (dc.GetTeil(_nummer) as KTeil).Bestellkosten + "\n\n";
             List<ETeil> list = (dc.GetTeil(_nummer) as KTeil).IstTeilVon;
             foreach (ETeil e in list)
             {
@@ -31,6 +33,7 @@ namespace ToolFahrrad_v1
                 {
                     if (kvp.Key.Nummer == _nummer)
                     {
+                        
                         ausgabe.Text += "wird in Teil " + e.Nummer + "  " + kvp.Value + " mal verwendet\n";
                     }
                 }

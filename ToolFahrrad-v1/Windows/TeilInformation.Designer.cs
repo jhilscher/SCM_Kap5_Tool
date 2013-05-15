@@ -7,6 +7,7 @@
 
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TeilInformation));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.ausgabe = new System.Windows.Forms.Label();
@@ -36,7 +37,7 @@
             // 
             this.ausgabe.AutoSize = true;
             this.ausgabe.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ausgabe.Location = new System.Drawing.Point(19, 66);
+            this.ausgabe.Location = new System.Drawing.Point(16, 53);
             this.ausgabe.MinimumSize = new System.Drawing.Size(100, 0);
             this.ausgabe.Name = "ausgabe";
             this.ausgabe.Size = new System.Drawing.Size(100, 18);
@@ -44,12 +45,15 @@
             // 
             // TeilInformation
             // 
+            this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(284, 261);
             this.Controls.Add(this.ausgabe);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximumSize = new System.Drawing.Size(300, 600);
             this.Name = "TeilInformation";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.ResumeLayout(false);
             this.PerformLayout();
 
