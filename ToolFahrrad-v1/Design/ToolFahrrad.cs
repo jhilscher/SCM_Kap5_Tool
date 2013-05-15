@@ -298,10 +298,13 @@ namespace ToolFahrrad_v1
                     }
                 }
 
+                int a = 0;
                 if (ids.Count() > 0)
                 {
                     foreach (KeyValuePair<int, string> pair in ids)
                     {
+                        if (instance.GetTeil(pair.Key).Verwendung.Equals("KDH"))
+                            ++a;
                         string[] change = pair.Value.Split('>');
                         (instance.GetTeil(pair.Key) as ETeil).FeldGeandert(0, Convert.ToInt32(change[1]), 0);
                         text += change[2] + ": von " + change[0] + " auf " + change[1] + "\n";
@@ -315,7 +318,19 @@ namespace ToolFahrrad_v1
                     {this.picSaveETeile, false},
                     {this.picReadOnlyETeile, false}
                 };
+
                 picSave(dic, 8, dataGridViewETeil);
+
+                //KDH null
+                foreach (Teil t in instance.ListeETeile)
+                {
+                    if (t.Verwendung == "KDH" && a == 0)
+                    {
+                        (t as ETeil).KdhUpdate = false;
+                        (instance.GetTeil(t.Nummer) as ETeil).Puffer = -1;
+                    }
+                }
+
                 pp.Aufloesen();
                 Information();
                 if (!text.Equals(string.Empty))
