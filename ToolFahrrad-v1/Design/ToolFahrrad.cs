@@ -324,7 +324,7 @@ namespace ToolFahrrad_v1
                 //KDH null
                 foreach (Teil t in instance.ListeETeile)
                 {
-                    if (t.Verwendung == "KDH" && a == 0)
+                    if (t.Verwendung.Equals("KDH") && a == 0)
                     {
                         (t as ETeil).KdhUpdate = false;
                         (instance.GetTeil(t.Nummer) as ETeil).Puffer = -1;
