@@ -315,9 +315,7 @@ namespace ToolFahrrad_v1
                     {this.picSaveETeile, false},
                     {this.picReadOnlyETeile, false}
                 };
-
                 picSave(dic, 8, dataGridViewETeil);
-
                 pp.Aufloesen();
                 Information();
                 if (!text.Equals(string.Empty))
