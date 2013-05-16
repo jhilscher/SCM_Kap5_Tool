@@ -42,7 +42,8 @@ namespace ToolFahrrad_v1
             ausführen();
             this.toolAusfueren.Visible = false;
             this.save.Visible = true;
-            this.Tab.Visible = true;
+            this.tab1.Visible = true;
+            this.tab2.Visible = true;
         }
         private void ausführen()
         {
@@ -60,8 +61,8 @@ namespace ToolFahrrad_v1
             }
             pp.AktPeriode = Convert.ToInt32(xml.period);
             pp.Aufloesen();
-            if (!lableDazu.Text.Contains("aus der Periode"))
-                lableDazu.Text = lableDazu.Text + "aus der Periode " + xml.period;
+            if (!lableDazu.Text.Contains("für die Periode"))
+                lableDazu.Text = lableDazu.Text + "für die Periode " + (Convert.ToInt32(xml.period) + 1);
 
             foreach (Arbeitsplatz a in instance.ArbeitsplatzList)
             {
@@ -520,10 +521,12 @@ namespace ToolFahrrad_v1
             {
                 dataGridViewKTeil.Columns[i].HeaderText = "P" + (Convert.ToInt32(xml.period) + (i - 6));
             }
-            for (int i = 10; i < 14; ++i)
-            {
-                dataGridViewKTeil.Columns[i].HeaderText = "B" + (Convert.ToInt32(xml.period) + (i - 9));
-            }
+
+            dataGridViewKTeil.Columns[10].HeaderText = "B" + ((Convert.ToInt32(xml.period)) + 1);
+            dataGridViewKTeil.Columns[12].HeaderText = "B" + ((Convert.ToInt32(xml.period)) + 2);
+            dataGridViewKTeil.Columns[14].HeaderText = "B" + (Convert.ToInt32(xml.period) + 3);
+            dataGridViewKTeil.Columns[16].HeaderText = "B" + (Convert.ToInt32(xml.period) + 4);
+
             foreach (var a in instance.ListeKTeile)
             {
                 //Lagerzugang berechnen
@@ -552,16 +555,40 @@ namespace ToolFahrrad_v1
                 dataGridViewKTeil.Rows[index].Cells[9].Value = a.BruttoBedarfPer3;
 
                 dataGridViewKTeil.Rows[index].Cells[10].Value = a.BestandPer1;
-                dataGridViewKTeil.Rows[index].Cells[11].Value = a.BestandPer2;
-                dataGridViewKTeil.Rows[index].Cells[12].Value = a.BestandPer3;
-                dataGridViewKTeil.Rows[index].Cells[13].Value = a.BestandPer4;
+                if (a.BestandPer1 - a.BruttoBedarfPer0 < 0)
+                    dataGridViewKTeil.Rows[index].Cells[11].Value = imageList1.Images[0];
+                else if (a.BestandPer1 - a.BruttoBedarfPer0 > 0)
+                    dataGridViewKTeil.Rows[index].Cells[11].Value = imageList1.Images[2];
+                else
+                    dataGridViewKTeil.Rows[index].Cells[11].Value = imageList1.Images[1];
+                dataGridViewKTeil.Rows[index].Cells[12].Value = a.BestandPer2;
+                if (a.BestandPer2 - a.BruttoBedarfPer1 < 0)
+                    dataGridViewKTeil.Rows[index].Cells[13].Value = imageList1.Images[0];
+                else if (a.BestandPer2 - a.BruttoBedarfPer1 > 0)
+                    dataGridViewKTeil.Rows[index].Cells[13].Value = imageList1.Images[2];
+                else
+                    dataGridViewKTeil.Rows[index].Cells[13].Value = imageList1.Images[1];
+                dataGridViewKTeil.Rows[index].Cells[14].Value = a.BestandPer3;
+                if (a.BestandPer3 - a.BruttoBedarfPer2 < 0)
+                    dataGridViewKTeil.Rows[index].Cells[15].Value = imageList1.Images[0];
+                else if (a.BestandPer3 - a.BruttoBedarfPer2 > 0)
+                    dataGridViewKTeil.Rows[index].Cells[15].Value = imageList1.Images[2];
+                else
+                    dataGridViewKTeil.Rows[index].Cells[15].Value = imageList1.Images[1];
+                dataGridViewKTeil.Rows[index].Cells[16].Value = a.BestandPer4;
+                if (a.BestandPer4 - a.BruttoBedarfPer3 < 0)
+                    dataGridViewKTeil.Rows[index].Cells[17].Value = imageList1.Images[0];
+                else if (a.BestandPer4 - a.BruttoBedarfPer3 > 0)
+                    dataGridViewKTeil.Rows[index].Cells[17].Value = imageList1.Images[2];
+                else
+                    dataGridViewKTeil.Rows[index].Cells[17].Value = imageList1.Images[1];
 
                 //Farbe
-                for (int i = 0; i < 14; ++i)
+                for (int i = 0; i < 17; ++i)
                 {
                     if (i == 4 || (i > 5 && i < 10))
                         dataGridViewKTeil.Columns[i].DefaultCellStyle.BackColor = Color.LightYellow;
-                    else if (i > 9)
+                    else if (i == 10 || i == 12 || i == 14 || i == 16)
                         dataGridViewKTeil.Columns[i].DefaultCellStyle.BackColor = Color.Cornsilk;
                     else
                         dataGridViewKTeil.Columns[i].DefaultCellStyle.BackColor = Color.FloralWhite;
@@ -711,7 +738,7 @@ namespace ToolFahrrad_v1
                 return MessageBox.Show(t, s, MessageBoxButtons.OK);
         }
 
-        private void dataGridViewKTeil_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void dataGridViewKTeil_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
         {
             if (e.ColumnIndex == 0)
             {
@@ -719,9 +746,6 @@ namespace ToolFahrrad_v1
                 ti.GetTeilvonETeilMitMenge();
                 ti.Show();
             }
-
-
-            //string a = dataGridViewKTeil.Rows[2].Cells[1].Value.ToString();
         }
 
     }
