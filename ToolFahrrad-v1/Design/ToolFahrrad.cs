@@ -18,11 +18,10 @@ namespace ToolFahrrad_v1
         DataContainer instance = DataContainer.Instance;
         XMLDatei xml = new XMLDatei();
         Produktionsplanung pp = new Produktionsplanung();
+        Bestellverwaltung bv = new Bestellverwaltung();
         private bool okPrognose = false;
         private bool okXml = false;
-        /// <summary>
-        /// Konstruktor
-        /// </summary>
+        // Constructor
         public Fahrrad()
         {
             //if (sprache.GetCheck == "EN")
@@ -31,21 +30,16 @@ namespace ToolFahrrad_v1
             //}
             InitializeComponent();
         }
-
-        /// <summary>
-        /// Ausführen
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void toolAusfueren_Click(object sender, EventArgs e)
+        // Initiate
+        private void toolAusfuehren_Click(object sender, EventArgs e)
         {
-            ausführen();
+            ausfuehren();
             this.toolAusfueren.Visible = false;
             this.save.Visible = true;
             this.tab1.Visible = true;
             this.tab2.Visible = true;
         }
-        private void ausführen()
+        private void ausfuehren()
         {
             if ((instance.GetTeil(4) as ETeil).Puffer != -1)
             {
@@ -60,10 +54,10 @@ namespace ToolFahrrad_v1
                 }
             }
             pp.AktPeriode = Convert.ToInt32(xml.period);
+            bv.AktPeriode = Convert.ToInt32(xml.period);
             pp.Aufloesen();
             if (!lableDazu.Text.Contains("für die Periode"))
                 lableDazu.Text = lableDazu.Text + "für die Periode " + (Convert.ToInt32(xml.period) + 1);
-
             foreach (Arbeitsplatz a in instance.ArbeitsplatzList)
             {
                 a.Geaendert = false;
@@ -71,12 +65,7 @@ namespace ToolFahrrad_v1
             }
             this.Information();
         }
-
-        /// <summary>
-        /// Dropdownmenu Startseite
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
+        // Dropdownmenu Startseite
         private void upDownAW1_ValueChanged(object sender, EventArgs e)
         {
             TextVisibleFalse();
@@ -137,7 +126,6 @@ namespace ToolFahrrad_v1
         {
             TextVisibleFalse();
         }
-
         private void prognoseSpeichern_Click(object sender, EventArgs e)
         {
             instance.GetTeil(1).VertriebPer0 = Convert.ToInt32(upDownAW1.Value);
@@ -166,12 +154,7 @@ namespace ToolFahrrad_v1
             if (this.okXml == true)
                 this.toolAusfueren.Visible = true;
         }
-
-        /// <summary>
-        /// XML-Bearbeitung
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
+        // XML-Bearbeitung
         private void xml_suchen_Click(object sender, EventArgs e)
         {
             xmlOeffnen();
@@ -180,12 +163,7 @@ namespace ToolFahrrad_v1
         {
             xmlOeffnen();
         }
-
-        /// <summary>
-        /// MENU
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
+        // Menue
         private void englischToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
             Thread.CurrentThread.CurrentUICulture = new CultureInfo("en");
@@ -241,12 +219,7 @@ namespace ToolFahrrad_v1
             //string path = Directory.GetCurrentDirectory() + @"\chm\dv_aspnetmmc.chm";
             //Help.ShowHelp(this, path, HelpNavigator.TableOfContents, "");
         }
-
-        /// <summary>
-        /// EDIT
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
+        // Edit
         private void picEditEteile_Click(object sender, EventArgs e)
         {
             Dictionary<PictureBox, bool> dic = new Dictionary<PictureBox, bool>() 
@@ -273,12 +246,7 @@ namespace ToolFahrrad_v1
                 picEdit(dic, 5, dataGridViewAPlatz);
             }
         }
-
-        /// <summary>
-        /// SAVE
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
+        // Save
         private void pictureSaveETeile_Click(object sender, EventArgs e)
         {
             DialogResult result = GetMessage(null, "Änderungen");
@@ -322,7 +290,7 @@ namespace ToolFahrrad_v1
 
                 picSave(dic, 8, dataGridViewETeil);
 
-                //KDH null
+                // KDH null
                 foreach (Teil t in instance.ListeETeile)
                 {
                     if (t.Verwendung.Equals("KDH") && a == 0)
@@ -384,14 +352,7 @@ namespace ToolFahrrad_v1
                     result = GetMessage("keine Spalte wurde geändert", "Message");
             }
         }
-
-
-
-        /// <summary>
-        /// RESET
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
+        // Reset
         private void pictureResetETeil_Click(object sender, EventArgs e)
         {
             Information();
@@ -402,12 +363,7 @@ namespace ToolFahrrad_v1
             Information();
             dataGridViewAPlatz.Columns[4].DefaultCellStyle.BackColor = Color.Honeydew;
         }
-
-        /// <summary>
-        /// READONLY
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
+        // Readonly
         private void pictureReadOnly_Click(object sender, EventArgs e)
         {
             Dictionary<PictureBox, bool> dic = new Dictionary<PictureBox, bool>() 
@@ -430,13 +386,7 @@ namespace ToolFahrrad_v1
             };
             picReadOnly(dic, 5, dataGridViewAPlatz);
         }
-
-
-        /// <summary>
-        /// CHECK
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
+        // Check
         private void cbMitOhne_CheckedChanged(object sender, System.EventArgs e)
         {
             if (cbMitOhne.Checked == true)
@@ -444,11 +394,8 @@ namespace ToolFahrrad_v1
             else
                 instance.BerechneKindTeil = false;
         }
-
         ////////////////////////////////////////////////////////////////////////////
-        /// <summary>
-        /// HILFSMETHODEN
-        /// </summary>
+        // HILFSMETHODEN
         private void TextVisibleFalse()
         {
             this.bildSpeichOk.Visible = false;

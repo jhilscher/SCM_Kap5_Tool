@@ -24,11 +24,17 @@ namespace ToolFahrrad_v1
         private int ersteSchicht = 3600;
         private int zweiteSchicht = 6000;
         private double verwendeAbweichung = 0.5;
+        private double verwendeDiskount = 0.5;
         // Getter / Setter
         public double VerwendeAbweichung
         {
             get { return verwendeAbweichung * 100; }
             set { verwendeAbweichung = value / 100; }
+        }
+        public double VerwendeDiskount
+        {
+            get { return verwendeDiskount * 100; }
+            set { verwendeDiskount = value / 100; }
         }
         public int ZweiteSchicht
         {
@@ -385,7 +391,7 @@ namespace ToolFahrrad_v1
             pp.Aufloesen();
             pp.Planen();
             Bestellverwaltung bv = new Bestellverwaltung();
-            bv.erzeugeBestellListe();
+            bv.generiereBestellListe();
         }
         // Reset of Arbeitsplatz
         public void Reset()
