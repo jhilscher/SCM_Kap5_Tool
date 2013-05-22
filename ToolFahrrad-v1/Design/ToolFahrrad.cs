@@ -328,6 +328,7 @@ namespace ToolFahrrad_v1
                     if (t.Verwendung.Equals("KDH") && a == 0)
                     {
                         (t as ETeil).KdhUpdate = false;
+                        (t as ETeil).Aufgeloest = false;
                         (instance.GetTeil(t.Nummer) as ETeil).Puffer = -1;
                     }
                 }
