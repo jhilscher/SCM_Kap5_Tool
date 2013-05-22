@@ -61,8 +61,15 @@ namespace ToolFahrrad_v1
             }
             pp.AktPeriode = Convert.ToInt32(xml.period);
             pp.Aufloesen();
-            if (!lableDazu.Text.Contains("für die Periode"))
-                lableDazu.Text = lableDazu.Text + "für die Periode " + (Convert.ToInt32(xml.period) + 1);
+
+            if (Thread.CurrentThread.CurrentUICulture.Name.Equals("en")) {
+                if (!lableDazu.Text.Contains("for forcast"))
+                    lableDazu.Text = lableDazu.Text + "for forcast " + (Convert.ToInt32(xml.period) + 1);
+            }
+            else {
+                if (!lableDazu.Text.Contains("für die Periode"))
+                    lableDazu.Text = lableDazu.Text + "für die Periode " + (Convert.ToInt32(xml.period) + 1);
+            }
 
             foreach (Arbeitsplatz a in instance.ArbeitsplatzList)
             {
@@ -186,13 +193,13 @@ namespace ToolFahrrad_v1
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void englischToolStripMenuItem_Click_1(object sender, EventArgs e)
-        {
-            Thread.CurrentThread.CurrentUICulture = new CultureInfo("en");
-            Controls.Clear();
-            Events.Dispose();
-            InitializeComponent();
-        }
+        //private void englischToolStripMenuItem_Click_1(object sender, EventArgs e)
+        //{
+        //    Thread.CurrentThread.CurrentUICulture = new CultureInfo("en");
+        //    Controls.Clear();
+        //    Events.Dispose();
+        //    InitializeComponent();
+        //}
         private void gewichtungToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Einstellungen einstellungen = new Einstellungen();
@@ -223,12 +230,14 @@ namespace ToolFahrrad_v1
                     Controls.Clear();
                     Events.Dispose();
                     InitializeComponent();
+                    this.okXml = false;
                     break;
                 case "englisch":
                     Thread.CurrentThread.CurrentUICulture = new CultureInfo("en");
                     Controls.Clear();
                     Events.Dispose();
                     InitializeComponent();
+                    this.okXml = false;
                     break;
             }
         }
