@@ -59,5 +59,10 @@ namespace ToolFahrrad_v1
         {
             panel2.Visible = false;
         }
+
+        private void trackBar1_Scroll(object sender, EventArgs e) {
+            label6.Text = "Diskount = " + trackBar1.Value.ToString() + "0%";
+            panel1.Visible = false;
+        }
     }
 }
