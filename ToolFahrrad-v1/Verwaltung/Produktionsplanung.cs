@@ -75,8 +75,6 @@ namespace ToolFahrrad_v1
             }
             aufgeloest = true;
         }
-
-
         // Rekursive Prozedur zum Iterieren ueber die Zusammensetzung der Teile
         private void RekursAufloesenETeile(int index, ETeil vaterTeil, ETeil kindTeil)
         {

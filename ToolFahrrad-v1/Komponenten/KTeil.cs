@@ -81,6 +81,14 @@ namespace ToolFahrrad_v1
             neueOffeneBestellung.Add(menge);
             offeneBestellungen.Add(neueOffeneBestellung);
         }
+        public void RemoveOffeneBestellung(int periode, int mode, int menge)
+        {
+            List<int> alteOffeneBestellung = new List<int>();
+            alteOffeneBestellung.Add(periode);
+            alteOffeneBestellung.Add(mode);
+            alteOffeneBestellung.Add(menge);
+            offeneBestellungen.Remove(alteOffeneBestellung);
+        }
         // Function shows where KTeil is used
         public List<ETeil> IstTeilVon
         {
@@ -190,16 +198,23 @@ namespace ToolFahrrad_v1
             {
                 foreach (List<int> ob in offeneBestellungen)
                 {
-                    int zeitpunktEintreffen = 0;
+                    double zeitpunktEintreffen = 0;
                     if (ob[1] == 5)
                     {
-                        zeitpunktEintreffen = (int)(ob[0] + lieferdauer + abweichungLieferdauer * abweichung/100);
+                        zeitpunktEintreffen = (double)(ob[0] + lieferdauer + abweichungLieferdauer * abweichung/100);
                     }
                     else if (ob[1] == 4)
                     {
-                        zeitpunktEintreffen = (int)(ob[0] + lieferdauer / 2);
+                        zeitpunktEintreffen = (double)(ob[0] + lieferdauer / 2);
                     }
-                    if (zeitpunktEintreffen == aktPeriode)
+                    // Check if KTeil arrive at actual period
+                    if (zeitpunktEintreffen >= aktPeriode && zeitpunktEintreffen < (aktPeriode + 0.8))
+                    {
+                        menge += ob[2];
+                    }
+                    // Check if KTeil arrived at last period last day, and count value to next period
+                    else if (zeitpunktEintreffen < aktPeriode &&
+                        ((aktPeriode - zeitpunktEintreffen) > 0 && (aktPeriode - zeitpunktEintreffen) <= 0.2))
                     {
                         menge += ob[2];
                     }

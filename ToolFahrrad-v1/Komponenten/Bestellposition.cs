@@ -9,37 +9,37 @@ namespace ToolFahrrad_v1
     public class Bestellposition
     {
         // Class members
-        private KTeil kaufteil;
+        private KTeil kt;
         private int menge;
         private bool eil;
         // Constructor
         public Bestellposition(KTeil kt_param, int menge_param, bool eil_param)
         {
-            this.kaufteil = kt_param;
-            this.menge = menge_param;
-            this.eil = eil_param;
+            kt = kt_param;
+            menge = menge_param;
+            eil = eil_param;
         }
         // Getter / Setter
         public KTeil Kaufteil
         {
-            get { return this.kaufteil; }
-            set { this.kaufteil = value; }
+            get { return kt; }
+            set { kt = value; }
         }
         public int Menge
         {
-            get { return this.menge; }
-            set { this.menge = value; }
+            get { return menge; }
+            set { menge = value; }
         }
         public bool Eil
         {
-            get { return this.eil; }
-            set { this.eil = value; }
+            get { return eil; }
+            set { eil = value; }
         }
         public int OutputEil
         {
             get
             {
-                if (this.eil)
+                if (eil == true)
                 {
                     return 4;
                 }
