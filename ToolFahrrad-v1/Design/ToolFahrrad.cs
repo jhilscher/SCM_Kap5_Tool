@@ -521,7 +521,7 @@ namespace ToolFahrrad_v1
             int index = 0;
             for (int i = 4; i < 8; ++i)
             {
-                dataGridViewKTeil.Columns[i].HeaderText = "P" + (Convert.ToInt32(xml.period) + (i - 6));
+                dataGridViewKTeil.Columns[i].HeaderText = "P" + (Convert.ToInt32(xml.period) + (i - 4));
             }
 
             dataGridViewKTeil.Columns[8].HeaderText = "B" + ((Convert.ToInt32(xml.period)) + 1);
@@ -741,6 +741,16 @@ namespace ToolFahrrad_v1
                 ti.GetTeilvonETeilMitMenge();
                 ti.Show();
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e) {
+            Bestellverwaltung bv = new Bestellverwaltung();
+            bv.generiereBestellListe();
+            List<Bestellposition> bp = bv.BvPositionen;
+        }
+
+        private void textBox7_TextChanged(object sender, EventArgs e) {
+
         }
 
     }
