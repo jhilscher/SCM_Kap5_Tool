@@ -38,35 +38,70 @@ namespace ToolFahrrad_v1
             // Calculate Bestellposition for each KTeil and when necessary add new Bestellposition to DataContainer dc
             foreach (KTeil kt in dc.ListeKTeile)
             {
+                double startPeriod = 0.0;
+                double endPeriod = 0.8;
+                int n = 0;
                 double lieferDauer = kt.Lieferdauer + kt.AbweichungLieferdauer * (dc.VerwendeAbweichung / 100);
                 int teilMengeSumme = kt.Lagerstand;
-                // Actual period
+                // Actual period ---------------------------------------------------------------------------------------
                 if (kt.BestandPer1 < 0)
                 {
                     bvPositionen.Add(new Bestellposition(kt, kt.BruttoBedarfPer0 - kt.Lagerstand, true));
                     teilMengeSumme = teilMengeSumme - kt.BruttoBedarfPer0 + (kt.BruttoBedarfPer0 - kt.Lagerstand);
                 }
-                // Actual + 1 period
+                // Actual + 1 period -----------------------------------------------------------------------------------
+                n++;
                 if (kt.BestandPer2 < 0)
                 {
                     // Check if Lieferdauer of KTeil will be in time
-                    if (lieferDauer >= 1.0 && lieferDauer < 1.8)
+                    if (lieferDauer >= (startPeriod + n) && lieferDauer < (endPeriod + n))
                     {
                         int bestellMenge = berechneMenge(dc.VerwendeDiskount, kt.BruttoBedarfPer1 - kt.BestandPer1, kt.DiskontMenge);
                         bvPositionen.Add(new Bestellposition(kt, bestellMenge, false));
                         teilMengeSumme = teilMengeSumme - kt.BruttoBedarfPer1 + bestellMenge;
                     }
-                    else if (lieferDauer >= 1.8)
+                    else if (lieferDauer >= (endPeriod + n))
                     {
                         // Check needed amount
                         bvPositionen.Add(new Bestellposition(kt, kt.BruttoBedarfPer1 - kt.BestandPer1, true));
                         teilMengeSumme = teilMengeSumme - kt.BruttoBedarfPer1 + (kt.BruttoBedarfPer1 - kt.BestandPer1);
                     }
                 }
-                // Actual + 2 period
+                // Actual + 2 period -----------------------------------------------------------------------------------
+                n++;
                 if (kt.BestandPer3 < 0)
                 {
-
+                    // Check if Lieferdauer of KTeil will be in time
+                    if (lieferDauer >= (startPeriod + n) && lieferDauer < (endPeriod + n))
+                    {
+                        int bestellMenge = berechneMenge(dc.VerwendeDiskount, kt.BruttoBedarfPer2 - kt.BestandPer2, kt.DiskontMenge);
+                        bvPositionen.Add(new Bestellposition(kt, bestellMenge, false));
+                        teilMengeSumme = teilMengeSumme - kt.BruttoBedarfPer2 + bestellMenge;
+                    }
+                    else if (lieferDauer >= (endPeriod + n))
+                    {
+                        // Check needed amount
+                        bvPositionen.Add(new Bestellposition(kt, kt.BruttoBedarfPer2 - kt.BestandPer2, true));
+                        teilMengeSumme = teilMengeSumme - kt.BruttoBedarfPer2 + (kt.BruttoBedarfPer2 - kt.BestandPer2);
+                    }
+                }
+                // Actual + 3 period -----------------------------------------------------------------------------------
+                n++;
+                if (kt.BestandPer4 < 0)
+                {
+                    // Check if Lieferdauer of KTeil will be in time
+                    if (lieferDauer >= (startPeriod + n) && lieferDauer < (endPeriod + n))
+                    {
+                        int bestellMenge = berechneMenge(dc.VerwendeDiskount, kt.BruttoBedarfPer3 - kt.BestandPer3, kt.DiskontMenge);
+                        bvPositionen.Add(new Bestellposition(kt, bestellMenge, false));
+                        teilMengeSumme = teilMengeSumme - kt.BruttoBedarfPer3 + bestellMenge;
+                    }
+                    else if (lieferDauer >= (endPeriod + n))
+                    {
+                        // Check needed amount
+                        bvPositionen.Add(new Bestellposition(kt, kt.BruttoBedarfPer3 - kt.BestandPer3, true));
+                        teilMengeSumme = teilMengeSumme - kt.BruttoBedarfPer3 + (kt.BruttoBedarfPer3 - kt.BestandPer3);
+                    }
                 }
             }
         }
@@ -87,7 +122,7 @@ namespace ToolFahrrad_v1
             {
                 verwDiskont = verwDiskont / 100;
                 verwDiskont = 1 - verwDiskont;
-                // 300 * 0,5
+                // Example: 300 * 0,5
                 int vergleichDiskont = Convert.ToInt32(Math.Round(verwDiskont * diskont, 0));
                 if (vergleichDiskont < bestellMenge)
                 {
