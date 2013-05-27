@@ -38,7 +38,7 @@ namespace ToolFahrrad_v1
             // Calculate Bestellposition for each KTeil and when necessary add new Bestellposition to DataContainer dc
             foreach (KTeil kt in dc.ListeKTeile)
             {
-                double lieferDauer = kt.Lieferdauer + kt.AbweichungLieferdauer * dc.VerwendeAbweichung;
+                double lieferDauer = kt.Lieferdauer + kt.AbweichungLieferdauer * (dc.VerwendeAbweichung / 100);
                 int teilMengeSumme = kt.Lagerstand;
                 // Actual period
                 if (kt.BestandPer1 < 0)
