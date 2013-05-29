@@ -17,6 +17,12 @@ namespace ToolFahrrad_v1
             set { kdhUpdate = value; }
         }
         private int produktionsMenge = 0;
+        private int vaterInWarteschlange = 0;
+
+        public int VaterInWarteschlange {
+            get { return vaterInWarteschlange; }
+            set { vaterInWarteschlange = value; }
+        }
         private int inWarteschlange = 0;
         private int inBearbeitung = 0;
         private bool istEndProdukt = false;
@@ -24,6 +30,16 @@ namespace ToolFahrrad_v1
         {
             get { return istEndProdukt; }
             set { istEndProdukt = value; }
+        }
+        private Dictionary<int, int[]> kdhPuffer;
+        public Dictionary<int, int[]> KdhPuffer {
+            get { return kdhPuffer; }
+            set { kdhPuffer = value; }
+        }
+        private Dictionary<string, int> kdhProduktionsmenge;
+        public Dictionary<string, int> KdhProduktionsmenge {
+            get { return kdhProduktionsmenge; }
+            set { kdhProduktionsmenge = value; }
         }
         Dictionary<Teil, int> zusammensetzung;
         Dictionary<int, int> position;
@@ -37,6 +53,14 @@ namespace ToolFahrrad_v1
             zusammensetzung = new Dictionary<Teil, int>();
             position = new Dictionary<int, int>();
             benutzteArbeitsplaetze = new List<int>();
+
+            int[] array = new int[]{-1,-1,-1};
+            kdhPuffer = new Dictionary<int,int[]>();
+            kdhPuffer.Add(26, array);
+            kdhPuffer.Add(16, array);
+            kdhPuffer.Add(17, array);
+
+            kdhProduktionsmenge = new Dictionary<string, int>();
         }
         // Getter / Setter
         public int Puffer
@@ -138,8 +162,8 @@ namespace ToolFahrrad_v1
                 else
                 {
                     // Set members
-                    vertriebPer0 = vaterTeil.ProduktionsMengePer0 + vaterTeil.InWartschlange;
-
+                    vertriebPer0 = vaterTeil.ProduktionsMengePer0;
+                    vaterInWarteschlange = vaterTeil.InWartschlange;
                     // Calculation
                     if (Verwendung.Contains("KDH") == false)
                     {
@@ -147,33 +171,46 @@ namespace ToolFahrrad_v1
                         {
                             puffer = vaterTeil.Puffer;
                         }
-                        produktionsMenge = vertriebPer0 + Puffer - lagerstand - inWarteschlange - inBearbeitung;
+                        produktionsMenge = vertriebPer0 + vaterInWarteschlange + Puffer - lagerstand - inWarteschlange - inBearbeitung;
                         Aufgeloest = true;
                     }
                     else
                     {
-                        if (index == 1 && puffer != -1)
-                        {
-                            kdhUpdate = true;
-                            produktionsMenge = 0;
+                        int pufTemp = 0;
+                        foreach (KeyValuePair<int, int[]> pair in kdhPuffer) {
+                            if (pair.Key.Equals(nr)) {
+                                if (pair.Value[index - 1] == -1) {
+                                    pair.Value[index - 1] = vaterTeil.Puffer;
+                                }
+                                pufTemp = pair.Value[index - 1];
+                            }
                         }
-                        if (puffer == -1)
-                        {
-                            puffer = 0;
-                            produktionsMenge = 0;
+                        int pmTemp = 0;
+                        if (index == 1) {
+                            pmTemp = vertriebPer0 + vaterInWarteschlange + pufTemp - lagerstand - inWarteschlange - inBearbeitung;
                         }
-                        if (kdhUpdate == false)
-                            puffer += vaterTeil.Puffer;
-                        if (index != 3)
-                        {
-                            produktionsMenge += vertriebPer0;
-                            Aufgeloest = false;
-                        }
-                        else
-                        {
-                            produktionsMenge += vertriebPer0 + Puffer - lagerstand - inWarteschlange - inBearbeitung;
-                            Aufgeloest = true;
-                        }
+                        kdhProduktionsmenge.Add(index.ToString() + "-" + nr.ToString(), pmTemp);
+
+                        //if (index == 1 && puffer != -1) {
+                        //    kdhUpdate = true;
+                        //    produktionsMenge = 0;
+                        //}
+                        //if (puffer == -1)
+                        //{
+                        //    puffer = 0;
+                        //    produktionsMenge = 0;
+                        //}
+                        //if (kdhUpdate == false)
+                        //    puffer += vaterTeil.Puffer;
+                        //if (index == 1) {
+                        //    produktionsMenge += vertriebPer0 + vaterInWarteschlange + Puffer - lagerstand - inWarteschlange - inBearbeitung;
+                        //    Aufgeloest = false;
+                        //}
+                        //else
+                        //{
+                        //    produktionsMenge += vertriebPer0 + Puffer - lagerstand - inWarteschlange - inBearbeitung;
+                        //    Aufgeloest = true;
+                        //}
                     }
                 }
             }

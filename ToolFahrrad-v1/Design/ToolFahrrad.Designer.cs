@@ -70,43 +70,85 @@
             this.titlePrognose = new System.Windows.Forms.Label();
             this.tab_produktion = new System.Windows.Forms.TabPage();
             this.tab1 = new System.Windows.Forms.TabControl();
-            this.tab_eTeil = new System.Windows.Forms.TabPage();
-            this.cbMitOhne = new System.Windows.Forms.CheckBox();
-            this.rbReserve = new System.Windows.Forms.RadioButton();
-            this.picReadOnlyETeile = new System.Windows.Forms.PictureBox();
-            this.picResetETeil = new System.Windows.Forms.PictureBox();
-            this.picEditEteile = new System.Windows.Forms.PictureBox();
-            this.picSaveETeile = new System.Windows.Forms.PictureBox();
-            this.dataGridViewETeil = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.colWarteschlange = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colBearbeitung = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colPlanung = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.reserve = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tab_APlatz = new System.Windows.Forms.TabPage();
-            this.picEditsAPlatz = new System.Windows.Forms.PictureBox();
-            this.rbRuestzeit = new System.Windows.Forms.RadioButton();
-            this.picReadOnlyAPlatz = new System.Windows.Forms.PictureBox();
-            this.picResetAPlatz = new System.Windows.Forms.PictureBox();
-            this.picSaveAPlatz = new System.Windows.Forms.PictureBox();
-            this.dataGridViewAPlatz = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.rap = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Ruestanzahl = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewImageColumn2 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.s1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.s3 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.ueber = new System.Windows.Forms.DataGridViewImageColumn();
             this.tab_P1 = new System.Windows.Forms.TabPage();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label91 = new System.Windows.Forms.Label();
+            this.label90 = new System.Windows.Forms.Label();
+            this.label89 = new System.Windows.Forms.Label();
+            this.label88 = new System.Windows.Forms.Label();
+            this.label87 = new System.Windows.Forms.Label();
+            this.label86 = new System.Windows.Forms.Label();
+            this.label74 = new System.Windows.Forms.Label();
+            this.label75 = new System.Windows.Forms.Label();
+            this.label76 = new System.Windows.Forms.Label();
+            this.label77 = new System.Windows.Forms.Label();
+            this.label78 = new System.Windows.Forms.Label();
+            this.label79 = new System.Windows.Forms.Label();
+            this.label80 = new System.Windows.Forms.Label();
+            this.label81 = new System.Windows.Forms.Label();
+            this.label82 = new System.Windows.Forms.Label();
+            this.label83 = new System.Windows.Forms.Label();
+            this.label84 = new System.Windows.Forms.Label();
+            this.label85 = new System.Windows.Forms.Label();
+            this.label73 = new System.Windows.Forms.Label();
+            this.label72 = new System.Windows.Forms.Label();
+            this.label71 = new System.Windows.Forms.Label();
+            this.label60 = new System.Windows.Forms.Label();
+            this.label61 = new System.Windows.Forms.Label();
+            this.label62 = new System.Windows.Forms.Label();
+            this.label63 = new System.Windows.Forms.Label();
+            this.label64 = new System.Windows.Forms.Label();
+            this.label65 = new System.Windows.Forms.Label();
+            this.label66 = new System.Windows.Forms.Label();
+            this.label67 = new System.Windows.Forms.Label();
+            this.label68 = new System.Windows.Forms.Label();
+            this.label69 = new System.Windows.Forms.Label();
+            this.label70 = new System.Windows.Forms.Label();
+            this.label49 = new System.Windows.Forms.Label();
+            this.label50 = new System.Windows.Forms.Label();
+            this.label51 = new System.Windows.Forms.Label();
+            this.label52 = new System.Windows.Forms.Label();
+            this.label53 = new System.Windows.Forms.Label();
+            this.label54 = new System.Windows.Forms.Label();
+            this.label55 = new System.Windows.Forms.Label();
+            this.label56 = new System.Windows.Forms.Label();
+            this.label57 = new System.Windows.Forms.Label();
+            this.label58 = new System.Windows.Forms.Label();
+            this.label59 = new System.Windows.Forms.Label();
+            this.label38 = new System.Windows.Forms.Label();
+            this.label39 = new System.Windows.Forms.Label();
+            this.label40 = new System.Windows.Forms.Label();
+            this.label41 = new System.Windows.Forms.Label();
+            this.label42 = new System.Windows.Forms.Label();
+            this.label43 = new System.Windows.Forms.Label();
+            this.label44 = new System.Windows.Forms.Label();
+            this.label45 = new System.Windows.Forms.Label();
+            this.label46 = new System.Windows.Forms.Label();
+            this.label47 = new System.Windows.Forms.Label();
+            this.label48 = new System.Windows.Forms.Label();
+            this.label37 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label27 = new System.Windows.Forms.Label();
+            this.label28 = new System.Windows.Forms.Label();
+            this.label29 = new System.Windows.Forms.Label();
+            this.label30 = new System.Windows.Forms.Label();
+            this.label31 = new System.Windows.Forms.Label();
+            this.label32 = new System.Windows.Forms.Label();
+            this.label33 = new System.Windows.Forms.Label();
+            this.label34 = new System.Windows.Forms.Label();
+            this.label35 = new System.Windows.Forms.Label();
+            this.label36 = new System.Windows.Forms.Label();
+            this.label24 = new System.Windows.Forms.Label();
+            this.label25 = new System.Windows.Forms.Label();
+            this.label26 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
+            this.label23 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
@@ -202,126 +244,6 @@
             this.p1ib_0 = new System.Windows.Forms.TextBox();
             this.p1pm_0 = new System.Windows.Forms.TextBox();
             this.p1vw_0 = new System.Windows.Forms.TextBox();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tab2 = new System.Windows.Forms.TabControl();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.dataGridViewKTeil = new System.Windows.Forms.DataGridView();
-            this.dataGridViewLinkColumn1 = new System.Windows.Forms.DataGridViewLinkColumn();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn18 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.b1 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.dataGridViewTextBoxColumn19 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.b2 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.dataGridViewTextBoxColumn20 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.b3 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.dataGridViewTextBoxColumn21 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.b4 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.tab_bestellung = new System.Windows.Forms.TabPage();
-            this.button1 = new System.Windows.Forms.Button();
-            this.pictureBox12 = new System.Windows.Forms.PictureBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
-            this.menu = new System.Windows.Forms.MenuStrip();
-            this.dateiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.dateiÖffnenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.xMLexportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.schließenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.einstellungenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.hilfeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.handbuchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.spracheToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.deutschToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.englischToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.gewichtungToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.scimToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.startSeiteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolTip = new System.Windows.Forms.ToolTip(this.components);
-            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
-            this.helpProvider1 = new System.Windows.Forms.HelpProvider();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
-            this.label22 = new System.Windows.Forms.Label();
-            this.label23 = new System.Windows.Forms.Label();
-            this.label24 = new System.Windows.Forms.Label();
-            this.label25 = new System.Windows.Forms.Label();
-            this.label26 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label27 = new System.Windows.Forms.Label();
-            this.label28 = new System.Windows.Forms.Label();
-            this.label29 = new System.Windows.Forms.Label();
-            this.label30 = new System.Windows.Forms.Label();
-            this.label31 = new System.Windows.Forms.Label();
-            this.label32 = new System.Windows.Forms.Label();
-            this.label33 = new System.Windows.Forms.Label();
-            this.label34 = new System.Windows.Forms.Label();
-            this.label35 = new System.Windows.Forms.Label();
-            this.label36 = new System.Windows.Forms.Label();
-            this.label37 = new System.Windows.Forms.Label();
-            this.label38 = new System.Windows.Forms.Label();
-            this.label39 = new System.Windows.Forms.Label();
-            this.label40 = new System.Windows.Forms.Label();
-            this.label41 = new System.Windows.Forms.Label();
-            this.label42 = new System.Windows.Forms.Label();
-            this.label43 = new System.Windows.Forms.Label();
-            this.label44 = new System.Windows.Forms.Label();
-            this.label45 = new System.Windows.Forms.Label();
-            this.label46 = new System.Windows.Forms.Label();
-            this.label47 = new System.Windows.Forms.Label();
-            this.label48 = new System.Windows.Forms.Label();
-            this.label49 = new System.Windows.Forms.Label();
-            this.label50 = new System.Windows.Forms.Label();
-            this.label51 = new System.Windows.Forms.Label();
-            this.label52 = new System.Windows.Forms.Label();
-            this.label53 = new System.Windows.Forms.Label();
-            this.label54 = new System.Windows.Forms.Label();
-            this.label55 = new System.Windows.Forms.Label();
-            this.label56 = new System.Windows.Forms.Label();
-            this.label57 = new System.Windows.Forms.Label();
-            this.label58 = new System.Windows.Forms.Label();
-            this.label59 = new System.Windows.Forms.Label();
-            this.label60 = new System.Windows.Forms.Label();
-            this.label61 = new System.Windows.Forms.Label();
-            this.label62 = new System.Windows.Forms.Label();
-            this.label63 = new System.Windows.Forms.Label();
-            this.label64 = new System.Windows.Forms.Label();
-            this.label65 = new System.Windows.Forms.Label();
-            this.label66 = new System.Windows.Forms.Label();
-            this.label67 = new System.Windows.Forms.Label();
-            this.label68 = new System.Windows.Forms.Label();
-            this.label69 = new System.Windows.Forms.Label();
-            this.label70 = new System.Windows.Forms.Label();
-            this.label71 = new System.Windows.Forms.Label();
-            this.label72 = new System.Windows.Forms.Label();
-            this.label73 = new System.Windows.Forms.Label();
-            this.label74 = new System.Windows.Forms.Label();
-            this.label75 = new System.Windows.Forms.Label();
-            this.label76 = new System.Windows.Forms.Label();
-            this.label77 = new System.Windows.Forms.Label();
-            this.label78 = new System.Windows.Forms.Label();
-            this.label79 = new System.Windows.Forms.Label();
-            this.label80 = new System.Windows.Forms.Label();
-            this.label81 = new System.Windows.Forms.Label();
-            this.label82 = new System.Windows.Forms.Label();
-            this.label83 = new System.Windows.Forms.Label();
-            this.label84 = new System.Windows.Forms.Label();
-            this.label85 = new System.Windows.Forms.Label();
-            this.label86 = new System.Windows.Forms.Label();
-            this.label87 = new System.Windows.Forms.Label();
-            this.label88 = new System.Windows.Forms.Label();
-            this.label89 = new System.Windows.Forms.Label();
-            this.label90 = new System.Windows.Forms.Label();
-            this.label91 = new System.Windows.Forms.Label();
             this.tab_P2 = new System.Windows.Forms.TabPage();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label92 = new System.Windows.Forms.Label();
@@ -670,6 +592,84 @@
             this.p3ib_0 = new System.Windows.Forms.TextBox();
             this.p3pm_0 = new System.Windows.Forms.TextBox();
             this.p3vw_0 = new System.Windows.Forms.TextBox();
+            this.tab_eTeil = new System.Windows.Forms.TabPage();
+            this.cbMitOhne = new System.Windows.Forms.CheckBox();
+            this.rbReserve = new System.Windows.Forms.RadioButton();
+            this.picReadOnlyETeile = new System.Windows.Forms.PictureBox();
+            this.picResetETeil = new System.Windows.Forms.PictureBox();
+            this.picEditEteile = new System.Windows.Forms.PictureBox();
+            this.picSaveETeile = new System.Windows.Forms.PictureBox();
+            this.dataGridViewETeil = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.colWarteschlange = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colBearbeitung = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colPlanung = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.reserve = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tab_APlatz = new System.Windows.Forms.TabPage();
+            this.picEditsAPlatz = new System.Windows.Forms.PictureBox();
+            this.rbRuestzeit = new System.Windows.Forms.RadioButton();
+            this.picReadOnlyAPlatz = new System.Windows.Forms.PictureBox();
+            this.picResetAPlatz = new System.Windows.Forms.PictureBox();
+            this.picSaveAPlatz = new System.Windows.Forms.PictureBox();
+            this.dataGridViewAPlatz = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.rap = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Ruestanzahl = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewImageColumn2 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.s1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.s3 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.ueber = new System.Windows.Forms.DataGridViewImageColumn();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.tab2 = new System.Windows.Forms.TabControl();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.dataGridViewKTeil = new System.Windows.Forms.DataGridView();
+            this.dataGridViewLinkColumn1 = new System.Windows.Forms.DataGridViewLinkColumn();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn18 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.b1 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.dataGridViewTextBoxColumn19 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.b2 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.dataGridViewTextBoxColumn20 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.b3 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.dataGridViewTextBoxColumn21 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.b4 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.tab_bestellung = new System.Windows.Forms.TabPage();
+            this.button1 = new System.Windows.Forms.Button();
+            this.pictureBox12 = new System.Windows.Forms.PictureBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
+            this.menu = new System.Windows.Forms.MenuStrip();
+            this.dateiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.dateiÖffnenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.xMLexportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.schließenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.einstellungenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.hilfeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.handbuchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.spracheToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.deutschToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.englischToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.gewichtungToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.scimToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.startSeiteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolTip = new System.Windows.Forms.ToolTip(this.components);
+            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
+            this.helpProvider1 = new System.Windows.Forms.HelpProvider();
             this.tabs.SuspendLayout();
             this.tab_xml.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pufferP3)).BeginInit();
@@ -696,6 +696,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.upDownAW1)).BeginInit();
             this.tab_produktion.SuspendLayout();
             this.tab1.SuspendLayout();
+            this.tab_P1.SuspendLayout();
+            this.panel1.SuspendLayout();
+            this.tab_P2.SuspendLayout();
+            this.panel2.SuspendLayout();
+            this.tab_P3.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.tab_eTeil.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picReadOnlyETeile)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picResetETeil)).BeginInit();
@@ -708,8 +714,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.picResetAPlatz)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picSaveAPlatz)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAPlatz)).BeginInit();
-            this.tab_P1.SuspendLayout();
-            this.panel1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tab2.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -717,10 +721,6 @@
             this.tab_bestellung.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
             this.menu.SuspendLayout();
-            this.tab_P2.SuspendLayout();
-            this.panel2.SuspendLayout();
-            this.tab_P3.SuspendLayout();
-            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabs
@@ -1237,314 +1237,6 @@
             this.tab1.SelectedIndex = 0;
             this.helpProvider1.SetShowHelp(this.tab1, ((bool)(resources.GetObject("tab1.ShowHelp"))));
             // 
-            // tab_eTeil
-            // 
-            this.tab_eTeil.BackColor = System.Drawing.Color.Transparent;
-            this.tab_eTeil.Controls.Add(this.cbMitOhne);
-            this.tab_eTeil.Controls.Add(this.rbReserve);
-            this.tab_eTeil.Controls.Add(this.picReadOnlyETeile);
-            this.tab_eTeil.Controls.Add(this.picResetETeil);
-            this.tab_eTeil.Controls.Add(this.picEditEteile);
-            this.tab_eTeil.Controls.Add(this.picSaveETeile);
-            this.tab_eTeil.Controls.Add(this.dataGridViewETeil);
-            resources.ApplyResources(this.tab_eTeil, "tab_eTeil");
-            this.tab_eTeil.Name = "tab_eTeil";
-            this.helpProvider1.SetShowHelp(this.tab_eTeil, ((bool)(resources.GetObject("tab_eTeil.ShowHelp"))));
-            // 
-            // cbMitOhne
-            // 
-            resources.ApplyResources(this.cbMitOhne, "cbMitOhne");
-            this.cbMitOhne.Checked = true;
-            this.cbMitOhne.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.helpProvider1.SetHelpKeyword(this.cbMitOhne, resources.GetString("cbMitOhne.HelpKeyword"));
-            this.helpProvider1.SetHelpNavigator(this.cbMitOhne, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("cbMitOhne.HelpNavigator"))));
-            this.helpProvider1.SetHelpString(this.cbMitOhne, resources.GetString("cbMitOhne.HelpString"));
-            this.cbMitOhne.Name = "cbMitOhne";
-            this.helpProvider1.SetShowHelp(this.cbMitOhne, ((bool)(resources.GetObject("cbMitOhne.ShowHelp"))));
-            this.cbMitOhne.UseVisualStyleBackColor = true;
-            this.cbMitOhne.CheckedChanged += new System.EventHandler(this.cbMitOhne_CheckedChanged);
-            // 
-            // rbReserve
-            // 
-            resources.ApplyResources(this.rbReserve, "rbReserve");
-            this.rbReserve.Checked = true;
-            this.rbReserve.Name = "rbReserve";
-            this.helpProvider1.SetShowHelp(this.rbReserve, ((bool)(resources.GetObject("rbReserve.ShowHelp"))));
-            this.rbReserve.TabStop = true;
-            this.rbReserve.UseVisualStyleBackColor = true;
-            // 
-            // picReadOnlyETeile
-            // 
-            this.picReadOnlyETeile.Cursor = System.Windows.Forms.Cursors.Hand;
-            resources.ApplyResources(this.picReadOnlyETeile, "picReadOnlyETeile");
-            this.picReadOnlyETeile.Name = "picReadOnlyETeile";
-            this.helpProvider1.SetShowHelp(this.picReadOnlyETeile, ((bool)(resources.GetObject("picReadOnlyETeile.ShowHelp"))));
-            this.picReadOnlyETeile.TabStop = false;
-            this.toolTip.SetToolTip(this.picReadOnlyETeile, resources.GetString("picReadOnlyETeile.ToolTip"));
-            this.picReadOnlyETeile.Click += new System.EventHandler(this.pictureReadOnly_Click);
-            // 
-            // picResetETeil
-            // 
-            this.picResetETeil.Cursor = System.Windows.Forms.Cursors.Hand;
-            resources.ApplyResources(this.picResetETeil, "picResetETeil");
-            this.picResetETeil.Name = "picResetETeil";
-            this.helpProvider1.SetShowHelp(this.picResetETeil, ((bool)(resources.GetObject("picResetETeil.ShowHelp"))));
-            this.picResetETeil.TabStop = false;
-            this.toolTip.SetToolTip(this.picResetETeil, resources.GetString("picResetETeil.ToolTip"));
-            this.picResetETeil.Click += new System.EventHandler(this.pictureResetETeil_Click);
-            // 
-            // picEditEteile
-            // 
-            this.picEditEteile.Cursor = System.Windows.Forms.Cursors.Hand;
-            resources.ApplyResources(this.picEditEteile, "picEditEteile");
-            this.picEditEteile.Name = "picEditEteile";
-            this.helpProvider1.SetShowHelp(this.picEditEteile, ((bool)(resources.GetObject("picEditEteile.ShowHelp"))));
-            this.picEditEteile.TabStop = false;
-            this.toolTip.SetToolTip(this.picEditEteile, resources.GetString("picEditEteile.ToolTip"));
-            this.picEditEteile.Click += new System.EventHandler(this.picEditEteile_Click);
-            // 
-            // picSaveETeile
-            // 
-            this.picSaveETeile.Cursor = System.Windows.Forms.Cursors.Hand;
-            resources.ApplyResources(this.picSaveETeile, "picSaveETeile");
-            this.picSaveETeile.Name = "picSaveETeile";
-            this.helpProvider1.SetShowHelp(this.picSaveETeile, ((bool)(resources.GetObject("picSaveETeile.ShowHelp"))));
-            this.picSaveETeile.TabStop = false;
-            this.toolTip.SetToolTip(this.picSaveETeile, resources.GetString("picSaveETeile.ToolTip"));
-            this.picSaveETeile.Click += new System.EventHandler(this.pictureSaveETeile_Click);
-            // 
-            // dataGridViewETeil
-            // 
-            this.dataGridViewETeil.AllowUserToAddRows = false;
-            this.dataGridViewETeil.AllowUserToDeleteRows = false;
-            this.dataGridViewETeil.BackgroundColor = System.Drawing.SystemColors.Control;
-            this.dataGridViewETeil.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridViewETeil.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewETeil.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2,
-            this.dataGridViewTextBoxColumn3,
-            this.dataGridViewTextBoxColumn4,
-            this.dataGridViewImageColumn1,
-            this.colWarteschlange,
-            this.colBearbeitung,
-            this.colPlanung,
-            this.reserve});
-            resources.ApplyResources(this.dataGridViewETeil, "dataGridViewETeil");
-            this.dataGridViewETeil.Name = "dataGridViewETeil";
-            this.helpProvider1.SetShowHelp(this.dataGridViewETeil, ((bool)(resources.GetObject("dataGridViewETeil.ShowHelp"))));
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            resources.ApplyResources(this.dataGridViewTextBoxColumn1, "dataGridViewTextBoxColumn1");
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            this.dataGridViewTextBoxColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            resources.ApplyResources(this.dataGridViewTextBoxColumn2, "dataGridViewTextBoxColumn2");
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            resources.ApplyResources(this.dataGridViewTextBoxColumn3, "dataGridViewTextBoxColumn3");
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            resources.ApplyResources(this.dataGridViewTextBoxColumn4, "dataGridViewTextBoxColumn4");
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.ReadOnly = true;
-            // 
-            // dataGridViewImageColumn1
-            // 
-            resources.ApplyResources(this.dataGridViewImageColumn1, "dataGridViewImageColumn1");
-            this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
-            this.dataGridViewImageColumn1.ReadOnly = true;
-            this.dataGridViewImageColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // colWarteschlange
-            // 
-            resources.ApplyResources(this.colWarteschlange, "colWarteschlange");
-            this.colWarteschlange.Name = "colWarteschlange";
-            this.colWarteschlange.ReadOnly = true;
-            // 
-            // colBearbeitung
-            // 
-            resources.ApplyResources(this.colBearbeitung, "colBearbeitung");
-            this.colBearbeitung.Name = "colBearbeitung";
-            this.colBearbeitung.ReadOnly = true;
-            // 
-            // colPlanung
-            // 
-            resources.ApplyResources(this.colPlanung, "colPlanung");
-            this.colPlanung.Name = "colPlanung";
-            this.colPlanung.ReadOnly = true;
-            // 
-            // reserve
-            // 
-            resources.ApplyResources(this.reserve, "reserve");
-            this.reserve.Name = "reserve";
-            this.reserve.ReadOnly = true;
-            // 
-            // tab_APlatz
-            // 
-            this.tab_APlatz.BackColor = System.Drawing.Color.Transparent;
-            this.tab_APlatz.Controls.Add(this.picEditsAPlatz);
-            this.tab_APlatz.Controls.Add(this.rbRuestzeit);
-            this.tab_APlatz.Controls.Add(this.picReadOnlyAPlatz);
-            this.tab_APlatz.Controls.Add(this.picResetAPlatz);
-            this.tab_APlatz.Controls.Add(this.picSaveAPlatz);
-            this.tab_APlatz.Controls.Add(this.dataGridViewAPlatz);
-            resources.ApplyResources(this.tab_APlatz, "tab_APlatz");
-            this.tab_APlatz.Name = "tab_APlatz";
-            // 
-            // picEditsAPlatz
-            // 
-            this.picEditsAPlatz.Cursor = System.Windows.Forms.Cursors.Hand;
-            resources.ApplyResources(this.picEditsAPlatz, "picEditsAPlatz");
-            this.picEditsAPlatz.Name = "picEditsAPlatz";
-            this.helpProvider1.SetShowHelp(this.picEditsAPlatz, ((bool)(resources.GetObject("picEditsAPlatz.ShowHelp"))));
-            this.picEditsAPlatz.TabStop = false;
-            this.toolTip.SetToolTip(this.picEditsAPlatz, resources.GetString("picEditsAPlatz.ToolTip"));
-            this.picEditsAPlatz.Click += new System.EventHandler(this.picEditAPlatz_Click);
-            // 
-            // rbRuestzeit
-            // 
-            resources.ApplyResources(this.rbRuestzeit, "rbRuestzeit");
-            this.rbRuestzeit.Checked = true;
-            this.rbRuestzeit.Name = "rbRuestzeit";
-            this.helpProvider1.SetShowHelp(this.rbRuestzeit, ((bool)(resources.GetObject("rbRuestzeit.ShowHelp"))));
-            this.rbRuestzeit.TabStop = true;
-            this.rbRuestzeit.UseVisualStyleBackColor = true;
-            // 
-            // picReadOnlyAPlatz
-            // 
-            this.picReadOnlyAPlatz.Cursor = System.Windows.Forms.Cursors.Hand;
-            resources.ApplyResources(this.picReadOnlyAPlatz, "picReadOnlyAPlatz");
-            this.picReadOnlyAPlatz.Name = "picReadOnlyAPlatz";
-            this.helpProvider1.SetShowHelp(this.picReadOnlyAPlatz, ((bool)(resources.GetObject("picReadOnlyAPlatz.ShowHelp"))));
-            this.picReadOnlyAPlatz.TabStop = false;
-            this.toolTip.SetToolTip(this.picReadOnlyAPlatz, resources.GetString("picReadOnlyAPlatz.ToolTip"));
-            this.picReadOnlyAPlatz.Click += new System.EventHandler(this.picReadOnlyAPlatz_Click);
-            // 
-            // picResetAPlatz
-            // 
-            this.picResetAPlatz.Cursor = System.Windows.Forms.Cursors.Hand;
-            resources.ApplyResources(this.picResetAPlatz, "picResetAPlatz");
-            this.picResetAPlatz.Name = "picResetAPlatz";
-            this.helpProvider1.SetShowHelp(this.picResetAPlatz, ((bool)(resources.GetObject("picResetAPlatz.ShowHelp"))));
-            this.picResetAPlatz.TabStop = false;
-            this.toolTip.SetToolTip(this.picResetAPlatz, resources.GetString("picResetAPlatz.ToolTip"));
-            this.picResetAPlatz.Click += new System.EventHandler(this.picResetAPlatz_Click);
-            // 
-            // picSaveAPlatz
-            // 
-            this.picSaveAPlatz.Cursor = System.Windows.Forms.Cursors.Hand;
-            resources.ApplyResources(this.picSaveAPlatz, "picSaveAPlatz");
-            this.picSaveAPlatz.Name = "picSaveAPlatz";
-            this.helpProvider1.SetShowHelp(this.picSaveAPlatz, ((bool)(resources.GetObject("picSaveAPlatz.ShowHelp"))));
-            this.picSaveAPlatz.TabStop = false;
-            this.toolTip.SetToolTip(this.picSaveAPlatz, resources.GetString("picSaveAPlatz.ToolTip"));
-            this.picSaveAPlatz.Click += new System.EventHandler(this.picSaveAPlatz_Click);
-            // 
-            // dataGridViewAPlatz
-            // 
-            this.dataGridViewAPlatz.AllowUserToAddRows = false;
-            this.dataGridViewAPlatz.AllowUserToDeleteRows = false;
-            this.dataGridViewAPlatz.BackgroundColor = System.Drawing.SystemColors.Control;
-            this.dataGridViewAPlatz.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridViewAPlatz.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewAPlatz.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn5,
-            this.dataGridViewTextBoxColumn7,
-            this.dataGridViewTextBoxColumn8,
-            this.dataGridViewTextBoxColumn9,
-            this.rap,
-            this.Ruestanzahl,
-            this.dataGridViewTextBoxColumn10,
-            this.dataGridViewImageColumn2,
-            this.s1,
-            this.s3,
-            this.ueber});
-            resources.ApplyResources(this.dataGridViewAPlatz, "dataGridViewAPlatz");
-            this.dataGridViewAPlatz.Name = "dataGridViewAPlatz";
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            resources.ApplyResources(this.dataGridViewTextBoxColumn5, "dataGridViewTextBoxColumn5");
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            this.dataGridViewTextBoxColumn5.ReadOnly = true;
-            this.dataGridViewTextBoxColumn5.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            // 
-            // dataGridViewTextBoxColumn7
-            // 
-            resources.ApplyResources(this.dataGridViewTextBoxColumn7, "dataGridViewTextBoxColumn7");
-            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
-            this.dataGridViewTextBoxColumn7.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn8
-            // 
-            resources.ApplyResources(this.dataGridViewTextBoxColumn8, "dataGridViewTextBoxColumn8");
-            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
-            this.dataGridViewTextBoxColumn8.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn9
-            // 
-            resources.ApplyResources(this.dataGridViewTextBoxColumn9, "dataGridViewTextBoxColumn9");
-            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
-            this.dataGridViewTextBoxColumn9.ReadOnly = true;
-            // 
-            // rap
-            // 
-            resources.ApplyResources(this.rap, "rap");
-            this.rap.Name = "rap";
-            this.rap.ReadOnly = true;
-            // 
-            // Ruestanzahl
-            // 
-            resources.ApplyResources(this.Ruestanzahl, "Ruestanzahl");
-            this.Ruestanzahl.Name = "Ruestanzahl";
-            this.Ruestanzahl.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn10
-            // 
-            resources.ApplyResources(this.dataGridViewTextBoxColumn10, "dataGridViewTextBoxColumn10");
-            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
-            this.dataGridViewTextBoxColumn10.ReadOnly = true;
-            // 
-            // dataGridViewImageColumn2
-            // 
-            resources.ApplyResources(this.dataGridViewImageColumn2, "dataGridViewImageColumn2");
-            this.dataGridViewImageColumn2.Name = "dataGridViewImageColumn2";
-            this.dataGridViewImageColumn2.ReadOnly = true;
-            this.dataGridViewImageColumn2.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // s1
-            // 
-            resources.ApplyResources(this.s1, "s1");
-            this.s1.Name = "s1";
-            this.s1.ReadOnly = true;
-            this.s1.TrueValue = "123";
-            // 
-            // s3
-            // 
-            resources.ApplyResources(this.s3, "s3");
-            this.s3.Name = "s3";
-            this.s3.ReadOnly = true;
-            this.s3.TrueValue = "";
-            // 
-            // ueber
-            // 
-            resources.ApplyResources(this.ueber, "ueber");
-            this.ueber.Name = "ueber";
-            this.ueber.ReadOnly = true;
-            this.ueber.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.ueber.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            // 
             // tab_P1
             // 
             this.tab_P1.BackColor = System.Drawing.Color.Transparent;
@@ -1728,6 +1420,539 @@
             this.panel1.Controls.Add(this.p1vw_0);
             resources.ApplyResources(this.panel1, "panel1");
             this.panel1.Name = "panel1";
+            // 
+            // label91
+            // 
+            resources.ApplyResources(this.label91, "label91");
+            this.label91.Name = "label91";
+            this.helpProvider1.SetShowHelp(this.label91, ((bool)(resources.GetObject("label91.ShowHelp"))));
+            // 
+            // label90
+            // 
+            resources.ApplyResources(this.label90, "label90");
+            this.label90.Name = "label90";
+            this.helpProvider1.SetShowHelp(this.label90, ((bool)(resources.GetObject("label90.ShowHelp"))));
+            // 
+            // label89
+            // 
+            resources.ApplyResources(this.label89, "label89");
+            this.label89.Name = "label89";
+            this.helpProvider1.SetShowHelp(this.label89, ((bool)(resources.GetObject("label89.ShowHelp"))));
+            // 
+            // label88
+            // 
+            resources.ApplyResources(this.label88, "label88");
+            this.label88.Name = "label88";
+            this.helpProvider1.SetShowHelp(this.label88, ((bool)(resources.GetObject("label88.ShowHelp"))));
+            // 
+            // label87
+            // 
+            resources.ApplyResources(this.label87, "label87");
+            this.label87.Name = "label87";
+            this.helpProvider1.SetShowHelp(this.label87, ((bool)(resources.GetObject("label87.ShowHelp"))));
+            // 
+            // label86
+            // 
+            resources.ApplyResources(this.label86, "label86");
+            this.label86.Name = "label86";
+            this.helpProvider1.SetShowHelp(this.label86, ((bool)(resources.GetObject("label86.ShowHelp"))));
+            // 
+            // label74
+            // 
+            resources.ApplyResources(this.label74, "label74");
+            this.label74.BackColor = System.Drawing.Color.Transparent;
+            this.label74.Name = "label74";
+            this.helpProvider1.SetShowHelp(this.label74, ((bool)(resources.GetObject("label74.ShowHelp"))));
+            // 
+            // label75
+            // 
+            resources.ApplyResources(this.label75, "label75");
+            this.label75.BackColor = System.Drawing.Color.Transparent;
+            this.label75.Name = "label75";
+            this.helpProvider1.SetShowHelp(this.label75, ((bool)(resources.GetObject("label75.ShowHelp"))));
+            // 
+            // label76
+            // 
+            resources.ApplyResources(this.label76, "label76");
+            this.label76.BackColor = System.Drawing.Color.Transparent;
+            this.label76.Name = "label76";
+            this.helpProvider1.SetShowHelp(this.label76, ((bool)(resources.GetObject("label76.ShowHelp"))));
+            // 
+            // label77
+            // 
+            resources.ApplyResources(this.label77, "label77");
+            this.label77.BackColor = System.Drawing.Color.Transparent;
+            this.label77.Name = "label77";
+            this.helpProvider1.SetShowHelp(this.label77, ((bool)(resources.GetObject("label77.ShowHelp"))));
+            // 
+            // label78
+            // 
+            resources.ApplyResources(this.label78, "label78");
+            this.label78.BackColor = System.Drawing.Color.Transparent;
+            this.label78.Name = "label78";
+            this.helpProvider1.SetShowHelp(this.label78, ((bool)(resources.GetObject("label78.ShowHelp"))));
+            // 
+            // label79
+            // 
+            resources.ApplyResources(this.label79, "label79");
+            this.label79.BackColor = System.Drawing.Color.Transparent;
+            this.label79.Name = "label79";
+            this.helpProvider1.SetShowHelp(this.label79, ((bool)(resources.GetObject("label79.ShowHelp"))));
+            // 
+            // label80
+            // 
+            resources.ApplyResources(this.label80, "label80");
+            this.label80.BackColor = System.Drawing.Color.Transparent;
+            this.label80.Name = "label80";
+            this.helpProvider1.SetShowHelp(this.label80, ((bool)(resources.GetObject("label80.ShowHelp"))));
+            // 
+            // label81
+            // 
+            resources.ApplyResources(this.label81, "label81");
+            this.label81.BackColor = System.Drawing.Color.Transparent;
+            this.label81.Name = "label81";
+            this.helpProvider1.SetShowHelp(this.label81, ((bool)(resources.GetObject("label81.ShowHelp"))));
+            // 
+            // label82
+            // 
+            resources.ApplyResources(this.label82, "label82");
+            this.label82.BackColor = System.Drawing.Color.Transparent;
+            this.label82.Name = "label82";
+            this.helpProvider1.SetShowHelp(this.label82, ((bool)(resources.GetObject("label82.ShowHelp"))));
+            // 
+            // label83
+            // 
+            resources.ApplyResources(this.label83, "label83");
+            this.label83.BackColor = System.Drawing.Color.Transparent;
+            this.label83.Name = "label83";
+            this.helpProvider1.SetShowHelp(this.label83, ((bool)(resources.GetObject("label83.ShowHelp"))));
+            // 
+            // label84
+            // 
+            resources.ApplyResources(this.label84, "label84");
+            this.label84.BackColor = System.Drawing.Color.Transparent;
+            this.label84.Name = "label84";
+            this.helpProvider1.SetShowHelp(this.label84, ((bool)(resources.GetObject("label84.ShowHelp"))));
+            // 
+            // label85
+            // 
+            resources.ApplyResources(this.label85, "label85");
+            this.label85.BackColor = System.Drawing.Color.Transparent;
+            this.label85.Name = "label85";
+            this.helpProvider1.SetShowHelp(this.label85, ((bool)(resources.GetObject("label85.ShowHelp"))));
+            // 
+            // label73
+            // 
+            resources.ApplyResources(this.label73, "label73");
+            this.label73.BackColor = System.Drawing.Color.Transparent;
+            this.label73.Name = "label73";
+            this.helpProvider1.SetShowHelp(this.label73, ((bool)(resources.GetObject("label73.ShowHelp"))));
+            // 
+            // label72
+            // 
+            resources.ApplyResources(this.label72, "label72");
+            this.label72.BackColor = System.Drawing.Color.Transparent;
+            this.label72.Name = "label72";
+            this.helpProvider1.SetShowHelp(this.label72, ((bool)(resources.GetObject("label72.ShowHelp"))));
+            // 
+            // label71
+            // 
+            resources.ApplyResources(this.label71, "label71");
+            this.label71.BackColor = System.Drawing.Color.Transparent;
+            this.label71.Name = "label71";
+            this.helpProvider1.SetShowHelp(this.label71, ((bool)(resources.GetObject("label71.ShowHelp"))));
+            // 
+            // label60
+            // 
+            resources.ApplyResources(this.label60, "label60");
+            this.label60.BackColor = System.Drawing.Color.Transparent;
+            this.label60.Name = "label60";
+            this.helpProvider1.SetShowHelp(this.label60, ((bool)(resources.GetObject("label60.ShowHelp"))));
+            // 
+            // label61
+            // 
+            resources.ApplyResources(this.label61, "label61");
+            this.label61.BackColor = System.Drawing.Color.Transparent;
+            this.label61.Name = "label61";
+            this.helpProvider1.SetShowHelp(this.label61, ((bool)(resources.GetObject("label61.ShowHelp"))));
+            // 
+            // label62
+            // 
+            resources.ApplyResources(this.label62, "label62");
+            this.label62.BackColor = System.Drawing.Color.Transparent;
+            this.label62.Name = "label62";
+            this.helpProvider1.SetShowHelp(this.label62, ((bool)(resources.GetObject("label62.ShowHelp"))));
+            // 
+            // label63
+            // 
+            resources.ApplyResources(this.label63, "label63");
+            this.label63.BackColor = System.Drawing.Color.Transparent;
+            this.label63.Name = "label63";
+            this.helpProvider1.SetShowHelp(this.label63, ((bool)(resources.GetObject("label63.ShowHelp"))));
+            // 
+            // label64
+            // 
+            resources.ApplyResources(this.label64, "label64");
+            this.label64.BackColor = System.Drawing.Color.Transparent;
+            this.label64.Name = "label64";
+            this.helpProvider1.SetShowHelp(this.label64, ((bool)(resources.GetObject("label64.ShowHelp"))));
+            // 
+            // label65
+            // 
+            resources.ApplyResources(this.label65, "label65");
+            this.label65.BackColor = System.Drawing.Color.Transparent;
+            this.label65.Name = "label65";
+            this.helpProvider1.SetShowHelp(this.label65, ((bool)(resources.GetObject("label65.ShowHelp"))));
+            // 
+            // label66
+            // 
+            resources.ApplyResources(this.label66, "label66");
+            this.label66.BackColor = System.Drawing.Color.Transparent;
+            this.label66.Name = "label66";
+            this.helpProvider1.SetShowHelp(this.label66, ((bool)(resources.GetObject("label66.ShowHelp"))));
+            // 
+            // label67
+            // 
+            resources.ApplyResources(this.label67, "label67");
+            this.label67.BackColor = System.Drawing.Color.Transparent;
+            this.label67.Name = "label67";
+            this.helpProvider1.SetShowHelp(this.label67, ((bool)(resources.GetObject("label67.ShowHelp"))));
+            // 
+            // label68
+            // 
+            resources.ApplyResources(this.label68, "label68");
+            this.label68.BackColor = System.Drawing.Color.Transparent;
+            this.label68.Name = "label68";
+            this.helpProvider1.SetShowHelp(this.label68, ((bool)(resources.GetObject("label68.ShowHelp"))));
+            // 
+            // label69
+            // 
+            resources.ApplyResources(this.label69, "label69");
+            this.label69.BackColor = System.Drawing.Color.Transparent;
+            this.label69.Name = "label69";
+            this.helpProvider1.SetShowHelp(this.label69, ((bool)(resources.GetObject("label69.ShowHelp"))));
+            // 
+            // label70
+            // 
+            resources.ApplyResources(this.label70, "label70");
+            this.label70.BackColor = System.Drawing.Color.Transparent;
+            this.label70.Name = "label70";
+            this.helpProvider1.SetShowHelp(this.label70, ((bool)(resources.GetObject("label70.ShowHelp"))));
+            // 
+            // label49
+            // 
+            resources.ApplyResources(this.label49, "label49");
+            this.label49.BackColor = System.Drawing.Color.Transparent;
+            this.label49.Name = "label49";
+            this.helpProvider1.SetShowHelp(this.label49, ((bool)(resources.GetObject("label49.ShowHelp"))));
+            // 
+            // label50
+            // 
+            resources.ApplyResources(this.label50, "label50");
+            this.label50.BackColor = System.Drawing.Color.Transparent;
+            this.label50.Name = "label50";
+            this.helpProvider1.SetShowHelp(this.label50, ((bool)(resources.GetObject("label50.ShowHelp"))));
+            // 
+            // label51
+            // 
+            resources.ApplyResources(this.label51, "label51");
+            this.label51.BackColor = System.Drawing.Color.Transparent;
+            this.label51.Name = "label51";
+            this.helpProvider1.SetShowHelp(this.label51, ((bool)(resources.GetObject("label51.ShowHelp"))));
+            // 
+            // label52
+            // 
+            resources.ApplyResources(this.label52, "label52");
+            this.label52.BackColor = System.Drawing.Color.Transparent;
+            this.label52.Name = "label52";
+            this.helpProvider1.SetShowHelp(this.label52, ((bool)(resources.GetObject("label52.ShowHelp"))));
+            // 
+            // label53
+            // 
+            resources.ApplyResources(this.label53, "label53");
+            this.label53.BackColor = System.Drawing.Color.Transparent;
+            this.label53.Name = "label53";
+            this.helpProvider1.SetShowHelp(this.label53, ((bool)(resources.GetObject("label53.ShowHelp"))));
+            // 
+            // label54
+            // 
+            resources.ApplyResources(this.label54, "label54");
+            this.label54.BackColor = System.Drawing.Color.Transparent;
+            this.label54.Name = "label54";
+            this.helpProvider1.SetShowHelp(this.label54, ((bool)(resources.GetObject("label54.ShowHelp"))));
+            // 
+            // label55
+            // 
+            resources.ApplyResources(this.label55, "label55");
+            this.label55.BackColor = System.Drawing.Color.Transparent;
+            this.label55.Name = "label55";
+            this.helpProvider1.SetShowHelp(this.label55, ((bool)(resources.GetObject("label55.ShowHelp"))));
+            // 
+            // label56
+            // 
+            resources.ApplyResources(this.label56, "label56");
+            this.label56.BackColor = System.Drawing.Color.Transparent;
+            this.label56.Name = "label56";
+            this.helpProvider1.SetShowHelp(this.label56, ((bool)(resources.GetObject("label56.ShowHelp"))));
+            // 
+            // label57
+            // 
+            resources.ApplyResources(this.label57, "label57");
+            this.label57.BackColor = System.Drawing.Color.Transparent;
+            this.label57.Name = "label57";
+            this.helpProvider1.SetShowHelp(this.label57, ((bool)(resources.GetObject("label57.ShowHelp"))));
+            // 
+            // label58
+            // 
+            resources.ApplyResources(this.label58, "label58");
+            this.label58.BackColor = System.Drawing.Color.Transparent;
+            this.label58.Name = "label58";
+            this.helpProvider1.SetShowHelp(this.label58, ((bool)(resources.GetObject("label58.ShowHelp"))));
+            // 
+            // label59
+            // 
+            resources.ApplyResources(this.label59, "label59");
+            this.label59.BackColor = System.Drawing.Color.Transparent;
+            this.label59.Name = "label59";
+            this.helpProvider1.SetShowHelp(this.label59, ((bool)(resources.GetObject("label59.ShowHelp"))));
+            // 
+            // label38
+            // 
+            resources.ApplyResources(this.label38, "label38");
+            this.label38.BackColor = System.Drawing.Color.Transparent;
+            this.label38.Name = "label38";
+            this.helpProvider1.SetShowHelp(this.label38, ((bool)(resources.GetObject("label38.ShowHelp"))));
+            // 
+            // label39
+            // 
+            resources.ApplyResources(this.label39, "label39");
+            this.label39.BackColor = System.Drawing.Color.Transparent;
+            this.label39.Name = "label39";
+            this.helpProvider1.SetShowHelp(this.label39, ((bool)(resources.GetObject("label39.ShowHelp"))));
+            // 
+            // label40
+            // 
+            resources.ApplyResources(this.label40, "label40");
+            this.label40.BackColor = System.Drawing.Color.Transparent;
+            this.label40.Name = "label40";
+            this.helpProvider1.SetShowHelp(this.label40, ((bool)(resources.GetObject("label40.ShowHelp"))));
+            // 
+            // label41
+            // 
+            resources.ApplyResources(this.label41, "label41");
+            this.label41.BackColor = System.Drawing.Color.Transparent;
+            this.label41.Name = "label41";
+            this.helpProvider1.SetShowHelp(this.label41, ((bool)(resources.GetObject("label41.ShowHelp"))));
+            // 
+            // label42
+            // 
+            resources.ApplyResources(this.label42, "label42");
+            this.label42.BackColor = System.Drawing.Color.Transparent;
+            this.label42.Name = "label42";
+            this.helpProvider1.SetShowHelp(this.label42, ((bool)(resources.GetObject("label42.ShowHelp"))));
+            // 
+            // label43
+            // 
+            resources.ApplyResources(this.label43, "label43");
+            this.label43.BackColor = System.Drawing.Color.Transparent;
+            this.label43.Name = "label43";
+            this.helpProvider1.SetShowHelp(this.label43, ((bool)(resources.GetObject("label43.ShowHelp"))));
+            // 
+            // label44
+            // 
+            resources.ApplyResources(this.label44, "label44");
+            this.label44.BackColor = System.Drawing.Color.Transparent;
+            this.label44.Name = "label44";
+            this.helpProvider1.SetShowHelp(this.label44, ((bool)(resources.GetObject("label44.ShowHelp"))));
+            // 
+            // label45
+            // 
+            resources.ApplyResources(this.label45, "label45");
+            this.label45.BackColor = System.Drawing.Color.Transparent;
+            this.label45.Name = "label45";
+            this.helpProvider1.SetShowHelp(this.label45, ((bool)(resources.GetObject("label45.ShowHelp"))));
+            // 
+            // label46
+            // 
+            resources.ApplyResources(this.label46, "label46");
+            this.label46.BackColor = System.Drawing.Color.Transparent;
+            this.label46.Name = "label46";
+            this.helpProvider1.SetShowHelp(this.label46, ((bool)(resources.GetObject("label46.ShowHelp"))));
+            // 
+            // label47
+            // 
+            resources.ApplyResources(this.label47, "label47");
+            this.label47.BackColor = System.Drawing.Color.Transparent;
+            this.label47.Name = "label47";
+            this.helpProvider1.SetShowHelp(this.label47, ((bool)(resources.GetObject("label47.ShowHelp"))));
+            // 
+            // label48
+            // 
+            resources.ApplyResources(this.label48, "label48");
+            this.label48.BackColor = System.Drawing.Color.Transparent;
+            this.label48.Name = "label48";
+            this.helpProvider1.SetShowHelp(this.label48, ((bool)(resources.GetObject("label48.ShowHelp"))));
+            // 
+            // label37
+            // 
+            resources.ApplyResources(this.label37, "label37");
+            this.label37.BackColor = System.Drawing.Color.Transparent;
+            this.label37.Name = "label37";
+            this.helpProvider1.SetShowHelp(this.label37, ((bool)(resources.GetObject("label37.ShowHelp"))));
+            // 
+            // label15
+            // 
+            resources.ApplyResources(this.label15, "label15");
+            this.label15.BackColor = System.Drawing.Color.Transparent;
+            this.label15.Name = "label15";
+            this.helpProvider1.SetShowHelp(this.label15, ((bool)(resources.GetObject("label15.ShowHelp"))));
+            // 
+            // label27
+            // 
+            resources.ApplyResources(this.label27, "label27");
+            this.label27.BackColor = System.Drawing.Color.Transparent;
+            this.label27.Name = "label27";
+            this.helpProvider1.SetShowHelp(this.label27, ((bool)(resources.GetObject("label27.ShowHelp"))));
+            // 
+            // label28
+            // 
+            resources.ApplyResources(this.label28, "label28");
+            this.label28.BackColor = System.Drawing.Color.Transparent;
+            this.label28.Name = "label28";
+            this.helpProvider1.SetShowHelp(this.label28, ((bool)(resources.GetObject("label28.ShowHelp"))));
+            // 
+            // label29
+            // 
+            resources.ApplyResources(this.label29, "label29");
+            this.label29.BackColor = System.Drawing.Color.Transparent;
+            this.label29.Name = "label29";
+            this.helpProvider1.SetShowHelp(this.label29, ((bool)(resources.GetObject("label29.ShowHelp"))));
+            // 
+            // label30
+            // 
+            resources.ApplyResources(this.label30, "label30");
+            this.label30.BackColor = System.Drawing.Color.Transparent;
+            this.label30.Name = "label30";
+            this.helpProvider1.SetShowHelp(this.label30, ((bool)(resources.GetObject("label30.ShowHelp"))));
+            // 
+            // label31
+            // 
+            resources.ApplyResources(this.label31, "label31");
+            this.label31.BackColor = System.Drawing.Color.Transparent;
+            this.label31.Name = "label31";
+            this.helpProvider1.SetShowHelp(this.label31, ((bool)(resources.GetObject("label31.ShowHelp"))));
+            // 
+            // label32
+            // 
+            resources.ApplyResources(this.label32, "label32");
+            this.label32.BackColor = System.Drawing.Color.Transparent;
+            this.label32.Name = "label32";
+            this.helpProvider1.SetShowHelp(this.label32, ((bool)(resources.GetObject("label32.ShowHelp"))));
+            // 
+            // label33
+            // 
+            resources.ApplyResources(this.label33, "label33");
+            this.label33.BackColor = System.Drawing.Color.Transparent;
+            this.label33.Name = "label33";
+            this.helpProvider1.SetShowHelp(this.label33, ((bool)(resources.GetObject("label33.ShowHelp"))));
+            // 
+            // label34
+            // 
+            resources.ApplyResources(this.label34, "label34");
+            this.label34.BackColor = System.Drawing.Color.Transparent;
+            this.label34.Name = "label34";
+            this.helpProvider1.SetShowHelp(this.label34, ((bool)(resources.GetObject("label34.ShowHelp"))));
+            // 
+            // label35
+            // 
+            resources.ApplyResources(this.label35, "label35");
+            this.label35.BackColor = System.Drawing.Color.Transparent;
+            this.label35.Name = "label35";
+            this.helpProvider1.SetShowHelp(this.label35, ((bool)(resources.GetObject("label35.ShowHelp"))));
+            // 
+            // label36
+            // 
+            resources.ApplyResources(this.label36, "label36");
+            this.label36.BackColor = System.Drawing.Color.Transparent;
+            this.label36.Name = "label36";
+            this.helpProvider1.SetShowHelp(this.label36, ((bool)(resources.GetObject("label36.ShowHelp"))));
+            // 
+            // label24
+            // 
+            resources.ApplyResources(this.label24, "label24");
+            this.label24.BackColor = System.Drawing.Color.Transparent;
+            this.label24.Name = "label24";
+            this.helpProvider1.SetShowHelp(this.label24, ((bool)(resources.GetObject("label24.ShowHelp"))));
+            // 
+            // label25
+            // 
+            resources.ApplyResources(this.label25, "label25");
+            this.label25.BackColor = System.Drawing.Color.Transparent;
+            this.label25.Name = "label25";
+            this.helpProvider1.SetShowHelp(this.label25, ((bool)(resources.GetObject("label25.ShowHelp"))));
+            // 
+            // label26
+            // 
+            resources.ApplyResources(this.label26, "label26");
+            this.label26.BackColor = System.Drawing.Color.Transparent;
+            this.label26.Name = "label26";
+            this.helpProvider1.SetShowHelp(this.label26, ((bool)(resources.GetObject("label26.ShowHelp"))));
+            // 
+            // label21
+            // 
+            resources.ApplyResources(this.label21, "label21");
+            this.label21.BackColor = System.Drawing.Color.Transparent;
+            this.label21.Name = "label21";
+            this.helpProvider1.SetShowHelp(this.label21, ((bool)(resources.GetObject("label21.ShowHelp"))));
+            // 
+            // label22
+            // 
+            resources.ApplyResources(this.label22, "label22");
+            this.label22.BackColor = System.Drawing.Color.Transparent;
+            this.label22.Name = "label22";
+            this.helpProvider1.SetShowHelp(this.label22, ((bool)(resources.GetObject("label22.ShowHelp"))));
+            // 
+            // label23
+            // 
+            resources.ApplyResources(this.label23, "label23");
+            this.label23.BackColor = System.Drawing.Color.Transparent;
+            this.label23.Name = "label23";
+            this.helpProvider1.SetShowHelp(this.label23, ((bool)(resources.GetObject("label23.ShowHelp"))));
+            // 
+            // label20
+            // 
+            resources.ApplyResources(this.label20, "label20");
+            this.label20.BackColor = System.Drawing.Color.Transparent;
+            this.label20.Name = "label20";
+            this.helpProvider1.SetShowHelp(this.label20, ((bool)(resources.GetObject("label20.ShowHelp"))));
+            // 
+            // label18
+            // 
+            resources.ApplyResources(this.label18, "label18");
+            this.label18.BackColor = System.Drawing.Color.Transparent;
+            this.label18.Name = "label18";
+            this.helpProvider1.SetShowHelp(this.label18, ((bool)(resources.GetObject("label18.ShowHelp"))));
+            // 
+            // label19
+            // 
+            resources.ApplyResources(this.label19, "label19");
+            this.label19.BackColor = System.Drawing.Color.Transparent;
+            this.label19.Name = "label19";
+            this.helpProvider1.SetShowHelp(this.label19, ((bool)(resources.GetObject("label19.ShowHelp"))));
+            // 
+            // label17
+            // 
+            resources.ApplyResources(this.label17, "label17");
+            this.label17.BackColor = System.Drawing.Color.Transparent;
+            this.label17.Name = "label17";
+            this.helpProvider1.SetShowHelp(this.label17, ((bool)(resources.GetObject("label17.ShowHelp"))));
+            // 
+            // label16
+            // 
+            resources.ApplyResources(this.label16, "label16");
+            this.label16.BackColor = System.Drawing.Color.Transparent;
+            this.label16.Name = "label16";
+            this.helpProvider1.SetShowHelp(this.label16, ((bool)(resources.GetObject("label16.ShowHelp"))));
             // 
             // label12
             // 
@@ -2114,132 +2339,147 @@
             // 
             // p1plus_16
             // 
-            this.p1plus_16.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.p1plus_16.BackColor = System.Drawing.Color.LemonChiffon;
             resources.ApplyResources(this.p1plus_16, "p1plus_16");
             this.p1plus_16.Name = "p1plus_16";
             this.helpProvider1.SetShowHelp(this.p1plus_16, ((bool)(resources.GetObject("p1plus_16.ShowHelp"))));
             // 
             // p1r_16
             // 
+            this.p1r_16.BackColor = System.Drawing.Color.LemonChiffon;
             resources.ApplyResources(this.p1r_16, "p1r_16");
             this.p1r_16.Name = "p1r_16";
             this.helpProvider1.SetShowHelp(this.p1r_16, ((bool)(resources.GetObject("p1r_16.ShowHelp"))));
             // 
             // p1ls_16
             // 
+            this.p1ls_16.BackColor = System.Drawing.Color.LemonChiffon;
             resources.ApplyResources(this.p1ls_16, "p1ls_16");
             this.p1ls_16.Name = "p1ls_16";
             this.helpProvider1.SetShowHelp(this.p1ls_16, ((bool)(resources.GetObject("p1ls_16.ShowHelp"))));
             // 
             // p1iws_16
             // 
+            this.p1iws_16.BackColor = System.Drawing.Color.LemonChiffon;
             resources.ApplyResources(this.p1iws_16, "p1iws_16");
             this.p1iws_16.Name = "p1iws_16";
             this.helpProvider1.SetShowHelp(this.p1iws_16, ((bool)(resources.GetObject("p1iws_16.ShowHelp"))));
             // 
             // p1ib_16
             // 
+            this.p1ib_16.BackColor = System.Drawing.Color.LemonChiffon;
             resources.ApplyResources(this.p1ib_16, "p1ib_16");
             this.p1ib_16.Name = "p1ib_16";
             this.helpProvider1.SetShowHelp(this.p1ib_16, ((bool)(resources.GetObject("p1ib_16.ShowHelp"))));
             // 
             // p1pm_16
             // 
+            this.p1pm_16.BackColor = System.Drawing.Color.LemonChiffon;
             resources.ApplyResources(this.p1pm_16, "p1pm_16");
             this.p1pm_16.Name = "p1pm_16";
             this.helpProvider1.SetShowHelp(this.p1pm_16, ((bool)(resources.GetObject("p1pm_16.ShowHelp"))));
             // 
             // p1vw_16
             // 
-            this.p1vw_16.BackColor = System.Drawing.Color.Honeydew;
+            this.p1vw_16.BackColor = System.Drawing.Color.LemonChiffon;
             resources.ApplyResources(this.p1vw_16, "p1vw_16");
             this.p1vw_16.Name = "p1vw_16";
             this.helpProvider1.SetShowHelp(this.p1vw_16, ((bool)(resources.GetObject("p1vw_16.ShowHelp"))));
             // 
             // p1plus_17
             // 
-            this.p1plus_17.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.p1plus_17.BackColor = System.Drawing.Color.LemonChiffon;
             resources.ApplyResources(this.p1plus_17, "p1plus_17");
             this.p1plus_17.Name = "p1plus_17";
             this.helpProvider1.SetShowHelp(this.p1plus_17, ((bool)(resources.GetObject("p1plus_17.ShowHelp"))));
             // 
             // p1r_17
             // 
+            this.p1r_17.BackColor = System.Drawing.Color.LemonChiffon;
             resources.ApplyResources(this.p1r_17, "p1r_17");
             this.p1r_17.Name = "p1r_17";
             this.helpProvider1.SetShowHelp(this.p1r_17, ((bool)(resources.GetObject("p1r_17.ShowHelp"))));
             // 
             // p1ls_17
             // 
+            this.p1ls_17.BackColor = System.Drawing.Color.LemonChiffon;
             resources.ApplyResources(this.p1ls_17, "p1ls_17");
             this.p1ls_17.Name = "p1ls_17";
             this.helpProvider1.SetShowHelp(this.p1ls_17, ((bool)(resources.GetObject("p1ls_17.ShowHelp"))));
             // 
             // p1iws_17
             // 
+            this.p1iws_17.BackColor = System.Drawing.Color.LemonChiffon;
             resources.ApplyResources(this.p1iws_17, "p1iws_17");
             this.p1iws_17.Name = "p1iws_17";
             this.helpProvider1.SetShowHelp(this.p1iws_17, ((bool)(resources.GetObject("p1iws_17.ShowHelp"))));
             // 
             // p1ib_17
             // 
+            this.p1ib_17.BackColor = System.Drawing.Color.LemonChiffon;
             resources.ApplyResources(this.p1ib_17, "p1ib_17");
             this.p1ib_17.Name = "p1ib_17";
             this.helpProvider1.SetShowHelp(this.p1ib_17, ((bool)(resources.GetObject("p1ib_17.ShowHelp"))));
             // 
             // p1pm_17
             // 
+            this.p1pm_17.BackColor = System.Drawing.Color.LemonChiffon;
             resources.ApplyResources(this.p1pm_17, "p1pm_17");
             this.p1pm_17.Name = "p1pm_17";
             this.helpProvider1.SetShowHelp(this.p1pm_17, ((bool)(resources.GetObject("p1pm_17.ShowHelp"))));
             // 
             // p1vw_17
             // 
-            this.p1vw_17.BackColor = System.Drawing.Color.Honeydew;
+            this.p1vw_17.BackColor = System.Drawing.Color.LemonChiffon;
             resources.ApplyResources(this.p1vw_17, "p1vw_17");
             this.p1vw_17.Name = "p1vw_17";
             this.helpProvider1.SetShowHelp(this.p1vw_17, ((bool)(resources.GetObject("p1vw_17.ShowHelp"))));
             // 
             // p1plus_26
             // 
-            this.p1plus_26.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.p1plus_26.BackColor = System.Drawing.Color.LemonChiffon;
             resources.ApplyResources(this.p1plus_26, "p1plus_26");
             this.p1plus_26.Name = "p1plus_26";
             this.helpProvider1.SetShowHelp(this.p1plus_26, ((bool)(resources.GetObject("p1plus_26.ShowHelp"))));
             // 
             // p1r_26
             // 
+            this.p1r_26.BackColor = System.Drawing.Color.LemonChiffon;
             resources.ApplyResources(this.p1r_26, "p1r_26");
             this.p1r_26.Name = "p1r_26";
             this.helpProvider1.SetShowHelp(this.p1r_26, ((bool)(resources.GetObject("p1r_26.ShowHelp"))));
             // 
             // p1ls_26
             // 
+            this.p1ls_26.BackColor = System.Drawing.Color.LemonChiffon;
             resources.ApplyResources(this.p1ls_26, "p1ls_26");
             this.p1ls_26.Name = "p1ls_26";
             this.helpProvider1.SetShowHelp(this.p1ls_26, ((bool)(resources.GetObject("p1ls_26.ShowHelp"))));
             // 
             // p1iws_26
             // 
+            this.p1iws_26.BackColor = System.Drawing.Color.LemonChiffon;
             resources.ApplyResources(this.p1iws_26, "p1iws_26");
             this.p1iws_26.Name = "p1iws_26";
             this.helpProvider1.SetShowHelp(this.p1iws_26, ((bool)(resources.GetObject("p1iws_26.ShowHelp"))));
             // 
             // p1ib_26
             // 
+            this.p1ib_26.BackColor = System.Drawing.Color.LemonChiffon;
             resources.ApplyResources(this.p1ib_26, "p1ib_26");
             this.p1ib_26.Name = "p1ib_26";
             this.helpProvider1.SetShowHelp(this.p1ib_26, ((bool)(resources.GetObject("p1ib_26.ShowHelp"))));
             // 
             // p1pm_26
             // 
+            this.p1pm_26.BackColor = System.Drawing.Color.LemonChiffon;
             resources.ApplyResources(this.p1pm_26, "p1pm_26");
             this.p1pm_26.Name = "p1pm_26";
             this.helpProvider1.SetShowHelp(this.p1pm_26, ((bool)(resources.GetObject("p1pm_26.ShowHelp"))));
             // 
             // p1vw_26
             // 
-            this.p1vw_26.BackColor = System.Drawing.Color.Honeydew;
+            this.p1vw_26.BackColor = System.Drawing.Color.LemonChiffon;
             resources.ApplyResources(this.p1vw_26, "p1vw_26");
             this.p1vw_26.Name = "p1vw_26";
             this.helpProvider1.SetShowHelp(this.p1vw_26, ((bool)(resources.GetObject("p1vw_26.ShowHelp"))));
@@ -2327,836 +2567,6 @@
             this.p1vw_0.BackColor = System.Drawing.Color.LightYellow;
             resources.ApplyResources(this.p1vw_0, "p1vw_0");
             this.p1vw_0.Name = "p1vw_0";
-            // 
-            // tabPage1
-            // 
-            this.tabPage1.BackColor = System.Drawing.Color.Transparent;
-            this.tabPage1.Controls.Add(this.tab2);
-            this.tabPage1.Controls.Add(this.pictureBox12);
-            this.tabPage1.Controls.Add(this.label3);
-            resources.ApplyResources(this.tabPage1, "tabPage1");
-            this.tabPage1.Name = "tabPage1";
-            // 
-            // tab2
-            // 
-            this.tab2.Controls.Add(this.tabPage2);
-            this.tab2.Controls.Add(this.tab_bestellung);
-            resources.ApplyResources(this.tab2, "tab2");
-            this.tab2.Name = "tab2";
-            this.tab2.SelectedIndex = 0;
-            this.helpProvider1.SetShowHelp(this.tab2, ((bool)(resources.GetObject("tab2.ShowHelp"))));
-            // 
-            // tabPage2
-            // 
-            this.tabPage2.BackColor = System.Drawing.Color.Transparent;
-            this.tabPage2.Controls.Add(this.dataGridViewKTeil);
-            resources.ApplyResources(this.tabPage2, "tabPage2");
-            this.tabPage2.Name = "tabPage2";
-            this.helpProvider1.SetShowHelp(this.tabPage2, ((bool)(resources.GetObject("tabPage2.ShowHelp"))));
-            // 
-            // dataGridViewKTeil
-            // 
-            this.dataGridViewKTeil.AllowUserToAddRows = false;
-            this.dataGridViewKTeil.AllowUserToDeleteRows = false;
-            this.dataGridViewKTeil.BackgroundColor = System.Drawing.SystemColors.Control;
-            this.dataGridViewKTeil.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridViewKTeil.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewKTeil.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewLinkColumn1,
-            this.dataGridViewTextBoxColumn6,
-            this.dataGridViewTextBoxColumn11,
-            this.dataGridViewTextBoxColumn13,
-            this.dataGridViewTextBoxColumn14,
-            this.dataGridViewTextBoxColumn15,
-            this.dataGridViewTextBoxColumn16,
-            this.dataGridViewTextBoxColumn17,
-            this.dataGridViewTextBoxColumn18,
-            this.b1,
-            this.dataGridViewTextBoxColumn19,
-            this.b2,
-            this.dataGridViewTextBoxColumn20,
-            this.b3,
-            this.dataGridViewTextBoxColumn21,
-            this.b4});
-            resources.ApplyResources(this.dataGridViewKTeil, "dataGridViewKTeil");
-            this.dataGridViewKTeil.Name = "dataGridViewKTeil";
-            this.helpProvider1.SetShowHelp(this.dataGridViewKTeil, ((bool)(resources.GetObject("dataGridViewKTeil.ShowHelp"))));
-            this.dataGridViewKTeil.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewKTeil_CellContentClick_1);
-            // 
-            // dataGridViewLinkColumn1
-            // 
-            resources.ApplyResources(this.dataGridViewLinkColumn1, "dataGridViewLinkColumn1");
-            this.dataGridViewLinkColumn1.Name = "dataGridViewLinkColumn1";
-            this.dataGridViewLinkColumn1.ReadOnly = true;
-            this.dataGridViewLinkColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewLinkColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            // 
-            // dataGridViewTextBoxColumn6
-            // 
-            resources.ApplyResources(this.dataGridViewTextBoxColumn6, "dataGridViewTextBoxColumn6");
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            this.dataGridViewTextBoxColumn6.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn11
-            // 
-            resources.ApplyResources(this.dataGridViewTextBoxColumn11, "dataGridViewTextBoxColumn11");
-            this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
-            this.dataGridViewTextBoxColumn11.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn13
-            // 
-            resources.ApplyResources(this.dataGridViewTextBoxColumn13, "dataGridViewTextBoxColumn13");
-            this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
-            this.dataGridViewTextBoxColumn13.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn14
-            // 
-            resources.ApplyResources(this.dataGridViewTextBoxColumn14, "dataGridViewTextBoxColumn14");
-            this.dataGridViewTextBoxColumn14.Name = "dataGridViewTextBoxColumn14";
-            this.dataGridViewTextBoxColumn14.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn15
-            // 
-            resources.ApplyResources(this.dataGridViewTextBoxColumn15, "dataGridViewTextBoxColumn15");
-            this.dataGridViewTextBoxColumn15.Name = "dataGridViewTextBoxColumn15";
-            this.dataGridViewTextBoxColumn15.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn16
-            // 
-            resources.ApplyResources(this.dataGridViewTextBoxColumn16, "dataGridViewTextBoxColumn16");
-            this.dataGridViewTextBoxColumn16.Name = "dataGridViewTextBoxColumn16";
-            this.dataGridViewTextBoxColumn16.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn17
-            // 
-            resources.ApplyResources(this.dataGridViewTextBoxColumn17, "dataGridViewTextBoxColumn17");
-            this.dataGridViewTextBoxColumn17.Name = "dataGridViewTextBoxColumn17";
-            this.dataGridViewTextBoxColumn17.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn18
-            // 
-            resources.ApplyResources(this.dataGridViewTextBoxColumn18, "dataGridViewTextBoxColumn18");
-            this.dataGridViewTextBoxColumn18.Name = "dataGridViewTextBoxColumn18";
-            // 
-            // b1
-            // 
-            resources.ApplyResources(this.b1, "b1");
-            this.b1.Name = "b1";
-            this.b1.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn19
-            // 
-            resources.ApplyResources(this.dataGridViewTextBoxColumn19, "dataGridViewTextBoxColumn19");
-            this.dataGridViewTextBoxColumn19.Name = "dataGridViewTextBoxColumn19";
-            // 
-            // b2
-            // 
-            resources.ApplyResources(this.b2, "b2");
-            this.b2.Name = "b2";
-            this.b2.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn20
-            // 
-            resources.ApplyResources(this.dataGridViewTextBoxColumn20, "dataGridViewTextBoxColumn20");
-            this.dataGridViewTextBoxColumn20.Name = "dataGridViewTextBoxColumn20";
-            // 
-            // b3
-            // 
-            resources.ApplyResources(this.b3, "b3");
-            this.b3.Name = "b3";
-            this.b3.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn21
-            // 
-            resources.ApplyResources(this.dataGridViewTextBoxColumn21, "dataGridViewTextBoxColumn21");
-            this.dataGridViewTextBoxColumn21.Name = "dataGridViewTextBoxColumn21";
-            // 
-            // b4
-            // 
-            resources.ApplyResources(this.b4, "b4");
-            this.b4.Name = "b4";
-            this.b4.ReadOnly = true;
-            // 
-            // tab_bestellung
-            // 
-            this.tab_bestellung.BackColor = System.Drawing.Color.Transparent;
-            this.tab_bestellung.Controls.Add(this.button1);
-            resources.ApplyResources(this.tab_bestellung, "tab_bestellung");
-            this.tab_bestellung.Name = "tab_bestellung";
-            // 
-            // button1
-            // 
-            resources.ApplyResources(this.button1, "button1");
-            this.button1.Name = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // pictureBox12
-            // 
-            resources.ApplyResources(this.pictureBox12, "pictureBox12");
-            this.pictureBox12.Name = "pictureBox12";
-            this.helpProvider1.SetShowHelp(this.pictureBox12, ((bool)(resources.GetObject("pictureBox12.ShowHelp"))));
-            this.pictureBox12.TabStop = false;
-            // 
-            // label3
-            // 
-            resources.ApplyResources(this.label3, "label3");
-            this.label3.Name = "label3";
-            this.helpProvider1.SetShowHelp(this.label3, ((bool)(resources.GetObject("label3.ShowHelp"))));
-            // 
-            // openFileDialog
-            // 
-            this.openFileDialog.FileName = "openFileDialog";
-            // 
-            // menu
-            // 
-            this.menu.BackColor = System.Drawing.Color.Transparent;
-            this.menu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.dateiToolStripMenuItem,
-            this.einstellungenToolStripMenuItem,
-            this.scimToolStripMenuItem});
-            resources.ApplyResources(this.menu, "menu");
-            this.menu.Name = "menu";
-            // 
-            // dateiToolStripMenuItem
-            // 
-            this.dateiToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.dateiÖffnenToolStripMenuItem,
-            this.xMLexportToolStripMenuItem,
-            this.toolStripSeparator1,
-            this.schließenToolStripMenuItem});
-            this.dateiToolStripMenuItem.Name = "dateiToolStripMenuItem";
-            resources.ApplyResources(this.dateiToolStripMenuItem, "dateiToolStripMenuItem");
-            // 
-            // dateiÖffnenToolStripMenuItem
-            // 
-            resources.ApplyResources(this.dateiÖffnenToolStripMenuItem, "dateiÖffnenToolStripMenuItem");
-            this.dateiÖffnenToolStripMenuItem.Name = "dateiÖffnenToolStripMenuItem";
-            this.dateiÖffnenToolStripMenuItem.Click += new System.EventHandler(this.dateiÖffnenToolStripMenuItem_Click);
-            // 
-            // xMLexportToolStripMenuItem
-            // 
-            resources.ApplyResources(this.xMLexportToolStripMenuItem, "xMLexportToolStripMenuItem");
-            this.xMLexportToolStripMenuItem.Name = "xMLexportToolStripMenuItem";
-            // 
-            // toolStripSeparator1
-            // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            resources.ApplyResources(this.toolStripSeparator1, "toolStripSeparator1");
-            // 
-            // schließenToolStripMenuItem
-            // 
-            resources.ApplyResources(this.schließenToolStripMenuItem, "schließenToolStripMenuItem");
-            this.schließenToolStripMenuItem.Name = "schließenToolStripMenuItem";
-            this.schließenToolStripMenuItem.Click += new System.EventHandler(this.schließenToolStripMenuItem_Click_1);
-            // 
-            // einstellungenToolStripMenuItem
-            // 
-            this.einstellungenToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.hilfeToolStripMenuItem,
-            this.spracheToolStripMenuItem1,
-            this.gewichtungToolStripMenuItem});
-            this.einstellungenToolStripMenuItem.Name = "einstellungenToolStripMenuItem";
-            resources.ApplyResources(this.einstellungenToolStripMenuItem, "einstellungenToolStripMenuItem");
-            // 
-            // hilfeToolStripMenuItem
-            // 
-            this.hilfeToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.handbuchToolStripMenuItem});
-            resources.ApplyResources(this.hilfeToolStripMenuItem, "hilfeToolStripMenuItem");
-            this.hilfeToolStripMenuItem.Name = "hilfeToolStripMenuItem";
-            // 
-            // handbuchToolStripMenuItem
-            // 
-            this.handbuchToolStripMenuItem.Name = "handbuchToolStripMenuItem";
-            resources.ApplyResources(this.handbuchToolStripMenuItem, "handbuchToolStripMenuItem");
-            this.handbuchToolStripMenuItem.Click += new System.EventHandler(this.handbuchToolStripMenuItem_Click);
-            // 
-            // spracheToolStripMenuItem1
-            // 
-            this.spracheToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.deutschToolStripMenuItem1,
-            this.englischToolStripMenuItem1});
-            this.spracheToolStripMenuItem1.Name = "spracheToolStripMenuItem1";
-            resources.ApplyResources(this.spracheToolStripMenuItem1, "spracheToolStripMenuItem1");
-            // 
-            // deutschToolStripMenuItem1
-            // 
-            this.deutschToolStripMenuItem1.Checked = true;
-            this.deutschToolStripMenuItem1.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.deutschToolStripMenuItem1.Name = "deutschToolStripMenuItem1";
-            resources.ApplyResources(this.deutschToolStripMenuItem1, "deutschToolStripMenuItem1");
-            this.deutschToolStripMenuItem1.Click += new System.EventHandler(this.deutschToolStripMenuItem1_Click);
-            // 
-            // englischToolStripMenuItem1
-            // 
-            this.englischToolStripMenuItem1.Name = "englischToolStripMenuItem1";
-            resources.ApplyResources(this.englischToolStripMenuItem1, "englischToolStripMenuItem1");
-            this.englischToolStripMenuItem1.Click += new System.EventHandler(this.englischToolStripMenuItem1_Click);
-            // 
-            // gewichtungToolStripMenuItem
-            // 
-            resources.ApplyResources(this.gewichtungToolStripMenuItem, "gewichtungToolStripMenuItem");
-            this.gewichtungToolStripMenuItem.Name = "gewichtungToolStripMenuItem";
-            this.gewichtungToolStripMenuItem.Click += new System.EventHandler(this.gewichtungToolStripMenuItem_Click);
-            // 
-            // scimToolStripMenuItem
-            // 
-            this.scimToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.startSeiteToolStripMenuItem});
-            this.scimToolStripMenuItem.Name = "scimToolStripMenuItem";
-            resources.ApplyResources(this.scimToolStripMenuItem, "scimToolStripMenuItem");
-            // 
-            // startSeiteToolStripMenuItem
-            // 
-            this.startSeiteToolStripMenuItem.Name = "startSeiteToolStripMenuItem";
-            resources.ApplyResources(this.startSeiteToolStripMenuItem, "startSeiteToolStripMenuItem");
-            this.startSeiteToolStripMenuItem.Click += new System.EventHandler(this.startSeiteToolStripMenuItem_Click);
-            // 
-            // imageList1
-            // 
-            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
-            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
-            this.imageList1.Images.SetKeyName(0, "red");
-            this.imageList1.Images.SetKeyName(1, "yellow");
-            this.imageList1.Images.SetKeyName(2, "green");
-            // 
-            // helpProvider1
-            // 
-            resources.ApplyResources(this.helpProvider1, "helpProvider1");
-            // 
-            // label16
-            // 
-            resources.ApplyResources(this.label16, "label16");
-            this.label16.BackColor = System.Drawing.Color.Transparent;
-            this.label16.Name = "label16";
-            this.helpProvider1.SetShowHelp(this.label16, ((bool)(resources.GetObject("label16.ShowHelp"))));
-            // 
-            // label17
-            // 
-            resources.ApplyResources(this.label17, "label17");
-            this.label17.BackColor = System.Drawing.Color.Transparent;
-            this.label17.Name = "label17";
-            this.helpProvider1.SetShowHelp(this.label17, ((bool)(resources.GetObject("label17.ShowHelp"))));
-            // 
-            // label18
-            // 
-            resources.ApplyResources(this.label18, "label18");
-            this.label18.BackColor = System.Drawing.Color.Transparent;
-            this.label18.Name = "label18";
-            this.helpProvider1.SetShowHelp(this.label18, ((bool)(resources.GetObject("label18.ShowHelp"))));
-            // 
-            // label19
-            // 
-            resources.ApplyResources(this.label19, "label19");
-            this.label19.BackColor = System.Drawing.Color.Transparent;
-            this.label19.Name = "label19";
-            this.helpProvider1.SetShowHelp(this.label19, ((bool)(resources.GetObject("label19.ShowHelp"))));
-            // 
-            // label20
-            // 
-            resources.ApplyResources(this.label20, "label20");
-            this.label20.BackColor = System.Drawing.Color.Transparent;
-            this.label20.Name = "label20";
-            this.helpProvider1.SetShowHelp(this.label20, ((bool)(resources.GetObject("label20.ShowHelp"))));
-            // 
-            // label21
-            // 
-            resources.ApplyResources(this.label21, "label21");
-            this.label21.BackColor = System.Drawing.Color.Transparent;
-            this.label21.Name = "label21";
-            this.helpProvider1.SetShowHelp(this.label21, ((bool)(resources.GetObject("label21.ShowHelp"))));
-            // 
-            // label22
-            // 
-            resources.ApplyResources(this.label22, "label22");
-            this.label22.BackColor = System.Drawing.Color.Transparent;
-            this.label22.Name = "label22";
-            this.helpProvider1.SetShowHelp(this.label22, ((bool)(resources.GetObject("label22.ShowHelp"))));
-            // 
-            // label23
-            // 
-            resources.ApplyResources(this.label23, "label23");
-            this.label23.BackColor = System.Drawing.Color.Transparent;
-            this.label23.Name = "label23";
-            this.helpProvider1.SetShowHelp(this.label23, ((bool)(resources.GetObject("label23.ShowHelp"))));
-            // 
-            // label24
-            // 
-            resources.ApplyResources(this.label24, "label24");
-            this.label24.BackColor = System.Drawing.Color.Transparent;
-            this.label24.Name = "label24";
-            this.helpProvider1.SetShowHelp(this.label24, ((bool)(resources.GetObject("label24.ShowHelp"))));
-            // 
-            // label25
-            // 
-            resources.ApplyResources(this.label25, "label25");
-            this.label25.BackColor = System.Drawing.Color.Transparent;
-            this.label25.Name = "label25";
-            this.helpProvider1.SetShowHelp(this.label25, ((bool)(resources.GetObject("label25.ShowHelp"))));
-            // 
-            // label26
-            // 
-            resources.ApplyResources(this.label26, "label26");
-            this.label26.BackColor = System.Drawing.Color.Transparent;
-            this.label26.Name = "label26";
-            this.helpProvider1.SetShowHelp(this.label26, ((bool)(resources.GetObject("label26.ShowHelp"))));
-            // 
-            // label15
-            // 
-            resources.ApplyResources(this.label15, "label15");
-            this.label15.BackColor = System.Drawing.Color.Transparent;
-            this.label15.Name = "label15";
-            this.helpProvider1.SetShowHelp(this.label15, ((bool)(resources.GetObject("label15.ShowHelp"))));
-            // 
-            // label27
-            // 
-            resources.ApplyResources(this.label27, "label27");
-            this.label27.BackColor = System.Drawing.Color.Transparent;
-            this.label27.Name = "label27";
-            this.helpProvider1.SetShowHelp(this.label27, ((bool)(resources.GetObject("label27.ShowHelp"))));
-            // 
-            // label28
-            // 
-            resources.ApplyResources(this.label28, "label28");
-            this.label28.BackColor = System.Drawing.Color.Transparent;
-            this.label28.Name = "label28";
-            this.helpProvider1.SetShowHelp(this.label28, ((bool)(resources.GetObject("label28.ShowHelp"))));
-            // 
-            // label29
-            // 
-            resources.ApplyResources(this.label29, "label29");
-            this.label29.BackColor = System.Drawing.Color.Transparent;
-            this.label29.Name = "label29";
-            this.helpProvider1.SetShowHelp(this.label29, ((bool)(resources.GetObject("label29.ShowHelp"))));
-            // 
-            // label30
-            // 
-            resources.ApplyResources(this.label30, "label30");
-            this.label30.BackColor = System.Drawing.Color.Transparent;
-            this.label30.Name = "label30";
-            this.helpProvider1.SetShowHelp(this.label30, ((bool)(resources.GetObject("label30.ShowHelp"))));
-            // 
-            // label31
-            // 
-            resources.ApplyResources(this.label31, "label31");
-            this.label31.BackColor = System.Drawing.Color.Transparent;
-            this.label31.Name = "label31";
-            this.helpProvider1.SetShowHelp(this.label31, ((bool)(resources.GetObject("label31.ShowHelp"))));
-            // 
-            // label32
-            // 
-            resources.ApplyResources(this.label32, "label32");
-            this.label32.BackColor = System.Drawing.Color.Transparent;
-            this.label32.Name = "label32";
-            this.helpProvider1.SetShowHelp(this.label32, ((bool)(resources.GetObject("label32.ShowHelp"))));
-            // 
-            // label33
-            // 
-            resources.ApplyResources(this.label33, "label33");
-            this.label33.BackColor = System.Drawing.Color.Transparent;
-            this.label33.Name = "label33";
-            this.helpProvider1.SetShowHelp(this.label33, ((bool)(resources.GetObject("label33.ShowHelp"))));
-            // 
-            // label34
-            // 
-            resources.ApplyResources(this.label34, "label34");
-            this.label34.BackColor = System.Drawing.Color.Transparent;
-            this.label34.Name = "label34";
-            this.helpProvider1.SetShowHelp(this.label34, ((bool)(resources.GetObject("label34.ShowHelp"))));
-            // 
-            // label35
-            // 
-            resources.ApplyResources(this.label35, "label35");
-            this.label35.BackColor = System.Drawing.Color.Transparent;
-            this.label35.Name = "label35";
-            this.helpProvider1.SetShowHelp(this.label35, ((bool)(resources.GetObject("label35.ShowHelp"))));
-            // 
-            // label36
-            // 
-            resources.ApplyResources(this.label36, "label36");
-            this.label36.BackColor = System.Drawing.Color.Transparent;
-            this.label36.Name = "label36";
-            this.helpProvider1.SetShowHelp(this.label36, ((bool)(resources.GetObject("label36.ShowHelp"))));
-            // 
-            // label37
-            // 
-            resources.ApplyResources(this.label37, "label37");
-            this.label37.BackColor = System.Drawing.Color.Transparent;
-            this.label37.Name = "label37";
-            this.helpProvider1.SetShowHelp(this.label37, ((bool)(resources.GetObject("label37.ShowHelp"))));
-            // 
-            // label38
-            // 
-            resources.ApplyResources(this.label38, "label38");
-            this.label38.BackColor = System.Drawing.Color.Transparent;
-            this.label38.Name = "label38";
-            this.helpProvider1.SetShowHelp(this.label38, ((bool)(resources.GetObject("label38.ShowHelp"))));
-            // 
-            // label39
-            // 
-            resources.ApplyResources(this.label39, "label39");
-            this.label39.BackColor = System.Drawing.Color.Transparent;
-            this.label39.Name = "label39";
-            this.helpProvider1.SetShowHelp(this.label39, ((bool)(resources.GetObject("label39.ShowHelp"))));
-            // 
-            // label40
-            // 
-            resources.ApplyResources(this.label40, "label40");
-            this.label40.BackColor = System.Drawing.Color.Transparent;
-            this.label40.Name = "label40";
-            this.helpProvider1.SetShowHelp(this.label40, ((bool)(resources.GetObject("label40.ShowHelp"))));
-            // 
-            // label41
-            // 
-            resources.ApplyResources(this.label41, "label41");
-            this.label41.BackColor = System.Drawing.Color.Transparent;
-            this.label41.Name = "label41";
-            this.helpProvider1.SetShowHelp(this.label41, ((bool)(resources.GetObject("label41.ShowHelp"))));
-            // 
-            // label42
-            // 
-            resources.ApplyResources(this.label42, "label42");
-            this.label42.BackColor = System.Drawing.Color.Transparent;
-            this.label42.Name = "label42";
-            this.helpProvider1.SetShowHelp(this.label42, ((bool)(resources.GetObject("label42.ShowHelp"))));
-            // 
-            // label43
-            // 
-            resources.ApplyResources(this.label43, "label43");
-            this.label43.BackColor = System.Drawing.Color.Transparent;
-            this.label43.Name = "label43";
-            this.helpProvider1.SetShowHelp(this.label43, ((bool)(resources.GetObject("label43.ShowHelp"))));
-            // 
-            // label44
-            // 
-            resources.ApplyResources(this.label44, "label44");
-            this.label44.BackColor = System.Drawing.Color.Transparent;
-            this.label44.Name = "label44";
-            this.helpProvider1.SetShowHelp(this.label44, ((bool)(resources.GetObject("label44.ShowHelp"))));
-            // 
-            // label45
-            // 
-            resources.ApplyResources(this.label45, "label45");
-            this.label45.BackColor = System.Drawing.Color.Transparent;
-            this.label45.Name = "label45";
-            this.helpProvider1.SetShowHelp(this.label45, ((bool)(resources.GetObject("label45.ShowHelp"))));
-            // 
-            // label46
-            // 
-            resources.ApplyResources(this.label46, "label46");
-            this.label46.BackColor = System.Drawing.Color.Transparent;
-            this.label46.Name = "label46";
-            this.helpProvider1.SetShowHelp(this.label46, ((bool)(resources.GetObject("label46.ShowHelp"))));
-            // 
-            // label47
-            // 
-            resources.ApplyResources(this.label47, "label47");
-            this.label47.BackColor = System.Drawing.Color.Transparent;
-            this.label47.Name = "label47";
-            this.helpProvider1.SetShowHelp(this.label47, ((bool)(resources.GetObject("label47.ShowHelp"))));
-            // 
-            // label48
-            // 
-            resources.ApplyResources(this.label48, "label48");
-            this.label48.BackColor = System.Drawing.Color.Transparent;
-            this.label48.Name = "label48";
-            this.helpProvider1.SetShowHelp(this.label48, ((bool)(resources.GetObject("label48.ShowHelp"))));
-            // 
-            // label49
-            // 
-            resources.ApplyResources(this.label49, "label49");
-            this.label49.BackColor = System.Drawing.Color.Transparent;
-            this.label49.Name = "label49";
-            this.helpProvider1.SetShowHelp(this.label49, ((bool)(resources.GetObject("label49.ShowHelp"))));
-            // 
-            // label50
-            // 
-            resources.ApplyResources(this.label50, "label50");
-            this.label50.BackColor = System.Drawing.Color.Transparent;
-            this.label50.Name = "label50";
-            this.helpProvider1.SetShowHelp(this.label50, ((bool)(resources.GetObject("label50.ShowHelp"))));
-            // 
-            // label51
-            // 
-            resources.ApplyResources(this.label51, "label51");
-            this.label51.BackColor = System.Drawing.Color.Transparent;
-            this.label51.Name = "label51";
-            this.helpProvider1.SetShowHelp(this.label51, ((bool)(resources.GetObject("label51.ShowHelp"))));
-            // 
-            // label52
-            // 
-            resources.ApplyResources(this.label52, "label52");
-            this.label52.BackColor = System.Drawing.Color.Transparent;
-            this.label52.Name = "label52";
-            this.helpProvider1.SetShowHelp(this.label52, ((bool)(resources.GetObject("label52.ShowHelp"))));
-            // 
-            // label53
-            // 
-            resources.ApplyResources(this.label53, "label53");
-            this.label53.BackColor = System.Drawing.Color.Transparent;
-            this.label53.Name = "label53";
-            this.helpProvider1.SetShowHelp(this.label53, ((bool)(resources.GetObject("label53.ShowHelp"))));
-            // 
-            // label54
-            // 
-            resources.ApplyResources(this.label54, "label54");
-            this.label54.BackColor = System.Drawing.Color.Transparent;
-            this.label54.Name = "label54";
-            this.helpProvider1.SetShowHelp(this.label54, ((bool)(resources.GetObject("label54.ShowHelp"))));
-            // 
-            // label55
-            // 
-            resources.ApplyResources(this.label55, "label55");
-            this.label55.BackColor = System.Drawing.Color.Transparent;
-            this.label55.Name = "label55";
-            this.helpProvider1.SetShowHelp(this.label55, ((bool)(resources.GetObject("label55.ShowHelp"))));
-            // 
-            // label56
-            // 
-            resources.ApplyResources(this.label56, "label56");
-            this.label56.BackColor = System.Drawing.Color.Transparent;
-            this.label56.Name = "label56";
-            this.helpProvider1.SetShowHelp(this.label56, ((bool)(resources.GetObject("label56.ShowHelp"))));
-            // 
-            // label57
-            // 
-            resources.ApplyResources(this.label57, "label57");
-            this.label57.BackColor = System.Drawing.Color.Transparent;
-            this.label57.Name = "label57";
-            this.helpProvider1.SetShowHelp(this.label57, ((bool)(resources.GetObject("label57.ShowHelp"))));
-            // 
-            // label58
-            // 
-            resources.ApplyResources(this.label58, "label58");
-            this.label58.BackColor = System.Drawing.Color.Transparent;
-            this.label58.Name = "label58";
-            this.helpProvider1.SetShowHelp(this.label58, ((bool)(resources.GetObject("label58.ShowHelp"))));
-            // 
-            // label59
-            // 
-            resources.ApplyResources(this.label59, "label59");
-            this.label59.BackColor = System.Drawing.Color.Transparent;
-            this.label59.Name = "label59";
-            this.helpProvider1.SetShowHelp(this.label59, ((bool)(resources.GetObject("label59.ShowHelp"))));
-            // 
-            // label60
-            // 
-            resources.ApplyResources(this.label60, "label60");
-            this.label60.BackColor = System.Drawing.Color.Transparent;
-            this.label60.Name = "label60";
-            this.helpProvider1.SetShowHelp(this.label60, ((bool)(resources.GetObject("label60.ShowHelp"))));
-            // 
-            // label61
-            // 
-            resources.ApplyResources(this.label61, "label61");
-            this.label61.BackColor = System.Drawing.Color.Transparent;
-            this.label61.Name = "label61";
-            this.helpProvider1.SetShowHelp(this.label61, ((bool)(resources.GetObject("label61.ShowHelp"))));
-            // 
-            // label62
-            // 
-            resources.ApplyResources(this.label62, "label62");
-            this.label62.BackColor = System.Drawing.Color.Transparent;
-            this.label62.Name = "label62";
-            this.helpProvider1.SetShowHelp(this.label62, ((bool)(resources.GetObject("label62.ShowHelp"))));
-            // 
-            // label63
-            // 
-            resources.ApplyResources(this.label63, "label63");
-            this.label63.BackColor = System.Drawing.Color.Transparent;
-            this.label63.Name = "label63";
-            this.helpProvider1.SetShowHelp(this.label63, ((bool)(resources.GetObject("label63.ShowHelp"))));
-            // 
-            // label64
-            // 
-            resources.ApplyResources(this.label64, "label64");
-            this.label64.BackColor = System.Drawing.Color.Transparent;
-            this.label64.Name = "label64";
-            this.helpProvider1.SetShowHelp(this.label64, ((bool)(resources.GetObject("label64.ShowHelp"))));
-            // 
-            // label65
-            // 
-            resources.ApplyResources(this.label65, "label65");
-            this.label65.BackColor = System.Drawing.Color.Transparent;
-            this.label65.Name = "label65";
-            this.helpProvider1.SetShowHelp(this.label65, ((bool)(resources.GetObject("label65.ShowHelp"))));
-            // 
-            // label66
-            // 
-            resources.ApplyResources(this.label66, "label66");
-            this.label66.BackColor = System.Drawing.Color.Transparent;
-            this.label66.Name = "label66";
-            this.helpProvider1.SetShowHelp(this.label66, ((bool)(resources.GetObject("label66.ShowHelp"))));
-            // 
-            // label67
-            // 
-            resources.ApplyResources(this.label67, "label67");
-            this.label67.BackColor = System.Drawing.Color.Transparent;
-            this.label67.Name = "label67";
-            this.helpProvider1.SetShowHelp(this.label67, ((bool)(resources.GetObject("label67.ShowHelp"))));
-            // 
-            // label68
-            // 
-            resources.ApplyResources(this.label68, "label68");
-            this.label68.BackColor = System.Drawing.Color.Transparent;
-            this.label68.Name = "label68";
-            this.helpProvider1.SetShowHelp(this.label68, ((bool)(resources.GetObject("label68.ShowHelp"))));
-            // 
-            // label69
-            // 
-            resources.ApplyResources(this.label69, "label69");
-            this.label69.BackColor = System.Drawing.Color.Transparent;
-            this.label69.Name = "label69";
-            this.helpProvider1.SetShowHelp(this.label69, ((bool)(resources.GetObject("label69.ShowHelp"))));
-            // 
-            // label70
-            // 
-            resources.ApplyResources(this.label70, "label70");
-            this.label70.BackColor = System.Drawing.Color.Transparent;
-            this.label70.Name = "label70";
-            this.helpProvider1.SetShowHelp(this.label70, ((bool)(resources.GetObject("label70.ShowHelp"))));
-            // 
-            // label71
-            // 
-            resources.ApplyResources(this.label71, "label71");
-            this.label71.BackColor = System.Drawing.Color.Transparent;
-            this.label71.Name = "label71";
-            this.helpProvider1.SetShowHelp(this.label71, ((bool)(resources.GetObject("label71.ShowHelp"))));
-            // 
-            // label72
-            // 
-            resources.ApplyResources(this.label72, "label72");
-            this.label72.BackColor = System.Drawing.Color.Transparent;
-            this.label72.Name = "label72";
-            this.helpProvider1.SetShowHelp(this.label72, ((bool)(resources.GetObject("label72.ShowHelp"))));
-            // 
-            // label73
-            // 
-            resources.ApplyResources(this.label73, "label73");
-            this.label73.BackColor = System.Drawing.Color.Transparent;
-            this.label73.Name = "label73";
-            this.helpProvider1.SetShowHelp(this.label73, ((bool)(resources.GetObject("label73.ShowHelp"))));
-            // 
-            // label74
-            // 
-            resources.ApplyResources(this.label74, "label74");
-            this.label74.BackColor = System.Drawing.Color.Transparent;
-            this.label74.Name = "label74";
-            this.helpProvider1.SetShowHelp(this.label74, ((bool)(resources.GetObject("label74.ShowHelp"))));
-            // 
-            // label75
-            // 
-            resources.ApplyResources(this.label75, "label75");
-            this.label75.BackColor = System.Drawing.Color.Transparent;
-            this.label75.Name = "label75";
-            this.helpProvider1.SetShowHelp(this.label75, ((bool)(resources.GetObject("label75.ShowHelp"))));
-            // 
-            // label76
-            // 
-            resources.ApplyResources(this.label76, "label76");
-            this.label76.BackColor = System.Drawing.Color.Transparent;
-            this.label76.Name = "label76";
-            this.helpProvider1.SetShowHelp(this.label76, ((bool)(resources.GetObject("label76.ShowHelp"))));
-            // 
-            // label77
-            // 
-            resources.ApplyResources(this.label77, "label77");
-            this.label77.BackColor = System.Drawing.Color.Transparent;
-            this.label77.Name = "label77";
-            this.helpProvider1.SetShowHelp(this.label77, ((bool)(resources.GetObject("label77.ShowHelp"))));
-            // 
-            // label78
-            // 
-            resources.ApplyResources(this.label78, "label78");
-            this.label78.BackColor = System.Drawing.Color.Transparent;
-            this.label78.Name = "label78";
-            this.helpProvider1.SetShowHelp(this.label78, ((bool)(resources.GetObject("label78.ShowHelp"))));
-            // 
-            // label79
-            // 
-            resources.ApplyResources(this.label79, "label79");
-            this.label79.BackColor = System.Drawing.Color.Transparent;
-            this.label79.Name = "label79";
-            this.helpProvider1.SetShowHelp(this.label79, ((bool)(resources.GetObject("label79.ShowHelp"))));
-            // 
-            // label80
-            // 
-            resources.ApplyResources(this.label80, "label80");
-            this.label80.BackColor = System.Drawing.Color.Transparent;
-            this.label80.Name = "label80";
-            this.helpProvider1.SetShowHelp(this.label80, ((bool)(resources.GetObject("label80.ShowHelp"))));
-            // 
-            // label81
-            // 
-            resources.ApplyResources(this.label81, "label81");
-            this.label81.BackColor = System.Drawing.Color.Transparent;
-            this.label81.Name = "label81";
-            this.helpProvider1.SetShowHelp(this.label81, ((bool)(resources.GetObject("label81.ShowHelp"))));
-            // 
-            // label82
-            // 
-            resources.ApplyResources(this.label82, "label82");
-            this.label82.BackColor = System.Drawing.Color.Transparent;
-            this.label82.Name = "label82";
-            this.helpProvider1.SetShowHelp(this.label82, ((bool)(resources.GetObject("label82.ShowHelp"))));
-            // 
-            // label83
-            // 
-            resources.ApplyResources(this.label83, "label83");
-            this.label83.BackColor = System.Drawing.Color.Transparent;
-            this.label83.Name = "label83";
-            this.helpProvider1.SetShowHelp(this.label83, ((bool)(resources.GetObject("label83.ShowHelp"))));
-            // 
-            // label84
-            // 
-            resources.ApplyResources(this.label84, "label84");
-            this.label84.BackColor = System.Drawing.Color.Transparent;
-            this.label84.Name = "label84";
-            this.helpProvider1.SetShowHelp(this.label84, ((bool)(resources.GetObject("label84.ShowHelp"))));
-            // 
-            // label85
-            // 
-            resources.ApplyResources(this.label85, "label85");
-            this.label85.BackColor = System.Drawing.Color.Transparent;
-            this.label85.Name = "label85";
-            this.helpProvider1.SetShowHelp(this.label85, ((bool)(resources.GetObject("label85.ShowHelp"))));
-            // 
-            // label86
-            // 
-            resources.ApplyResources(this.label86, "label86");
-            this.label86.Name = "label86";
-            this.helpProvider1.SetShowHelp(this.label86, ((bool)(resources.GetObject("label86.ShowHelp"))));
-            // 
-            // label87
-            // 
-            resources.ApplyResources(this.label87, "label87");
-            this.label87.Name = "label87";
-            this.helpProvider1.SetShowHelp(this.label87, ((bool)(resources.GetObject("label87.ShowHelp"))));
-            // 
-            // label88
-            // 
-            resources.ApplyResources(this.label88, "label88");
-            this.label88.Name = "label88";
-            this.helpProvider1.SetShowHelp(this.label88, ((bool)(resources.GetObject("label88.ShowHelp"))));
-            // 
-            // label89
-            // 
-            resources.ApplyResources(this.label89, "label89");
-            this.label89.Name = "label89";
-            this.helpProvider1.SetShowHelp(this.label89, ((bool)(resources.GetObject("label89.ShowHelp"))));
-            // 
-            // label90
-            // 
-            resources.ApplyResources(this.label90, "label90");
-            this.label90.Name = "label90";
-            this.helpProvider1.SetShowHelp(this.label90, ((bool)(resources.GetObject("label90.ShowHelp"))));
-            // 
-            // label91
-            // 
-            resources.ApplyResources(this.label91, "label91");
-            this.label91.Name = "label91";
-            this.helpProvider1.SetShowHelp(this.label91, ((bool)(resources.GetObject("label91.ShowHelp"))));
             // 
             // tab_P2
             // 
@@ -5796,6 +5206,611 @@
             this.p3vw_0.Name = "p3vw_0";
             this.helpProvider1.SetShowHelp(this.p3vw_0, ((bool)(resources.GetObject("p3vw_0.ShowHelp"))));
             // 
+            // tab_eTeil
+            // 
+            this.tab_eTeil.BackColor = System.Drawing.Color.Transparent;
+            this.tab_eTeil.Controls.Add(this.cbMitOhne);
+            this.tab_eTeil.Controls.Add(this.rbReserve);
+            this.tab_eTeil.Controls.Add(this.picReadOnlyETeile);
+            this.tab_eTeil.Controls.Add(this.picResetETeil);
+            this.tab_eTeil.Controls.Add(this.picEditEteile);
+            this.tab_eTeil.Controls.Add(this.picSaveETeile);
+            this.tab_eTeil.Controls.Add(this.dataGridViewETeil);
+            resources.ApplyResources(this.tab_eTeil, "tab_eTeil");
+            this.tab_eTeil.Name = "tab_eTeil";
+            this.helpProvider1.SetShowHelp(this.tab_eTeil, ((bool)(resources.GetObject("tab_eTeil.ShowHelp"))));
+            // 
+            // cbMitOhne
+            // 
+            resources.ApplyResources(this.cbMitOhne, "cbMitOhne");
+            this.cbMitOhne.Checked = true;
+            this.cbMitOhne.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.helpProvider1.SetHelpKeyword(this.cbMitOhne, resources.GetString("cbMitOhne.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.cbMitOhne, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("cbMitOhne.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.cbMitOhne, resources.GetString("cbMitOhne.HelpString"));
+            this.cbMitOhne.Name = "cbMitOhne";
+            this.helpProvider1.SetShowHelp(this.cbMitOhne, ((bool)(resources.GetObject("cbMitOhne.ShowHelp"))));
+            this.cbMitOhne.UseVisualStyleBackColor = true;
+            this.cbMitOhne.CheckedChanged += new System.EventHandler(this.cbMitOhne_CheckedChanged);
+            // 
+            // rbReserve
+            // 
+            resources.ApplyResources(this.rbReserve, "rbReserve");
+            this.rbReserve.Checked = true;
+            this.rbReserve.Name = "rbReserve";
+            this.helpProvider1.SetShowHelp(this.rbReserve, ((bool)(resources.GetObject("rbReserve.ShowHelp"))));
+            this.rbReserve.TabStop = true;
+            this.rbReserve.UseVisualStyleBackColor = true;
+            // 
+            // picReadOnlyETeile
+            // 
+            this.picReadOnlyETeile.Cursor = System.Windows.Forms.Cursors.Hand;
+            resources.ApplyResources(this.picReadOnlyETeile, "picReadOnlyETeile");
+            this.picReadOnlyETeile.Name = "picReadOnlyETeile";
+            this.helpProvider1.SetShowHelp(this.picReadOnlyETeile, ((bool)(resources.GetObject("picReadOnlyETeile.ShowHelp"))));
+            this.picReadOnlyETeile.TabStop = false;
+            this.toolTip.SetToolTip(this.picReadOnlyETeile, resources.GetString("picReadOnlyETeile.ToolTip"));
+            this.picReadOnlyETeile.Click += new System.EventHandler(this.pictureReadOnly_Click);
+            // 
+            // picResetETeil
+            // 
+            this.picResetETeil.Cursor = System.Windows.Forms.Cursors.Hand;
+            resources.ApplyResources(this.picResetETeil, "picResetETeil");
+            this.picResetETeil.Name = "picResetETeil";
+            this.helpProvider1.SetShowHelp(this.picResetETeil, ((bool)(resources.GetObject("picResetETeil.ShowHelp"))));
+            this.picResetETeil.TabStop = false;
+            this.toolTip.SetToolTip(this.picResetETeil, resources.GetString("picResetETeil.ToolTip"));
+            this.picResetETeil.Click += new System.EventHandler(this.pictureResetETeil_Click);
+            // 
+            // picEditEteile
+            // 
+            this.picEditEteile.Cursor = System.Windows.Forms.Cursors.Hand;
+            resources.ApplyResources(this.picEditEteile, "picEditEteile");
+            this.picEditEteile.Name = "picEditEteile";
+            this.helpProvider1.SetShowHelp(this.picEditEteile, ((bool)(resources.GetObject("picEditEteile.ShowHelp"))));
+            this.picEditEteile.TabStop = false;
+            this.toolTip.SetToolTip(this.picEditEteile, resources.GetString("picEditEteile.ToolTip"));
+            this.picEditEteile.Click += new System.EventHandler(this.picEditEteile_Click);
+            // 
+            // picSaveETeile
+            // 
+            this.picSaveETeile.Cursor = System.Windows.Forms.Cursors.Hand;
+            resources.ApplyResources(this.picSaveETeile, "picSaveETeile");
+            this.picSaveETeile.Name = "picSaveETeile";
+            this.helpProvider1.SetShowHelp(this.picSaveETeile, ((bool)(resources.GetObject("picSaveETeile.ShowHelp"))));
+            this.picSaveETeile.TabStop = false;
+            this.toolTip.SetToolTip(this.picSaveETeile, resources.GetString("picSaveETeile.ToolTip"));
+            this.picSaveETeile.Click += new System.EventHandler(this.pictureSaveETeile_Click);
+            // 
+            // dataGridViewETeil
+            // 
+            this.dataGridViewETeil.AllowUserToAddRows = false;
+            this.dataGridViewETeil.AllowUserToDeleteRows = false;
+            this.dataGridViewETeil.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.dataGridViewETeil.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridViewETeil.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewETeil.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn3,
+            this.dataGridViewTextBoxColumn4,
+            this.dataGridViewImageColumn1,
+            this.colWarteschlange,
+            this.colBearbeitung,
+            this.colPlanung,
+            this.reserve});
+            resources.ApplyResources(this.dataGridViewETeil, "dataGridViewETeil");
+            this.dataGridViewETeil.Name = "dataGridViewETeil";
+            this.helpProvider1.SetShowHelp(this.dataGridViewETeil, ((bool)(resources.GetObject("dataGridViewETeil.ShowHelp"))));
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            resources.ApplyResources(this.dataGridViewTextBoxColumn1, "dataGridViewTextBoxColumn1");
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.dataGridViewTextBoxColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            resources.ApplyResources(this.dataGridViewTextBoxColumn2, "dataGridViewTextBoxColumn2");
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            resources.ApplyResources(this.dataGridViewTextBoxColumn3, "dataGridViewTextBoxColumn3");
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            resources.ApplyResources(this.dataGridViewTextBoxColumn4, "dataGridViewTextBoxColumn4");
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
+            // 
+            // dataGridViewImageColumn1
+            // 
+            resources.ApplyResources(this.dataGridViewImageColumn1, "dataGridViewImageColumn1");
+            this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
+            this.dataGridViewImageColumn1.ReadOnly = true;
+            this.dataGridViewImageColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // colWarteschlange
+            // 
+            resources.ApplyResources(this.colWarteschlange, "colWarteschlange");
+            this.colWarteschlange.Name = "colWarteschlange";
+            this.colWarteschlange.ReadOnly = true;
+            // 
+            // colBearbeitung
+            // 
+            resources.ApplyResources(this.colBearbeitung, "colBearbeitung");
+            this.colBearbeitung.Name = "colBearbeitung";
+            this.colBearbeitung.ReadOnly = true;
+            // 
+            // colPlanung
+            // 
+            resources.ApplyResources(this.colPlanung, "colPlanung");
+            this.colPlanung.Name = "colPlanung";
+            this.colPlanung.ReadOnly = true;
+            // 
+            // reserve
+            // 
+            resources.ApplyResources(this.reserve, "reserve");
+            this.reserve.Name = "reserve";
+            this.reserve.ReadOnly = true;
+            // 
+            // tab_APlatz
+            // 
+            this.tab_APlatz.BackColor = System.Drawing.Color.Transparent;
+            this.tab_APlatz.Controls.Add(this.picEditsAPlatz);
+            this.tab_APlatz.Controls.Add(this.rbRuestzeit);
+            this.tab_APlatz.Controls.Add(this.picReadOnlyAPlatz);
+            this.tab_APlatz.Controls.Add(this.picResetAPlatz);
+            this.tab_APlatz.Controls.Add(this.picSaveAPlatz);
+            this.tab_APlatz.Controls.Add(this.dataGridViewAPlatz);
+            resources.ApplyResources(this.tab_APlatz, "tab_APlatz");
+            this.tab_APlatz.Name = "tab_APlatz";
+            // 
+            // picEditsAPlatz
+            // 
+            this.picEditsAPlatz.Cursor = System.Windows.Forms.Cursors.Hand;
+            resources.ApplyResources(this.picEditsAPlatz, "picEditsAPlatz");
+            this.picEditsAPlatz.Name = "picEditsAPlatz";
+            this.helpProvider1.SetShowHelp(this.picEditsAPlatz, ((bool)(resources.GetObject("picEditsAPlatz.ShowHelp"))));
+            this.picEditsAPlatz.TabStop = false;
+            this.toolTip.SetToolTip(this.picEditsAPlatz, resources.GetString("picEditsAPlatz.ToolTip"));
+            this.picEditsAPlatz.Click += new System.EventHandler(this.picEditAPlatz_Click);
+            // 
+            // rbRuestzeit
+            // 
+            resources.ApplyResources(this.rbRuestzeit, "rbRuestzeit");
+            this.rbRuestzeit.Checked = true;
+            this.rbRuestzeit.Name = "rbRuestzeit";
+            this.helpProvider1.SetShowHelp(this.rbRuestzeit, ((bool)(resources.GetObject("rbRuestzeit.ShowHelp"))));
+            this.rbRuestzeit.TabStop = true;
+            this.rbRuestzeit.UseVisualStyleBackColor = true;
+            // 
+            // picReadOnlyAPlatz
+            // 
+            this.picReadOnlyAPlatz.Cursor = System.Windows.Forms.Cursors.Hand;
+            resources.ApplyResources(this.picReadOnlyAPlatz, "picReadOnlyAPlatz");
+            this.picReadOnlyAPlatz.Name = "picReadOnlyAPlatz";
+            this.helpProvider1.SetShowHelp(this.picReadOnlyAPlatz, ((bool)(resources.GetObject("picReadOnlyAPlatz.ShowHelp"))));
+            this.picReadOnlyAPlatz.TabStop = false;
+            this.toolTip.SetToolTip(this.picReadOnlyAPlatz, resources.GetString("picReadOnlyAPlatz.ToolTip"));
+            this.picReadOnlyAPlatz.Click += new System.EventHandler(this.picReadOnlyAPlatz_Click);
+            // 
+            // picResetAPlatz
+            // 
+            this.picResetAPlatz.Cursor = System.Windows.Forms.Cursors.Hand;
+            resources.ApplyResources(this.picResetAPlatz, "picResetAPlatz");
+            this.picResetAPlatz.Name = "picResetAPlatz";
+            this.helpProvider1.SetShowHelp(this.picResetAPlatz, ((bool)(resources.GetObject("picResetAPlatz.ShowHelp"))));
+            this.picResetAPlatz.TabStop = false;
+            this.toolTip.SetToolTip(this.picResetAPlatz, resources.GetString("picResetAPlatz.ToolTip"));
+            this.picResetAPlatz.Click += new System.EventHandler(this.picResetAPlatz_Click);
+            // 
+            // picSaveAPlatz
+            // 
+            this.picSaveAPlatz.Cursor = System.Windows.Forms.Cursors.Hand;
+            resources.ApplyResources(this.picSaveAPlatz, "picSaveAPlatz");
+            this.picSaveAPlatz.Name = "picSaveAPlatz";
+            this.helpProvider1.SetShowHelp(this.picSaveAPlatz, ((bool)(resources.GetObject("picSaveAPlatz.ShowHelp"))));
+            this.picSaveAPlatz.TabStop = false;
+            this.toolTip.SetToolTip(this.picSaveAPlatz, resources.GetString("picSaveAPlatz.ToolTip"));
+            this.picSaveAPlatz.Click += new System.EventHandler(this.picSaveAPlatz_Click);
+            // 
+            // dataGridViewAPlatz
+            // 
+            this.dataGridViewAPlatz.AllowUserToAddRows = false;
+            this.dataGridViewAPlatz.AllowUserToDeleteRows = false;
+            this.dataGridViewAPlatz.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.dataGridViewAPlatz.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridViewAPlatz.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewAPlatz.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn5,
+            this.dataGridViewTextBoxColumn7,
+            this.dataGridViewTextBoxColumn8,
+            this.dataGridViewTextBoxColumn9,
+            this.rap,
+            this.Ruestanzahl,
+            this.dataGridViewTextBoxColumn10,
+            this.dataGridViewImageColumn2,
+            this.s1,
+            this.s3,
+            this.ueber});
+            resources.ApplyResources(this.dataGridViewAPlatz, "dataGridViewAPlatz");
+            this.dataGridViewAPlatz.Name = "dataGridViewAPlatz";
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            resources.ApplyResources(this.dataGridViewTextBoxColumn5, "dataGridViewTextBoxColumn5");
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.ReadOnly = true;
+            this.dataGridViewTextBoxColumn5.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            // 
+            // dataGridViewTextBoxColumn7
+            // 
+            resources.ApplyResources(this.dataGridViewTextBoxColumn7, "dataGridViewTextBoxColumn7");
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            this.dataGridViewTextBoxColumn7.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn8
+            // 
+            resources.ApplyResources(this.dataGridViewTextBoxColumn8, "dataGridViewTextBoxColumn8");
+            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            this.dataGridViewTextBoxColumn8.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn9
+            // 
+            resources.ApplyResources(this.dataGridViewTextBoxColumn9, "dataGridViewTextBoxColumn9");
+            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
+            this.dataGridViewTextBoxColumn9.ReadOnly = true;
+            // 
+            // rap
+            // 
+            resources.ApplyResources(this.rap, "rap");
+            this.rap.Name = "rap";
+            this.rap.ReadOnly = true;
+            // 
+            // Ruestanzahl
+            // 
+            resources.ApplyResources(this.Ruestanzahl, "Ruestanzahl");
+            this.Ruestanzahl.Name = "Ruestanzahl";
+            this.Ruestanzahl.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn10
+            // 
+            resources.ApplyResources(this.dataGridViewTextBoxColumn10, "dataGridViewTextBoxColumn10");
+            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
+            this.dataGridViewTextBoxColumn10.ReadOnly = true;
+            // 
+            // dataGridViewImageColumn2
+            // 
+            resources.ApplyResources(this.dataGridViewImageColumn2, "dataGridViewImageColumn2");
+            this.dataGridViewImageColumn2.Name = "dataGridViewImageColumn2";
+            this.dataGridViewImageColumn2.ReadOnly = true;
+            this.dataGridViewImageColumn2.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // s1
+            // 
+            resources.ApplyResources(this.s1, "s1");
+            this.s1.Name = "s1";
+            this.s1.ReadOnly = true;
+            this.s1.TrueValue = "123";
+            // 
+            // s3
+            // 
+            resources.ApplyResources(this.s3, "s3");
+            this.s3.Name = "s3";
+            this.s3.ReadOnly = true;
+            this.s3.TrueValue = "";
+            // 
+            // ueber
+            // 
+            resources.ApplyResources(this.ueber, "ueber");
+            this.ueber.Name = "ueber";
+            this.ueber.ReadOnly = true;
+            this.ueber.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.ueber.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
+            // tabPage1
+            // 
+            this.tabPage1.BackColor = System.Drawing.Color.Transparent;
+            this.tabPage1.Controls.Add(this.tab2);
+            this.tabPage1.Controls.Add(this.pictureBox12);
+            this.tabPage1.Controls.Add(this.label3);
+            resources.ApplyResources(this.tabPage1, "tabPage1");
+            this.tabPage1.Name = "tabPage1";
+            // 
+            // tab2
+            // 
+            this.tab2.Controls.Add(this.tabPage2);
+            this.tab2.Controls.Add(this.tab_bestellung);
+            resources.ApplyResources(this.tab2, "tab2");
+            this.tab2.Name = "tab2";
+            this.tab2.SelectedIndex = 0;
+            this.helpProvider1.SetShowHelp(this.tab2, ((bool)(resources.GetObject("tab2.ShowHelp"))));
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.BackColor = System.Drawing.Color.Transparent;
+            this.tabPage2.Controls.Add(this.dataGridViewKTeil);
+            resources.ApplyResources(this.tabPage2, "tabPage2");
+            this.tabPage2.Name = "tabPage2";
+            this.helpProvider1.SetShowHelp(this.tabPage2, ((bool)(resources.GetObject("tabPage2.ShowHelp"))));
+            // 
+            // dataGridViewKTeil
+            // 
+            this.dataGridViewKTeil.AllowUserToAddRows = false;
+            this.dataGridViewKTeil.AllowUserToDeleteRows = false;
+            this.dataGridViewKTeil.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.dataGridViewKTeil.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridViewKTeil.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewKTeil.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewLinkColumn1,
+            this.dataGridViewTextBoxColumn6,
+            this.dataGridViewTextBoxColumn11,
+            this.dataGridViewTextBoxColumn13,
+            this.dataGridViewTextBoxColumn14,
+            this.dataGridViewTextBoxColumn15,
+            this.dataGridViewTextBoxColumn16,
+            this.dataGridViewTextBoxColumn17,
+            this.dataGridViewTextBoxColumn18,
+            this.b1,
+            this.dataGridViewTextBoxColumn19,
+            this.b2,
+            this.dataGridViewTextBoxColumn20,
+            this.b3,
+            this.dataGridViewTextBoxColumn21,
+            this.b4});
+            resources.ApplyResources(this.dataGridViewKTeil, "dataGridViewKTeil");
+            this.dataGridViewKTeil.Name = "dataGridViewKTeil";
+            this.helpProvider1.SetShowHelp(this.dataGridViewKTeil, ((bool)(resources.GetObject("dataGridViewKTeil.ShowHelp"))));
+            this.dataGridViewKTeil.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewKTeil_CellContentClick_1);
+            // 
+            // dataGridViewLinkColumn1
+            // 
+            resources.ApplyResources(this.dataGridViewLinkColumn1, "dataGridViewLinkColumn1");
+            this.dataGridViewLinkColumn1.Name = "dataGridViewLinkColumn1";
+            this.dataGridViewLinkColumn1.ReadOnly = true;
+            this.dataGridViewLinkColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewLinkColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            resources.ApplyResources(this.dataGridViewTextBoxColumn6, "dataGridViewTextBoxColumn6");
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            this.dataGridViewTextBoxColumn6.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn11
+            // 
+            resources.ApplyResources(this.dataGridViewTextBoxColumn11, "dataGridViewTextBoxColumn11");
+            this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
+            this.dataGridViewTextBoxColumn11.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn13
+            // 
+            resources.ApplyResources(this.dataGridViewTextBoxColumn13, "dataGridViewTextBoxColumn13");
+            this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
+            this.dataGridViewTextBoxColumn13.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn14
+            // 
+            resources.ApplyResources(this.dataGridViewTextBoxColumn14, "dataGridViewTextBoxColumn14");
+            this.dataGridViewTextBoxColumn14.Name = "dataGridViewTextBoxColumn14";
+            this.dataGridViewTextBoxColumn14.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn15
+            // 
+            resources.ApplyResources(this.dataGridViewTextBoxColumn15, "dataGridViewTextBoxColumn15");
+            this.dataGridViewTextBoxColumn15.Name = "dataGridViewTextBoxColumn15";
+            this.dataGridViewTextBoxColumn15.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn16
+            // 
+            resources.ApplyResources(this.dataGridViewTextBoxColumn16, "dataGridViewTextBoxColumn16");
+            this.dataGridViewTextBoxColumn16.Name = "dataGridViewTextBoxColumn16";
+            this.dataGridViewTextBoxColumn16.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn17
+            // 
+            resources.ApplyResources(this.dataGridViewTextBoxColumn17, "dataGridViewTextBoxColumn17");
+            this.dataGridViewTextBoxColumn17.Name = "dataGridViewTextBoxColumn17";
+            this.dataGridViewTextBoxColumn17.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn18
+            // 
+            resources.ApplyResources(this.dataGridViewTextBoxColumn18, "dataGridViewTextBoxColumn18");
+            this.dataGridViewTextBoxColumn18.Name = "dataGridViewTextBoxColumn18";
+            // 
+            // b1
+            // 
+            resources.ApplyResources(this.b1, "b1");
+            this.b1.Name = "b1";
+            this.b1.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn19
+            // 
+            resources.ApplyResources(this.dataGridViewTextBoxColumn19, "dataGridViewTextBoxColumn19");
+            this.dataGridViewTextBoxColumn19.Name = "dataGridViewTextBoxColumn19";
+            // 
+            // b2
+            // 
+            resources.ApplyResources(this.b2, "b2");
+            this.b2.Name = "b2";
+            this.b2.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn20
+            // 
+            resources.ApplyResources(this.dataGridViewTextBoxColumn20, "dataGridViewTextBoxColumn20");
+            this.dataGridViewTextBoxColumn20.Name = "dataGridViewTextBoxColumn20";
+            // 
+            // b3
+            // 
+            resources.ApplyResources(this.b3, "b3");
+            this.b3.Name = "b3";
+            this.b3.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn21
+            // 
+            resources.ApplyResources(this.dataGridViewTextBoxColumn21, "dataGridViewTextBoxColumn21");
+            this.dataGridViewTextBoxColumn21.Name = "dataGridViewTextBoxColumn21";
+            // 
+            // b4
+            // 
+            resources.ApplyResources(this.b4, "b4");
+            this.b4.Name = "b4";
+            this.b4.ReadOnly = true;
+            // 
+            // tab_bestellung
+            // 
+            this.tab_bestellung.BackColor = System.Drawing.Color.Transparent;
+            this.tab_bestellung.Controls.Add(this.button1);
+            resources.ApplyResources(this.tab_bestellung, "tab_bestellung");
+            this.tab_bestellung.Name = "tab_bestellung";
+            // 
+            // button1
+            // 
+            resources.ApplyResources(this.button1, "button1");
+            this.button1.Name = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // pictureBox12
+            // 
+            resources.ApplyResources(this.pictureBox12, "pictureBox12");
+            this.pictureBox12.Name = "pictureBox12";
+            this.helpProvider1.SetShowHelp(this.pictureBox12, ((bool)(resources.GetObject("pictureBox12.ShowHelp"))));
+            this.pictureBox12.TabStop = false;
+            // 
+            // label3
+            // 
+            resources.ApplyResources(this.label3, "label3");
+            this.label3.Name = "label3";
+            this.helpProvider1.SetShowHelp(this.label3, ((bool)(resources.GetObject("label3.ShowHelp"))));
+            // 
+            // openFileDialog
+            // 
+            this.openFileDialog.FileName = "openFileDialog";
+            // 
+            // menu
+            // 
+            this.menu.BackColor = System.Drawing.Color.Transparent;
+            this.menu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.dateiToolStripMenuItem,
+            this.einstellungenToolStripMenuItem,
+            this.scimToolStripMenuItem});
+            resources.ApplyResources(this.menu, "menu");
+            this.menu.Name = "menu";
+            // 
+            // dateiToolStripMenuItem
+            // 
+            this.dateiToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.dateiÖffnenToolStripMenuItem,
+            this.xMLexportToolStripMenuItem,
+            this.toolStripSeparator1,
+            this.schließenToolStripMenuItem});
+            this.dateiToolStripMenuItem.Name = "dateiToolStripMenuItem";
+            resources.ApplyResources(this.dateiToolStripMenuItem, "dateiToolStripMenuItem");
+            // 
+            // dateiÖffnenToolStripMenuItem
+            // 
+            resources.ApplyResources(this.dateiÖffnenToolStripMenuItem, "dateiÖffnenToolStripMenuItem");
+            this.dateiÖffnenToolStripMenuItem.Name = "dateiÖffnenToolStripMenuItem";
+            this.dateiÖffnenToolStripMenuItem.Click += new System.EventHandler(this.dateiÖffnenToolStripMenuItem_Click);
+            // 
+            // xMLexportToolStripMenuItem
+            // 
+            resources.ApplyResources(this.xMLexportToolStripMenuItem, "xMLexportToolStripMenuItem");
+            this.xMLexportToolStripMenuItem.Name = "xMLexportToolStripMenuItem";
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            resources.ApplyResources(this.toolStripSeparator1, "toolStripSeparator1");
+            // 
+            // schließenToolStripMenuItem
+            // 
+            resources.ApplyResources(this.schließenToolStripMenuItem, "schließenToolStripMenuItem");
+            this.schließenToolStripMenuItem.Name = "schließenToolStripMenuItem";
+            this.schließenToolStripMenuItem.Click += new System.EventHandler(this.schließenToolStripMenuItem_Click_1);
+            // 
+            // einstellungenToolStripMenuItem
+            // 
+            this.einstellungenToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.hilfeToolStripMenuItem,
+            this.spracheToolStripMenuItem1,
+            this.gewichtungToolStripMenuItem});
+            this.einstellungenToolStripMenuItem.Name = "einstellungenToolStripMenuItem";
+            resources.ApplyResources(this.einstellungenToolStripMenuItem, "einstellungenToolStripMenuItem");
+            // 
+            // hilfeToolStripMenuItem
+            // 
+            this.hilfeToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.handbuchToolStripMenuItem});
+            resources.ApplyResources(this.hilfeToolStripMenuItem, "hilfeToolStripMenuItem");
+            this.hilfeToolStripMenuItem.Name = "hilfeToolStripMenuItem";
+            // 
+            // handbuchToolStripMenuItem
+            // 
+            this.handbuchToolStripMenuItem.Name = "handbuchToolStripMenuItem";
+            resources.ApplyResources(this.handbuchToolStripMenuItem, "handbuchToolStripMenuItem");
+            this.handbuchToolStripMenuItem.Click += new System.EventHandler(this.handbuchToolStripMenuItem_Click);
+            // 
+            // spracheToolStripMenuItem1
+            // 
+            this.spracheToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.deutschToolStripMenuItem1,
+            this.englischToolStripMenuItem1});
+            this.spracheToolStripMenuItem1.Name = "spracheToolStripMenuItem1";
+            resources.ApplyResources(this.spracheToolStripMenuItem1, "spracheToolStripMenuItem1");
+            // 
+            // deutschToolStripMenuItem1
+            // 
+            this.deutschToolStripMenuItem1.Checked = true;
+            this.deutschToolStripMenuItem1.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.deutschToolStripMenuItem1.Name = "deutschToolStripMenuItem1";
+            resources.ApplyResources(this.deutschToolStripMenuItem1, "deutschToolStripMenuItem1");
+            this.deutschToolStripMenuItem1.Click += new System.EventHandler(this.deutschToolStripMenuItem1_Click);
+            // 
+            // englischToolStripMenuItem1
+            // 
+            this.englischToolStripMenuItem1.Name = "englischToolStripMenuItem1";
+            resources.ApplyResources(this.englischToolStripMenuItem1, "englischToolStripMenuItem1");
+            this.englischToolStripMenuItem1.Click += new System.EventHandler(this.englischToolStripMenuItem1_Click);
+            // 
+            // gewichtungToolStripMenuItem
+            // 
+            resources.ApplyResources(this.gewichtungToolStripMenuItem, "gewichtungToolStripMenuItem");
+            this.gewichtungToolStripMenuItem.Name = "gewichtungToolStripMenuItem";
+            this.gewichtungToolStripMenuItem.Click += new System.EventHandler(this.gewichtungToolStripMenuItem_Click);
+            // 
+            // scimToolStripMenuItem
+            // 
+            this.scimToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.startSeiteToolStripMenuItem});
+            this.scimToolStripMenuItem.Name = "scimToolStripMenuItem";
+            resources.ApplyResources(this.scimToolStripMenuItem, "scimToolStripMenuItem");
+            // 
+            // startSeiteToolStripMenuItem
+            // 
+            this.startSeiteToolStripMenuItem.Name = "startSeiteToolStripMenuItem";
+            resources.ApplyResources(this.startSeiteToolStripMenuItem, "startSeiteToolStripMenuItem");
+            this.startSeiteToolStripMenuItem.Click += new System.EventHandler(this.startSeiteToolStripMenuItem_Click);
+            // 
+            // imageList1
+            // 
+            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
+            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageList1.Images.SetKeyName(0, "red");
+            this.imageList1.Images.SetKeyName(1, "yellow");
+            this.imageList1.Images.SetKeyName(2, "green");
+            // 
+            // helpProvider1
+            // 
+            resources.ApplyResources(this.helpProvider1, "helpProvider1");
+            // 
             // Fahrrad
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -5836,6 +5851,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.upDownAW1)).EndInit();
             this.tab_produktion.ResumeLayout(false);
             this.tab1.ResumeLayout(false);
+            this.tab_P1.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            this.tab_P2.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            this.tab_P3.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             this.tab_eTeil.ResumeLayout(false);
             this.tab_eTeil.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picReadOnlyETeile)).EndInit();
@@ -5850,9 +5874,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.picResetAPlatz)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picSaveAPlatz)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAPlatz)).EndInit();
-            this.tab_P1.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
             this.tab2.ResumeLayout(false);
@@ -5862,12 +5883,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
             this.menu.ResumeLayout(false);
             this.menu.PerformLayout();
-            this.tab_P2.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
-            this.tab_P3.ResumeLayout(false);
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -4351,6 +4351,9 @@
   <data name="p1plus_18.TabIndex" type="System.Int32, mscorlib">
     <value>83</value>
   </data>
+  <data name="p1plus_18.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
+  </data>
   <data name="&gt;&gt;p1plus_18.Name" xml:space="preserve">
     <value>p1plus_18</value>
   </data>
@@ -4374,6 +4377,9 @@
   </data>
   <data name="p1r_18.TabIndex" type="System.Int32, mscorlib">
     <value>82</value>
+  </data>
+  <data name="p1r_18.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
   </data>
   <data name="&gt;&gt;p1r_18.Name" xml:space="preserve">
     <value>p1r_18</value>
@@ -4399,6 +4405,9 @@
   <data name="p1ls_18.TabIndex" type="System.Int32, mscorlib">
     <value>81</value>
   </data>
+  <data name="p1ls_18.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
+  </data>
   <data name="&gt;&gt;p1ls_18.Name" xml:space="preserve">
     <value>p1ls_18</value>
   </data>
@@ -4422,6 +4431,9 @@
   </data>
   <data name="p1iws_18.TabIndex" type="System.Int32, mscorlib">
     <value>80</value>
+  </data>
+  <data name="p1iws_18.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
   </data>
   <data name="&gt;&gt;p1iws_18.Name" xml:space="preserve">
     <value>p1iws_18</value>
@@ -4447,6 +4459,9 @@
   <data name="p1ib_18.TabIndex" type="System.Int32, mscorlib">
     <value>79</value>
   </data>
+  <data name="p1ib_18.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
+  </data>
   <data name="&gt;&gt;p1ib_18.Name" xml:space="preserve">
     <value>p1ib_18</value>
   </data>
@@ -4470,6 +4485,9 @@
   </data>
   <data name="p1pm_18.TabIndex" type="System.Int32, mscorlib">
     <value>78</value>
+  </data>
+  <data name="p1pm_18.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
   </data>
   <data name="&gt;&gt;p1pm_18.Name" xml:space="preserve">
     <value>p1pm_18</value>
@@ -4495,6 +4513,9 @@
   <data name="p1vw_18.TabIndex" type="System.Int32, mscorlib">
     <value>77</value>
   </data>
+  <data name="p1vw_18.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
+  </data>
   <data name="&gt;&gt;p1vw_18.Name" xml:space="preserve">
     <value>p1vw_18</value>
   </data>
@@ -4518,6 +4539,9 @@
   </data>
   <data name="p1plus_7.TabIndex" type="System.Int32, mscorlib">
     <value>76</value>
+  </data>
+  <data name="p1plus_7.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
   </data>
   <data name="&gt;&gt;p1plus_7.Name" xml:space="preserve">
     <value>p1plus_7</value>
@@ -4543,6 +4567,9 @@
   <data name="p1r_7.TabIndex" type="System.Int32, mscorlib">
     <value>75</value>
   </data>
+  <data name="p1r_7.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
+  </data>
   <data name="&gt;&gt;p1r_7.Name" xml:space="preserve">
     <value>p1r_7</value>
   </data>
@@ -4566,6 +4593,9 @@
   </data>
   <data name="p1ls_7.TabIndex" type="System.Int32, mscorlib">
     <value>74</value>
+  </data>
+  <data name="p1ls_7.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
   </data>
   <data name="&gt;&gt;p1ls_7.Name" xml:space="preserve">
     <value>p1ls_7</value>
@@ -4591,6 +4621,9 @@
   <data name="p1iws_7.TabIndex" type="System.Int32, mscorlib">
     <value>73</value>
   </data>
+  <data name="p1iws_7.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
+  </data>
   <data name="&gt;&gt;p1iws_7.Name" xml:space="preserve">
     <value>p1iws_7</value>
   </data>
@@ -4614,6 +4647,9 @@
   </data>
   <data name="p1ib_7.TabIndex" type="System.Int32, mscorlib">
     <value>72</value>
+  </data>
+  <data name="p1ib_7.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
   </data>
   <data name="&gt;&gt;p1ib_7.Name" xml:space="preserve">
     <value>p1ib_7</value>
@@ -4639,6 +4675,9 @@
   <data name="p1pm_7.TabIndex" type="System.Int32, mscorlib">
     <value>71</value>
   </data>
+  <data name="p1pm_7.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
+  </data>
   <data name="&gt;&gt;p1pm_7.Name" xml:space="preserve">
     <value>p1pm_7</value>
   </data>
@@ -4662,6 +4701,9 @@
   </data>
   <data name="p1vw_7.TabIndex" type="System.Int32, mscorlib">
     <value>70</value>
+  </data>
+  <data name="p1vw_7.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
   </data>
   <data name="&gt;&gt;p1vw_7.Name" xml:space="preserve">
     <value>p1vw_7</value>
@@ -4687,6 +4729,9 @@
   <data name="p1plus_13.TabIndex" type="System.Int32, mscorlib">
     <value>69</value>
   </data>
+  <data name="p1plus_13.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
+  </data>
   <data name="&gt;&gt;p1plus_13.Name" xml:space="preserve">
     <value>p1plus_13</value>
   </data>
@@ -4710,6 +4755,9 @@
   </data>
   <data name="p1r_13.TabIndex" type="System.Int32, mscorlib">
     <value>68</value>
+  </data>
+  <data name="p1r_13.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
   </data>
   <data name="&gt;&gt;p1r_13.Name" xml:space="preserve">
     <value>p1r_13</value>
@@ -4735,6 +4783,9 @@
   <data name="p1ls_13.TabIndex" type="System.Int32, mscorlib">
     <value>67</value>
   </data>
+  <data name="p1ls_13.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
+  </data>
   <data name="&gt;&gt;p1ls_13.Name" xml:space="preserve">
     <value>p1ls_13</value>
   </data>
@@ -4758,6 +4809,9 @@
   </data>
   <data name="p1iws_13.TabIndex" type="System.Int32, mscorlib">
     <value>66</value>
+  </data>
+  <data name="p1iws_13.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
   </data>
   <data name="&gt;&gt;p1iws_13.Name" xml:space="preserve">
     <value>p1iws_13</value>
@@ -4783,6 +4837,9 @@
   <data name="p1ib_13.TabIndex" type="System.Int32, mscorlib">
     <value>65</value>
   </data>
+  <data name="p1ib_13.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
+  </data>
   <data name="&gt;&gt;p1ib_13.Name" xml:space="preserve">
     <value>p1ib_13</value>
   </data>
@@ -4806,6 +4863,9 @@
   </data>
   <data name="p1pm_13.TabIndex" type="System.Int32, mscorlib">
     <value>64</value>
+  </data>
+  <data name="p1pm_13.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
   </data>
   <data name="&gt;&gt;p1pm_13.Name" xml:space="preserve">
     <value>p1pm_13</value>
@@ -4831,6 +4891,9 @@
   <data name="p1vw_13.TabIndex" type="System.Int32, mscorlib">
     <value>63</value>
   </data>
+  <data name="p1vw_13.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
+  </data>
   <data name="&gt;&gt;p1vw_13.Name" xml:space="preserve">
     <value>p1vw_13</value>
   </data>
@@ -4854,6 +4917,9 @@
   </data>
   <data name="p1plus_49.TabIndex" type="System.Int32, mscorlib">
     <value>62</value>
+  </data>
+  <data name="p1plus_49.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
   </data>
   <data name="&gt;&gt;p1plus_49.Name" xml:space="preserve">
     <value>p1plus_49</value>
@@ -4879,6 +4945,9 @@
   <data name="p1r_49.TabIndex" type="System.Int32, mscorlib">
     <value>61</value>
   </data>
+  <data name="p1r_49.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
+  </data>
   <data name="&gt;&gt;p1r_49.Name" xml:space="preserve">
     <value>p1r_49</value>
   </data>
@@ -4902,6 +4971,9 @@
   </data>
   <data name="p1ls_49.TabIndex" type="System.Int32, mscorlib">
     <value>60</value>
+  </data>
+  <data name="p1ls_49.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
   </data>
   <data name="&gt;&gt;p1ls_49.Name" xml:space="preserve">
     <value>p1ls_49</value>
@@ -4927,6 +4999,9 @@
   <data name="p1iws_49.TabIndex" type="System.Int32, mscorlib">
     <value>59</value>
   </data>
+  <data name="p1iws_49.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
+  </data>
   <data name="&gt;&gt;p1iws_49.Name" xml:space="preserve">
     <value>p1iws_49</value>
   </data>
@@ -4950,6 +5025,9 @@
   </data>
   <data name="p1ib_49.TabIndex" type="System.Int32, mscorlib">
     <value>58</value>
+  </data>
+  <data name="p1ib_49.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
   </data>
   <data name="&gt;&gt;p1ib_49.Name" xml:space="preserve">
     <value>p1ib_49</value>
@@ -4975,6 +5053,9 @@
   <data name="p1pm_49.TabIndex" type="System.Int32, mscorlib">
     <value>57</value>
   </data>
+  <data name="p1pm_49.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
+  </data>
   <data name="&gt;&gt;p1pm_49.Name" xml:space="preserve">
     <value>p1pm_49</value>
   </data>
@@ -4998,6 +5079,9 @@
   </data>
   <data name="p1vw_49.TabIndex" type="System.Int32, mscorlib">
     <value>56</value>
+  </data>
+  <data name="p1vw_49.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
   </data>
   <data name="&gt;&gt;p1vw_49.Name" xml:space="preserve">
     <value>p1vw_49</value>
@@ -5023,6 +5107,9 @@
   <data name="p1plus_4.TabIndex" type="System.Int32, mscorlib">
     <value>55</value>
   </data>
+  <data name="p1plus_4.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
+  </data>
   <data name="&gt;&gt;p1plus_4.Name" xml:space="preserve">
     <value>p1plus_4</value>
   </data>
@@ -5046,6 +5133,9 @@
   </data>
   <data name="p1r_4.TabIndex" type="System.Int32, mscorlib">
     <value>54</value>
+  </data>
+  <data name="p1r_4.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
   </data>
   <data name="&gt;&gt;p1r_4.Name" xml:space="preserve">
     <value>p1r_4</value>
@@ -5071,6 +5161,9 @@
   <data name="p1ls_4.TabIndex" type="System.Int32, mscorlib">
     <value>53</value>
   </data>
+  <data name="p1ls_4.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
+  </data>
   <data name="&gt;&gt;p1ls_4.Name" xml:space="preserve">
     <value>p1ls_4</value>
   </data>
@@ -5094,6 +5187,9 @@
   </data>
   <data name="p1iws_4.TabIndex" type="System.Int32, mscorlib">
     <value>52</value>
+  </data>
+  <data name="p1iws_4.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
   </data>
   <data name="&gt;&gt;p1iws_4.Name" xml:space="preserve">
     <value>p1iws_4</value>
@@ -5119,6 +5215,9 @@
   <data name="p1ib_4.TabIndex" type="System.Int32, mscorlib">
     <value>51</value>
   </data>
+  <data name="p1ib_4.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
+  </data>
   <data name="&gt;&gt;p1ib_4.Name" xml:space="preserve">
     <value>p1ib_4</value>
   </data>
@@ -5142,6 +5241,9 @@
   </data>
   <data name="p1pm_4.TabIndex" type="System.Int32, mscorlib">
     <value>50</value>
+  </data>
+  <data name="p1pm_4.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
   </data>
   <data name="&gt;&gt;p1pm_4.Name" xml:space="preserve">
     <value>p1pm_4</value>
@@ -5167,6 +5269,9 @@
   <data name="p1vw_4.TabIndex" type="System.Int32, mscorlib">
     <value>49</value>
   </data>
+  <data name="p1vw_4.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
+  </data>
   <data name="&gt;&gt;p1vw_4.Name" xml:space="preserve">
     <value>p1vw_4</value>
   </data>
@@ -5190,6 +5295,9 @@
   </data>
   <data name="p1plus_10.TabIndex" type="System.Int32, mscorlib">
     <value>48</value>
+  </data>
+  <data name="p1plus_10.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
   </data>
   <data name="&gt;&gt;p1plus_10.Name" xml:space="preserve">
     <value>p1plus_10</value>
@@ -5215,6 +5323,9 @@
   <data name="p1r_10.TabIndex" type="System.Int32, mscorlib">
     <value>47</value>
   </data>
+  <data name="p1r_10.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
+  </data>
   <data name="&gt;&gt;p1r_10.Name" xml:space="preserve">
     <value>p1r_10</value>
   </data>
@@ -5238,6 +5349,9 @@
   </data>
   <data name="p1ls_10.TabIndex" type="System.Int32, mscorlib">
     <value>46</value>
+  </data>
+  <data name="p1ls_10.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
   </data>
   <data name="&gt;&gt;p1ls_10.Name" xml:space="preserve">
     <value>p1ls_10</value>
@@ -5263,6 +5377,9 @@
   <data name="p1iws_10.TabIndex" type="System.Int32, mscorlib">
     <value>45</value>
   </data>
+  <data name="p1iws_10.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
+  </data>
   <data name="&gt;&gt;p1iws_10.Name" xml:space="preserve">
     <value>p1iws_10</value>
   </data>
@@ -5286,6 +5403,9 @@
   </data>
   <data name="p1ib_10.TabIndex" type="System.Int32, mscorlib">
     <value>44</value>
+  </data>
+  <data name="p1ib_10.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
   </data>
   <data name="&gt;&gt;p1ib_10.Name" xml:space="preserve">
     <value>p1ib_10</value>
@@ -5311,6 +5431,9 @@
   <data name="p1pm_10.TabIndex" type="System.Int32, mscorlib">
     <value>43</value>
   </data>
+  <data name="p1pm_10.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
+  </data>
   <data name="&gt;&gt;p1pm_10.Name" xml:space="preserve">
     <value>p1pm_10</value>
   </data>
@@ -5334,6 +5457,9 @@
   </data>
   <data name="p1vw_10.TabIndex" type="System.Int32, mscorlib">
     <value>42</value>
+  </data>
+  <data name="p1vw_10.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
   </data>
   <data name="&gt;&gt;p1vw_10.Name" xml:space="preserve">
     <value>p1vw_10</value>
@@ -5359,6 +5485,9 @@
   <data name="p1plus_50.TabIndex" type="System.Int32, mscorlib">
     <value>41</value>
   </data>
+  <data name="p1plus_50.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
+  </data>
   <data name="&gt;&gt;p1plus_50.Name" xml:space="preserve">
     <value>p1plus_50</value>
   </data>
@@ -5382,6 +5511,9 @@
   </data>
   <data name="p1r_50.TabIndex" type="System.Int32, mscorlib">
     <value>40</value>
+  </data>
+  <data name="p1r_50.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
   </data>
   <data name="&gt;&gt;p1r_50.Name" xml:space="preserve">
     <value>p1r_50</value>
@@ -5407,6 +5539,9 @@
   <data name="p1ls_50.TabIndex" type="System.Int32, mscorlib">
     <value>39</value>
   </data>
+  <data name="p1ls_50.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
+  </data>
   <data name="&gt;&gt;p1ls_50.Name" xml:space="preserve">
     <value>p1ls_50</value>
   </data>
@@ -5430,6 +5565,9 @@
   </data>
   <data name="p1iws_50.TabIndex" type="System.Int32, mscorlib">
     <value>38</value>
+  </data>
+  <data name="p1iws_50.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
   </data>
   <data name="&gt;&gt;p1iws_50.Name" xml:space="preserve">
     <value>p1iws_50</value>
@@ -5455,6 +5593,9 @@
   <data name="p1ib_50.TabIndex" type="System.Int32, mscorlib">
     <value>37</value>
   </data>
+  <data name="p1ib_50.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
+  </data>
   <data name="&gt;&gt;p1ib_50.Name" xml:space="preserve">
     <value>p1ib_50</value>
   </data>
@@ -5478,6 +5619,9 @@
   </data>
   <data name="p1pm_50.TabIndex" type="System.Int32, mscorlib">
     <value>36</value>
+  </data>
+  <data name="p1pm_50.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
   </data>
   <data name="&gt;&gt;p1pm_50.Name" xml:space="preserve">
     <value>p1pm_50</value>
@@ -5503,6 +5647,9 @@
   <data name="p1vw_50.TabIndex" type="System.Int32, mscorlib">
     <value>35</value>
   </data>
+  <data name="p1vw_50.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
+  </data>
   <data name="&gt;&gt;p1vw_50.Name" xml:space="preserve">
     <value>p1vw_50</value>
   </data>
@@ -5526,6 +5673,9 @@
   </data>
   <data name="p1plus_16.TabIndex" type="System.Int32, mscorlib">
     <value>34</value>
+  </data>
+  <data name="p1plus_16.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
   </data>
   <data name="&gt;&gt;p1plus_16.Name" xml:space="preserve">
     <value>p1plus_16</value>
@@ -5551,6 +5701,9 @@
   <data name="p1r_16.TabIndex" type="System.Int32, mscorlib">
     <value>33</value>
   </data>
+  <data name="p1r_16.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
+  </data>
   <data name="&gt;&gt;p1r_16.Name" xml:space="preserve">
     <value>p1r_16</value>
   </data>
@@ -5574,6 +5727,9 @@
   </data>
   <data name="p1ls_16.TabIndex" type="System.Int32, mscorlib">
     <value>32</value>
+  </data>
+  <data name="p1ls_16.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
   </data>
   <data name="&gt;&gt;p1ls_16.Name" xml:space="preserve">
     <value>p1ls_16</value>
@@ -5599,6 +5755,9 @@
   <data name="p1iws_16.TabIndex" type="System.Int32, mscorlib">
     <value>31</value>
   </data>
+  <data name="p1iws_16.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
+  </data>
   <data name="&gt;&gt;p1iws_16.Name" xml:space="preserve">
     <value>p1iws_16</value>
   </data>
@@ -5622,6 +5781,9 @@
   </data>
   <data name="p1ib_16.TabIndex" type="System.Int32, mscorlib">
     <value>30</value>
+  </data>
+  <data name="p1ib_16.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
   </data>
   <data name="&gt;&gt;p1ib_16.Name" xml:space="preserve">
     <value>p1ib_16</value>
@@ -5647,6 +5809,9 @@
   <data name="p1pm_16.TabIndex" type="System.Int32, mscorlib">
     <value>29</value>
   </data>
+  <data name="p1pm_16.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
+  </data>
   <data name="&gt;&gt;p1pm_16.Name" xml:space="preserve">
     <value>p1pm_16</value>
   </data>
@@ -5670,6 +5835,9 @@
   </data>
   <data name="p1vw_16.TabIndex" type="System.Int32, mscorlib">
     <value>28</value>
+  </data>
+  <data name="p1vw_16.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
   </data>
   <data name="&gt;&gt;p1vw_16.Name" xml:space="preserve">
     <value>p1vw_16</value>
@@ -5695,6 +5863,9 @@
   <data name="p1plus_17.TabIndex" type="System.Int32, mscorlib">
     <value>27</value>
   </data>
+  <data name="p1plus_17.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
+  </data>
   <data name="&gt;&gt;p1plus_17.Name" xml:space="preserve">
     <value>p1plus_17</value>
   </data>
@@ -5718,6 +5889,9 @@
   </data>
   <data name="p1r_17.TabIndex" type="System.Int32, mscorlib">
     <value>26</value>
+  </data>
+  <data name="p1r_17.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
   </data>
   <data name="&gt;&gt;p1r_17.Name" xml:space="preserve">
     <value>p1r_17</value>
@@ -5743,6 +5917,9 @@
   <data name="p1ls_17.TabIndex" type="System.Int32, mscorlib">
     <value>25</value>
   </data>
+  <data name="p1ls_17.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
+  </data>
   <data name="&gt;&gt;p1ls_17.Name" xml:space="preserve">
     <value>p1ls_17</value>
   </data>
@@ -5766,6 +5943,9 @@
   </data>
   <data name="p1iws_17.TabIndex" type="System.Int32, mscorlib">
     <value>24</value>
+  </data>
+  <data name="p1iws_17.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
   </data>
   <data name="&gt;&gt;p1iws_17.Name" xml:space="preserve">
     <value>p1iws_17</value>
@@ -5791,6 +5971,9 @@
   <data name="p1ib_17.TabIndex" type="System.Int32, mscorlib">
     <value>23</value>
   </data>
+  <data name="p1ib_17.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
+  </data>
   <data name="&gt;&gt;p1ib_17.Name" xml:space="preserve">
     <value>p1ib_17</value>
   </data>
@@ -5814,6 +5997,9 @@
   </data>
   <data name="p1pm_17.TabIndex" type="System.Int32, mscorlib">
     <value>22</value>
+  </data>
+  <data name="p1pm_17.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
   </data>
   <data name="&gt;&gt;p1pm_17.Name" xml:space="preserve">
     <value>p1pm_17</value>
@@ -5839,6 +6025,9 @@
   <data name="p1vw_17.TabIndex" type="System.Int32, mscorlib">
     <value>21</value>
   </data>
+  <data name="p1vw_17.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
+  </data>
   <data name="&gt;&gt;p1vw_17.Name" xml:space="preserve">
     <value>p1vw_17</value>
   </data>
@@ -5862,6 +6051,9 @@
   </data>
   <data name="p1plus_26.TabIndex" type="System.Int32, mscorlib">
     <value>20</value>
+  </data>
+  <data name="p1plus_26.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
   </data>
   <data name="&gt;&gt;p1plus_26.Name" xml:space="preserve">
     <value>p1plus_26</value>
@@ -5887,6 +6079,9 @@
   <data name="p1r_26.TabIndex" type="System.Int32, mscorlib">
     <value>19</value>
   </data>
+  <data name="p1r_26.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
+  </data>
   <data name="&gt;&gt;p1r_26.Name" xml:space="preserve">
     <value>p1r_26</value>
   </data>
@@ -5910,6 +6105,9 @@
   </data>
   <data name="p1ls_26.TabIndex" type="System.Int32, mscorlib">
     <value>18</value>
+  </data>
+  <data name="p1ls_26.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
   </data>
   <data name="&gt;&gt;p1ls_26.Name" xml:space="preserve">
     <value>p1ls_26</value>
@@ -5935,6 +6133,9 @@
   <data name="p1iws_26.TabIndex" type="System.Int32, mscorlib">
     <value>17</value>
   </data>
+  <data name="p1iws_26.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
+  </data>
   <data name="&gt;&gt;p1iws_26.Name" xml:space="preserve">
     <value>p1iws_26</value>
   </data>
@@ -5958,6 +6159,9 @@
   </data>
   <data name="p1ib_26.TabIndex" type="System.Int32, mscorlib">
     <value>16</value>
+  </data>
+  <data name="p1ib_26.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
   </data>
   <data name="&gt;&gt;p1ib_26.Name" xml:space="preserve">
     <value>p1ib_26</value>
@@ -5983,6 +6187,9 @@
   <data name="p1pm_26.TabIndex" type="System.Int32, mscorlib">
     <value>15</value>
   </data>
+  <data name="p1pm_26.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
+  </data>
   <data name="&gt;&gt;p1pm_26.Name" xml:space="preserve">
     <value>p1pm_26</value>
   </data>
@@ -6006,6 +6213,9 @@
   </data>
   <data name="p1vw_26.TabIndex" type="System.Int32, mscorlib">
     <value>14</value>
+  </data>
+  <data name="p1vw_26.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
   </data>
   <data name="&gt;&gt;p1vw_26.Name" xml:space="preserve">
     <value>p1vw_26</value>
@@ -6031,6 +6241,9 @@
   <data name="p1plus_51.TabIndex" type="System.Int32, mscorlib">
     <value>13</value>
   </data>
+  <data name="p1plus_51.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
+  </data>
   <data name="&gt;&gt;p1plus_51.Name" xml:space="preserve">
     <value>p1plus_51</value>
   </data>
@@ -6054,6 +6267,9 @@
   </data>
   <data name="p1r_51.TabIndex" type="System.Int32, mscorlib">
     <value>12</value>
+  </data>
+  <data name="p1r_51.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
   </data>
   <data name="&gt;&gt;p1r_51.Name" xml:space="preserve">
     <value>p1r_51</value>
@@ -6079,6 +6295,9 @@
   <data name="p1ls_51.TabIndex" type="System.Int32, mscorlib">
     <value>11</value>
   </data>
+  <data name="p1ls_51.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
+  </data>
   <data name="&gt;&gt;p1ls_51.Name" xml:space="preserve">
     <value>p1ls_51</value>
   </data>
@@ -6102,6 +6321,9 @@
   </data>
   <data name="p1iws_51.TabIndex" type="System.Int32, mscorlib">
     <value>10</value>
+  </data>
+  <data name="p1iws_51.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
   </data>
   <data name="&gt;&gt;p1iws_51.Name" xml:space="preserve">
     <value>p1iws_51</value>
@@ -6127,6 +6349,9 @@
   <data name="p1ib_51.TabIndex" type="System.Int32, mscorlib">
     <value>9</value>
   </data>
+  <data name="p1ib_51.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
+  </data>
   <data name="&gt;&gt;p1ib_51.Name" xml:space="preserve">
     <value>p1ib_51</value>
   </data>
@@ -6150,6 +6375,9 @@
   </data>
   <data name="p1pm_51.TabIndex" type="System.Int32, mscorlib">
     <value>8</value>
+  </data>
+  <data name="p1pm_51.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
   </data>
   <data name="&gt;&gt;p1pm_51.Name" xml:space="preserve">
     <value>p1pm_51</value>
@@ -6175,6 +6403,9 @@
   <data name="p1vw_51.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>
   </data>
+  <data name="p1vw_51.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
+  </data>
   <data name="&gt;&gt;p1vw_51.Name" xml:space="preserve">
     <value>p1vw_51</value>
   </data>
@@ -6198,6 +6429,9 @@
   </data>
   <data name="p1r_0.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
+  </data>
+  <data name="p1r_0.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
   </data>
   <data name="&gt;&gt;p1r_0.Name" xml:space="preserve">
     <value>p1r_0</value>
@@ -6223,6 +6457,9 @@
   <data name="p1ls_0.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
   </data>
+  <data name="p1ls_0.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
+  </data>
   <data name="&gt;&gt;p1ls_0.Name" xml:space="preserve">
     <value>p1ls_0</value>
   </data>
@@ -6246,6 +6483,9 @@
   </data>
   <data name="p1iws_0.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
+  </data>
+  <data name="p1iws_0.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
   </data>
   <data name="&gt;&gt;p1iws_0.Name" xml:space="preserve">
     <value>p1iws_0</value>
@@ -6271,6 +6511,9 @@
   <data name="p1ib_0.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
   </data>
+  <data name="p1ib_0.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
+  </data>
   <data name="&gt;&gt;p1ib_0.Name" xml:space="preserve">
     <value>p1ib_0</value>
   </data>
@@ -6295,6 +6538,9 @@
   <data name="p1pm_0.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
   </data>
+  <data name="p1pm_0.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
+  </data>
   <data name="&gt;&gt;p1pm_0.Name" xml:space="preserve">
     <value>p1pm_0</value>
   </data>
@@ -6318,6 +6564,9 @@
   </data>
   <data name="p1vw_0.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
+  </data>
+  <data name="p1vw_0.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
   </data>
   <data name="&gt;&gt;p1vw_0.Name" xml:space="preserve">
     <value>p1vw_0</value>
@@ -18301,7 +18550,7 @@
         AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
         LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
         ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAABS
-        CwAAAk1TRnQBSQFMAgEBAwEAAUABAQFAAQEBEAEAARABAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
+        CwAAAk1TRnQBSQFMAgEBAwEAAUgBAQFIAQEBEAEAARABAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
         AwABQAMAARADAAEBAQABCAYAAQQYAAGAAgABgAMAAoABAAGAAwABgAEAAYABAAKAAgADwAEAAcAB3AHA
         AQAB8AHKAaYBAAEzBQABMwEAATMBAAEzAQACMwIAAxYBAAMcAQADIgEAAykBAANVAQADTQEAA0IBAAM5
         AQABgAF8Af8BAAJQAf8BAAGTAQAB1gEAAf8B7AHMAQABxgHWAe8BAAHWAucBAAGQAakBrQIAAf8BMwMA
