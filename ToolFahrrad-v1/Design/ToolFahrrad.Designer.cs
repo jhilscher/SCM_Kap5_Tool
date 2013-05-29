@@ -496,6 +496,180 @@
             this.p2ib_0 = new System.Windows.Forms.TextBox();
             this.p2pm_0 = new System.Windows.Forms.TextBox();
             this.p2vw_0 = new System.Windows.Forms.TextBox();
+            this.tab_P3 = new System.Windows.Forms.TabPage();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.label181 = new System.Windows.Forms.Label();
+            this.label182 = new System.Windows.Forms.Label();
+            this.label183 = new System.Windows.Forms.Label();
+            this.label184 = new System.Windows.Forms.Label();
+            this.label185 = new System.Windows.Forms.Label();
+            this.label186 = new System.Windows.Forms.Label();
+            this.label187 = new System.Windows.Forms.Label();
+            this.label188 = new System.Windows.Forms.Label();
+            this.label189 = new System.Windows.Forms.Label();
+            this.label190 = new System.Windows.Forms.Label();
+            this.label191 = new System.Windows.Forms.Label();
+            this.label192 = new System.Windows.Forms.Label();
+            this.label193 = new System.Windows.Forms.Label();
+            this.label194 = new System.Windows.Forms.Label();
+            this.label195 = new System.Windows.Forms.Label();
+            this.label196 = new System.Windows.Forms.Label();
+            this.label197 = new System.Windows.Forms.Label();
+            this.label198 = new System.Windows.Forms.Label();
+            this.label199 = new System.Windows.Forms.Label();
+            this.label200 = new System.Windows.Forms.Label();
+            this.label201 = new System.Windows.Forms.Label();
+            this.label202 = new System.Windows.Forms.Label();
+            this.label203 = new System.Windows.Forms.Label();
+            this.label204 = new System.Windows.Forms.Label();
+            this.label205 = new System.Windows.Forms.Label();
+            this.label206 = new System.Windows.Forms.Label();
+            this.label207 = new System.Windows.Forms.Label();
+            this.label208 = new System.Windows.Forms.Label();
+            this.label209 = new System.Windows.Forms.Label();
+            this.label210 = new System.Windows.Forms.Label();
+            this.label211 = new System.Windows.Forms.Label();
+            this.label212 = new System.Windows.Forms.Label();
+            this.label213 = new System.Windows.Forms.Label();
+            this.label214 = new System.Windows.Forms.Label();
+            this.label215 = new System.Windows.Forms.Label();
+            this.label216 = new System.Windows.Forms.Label();
+            this.label217 = new System.Windows.Forms.Label();
+            this.label218 = new System.Windows.Forms.Label();
+            this.label219 = new System.Windows.Forms.Label();
+            this.label220 = new System.Windows.Forms.Label();
+            this.label221 = new System.Windows.Forms.Label();
+            this.label222 = new System.Windows.Forms.Label();
+            this.label223 = new System.Windows.Forms.Label();
+            this.label224 = new System.Windows.Forms.Label();
+            this.label225 = new System.Windows.Forms.Label();
+            this.label226 = new System.Windows.Forms.Label();
+            this.label227 = new System.Windows.Forms.Label();
+            this.label228 = new System.Windows.Forms.Label();
+            this.label229 = new System.Windows.Forms.Label();
+            this.label230 = new System.Windows.Forms.Label();
+            this.label231 = new System.Windows.Forms.Label();
+            this.label232 = new System.Windows.Forms.Label();
+            this.label233 = new System.Windows.Forms.Label();
+            this.label234 = new System.Windows.Forms.Label();
+            this.label235 = new System.Windows.Forms.Label();
+            this.label236 = new System.Windows.Forms.Label();
+            this.label237 = new System.Windows.Forms.Label();
+            this.label238 = new System.Windows.Forms.Label();
+            this.label239 = new System.Windows.Forms.Label();
+            this.label240 = new System.Windows.Forms.Label();
+            this.label241 = new System.Windows.Forms.Label();
+            this.label242 = new System.Windows.Forms.Label();
+            this.label243 = new System.Windows.Forms.Label();
+            this.label244 = new System.Windows.Forms.Label();
+            this.label245 = new System.Windows.Forms.Label();
+            this.label246 = new System.Windows.Forms.Label();
+            this.label247 = new System.Windows.Forms.Label();
+            this.label248 = new System.Windows.Forms.Label();
+            this.label249 = new System.Windows.Forms.Label();
+            this.label250 = new System.Windows.Forms.Label();
+            this.label251 = new System.Windows.Forms.Label();
+            this.label252 = new System.Windows.Forms.Label();
+            this.label253 = new System.Windows.Forms.Label();
+            this.label254 = new System.Windows.Forms.Label();
+            this.label255 = new System.Windows.Forms.Label();
+            this.label256 = new System.Windows.Forms.Label();
+            this.label257 = new System.Windows.Forms.Label();
+            this.label258 = new System.Windows.Forms.Label();
+            this.label259 = new System.Windows.Forms.Label();
+            this.label260 = new System.Windows.Forms.Label();
+            this.label261 = new System.Windows.Forms.Label();
+            this.label262 = new System.Windows.Forms.Label();
+            this.label263 = new System.Windows.Forms.Label();
+            this.label264 = new System.Windows.Forms.Label();
+            this.label265 = new System.Windows.Forms.Label();
+            this.label266 = new System.Windows.Forms.Label();
+            this.label267 = new System.Windows.Forms.Label();
+            this.label268 = new System.Windows.Forms.Label();
+            this.label269 = new System.Windows.Forms.Label();
+            this.p3plus_20 = new System.Windows.Forms.TextBox();
+            this.p3r_20 = new System.Windows.Forms.TextBox();
+            this.p3ls_20 = new System.Windows.Forms.TextBox();
+            this.p3iws_20 = new System.Windows.Forms.TextBox();
+            this.p3ib_20 = new System.Windows.Forms.TextBox();
+            this.p3pm_20 = new System.Windows.Forms.TextBox();
+            this.p3vw_20 = new System.Windows.Forms.TextBox();
+            this.p3plus_9 = new System.Windows.Forms.TextBox();
+            this.p3r_9 = new System.Windows.Forms.TextBox();
+            this.p3ls_9 = new System.Windows.Forms.TextBox();
+            this.p3iws_9 = new System.Windows.Forms.TextBox();
+            this.p3ib_9 = new System.Windows.Forms.TextBox();
+            this.p3pm_9 = new System.Windows.Forms.TextBox();
+            this.p3vw_9 = new System.Windows.Forms.TextBox();
+            this.p3plus_15 = new System.Windows.Forms.TextBox();
+            this.p3r_15 = new System.Windows.Forms.TextBox();
+            this.p3ls_15 = new System.Windows.Forms.TextBox();
+            this.p3iws_15 = new System.Windows.Forms.TextBox();
+            this.p3ib_15 = new System.Windows.Forms.TextBox();
+            this.p3pm_15 = new System.Windows.Forms.TextBox();
+            this.p3vw_15 = new System.Windows.Forms.TextBox();
+            this.p3plus_29 = new System.Windows.Forms.TextBox();
+            this.p3r_29 = new System.Windows.Forms.TextBox();
+            this.p3ls_29 = new System.Windows.Forms.TextBox();
+            this.p3iws_29 = new System.Windows.Forms.TextBox();
+            this.p3ib_29 = new System.Windows.Forms.TextBox();
+            this.p3pm_29 = new System.Windows.Forms.TextBox();
+            this.p3vw_29 = new System.Windows.Forms.TextBox();
+            this.p3plus_6 = new System.Windows.Forms.TextBox();
+            this.p3r_6 = new System.Windows.Forms.TextBox();
+            this.p3ls_6 = new System.Windows.Forms.TextBox();
+            this.p3iws_6 = new System.Windows.Forms.TextBox();
+            this.p3ib_6 = new System.Windows.Forms.TextBox();
+            this.p3pm_6 = new System.Windows.Forms.TextBox();
+            this.p3vw_6 = new System.Windows.Forms.TextBox();
+            this.p3plus_12 = new System.Windows.Forms.TextBox();
+            this.p3r_12 = new System.Windows.Forms.TextBox();
+            this.p3ls_12 = new System.Windows.Forms.TextBox();
+            this.p3iws_12 = new System.Windows.Forms.TextBox();
+            this.p3ib_12 = new System.Windows.Forms.TextBox();
+            this.p3pm_12 = new System.Windows.Forms.TextBox();
+            this.p3vw_12 = new System.Windows.Forms.TextBox();
+            this.p3plus_30 = new System.Windows.Forms.TextBox();
+            this.p3r_30 = new System.Windows.Forms.TextBox();
+            this.p3ls_30 = new System.Windows.Forms.TextBox();
+            this.p3iws_30 = new System.Windows.Forms.TextBox();
+            this.p3ib_30 = new System.Windows.Forms.TextBox();
+            this.p3pm_30 = new System.Windows.Forms.TextBox();
+            this.p3vw_30 = new System.Windows.Forms.TextBox();
+            this.p3plus_16 = new System.Windows.Forms.TextBox();
+            this.p3r_16 = new System.Windows.Forms.TextBox();
+            this.p3ls_16 = new System.Windows.Forms.TextBox();
+            this.p3iws_16 = new System.Windows.Forms.TextBox();
+            this.p3ib_16 = new System.Windows.Forms.TextBox();
+            this.p3pm_16 = new System.Windows.Forms.TextBox();
+            this.p3vw_16 = new System.Windows.Forms.TextBox();
+            this.p3plus_17 = new System.Windows.Forms.TextBox();
+            this.p3r_17 = new System.Windows.Forms.TextBox();
+            this.p3ls_17 = new System.Windows.Forms.TextBox();
+            this.p3iws_17 = new System.Windows.Forms.TextBox();
+            this.p3ib_17 = new System.Windows.Forms.TextBox();
+            this.p3pm_17 = new System.Windows.Forms.TextBox();
+            this.p3vw_17 = new System.Windows.Forms.TextBox();
+            this.p3plus_26 = new System.Windows.Forms.TextBox();
+            this.p3r_26 = new System.Windows.Forms.TextBox();
+            this.p3ls_26 = new System.Windows.Forms.TextBox();
+            this.p3iws_26 = new System.Windows.Forms.TextBox();
+            this.p3ib_26 = new System.Windows.Forms.TextBox();
+            this.p3pm_26 = new System.Windows.Forms.TextBox();
+            this.p3vw_26 = new System.Windows.Forms.TextBox();
+            this.p3plus_31 = new System.Windows.Forms.TextBox();
+            this.p3r_31 = new System.Windows.Forms.TextBox();
+            this.p3ls_31 = new System.Windows.Forms.TextBox();
+            this.p3iws_31 = new System.Windows.Forms.TextBox();
+            this.p3ib_31 = new System.Windows.Forms.TextBox();
+            this.p3pm_31 = new System.Windows.Forms.TextBox();
+            this.p3vw_31 = new System.Windows.Forms.TextBox();
+            this.p3r_0 = new System.Windows.Forms.TextBox();
+            this.p3ls_0 = new System.Windows.Forms.TextBox();
+            this.p3iws_0 = new System.Windows.Forms.TextBox();
+            this.p3ib_0 = new System.Windows.Forms.TextBox();
+            this.p3pm_0 = new System.Windows.Forms.TextBox();
+            this.p3vw_0 = new System.Windows.Forms.TextBox();
             this.tabs.SuspendLayout();
             this.tab_xml.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pufferP3)).BeginInit();
@@ -545,6 +719,8 @@
             this.menu.SuspendLayout();
             this.tab_P2.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.tab_P3.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabs
@@ -1051,10 +1227,11 @@
             // 
             // tab1
             // 
-            this.tab1.Controls.Add(this.tab_eTeil);
-            this.tab1.Controls.Add(this.tab_APlatz);
             this.tab1.Controls.Add(this.tab_P1);
             this.tab1.Controls.Add(this.tab_P2);
+            this.tab1.Controls.Add(this.tab_P3);
+            this.tab1.Controls.Add(this.tab_eTeil);
+            this.tab1.Controls.Add(this.tab_APlatz);
             resources.ApplyResources(this.tab1, "tab1");
             this.tab1.Name = "tab1";
             this.tab1.SelectedIndex = 0;
@@ -4300,6 +4477,1325 @@
             this.p2vw_0.Name = "p2vw_0";
             this.helpProvider1.SetShowHelp(this.p2vw_0, ((bool)(resources.GetObject("p2vw_0.ShowHelp"))));
             // 
+            // tab_P3
+            // 
+            this.tab_P3.BackColor = System.Drawing.Color.Transparent;
+            this.tab_P3.Controls.Add(this.panel3);
+            resources.ApplyResources(this.tab_P3, "tab_P3");
+            this.tab_P3.Name = "tab_P3";
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.label181);
+            this.panel3.Controls.Add(this.label182);
+            this.panel3.Controls.Add(this.label183);
+            this.panel3.Controls.Add(this.label184);
+            this.panel3.Controls.Add(this.label185);
+            this.panel3.Controls.Add(this.label186);
+            this.panel3.Controls.Add(this.label187);
+            this.panel3.Controls.Add(this.label188);
+            this.panel3.Controls.Add(this.label189);
+            this.panel3.Controls.Add(this.label190);
+            this.panel3.Controls.Add(this.label191);
+            this.panel3.Controls.Add(this.label192);
+            this.panel3.Controls.Add(this.label193);
+            this.panel3.Controls.Add(this.label194);
+            this.panel3.Controls.Add(this.label195);
+            this.panel3.Controls.Add(this.label196);
+            this.panel3.Controls.Add(this.label197);
+            this.panel3.Controls.Add(this.label198);
+            this.panel3.Controls.Add(this.label199);
+            this.panel3.Controls.Add(this.label200);
+            this.panel3.Controls.Add(this.label201);
+            this.panel3.Controls.Add(this.label202);
+            this.panel3.Controls.Add(this.label203);
+            this.panel3.Controls.Add(this.label204);
+            this.panel3.Controls.Add(this.label205);
+            this.panel3.Controls.Add(this.label206);
+            this.panel3.Controls.Add(this.label207);
+            this.panel3.Controls.Add(this.label208);
+            this.panel3.Controls.Add(this.label209);
+            this.panel3.Controls.Add(this.label210);
+            this.panel3.Controls.Add(this.label211);
+            this.panel3.Controls.Add(this.label212);
+            this.panel3.Controls.Add(this.label213);
+            this.panel3.Controls.Add(this.label214);
+            this.panel3.Controls.Add(this.label215);
+            this.panel3.Controls.Add(this.label216);
+            this.panel3.Controls.Add(this.label217);
+            this.panel3.Controls.Add(this.label218);
+            this.panel3.Controls.Add(this.label219);
+            this.panel3.Controls.Add(this.label220);
+            this.panel3.Controls.Add(this.label221);
+            this.panel3.Controls.Add(this.label222);
+            this.panel3.Controls.Add(this.label223);
+            this.panel3.Controls.Add(this.label224);
+            this.panel3.Controls.Add(this.label225);
+            this.panel3.Controls.Add(this.label226);
+            this.panel3.Controls.Add(this.label227);
+            this.panel3.Controls.Add(this.label228);
+            this.panel3.Controls.Add(this.label229);
+            this.panel3.Controls.Add(this.label230);
+            this.panel3.Controls.Add(this.label231);
+            this.panel3.Controls.Add(this.label232);
+            this.panel3.Controls.Add(this.label233);
+            this.panel3.Controls.Add(this.label234);
+            this.panel3.Controls.Add(this.label235);
+            this.panel3.Controls.Add(this.label236);
+            this.panel3.Controls.Add(this.label237);
+            this.panel3.Controls.Add(this.label238);
+            this.panel3.Controls.Add(this.label239);
+            this.panel3.Controls.Add(this.label240);
+            this.panel3.Controls.Add(this.label241);
+            this.panel3.Controls.Add(this.label242);
+            this.panel3.Controls.Add(this.label243);
+            this.panel3.Controls.Add(this.label244);
+            this.panel3.Controls.Add(this.label245);
+            this.panel3.Controls.Add(this.label246);
+            this.panel3.Controls.Add(this.label247);
+            this.panel3.Controls.Add(this.label248);
+            this.panel3.Controls.Add(this.label249);
+            this.panel3.Controls.Add(this.label250);
+            this.panel3.Controls.Add(this.label251);
+            this.panel3.Controls.Add(this.label252);
+            this.panel3.Controls.Add(this.label253);
+            this.panel3.Controls.Add(this.label254);
+            this.panel3.Controls.Add(this.label255);
+            this.panel3.Controls.Add(this.label256);
+            this.panel3.Controls.Add(this.label257);
+            this.panel3.Controls.Add(this.label258);
+            this.panel3.Controls.Add(this.label259);
+            this.panel3.Controls.Add(this.label260);
+            this.panel3.Controls.Add(this.label261);
+            this.panel3.Controls.Add(this.label262);
+            this.panel3.Controls.Add(this.label263);
+            this.panel3.Controls.Add(this.label264);
+            this.panel3.Controls.Add(this.label265);
+            this.panel3.Controls.Add(this.label266);
+            this.panel3.Controls.Add(this.label267);
+            this.panel3.Controls.Add(this.label268);
+            this.panel3.Controls.Add(this.label269);
+            this.panel3.Controls.Add(this.p3plus_20);
+            this.panel3.Controls.Add(this.p3r_20);
+            this.panel3.Controls.Add(this.p3ls_20);
+            this.panel3.Controls.Add(this.p3iws_20);
+            this.panel3.Controls.Add(this.p3ib_20);
+            this.panel3.Controls.Add(this.p3pm_20);
+            this.panel3.Controls.Add(this.p3vw_20);
+            this.panel3.Controls.Add(this.p3plus_9);
+            this.panel3.Controls.Add(this.p3r_9);
+            this.panel3.Controls.Add(this.p3ls_9);
+            this.panel3.Controls.Add(this.p3iws_9);
+            this.panel3.Controls.Add(this.p3ib_9);
+            this.panel3.Controls.Add(this.p3pm_9);
+            this.panel3.Controls.Add(this.p3vw_9);
+            this.panel3.Controls.Add(this.p3plus_15);
+            this.panel3.Controls.Add(this.p3r_15);
+            this.panel3.Controls.Add(this.p3ls_15);
+            this.panel3.Controls.Add(this.p3iws_15);
+            this.panel3.Controls.Add(this.p3ib_15);
+            this.panel3.Controls.Add(this.p3pm_15);
+            this.panel3.Controls.Add(this.p3vw_15);
+            this.panel3.Controls.Add(this.p3plus_29);
+            this.panel3.Controls.Add(this.p3r_29);
+            this.panel3.Controls.Add(this.p3ls_29);
+            this.panel3.Controls.Add(this.p3iws_29);
+            this.panel3.Controls.Add(this.p3ib_29);
+            this.panel3.Controls.Add(this.p3pm_29);
+            this.panel3.Controls.Add(this.p3vw_29);
+            this.panel3.Controls.Add(this.p3plus_6);
+            this.panel3.Controls.Add(this.p3r_6);
+            this.panel3.Controls.Add(this.p3ls_6);
+            this.panel3.Controls.Add(this.p3iws_6);
+            this.panel3.Controls.Add(this.p3ib_6);
+            this.panel3.Controls.Add(this.p3pm_6);
+            this.panel3.Controls.Add(this.p3vw_6);
+            this.panel3.Controls.Add(this.p3plus_12);
+            this.panel3.Controls.Add(this.p3r_12);
+            this.panel3.Controls.Add(this.p3ls_12);
+            this.panel3.Controls.Add(this.p3iws_12);
+            this.panel3.Controls.Add(this.p3ib_12);
+            this.panel3.Controls.Add(this.p3pm_12);
+            this.panel3.Controls.Add(this.p3vw_12);
+            this.panel3.Controls.Add(this.p3plus_30);
+            this.panel3.Controls.Add(this.p3r_30);
+            this.panel3.Controls.Add(this.p3ls_30);
+            this.panel3.Controls.Add(this.p3iws_30);
+            this.panel3.Controls.Add(this.p3ib_30);
+            this.panel3.Controls.Add(this.p3pm_30);
+            this.panel3.Controls.Add(this.p3vw_30);
+            this.panel3.Controls.Add(this.p3plus_16);
+            this.panel3.Controls.Add(this.p3r_16);
+            this.panel3.Controls.Add(this.p3ls_16);
+            this.panel3.Controls.Add(this.p3iws_16);
+            this.panel3.Controls.Add(this.p3ib_16);
+            this.panel3.Controls.Add(this.p3pm_16);
+            this.panel3.Controls.Add(this.p3vw_16);
+            this.panel3.Controls.Add(this.p3plus_17);
+            this.panel3.Controls.Add(this.p3r_17);
+            this.panel3.Controls.Add(this.p3ls_17);
+            this.panel3.Controls.Add(this.p3iws_17);
+            this.panel3.Controls.Add(this.p3ib_17);
+            this.panel3.Controls.Add(this.p3pm_17);
+            this.panel3.Controls.Add(this.p3vw_17);
+            this.panel3.Controls.Add(this.p3plus_26);
+            this.panel3.Controls.Add(this.p3r_26);
+            this.panel3.Controls.Add(this.p3ls_26);
+            this.panel3.Controls.Add(this.p3iws_26);
+            this.panel3.Controls.Add(this.p3ib_26);
+            this.panel3.Controls.Add(this.p3pm_26);
+            this.panel3.Controls.Add(this.p3vw_26);
+            this.panel3.Controls.Add(this.p3plus_31);
+            this.panel3.Controls.Add(this.p3r_31);
+            this.panel3.Controls.Add(this.p3ls_31);
+            this.panel3.Controls.Add(this.p3iws_31);
+            this.panel3.Controls.Add(this.p3ib_31);
+            this.panel3.Controls.Add(this.p3pm_31);
+            this.panel3.Controls.Add(this.p3vw_31);
+            this.panel3.Controls.Add(this.p3r_0);
+            this.panel3.Controls.Add(this.p3ls_0);
+            this.panel3.Controls.Add(this.p3iws_0);
+            this.panel3.Controls.Add(this.p3ib_0);
+            this.panel3.Controls.Add(this.p3pm_0);
+            this.panel3.Controls.Add(this.p3vw_0);
+            resources.ApplyResources(this.panel3, "panel3");
+            this.panel3.Name = "panel3";
+            this.helpProvider1.SetShowHelp(this.panel3, ((bool)(resources.GetObject("panel3.ShowHelp"))));
+            // 
+            // label181
+            // 
+            resources.ApplyResources(this.label181, "label181");
+            this.label181.Name = "label181";
+            this.helpProvider1.SetShowHelp(this.label181, ((bool)(resources.GetObject("label181.ShowHelp"))));
+            // 
+            // label182
+            // 
+            resources.ApplyResources(this.label182, "label182");
+            this.label182.Name = "label182";
+            this.helpProvider1.SetShowHelp(this.label182, ((bool)(resources.GetObject("label182.ShowHelp"))));
+            // 
+            // label183
+            // 
+            resources.ApplyResources(this.label183, "label183");
+            this.label183.Name = "label183";
+            this.helpProvider1.SetShowHelp(this.label183, ((bool)(resources.GetObject("label183.ShowHelp"))));
+            // 
+            // label184
+            // 
+            resources.ApplyResources(this.label184, "label184");
+            this.label184.Name = "label184";
+            this.helpProvider1.SetShowHelp(this.label184, ((bool)(resources.GetObject("label184.ShowHelp"))));
+            // 
+            // label185
+            // 
+            resources.ApplyResources(this.label185, "label185");
+            this.label185.Name = "label185";
+            this.helpProvider1.SetShowHelp(this.label185, ((bool)(resources.GetObject("label185.ShowHelp"))));
+            // 
+            // label186
+            // 
+            resources.ApplyResources(this.label186, "label186");
+            this.label186.Name = "label186";
+            this.helpProvider1.SetShowHelp(this.label186, ((bool)(resources.GetObject("label186.ShowHelp"))));
+            // 
+            // label187
+            // 
+            resources.ApplyResources(this.label187, "label187");
+            this.label187.BackColor = System.Drawing.Color.Transparent;
+            this.label187.Name = "label187";
+            this.helpProvider1.SetShowHelp(this.label187, ((bool)(resources.GetObject("label187.ShowHelp"))));
+            // 
+            // label188
+            // 
+            resources.ApplyResources(this.label188, "label188");
+            this.label188.BackColor = System.Drawing.Color.Transparent;
+            this.label188.Name = "label188";
+            this.helpProvider1.SetShowHelp(this.label188, ((bool)(resources.GetObject("label188.ShowHelp"))));
+            // 
+            // label189
+            // 
+            resources.ApplyResources(this.label189, "label189");
+            this.label189.BackColor = System.Drawing.Color.Transparent;
+            this.label189.Name = "label189";
+            this.helpProvider1.SetShowHelp(this.label189, ((bool)(resources.GetObject("label189.ShowHelp"))));
+            // 
+            // label190
+            // 
+            resources.ApplyResources(this.label190, "label190");
+            this.label190.BackColor = System.Drawing.Color.Transparent;
+            this.label190.Name = "label190";
+            this.helpProvider1.SetShowHelp(this.label190, ((bool)(resources.GetObject("label190.ShowHelp"))));
+            // 
+            // label191
+            // 
+            resources.ApplyResources(this.label191, "label191");
+            this.label191.BackColor = System.Drawing.Color.Transparent;
+            this.label191.Name = "label191";
+            this.helpProvider1.SetShowHelp(this.label191, ((bool)(resources.GetObject("label191.ShowHelp"))));
+            // 
+            // label192
+            // 
+            resources.ApplyResources(this.label192, "label192");
+            this.label192.BackColor = System.Drawing.Color.Transparent;
+            this.label192.Name = "label192";
+            this.helpProvider1.SetShowHelp(this.label192, ((bool)(resources.GetObject("label192.ShowHelp"))));
+            // 
+            // label193
+            // 
+            resources.ApplyResources(this.label193, "label193");
+            this.label193.BackColor = System.Drawing.Color.Transparent;
+            this.label193.Name = "label193";
+            this.helpProvider1.SetShowHelp(this.label193, ((bool)(resources.GetObject("label193.ShowHelp"))));
+            // 
+            // label194
+            // 
+            resources.ApplyResources(this.label194, "label194");
+            this.label194.BackColor = System.Drawing.Color.Transparent;
+            this.label194.Name = "label194";
+            this.helpProvider1.SetShowHelp(this.label194, ((bool)(resources.GetObject("label194.ShowHelp"))));
+            // 
+            // label195
+            // 
+            resources.ApplyResources(this.label195, "label195");
+            this.label195.BackColor = System.Drawing.Color.Transparent;
+            this.label195.Name = "label195";
+            this.helpProvider1.SetShowHelp(this.label195, ((bool)(resources.GetObject("label195.ShowHelp"))));
+            // 
+            // label196
+            // 
+            resources.ApplyResources(this.label196, "label196");
+            this.label196.BackColor = System.Drawing.Color.Transparent;
+            this.label196.Name = "label196";
+            this.helpProvider1.SetShowHelp(this.label196, ((bool)(resources.GetObject("label196.ShowHelp"))));
+            // 
+            // label197
+            // 
+            resources.ApplyResources(this.label197, "label197");
+            this.label197.BackColor = System.Drawing.Color.Transparent;
+            this.label197.Name = "label197";
+            this.helpProvider1.SetShowHelp(this.label197, ((bool)(resources.GetObject("label197.ShowHelp"))));
+            // 
+            // label198
+            // 
+            resources.ApplyResources(this.label198, "label198");
+            this.label198.BackColor = System.Drawing.Color.Transparent;
+            this.label198.Name = "label198";
+            this.helpProvider1.SetShowHelp(this.label198, ((bool)(resources.GetObject("label198.ShowHelp"))));
+            // 
+            // label199
+            // 
+            resources.ApplyResources(this.label199, "label199");
+            this.label199.BackColor = System.Drawing.Color.Transparent;
+            this.label199.Name = "label199";
+            this.helpProvider1.SetShowHelp(this.label199, ((bool)(resources.GetObject("label199.ShowHelp"))));
+            // 
+            // label200
+            // 
+            resources.ApplyResources(this.label200, "label200");
+            this.label200.BackColor = System.Drawing.Color.Transparent;
+            this.label200.Name = "label200";
+            this.helpProvider1.SetShowHelp(this.label200, ((bool)(resources.GetObject("label200.ShowHelp"))));
+            // 
+            // label201
+            // 
+            resources.ApplyResources(this.label201, "label201");
+            this.label201.BackColor = System.Drawing.Color.Transparent;
+            this.label201.Name = "label201";
+            this.helpProvider1.SetShowHelp(this.label201, ((bool)(resources.GetObject("label201.ShowHelp"))));
+            // 
+            // label202
+            // 
+            resources.ApplyResources(this.label202, "label202");
+            this.label202.BackColor = System.Drawing.Color.Transparent;
+            this.label202.Name = "label202";
+            this.helpProvider1.SetShowHelp(this.label202, ((bool)(resources.GetObject("label202.ShowHelp"))));
+            // 
+            // label203
+            // 
+            resources.ApplyResources(this.label203, "label203");
+            this.label203.BackColor = System.Drawing.Color.Transparent;
+            this.label203.Name = "label203";
+            this.helpProvider1.SetShowHelp(this.label203, ((bool)(resources.GetObject("label203.ShowHelp"))));
+            // 
+            // label204
+            // 
+            resources.ApplyResources(this.label204, "label204");
+            this.label204.BackColor = System.Drawing.Color.Transparent;
+            this.label204.Name = "label204";
+            this.helpProvider1.SetShowHelp(this.label204, ((bool)(resources.GetObject("label204.ShowHelp"))));
+            // 
+            // label205
+            // 
+            resources.ApplyResources(this.label205, "label205");
+            this.label205.BackColor = System.Drawing.Color.Transparent;
+            this.label205.Name = "label205";
+            this.helpProvider1.SetShowHelp(this.label205, ((bool)(resources.GetObject("label205.ShowHelp"))));
+            // 
+            // label206
+            // 
+            resources.ApplyResources(this.label206, "label206");
+            this.label206.BackColor = System.Drawing.Color.Transparent;
+            this.label206.Name = "label206";
+            this.helpProvider1.SetShowHelp(this.label206, ((bool)(resources.GetObject("label206.ShowHelp"))));
+            // 
+            // label207
+            // 
+            resources.ApplyResources(this.label207, "label207");
+            this.label207.BackColor = System.Drawing.Color.Transparent;
+            this.label207.Name = "label207";
+            this.helpProvider1.SetShowHelp(this.label207, ((bool)(resources.GetObject("label207.ShowHelp"))));
+            // 
+            // label208
+            // 
+            resources.ApplyResources(this.label208, "label208");
+            this.label208.BackColor = System.Drawing.Color.Transparent;
+            this.label208.Name = "label208";
+            this.helpProvider1.SetShowHelp(this.label208, ((bool)(resources.GetObject("label208.ShowHelp"))));
+            // 
+            // label209
+            // 
+            resources.ApplyResources(this.label209, "label209");
+            this.label209.BackColor = System.Drawing.Color.Transparent;
+            this.label209.Name = "label209";
+            this.helpProvider1.SetShowHelp(this.label209, ((bool)(resources.GetObject("label209.ShowHelp"))));
+            // 
+            // label210
+            // 
+            resources.ApplyResources(this.label210, "label210");
+            this.label210.BackColor = System.Drawing.Color.Transparent;
+            this.label210.Name = "label210";
+            this.helpProvider1.SetShowHelp(this.label210, ((bool)(resources.GetObject("label210.ShowHelp"))));
+            // 
+            // label211
+            // 
+            resources.ApplyResources(this.label211, "label211");
+            this.label211.BackColor = System.Drawing.Color.Transparent;
+            this.label211.Name = "label211";
+            this.helpProvider1.SetShowHelp(this.label211, ((bool)(resources.GetObject("label211.ShowHelp"))));
+            // 
+            // label212
+            // 
+            resources.ApplyResources(this.label212, "label212");
+            this.label212.BackColor = System.Drawing.Color.Transparent;
+            this.label212.Name = "label212";
+            this.helpProvider1.SetShowHelp(this.label212, ((bool)(resources.GetObject("label212.ShowHelp"))));
+            // 
+            // label213
+            // 
+            resources.ApplyResources(this.label213, "label213");
+            this.label213.BackColor = System.Drawing.Color.Transparent;
+            this.label213.Name = "label213";
+            this.helpProvider1.SetShowHelp(this.label213, ((bool)(resources.GetObject("label213.ShowHelp"))));
+            // 
+            // label214
+            // 
+            resources.ApplyResources(this.label214, "label214");
+            this.label214.BackColor = System.Drawing.Color.Transparent;
+            this.label214.Name = "label214";
+            this.helpProvider1.SetShowHelp(this.label214, ((bool)(resources.GetObject("label214.ShowHelp"))));
+            // 
+            // label215
+            // 
+            resources.ApplyResources(this.label215, "label215");
+            this.label215.BackColor = System.Drawing.Color.Transparent;
+            this.label215.Name = "label215";
+            this.helpProvider1.SetShowHelp(this.label215, ((bool)(resources.GetObject("label215.ShowHelp"))));
+            // 
+            // label216
+            // 
+            resources.ApplyResources(this.label216, "label216");
+            this.label216.BackColor = System.Drawing.Color.Transparent;
+            this.label216.Name = "label216";
+            this.helpProvider1.SetShowHelp(this.label216, ((bool)(resources.GetObject("label216.ShowHelp"))));
+            // 
+            // label217
+            // 
+            resources.ApplyResources(this.label217, "label217");
+            this.label217.BackColor = System.Drawing.Color.Transparent;
+            this.label217.Name = "label217";
+            this.helpProvider1.SetShowHelp(this.label217, ((bool)(resources.GetObject("label217.ShowHelp"))));
+            // 
+            // label218
+            // 
+            resources.ApplyResources(this.label218, "label218");
+            this.label218.BackColor = System.Drawing.Color.Transparent;
+            this.label218.Name = "label218";
+            this.helpProvider1.SetShowHelp(this.label218, ((bool)(resources.GetObject("label218.ShowHelp"))));
+            // 
+            // label219
+            // 
+            resources.ApplyResources(this.label219, "label219");
+            this.label219.BackColor = System.Drawing.Color.Transparent;
+            this.label219.Name = "label219";
+            this.helpProvider1.SetShowHelp(this.label219, ((bool)(resources.GetObject("label219.ShowHelp"))));
+            // 
+            // label220
+            // 
+            resources.ApplyResources(this.label220, "label220");
+            this.label220.BackColor = System.Drawing.Color.Transparent;
+            this.label220.Name = "label220";
+            this.helpProvider1.SetShowHelp(this.label220, ((bool)(resources.GetObject("label220.ShowHelp"))));
+            // 
+            // label221
+            // 
+            resources.ApplyResources(this.label221, "label221");
+            this.label221.BackColor = System.Drawing.Color.Transparent;
+            this.label221.Name = "label221";
+            this.helpProvider1.SetShowHelp(this.label221, ((bool)(resources.GetObject("label221.ShowHelp"))));
+            // 
+            // label222
+            // 
+            resources.ApplyResources(this.label222, "label222");
+            this.label222.BackColor = System.Drawing.Color.Transparent;
+            this.label222.Name = "label222";
+            this.helpProvider1.SetShowHelp(this.label222, ((bool)(resources.GetObject("label222.ShowHelp"))));
+            // 
+            // label223
+            // 
+            resources.ApplyResources(this.label223, "label223");
+            this.label223.BackColor = System.Drawing.Color.Transparent;
+            this.label223.Name = "label223";
+            this.helpProvider1.SetShowHelp(this.label223, ((bool)(resources.GetObject("label223.ShowHelp"))));
+            // 
+            // label224
+            // 
+            resources.ApplyResources(this.label224, "label224");
+            this.label224.BackColor = System.Drawing.Color.Transparent;
+            this.label224.Name = "label224";
+            this.helpProvider1.SetShowHelp(this.label224, ((bool)(resources.GetObject("label224.ShowHelp"))));
+            // 
+            // label225
+            // 
+            resources.ApplyResources(this.label225, "label225");
+            this.label225.BackColor = System.Drawing.Color.Transparent;
+            this.label225.Name = "label225";
+            this.helpProvider1.SetShowHelp(this.label225, ((bool)(resources.GetObject("label225.ShowHelp"))));
+            // 
+            // label226
+            // 
+            resources.ApplyResources(this.label226, "label226");
+            this.label226.BackColor = System.Drawing.Color.Transparent;
+            this.label226.Name = "label226";
+            this.helpProvider1.SetShowHelp(this.label226, ((bool)(resources.GetObject("label226.ShowHelp"))));
+            // 
+            // label227
+            // 
+            resources.ApplyResources(this.label227, "label227");
+            this.label227.BackColor = System.Drawing.Color.Transparent;
+            this.label227.Name = "label227";
+            this.helpProvider1.SetShowHelp(this.label227, ((bool)(resources.GetObject("label227.ShowHelp"))));
+            // 
+            // label228
+            // 
+            resources.ApplyResources(this.label228, "label228");
+            this.label228.BackColor = System.Drawing.Color.Transparent;
+            this.label228.Name = "label228";
+            this.helpProvider1.SetShowHelp(this.label228, ((bool)(resources.GetObject("label228.ShowHelp"))));
+            // 
+            // label229
+            // 
+            resources.ApplyResources(this.label229, "label229");
+            this.label229.BackColor = System.Drawing.Color.Transparent;
+            this.label229.Name = "label229";
+            this.helpProvider1.SetShowHelp(this.label229, ((bool)(resources.GetObject("label229.ShowHelp"))));
+            // 
+            // label230
+            // 
+            resources.ApplyResources(this.label230, "label230");
+            this.label230.BackColor = System.Drawing.Color.Transparent;
+            this.label230.Name = "label230";
+            this.helpProvider1.SetShowHelp(this.label230, ((bool)(resources.GetObject("label230.ShowHelp"))));
+            // 
+            // label231
+            // 
+            resources.ApplyResources(this.label231, "label231");
+            this.label231.BackColor = System.Drawing.Color.Transparent;
+            this.label231.Name = "label231";
+            this.helpProvider1.SetShowHelp(this.label231, ((bool)(resources.GetObject("label231.ShowHelp"))));
+            // 
+            // label232
+            // 
+            resources.ApplyResources(this.label232, "label232");
+            this.label232.BackColor = System.Drawing.Color.Transparent;
+            this.label232.Name = "label232";
+            this.helpProvider1.SetShowHelp(this.label232, ((bool)(resources.GetObject("label232.ShowHelp"))));
+            // 
+            // label233
+            // 
+            resources.ApplyResources(this.label233, "label233");
+            this.label233.BackColor = System.Drawing.Color.Transparent;
+            this.label233.Name = "label233";
+            this.helpProvider1.SetShowHelp(this.label233, ((bool)(resources.GetObject("label233.ShowHelp"))));
+            // 
+            // label234
+            // 
+            resources.ApplyResources(this.label234, "label234");
+            this.label234.BackColor = System.Drawing.Color.Transparent;
+            this.label234.Name = "label234";
+            this.helpProvider1.SetShowHelp(this.label234, ((bool)(resources.GetObject("label234.ShowHelp"))));
+            // 
+            // label235
+            // 
+            resources.ApplyResources(this.label235, "label235");
+            this.label235.BackColor = System.Drawing.Color.Transparent;
+            this.label235.Name = "label235";
+            this.helpProvider1.SetShowHelp(this.label235, ((bool)(resources.GetObject("label235.ShowHelp"))));
+            // 
+            // label236
+            // 
+            resources.ApplyResources(this.label236, "label236");
+            this.label236.BackColor = System.Drawing.Color.Transparent;
+            this.label236.Name = "label236";
+            this.helpProvider1.SetShowHelp(this.label236, ((bool)(resources.GetObject("label236.ShowHelp"))));
+            // 
+            // label237
+            // 
+            resources.ApplyResources(this.label237, "label237");
+            this.label237.BackColor = System.Drawing.Color.Transparent;
+            this.label237.Name = "label237";
+            this.helpProvider1.SetShowHelp(this.label237, ((bool)(resources.GetObject("label237.ShowHelp"))));
+            // 
+            // label238
+            // 
+            resources.ApplyResources(this.label238, "label238");
+            this.label238.BackColor = System.Drawing.Color.Transparent;
+            this.label238.Name = "label238";
+            this.helpProvider1.SetShowHelp(this.label238, ((bool)(resources.GetObject("label238.ShowHelp"))));
+            // 
+            // label239
+            // 
+            resources.ApplyResources(this.label239, "label239");
+            this.label239.BackColor = System.Drawing.Color.Transparent;
+            this.label239.Name = "label239";
+            this.helpProvider1.SetShowHelp(this.label239, ((bool)(resources.GetObject("label239.ShowHelp"))));
+            // 
+            // label240
+            // 
+            resources.ApplyResources(this.label240, "label240");
+            this.label240.BackColor = System.Drawing.Color.Transparent;
+            this.label240.Name = "label240";
+            this.helpProvider1.SetShowHelp(this.label240, ((bool)(resources.GetObject("label240.ShowHelp"))));
+            // 
+            // label241
+            // 
+            resources.ApplyResources(this.label241, "label241");
+            this.label241.BackColor = System.Drawing.Color.Transparent;
+            this.label241.Name = "label241";
+            this.helpProvider1.SetShowHelp(this.label241, ((bool)(resources.GetObject("label241.ShowHelp"))));
+            // 
+            // label242
+            // 
+            resources.ApplyResources(this.label242, "label242");
+            this.label242.BackColor = System.Drawing.Color.Transparent;
+            this.label242.Name = "label242";
+            this.helpProvider1.SetShowHelp(this.label242, ((bool)(resources.GetObject("label242.ShowHelp"))));
+            // 
+            // label243
+            // 
+            resources.ApplyResources(this.label243, "label243");
+            this.label243.BackColor = System.Drawing.Color.Transparent;
+            this.label243.Name = "label243";
+            this.helpProvider1.SetShowHelp(this.label243, ((bool)(resources.GetObject("label243.ShowHelp"))));
+            // 
+            // label244
+            // 
+            resources.ApplyResources(this.label244, "label244");
+            this.label244.BackColor = System.Drawing.Color.Transparent;
+            this.label244.Name = "label244";
+            this.helpProvider1.SetShowHelp(this.label244, ((bool)(resources.GetObject("label244.ShowHelp"))));
+            // 
+            // label245
+            // 
+            resources.ApplyResources(this.label245, "label245");
+            this.label245.BackColor = System.Drawing.Color.Transparent;
+            this.label245.Name = "label245";
+            this.helpProvider1.SetShowHelp(this.label245, ((bool)(resources.GetObject("label245.ShowHelp"))));
+            // 
+            // label246
+            // 
+            resources.ApplyResources(this.label246, "label246");
+            this.label246.BackColor = System.Drawing.Color.Transparent;
+            this.label246.Name = "label246";
+            this.helpProvider1.SetShowHelp(this.label246, ((bool)(resources.GetObject("label246.ShowHelp"))));
+            // 
+            // label247
+            // 
+            resources.ApplyResources(this.label247, "label247");
+            this.label247.BackColor = System.Drawing.Color.Transparent;
+            this.label247.Name = "label247";
+            this.helpProvider1.SetShowHelp(this.label247, ((bool)(resources.GetObject("label247.ShowHelp"))));
+            // 
+            // label248
+            // 
+            resources.ApplyResources(this.label248, "label248");
+            this.label248.BackColor = System.Drawing.Color.Transparent;
+            this.label248.Name = "label248";
+            this.helpProvider1.SetShowHelp(this.label248, ((bool)(resources.GetObject("label248.ShowHelp"))));
+            // 
+            // label249
+            // 
+            resources.ApplyResources(this.label249, "label249");
+            this.label249.BackColor = System.Drawing.Color.Transparent;
+            this.label249.Name = "label249";
+            this.helpProvider1.SetShowHelp(this.label249, ((bool)(resources.GetObject("label249.ShowHelp"))));
+            // 
+            // label250
+            // 
+            resources.ApplyResources(this.label250, "label250");
+            this.label250.BackColor = System.Drawing.Color.Transparent;
+            this.label250.Name = "label250";
+            this.helpProvider1.SetShowHelp(this.label250, ((bool)(resources.GetObject("label250.ShowHelp"))));
+            // 
+            // label251
+            // 
+            resources.ApplyResources(this.label251, "label251");
+            this.label251.BackColor = System.Drawing.Color.Transparent;
+            this.label251.Name = "label251";
+            this.helpProvider1.SetShowHelp(this.label251, ((bool)(resources.GetObject("label251.ShowHelp"))));
+            // 
+            // label252
+            // 
+            resources.ApplyResources(this.label252, "label252");
+            this.label252.BackColor = System.Drawing.Color.Transparent;
+            this.label252.Name = "label252";
+            this.helpProvider1.SetShowHelp(this.label252, ((bool)(resources.GetObject("label252.ShowHelp"))));
+            // 
+            // label253
+            // 
+            resources.ApplyResources(this.label253, "label253");
+            this.label253.BackColor = System.Drawing.Color.Transparent;
+            this.label253.Name = "label253";
+            this.helpProvider1.SetShowHelp(this.label253, ((bool)(resources.GetObject("label253.ShowHelp"))));
+            // 
+            // label254
+            // 
+            resources.ApplyResources(this.label254, "label254");
+            this.label254.BackColor = System.Drawing.Color.Transparent;
+            this.label254.Name = "label254";
+            this.helpProvider1.SetShowHelp(this.label254, ((bool)(resources.GetObject("label254.ShowHelp"))));
+            // 
+            // label255
+            // 
+            resources.ApplyResources(this.label255, "label255");
+            this.label255.BackColor = System.Drawing.Color.Transparent;
+            this.label255.Name = "label255";
+            this.helpProvider1.SetShowHelp(this.label255, ((bool)(resources.GetObject("label255.ShowHelp"))));
+            // 
+            // label256
+            // 
+            resources.ApplyResources(this.label256, "label256");
+            this.label256.BackColor = System.Drawing.Color.Transparent;
+            this.label256.Name = "label256";
+            this.helpProvider1.SetShowHelp(this.label256, ((bool)(resources.GetObject("label256.ShowHelp"))));
+            // 
+            // label257
+            // 
+            resources.ApplyResources(this.label257, "label257");
+            this.label257.BackColor = System.Drawing.Color.Transparent;
+            this.label257.Name = "label257";
+            this.helpProvider1.SetShowHelp(this.label257, ((bool)(resources.GetObject("label257.ShowHelp"))));
+            // 
+            // label258
+            // 
+            resources.ApplyResources(this.label258, "label258");
+            this.label258.Name = "label258";
+            this.helpProvider1.SetShowHelp(this.label258, ((bool)(resources.GetObject("label258.ShowHelp"))));
+            // 
+            // label259
+            // 
+            resources.ApplyResources(this.label259, "label259");
+            this.label259.Name = "label259";
+            this.helpProvider1.SetShowHelp(this.label259, ((bool)(resources.GetObject("label259.ShowHelp"))));
+            // 
+            // label260
+            // 
+            resources.ApplyResources(this.label260, "label260");
+            this.label260.Name = "label260";
+            this.helpProvider1.SetShowHelp(this.label260, ((bool)(resources.GetObject("label260.ShowHelp"))));
+            // 
+            // label261
+            // 
+            resources.ApplyResources(this.label261, "label261");
+            this.label261.Name = "label261";
+            this.helpProvider1.SetShowHelp(this.label261, ((bool)(resources.GetObject("label261.ShowHelp"))));
+            // 
+            // label262
+            // 
+            resources.ApplyResources(this.label262, "label262");
+            this.label262.Name = "label262";
+            this.helpProvider1.SetShowHelp(this.label262, ((bool)(resources.GetObject("label262.ShowHelp"))));
+            // 
+            // label263
+            // 
+            resources.ApplyResources(this.label263, "label263");
+            this.label263.Name = "label263";
+            this.helpProvider1.SetShowHelp(this.label263, ((bool)(resources.GetObject("label263.ShowHelp"))));
+            // 
+            // label264
+            // 
+            resources.ApplyResources(this.label264, "label264");
+            this.label264.Name = "label264";
+            this.helpProvider1.SetShowHelp(this.label264, ((bool)(resources.GetObject("label264.ShowHelp"))));
+            // 
+            // label265
+            // 
+            resources.ApplyResources(this.label265, "label265");
+            this.label265.Name = "label265";
+            this.helpProvider1.SetShowHelp(this.label265, ((bool)(resources.GetObject("label265.ShowHelp"))));
+            // 
+            // label266
+            // 
+            resources.ApplyResources(this.label266, "label266");
+            this.label266.Name = "label266";
+            this.helpProvider1.SetShowHelp(this.label266, ((bool)(resources.GetObject("label266.ShowHelp"))));
+            // 
+            // label267
+            // 
+            resources.ApplyResources(this.label267, "label267");
+            this.label267.Name = "label267";
+            this.helpProvider1.SetShowHelp(this.label267, ((bool)(resources.GetObject("label267.ShowHelp"))));
+            // 
+            // label268
+            // 
+            resources.ApplyResources(this.label268, "label268");
+            this.label268.Name = "label268";
+            this.helpProvider1.SetShowHelp(this.label268, ((bool)(resources.GetObject("label268.ShowHelp"))));
+            // 
+            // label269
+            // 
+            resources.ApplyResources(this.label269, "label269");
+            this.label269.Name = "label269";
+            this.helpProvider1.SetShowHelp(this.label269, ((bool)(resources.GetObject("label269.ShowHelp"))));
+            // 
+            // p3plus_20
+            // 
+            this.p3plus_20.BackColor = System.Drawing.Color.AntiqueWhite;
+            resources.ApplyResources(this.p3plus_20, "p3plus_20");
+            this.p3plus_20.Name = "p3plus_20";
+            this.helpProvider1.SetShowHelp(this.p3plus_20, ((bool)(resources.GetObject("p3plus_20.ShowHelp"))));
+            // 
+            // p3r_20
+            // 
+            resources.ApplyResources(this.p3r_20, "p3r_20");
+            this.p3r_20.Name = "p3r_20";
+            this.helpProvider1.SetShowHelp(this.p3r_20, ((bool)(resources.GetObject("p3r_20.ShowHelp"))));
+            // 
+            // p3ls_20
+            // 
+            resources.ApplyResources(this.p3ls_20, "p3ls_20");
+            this.p3ls_20.Name = "p3ls_20";
+            this.helpProvider1.SetShowHelp(this.p3ls_20, ((bool)(resources.GetObject("p3ls_20.ShowHelp"))));
+            // 
+            // p3iws_20
+            // 
+            resources.ApplyResources(this.p3iws_20, "p3iws_20");
+            this.p3iws_20.Name = "p3iws_20";
+            this.helpProvider1.SetShowHelp(this.p3iws_20, ((bool)(resources.GetObject("p3iws_20.ShowHelp"))));
+            // 
+            // p3ib_20
+            // 
+            resources.ApplyResources(this.p3ib_20, "p3ib_20");
+            this.p3ib_20.Name = "p3ib_20";
+            this.helpProvider1.SetShowHelp(this.p3ib_20, ((bool)(resources.GetObject("p3ib_20.ShowHelp"))));
+            // 
+            // p3pm_20
+            // 
+            resources.ApplyResources(this.p3pm_20, "p3pm_20");
+            this.p3pm_20.Name = "p3pm_20";
+            this.helpProvider1.SetShowHelp(this.p3pm_20, ((bool)(resources.GetObject("p3pm_20.ShowHelp"))));
+            // 
+            // p3vw_20
+            // 
+            this.p3vw_20.BackColor = System.Drawing.Color.Honeydew;
+            resources.ApplyResources(this.p3vw_20, "p3vw_20");
+            this.p3vw_20.Name = "p3vw_20";
+            this.helpProvider1.SetShowHelp(this.p3vw_20, ((bool)(resources.GetObject("p3vw_20.ShowHelp"))));
+            // 
+            // p3plus_9
+            // 
+            this.p3plus_9.BackColor = System.Drawing.Color.AntiqueWhite;
+            resources.ApplyResources(this.p3plus_9, "p3plus_9");
+            this.p3plus_9.Name = "p3plus_9";
+            this.helpProvider1.SetShowHelp(this.p3plus_9, ((bool)(resources.GetObject("p3plus_9.ShowHelp"))));
+            // 
+            // p3r_9
+            // 
+            resources.ApplyResources(this.p3r_9, "p3r_9");
+            this.p3r_9.Name = "p3r_9";
+            this.helpProvider1.SetShowHelp(this.p3r_9, ((bool)(resources.GetObject("p3r_9.ShowHelp"))));
+            // 
+            // p3ls_9
+            // 
+            resources.ApplyResources(this.p3ls_9, "p3ls_9");
+            this.p3ls_9.Name = "p3ls_9";
+            this.helpProvider1.SetShowHelp(this.p3ls_9, ((bool)(resources.GetObject("p3ls_9.ShowHelp"))));
+            // 
+            // p3iws_9
+            // 
+            resources.ApplyResources(this.p3iws_9, "p3iws_9");
+            this.p3iws_9.Name = "p3iws_9";
+            this.helpProvider1.SetShowHelp(this.p3iws_9, ((bool)(resources.GetObject("p3iws_9.ShowHelp"))));
+            // 
+            // p3ib_9
+            // 
+            resources.ApplyResources(this.p3ib_9, "p3ib_9");
+            this.p3ib_9.Name = "p3ib_9";
+            this.helpProvider1.SetShowHelp(this.p3ib_9, ((bool)(resources.GetObject("p3ib_9.ShowHelp"))));
+            // 
+            // p3pm_9
+            // 
+            resources.ApplyResources(this.p3pm_9, "p3pm_9");
+            this.p3pm_9.Name = "p3pm_9";
+            this.helpProvider1.SetShowHelp(this.p3pm_9, ((bool)(resources.GetObject("p3pm_9.ShowHelp"))));
+            // 
+            // p3vw_9
+            // 
+            this.p3vw_9.BackColor = System.Drawing.Color.Honeydew;
+            resources.ApplyResources(this.p3vw_9, "p3vw_9");
+            this.p3vw_9.Name = "p3vw_9";
+            this.helpProvider1.SetShowHelp(this.p3vw_9, ((bool)(resources.GetObject("p3vw_9.ShowHelp"))));
+            // 
+            // p3plus_15
+            // 
+            this.p3plus_15.BackColor = System.Drawing.Color.AntiqueWhite;
+            resources.ApplyResources(this.p3plus_15, "p3plus_15");
+            this.p3plus_15.Name = "p3plus_15";
+            this.helpProvider1.SetShowHelp(this.p3plus_15, ((bool)(resources.GetObject("p3plus_15.ShowHelp"))));
+            // 
+            // p3r_15
+            // 
+            resources.ApplyResources(this.p3r_15, "p3r_15");
+            this.p3r_15.Name = "p3r_15";
+            this.helpProvider1.SetShowHelp(this.p3r_15, ((bool)(resources.GetObject("p3r_15.ShowHelp"))));
+            // 
+            // p3ls_15
+            // 
+            resources.ApplyResources(this.p3ls_15, "p3ls_15");
+            this.p3ls_15.Name = "p3ls_15";
+            this.helpProvider1.SetShowHelp(this.p3ls_15, ((bool)(resources.GetObject("p3ls_15.ShowHelp"))));
+            // 
+            // p3iws_15
+            // 
+            resources.ApplyResources(this.p3iws_15, "p3iws_15");
+            this.p3iws_15.Name = "p3iws_15";
+            this.helpProvider1.SetShowHelp(this.p3iws_15, ((bool)(resources.GetObject("p3iws_15.ShowHelp"))));
+            // 
+            // p3ib_15
+            // 
+            resources.ApplyResources(this.p3ib_15, "p3ib_15");
+            this.p3ib_15.Name = "p3ib_15";
+            this.helpProvider1.SetShowHelp(this.p3ib_15, ((bool)(resources.GetObject("p3ib_15.ShowHelp"))));
+            // 
+            // p3pm_15
+            // 
+            resources.ApplyResources(this.p3pm_15, "p3pm_15");
+            this.p3pm_15.Name = "p3pm_15";
+            this.helpProvider1.SetShowHelp(this.p3pm_15, ((bool)(resources.GetObject("p3pm_15.ShowHelp"))));
+            // 
+            // p3vw_15
+            // 
+            this.p3vw_15.BackColor = System.Drawing.Color.Honeydew;
+            resources.ApplyResources(this.p3vw_15, "p3vw_15");
+            this.p3vw_15.Name = "p3vw_15";
+            this.helpProvider1.SetShowHelp(this.p3vw_15, ((bool)(resources.GetObject("p3vw_15.ShowHelp"))));
+            // 
+            // p3plus_29
+            // 
+            this.p3plus_29.BackColor = System.Drawing.Color.AntiqueWhite;
+            resources.ApplyResources(this.p3plus_29, "p3plus_29");
+            this.p3plus_29.Name = "p3plus_29";
+            this.helpProvider1.SetShowHelp(this.p3plus_29, ((bool)(resources.GetObject("p3plus_29.ShowHelp"))));
+            // 
+            // p3r_29
+            // 
+            resources.ApplyResources(this.p3r_29, "p3r_29");
+            this.p3r_29.Name = "p3r_29";
+            this.helpProvider1.SetShowHelp(this.p3r_29, ((bool)(resources.GetObject("p3r_29.ShowHelp"))));
+            // 
+            // p3ls_29
+            // 
+            resources.ApplyResources(this.p3ls_29, "p3ls_29");
+            this.p3ls_29.Name = "p3ls_29";
+            this.helpProvider1.SetShowHelp(this.p3ls_29, ((bool)(resources.GetObject("p3ls_29.ShowHelp"))));
+            // 
+            // p3iws_29
+            // 
+            this.p3iws_29.BackColor = System.Drawing.Color.AntiqueWhite;
+            resources.ApplyResources(this.p3iws_29, "p3iws_29");
+            this.p3iws_29.Name = "p3iws_29";
+            this.helpProvider1.SetShowHelp(this.p3iws_29, ((bool)(resources.GetObject("p3iws_29.ShowHelp"))));
+            // 
+            // p3ib_29
+            // 
+            resources.ApplyResources(this.p3ib_29, "p3ib_29");
+            this.p3ib_29.Name = "p3ib_29";
+            this.helpProvider1.SetShowHelp(this.p3ib_29, ((bool)(resources.GetObject("p3ib_29.ShowHelp"))));
+            // 
+            // p3pm_29
+            // 
+            this.p3pm_29.BackColor = System.Drawing.Color.Honeydew;
+            resources.ApplyResources(this.p3pm_29, "p3pm_29");
+            this.p3pm_29.Name = "p3pm_29";
+            this.helpProvider1.SetShowHelp(this.p3pm_29, ((bool)(resources.GetObject("p3pm_29.ShowHelp"))));
+            // 
+            // p3vw_29
+            // 
+            this.p3vw_29.BackColor = System.Drawing.Color.Honeydew;
+            resources.ApplyResources(this.p3vw_29, "p3vw_29");
+            this.p3vw_29.Name = "p3vw_29";
+            this.helpProvider1.SetShowHelp(this.p3vw_29, ((bool)(resources.GetObject("p3vw_29.ShowHelp"))));
+            // 
+            // p3plus_6
+            // 
+            this.p3plus_6.BackColor = System.Drawing.Color.AntiqueWhite;
+            resources.ApplyResources(this.p3plus_6, "p3plus_6");
+            this.p3plus_6.Name = "p3plus_6";
+            this.helpProvider1.SetShowHelp(this.p3plus_6, ((bool)(resources.GetObject("p3plus_6.ShowHelp"))));
+            // 
+            // p3r_6
+            // 
+            resources.ApplyResources(this.p3r_6, "p3r_6");
+            this.p3r_6.Name = "p3r_6";
+            this.helpProvider1.SetShowHelp(this.p3r_6, ((bool)(resources.GetObject("p3r_6.ShowHelp"))));
+            // 
+            // p3ls_6
+            // 
+            resources.ApplyResources(this.p3ls_6, "p3ls_6");
+            this.p3ls_6.Name = "p3ls_6";
+            this.helpProvider1.SetShowHelp(this.p3ls_6, ((bool)(resources.GetObject("p3ls_6.ShowHelp"))));
+            // 
+            // p3iws_6
+            // 
+            resources.ApplyResources(this.p3iws_6, "p3iws_6");
+            this.p3iws_6.Name = "p3iws_6";
+            this.helpProvider1.SetShowHelp(this.p3iws_6, ((bool)(resources.GetObject("p3iws_6.ShowHelp"))));
+            // 
+            // p3ib_6
+            // 
+            resources.ApplyResources(this.p3ib_6, "p3ib_6");
+            this.p3ib_6.Name = "p3ib_6";
+            this.helpProvider1.SetShowHelp(this.p3ib_6, ((bool)(resources.GetObject("p3ib_6.ShowHelp"))));
+            // 
+            // p3pm_6
+            // 
+            resources.ApplyResources(this.p3pm_6, "p3pm_6");
+            this.p3pm_6.Name = "p3pm_6";
+            this.helpProvider1.SetShowHelp(this.p3pm_6, ((bool)(resources.GetObject("p3pm_6.ShowHelp"))));
+            // 
+            // p3vw_6
+            // 
+            this.p3vw_6.BackColor = System.Drawing.Color.Honeydew;
+            resources.ApplyResources(this.p3vw_6, "p3vw_6");
+            this.p3vw_6.Name = "p3vw_6";
+            this.helpProvider1.SetShowHelp(this.p3vw_6, ((bool)(resources.GetObject("p3vw_6.ShowHelp"))));
+            // 
+            // p3plus_12
+            // 
+            this.p3plus_12.BackColor = System.Drawing.Color.AntiqueWhite;
+            resources.ApplyResources(this.p3plus_12, "p3plus_12");
+            this.p3plus_12.Name = "p3plus_12";
+            this.helpProvider1.SetShowHelp(this.p3plus_12, ((bool)(resources.GetObject("p3plus_12.ShowHelp"))));
+            // 
+            // p3r_12
+            // 
+            resources.ApplyResources(this.p3r_12, "p3r_12");
+            this.p3r_12.Name = "p3r_12";
+            this.helpProvider1.SetShowHelp(this.p3r_12, ((bool)(resources.GetObject("p3r_12.ShowHelp"))));
+            // 
+            // p3ls_12
+            // 
+            resources.ApplyResources(this.p3ls_12, "p3ls_12");
+            this.p3ls_12.Name = "p3ls_12";
+            this.helpProvider1.SetShowHelp(this.p3ls_12, ((bool)(resources.GetObject("p3ls_12.ShowHelp"))));
+            // 
+            // p3iws_12
+            // 
+            resources.ApplyResources(this.p3iws_12, "p3iws_12");
+            this.p3iws_12.Name = "p3iws_12";
+            this.helpProvider1.SetShowHelp(this.p3iws_12, ((bool)(resources.GetObject("p3iws_12.ShowHelp"))));
+            // 
+            // p3ib_12
+            // 
+            resources.ApplyResources(this.p3ib_12, "p3ib_12");
+            this.p3ib_12.Name = "p3ib_12";
+            this.helpProvider1.SetShowHelp(this.p3ib_12, ((bool)(resources.GetObject("p3ib_12.ShowHelp"))));
+            // 
+            // p3pm_12
+            // 
+            resources.ApplyResources(this.p3pm_12, "p3pm_12");
+            this.p3pm_12.Name = "p3pm_12";
+            this.helpProvider1.SetShowHelp(this.p3pm_12, ((bool)(resources.GetObject("p3pm_12.ShowHelp"))));
+            // 
+            // p3vw_12
+            // 
+            this.p3vw_12.BackColor = System.Drawing.Color.Honeydew;
+            resources.ApplyResources(this.p3vw_12, "p3vw_12");
+            this.p3vw_12.Name = "p3vw_12";
+            this.helpProvider1.SetShowHelp(this.p3vw_12, ((bool)(resources.GetObject("p3vw_12.ShowHelp"))));
+            // 
+            // p3plus_30
+            // 
+            this.p3plus_30.BackColor = System.Drawing.Color.AntiqueWhite;
+            resources.ApplyResources(this.p3plus_30, "p3plus_30");
+            this.p3plus_30.Name = "p3plus_30";
+            this.helpProvider1.SetShowHelp(this.p3plus_30, ((bool)(resources.GetObject("p3plus_30.ShowHelp"))));
+            // 
+            // p3r_30
+            // 
+            resources.ApplyResources(this.p3r_30, "p3r_30");
+            this.p3r_30.Name = "p3r_30";
+            this.helpProvider1.SetShowHelp(this.p3r_30, ((bool)(resources.GetObject("p3r_30.ShowHelp"))));
+            // 
+            // p3ls_30
+            // 
+            resources.ApplyResources(this.p3ls_30, "p3ls_30");
+            this.p3ls_30.Name = "p3ls_30";
+            this.helpProvider1.SetShowHelp(this.p3ls_30, ((bool)(resources.GetObject("p3ls_30.ShowHelp"))));
+            // 
+            // p3iws_30
+            // 
+            this.p3iws_30.BackColor = System.Drawing.Color.AntiqueWhite;
+            resources.ApplyResources(this.p3iws_30, "p3iws_30");
+            this.p3iws_30.Name = "p3iws_30";
+            this.helpProvider1.SetShowHelp(this.p3iws_30, ((bool)(resources.GetObject("p3iws_30.ShowHelp"))));
+            // 
+            // p3ib_30
+            // 
+            resources.ApplyResources(this.p3ib_30, "p3ib_30");
+            this.p3ib_30.Name = "p3ib_30";
+            this.helpProvider1.SetShowHelp(this.p3ib_30, ((bool)(resources.GetObject("p3ib_30.ShowHelp"))));
+            // 
+            // p3pm_30
+            // 
+            this.p3pm_30.BackColor = System.Drawing.Color.Honeydew;
+            resources.ApplyResources(this.p3pm_30, "p3pm_30");
+            this.p3pm_30.Name = "p3pm_30";
+            this.helpProvider1.SetShowHelp(this.p3pm_30, ((bool)(resources.GetObject("p3pm_30.ShowHelp"))));
+            // 
+            // p3vw_30
+            // 
+            this.p3vw_30.BackColor = System.Drawing.Color.Honeydew;
+            resources.ApplyResources(this.p3vw_30, "p3vw_30");
+            this.p3vw_30.Name = "p3vw_30";
+            this.helpProvider1.SetShowHelp(this.p3vw_30, ((bool)(resources.GetObject("p3vw_30.ShowHelp"))));
+            // 
+            // p3plus_16
+            // 
+            this.p3plus_16.BackColor = System.Drawing.Color.AntiqueWhite;
+            resources.ApplyResources(this.p3plus_16, "p3plus_16");
+            this.p3plus_16.Name = "p3plus_16";
+            this.helpProvider1.SetShowHelp(this.p3plus_16, ((bool)(resources.GetObject("p3plus_16.ShowHelp"))));
+            // 
+            // p3r_16
+            // 
+            resources.ApplyResources(this.p3r_16, "p3r_16");
+            this.p3r_16.Name = "p3r_16";
+            this.helpProvider1.SetShowHelp(this.p3r_16, ((bool)(resources.GetObject("p3r_16.ShowHelp"))));
+            // 
+            // p3ls_16
+            // 
+            resources.ApplyResources(this.p3ls_16, "p3ls_16");
+            this.p3ls_16.Name = "p3ls_16";
+            this.helpProvider1.SetShowHelp(this.p3ls_16, ((bool)(resources.GetObject("p3ls_16.ShowHelp"))));
+            // 
+            // p3iws_16
+            // 
+            resources.ApplyResources(this.p3iws_16, "p3iws_16");
+            this.p3iws_16.Name = "p3iws_16";
+            this.helpProvider1.SetShowHelp(this.p3iws_16, ((bool)(resources.GetObject("p3iws_16.ShowHelp"))));
+            // 
+            // p3ib_16
+            // 
+            resources.ApplyResources(this.p3ib_16, "p3ib_16");
+            this.p3ib_16.Name = "p3ib_16";
+            this.helpProvider1.SetShowHelp(this.p3ib_16, ((bool)(resources.GetObject("p3ib_16.ShowHelp"))));
+            // 
+            // p3pm_16
+            // 
+            resources.ApplyResources(this.p3pm_16, "p3pm_16");
+            this.p3pm_16.Name = "p3pm_16";
+            this.helpProvider1.SetShowHelp(this.p3pm_16, ((bool)(resources.GetObject("p3pm_16.ShowHelp"))));
+            // 
+            // p3vw_16
+            // 
+            this.p3vw_16.BackColor = System.Drawing.Color.Honeydew;
+            resources.ApplyResources(this.p3vw_16, "p3vw_16");
+            this.p3vw_16.Name = "p3vw_16";
+            this.helpProvider1.SetShowHelp(this.p3vw_16, ((bool)(resources.GetObject("p3vw_16.ShowHelp"))));
+            // 
+            // p3plus_17
+            // 
+            this.p3plus_17.BackColor = System.Drawing.Color.AntiqueWhite;
+            resources.ApplyResources(this.p3plus_17, "p3plus_17");
+            this.p3plus_17.Name = "p3plus_17";
+            this.helpProvider1.SetShowHelp(this.p3plus_17, ((bool)(resources.GetObject("p3plus_17.ShowHelp"))));
+            // 
+            // p3r_17
+            // 
+            resources.ApplyResources(this.p3r_17, "p3r_17");
+            this.p3r_17.Name = "p3r_17";
+            this.helpProvider1.SetShowHelp(this.p3r_17, ((bool)(resources.GetObject("p3r_17.ShowHelp"))));
+            // 
+            // p3ls_17
+            // 
+            resources.ApplyResources(this.p3ls_17, "p3ls_17");
+            this.p3ls_17.Name = "p3ls_17";
+            this.helpProvider1.SetShowHelp(this.p3ls_17, ((bool)(resources.GetObject("p3ls_17.ShowHelp"))));
+            // 
+            // p3iws_17
+            // 
+            resources.ApplyResources(this.p3iws_17, "p3iws_17");
+            this.p3iws_17.Name = "p3iws_17";
+            this.helpProvider1.SetShowHelp(this.p3iws_17, ((bool)(resources.GetObject("p3iws_17.ShowHelp"))));
+            // 
+            // p3ib_17
+            // 
+            resources.ApplyResources(this.p3ib_17, "p3ib_17");
+            this.p3ib_17.Name = "p3ib_17";
+            this.helpProvider1.SetShowHelp(this.p3ib_17, ((bool)(resources.GetObject("p3ib_17.ShowHelp"))));
+            // 
+            // p3pm_17
+            // 
+            resources.ApplyResources(this.p3pm_17, "p3pm_17");
+            this.p3pm_17.Name = "p3pm_17";
+            this.helpProvider1.SetShowHelp(this.p3pm_17, ((bool)(resources.GetObject("p3pm_17.ShowHelp"))));
+            // 
+            // p3vw_17
+            // 
+            this.p3vw_17.BackColor = System.Drawing.Color.Honeydew;
+            resources.ApplyResources(this.p3vw_17, "p3vw_17");
+            this.p3vw_17.Name = "p3vw_17";
+            this.helpProvider1.SetShowHelp(this.p3vw_17, ((bool)(resources.GetObject("p3vw_17.ShowHelp"))));
+            // 
+            // p3plus_26
+            // 
+            this.p3plus_26.BackColor = System.Drawing.Color.AntiqueWhite;
+            resources.ApplyResources(this.p3plus_26, "p3plus_26");
+            this.p3plus_26.Name = "p3plus_26";
+            this.helpProvider1.SetShowHelp(this.p3plus_26, ((bool)(resources.GetObject("p3plus_26.ShowHelp"))));
+            // 
+            // p3r_26
+            // 
+            resources.ApplyResources(this.p3r_26, "p3r_26");
+            this.p3r_26.Name = "p3r_26";
+            this.helpProvider1.SetShowHelp(this.p3r_26, ((bool)(resources.GetObject("p3r_26.ShowHelp"))));
+            // 
+            // p3ls_26
+            // 
+            resources.ApplyResources(this.p3ls_26, "p3ls_26");
+            this.p3ls_26.Name = "p3ls_26";
+            this.helpProvider1.SetShowHelp(this.p3ls_26, ((bool)(resources.GetObject("p3ls_26.ShowHelp"))));
+            // 
+            // p3iws_26
+            // 
+            resources.ApplyResources(this.p3iws_26, "p3iws_26");
+            this.p3iws_26.Name = "p3iws_26";
+            this.helpProvider1.SetShowHelp(this.p3iws_26, ((bool)(resources.GetObject("p3iws_26.ShowHelp"))));
+            // 
+            // p3ib_26
+            // 
+            resources.ApplyResources(this.p3ib_26, "p3ib_26");
+            this.p3ib_26.Name = "p3ib_26";
+            this.helpProvider1.SetShowHelp(this.p3ib_26, ((bool)(resources.GetObject("p3ib_26.ShowHelp"))));
+            // 
+            // p3pm_26
+            // 
+            resources.ApplyResources(this.p3pm_26, "p3pm_26");
+            this.p3pm_26.Name = "p3pm_26";
+            this.helpProvider1.SetShowHelp(this.p3pm_26, ((bool)(resources.GetObject("p3pm_26.ShowHelp"))));
+            // 
+            // p3vw_26
+            // 
+            this.p3vw_26.BackColor = System.Drawing.Color.Honeydew;
+            resources.ApplyResources(this.p3vw_26, "p3vw_26");
+            this.p3vw_26.Name = "p3vw_26";
+            this.helpProvider1.SetShowHelp(this.p3vw_26, ((bool)(resources.GetObject("p3vw_26.ShowHelp"))));
+            // 
+            // p3plus_31
+            // 
+            this.p3plus_31.BackColor = System.Drawing.Color.AntiqueWhite;
+            resources.ApplyResources(this.p3plus_31, "p3plus_31");
+            this.p3plus_31.Name = "p3plus_31";
+            this.helpProvider1.SetShowHelp(this.p3plus_31, ((bool)(resources.GetObject("p3plus_31.ShowHelp"))));
+            // 
+            // p3r_31
+            // 
+            resources.ApplyResources(this.p3r_31, "p3r_31");
+            this.p3r_31.Name = "p3r_31";
+            this.helpProvider1.SetShowHelp(this.p3r_31, ((bool)(resources.GetObject("p3r_31.ShowHelp"))));
+            // 
+            // p3ls_31
+            // 
+            resources.ApplyResources(this.p3ls_31, "p3ls_31");
+            this.p3ls_31.Name = "p3ls_31";
+            this.helpProvider1.SetShowHelp(this.p3ls_31, ((bool)(resources.GetObject("p3ls_31.ShowHelp"))));
+            // 
+            // p3iws_31
+            // 
+            this.p3iws_31.BackColor = System.Drawing.Color.AntiqueWhite;
+            resources.ApplyResources(this.p3iws_31, "p3iws_31");
+            this.p3iws_31.Name = "p3iws_31";
+            this.helpProvider1.SetShowHelp(this.p3iws_31, ((bool)(resources.GetObject("p3iws_31.ShowHelp"))));
+            // 
+            // p3ib_31
+            // 
+            resources.ApplyResources(this.p3ib_31, "p3ib_31");
+            this.p3ib_31.Name = "p3ib_31";
+            this.helpProvider1.SetShowHelp(this.p3ib_31, ((bool)(resources.GetObject("p3ib_31.ShowHelp"))));
+            // 
+            // p3pm_31
+            // 
+            this.p3pm_31.BackColor = System.Drawing.Color.Honeydew;
+            resources.ApplyResources(this.p3pm_31, "p3pm_31");
+            this.p3pm_31.Name = "p3pm_31";
+            this.helpProvider1.SetShowHelp(this.p3pm_31, ((bool)(resources.GetObject("p3pm_31.ShowHelp"))));
+            // 
+            // p3vw_31
+            // 
+            this.p3vw_31.BackColor = System.Drawing.Color.Honeydew;
+            resources.ApplyResources(this.p3vw_31, "p3vw_31");
+            this.p3vw_31.Name = "p3vw_31";
+            this.helpProvider1.SetShowHelp(this.p3vw_31, ((bool)(resources.GetObject("p3vw_31.ShowHelp"))));
+            // 
+            // p3r_0
+            // 
+            resources.ApplyResources(this.p3r_0, "p3r_0");
+            this.p3r_0.Name = "p3r_0";
+            this.helpProvider1.SetShowHelp(this.p3r_0, ((bool)(resources.GetObject("p3r_0.ShowHelp"))));
+            // 
+            // p3ls_0
+            // 
+            resources.ApplyResources(this.p3ls_0, "p3ls_0");
+            this.p3ls_0.Name = "p3ls_0";
+            this.helpProvider1.SetShowHelp(this.p3ls_0, ((bool)(resources.GetObject("p3ls_0.ShowHelp"))));
+            // 
+            // p3iws_0
+            // 
+            this.p3iws_0.BackColor = System.Drawing.Color.AntiqueWhite;
+            resources.ApplyResources(this.p3iws_0, "p3iws_0");
+            this.p3iws_0.Name = "p3iws_0";
+            this.helpProvider1.SetShowHelp(this.p3iws_0, ((bool)(resources.GetObject("p3iws_0.ShowHelp"))));
+            // 
+            // p3ib_0
+            // 
+            resources.ApplyResources(this.p3ib_0, "p3ib_0");
+            this.p3ib_0.Name = "p3ib_0";
+            this.helpProvider1.SetShowHelp(this.p3ib_0, ((bool)(resources.GetObject("p3ib_0.ShowHelp"))));
+            // 
+            // p3pm_0
+            // 
+            this.p3pm_0.BackColor = System.Drawing.Color.Honeydew;
+            resources.ApplyResources(this.p3pm_0, "p3pm_0");
+            this.p3pm_0.Name = "p3pm_0";
+            this.helpProvider1.SetShowHelp(this.p3pm_0, ((bool)(resources.GetObject("p3pm_0.ShowHelp"))));
+            // 
+            // p3vw_0
+            // 
+            this.p3vw_0.BackColor = System.Drawing.Color.LightYellow;
+            resources.ApplyResources(this.p3vw_0, "p3vw_0");
+            this.p3vw_0.Name = "p3vw_0";
+            this.helpProvider1.SetShowHelp(this.p3vw_0, ((bool)(resources.GetObject("p3vw_0.ShowHelp"))));
+            // 
             // Fahrrad
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -4369,6 +5865,9 @@
             this.tab_P2.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            this.tab_P3.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -4842,6 +6341,180 @@
         private System.Windows.Forms.TextBox p2ib_0;
         private System.Windows.Forms.TextBox p2pm_0;
         private System.Windows.Forms.TextBox p2vw_0;
+        private System.Windows.Forms.TabPage tab_P3;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Label label181;
+        private System.Windows.Forms.Label label182;
+        private System.Windows.Forms.Label label183;
+        private System.Windows.Forms.Label label184;
+        private System.Windows.Forms.Label label185;
+        private System.Windows.Forms.Label label186;
+        private System.Windows.Forms.Label label187;
+        private System.Windows.Forms.Label label188;
+        private System.Windows.Forms.Label label189;
+        private System.Windows.Forms.Label label190;
+        private System.Windows.Forms.Label label191;
+        private System.Windows.Forms.Label label192;
+        private System.Windows.Forms.Label label193;
+        private System.Windows.Forms.Label label194;
+        private System.Windows.Forms.Label label195;
+        private System.Windows.Forms.Label label196;
+        private System.Windows.Forms.Label label197;
+        private System.Windows.Forms.Label label198;
+        private System.Windows.Forms.Label label199;
+        private System.Windows.Forms.Label label200;
+        private System.Windows.Forms.Label label201;
+        private System.Windows.Forms.Label label202;
+        private System.Windows.Forms.Label label203;
+        private System.Windows.Forms.Label label204;
+        private System.Windows.Forms.Label label205;
+        private System.Windows.Forms.Label label206;
+        private System.Windows.Forms.Label label207;
+        private System.Windows.Forms.Label label208;
+        private System.Windows.Forms.Label label209;
+        private System.Windows.Forms.Label label210;
+        private System.Windows.Forms.Label label211;
+        private System.Windows.Forms.Label label212;
+        private System.Windows.Forms.Label label213;
+        private System.Windows.Forms.Label label214;
+        private System.Windows.Forms.Label label215;
+        private System.Windows.Forms.Label label216;
+        private System.Windows.Forms.Label label217;
+        private System.Windows.Forms.Label label218;
+        private System.Windows.Forms.Label label219;
+        private System.Windows.Forms.Label label220;
+        private System.Windows.Forms.Label label221;
+        private System.Windows.Forms.Label label222;
+        private System.Windows.Forms.Label label223;
+        private System.Windows.Forms.Label label224;
+        private System.Windows.Forms.Label label225;
+        private System.Windows.Forms.Label label226;
+        private System.Windows.Forms.Label label227;
+        private System.Windows.Forms.Label label228;
+        private System.Windows.Forms.Label label229;
+        private System.Windows.Forms.Label label230;
+        private System.Windows.Forms.Label label231;
+        private System.Windows.Forms.Label label232;
+        private System.Windows.Forms.Label label233;
+        private System.Windows.Forms.Label label234;
+        private System.Windows.Forms.Label label235;
+        private System.Windows.Forms.Label label236;
+        private System.Windows.Forms.Label label237;
+        private System.Windows.Forms.Label label238;
+        private System.Windows.Forms.Label label239;
+        private System.Windows.Forms.Label label240;
+        private System.Windows.Forms.Label label241;
+        private System.Windows.Forms.Label label242;
+        private System.Windows.Forms.Label label243;
+        private System.Windows.Forms.Label label244;
+        private System.Windows.Forms.Label label245;
+        private System.Windows.Forms.Label label246;
+        private System.Windows.Forms.Label label247;
+        private System.Windows.Forms.Label label248;
+        private System.Windows.Forms.Label label249;
+        private System.Windows.Forms.Label label250;
+        private System.Windows.Forms.Label label251;
+        private System.Windows.Forms.Label label252;
+        private System.Windows.Forms.Label label253;
+        private System.Windows.Forms.Label label254;
+        private System.Windows.Forms.Label label255;
+        private System.Windows.Forms.Label label256;
+        private System.Windows.Forms.Label label257;
+        private System.Windows.Forms.Label label258;
+        private System.Windows.Forms.Label label259;
+        private System.Windows.Forms.Label label260;
+        private System.Windows.Forms.Label label261;
+        private System.Windows.Forms.Label label262;
+        private System.Windows.Forms.Label label263;
+        private System.Windows.Forms.Label label264;
+        private System.Windows.Forms.Label label265;
+        private System.Windows.Forms.Label label266;
+        private System.Windows.Forms.Label label267;
+        private System.Windows.Forms.Label label268;
+        private System.Windows.Forms.Label label269;
+        private System.Windows.Forms.TextBox p3plus_20;
+        private System.Windows.Forms.TextBox p3r_20;
+        private System.Windows.Forms.TextBox p3ls_20;
+        private System.Windows.Forms.TextBox p3iws_20;
+        private System.Windows.Forms.TextBox p3ib_20;
+        private System.Windows.Forms.TextBox p3pm_20;
+        private System.Windows.Forms.TextBox p3vw_20;
+        private System.Windows.Forms.TextBox p3plus_9;
+        private System.Windows.Forms.TextBox p3r_9;
+        private System.Windows.Forms.TextBox p3ls_9;
+        private System.Windows.Forms.TextBox p3iws_9;
+        private System.Windows.Forms.TextBox p3ib_9;
+        private System.Windows.Forms.TextBox p3pm_9;
+        private System.Windows.Forms.TextBox p3vw_9;
+        private System.Windows.Forms.TextBox p3plus_15;
+        private System.Windows.Forms.TextBox p3r_15;
+        private System.Windows.Forms.TextBox p3ls_15;
+        private System.Windows.Forms.TextBox p3iws_15;
+        private System.Windows.Forms.TextBox p3ib_15;
+        private System.Windows.Forms.TextBox p3pm_15;
+        private System.Windows.Forms.TextBox p3vw_15;
+        private System.Windows.Forms.TextBox p3plus_29;
+        private System.Windows.Forms.TextBox p3r_29;
+        private System.Windows.Forms.TextBox p3ls_29;
+        private System.Windows.Forms.TextBox p3iws_29;
+        private System.Windows.Forms.TextBox p3ib_29;
+        private System.Windows.Forms.TextBox p3pm_29;
+        private System.Windows.Forms.TextBox p3vw_29;
+        private System.Windows.Forms.TextBox p3plus_6;
+        private System.Windows.Forms.TextBox p3r_6;
+        private System.Windows.Forms.TextBox p3ls_6;
+        private System.Windows.Forms.TextBox p3iws_6;
+        private System.Windows.Forms.TextBox p3ib_6;
+        private System.Windows.Forms.TextBox p3pm_6;
+        private System.Windows.Forms.TextBox p3vw_6;
+        private System.Windows.Forms.TextBox p3plus_12;
+        private System.Windows.Forms.TextBox p3r_12;
+        private System.Windows.Forms.TextBox p3ls_12;
+        private System.Windows.Forms.TextBox p3iws_12;
+        private System.Windows.Forms.TextBox p3ib_12;
+        private System.Windows.Forms.TextBox p3pm_12;
+        private System.Windows.Forms.TextBox p3vw_12;
+        private System.Windows.Forms.TextBox p3plus_30;
+        private System.Windows.Forms.TextBox p3r_30;
+        private System.Windows.Forms.TextBox p3ls_30;
+        private System.Windows.Forms.TextBox p3iws_30;
+        private System.Windows.Forms.TextBox p3ib_30;
+        private System.Windows.Forms.TextBox p3pm_30;
+        private System.Windows.Forms.TextBox p3vw_30;
+        private System.Windows.Forms.TextBox p3plus_16;
+        private System.Windows.Forms.TextBox p3r_16;
+        private System.Windows.Forms.TextBox p3ls_16;
+        private System.Windows.Forms.TextBox p3iws_16;
+        private System.Windows.Forms.TextBox p3ib_16;
+        private System.Windows.Forms.TextBox p3pm_16;
+        private System.Windows.Forms.TextBox p3vw_16;
+        private System.Windows.Forms.TextBox p3plus_17;
+        private System.Windows.Forms.TextBox p3r_17;
+        private System.Windows.Forms.TextBox p3ls_17;
+        private System.Windows.Forms.TextBox p3iws_17;
+        private System.Windows.Forms.TextBox p3ib_17;
+        private System.Windows.Forms.TextBox p3pm_17;
+        private System.Windows.Forms.TextBox p3vw_17;
+        private System.Windows.Forms.TextBox p3plus_26;
+        private System.Windows.Forms.TextBox p3r_26;
+        private System.Windows.Forms.TextBox p3ls_26;
+        private System.Windows.Forms.TextBox p3iws_26;
+        private System.Windows.Forms.TextBox p3ib_26;
+        private System.Windows.Forms.TextBox p3pm_26;
+        private System.Windows.Forms.TextBox p3vw_26;
+        private System.Windows.Forms.TextBox p3plus_31;
+        private System.Windows.Forms.TextBox p3r_31;
+        private System.Windows.Forms.TextBox p3ls_31;
+        private System.Windows.Forms.TextBox p3iws_31;
+        private System.Windows.Forms.TextBox p3ib_31;
+        private System.Windows.Forms.TextBox p3pm_31;
+        private System.Windows.Forms.TextBox p3vw_31;
+        private System.Windows.Forms.TextBox p3r_0;
+        private System.Windows.Forms.TextBox p3ls_0;
+        private System.Windows.Forms.TextBox p3iws_0;
+        private System.Windows.Forms.TextBox p3ib_0;
+        private System.Windows.Forms.TextBox p3pm_0;
+        private System.Windows.Forms.TextBox p3vw_0;
     }
 }
 
