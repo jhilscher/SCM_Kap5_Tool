@@ -61,9 +61,6 @@ namespace ToolFahrrad_v1
             }
             pp.AktPeriode = Convert.ToInt32(xml.period);
             pp.Aufloesen();
-            if (!lableDazu.Text.Contains("für die Periode"))
-                lableDazu.Text = lableDazu.Text + "für die Periode " + (Convert.ToInt32(xml.period) + 1);
-
             foreach (Arbeitsplatz a in instance.ArbeitsplatzList)
             {
                 a.Geaendert = false;
@@ -748,10 +745,5 @@ namespace ToolFahrrad_v1
             bv.generiereBestellListe();
             List<Bestellposition> bp = bv.BvPositionen;
         }
-
-        private void textBox7_TextChanged(object sender, EventArgs e) {
-
-        }
-
     }
 }
