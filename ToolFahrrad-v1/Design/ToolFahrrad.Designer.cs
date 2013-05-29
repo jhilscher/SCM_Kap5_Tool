@@ -2339,35 +2339,31 @@
             // 
             // p1plus_16
             // 
-            this.p1plus_16.BackColor = System.Drawing.Color.LemonChiffon;
+            this.p1plus_16.BackColor = System.Drawing.Color.AntiqueWhite;
             resources.ApplyResources(this.p1plus_16, "p1plus_16");
             this.p1plus_16.Name = "p1plus_16";
             this.helpProvider1.SetShowHelp(this.p1plus_16, ((bool)(resources.GetObject("p1plus_16.ShowHelp"))));
             // 
             // p1r_16
             // 
-            this.p1r_16.BackColor = System.Drawing.Color.LemonChiffon;
             resources.ApplyResources(this.p1r_16, "p1r_16");
             this.p1r_16.Name = "p1r_16";
             this.helpProvider1.SetShowHelp(this.p1r_16, ((bool)(resources.GetObject("p1r_16.ShowHelp"))));
             // 
             // p1ls_16
             // 
-            this.p1ls_16.BackColor = System.Drawing.Color.LemonChiffon;
             resources.ApplyResources(this.p1ls_16, "p1ls_16");
             this.p1ls_16.Name = "p1ls_16";
             this.helpProvider1.SetShowHelp(this.p1ls_16, ((bool)(resources.GetObject("p1ls_16.ShowHelp"))));
             // 
             // p1iws_16
             // 
-            this.p1iws_16.BackColor = System.Drawing.Color.LemonChiffon;
             resources.ApplyResources(this.p1iws_16, "p1iws_16");
             this.p1iws_16.Name = "p1iws_16";
             this.helpProvider1.SetShowHelp(this.p1iws_16, ((bool)(resources.GetObject("p1iws_16.ShowHelp"))));
             // 
             // p1ib_16
             // 
-            this.p1ib_16.BackColor = System.Drawing.Color.LemonChiffon;
             resources.ApplyResources(this.p1ib_16, "p1ib_16");
             this.p1ib_16.Name = "p1ib_16";
             this.helpProvider1.SetShowHelp(this.p1ib_16, ((bool)(resources.GetObject("p1ib_16.ShowHelp"))));
@@ -2381,42 +2377,38 @@
             // 
             // p1vw_16
             // 
-            this.p1vw_16.BackColor = System.Drawing.Color.LemonChiffon;
+            this.p1vw_16.BackColor = System.Drawing.Color.Honeydew;
             resources.ApplyResources(this.p1vw_16, "p1vw_16");
             this.p1vw_16.Name = "p1vw_16";
             this.helpProvider1.SetShowHelp(this.p1vw_16, ((bool)(resources.GetObject("p1vw_16.ShowHelp"))));
             // 
             // p1plus_17
             // 
-            this.p1plus_17.BackColor = System.Drawing.Color.LemonChiffon;
+            this.p1plus_17.BackColor = System.Drawing.Color.AntiqueWhite;
             resources.ApplyResources(this.p1plus_17, "p1plus_17");
             this.p1plus_17.Name = "p1plus_17";
             this.helpProvider1.SetShowHelp(this.p1plus_17, ((bool)(resources.GetObject("p1plus_17.ShowHelp"))));
             // 
             // p1r_17
             // 
-            this.p1r_17.BackColor = System.Drawing.Color.LemonChiffon;
             resources.ApplyResources(this.p1r_17, "p1r_17");
             this.p1r_17.Name = "p1r_17";
             this.helpProvider1.SetShowHelp(this.p1r_17, ((bool)(resources.GetObject("p1r_17.ShowHelp"))));
             // 
             // p1ls_17
             // 
-            this.p1ls_17.BackColor = System.Drawing.Color.LemonChiffon;
             resources.ApplyResources(this.p1ls_17, "p1ls_17");
             this.p1ls_17.Name = "p1ls_17";
             this.helpProvider1.SetShowHelp(this.p1ls_17, ((bool)(resources.GetObject("p1ls_17.ShowHelp"))));
             // 
             // p1iws_17
             // 
-            this.p1iws_17.BackColor = System.Drawing.Color.LemonChiffon;
             resources.ApplyResources(this.p1iws_17, "p1iws_17");
             this.p1iws_17.Name = "p1iws_17";
             this.helpProvider1.SetShowHelp(this.p1iws_17, ((bool)(resources.GetObject("p1iws_17.ShowHelp"))));
             // 
             // p1ib_17
             // 
-            this.p1ib_17.BackColor = System.Drawing.Color.LemonChiffon;
             resources.ApplyResources(this.p1ib_17, "p1ib_17");
             this.p1ib_17.Name = "p1ib_17";
             this.helpProvider1.SetShowHelp(this.p1ib_17, ((bool)(resources.GetObject("p1ib_17.ShowHelp"))));
@@ -2430,42 +2422,38 @@
             // 
             // p1vw_17
             // 
-            this.p1vw_17.BackColor = System.Drawing.Color.LemonChiffon;
+            this.p1vw_17.BackColor = System.Drawing.Color.Honeydew;
             resources.ApplyResources(this.p1vw_17, "p1vw_17");
             this.p1vw_17.Name = "p1vw_17";
             this.helpProvider1.SetShowHelp(this.p1vw_17, ((bool)(resources.GetObject("p1vw_17.ShowHelp"))));
             // 
             // p1plus_26
             // 
-            this.p1plus_26.BackColor = System.Drawing.Color.LemonChiffon;
+            this.p1plus_26.BackColor = System.Drawing.Color.AntiqueWhite;
             resources.ApplyResources(this.p1plus_26, "p1plus_26");
             this.p1plus_26.Name = "p1plus_26";
             this.helpProvider1.SetShowHelp(this.p1plus_26, ((bool)(resources.GetObject("p1plus_26.ShowHelp"))));
             // 
             // p1r_26
             // 
-            this.p1r_26.BackColor = System.Drawing.Color.LemonChiffon;
             resources.ApplyResources(this.p1r_26, "p1r_26");
             this.p1r_26.Name = "p1r_26";
             this.helpProvider1.SetShowHelp(this.p1r_26, ((bool)(resources.GetObject("p1r_26.ShowHelp"))));
             // 
             // p1ls_26
             // 
-            this.p1ls_26.BackColor = System.Drawing.Color.LemonChiffon;
             resources.ApplyResources(this.p1ls_26, "p1ls_26");
             this.p1ls_26.Name = "p1ls_26";
             this.helpProvider1.SetShowHelp(this.p1ls_26, ((bool)(resources.GetObject("p1ls_26.ShowHelp"))));
             // 
             // p1iws_26
             // 
-            this.p1iws_26.BackColor = System.Drawing.Color.LemonChiffon;
             resources.ApplyResources(this.p1iws_26, "p1iws_26");
             this.p1iws_26.Name = "p1iws_26";
             this.helpProvider1.SetShowHelp(this.p1iws_26, ((bool)(resources.GetObject("p1iws_26.ShowHelp"))));
             // 
             // p1ib_26
             // 
-            this.p1ib_26.BackColor = System.Drawing.Color.LemonChiffon;
             resources.ApplyResources(this.p1ib_26, "p1ib_26");
             this.p1ib_26.Name = "p1ib_26";
             this.helpProvider1.SetShowHelp(this.p1ib_26, ((bool)(resources.GetObject("p1ib_26.ShowHelp"))));
@@ -2479,7 +2467,7 @@
             // 
             // p1vw_26
             // 
-            this.p1vw_26.BackColor = System.Drawing.Color.LemonChiffon;
+            this.p1vw_26.BackColor = System.Drawing.Color.Honeydew;
             resources.ApplyResources(this.p1vw_26, "p1vw_26");
             this.p1vw_26.Name = "p1vw_26";
             this.helpProvider1.SetShowHelp(this.p1vw_26, ((bool)(resources.GetObject("p1vw_26.ShowHelp"))));
@@ -3703,6 +3691,7 @@
             // 
             // p2pm_16
             // 
+            this.p2pm_16.BackColor = System.Drawing.Color.LemonChiffon;
             resources.ApplyResources(this.p2pm_16, "p2pm_16");
             this.p2pm_16.Name = "p2pm_16";
             this.helpProvider1.SetShowHelp(this.p2pm_16, ((bool)(resources.GetObject("p2pm_16.ShowHelp"))));
@@ -3747,6 +3736,7 @@
             // 
             // p2pm_17
             // 
+            this.p2pm_17.BackColor = System.Drawing.Color.LemonChiffon;
             resources.ApplyResources(this.p2pm_17, "p2pm_17");
             this.p2pm_17.Name = "p2pm_17";
             this.helpProvider1.SetShowHelp(this.p2pm_17, ((bool)(resources.GetObject("p2pm_17.ShowHelp"))));
@@ -3791,6 +3781,7 @@
             // 
             // p2pm_26
             // 
+            this.p2pm_26.BackColor = System.Drawing.Color.LemonChiffon;
             resources.ApplyResources(this.p2pm_26, "p2pm_26");
             this.p2pm_26.Name = "p2pm_26";
             this.helpProvider1.SetShowHelp(this.p2pm_26, ((bool)(resources.GetObject("p2pm_26.ShowHelp"))));
@@ -5022,6 +5013,7 @@
             // 
             // p3pm_16
             // 
+            this.p3pm_16.BackColor = System.Drawing.Color.LemonChiffon;
             resources.ApplyResources(this.p3pm_16, "p3pm_16");
             this.p3pm_16.Name = "p3pm_16";
             this.helpProvider1.SetShowHelp(this.p3pm_16, ((bool)(resources.GetObject("p3pm_16.ShowHelp"))));
@@ -5066,6 +5058,7 @@
             // 
             // p3pm_17
             // 
+            this.p3pm_17.BackColor = System.Drawing.Color.LemonChiffon;
             resources.ApplyResources(this.p3pm_17, "p3pm_17");
             this.p3pm_17.Name = "p3pm_17";
             this.helpProvider1.SetShowHelp(this.p3pm_17, ((bool)(resources.GetObject("p3pm_17.ShowHelp"))));
@@ -5110,6 +5103,7 @@
             // 
             // p3pm_26
             // 
+            this.p3pm_26.BackColor = System.Drawing.Color.LemonChiffon;
             resources.ApplyResources(this.p3pm_26, "p3pm_26");
             this.p3pm_26.Name = "p3pm_26";
             this.helpProvider1.SetShowHelp(this.p3pm_26, ((bool)(resources.GetObject("p3pm_26.ShowHelp"))));

@@ -50,8 +50,11 @@ namespace ToolFahrrad_v1
                     (t as ETeil).KdhUpdate = false;
                     (t as ETeil).InBearbeitung = 0;
                     (t as ETeil).InWartschlange = 0;
-                    if ((instance.GetTeil(t.Nummer) as ETeil).IstEndProdukt == false)
+                    (t as ETeil).KdhProduktionsmenge = new Dictionary<string, int>();
+                    if ((instance.GetTeil(t.Nummer) as ETeil).IstEndProdukt == false) {
                         (instance.GetTeil(t.Nummer) as ETeil).Puffer = -1;
+                        (instance.GetTeil(t.Nummer) as ETeil).KDHaufNULL();
+                    }
                 }
             }
             pp.AktPeriode = Convert.ToInt32(xml.period);
@@ -204,7 +207,132 @@ namespace ToolFahrrad_v1
                 p1pm_18.Text = et.ProduktionsMengePer0.ToString();
 
                 #endregion
-
+            }
+            if (index == 2) {
+                #region P2
+                //P2
+                n = 2;
+                et = instance.GetTeil(n) as ETeil;
+                p2vw_0.Text = et.VertriebPer0.ToString();
+                p2r_0.Text = et.Puffer.ToString();
+                p2ls_0.Text = et.Lagerstand.ToString();
+                p2iws_0.Text = et.InWartschlange.ToString();
+                p2ib_0.Text = et.InBearbeitung.ToString();
+                p2pm_0.Text = et.ProduktionsMengePer0.ToString();
+                //26
+                n = 26;
+                et = instance.GetTeil(n) as ETeil;
+                p2vw_26.Text = p1pm_0.Text;
+                p2plus_26.Text = p1iws_0.Text;
+                if (et.KdhPuffer.ContainsKey(n)) {
+                    p2r_26.Text = et.KdhPuffer[n][index - 1].ToString();
+                }
+                if (et.KdhProduktionsmenge.ContainsKey(index.ToString() + "-" + Convert.ToString(n))) {
+                    p2pm_26.Text = et.KdhProduktionsmenge[index.ToString() + "-" + Convert.ToString(n)].ToString();
+                }
+                //56
+                n = 56;
+                et = instance.GetTeil(n) as ETeil;
+                p2vw_56.Text = et.VertriebPer0.ToString();
+                p2plus_56.Text = et.VaterInWarteschlange.ToString();
+                p2r_56.Text = et.Puffer.ToString();
+                p2ls_56.Text = et.Lagerstand.ToString();
+                p2iws_56.Text = et.InWartschlange.ToString();
+                p2ib_56.Text = et.InBearbeitung.ToString();
+                p2pm_56.Text = et.ProduktionsMengePer0.ToString();
+                //16
+                n = 16;
+                et = instance.GetTeil(n) as ETeil;
+                p2vw_16.Text = p1pm_0.Text;
+                p2plus_16.Text = p1iws_0.Text;
+                if (et.KdhPuffer.ContainsKey(n)) {
+                    p2r_16.Text = et.KdhPuffer[n][index - 1].ToString();
+                }
+                if (et.KdhProduktionsmenge.ContainsKey(index.ToString() + "-" + Convert.ToString(n))) {
+                    p2pm_16.Text = et.KdhProduktionsmenge[index.ToString() + "-" + Convert.ToString(n)].ToString();
+                }
+                //17
+                n = 17;
+                et = instance.GetTeil(n) as ETeil;
+                p2vw_17.Text = p1pm_0.Text;
+                p2plus_17.Text = p1iws_0.Text;
+                if (et.KdhPuffer.ContainsKey(n)) {
+                    p2r_17.Text = et.KdhPuffer[n][index - 1].ToString();
+                }
+                if (et.KdhProduktionsmenge.ContainsKey(index.ToString() + "-" + Convert.ToString(n))) {
+                    p2pm_17.Text = et.KdhProduktionsmenge[index.ToString() + "-" + Convert.ToString(n)].ToString();
+                }
+                //55
+                n = 55;
+                et = instance.GetTeil(n) as ETeil;
+                p2vw_55.Text = et.VertriebPer0.ToString();
+                p2plus_55.Text = et.VaterInWarteschlange.ToString();
+                p2r_55.Text = et.Puffer.ToString();
+                p2ls_55.Text = et.Lagerstand.ToString();
+                p2iws_55.Text = et.InWartschlange.ToString();
+                p2ib_55.Text = et.InBearbeitung.ToString();
+                p2pm_55.Text = et.ProduktionsMengePer0.ToString();
+                //5
+                n = 5;
+                et = instance.GetTeil(n) as ETeil;
+                p2vw_5.Text = et.VertriebPer0.ToString();
+                p2plus_5.Text = et.VaterInWarteschlange.ToString();
+                p2r_5.Text = et.Puffer.ToString();
+                p2ls_5.Text = et.Lagerstand.ToString();
+                p2iws_5.Text = et.InWartschlange.ToString();
+                p2ib_5.Text = et.InBearbeitung.ToString();
+                p2pm_5.Text = et.ProduktionsMengePer0.ToString();
+                //11
+                n = 11;
+                et = instance.GetTeil(n) as ETeil;
+                p2vw_11.Text = et.VertriebPer0.ToString();
+                p2plus_11.Text = et.VaterInWarteschlange.ToString();
+                p2r_11.Text = et.Puffer.ToString();
+                p2ls_11.Text = et.Lagerstand.ToString();
+                p2iws_11.Text = et.InWartschlange.ToString();
+                p2ib_11.Text = et.InBearbeitung.ToString();
+                p2pm_11.Text = et.ProduktionsMengePer0.ToString();
+                //54
+                n = 54;
+                et = instance.GetTeil(n) as ETeil;
+                p2vw_54.Text = et.VertriebPer0.ToString();
+                p2plus_54.Text = et.VaterInWarteschlange.ToString();
+                p2r_54.Text = et.Puffer.ToString();
+                p2ls_54.Text = et.Lagerstand.ToString();
+                p2iws_54.Text = et.InWartschlange.ToString();
+                p2ib_54.Text = et.InBearbeitung.ToString();
+                p2pm_54.Text = et.ProduktionsMengePer0.ToString();
+                //8
+                n = 8;
+                et = instance.GetTeil(n) as ETeil;
+                p2vw_8.Text = et.VertriebPer0.ToString();
+                p2plus_8.Text = et.VaterInWarteschlange.ToString();
+                p2r_8.Text = et.Puffer.ToString();
+                p2ls_8.Text = et.Lagerstand.ToString();
+                p2iws_8.Text = et.InWartschlange.ToString();
+                p2ib_8.Text = et.InBearbeitung.ToString();
+                p2pm_8.Text = et.ProduktionsMengePer0.ToString();
+                //14
+                n = 14;
+                et = instance.GetTeil(n) as ETeil;
+                p2vw_14.Text = et.VertriebPer0.ToString();
+                p2plus_14.Text = et.VaterInWarteschlange.ToString();
+                p2r_14.Text = et.Puffer.ToString();
+                p2ls_14.Text = et.Lagerstand.ToString();
+                p2iws_14.Text = et.InWartschlange.ToString();
+                p2ib_14.Text = et.InBearbeitung.ToString();
+                p2pm_14.Text = et.ProduktionsMengePer0.ToString();
+                //19
+                n = 19;
+                et = instance.GetTeil(n) as ETeil;
+                p2vw_19.Text = et.VertriebPer0.ToString();
+                p2plus_19.Text = et.VaterInWarteschlange.ToString();
+                p2r_19.Text = et.Puffer.ToString();
+                p2ls_19.Text = et.Lagerstand.ToString();
+                p2iws_19.Text = et.InWartschlange.ToString();
+                p2ib_19.Text = et.InBearbeitung.ToString();
+                p2pm_19.Text = et.ProduktionsMengePer0.ToString();
+                #endregion
             }
         }
 

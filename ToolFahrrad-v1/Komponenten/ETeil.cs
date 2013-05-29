@@ -54,14 +54,20 @@ namespace ToolFahrrad_v1
             position = new Dictionary<int, int>();
             benutzteArbeitsplaetze = new List<int>();
 
-            int[] array = new int[]{-1,-1,-1};
+            KDHaufNULL();
+            
+
+            kdhProduktionsmenge = new Dictionary<string, int>();
+        }
+
+        public void KDHaufNULL(){
+        int[] array = new int[]{-1,-1,-1};
             kdhPuffer = new Dictionary<int,int[]>();
             kdhPuffer.Add(26, array);
             kdhPuffer.Add(16, array);
             kdhPuffer.Add(17, array);
-
-            kdhProduktionsmenge = new Dictionary<string, int>();
         }
+
         // Getter / Setter
         public int Puffer
         {
@@ -188,6 +194,9 @@ namespace ToolFahrrad_v1
                         int pmTemp = 0;
                         if (index == 1) {
                             pmTemp = vertriebPer0 + vaterInWarteschlange + pufTemp - lagerstand - inWarteschlange - inBearbeitung;
+                        }
+                        else {
+                            pmTemp = vertriebPer0 + vaterInWarteschlange + pufTemp;
                         }
                         kdhProduktionsmenge.Add(index.ToString() + "-" + nr.ToString(), pmTemp);
 

@@ -9847,6 +9847,9 @@
   <data name="p2plus_19.TabIndex" type="System.Int32, mscorlib">
     <value>83</value>
   </data>
+  <data name="p2plus_19.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
+  </data>
   <data name="&gt;&gt;p2plus_19.Name" xml:space="preserve">
     <value>p2plus_19</value>
   </data>
@@ -9870,6 +9873,9 @@
   </data>
   <data name="p2r_19.TabIndex" type="System.Int32, mscorlib">
     <value>82</value>
+  </data>
+  <data name="p2r_19.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
   </data>
   <data name="&gt;&gt;p2r_19.Name" xml:space="preserve">
     <value>p2r_19</value>
@@ -9895,6 +9901,9 @@
   <data name="p2ls_19.TabIndex" type="System.Int32, mscorlib">
     <value>81</value>
   </data>
+  <data name="p2ls_19.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
+  </data>
   <data name="&gt;&gt;p2ls_19.Name" xml:space="preserve">
     <value>p2ls_19</value>
   </data>
@@ -9918,6 +9927,9 @@
   </data>
   <data name="p2iws_19.TabIndex" type="System.Int32, mscorlib">
     <value>80</value>
+  </data>
+  <data name="p2iws_19.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
   </data>
   <data name="&gt;&gt;p2iws_19.Name" xml:space="preserve">
     <value>p2iws_19</value>
@@ -9943,6 +9955,9 @@
   <data name="p2ib_19.TabIndex" type="System.Int32, mscorlib">
     <value>79</value>
   </data>
+  <data name="p2ib_19.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
+  </data>
   <data name="&gt;&gt;p2ib_19.Name" xml:space="preserve">
     <value>p2ib_19</value>
   </data>
@@ -9966,6 +9981,9 @@
   </data>
   <data name="p2pm_19.TabIndex" type="System.Int32, mscorlib">
     <value>78</value>
+  </data>
+  <data name="p2pm_19.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
   </data>
   <data name="&gt;&gt;p2pm_19.Name" xml:space="preserve">
     <value>p2pm_19</value>
@@ -9991,6 +10009,9 @@
   <data name="p2vw_19.TabIndex" type="System.Int32, mscorlib">
     <value>77</value>
   </data>
+  <data name="p2vw_19.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
+  </data>
   <data name="&gt;&gt;p2vw_19.Name" xml:space="preserve">
     <value>p2vw_19</value>
   </data>
@@ -10014,6 +10035,9 @@
   </data>
   <data name="p2plus_8.TabIndex" type="System.Int32, mscorlib">
     <value>76</value>
+  </data>
+  <data name="p2plus_8.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
   </data>
   <data name="&gt;&gt;p2plus_8.Name" xml:space="preserve">
     <value>p2plus_8</value>
@@ -10039,6 +10063,9 @@
   <data name="p2r_8.TabIndex" type="System.Int32, mscorlib">
     <value>75</value>
   </data>
+  <data name="p2r_8.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
+  </data>
   <data name="&gt;&gt;p2r_8.Name" xml:space="preserve">
     <value>p2r_8</value>
   </data>
@@ -10062,6 +10089,9 @@
   </data>
   <data name="p2ls_8.TabIndex" type="System.Int32, mscorlib">
     <value>74</value>
+  </data>
+  <data name="p2ls_8.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
   </data>
   <data name="&gt;&gt;p2ls_8.Name" xml:space="preserve">
     <value>p2ls_8</value>
@@ -10087,6 +10117,9 @@
   <data name="p2iws_8.TabIndex" type="System.Int32, mscorlib">
     <value>73</value>
   </data>
+  <data name="p2iws_8.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
+  </data>
   <data name="&gt;&gt;p2iws_8.Name" xml:space="preserve">
     <value>p2iws_8</value>
   </data>
@@ -10110,6 +10143,9 @@
   </data>
   <data name="p2ib_8.TabIndex" type="System.Int32, mscorlib">
     <value>72</value>
+  </data>
+  <data name="p2ib_8.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
   </data>
   <data name="&gt;&gt;p2ib_8.Name" xml:space="preserve">
     <value>p2ib_8</value>
@@ -10135,6 +10171,9 @@
   <data name="p2pm_8.TabIndex" type="System.Int32, mscorlib">
     <value>71</value>
   </data>
+  <data name="p2pm_8.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
+  </data>
   <data name="&gt;&gt;p2pm_8.Name" xml:space="preserve">
     <value>p2pm_8</value>
   </data>
@@ -10158,6 +10197,9 @@
   </data>
   <data name="p2vw_8.TabIndex" type="System.Int32, mscorlib">
     <value>70</value>
+  </data>
+  <data name="p2vw_8.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
   </data>
   <data name="&gt;&gt;p2vw_8.Name" xml:space="preserve">
     <value>p2vw_8</value>
@@ -10183,6 +10225,9 @@
   <data name="p2plus_14.TabIndex" type="System.Int32, mscorlib">
     <value>69</value>
   </data>
+  <data name="p2plus_14.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
+  </data>
   <data name="&gt;&gt;p2plus_14.Name" xml:space="preserve">
     <value>p2plus_14</value>
   </data>
@@ -10206,6 +10251,9 @@
   </data>
   <data name="p2r_14.TabIndex" type="System.Int32, mscorlib">
     <value>68</value>
+  </data>
+  <data name="p2r_14.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
   </data>
   <data name="&gt;&gt;p2r_14.Name" xml:space="preserve">
     <value>p2r_14</value>
@@ -10231,6 +10279,9 @@
   <data name="p2ls_14.TabIndex" type="System.Int32, mscorlib">
     <value>67</value>
   </data>
+  <data name="p2ls_14.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
+  </data>
   <data name="&gt;&gt;p2ls_14.Name" xml:space="preserve">
     <value>p2ls_14</value>
   </data>
@@ -10254,6 +10305,9 @@
   </data>
   <data name="p2iws_14.TabIndex" type="System.Int32, mscorlib">
     <value>66</value>
+  </data>
+  <data name="p2iws_14.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
   </data>
   <data name="&gt;&gt;p2iws_14.Name" xml:space="preserve">
     <value>p2iws_14</value>
@@ -10279,6 +10333,9 @@
   <data name="p2ib_14.TabIndex" type="System.Int32, mscorlib">
     <value>65</value>
   </data>
+  <data name="p2ib_14.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
+  </data>
   <data name="&gt;&gt;p2ib_14.Name" xml:space="preserve">
     <value>p2ib_14</value>
   </data>
@@ -10302,6 +10359,9 @@
   </data>
   <data name="p2pm_14.TabIndex" type="System.Int32, mscorlib">
     <value>64</value>
+  </data>
+  <data name="p2pm_14.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
   </data>
   <data name="&gt;&gt;p2pm_14.Name" xml:space="preserve">
     <value>p2pm_14</value>
@@ -10327,6 +10387,9 @@
   <data name="p2vw_14.TabIndex" type="System.Int32, mscorlib">
     <value>63</value>
   </data>
+  <data name="p2vw_14.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
+  </data>
   <data name="&gt;&gt;p2vw_14.Name" xml:space="preserve">
     <value>p2vw_14</value>
   </data>
@@ -10350,6 +10413,9 @@
   </data>
   <data name="p2plus_54.TabIndex" type="System.Int32, mscorlib">
     <value>62</value>
+  </data>
+  <data name="p2plus_54.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
   </data>
   <data name="&gt;&gt;p2plus_54.Name" xml:space="preserve">
     <value>p2plus_54</value>
@@ -10375,6 +10441,9 @@
   <data name="p2r_54.TabIndex" type="System.Int32, mscorlib">
     <value>61</value>
   </data>
+  <data name="p2r_54.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
+  </data>
   <data name="&gt;&gt;p2r_54.Name" xml:space="preserve">
     <value>p2r_54</value>
   </data>
@@ -10398,6 +10467,9 @@
   </data>
   <data name="p2ls_54.TabIndex" type="System.Int32, mscorlib">
     <value>60</value>
+  </data>
+  <data name="p2ls_54.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
   </data>
   <data name="&gt;&gt;p2ls_54.Name" xml:space="preserve">
     <value>p2ls_54</value>
@@ -10423,6 +10495,9 @@
   <data name="p2iws_54.TabIndex" type="System.Int32, mscorlib">
     <value>59</value>
   </data>
+  <data name="p2iws_54.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
+  </data>
   <data name="&gt;&gt;p2iws_54.Name" xml:space="preserve">
     <value>p2iws_54</value>
   </data>
@@ -10446,6 +10521,9 @@
   </data>
   <data name="p2ib_54.TabIndex" type="System.Int32, mscorlib">
     <value>58</value>
+  </data>
+  <data name="p2ib_54.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
   </data>
   <data name="&gt;&gt;p2ib_54.Name" xml:space="preserve">
     <value>p2ib_54</value>
@@ -10471,6 +10549,9 @@
   <data name="p2pm_54.TabIndex" type="System.Int32, mscorlib">
     <value>57</value>
   </data>
+  <data name="p2pm_54.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
+  </data>
   <data name="&gt;&gt;p2pm_54.Name" xml:space="preserve">
     <value>p2pm_54</value>
   </data>
@@ -10494,6 +10575,9 @@
   </data>
   <data name="p2vw_54.TabIndex" type="System.Int32, mscorlib">
     <value>56</value>
+  </data>
+  <data name="p2vw_54.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
   </data>
   <data name="&gt;&gt;p2vw_54.Name" xml:space="preserve">
     <value>p2vw_54</value>
@@ -10519,6 +10603,9 @@
   <data name="p2plus_5.TabIndex" type="System.Int32, mscorlib">
     <value>55</value>
   </data>
+  <data name="p2plus_5.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
+  </data>
   <data name="&gt;&gt;p2plus_5.Name" xml:space="preserve">
     <value>p2plus_5</value>
   </data>
@@ -10542,6 +10629,9 @@
   </data>
   <data name="p2r_5.TabIndex" type="System.Int32, mscorlib">
     <value>54</value>
+  </data>
+  <data name="p2r_5.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
   </data>
   <data name="&gt;&gt;p2r_5.Name" xml:space="preserve">
     <value>p2r_5</value>
@@ -10567,6 +10657,9 @@
   <data name="p2ls_5.TabIndex" type="System.Int32, mscorlib">
     <value>53</value>
   </data>
+  <data name="p2ls_5.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
+  </data>
   <data name="&gt;&gt;p2ls_5.Name" xml:space="preserve">
     <value>p2ls_5</value>
   </data>
@@ -10590,6 +10683,9 @@
   </data>
   <data name="p2iws_5.TabIndex" type="System.Int32, mscorlib">
     <value>52</value>
+  </data>
+  <data name="p2iws_5.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
   </data>
   <data name="&gt;&gt;p2iws_5.Name" xml:space="preserve">
     <value>p2iws_5</value>
@@ -10615,6 +10711,9 @@
   <data name="p2ib_5.TabIndex" type="System.Int32, mscorlib">
     <value>51</value>
   </data>
+  <data name="p2ib_5.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
+  </data>
   <data name="&gt;&gt;p2ib_5.Name" xml:space="preserve">
     <value>p2ib_5</value>
   </data>
@@ -10638,6 +10737,9 @@
   </data>
   <data name="p2pm_5.TabIndex" type="System.Int32, mscorlib">
     <value>50</value>
+  </data>
+  <data name="p2pm_5.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
   </data>
   <data name="&gt;&gt;p2pm_5.Name" xml:space="preserve">
     <value>p2pm_5</value>
@@ -10663,6 +10765,9 @@
   <data name="p2vw_5.TabIndex" type="System.Int32, mscorlib">
     <value>49</value>
   </data>
+  <data name="p2vw_5.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
+  </data>
   <data name="&gt;&gt;p2vw_5.Name" xml:space="preserve">
     <value>p2vw_5</value>
   </data>
@@ -10686,6 +10791,9 @@
   </data>
   <data name="p2plus_11.TabIndex" type="System.Int32, mscorlib">
     <value>48</value>
+  </data>
+  <data name="p2plus_11.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
   </data>
   <data name="&gt;&gt;p2plus_11.Name" xml:space="preserve">
     <value>p2plus_11</value>
@@ -10711,6 +10819,9 @@
   <data name="p2r_11.TabIndex" type="System.Int32, mscorlib">
     <value>47</value>
   </data>
+  <data name="p2r_11.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
+  </data>
   <data name="&gt;&gt;p2r_11.Name" xml:space="preserve">
     <value>p2r_11</value>
   </data>
@@ -10734,6 +10845,9 @@
   </data>
   <data name="p2ls_11.TabIndex" type="System.Int32, mscorlib">
     <value>46</value>
+  </data>
+  <data name="p2ls_11.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
   </data>
   <data name="&gt;&gt;p2ls_11.Name" xml:space="preserve">
     <value>p2ls_11</value>
@@ -10759,6 +10873,9 @@
   <data name="p2iws_11.TabIndex" type="System.Int32, mscorlib">
     <value>45</value>
   </data>
+  <data name="p2iws_11.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
+  </data>
   <data name="&gt;&gt;p2iws_11.Name" xml:space="preserve">
     <value>p2iws_11</value>
   </data>
@@ -10782,6 +10899,9 @@
   </data>
   <data name="p2ib_11.TabIndex" type="System.Int32, mscorlib">
     <value>44</value>
+  </data>
+  <data name="p2ib_11.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
   </data>
   <data name="&gt;&gt;p2ib_11.Name" xml:space="preserve">
     <value>p2ib_11</value>
@@ -10807,6 +10927,9 @@
   <data name="p2pm_11.TabIndex" type="System.Int32, mscorlib">
     <value>43</value>
   </data>
+  <data name="p2pm_11.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
+  </data>
   <data name="&gt;&gt;p2pm_11.Name" xml:space="preserve">
     <value>p2pm_11</value>
   </data>
@@ -10830,6 +10953,9 @@
   </data>
   <data name="p2vw_11.TabIndex" type="System.Int32, mscorlib">
     <value>42</value>
+  </data>
+  <data name="p2vw_11.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
   </data>
   <data name="&gt;&gt;p2vw_11.Name" xml:space="preserve">
     <value>p2vw_11</value>
@@ -10855,6 +10981,9 @@
   <data name="p2plus_55.TabIndex" type="System.Int32, mscorlib">
     <value>41</value>
   </data>
+  <data name="p2plus_55.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
+  </data>
   <data name="&gt;&gt;p2plus_55.Name" xml:space="preserve">
     <value>p2plus_55</value>
   </data>
@@ -10878,6 +11007,9 @@
   </data>
   <data name="p2r_55.TabIndex" type="System.Int32, mscorlib">
     <value>40</value>
+  </data>
+  <data name="p2r_55.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
   </data>
   <data name="&gt;&gt;p2r_55.Name" xml:space="preserve">
     <value>p2r_55</value>
@@ -10903,6 +11035,9 @@
   <data name="p2ls_55.TabIndex" type="System.Int32, mscorlib">
     <value>39</value>
   </data>
+  <data name="p2ls_55.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
+  </data>
   <data name="&gt;&gt;p2ls_55.Name" xml:space="preserve">
     <value>p2ls_55</value>
   </data>
@@ -10926,6 +11061,9 @@
   </data>
   <data name="p2iws_55.TabIndex" type="System.Int32, mscorlib">
     <value>38</value>
+  </data>
+  <data name="p2iws_55.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
   </data>
   <data name="&gt;&gt;p2iws_55.Name" xml:space="preserve">
     <value>p2iws_55</value>
@@ -10951,6 +11089,9 @@
   <data name="p2ib_55.TabIndex" type="System.Int32, mscorlib">
     <value>37</value>
   </data>
+  <data name="p2ib_55.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
+  </data>
   <data name="&gt;&gt;p2ib_55.Name" xml:space="preserve">
     <value>p2ib_55</value>
   </data>
@@ -10974,6 +11115,9 @@
   </data>
   <data name="p2pm_55.TabIndex" type="System.Int32, mscorlib">
     <value>36</value>
+  </data>
+  <data name="p2pm_55.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
   </data>
   <data name="&gt;&gt;p2pm_55.Name" xml:space="preserve">
     <value>p2pm_55</value>
@@ -10999,6 +11143,9 @@
   <data name="p2vw_55.TabIndex" type="System.Int32, mscorlib">
     <value>35</value>
   </data>
+  <data name="p2vw_55.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
+  </data>
   <data name="&gt;&gt;p2vw_55.Name" xml:space="preserve">
     <value>p2vw_55</value>
   </data>
@@ -11022,6 +11169,9 @@
   </data>
   <data name="p2plus_16.TabIndex" type="System.Int32, mscorlib">
     <value>34</value>
+  </data>
+  <data name="p2plus_16.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
   </data>
   <data name="&gt;&gt;p2plus_16.Name" xml:space="preserve">
     <value>p2plus_16</value>
@@ -11047,6 +11197,9 @@
   <data name="p2r_16.TabIndex" type="System.Int32, mscorlib">
     <value>33</value>
   </data>
+  <data name="p2r_16.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
+  </data>
   <data name="&gt;&gt;p2r_16.Name" xml:space="preserve">
     <value>p2r_16</value>
   </data>
@@ -11058,6 +11211,9 @@
   </data>
   <data name="&gt;&gt;p2r_16.ZOrder" xml:space="preserve">
     <value>139</value>
+  </data>
+  <data name="p2ls_16.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <data name="p2ls_16.Location" type="System.Drawing.Point, System.Drawing">
     <value>402, 109</value>
@@ -11071,6 +11227,9 @@
   <data name="p2ls_16.TabIndex" type="System.Int32, mscorlib">
     <value>32</value>
   </data>
+  <data name="p2ls_16.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
+  </data>
   <data name="&gt;&gt;p2ls_16.Name" xml:space="preserve">
     <value>p2ls_16</value>
   </data>
@@ -11082,6 +11241,9 @@
   </data>
   <data name="&gt;&gt;p2ls_16.ZOrder" xml:space="preserve">
     <value>140</value>
+  </data>
+  <data name="p2iws_16.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <data name="p2iws_16.Location" type="System.Drawing.Point, System.Drawing">
     <value>507, 109</value>
@@ -11095,6 +11257,9 @@
   <data name="p2iws_16.TabIndex" type="System.Int32, mscorlib">
     <value>31</value>
   </data>
+  <data name="p2iws_16.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
+  </data>
   <data name="&gt;&gt;p2iws_16.Name" xml:space="preserve">
     <value>p2iws_16</value>
   </data>
@@ -11107,6 +11272,9 @@
   <data name="&gt;&gt;p2iws_16.ZOrder" xml:space="preserve">
     <value>141</value>
   </data>
+  <data name="p2ib_16.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="p2ib_16.Location" type="System.Drawing.Point, System.Drawing">
     <value>612, 109</value>
   </data>
@@ -11118,6 +11286,9 @@
   </data>
   <data name="p2ib_16.TabIndex" type="System.Int32, mscorlib">
     <value>30</value>
+  </data>
+  <data name="p2ib_16.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
   </data>
   <data name="&gt;&gt;p2ib_16.Name" xml:space="preserve">
     <value>p2ib_16</value>
@@ -11143,6 +11314,9 @@
   <data name="p2pm_16.TabIndex" type="System.Int32, mscorlib">
     <value>29</value>
   </data>
+  <data name="p2pm_16.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
+  </data>
   <data name="&gt;&gt;p2pm_16.Name" xml:space="preserve">
     <value>p2pm_16</value>
   </data>
@@ -11166,6 +11340,9 @@
   </data>
   <data name="p2vw_16.TabIndex" type="System.Int32, mscorlib">
     <value>28</value>
+  </data>
+  <data name="p2vw_16.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
   </data>
   <data name="&gt;&gt;p2vw_16.Name" xml:space="preserve">
     <value>p2vw_16</value>
@@ -11191,6 +11368,9 @@
   <data name="p2plus_17.TabIndex" type="System.Int32, mscorlib">
     <value>27</value>
   </data>
+  <data name="p2plus_17.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
+  </data>
   <data name="&gt;&gt;p2plus_17.Name" xml:space="preserve">
     <value>p2plus_17</value>
   </data>
@@ -11215,6 +11395,9 @@
   <data name="p2r_17.TabIndex" type="System.Int32, mscorlib">
     <value>26</value>
   </data>
+  <data name="p2r_17.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
+  </data>
   <data name="&gt;&gt;p2r_17.Name" xml:space="preserve">
     <value>p2r_17</value>
   </data>
@@ -11226,6 +11409,9 @@
   </data>
   <data name="&gt;&gt;p2r_17.ZOrder" xml:space="preserve">
     <value>146</value>
+  </data>
+  <data name="p2ls_17.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <data name="p2ls_17.Location" type="System.Drawing.Point, System.Drawing">
     <value>402, 130</value>
@@ -11239,6 +11425,9 @@
   <data name="p2ls_17.TabIndex" type="System.Int32, mscorlib">
     <value>25</value>
   </data>
+  <data name="p2ls_17.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
+  </data>
   <data name="&gt;&gt;p2ls_17.Name" xml:space="preserve">
     <value>p2ls_17</value>
   </data>
@@ -11250,6 +11439,9 @@
   </data>
   <data name="&gt;&gt;p2ls_17.ZOrder" xml:space="preserve">
     <value>147</value>
+  </data>
+  <data name="p2iws_17.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <data name="p2iws_17.Location" type="System.Drawing.Point, System.Drawing">
     <value>507, 130</value>
@@ -11263,6 +11455,9 @@
   <data name="p2iws_17.TabIndex" type="System.Int32, mscorlib">
     <value>24</value>
   </data>
+  <data name="p2iws_17.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
+  </data>
   <data name="&gt;&gt;p2iws_17.Name" xml:space="preserve">
     <value>p2iws_17</value>
   </data>
@@ -11275,6 +11470,9 @@
   <data name="&gt;&gt;p2iws_17.ZOrder" xml:space="preserve">
     <value>148</value>
   </data>
+  <data name="p2ib_17.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="p2ib_17.Location" type="System.Drawing.Point, System.Drawing">
     <value>612, 130</value>
   </data>
@@ -11286,6 +11484,9 @@
   </data>
   <data name="p2ib_17.TabIndex" type="System.Int32, mscorlib">
     <value>23</value>
+  </data>
+  <data name="p2ib_17.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
   </data>
   <data name="&gt;&gt;p2ib_17.Name" xml:space="preserve">
     <value>p2ib_17</value>
@@ -11311,6 +11512,9 @@
   <data name="p2pm_17.TabIndex" type="System.Int32, mscorlib">
     <value>22</value>
   </data>
+  <data name="p2pm_17.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
+  </data>
   <data name="&gt;&gt;p2pm_17.Name" xml:space="preserve">
     <value>p2pm_17</value>
   </data>
@@ -11334,6 +11538,9 @@
   </data>
   <data name="p2vw_17.TabIndex" type="System.Int32, mscorlib">
     <value>21</value>
+  </data>
+  <data name="p2vw_17.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
   </data>
   <data name="&gt;&gt;p2vw_17.Name" xml:space="preserve">
     <value>p2vw_17</value>
@@ -11359,6 +11566,9 @@
   <data name="p2plus_26.TabIndex" type="System.Int32, mscorlib">
     <value>20</value>
   </data>
+  <data name="p2plus_26.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
+  </data>
   <data name="&gt;&gt;p2plus_26.Name" xml:space="preserve">
     <value>p2plus_26</value>
   </data>
@@ -11383,6 +11593,9 @@
   <data name="p2r_26.TabIndex" type="System.Int32, mscorlib">
     <value>19</value>
   </data>
+  <data name="p2r_26.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
+  </data>
   <data name="&gt;&gt;p2r_26.Name" xml:space="preserve">
     <value>p2r_26</value>
   </data>
@@ -11394,6 +11607,9 @@
   </data>
   <data name="&gt;&gt;p2r_26.ZOrder" xml:space="preserve">
     <value>153</value>
+  </data>
+  <data name="p2ls_26.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <data name="p2ls_26.Location" type="System.Drawing.Point, System.Drawing">
     <value>402, 61</value>
@@ -11407,6 +11623,9 @@
   <data name="p2ls_26.TabIndex" type="System.Int32, mscorlib">
     <value>18</value>
   </data>
+  <data name="p2ls_26.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
+  </data>
   <data name="&gt;&gt;p2ls_26.Name" xml:space="preserve">
     <value>p2ls_26</value>
   </data>
@@ -11418,6 +11637,9 @@
   </data>
   <data name="&gt;&gt;p2ls_26.ZOrder" xml:space="preserve">
     <value>154</value>
+  </data>
+  <data name="p2iws_26.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <data name="p2iws_26.Location" type="System.Drawing.Point, System.Drawing">
     <value>507, 61</value>
@@ -11431,6 +11653,9 @@
   <data name="p2iws_26.TabIndex" type="System.Int32, mscorlib">
     <value>17</value>
   </data>
+  <data name="p2iws_26.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
+  </data>
   <data name="&gt;&gt;p2iws_26.Name" xml:space="preserve">
     <value>p2iws_26</value>
   </data>
@@ -11443,6 +11668,9 @@
   <data name="&gt;&gt;p2iws_26.ZOrder" xml:space="preserve">
     <value>155</value>
   </data>
+  <data name="p2ib_26.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="p2ib_26.Location" type="System.Drawing.Point, System.Drawing">
     <value>612, 61</value>
   </data>
@@ -11454,6 +11682,9 @@
   </data>
   <data name="p2ib_26.TabIndex" type="System.Int32, mscorlib">
     <value>16</value>
+  </data>
+  <data name="p2ib_26.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
   </data>
   <data name="&gt;&gt;p2ib_26.Name" xml:space="preserve">
     <value>p2ib_26</value>
@@ -11479,6 +11710,9 @@
   <data name="p2pm_26.TabIndex" type="System.Int32, mscorlib">
     <value>15</value>
   </data>
+  <data name="p2pm_26.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
+  </data>
   <data name="&gt;&gt;p2pm_26.Name" xml:space="preserve">
     <value>p2pm_26</value>
   </data>
@@ -11502,6 +11736,9 @@
   </data>
   <data name="p2vw_26.TabIndex" type="System.Int32, mscorlib">
     <value>14</value>
+  </data>
+  <data name="p2vw_26.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
   </data>
   <data name="&gt;&gt;p2vw_26.Name" xml:space="preserve">
     <value>p2vw_26</value>
@@ -11527,6 +11764,9 @@
   <data name="p2plus_56.TabIndex" type="System.Int32, mscorlib">
     <value>13</value>
   </data>
+  <data name="p2plus_56.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
+  </data>
   <data name="&gt;&gt;p2plus_56.Name" xml:space="preserve">
     <value>p2plus_56</value>
   </data>
@@ -11550,6 +11790,9 @@
   </data>
   <data name="p2r_56.TabIndex" type="System.Int32, mscorlib">
     <value>12</value>
+  </data>
+  <data name="p2r_56.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
   </data>
   <data name="&gt;&gt;p2r_56.Name" xml:space="preserve">
     <value>p2r_56</value>
@@ -11575,6 +11818,9 @@
   <data name="p2ls_56.TabIndex" type="System.Int32, mscorlib">
     <value>11</value>
   </data>
+  <data name="p2ls_56.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
+  </data>
   <data name="&gt;&gt;p2ls_56.Name" xml:space="preserve">
     <value>p2ls_56</value>
   </data>
@@ -11598,6 +11844,9 @@
   </data>
   <data name="p2iws_56.TabIndex" type="System.Int32, mscorlib">
     <value>10</value>
+  </data>
+  <data name="p2iws_56.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
   </data>
   <data name="&gt;&gt;p2iws_56.Name" xml:space="preserve">
     <value>p2iws_56</value>
@@ -11623,6 +11872,9 @@
   <data name="p2ib_56.TabIndex" type="System.Int32, mscorlib">
     <value>9</value>
   </data>
+  <data name="p2ib_56.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
+  </data>
   <data name="&gt;&gt;p2ib_56.Name" xml:space="preserve">
     <value>p2ib_56</value>
   </data>
@@ -11646,6 +11898,9 @@
   </data>
   <data name="p2pm_56.TabIndex" type="System.Int32, mscorlib">
     <value>8</value>
+  </data>
+  <data name="p2pm_56.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
   </data>
   <data name="&gt;&gt;p2pm_56.Name" xml:space="preserve">
     <value>p2pm_56</value>
@@ -11671,6 +11926,9 @@
   <data name="p2vw_56.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>
   </data>
+  <data name="p2vw_56.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
+  </data>
   <data name="&gt;&gt;p2vw_56.Name" xml:space="preserve">
     <value>p2vw_56</value>
   </data>
@@ -11694,6 +11952,9 @@
   </data>
   <data name="p2r_0.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
+  </data>
+  <data name="p2r_0.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
   </data>
   <data name="&gt;&gt;p2r_0.Name" xml:space="preserve">
     <value>p2r_0</value>
@@ -11719,6 +11980,9 @@
   <data name="p2ls_0.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
   </data>
+  <data name="p2ls_0.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
+  </data>
   <data name="&gt;&gt;p2ls_0.Name" xml:space="preserve">
     <value>p2ls_0</value>
   </data>
@@ -11742,6 +12006,9 @@
   </data>
   <data name="p2iws_0.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
+  </data>
+  <data name="p2iws_0.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
   </data>
   <data name="&gt;&gt;p2iws_0.Name" xml:space="preserve">
     <value>p2iws_0</value>
@@ -11767,6 +12034,9 @@
   <data name="p2ib_0.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
   </data>
+  <data name="p2ib_0.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
+  </data>
   <data name="&gt;&gt;p2ib_0.Name" xml:space="preserve">
     <value>p2ib_0</value>
   </data>
@@ -11790,6 +12060,9 @@
   </data>
   <data name="p2pm_0.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
+  </data>
+  <data name="p2pm_0.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
   </data>
   <data name="&gt;&gt;p2pm_0.Name" xml:space="preserve">
     <value>p2pm_0</value>
@@ -11817,6 +12090,9 @@
   </data>
   <data name="p2vw_0.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
+  </data>
+  <data name="p2vw_0.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
   </data>
   <data name="&gt;&gt;p2vw_0.Name" xml:space="preserve">
     <value>p2vw_0</value>
@@ -18550,7 +18826,7 @@
         AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
         LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
         ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAABS
-        CwAAAk1TRnQBSQFMAgEBAwEAAUgBAQFIAQEBEAEAARABAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
+        CwAAAk1TRnQBSQFMAgEBAwEAAVABAQFQAQEBEAEAARABAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
         AwABQAMAARADAAEBAQABCAYAAQQYAAGAAgABgAMAAoABAAGAAwABgAEAAYABAAKAAgADwAEAAcAB3AHA
         AQAB8AHKAaYBAAEzBQABMwEAATMBAAEzAQACMwIAAxYBAAMcAQADIgEAAykBAANVAQADTQEAA0IBAAM5
         AQABgAF8Af8BAAJQAf8BAAGTAQAB1gEAAf8B7AHMAQABxgHWAe8BAAHWAucBAAGQAakBrQIAAf8BMwMA
