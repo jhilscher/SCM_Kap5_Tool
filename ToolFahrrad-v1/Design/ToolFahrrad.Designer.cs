@@ -71,6 +71,22 @@
             this.tab_produktion = new System.Windows.Forms.TabPage();
             this.tab1 = new System.Windows.Forms.TabControl();
             this.tab_eTeil = new System.Windows.Forms.TabPage();
+            this.cbMitOhne = new System.Windows.Forms.CheckBox();
+            this.rbReserve = new System.Windows.Forms.RadioButton();
+            this.picReadOnlyETeile = new System.Windows.Forms.PictureBox();
+            this.picResetETeil = new System.Windows.Forms.PictureBox();
+            this.picEditEteile = new System.Windows.Forms.PictureBox();
+            this.picSaveETeile = new System.Windows.Forms.PictureBox();
+            this.dataGridViewETeil = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.colWarteschlange = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colBearbeitung = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colPlanung = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.reserve = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tab_APlatz = new System.Windows.Forms.TabPage();
             this.picEditsAPlatz = new System.Windows.Forms.PictureBox();
             this.rbRuestzeit = new System.Windows.Forms.RadioButton();
@@ -89,6 +105,103 @@
             this.s1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.s3 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.ueber = new System.Windows.Forms.DataGridViewImageColumn();
+            this.tab_P1 = new System.Windows.Forms.TabPage();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.p1plus_18 = new System.Windows.Forms.TextBox();
+            this.p1r_18 = new System.Windows.Forms.TextBox();
+            this.p1ls_18 = new System.Windows.Forms.TextBox();
+            this.p1iws_18 = new System.Windows.Forms.TextBox();
+            this.p1ib_18 = new System.Windows.Forms.TextBox();
+            this.p1pm_18 = new System.Windows.Forms.TextBox();
+            this.p1vw_18 = new System.Windows.Forms.TextBox();
+            this.p1plus_7 = new System.Windows.Forms.TextBox();
+            this.p1r_7 = new System.Windows.Forms.TextBox();
+            this.p1ls_7 = new System.Windows.Forms.TextBox();
+            this.p1iws_7 = new System.Windows.Forms.TextBox();
+            this.p1ib_7 = new System.Windows.Forms.TextBox();
+            this.p1pm_7 = new System.Windows.Forms.TextBox();
+            this.p1vw_7 = new System.Windows.Forms.TextBox();
+            this.p1plus_13 = new System.Windows.Forms.TextBox();
+            this.p1r_13 = new System.Windows.Forms.TextBox();
+            this.p1ls_13 = new System.Windows.Forms.TextBox();
+            this.p1iws_13 = new System.Windows.Forms.TextBox();
+            this.p1ib_13 = new System.Windows.Forms.TextBox();
+            this.p1pm_13 = new System.Windows.Forms.TextBox();
+            this.p1vw_13 = new System.Windows.Forms.TextBox();
+            this.p1plus_49 = new System.Windows.Forms.TextBox();
+            this.p1r_49 = new System.Windows.Forms.TextBox();
+            this.p1ls_49 = new System.Windows.Forms.TextBox();
+            this.p1iws_49 = new System.Windows.Forms.TextBox();
+            this.p1ib_49 = new System.Windows.Forms.TextBox();
+            this.p1pm_49 = new System.Windows.Forms.TextBox();
+            this.p1vw_49 = new System.Windows.Forms.TextBox();
+            this.p1plus_4 = new System.Windows.Forms.TextBox();
+            this.p1r_4 = new System.Windows.Forms.TextBox();
+            this.p1ls_4 = new System.Windows.Forms.TextBox();
+            this.p1iws_4 = new System.Windows.Forms.TextBox();
+            this.p1ib_4 = new System.Windows.Forms.TextBox();
+            this.p1pm_4 = new System.Windows.Forms.TextBox();
+            this.p1vw_4 = new System.Windows.Forms.TextBox();
+            this.p1plus_10 = new System.Windows.Forms.TextBox();
+            this.p1r_10 = new System.Windows.Forms.TextBox();
+            this.p1ls_10 = new System.Windows.Forms.TextBox();
+            this.p1iws_10 = new System.Windows.Forms.TextBox();
+            this.p1ib_10 = new System.Windows.Forms.TextBox();
+            this.p1pm_10 = new System.Windows.Forms.TextBox();
+            this.p1vw_10 = new System.Windows.Forms.TextBox();
+            this.p1plus_50 = new System.Windows.Forms.TextBox();
+            this.p1r_50 = new System.Windows.Forms.TextBox();
+            this.p1ls_50 = new System.Windows.Forms.TextBox();
+            this.p1iws_50 = new System.Windows.Forms.TextBox();
+            this.p1ib_50 = new System.Windows.Forms.TextBox();
+            this.p1pm_50 = new System.Windows.Forms.TextBox();
+            this.p1vw_50 = new System.Windows.Forms.TextBox();
+            this.p1plus_16 = new System.Windows.Forms.TextBox();
+            this.p1r_16 = new System.Windows.Forms.TextBox();
+            this.p1ls_16 = new System.Windows.Forms.TextBox();
+            this.p1iws_16 = new System.Windows.Forms.TextBox();
+            this.p1ib_16 = new System.Windows.Forms.TextBox();
+            this.p1pm_16 = new System.Windows.Forms.TextBox();
+            this.p1vw_16 = new System.Windows.Forms.TextBox();
+            this.p1plus_17 = new System.Windows.Forms.TextBox();
+            this.p1r_17 = new System.Windows.Forms.TextBox();
+            this.p1ls_17 = new System.Windows.Forms.TextBox();
+            this.p1iws_17 = new System.Windows.Forms.TextBox();
+            this.p1ib_17 = new System.Windows.Forms.TextBox();
+            this.p1pm_17 = new System.Windows.Forms.TextBox();
+            this.p1vw_17 = new System.Windows.Forms.TextBox();
+            this.p1plus_26 = new System.Windows.Forms.TextBox();
+            this.p1r_26 = new System.Windows.Forms.TextBox();
+            this.p1ls_26 = new System.Windows.Forms.TextBox();
+            this.p1iws_26 = new System.Windows.Forms.TextBox();
+            this.p1ib_26 = new System.Windows.Forms.TextBox();
+            this.p1pm_26 = new System.Windows.Forms.TextBox();
+            this.p1vw_26 = new System.Windows.Forms.TextBox();
+            this.p1plus_51 = new System.Windows.Forms.TextBox();
+            this.p1r_51 = new System.Windows.Forms.TextBox();
+            this.p1ls_51 = new System.Windows.Forms.TextBox();
+            this.p1iws_51 = new System.Windows.Forms.TextBox();
+            this.p1ib_51 = new System.Windows.Forms.TextBox();
+            this.p1pm_51 = new System.Windows.Forms.TextBox();
+            this.p1vw_51 = new System.Windows.Forms.TextBox();
+            this.p1r_0 = new System.Windows.Forms.TextBox();
+            this.p1ls_0 = new System.Windows.Forms.TextBox();
+            this.p1iws_0 = new System.Windows.Forms.TextBox();
+            this.p1ib_0 = new System.Windows.Forms.TextBox();
+            this.p1pm_0 = new System.Windows.Forms.TextBox();
+            this.p1vw_0 = new System.Windows.Forms.TextBox();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tab2 = new System.Windows.Forms.TabControl();
             this.tabPage2 = new System.Windows.Forms.TabPage();
@@ -132,25 +245,257 @@
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.helpProvider1 = new System.Windows.Forms.HelpProvider();
-            this.label2 = new System.Windows.Forms.Label();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.picSaveETeile = new System.Windows.Forms.PictureBox();
-            this.picEditEteile = new System.Windows.Forms.PictureBox();
-            this.picResetETeil = new System.Windows.Forms.PictureBox();
-            this.picReadOnlyETeile = new System.Windows.Forms.PictureBox();
-            this.rbReserve = new System.Windows.Forms.RadioButton();
-            this.cbMitOhne = new System.Windows.Forms.CheckBox();
-            this.reserve = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colPlanung = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colBearbeitung = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colWarteschlange = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewETeil = new System.Windows.Forms.DataGridView();
-            this.lableDazu = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
+            this.label23 = new System.Windows.Forms.Label();
+            this.label24 = new System.Windows.Forms.Label();
+            this.label25 = new System.Windows.Forms.Label();
+            this.label26 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label27 = new System.Windows.Forms.Label();
+            this.label28 = new System.Windows.Forms.Label();
+            this.label29 = new System.Windows.Forms.Label();
+            this.label30 = new System.Windows.Forms.Label();
+            this.label31 = new System.Windows.Forms.Label();
+            this.label32 = new System.Windows.Forms.Label();
+            this.label33 = new System.Windows.Forms.Label();
+            this.label34 = new System.Windows.Forms.Label();
+            this.label35 = new System.Windows.Forms.Label();
+            this.label36 = new System.Windows.Forms.Label();
+            this.label37 = new System.Windows.Forms.Label();
+            this.label38 = new System.Windows.Forms.Label();
+            this.label39 = new System.Windows.Forms.Label();
+            this.label40 = new System.Windows.Forms.Label();
+            this.label41 = new System.Windows.Forms.Label();
+            this.label42 = new System.Windows.Forms.Label();
+            this.label43 = new System.Windows.Forms.Label();
+            this.label44 = new System.Windows.Forms.Label();
+            this.label45 = new System.Windows.Forms.Label();
+            this.label46 = new System.Windows.Forms.Label();
+            this.label47 = new System.Windows.Forms.Label();
+            this.label48 = new System.Windows.Forms.Label();
+            this.label49 = new System.Windows.Forms.Label();
+            this.label50 = new System.Windows.Forms.Label();
+            this.label51 = new System.Windows.Forms.Label();
+            this.label52 = new System.Windows.Forms.Label();
+            this.label53 = new System.Windows.Forms.Label();
+            this.label54 = new System.Windows.Forms.Label();
+            this.label55 = new System.Windows.Forms.Label();
+            this.label56 = new System.Windows.Forms.Label();
+            this.label57 = new System.Windows.Forms.Label();
+            this.label58 = new System.Windows.Forms.Label();
+            this.label59 = new System.Windows.Forms.Label();
+            this.label60 = new System.Windows.Forms.Label();
+            this.label61 = new System.Windows.Forms.Label();
+            this.label62 = new System.Windows.Forms.Label();
+            this.label63 = new System.Windows.Forms.Label();
+            this.label64 = new System.Windows.Forms.Label();
+            this.label65 = new System.Windows.Forms.Label();
+            this.label66 = new System.Windows.Forms.Label();
+            this.label67 = new System.Windows.Forms.Label();
+            this.label68 = new System.Windows.Forms.Label();
+            this.label69 = new System.Windows.Forms.Label();
+            this.label70 = new System.Windows.Forms.Label();
+            this.label71 = new System.Windows.Forms.Label();
+            this.label72 = new System.Windows.Forms.Label();
+            this.label73 = new System.Windows.Forms.Label();
+            this.label74 = new System.Windows.Forms.Label();
+            this.label75 = new System.Windows.Forms.Label();
+            this.label76 = new System.Windows.Forms.Label();
+            this.label77 = new System.Windows.Forms.Label();
+            this.label78 = new System.Windows.Forms.Label();
+            this.label79 = new System.Windows.Forms.Label();
+            this.label80 = new System.Windows.Forms.Label();
+            this.label81 = new System.Windows.Forms.Label();
+            this.label82 = new System.Windows.Forms.Label();
+            this.label83 = new System.Windows.Forms.Label();
+            this.label84 = new System.Windows.Forms.Label();
+            this.label85 = new System.Windows.Forms.Label();
+            this.label86 = new System.Windows.Forms.Label();
+            this.label87 = new System.Windows.Forms.Label();
+            this.label88 = new System.Windows.Forms.Label();
+            this.label89 = new System.Windows.Forms.Label();
+            this.label90 = new System.Windows.Forms.Label();
+            this.label91 = new System.Windows.Forms.Label();
+            this.tab_P2 = new System.Windows.Forms.TabPage();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.label92 = new System.Windows.Forms.Label();
+            this.label93 = new System.Windows.Forms.Label();
+            this.label94 = new System.Windows.Forms.Label();
+            this.label95 = new System.Windows.Forms.Label();
+            this.label96 = new System.Windows.Forms.Label();
+            this.label97 = new System.Windows.Forms.Label();
+            this.label98 = new System.Windows.Forms.Label();
+            this.label99 = new System.Windows.Forms.Label();
+            this.label100 = new System.Windows.Forms.Label();
+            this.label101 = new System.Windows.Forms.Label();
+            this.label102 = new System.Windows.Forms.Label();
+            this.label103 = new System.Windows.Forms.Label();
+            this.label104 = new System.Windows.Forms.Label();
+            this.label105 = new System.Windows.Forms.Label();
+            this.label106 = new System.Windows.Forms.Label();
+            this.label107 = new System.Windows.Forms.Label();
+            this.label108 = new System.Windows.Forms.Label();
+            this.label109 = new System.Windows.Forms.Label();
+            this.label110 = new System.Windows.Forms.Label();
+            this.label111 = new System.Windows.Forms.Label();
+            this.label112 = new System.Windows.Forms.Label();
+            this.label113 = new System.Windows.Forms.Label();
+            this.label114 = new System.Windows.Forms.Label();
+            this.label115 = new System.Windows.Forms.Label();
+            this.label116 = new System.Windows.Forms.Label();
+            this.label117 = new System.Windows.Forms.Label();
+            this.label118 = new System.Windows.Forms.Label();
+            this.label119 = new System.Windows.Forms.Label();
+            this.label120 = new System.Windows.Forms.Label();
+            this.label121 = new System.Windows.Forms.Label();
+            this.label122 = new System.Windows.Forms.Label();
+            this.label123 = new System.Windows.Forms.Label();
+            this.label124 = new System.Windows.Forms.Label();
+            this.label125 = new System.Windows.Forms.Label();
+            this.label126 = new System.Windows.Forms.Label();
+            this.label127 = new System.Windows.Forms.Label();
+            this.label128 = new System.Windows.Forms.Label();
+            this.label129 = new System.Windows.Forms.Label();
+            this.label130 = new System.Windows.Forms.Label();
+            this.label131 = new System.Windows.Forms.Label();
+            this.label132 = new System.Windows.Forms.Label();
+            this.label133 = new System.Windows.Forms.Label();
+            this.label134 = new System.Windows.Forms.Label();
+            this.label135 = new System.Windows.Forms.Label();
+            this.label136 = new System.Windows.Forms.Label();
+            this.label137 = new System.Windows.Forms.Label();
+            this.label138 = new System.Windows.Forms.Label();
+            this.label139 = new System.Windows.Forms.Label();
+            this.label140 = new System.Windows.Forms.Label();
+            this.label141 = new System.Windows.Forms.Label();
+            this.label142 = new System.Windows.Forms.Label();
+            this.label143 = new System.Windows.Forms.Label();
+            this.label144 = new System.Windows.Forms.Label();
+            this.label145 = new System.Windows.Forms.Label();
+            this.label146 = new System.Windows.Forms.Label();
+            this.label147 = new System.Windows.Forms.Label();
+            this.label148 = new System.Windows.Forms.Label();
+            this.label149 = new System.Windows.Forms.Label();
+            this.label150 = new System.Windows.Forms.Label();
+            this.label151 = new System.Windows.Forms.Label();
+            this.label152 = new System.Windows.Forms.Label();
+            this.label153 = new System.Windows.Forms.Label();
+            this.label154 = new System.Windows.Forms.Label();
+            this.label155 = new System.Windows.Forms.Label();
+            this.label156 = new System.Windows.Forms.Label();
+            this.label157 = new System.Windows.Forms.Label();
+            this.label158 = new System.Windows.Forms.Label();
+            this.label159 = new System.Windows.Forms.Label();
+            this.label160 = new System.Windows.Forms.Label();
+            this.label161 = new System.Windows.Forms.Label();
+            this.label162 = new System.Windows.Forms.Label();
+            this.label163 = new System.Windows.Forms.Label();
+            this.label164 = new System.Windows.Forms.Label();
+            this.label165 = new System.Windows.Forms.Label();
+            this.label166 = new System.Windows.Forms.Label();
+            this.label167 = new System.Windows.Forms.Label();
+            this.label168 = new System.Windows.Forms.Label();
+            this.label169 = new System.Windows.Forms.Label();
+            this.label170 = new System.Windows.Forms.Label();
+            this.label171 = new System.Windows.Forms.Label();
+            this.label172 = new System.Windows.Forms.Label();
+            this.label173 = new System.Windows.Forms.Label();
+            this.label174 = new System.Windows.Forms.Label();
+            this.label175 = new System.Windows.Forms.Label();
+            this.label176 = new System.Windows.Forms.Label();
+            this.label177 = new System.Windows.Forms.Label();
+            this.label178 = new System.Windows.Forms.Label();
+            this.label179 = new System.Windows.Forms.Label();
+            this.label180 = new System.Windows.Forms.Label();
+            this.p2plus_19 = new System.Windows.Forms.TextBox();
+            this.p2r_19 = new System.Windows.Forms.TextBox();
+            this.p2ls_19 = new System.Windows.Forms.TextBox();
+            this.p2iws_19 = new System.Windows.Forms.TextBox();
+            this.p2ib_19 = new System.Windows.Forms.TextBox();
+            this.p2pm_19 = new System.Windows.Forms.TextBox();
+            this.p2vw_19 = new System.Windows.Forms.TextBox();
+            this.p2plus_8 = new System.Windows.Forms.TextBox();
+            this.p2r_8 = new System.Windows.Forms.TextBox();
+            this.p2ls_8 = new System.Windows.Forms.TextBox();
+            this.p2iws_8 = new System.Windows.Forms.TextBox();
+            this.p2ib_8 = new System.Windows.Forms.TextBox();
+            this.p2pm_8 = new System.Windows.Forms.TextBox();
+            this.p2vw_8 = new System.Windows.Forms.TextBox();
+            this.p2plus_14 = new System.Windows.Forms.TextBox();
+            this.p2r_14 = new System.Windows.Forms.TextBox();
+            this.p2ls_14 = new System.Windows.Forms.TextBox();
+            this.p2iws_14 = new System.Windows.Forms.TextBox();
+            this.p2ib_14 = new System.Windows.Forms.TextBox();
+            this.p2pm_14 = new System.Windows.Forms.TextBox();
+            this.p2vw_14 = new System.Windows.Forms.TextBox();
+            this.p2plus_54 = new System.Windows.Forms.TextBox();
+            this.p2r_54 = new System.Windows.Forms.TextBox();
+            this.p2ls_54 = new System.Windows.Forms.TextBox();
+            this.p2iws_54 = new System.Windows.Forms.TextBox();
+            this.p2ib_54 = new System.Windows.Forms.TextBox();
+            this.p2pm_54 = new System.Windows.Forms.TextBox();
+            this.p2vw_54 = new System.Windows.Forms.TextBox();
+            this.p2plus_5 = new System.Windows.Forms.TextBox();
+            this.p2r_5 = new System.Windows.Forms.TextBox();
+            this.p2ls_5 = new System.Windows.Forms.TextBox();
+            this.p2iws_5 = new System.Windows.Forms.TextBox();
+            this.p2ib_5 = new System.Windows.Forms.TextBox();
+            this.p2pm_5 = new System.Windows.Forms.TextBox();
+            this.p2vw_5 = new System.Windows.Forms.TextBox();
+            this.p2plus_11 = new System.Windows.Forms.TextBox();
+            this.p2r_11 = new System.Windows.Forms.TextBox();
+            this.p2ls_11 = new System.Windows.Forms.TextBox();
+            this.p2iws_11 = new System.Windows.Forms.TextBox();
+            this.p2ib_11 = new System.Windows.Forms.TextBox();
+            this.p2pm_11 = new System.Windows.Forms.TextBox();
+            this.p2vw_11 = new System.Windows.Forms.TextBox();
+            this.p2plus_55 = new System.Windows.Forms.TextBox();
+            this.p2r_55 = new System.Windows.Forms.TextBox();
+            this.p2ls_55 = new System.Windows.Forms.TextBox();
+            this.p2iws_55 = new System.Windows.Forms.TextBox();
+            this.p2ib_55 = new System.Windows.Forms.TextBox();
+            this.p2pm_55 = new System.Windows.Forms.TextBox();
+            this.p2vw_55 = new System.Windows.Forms.TextBox();
+            this.p2plus_16 = new System.Windows.Forms.TextBox();
+            this.p2r_16 = new System.Windows.Forms.TextBox();
+            this.p2ls_16 = new System.Windows.Forms.TextBox();
+            this.p2iws_16 = new System.Windows.Forms.TextBox();
+            this.p2ib_16 = new System.Windows.Forms.TextBox();
+            this.p2pm_16 = new System.Windows.Forms.TextBox();
+            this.p2vw_16 = new System.Windows.Forms.TextBox();
+            this.p2plus_17 = new System.Windows.Forms.TextBox();
+            this.p2r_17 = new System.Windows.Forms.TextBox();
+            this.p2ls_17 = new System.Windows.Forms.TextBox();
+            this.p2iws_17 = new System.Windows.Forms.TextBox();
+            this.p2ib_17 = new System.Windows.Forms.TextBox();
+            this.p2pm_17 = new System.Windows.Forms.TextBox();
+            this.p2vw_17 = new System.Windows.Forms.TextBox();
+            this.p2plus_26 = new System.Windows.Forms.TextBox();
+            this.p2r_26 = new System.Windows.Forms.TextBox();
+            this.p2ls_26 = new System.Windows.Forms.TextBox();
+            this.p2iws_26 = new System.Windows.Forms.TextBox();
+            this.p2ib_26 = new System.Windows.Forms.TextBox();
+            this.p2pm_26 = new System.Windows.Forms.TextBox();
+            this.p2vw_26 = new System.Windows.Forms.TextBox();
+            this.p2plus_56 = new System.Windows.Forms.TextBox();
+            this.p2r_56 = new System.Windows.Forms.TextBox();
+            this.p2ls_56 = new System.Windows.Forms.TextBox();
+            this.p2iws_56 = new System.Windows.Forms.TextBox();
+            this.p2ib_56 = new System.Windows.Forms.TextBox();
+            this.p2pm_56 = new System.Windows.Forms.TextBox();
+            this.p2vw_56 = new System.Windows.Forms.TextBox();
+            this.p2r_0 = new System.Windows.Forms.TextBox();
+            this.p2ls_0 = new System.Windows.Forms.TextBox();
+            this.p2iws_0 = new System.Windows.Forms.TextBox();
+            this.p2ib_0 = new System.Windows.Forms.TextBox();
+            this.p2pm_0 = new System.Windows.Forms.TextBox();
+            this.p2vw_0 = new System.Windows.Forms.TextBox();
             this.tabs.SuspendLayout();
             this.tab_xml.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pufferP3)).BeginInit();
@@ -178,12 +523,19 @@
             this.tab_produktion.SuspendLayout();
             this.tab1.SuspendLayout();
             this.tab_eTeil.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picReadOnlyETeile)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picResetETeil)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picEditEteile)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picSaveETeile)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewETeil)).BeginInit();
             this.tab_APlatz.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picEditsAPlatz)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picReadOnlyAPlatz)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picResetAPlatz)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picSaveAPlatz)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAPlatz)).BeginInit();
+            this.tab_P1.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tab2.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -191,12 +543,8 @@
             this.tab_bestellung.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
             this.menu.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picSaveETeile)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picEditEteile)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picResetETeil)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picReadOnlyETeile)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewETeil)).BeginInit();
+            this.tab_P2.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabs
@@ -697,10 +1045,7 @@
             // tab_produktion
             // 
             this.tab_produktion.BackColor = System.Drawing.Color.Transparent;
-            this.tab_produktion.Controls.Add(this.lableDazu);
             this.tab_produktion.Controls.Add(this.tab1);
-            this.tab_produktion.Controls.Add(this.pictureBox4);
-            this.tab_produktion.Controls.Add(this.label2);
             resources.ApplyResources(this.tab_produktion, "tab_produktion");
             this.tab_produktion.Name = "tab_produktion";
             // 
@@ -708,6 +1053,8 @@
             // 
             this.tab1.Controls.Add(this.tab_eTeil);
             this.tab1.Controls.Add(this.tab_APlatz);
+            this.tab1.Controls.Add(this.tab_P1);
+            this.tab1.Controls.Add(this.tab_P2);
             resources.ApplyResources(this.tab1, "tab1");
             this.tab1.Name = "tab1";
             this.tab1.SelectedIndex = 0;
@@ -726,6 +1073,145 @@
             resources.ApplyResources(this.tab_eTeil, "tab_eTeil");
             this.tab_eTeil.Name = "tab_eTeil";
             this.helpProvider1.SetShowHelp(this.tab_eTeil, ((bool)(resources.GetObject("tab_eTeil.ShowHelp"))));
+            // 
+            // cbMitOhne
+            // 
+            resources.ApplyResources(this.cbMitOhne, "cbMitOhne");
+            this.cbMitOhne.Checked = true;
+            this.cbMitOhne.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.helpProvider1.SetHelpKeyword(this.cbMitOhne, resources.GetString("cbMitOhne.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.cbMitOhne, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("cbMitOhne.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.cbMitOhne, resources.GetString("cbMitOhne.HelpString"));
+            this.cbMitOhne.Name = "cbMitOhne";
+            this.helpProvider1.SetShowHelp(this.cbMitOhne, ((bool)(resources.GetObject("cbMitOhne.ShowHelp"))));
+            this.cbMitOhne.UseVisualStyleBackColor = true;
+            this.cbMitOhne.CheckedChanged += new System.EventHandler(this.cbMitOhne_CheckedChanged);
+            // 
+            // rbReserve
+            // 
+            resources.ApplyResources(this.rbReserve, "rbReserve");
+            this.rbReserve.Checked = true;
+            this.rbReserve.Name = "rbReserve";
+            this.helpProvider1.SetShowHelp(this.rbReserve, ((bool)(resources.GetObject("rbReserve.ShowHelp"))));
+            this.rbReserve.TabStop = true;
+            this.rbReserve.UseVisualStyleBackColor = true;
+            // 
+            // picReadOnlyETeile
+            // 
+            this.picReadOnlyETeile.Cursor = System.Windows.Forms.Cursors.Hand;
+            resources.ApplyResources(this.picReadOnlyETeile, "picReadOnlyETeile");
+            this.picReadOnlyETeile.Name = "picReadOnlyETeile";
+            this.helpProvider1.SetShowHelp(this.picReadOnlyETeile, ((bool)(resources.GetObject("picReadOnlyETeile.ShowHelp"))));
+            this.picReadOnlyETeile.TabStop = false;
+            this.toolTip.SetToolTip(this.picReadOnlyETeile, resources.GetString("picReadOnlyETeile.ToolTip"));
+            this.picReadOnlyETeile.Click += new System.EventHandler(this.pictureReadOnly_Click);
+            // 
+            // picResetETeil
+            // 
+            this.picResetETeil.Cursor = System.Windows.Forms.Cursors.Hand;
+            resources.ApplyResources(this.picResetETeil, "picResetETeil");
+            this.picResetETeil.Name = "picResetETeil";
+            this.helpProvider1.SetShowHelp(this.picResetETeil, ((bool)(resources.GetObject("picResetETeil.ShowHelp"))));
+            this.picResetETeil.TabStop = false;
+            this.toolTip.SetToolTip(this.picResetETeil, resources.GetString("picResetETeil.ToolTip"));
+            this.picResetETeil.Click += new System.EventHandler(this.pictureResetETeil_Click);
+            // 
+            // picEditEteile
+            // 
+            this.picEditEteile.Cursor = System.Windows.Forms.Cursors.Hand;
+            resources.ApplyResources(this.picEditEteile, "picEditEteile");
+            this.picEditEteile.Name = "picEditEteile";
+            this.helpProvider1.SetShowHelp(this.picEditEteile, ((bool)(resources.GetObject("picEditEteile.ShowHelp"))));
+            this.picEditEteile.TabStop = false;
+            this.toolTip.SetToolTip(this.picEditEteile, resources.GetString("picEditEteile.ToolTip"));
+            this.picEditEteile.Click += new System.EventHandler(this.picEditEteile_Click);
+            // 
+            // picSaveETeile
+            // 
+            this.picSaveETeile.Cursor = System.Windows.Forms.Cursors.Hand;
+            resources.ApplyResources(this.picSaveETeile, "picSaveETeile");
+            this.picSaveETeile.Name = "picSaveETeile";
+            this.helpProvider1.SetShowHelp(this.picSaveETeile, ((bool)(resources.GetObject("picSaveETeile.ShowHelp"))));
+            this.picSaveETeile.TabStop = false;
+            this.toolTip.SetToolTip(this.picSaveETeile, resources.GetString("picSaveETeile.ToolTip"));
+            this.picSaveETeile.Click += new System.EventHandler(this.pictureSaveETeile_Click);
+            // 
+            // dataGridViewETeil
+            // 
+            this.dataGridViewETeil.AllowUserToAddRows = false;
+            this.dataGridViewETeil.AllowUserToDeleteRows = false;
+            this.dataGridViewETeil.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.dataGridViewETeil.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridViewETeil.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewETeil.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn3,
+            this.dataGridViewTextBoxColumn4,
+            this.dataGridViewImageColumn1,
+            this.colWarteschlange,
+            this.colBearbeitung,
+            this.colPlanung,
+            this.reserve});
+            resources.ApplyResources(this.dataGridViewETeil, "dataGridViewETeil");
+            this.dataGridViewETeil.Name = "dataGridViewETeil";
+            this.helpProvider1.SetShowHelp(this.dataGridViewETeil, ((bool)(resources.GetObject("dataGridViewETeil.ShowHelp"))));
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            resources.ApplyResources(this.dataGridViewTextBoxColumn1, "dataGridViewTextBoxColumn1");
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.dataGridViewTextBoxColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            resources.ApplyResources(this.dataGridViewTextBoxColumn2, "dataGridViewTextBoxColumn2");
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            resources.ApplyResources(this.dataGridViewTextBoxColumn3, "dataGridViewTextBoxColumn3");
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            resources.ApplyResources(this.dataGridViewTextBoxColumn4, "dataGridViewTextBoxColumn4");
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
+            // 
+            // dataGridViewImageColumn1
+            // 
+            resources.ApplyResources(this.dataGridViewImageColumn1, "dataGridViewImageColumn1");
+            this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
+            this.dataGridViewImageColumn1.ReadOnly = true;
+            this.dataGridViewImageColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // colWarteschlange
+            // 
+            resources.ApplyResources(this.colWarteschlange, "colWarteschlange");
+            this.colWarteschlange.Name = "colWarteschlange";
+            this.colWarteschlange.ReadOnly = true;
+            // 
+            // colBearbeitung
+            // 
+            resources.ApplyResources(this.colBearbeitung, "colBearbeitung");
+            this.colBearbeitung.Name = "colBearbeitung";
+            this.colBearbeitung.ReadOnly = true;
+            // 
+            // colPlanung
+            // 
+            resources.ApplyResources(this.colPlanung, "colPlanung");
+            this.colPlanung.Name = "colPlanung";
+            this.colPlanung.ReadOnly = true;
+            // 
+            // reserve
+            // 
+            resources.ApplyResources(this.reserve, "reserve");
+            this.reserve.Name = "reserve";
+            this.reserve.ReadOnly = true;
             // 
             // tab_APlatz
             // 
@@ -881,6 +1367,789 @@
             this.ueber.ReadOnly = true;
             this.ueber.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.ueber.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
+            // tab_P1
+            // 
+            this.tab_P1.BackColor = System.Drawing.Color.Transparent;
+            this.tab_P1.Controls.Add(this.panel1);
+            resources.ApplyResources(this.tab_P1, "tab_P1");
+            this.tab_P1.Name = "tab_P1";
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.label91);
+            this.panel1.Controls.Add(this.label90);
+            this.panel1.Controls.Add(this.label89);
+            this.panel1.Controls.Add(this.label88);
+            this.panel1.Controls.Add(this.label87);
+            this.panel1.Controls.Add(this.label86);
+            this.panel1.Controls.Add(this.label74);
+            this.panel1.Controls.Add(this.label75);
+            this.panel1.Controls.Add(this.label76);
+            this.panel1.Controls.Add(this.label77);
+            this.panel1.Controls.Add(this.label78);
+            this.panel1.Controls.Add(this.label79);
+            this.panel1.Controls.Add(this.label80);
+            this.panel1.Controls.Add(this.label81);
+            this.panel1.Controls.Add(this.label82);
+            this.panel1.Controls.Add(this.label83);
+            this.panel1.Controls.Add(this.label84);
+            this.panel1.Controls.Add(this.label85);
+            this.panel1.Controls.Add(this.label73);
+            this.panel1.Controls.Add(this.label72);
+            this.panel1.Controls.Add(this.label71);
+            this.panel1.Controls.Add(this.label60);
+            this.panel1.Controls.Add(this.label61);
+            this.panel1.Controls.Add(this.label62);
+            this.panel1.Controls.Add(this.label63);
+            this.panel1.Controls.Add(this.label64);
+            this.panel1.Controls.Add(this.label65);
+            this.panel1.Controls.Add(this.label66);
+            this.panel1.Controls.Add(this.label67);
+            this.panel1.Controls.Add(this.label68);
+            this.panel1.Controls.Add(this.label69);
+            this.panel1.Controls.Add(this.label70);
+            this.panel1.Controls.Add(this.label49);
+            this.panel1.Controls.Add(this.label50);
+            this.panel1.Controls.Add(this.label51);
+            this.panel1.Controls.Add(this.label52);
+            this.panel1.Controls.Add(this.label53);
+            this.panel1.Controls.Add(this.label54);
+            this.panel1.Controls.Add(this.label55);
+            this.panel1.Controls.Add(this.label56);
+            this.panel1.Controls.Add(this.label57);
+            this.panel1.Controls.Add(this.label58);
+            this.panel1.Controls.Add(this.label59);
+            this.panel1.Controls.Add(this.label38);
+            this.panel1.Controls.Add(this.label39);
+            this.panel1.Controls.Add(this.label40);
+            this.panel1.Controls.Add(this.label41);
+            this.panel1.Controls.Add(this.label42);
+            this.panel1.Controls.Add(this.label43);
+            this.panel1.Controls.Add(this.label44);
+            this.panel1.Controls.Add(this.label45);
+            this.panel1.Controls.Add(this.label46);
+            this.panel1.Controls.Add(this.label47);
+            this.panel1.Controls.Add(this.label48);
+            this.panel1.Controls.Add(this.label37);
+            this.panel1.Controls.Add(this.label15);
+            this.panel1.Controls.Add(this.label27);
+            this.panel1.Controls.Add(this.label28);
+            this.panel1.Controls.Add(this.label29);
+            this.panel1.Controls.Add(this.label30);
+            this.panel1.Controls.Add(this.label31);
+            this.panel1.Controls.Add(this.label32);
+            this.panel1.Controls.Add(this.label33);
+            this.panel1.Controls.Add(this.label34);
+            this.panel1.Controls.Add(this.label35);
+            this.panel1.Controls.Add(this.label36);
+            this.panel1.Controls.Add(this.label24);
+            this.panel1.Controls.Add(this.label25);
+            this.panel1.Controls.Add(this.label26);
+            this.panel1.Controls.Add(this.label21);
+            this.panel1.Controls.Add(this.label22);
+            this.panel1.Controls.Add(this.label23);
+            this.panel1.Controls.Add(this.label20);
+            this.panel1.Controls.Add(this.label18);
+            this.panel1.Controls.Add(this.label19);
+            this.panel1.Controls.Add(this.label17);
+            this.panel1.Controls.Add(this.label16);
+            this.panel1.Controls.Add(this.label12);
+            this.panel1.Controls.Add(this.label13);
+            this.panel1.Controls.Add(this.label14);
+            this.panel1.Controls.Add(this.label9);
+            this.panel1.Controls.Add(this.label10);
+            this.panel1.Controls.Add(this.label11);
+            this.panel1.Controls.Add(this.label8);
+            this.panel1.Controls.Add(this.label6);
+            this.panel1.Controls.Add(this.label7);
+            this.panel1.Controls.Add(this.label5);
+            this.panel1.Controls.Add(this.label4);
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.p1plus_18);
+            this.panel1.Controls.Add(this.p1r_18);
+            this.panel1.Controls.Add(this.p1ls_18);
+            this.panel1.Controls.Add(this.p1iws_18);
+            this.panel1.Controls.Add(this.p1ib_18);
+            this.panel1.Controls.Add(this.p1pm_18);
+            this.panel1.Controls.Add(this.p1vw_18);
+            this.panel1.Controls.Add(this.p1plus_7);
+            this.panel1.Controls.Add(this.p1r_7);
+            this.panel1.Controls.Add(this.p1ls_7);
+            this.panel1.Controls.Add(this.p1iws_7);
+            this.panel1.Controls.Add(this.p1ib_7);
+            this.panel1.Controls.Add(this.p1pm_7);
+            this.panel1.Controls.Add(this.p1vw_7);
+            this.panel1.Controls.Add(this.p1plus_13);
+            this.panel1.Controls.Add(this.p1r_13);
+            this.panel1.Controls.Add(this.p1ls_13);
+            this.panel1.Controls.Add(this.p1iws_13);
+            this.panel1.Controls.Add(this.p1ib_13);
+            this.panel1.Controls.Add(this.p1pm_13);
+            this.panel1.Controls.Add(this.p1vw_13);
+            this.panel1.Controls.Add(this.p1plus_49);
+            this.panel1.Controls.Add(this.p1r_49);
+            this.panel1.Controls.Add(this.p1ls_49);
+            this.panel1.Controls.Add(this.p1iws_49);
+            this.panel1.Controls.Add(this.p1ib_49);
+            this.panel1.Controls.Add(this.p1pm_49);
+            this.panel1.Controls.Add(this.p1vw_49);
+            this.panel1.Controls.Add(this.p1plus_4);
+            this.panel1.Controls.Add(this.p1r_4);
+            this.panel1.Controls.Add(this.p1ls_4);
+            this.panel1.Controls.Add(this.p1iws_4);
+            this.panel1.Controls.Add(this.p1ib_4);
+            this.panel1.Controls.Add(this.p1pm_4);
+            this.panel1.Controls.Add(this.p1vw_4);
+            this.panel1.Controls.Add(this.p1plus_10);
+            this.panel1.Controls.Add(this.p1r_10);
+            this.panel1.Controls.Add(this.p1ls_10);
+            this.panel1.Controls.Add(this.p1iws_10);
+            this.panel1.Controls.Add(this.p1ib_10);
+            this.panel1.Controls.Add(this.p1pm_10);
+            this.panel1.Controls.Add(this.p1vw_10);
+            this.panel1.Controls.Add(this.p1plus_50);
+            this.panel1.Controls.Add(this.p1r_50);
+            this.panel1.Controls.Add(this.p1ls_50);
+            this.panel1.Controls.Add(this.p1iws_50);
+            this.panel1.Controls.Add(this.p1ib_50);
+            this.panel1.Controls.Add(this.p1pm_50);
+            this.panel1.Controls.Add(this.p1vw_50);
+            this.panel1.Controls.Add(this.p1plus_16);
+            this.panel1.Controls.Add(this.p1r_16);
+            this.panel1.Controls.Add(this.p1ls_16);
+            this.panel1.Controls.Add(this.p1iws_16);
+            this.panel1.Controls.Add(this.p1ib_16);
+            this.panel1.Controls.Add(this.p1pm_16);
+            this.panel1.Controls.Add(this.p1vw_16);
+            this.panel1.Controls.Add(this.p1plus_17);
+            this.panel1.Controls.Add(this.p1r_17);
+            this.panel1.Controls.Add(this.p1ls_17);
+            this.panel1.Controls.Add(this.p1iws_17);
+            this.panel1.Controls.Add(this.p1ib_17);
+            this.panel1.Controls.Add(this.p1pm_17);
+            this.panel1.Controls.Add(this.p1vw_17);
+            this.panel1.Controls.Add(this.p1plus_26);
+            this.panel1.Controls.Add(this.p1r_26);
+            this.panel1.Controls.Add(this.p1ls_26);
+            this.panel1.Controls.Add(this.p1iws_26);
+            this.panel1.Controls.Add(this.p1ib_26);
+            this.panel1.Controls.Add(this.p1pm_26);
+            this.panel1.Controls.Add(this.p1vw_26);
+            this.panel1.Controls.Add(this.p1plus_51);
+            this.panel1.Controls.Add(this.p1r_51);
+            this.panel1.Controls.Add(this.p1ls_51);
+            this.panel1.Controls.Add(this.p1iws_51);
+            this.panel1.Controls.Add(this.p1ib_51);
+            this.panel1.Controls.Add(this.p1pm_51);
+            this.panel1.Controls.Add(this.p1vw_51);
+            this.panel1.Controls.Add(this.p1r_0);
+            this.panel1.Controls.Add(this.p1ls_0);
+            this.panel1.Controls.Add(this.p1iws_0);
+            this.panel1.Controls.Add(this.p1ib_0);
+            this.panel1.Controls.Add(this.p1pm_0);
+            this.panel1.Controls.Add(this.p1vw_0);
+            resources.ApplyResources(this.panel1, "panel1");
+            this.panel1.Name = "panel1";
+            // 
+            // label12
+            // 
+            resources.ApplyResources(this.label12, "label12");
+            this.label12.Name = "label12";
+            this.helpProvider1.SetShowHelp(this.label12, ((bool)(resources.GetObject("label12.ShowHelp"))));
+            // 
+            // label13
+            // 
+            resources.ApplyResources(this.label13, "label13");
+            this.label13.Name = "label13";
+            this.helpProvider1.SetShowHelp(this.label13, ((bool)(resources.GetObject("label13.ShowHelp"))));
+            // 
+            // label14
+            // 
+            resources.ApplyResources(this.label14, "label14");
+            this.label14.Name = "label14";
+            this.helpProvider1.SetShowHelp(this.label14, ((bool)(resources.GetObject("label14.ShowHelp"))));
+            // 
+            // label9
+            // 
+            resources.ApplyResources(this.label9, "label9");
+            this.label9.Name = "label9";
+            this.helpProvider1.SetShowHelp(this.label9, ((bool)(resources.GetObject("label9.ShowHelp"))));
+            // 
+            // label10
+            // 
+            resources.ApplyResources(this.label10, "label10");
+            this.label10.Name = "label10";
+            this.helpProvider1.SetShowHelp(this.label10, ((bool)(resources.GetObject("label10.ShowHelp"))));
+            // 
+            // label11
+            // 
+            resources.ApplyResources(this.label11, "label11");
+            this.label11.Name = "label11";
+            this.helpProvider1.SetShowHelp(this.label11, ((bool)(resources.GetObject("label11.ShowHelp"))));
+            // 
+            // label8
+            // 
+            resources.ApplyResources(this.label8, "label8");
+            this.label8.Name = "label8";
+            this.helpProvider1.SetShowHelp(this.label8, ((bool)(resources.GetObject("label8.ShowHelp"))));
+            // 
+            // label6
+            // 
+            resources.ApplyResources(this.label6, "label6");
+            this.label6.Name = "label6";
+            this.helpProvider1.SetShowHelp(this.label6, ((bool)(resources.GetObject("label6.ShowHelp"))));
+            // 
+            // label7
+            // 
+            resources.ApplyResources(this.label7, "label7");
+            this.label7.Name = "label7";
+            this.helpProvider1.SetShowHelp(this.label7, ((bool)(resources.GetObject("label7.ShowHelp"))));
+            // 
+            // label5
+            // 
+            resources.ApplyResources(this.label5, "label5");
+            this.label5.Name = "label5";
+            this.helpProvider1.SetShowHelp(this.label5, ((bool)(resources.GetObject("label5.ShowHelp"))));
+            // 
+            // label4
+            // 
+            resources.ApplyResources(this.label4, "label4");
+            this.label4.Name = "label4";
+            this.helpProvider1.SetShowHelp(this.label4, ((bool)(resources.GetObject("label4.ShowHelp"))));
+            // 
+            // label2
+            // 
+            resources.ApplyResources(this.label2, "label2");
+            this.label2.Name = "label2";
+            // 
+            // p1plus_18
+            // 
+            this.p1plus_18.BackColor = System.Drawing.Color.AntiqueWhite;
+            resources.ApplyResources(this.p1plus_18, "p1plus_18");
+            this.p1plus_18.Name = "p1plus_18";
+            this.helpProvider1.SetShowHelp(this.p1plus_18, ((bool)(resources.GetObject("p1plus_18.ShowHelp"))));
+            // 
+            // p1r_18
+            // 
+            resources.ApplyResources(this.p1r_18, "p1r_18");
+            this.p1r_18.Name = "p1r_18";
+            this.helpProvider1.SetShowHelp(this.p1r_18, ((bool)(resources.GetObject("p1r_18.ShowHelp"))));
+            // 
+            // p1ls_18
+            // 
+            resources.ApplyResources(this.p1ls_18, "p1ls_18");
+            this.p1ls_18.Name = "p1ls_18";
+            this.helpProvider1.SetShowHelp(this.p1ls_18, ((bool)(resources.GetObject("p1ls_18.ShowHelp"))));
+            // 
+            // p1iws_18
+            // 
+            resources.ApplyResources(this.p1iws_18, "p1iws_18");
+            this.p1iws_18.Name = "p1iws_18";
+            this.helpProvider1.SetShowHelp(this.p1iws_18, ((bool)(resources.GetObject("p1iws_18.ShowHelp"))));
+            // 
+            // p1ib_18
+            // 
+            resources.ApplyResources(this.p1ib_18, "p1ib_18");
+            this.p1ib_18.Name = "p1ib_18";
+            this.helpProvider1.SetShowHelp(this.p1ib_18, ((bool)(resources.GetObject("p1ib_18.ShowHelp"))));
+            // 
+            // p1pm_18
+            // 
+            resources.ApplyResources(this.p1pm_18, "p1pm_18");
+            this.p1pm_18.Name = "p1pm_18";
+            this.helpProvider1.SetShowHelp(this.p1pm_18, ((bool)(resources.GetObject("p1pm_18.ShowHelp"))));
+            // 
+            // p1vw_18
+            // 
+            this.p1vw_18.BackColor = System.Drawing.Color.Honeydew;
+            resources.ApplyResources(this.p1vw_18, "p1vw_18");
+            this.p1vw_18.Name = "p1vw_18";
+            this.helpProvider1.SetShowHelp(this.p1vw_18, ((bool)(resources.GetObject("p1vw_18.ShowHelp"))));
+            // 
+            // p1plus_7
+            // 
+            this.p1plus_7.BackColor = System.Drawing.Color.AntiqueWhite;
+            resources.ApplyResources(this.p1plus_7, "p1plus_7");
+            this.p1plus_7.Name = "p1plus_7";
+            this.helpProvider1.SetShowHelp(this.p1plus_7, ((bool)(resources.GetObject("p1plus_7.ShowHelp"))));
+            // 
+            // p1r_7
+            // 
+            resources.ApplyResources(this.p1r_7, "p1r_7");
+            this.p1r_7.Name = "p1r_7";
+            this.helpProvider1.SetShowHelp(this.p1r_7, ((bool)(resources.GetObject("p1r_7.ShowHelp"))));
+            // 
+            // p1ls_7
+            // 
+            resources.ApplyResources(this.p1ls_7, "p1ls_7");
+            this.p1ls_7.Name = "p1ls_7";
+            this.helpProvider1.SetShowHelp(this.p1ls_7, ((bool)(resources.GetObject("p1ls_7.ShowHelp"))));
+            // 
+            // p1iws_7
+            // 
+            resources.ApplyResources(this.p1iws_7, "p1iws_7");
+            this.p1iws_7.Name = "p1iws_7";
+            this.helpProvider1.SetShowHelp(this.p1iws_7, ((bool)(resources.GetObject("p1iws_7.ShowHelp"))));
+            // 
+            // p1ib_7
+            // 
+            resources.ApplyResources(this.p1ib_7, "p1ib_7");
+            this.p1ib_7.Name = "p1ib_7";
+            this.helpProvider1.SetShowHelp(this.p1ib_7, ((bool)(resources.GetObject("p1ib_7.ShowHelp"))));
+            // 
+            // p1pm_7
+            // 
+            resources.ApplyResources(this.p1pm_7, "p1pm_7");
+            this.p1pm_7.Name = "p1pm_7";
+            this.helpProvider1.SetShowHelp(this.p1pm_7, ((bool)(resources.GetObject("p1pm_7.ShowHelp"))));
+            // 
+            // p1vw_7
+            // 
+            this.p1vw_7.BackColor = System.Drawing.Color.Honeydew;
+            resources.ApplyResources(this.p1vw_7, "p1vw_7");
+            this.p1vw_7.Name = "p1vw_7";
+            this.helpProvider1.SetShowHelp(this.p1vw_7, ((bool)(resources.GetObject("p1vw_7.ShowHelp"))));
+            // 
+            // p1plus_13
+            // 
+            this.p1plus_13.BackColor = System.Drawing.Color.AntiqueWhite;
+            resources.ApplyResources(this.p1plus_13, "p1plus_13");
+            this.p1plus_13.Name = "p1plus_13";
+            this.helpProvider1.SetShowHelp(this.p1plus_13, ((bool)(resources.GetObject("p1plus_13.ShowHelp"))));
+            // 
+            // p1r_13
+            // 
+            resources.ApplyResources(this.p1r_13, "p1r_13");
+            this.p1r_13.Name = "p1r_13";
+            this.helpProvider1.SetShowHelp(this.p1r_13, ((bool)(resources.GetObject("p1r_13.ShowHelp"))));
+            // 
+            // p1ls_13
+            // 
+            resources.ApplyResources(this.p1ls_13, "p1ls_13");
+            this.p1ls_13.Name = "p1ls_13";
+            this.helpProvider1.SetShowHelp(this.p1ls_13, ((bool)(resources.GetObject("p1ls_13.ShowHelp"))));
+            // 
+            // p1iws_13
+            // 
+            resources.ApplyResources(this.p1iws_13, "p1iws_13");
+            this.p1iws_13.Name = "p1iws_13";
+            this.helpProvider1.SetShowHelp(this.p1iws_13, ((bool)(resources.GetObject("p1iws_13.ShowHelp"))));
+            // 
+            // p1ib_13
+            // 
+            resources.ApplyResources(this.p1ib_13, "p1ib_13");
+            this.p1ib_13.Name = "p1ib_13";
+            this.helpProvider1.SetShowHelp(this.p1ib_13, ((bool)(resources.GetObject("p1ib_13.ShowHelp"))));
+            // 
+            // p1pm_13
+            // 
+            resources.ApplyResources(this.p1pm_13, "p1pm_13");
+            this.p1pm_13.Name = "p1pm_13";
+            this.helpProvider1.SetShowHelp(this.p1pm_13, ((bool)(resources.GetObject("p1pm_13.ShowHelp"))));
+            // 
+            // p1vw_13
+            // 
+            this.p1vw_13.BackColor = System.Drawing.Color.Honeydew;
+            resources.ApplyResources(this.p1vw_13, "p1vw_13");
+            this.p1vw_13.Name = "p1vw_13";
+            this.helpProvider1.SetShowHelp(this.p1vw_13, ((bool)(resources.GetObject("p1vw_13.ShowHelp"))));
+            // 
+            // p1plus_49
+            // 
+            this.p1plus_49.BackColor = System.Drawing.Color.AntiqueWhite;
+            resources.ApplyResources(this.p1plus_49, "p1plus_49");
+            this.p1plus_49.Name = "p1plus_49";
+            this.helpProvider1.SetShowHelp(this.p1plus_49, ((bool)(resources.GetObject("p1plus_49.ShowHelp"))));
+            // 
+            // p1r_49
+            // 
+            resources.ApplyResources(this.p1r_49, "p1r_49");
+            this.p1r_49.Name = "p1r_49";
+            this.helpProvider1.SetShowHelp(this.p1r_49, ((bool)(resources.GetObject("p1r_49.ShowHelp"))));
+            // 
+            // p1ls_49
+            // 
+            resources.ApplyResources(this.p1ls_49, "p1ls_49");
+            this.p1ls_49.Name = "p1ls_49";
+            this.helpProvider1.SetShowHelp(this.p1ls_49, ((bool)(resources.GetObject("p1ls_49.ShowHelp"))));
+            // 
+            // p1iws_49
+            // 
+            this.p1iws_49.BackColor = System.Drawing.Color.AntiqueWhite;
+            resources.ApplyResources(this.p1iws_49, "p1iws_49");
+            this.p1iws_49.Name = "p1iws_49";
+            this.helpProvider1.SetShowHelp(this.p1iws_49, ((bool)(resources.GetObject("p1iws_49.ShowHelp"))));
+            // 
+            // p1ib_49
+            // 
+            resources.ApplyResources(this.p1ib_49, "p1ib_49");
+            this.p1ib_49.Name = "p1ib_49";
+            this.helpProvider1.SetShowHelp(this.p1ib_49, ((bool)(resources.GetObject("p1ib_49.ShowHelp"))));
+            // 
+            // p1pm_49
+            // 
+            this.p1pm_49.BackColor = System.Drawing.Color.Honeydew;
+            resources.ApplyResources(this.p1pm_49, "p1pm_49");
+            this.p1pm_49.Name = "p1pm_49";
+            this.helpProvider1.SetShowHelp(this.p1pm_49, ((bool)(resources.GetObject("p1pm_49.ShowHelp"))));
+            // 
+            // p1vw_49
+            // 
+            this.p1vw_49.BackColor = System.Drawing.Color.Honeydew;
+            resources.ApplyResources(this.p1vw_49, "p1vw_49");
+            this.p1vw_49.Name = "p1vw_49";
+            this.helpProvider1.SetShowHelp(this.p1vw_49, ((bool)(resources.GetObject("p1vw_49.ShowHelp"))));
+            // 
+            // p1plus_4
+            // 
+            this.p1plus_4.BackColor = System.Drawing.Color.AntiqueWhite;
+            resources.ApplyResources(this.p1plus_4, "p1plus_4");
+            this.p1plus_4.Name = "p1plus_4";
+            this.helpProvider1.SetShowHelp(this.p1plus_4, ((bool)(resources.GetObject("p1plus_4.ShowHelp"))));
+            // 
+            // p1r_4
+            // 
+            resources.ApplyResources(this.p1r_4, "p1r_4");
+            this.p1r_4.Name = "p1r_4";
+            this.helpProvider1.SetShowHelp(this.p1r_4, ((bool)(resources.GetObject("p1r_4.ShowHelp"))));
+            // 
+            // p1ls_4
+            // 
+            resources.ApplyResources(this.p1ls_4, "p1ls_4");
+            this.p1ls_4.Name = "p1ls_4";
+            this.helpProvider1.SetShowHelp(this.p1ls_4, ((bool)(resources.GetObject("p1ls_4.ShowHelp"))));
+            // 
+            // p1iws_4
+            // 
+            resources.ApplyResources(this.p1iws_4, "p1iws_4");
+            this.p1iws_4.Name = "p1iws_4";
+            this.helpProvider1.SetShowHelp(this.p1iws_4, ((bool)(resources.GetObject("p1iws_4.ShowHelp"))));
+            // 
+            // p1ib_4
+            // 
+            resources.ApplyResources(this.p1ib_4, "p1ib_4");
+            this.p1ib_4.Name = "p1ib_4";
+            this.helpProvider1.SetShowHelp(this.p1ib_4, ((bool)(resources.GetObject("p1ib_4.ShowHelp"))));
+            // 
+            // p1pm_4
+            // 
+            resources.ApplyResources(this.p1pm_4, "p1pm_4");
+            this.p1pm_4.Name = "p1pm_4";
+            this.helpProvider1.SetShowHelp(this.p1pm_4, ((bool)(resources.GetObject("p1pm_4.ShowHelp"))));
+            // 
+            // p1vw_4
+            // 
+            this.p1vw_4.BackColor = System.Drawing.Color.Honeydew;
+            resources.ApplyResources(this.p1vw_4, "p1vw_4");
+            this.p1vw_4.Name = "p1vw_4";
+            this.helpProvider1.SetShowHelp(this.p1vw_4, ((bool)(resources.GetObject("p1vw_4.ShowHelp"))));
+            // 
+            // p1plus_10
+            // 
+            this.p1plus_10.BackColor = System.Drawing.Color.AntiqueWhite;
+            resources.ApplyResources(this.p1plus_10, "p1plus_10");
+            this.p1plus_10.Name = "p1plus_10";
+            this.helpProvider1.SetShowHelp(this.p1plus_10, ((bool)(resources.GetObject("p1plus_10.ShowHelp"))));
+            // 
+            // p1r_10
+            // 
+            resources.ApplyResources(this.p1r_10, "p1r_10");
+            this.p1r_10.Name = "p1r_10";
+            this.helpProvider1.SetShowHelp(this.p1r_10, ((bool)(resources.GetObject("p1r_10.ShowHelp"))));
+            // 
+            // p1ls_10
+            // 
+            resources.ApplyResources(this.p1ls_10, "p1ls_10");
+            this.p1ls_10.Name = "p1ls_10";
+            this.helpProvider1.SetShowHelp(this.p1ls_10, ((bool)(resources.GetObject("p1ls_10.ShowHelp"))));
+            // 
+            // p1iws_10
+            // 
+            resources.ApplyResources(this.p1iws_10, "p1iws_10");
+            this.p1iws_10.Name = "p1iws_10";
+            this.helpProvider1.SetShowHelp(this.p1iws_10, ((bool)(resources.GetObject("p1iws_10.ShowHelp"))));
+            // 
+            // p1ib_10
+            // 
+            resources.ApplyResources(this.p1ib_10, "p1ib_10");
+            this.p1ib_10.Name = "p1ib_10";
+            this.helpProvider1.SetShowHelp(this.p1ib_10, ((bool)(resources.GetObject("p1ib_10.ShowHelp"))));
+            // 
+            // p1pm_10
+            // 
+            resources.ApplyResources(this.p1pm_10, "p1pm_10");
+            this.p1pm_10.Name = "p1pm_10";
+            this.helpProvider1.SetShowHelp(this.p1pm_10, ((bool)(resources.GetObject("p1pm_10.ShowHelp"))));
+            // 
+            // p1vw_10
+            // 
+            this.p1vw_10.BackColor = System.Drawing.Color.Honeydew;
+            resources.ApplyResources(this.p1vw_10, "p1vw_10");
+            this.p1vw_10.Name = "p1vw_10";
+            this.helpProvider1.SetShowHelp(this.p1vw_10, ((bool)(resources.GetObject("p1vw_10.ShowHelp"))));
+            // 
+            // p1plus_50
+            // 
+            this.p1plus_50.BackColor = System.Drawing.Color.AntiqueWhite;
+            resources.ApplyResources(this.p1plus_50, "p1plus_50");
+            this.p1plus_50.Name = "p1plus_50";
+            this.helpProvider1.SetShowHelp(this.p1plus_50, ((bool)(resources.GetObject("p1plus_50.ShowHelp"))));
+            // 
+            // p1r_50
+            // 
+            resources.ApplyResources(this.p1r_50, "p1r_50");
+            this.p1r_50.Name = "p1r_50";
+            this.helpProvider1.SetShowHelp(this.p1r_50, ((bool)(resources.GetObject("p1r_50.ShowHelp"))));
+            // 
+            // p1ls_50
+            // 
+            resources.ApplyResources(this.p1ls_50, "p1ls_50");
+            this.p1ls_50.Name = "p1ls_50";
+            this.helpProvider1.SetShowHelp(this.p1ls_50, ((bool)(resources.GetObject("p1ls_50.ShowHelp"))));
+            // 
+            // p1iws_50
+            // 
+            this.p1iws_50.BackColor = System.Drawing.Color.AntiqueWhite;
+            resources.ApplyResources(this.p1iws_50, "p1iws_50");
+            this.p1iws_50.Name = "p1iws_50";
+            this.helpProvider1.SetShowHelp(this.p1iws_50, ((bool)(resources.GetObject("p1iws_50.ShowHelp"))));
+            // 
+            // p1ib_50
+            // 
+            resources.ApplyResources(this.p1ib_50, "p1ib_50");
+            this.p1ib_50.Name = "p1ib_50";
+            this.helpProvider1.SetShowHelp(this.p1ib_50, ((bool)(resources.GetObject("p1ib_50.ShowHelp"))));
+            // 
+            // p1pm_50
+            // 
+            this.p1pm_50.BackColor = System.Drawing.Color.Honeydew;
+            resources.ApplyResources(this.p1pm_50, "p1pm_50");
+            this.p1pm_50.Name = "p1pm_50";
+            this.helpProvider1.SetShowHelp(this.p1pm_50, ((bool)(resources.GetObject("p1pm_50.ShowHelp"))));
+            // 
+            // p1vw_50
+            // 
+            this.p1vw_50.BackColor = System.Drawing.Color.Honeydew;
+            resources.ApplyResources(this.p1vw_50, "p1vw_50");
+            this.p1vw_50.Name = "p1vw_50";
+            this.helpProvider1.SetShowHelp(this.p1vw_50, ((bool)(resources.GetObject("p1vw_50.ShowHelp"))));
+            // 
+            // p1plus_16
+            // 
+            this.p1plus_16.BackColor = System.Drawing.Color.AntiqueWhite;
+            resources.ApplyResources(this.p1plus_16, "p1plus_16");
+            this.p1plus_16.Name = "p1plus_16";
+            this.helpProvider1.SetShowHelp(this.p1plus_16, ((bool)(resources.GetObject("p1plus_16.ShowHelp"))));
+            // 
+            // p1r_16
+            // 
+            resources.ApplyResources(this.p1r_16, "p1r_16");
+            this.p1r_16.Name = "p1r_16";
+            this.helpProvider1.SetShowHelp(this.p1r_16, ((bool)(resources.GetObject("p1r_16.ShowHelp"))));
+            // 
+            // p1ls_16
+            // 
+            resources.ApplyResources(this.p1ls_16, "p1ls_16");
+            this.p1ls_16.Name = "p1ls_16";
+            this.helpProvider1.SetShowHelp(this.p1ls_16, ((bool)(resources.GetObject("p1ls_16.ShowHelp"))));
+            // 
+            // p1iws_16
+            // 
+            resources.ApplyResources(this.p1iws_16, "p1iws_16");
+            this.p1iws_16.Name = "p1iws_16";
+            this.helpProvider1.SetShowHelp(this.p1iws_16, ((bool)(resources.GetObject("p1iws_16.ShowHelp"))));
+            // 
+            // p1ib_16
+            // 
+            resources.ApplyResources(this.p1ib_16, "p1ib_16");
+            this.p1ib_16.Name = "p1ib_16";
+            this.helpProvider1.SetShowHelp(this.p1ib_16, ((bool)(resources.GetObject("p1ib_16.ShowHelp"))));
+            // 
+            // p1pm_16
+            // 
+            resources.ApplyResources(this.p1pm_16, "p1pm_16");
+            this.p1pm_16.Name = "p1pm_16";
+            this.helpProvider1.SetShowHelp(this.p1pm_16, ((bool)(resources.GetObject("p1pm_16.ShowHelp"))));
+            // 
+            // p1vw_16
+            // 
+            this.p1vw_16.BackColor = System.Drawing.Color.Honeydew;
+            resources.ApplyResources(this.p1vw_16, "p1vw_16");
+            this.p1vw_16.Name = "p1vw_16";
+            this.helpProvider1.SetShowHelp(this.p1vw_16, ((bool)(resources.GetObject("p1vw_16.ShowHelp"))));
+            // 
+            // p1plus_17
+            // 
+            this.p1plus_17.BackColor = System.Drawing.Color.AntiqueWhite;
+            resources.ApplyResources(this.p1plus_17, "p1plus_17");
+            this.p1plus_17.Name = "p1plus_17";
+            this.helpProvider1.SetShowHelp(this.p1plus_17, ((bool)(resources.GetObject("p1plus_17.ShowHelp"))));
+            // 
+            // p1r_17
+            // 
+            resources.ApplyResources(this.p1r_17, "p1r_17");
+            this.p1r_17.Name = "p1r_17";
+            this.helpProvider1.SetShowHelp(this.p1r_17, ((bool)(resources.GetObject("p1r_17.ShowHelp"))));
+            // 
+            // p1ls_17
+            // 
+            resources.ApplyResources(this.p1ls_17, "p1ls_17");
+            this.p1ls_17.Name = "p1ls_17";
+            this.helpProvider1.SetShowHelp(this.p1ls_17, ((bool)(resources.GetObject("p1ls_17.ShowHelp"))));
+            // 
+            // p1iws_17
+            // 
+            resources.ApplyResources(this.p1iws_17, "p1iws_17");
+            this.p1iws_17.Name = "p1iws_17";
+            this.helpProvider1.SetShowHelp(this.p1iws_17, ((bool)(resources.GetObject("p1iws_17.ShowHelp"))));
+            // 
+            // p1ib_17
+            // 
+            resources.ApplyResources(this.p1ib_17, "p1ib_17");
+            this.p1ib_17.Name = "p1ib_17";
+            this.helpProvider1.SetShowHelp(this.p1ib_17, ((bool)(resources.GetObject("p1ib_17.ShowHelp"))));
+            // 
+            // p1pm_17
+            // 
+            resources.ApplyResources(this.p1pm_17, "p1pm_17");
+            this.p1pm_17.Name = "p1pm_17";
+            this.helpProvider1.SetShowHelp(this.p1pm_17, ((bool)(resources.GetObject("p1pm_17.ShowHelp"))));
+            // 
+            // p1vw_17
+            // 
+            this.p1vw_17.BackColor = System.Drawing.Color.Honeydew;
+            resources.ApplyResources(this.p1vw_17, "p1vw_17");
+            this.p1vw_17.Name = "p1vw_17";
+            this.helpProvider1.SetShowHelp(this.p1vw_17, ((bool)(resources.GetObject("p1vw_17.ShowHelp"))));
+            // 
+            // p1plus_26
+            // 
+            this.p1plus_26.BackColor = System.Drawing.Color.AntiqueWhite;
+            resources.ApplyResources(this.p1plus_26, "p1plus_26");
+            this.p1plus_26.Name = "p1plus_26";
+            this.helpProvider1.SetShowHelp(this.p1plus_26, ((bool)(resources.GetObject("p1plus_26.ShowHelp"))));
+            // 
+            // p1r_26
+            // 
+            resources.ApplyResources(this.p1r_26, "p1r_26");
+            this.p1r_26.Name = "p1r_26";
+            this.helpProvider1.SetShowHelp(this.p1r_26, ((bool)(resources.GetObject("p1r_26.ShowHelp"))));
+            // 
+            // p1ls_26
+            // 
+            resources.ApplyResources(this.p1ls_26, "p1ls_26");
+            this.p1ls_26.Name = "p1ls_26";
+            this.helpProvider1.SetShowHelp(this.p1ls_26, ((bool)(resources.GetObject("p1ls_26.ShowHelp"))));
+            // 
+            // p1iws_26
+            // 
+            resources.ApplyResources(this.p1iws_26, "p1iws_26");
+            this.p1iws_26.Name = "p1iws_26";
+            this.helpProvider1.SetShowHelp(this.p1iws_26, ((bool)(resources.GetObject("p1iws_26.ShowHelp"))));
+            // 
+            // p1ib_26
+            // 
+            resources.ApplyResources(this.p1ib_26, "p1ib_26");
+            this.p1ib_26.Name = "p1ib_26";
+            this.helpProvider1.SetShowHelp(this.p1ib_26, ((bool)(resources.GetObject("p1ib_26.ShowHelp"))));
+            // 
+            // p1pm_26
+            // 
+            resources.ApplyResources(this.p1pm_26, "p1pm_26");
+            this.p1pm_26.Name = "p1pm_26";
+            this.helpProvider1.SetShowHelp(this.p1pm_26, ((bool)(resources.GetObject("p1pm_26.ShowHelp"))));
+            // 
+            // p1vw_26
+            // 
+            this.p1vw_26.BackColor = System.Drawing.Color.Honeydew;
+            resources.ApplyResources(this.p1vw_26, "p1vw_26");
+            this.p1vw_26.Name = "p1vw_26";
+            this.helpProvider1.SetShowHelp(this.p1vw_26, ((bool)(resources.GetObject("p1vw_26.ShowHelp"))));
+            // 
+            // p1plus_51
+            // 
+            this.p1plus_51.BackColor = System.Drawing.Color.AntiqueWhite;
+            resources.ApplyResources(this.p1plus_51, "p1plus_51");
+            this.p1plus_51.Name = "p1plus_51";
+            this.helpProvider1.SetShowHelp(this.p1plus_51, ((bool)(resources.GetObject("p1plus_51.ShowHelp"))));
+            // 
+            // p1r_51
+            // 
+            resources.ApplyResources(this.p1r_51, "p1r_51");
+            this.p1r_51.Name = "p1r_51";
+            this.helpProvider1.SetShowHelp(this.p1r_51, ((bool)(resources.GetObject("p1r_51.ShowHelp"))));
+            // 
+            // p1ls_51
+            // 
+            resources.ApplyResources(this.p1ls_51, "p1ls_51");
+            this.p1ls_51.Name = "p1ls_51";
+            this.helpProvider1.SetShowHelp(this.p1ls_51, ((bool)(resources.GetObject("p1ls_51.ShowHelp"))));
+            // 
+            // p1iws_51
+            // 
+            this.p1iws_51.BackColor = System.Drawing.Color.AntiqueWhite;
+            resources.ApplyResources(this.p1iws_51, "p1iws_51");
+            this.p1iws_51.Name = "p1iws_51";
+            this.helpProvider1.SetShowHelp(this.p1iws_51, ((bool)(resources.GetObject("p1iws_51.ShowHelp"))));
+            // 
+            // p1ib_51
+            // 
+            resources.ApplyResources(this.p1ib_51, "p1ib_51");
+            this.p1ib_51.Name = "p1ib_51";
+            this.helpProvider1.SetShowHelp(this.p1ib_51, ((bool)(resources.GetObject("p1ib_51.ShowHelp"))));
+            // 
+            // p1pm_51
+            // 
+            this.p1pm_51.BackColor = System.Drawing.Color.Honeydew;
+            resources.ApplyResources(this.p1pm_51, "p1pm_51");
+            this.p1pm_51.Name = "p1pm_51";
+            this.helpProvider1.SetShowHelp(this.p1pm_51, ((bool)(resources.GetObject("p1pm_51.ShowHelp"))));
+            // 
+            // p1vw_51
+            // 
+            this.p1vw_51.BackColor = System.Drawing.Color.Honeydew;
+            resources.ApplyResources(this.p1vw_51, "p1vw_51");
+            this.p1vw_51.Name = "p1vw_51";
+            this.helpProvider1.SetShowHelp(this.p1vw_51, ((bool)(resources.GetObject("p1vw_51.ShowHelp"))));
+            // 
+            // p1r_0
+            // 
+            resources.ApplyResources(this.p1r_0, "p1r_0");
+            this.p1r_0.Name = "p1r_0";
+            this.helpProvider1.SetShowHelp(this.p1r_0, ((bool)(resources.GetObject("p1r_0.ShowHelp"))));
+            // 
+            // p1ls_0
+            // 
+            resources.ApplyResources(this.p1ls_0, "p1ls_0");
+            this.p1ls_0.Name = "p1ls_0";
+            this.helpProvider1.SetShowHelp(this.p1ls_0, ((bool)(resources.GetObject("p1ls_0.ShowHelp"))));
+            // 
+            // p1iws_0
+            // 
+            this.p1iws_0.BackColor = System.Drawing.Color.AntiqueWhite;
+            resources.ApplyResources(this.p1iws_0, "p1iws_0");
+            this.p1iws_0.Name = "p1iws_0";
+            this.helpProvider1.SetShowHelp(this.p1iws_0, ((bool)(resources.GetObject("p1iws_0.ShowHelp"))));
+            // 
+            // p1ib_0
+            // 
+            resources.ApplyResources(this.p1ib_0, "p1ib_0");
+            this.p1ib_0.Name = "p1ib_0";
+            this.helpProvider1.SetShowHelp(this.p1ib_0, ((bool)(resources.GetObject("p1ib_0.ShowHelp"))));
+            // 
+            // p1pm_0
+            // 
+            this.p1pm_0.BackColor = System.Drawing.Color.Honeydew;
+            resources.ApplyResources(this.p1pm_0, "p1pm_0");
+            this.p1pm_0.Name = "p1pm_0";
+            this.helpProvider1.SetShowHelp(this.p1pm_0, ((bool)(resources.GetObject("p1pm_0.ShowHelp"))));
+            // 
+            // p1vw_0
+            // 
+            this.p1vw_0.BackColor = System.Drawing.Color.LightYellow;
+            resources.ApplyResources(this.p1vw_0, "p1vw_0");
+            this.p1vw_0.Name = "p1vw_0";
             // 
             // tabPage1
             // 
@@ -1179,163 +2448,1857 @@
             // 
             resources.ApplyResources(this.helpProvider1, "helpProvider1");
             // 
-            // label2
+            // label16
             // 
-            resources.ApplyResources(this.label2, "label2");
-            this.label2.Name = "label2";
-            this.helpProvider1.SetShowHelp(this.label2, ((bool)(resources.GetObject("label2.ShowHelp"))));
+            resources.ApplyResources(this.label16, "label16");
+            this.label16.BackColor = System.Drawing.Color.Transparent;
+            this.label16.Name = "label16";
+            this.helpProvider1.SetShowHelp(this.label16, ((bool)(resources.GetObject("label16.ShowHelp"))));
             // 
-            // pictureBox4
+            // label17
             // 
-            resources.ApplyResources(this.pictureBox4, "pictureBox4");
-            this.pictureBox4.Name = "pictureBox4";
-            this.helpProvider1.SetShowHelp(this.pictureBox4, ((bool)(resources.GetObject("pictureBox4.ShowHelp"))));
-            this.pictureBox4.TabStop = false;
+            resources.ApplyResources(this.label17, "label17");
+            this.label17.BackColor = System.Drawing.Color.Transparent;
+            this.label17.Name = "label17";
+            this.helpProvider1.SetShowHelp(this.label17, ((bool)(resources.GetObject("label17.ShowHelp"))));
             // 
-            // picSaveETeile
+            // label18
             // 
-            this.picSaveETeile.Cursor = System.Windows.Forms.Cursors.Hand;
-            resources.ApplyResources(this.picSaveETeile, "picSaveETeile");
-            this.picSaveETeile.Name = "picSaveETeile";
-            this.helpProvider1.SetShowHelp(this.picSaveETeile, ((bool)(resources.GetObject("picSaveETeile.ShowHelp"))));
-            this.picSaveETeile.TabStop = false;
-            this.toolTip.SetToolTip(this.picSaveETeile, resources.GetString("picSaveETeile.ToolTip"));
-            this.picSaveETeile.Click += new System.EventHandler(this.pictureSaveETeile_Click);
+            resources.ApplyResources(this.label18, "label18");
+            this.label18.BackColor = System.Drawing.Color.Transparent;
+            this.label18.Name = "label18";
+            this.helpProvider1.SetShowHelp(this.label18, ((bool)(resources.GetObject("label18.ShowHelp"))));
             // 
-            // picEditEteile
+            // label19
             // 
-            this.picEditEteile.Cursor = System.Windows.Forms.Cursors.Hand;
-            resources.ApplyResources(this.picEditEteile, "picEditEteile");
-            this.picEditEteile.Name = "picEditEteile";
-            this.helpProvider1.SetShowHelp(this.picEditEteile, ((bool)(resources.GetObject("picEditEteile.ShowHelp"))));
-            this.picEditEteile.TabStop = false;
-            this.toolTip.SetToolTip(this.picEditEteile, resources.GetString("picEditEteile.ToolTip"));
-            this.picEditEteile.Click += new System.EventHandler(this.picEditEteile_Click);
+            resources.ApplyResources(this.label19, "label19");
+            this.label19.BackColor = System.Drawing.Color.Transparent;
+            this.label19.Name = "label19";
+            this.helpProvider1.SetShowHelp(this.label19, ((bool)(resources.GetObject("label19.ShowHelp"))));
             // 
-            // picResetETeil
+            // label20
             // 
-            this.picResetETeil.Cursor = System.Windows.Forms.Cursors.Hand;
-            resources.ApplyResources(this.picResetETeil, "picResetETeil");
-            this.picResetETeil.Name = "picResetETeil";
-            this.helpProvider1.SetShowHelp(this.picResetETeil, ((bool)(resources.GetObject("picResetETeil.ShowHelp"))));
-            this.picResetETeil.TabStop = false;
-            this.toolTip.SetToolTip(this.picResetETeil, resources.GetString("picResetETeil.ToolTip"));
-            this.picResetETeil.Click += new System.EventHandler(this.pictureResetETeil_Click);
+            resources.ApplyResources(this.label20, "label20");
+            this.label20.BackColor = System.Drawing.Color.Transparent;
+            this.label20.Name = "label20";
+            this.helpProvider1.SetShowHelp(this.label20, ((bool)(resources.GetObject("label20.ShowHelp"))));
             // 
-            // picReadOnlyETeile
+            // label21
             // 
-            this.picReadOnlyETeile.Cursor = System.Windows.Forms.Cursors.Hand;
-            resources.ApplyResources(this.picReadOnlyETeile, "picReadOnlyETeile");
-            this.picReadOnlyETeile.Name = "picReadOnlyETeile";
-            this.helpProvider1.SetShowHelp(this.picReadOnlyETeile, ((bool)(resources.GetObject("picReadOnlyETeile.ShowHelp"))));
-            this.picReadOnlyETeile.TabStop = false;
-            this.toolTip.SetToolTip(this.picReadOnlyETeile, resources.GetString("picReadOnlyETeile.ToolTip"));
-            this.picReadOnlyETeile.Click += new System.EventHandler(this.pictureReadOnly_Click);
+            resources.ApplyResources(this.label21, "label21");
+            this.label21.BackColor = System.Drawing.Color.Transparent;
+            this.label21.Name = "label21";
+            this.helpProvider1.SetShowHelp(this.label21, ((bool)(resources.GetObject("label21.ShowHelp"))));
             // 
-            // rbReserve
+            // label22
             // 
-            resources.ApplyResources(this.rbReserve, "rbReserve");
-            this.rbReserve.Checked = true;
-            this.rbReserve.Name = "rbReserve";
-            this.helpProvider1.SetShowHelp(this.rbReserve, ((bool)(resources.GetObject("rbReserve.ShowHelp"))));
-            this.rbReserve.TabStop = true;
-            this.rbReserve.UseVisualStyleBackColor = true;
+            resources.ApplyResources(this.label22, "label22");
+            this.label22.BackColor = System.Drawing.Color.Transparent;
+            this.label22.Name = "label22";
+            this.helpProvider1.SetShowHelp(this.label22, ((bool)(resources.GetObject("label22.ShowHelp"))));
             // 
-            // cbMitOhne
+            // label23
             // 
-            resources.ApplyResources(this.cbMitOhne, "cbMitOhne");
-            this.cbMitOhne.Checked = true;
-            this.cbMitOhne.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.helpProvider1.SetHelpKeyword(this.cbMitOhne, resources.GetString("cbMitOhne.HelpKeyword"));
-            this.helpProvider1.SetHelpNavigator(this.cbMitOhne, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("cbMitOhne.HelpNavigator"))));
-            this.helpProvider1.SetHelpString(this.cbMitOhne, resources.GetString("cbMitOhne.HelpString"));
-            this.cbMitOhne.Name = "cbMitOhne";
-            this.helpProvider1.SetShowHelp(this.cbMitOhne, ((bool)(resources.GetObject("cbMitOhne.ShowHelp"))));
-            this.cbMitOhne.UseVisualStyleBackColor = true;
-            this.cbMitOhne.CheckedChanged += new System.EventHandler(this.cbMitOhne_CheckedChanged);
+            resources.ApplyResources(this.label23, "label23");
+            this.label23.BackColor = System.Drawing.Color.Transparent;
+            this.label23.Name = "label23";
+            this.helpProvider1.SetShowHelp(this.label23, ((bool)(resources.GetObject("label23.ShowHelp"))));
             // 
-            // reserve
+            // label24
             // 
-            resources.ApplyResources(this.reserve, "reserve");
-            this.reserve.Name = "reserve";
-            this.reserve.ReadOnly = true;
+            resources.ApplyResources(this.label24, "label24");
+            this.label24.BackColor = System.Drawing.Color.Transparent;
+            this.label24.Name = "label24";
+            this.helpProvider1.SetShowHelp(this.label24, ((bool)(resources.GetObject("label24.ShowHelp"))));
             // 
-            // colPlanung
+            // label25
             // 
-            resources.ApplyResources(this.colPlanung, "colPlanung");
-            this.colPlanung.Name = "colPlanung";
-            this.colPlanung.ReadOnly = true;
+            resources.ApplyResources(this.label25, "label25");
+            this.label25.BackColor = System.Drawing.Color.Transparent;
+            this.label25.Name = "label25";
+            this.helpProvider1.SetShowHelp(this.label25, ((bool)(resources.GetObject("label25.ShowHelp"))));
             // 
-            // colBearbeitung
+            // label26
             // 
-            resources.ApplyResources(this.colBearbeitung, "colBearbeitung");
-            this.colBearbeitung.Name = "colBearbeitung";
-            this.colBearbeitung.ReadOnly = true;
+            resources.ApplyResources(this.label26, "label26");
+            this.label26.BackColor = System.Drawing.Color.Transparent;
+            this.label26.Name = "label26";
+            this.helpProvider1.SetShowHelp(this.label26, ((bool)(resources.GetObject("label26.ShowHelp"))));
             // 
-            // colWarteschlange
+            // label15
             // 
-            resources.ApplyResources(this.colWarteschlange, "colWarteschlange");
-            this.colWarteschlange.Name = "colWarteschlange";
-            this.colWarteschlange.ReadOnly = true;
+            resources.ApplyResources(this.label15, "label15");
+            this.label15.BackColor = System.Drawing.Color.Transparent;
+            this.label15.Name = "label15";
+            this.helpProvider1.SetShowHelp(this.label15, ((bool)(resources.GetObject("label15.ShowHelp"))));
             // 
-            // dataGridViewImageColumn1
+            // label27
             // 
-            resources.ApplyResources(this.dataGridViewImageColumn1, "dataGridViewImageColumn1");
-            this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
-            this.dataGridViewImageColumn1.ReadOnly = true;
-            this.dataGridViewImageColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            resources.ApplyResources(this.label27, "label27");
+            this.label27.BackColor = System.Drawing.Color.Transparent;
+            this.label27.Name = "label27";
+            this.helpProvider1.SetShowHelp(this.label27, ((bool)(resources.GetObject("label27.ShowHelp"))));
             // 
-            // dataGridViewTextBoxColumn4
+            // label28
             // 
-            resources.ApplyResources(this.dataGridViewTextBoxColumn4, "dataGridViewTextBoxColumn4");
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.ReadOnly = true;
+            resources.ApplyResources(this.label28, "label28");
+            this.label28.BackColor = System.Drawing.Color.Transparent;
+            this.label28.Name = "label28";
+            this.helpProvider1.SetShowHelp(this.label28, ((bool)(resources.GetObject("label28.ShowHelp"))));
             // 
-            // dataGridViewTextBoxColumn3
+            // label29
             // 
-            resources.ApplyResources(this.dataGridViewTextBoxColumn3, "dataGridViewTextBoxColumn3");
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            resources.ApplyResources(this.label29, "label29");
+            this.label29.BackColor = System.Drawing.Color.Transparent;
+            this.label29.Name = "label29";
+            this.helpProvider1.SetShowHelp(this.label29, ((bool)(resources.GetObject("label29.ShowHelp"))));
             // 
-            // dataGridViewTextBoxColumn2
+            // label30
             // 
-            resources.ApplyResources(this.dataGridViewTextBoxColumn2, "dataGridViewTextBoxColumn2");
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            resources.ApplyResources(this.label30, "label30");
+            this.label30.BackColor = System.Drawing.Color.Transparent;
+            this.label30.Name = "label30";
+            this.helpProvider1.SetShowHelp(this.label30, ((bool)(resources.GetObject("label30.ShowHelp"))));
             // 
-            // dataGridViewTextBoxColumn1
+            // label31
             // 
-            resources.ApplyResources(this.dataGridViewTextBoxColumn1, "dataGridViewTextBoxColumn1");
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            this.dataGridViewTextBoxColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            resources.ApplyResources(this.label31, "label31");
+            this.label31.BackColor = System.Drawing.Color.Transparent;
+            this.label31.Name = "label31";
+            this.helpProvider1.SetShowHelp(this.label31, ((bool)(resources.GetObject("label31.ShowHelp"))));
             // 
-            // dataGridViewETeil
+            // label32
             // 
-            this.dataGridViewETeil.AllowUserToAddRows = false;
-            this.dataGridViewETeil.AllowUserToDeleteRows = false;
-            this.dataGridViewETeil.BackgroundColor = System.Drawing.SystemColors.Control;
-            this.dataGridViewETeil.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridViewETeil.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewETeil.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2,
-            this.dataGridViewTextBoxColumn3,
-            this.dataGridViewTextBoxColumn4,
-            this.dataGridViewImageColumn1,
-            this.colWarteschlange,
-            this.colBearbeitung,
-            this.colPlanung,
-            this.reserve});
-            resources.ApplyResources(this.dataGridViewETeil, "dataGridViewETeil");
-            this.dataGridViewETeil.Name = "dataGridViewETeil";
-            this.helpProvider1.SetShowHelp(this.dataGridViewETeil, ((bool)(resources.GetObject("dataGridViewETeil.ShowHelp"))));
+            resources.ApplyResources(this.label32, "label32");
+            this.label32.BackColor = System.Drawing.Color.Transparent;
+            this.label32.Name = "label32";
+            this.helpProvider1.SetShowHelp(this.label32, ((bool)(resources.GetObject("label32.ShowHelp"))));
             // 
-            // lableDazu
+            // label33
             // 
-            resources.ApplyResources(this.lableDazu, "lableDazu");
-            this.lableDazu.Name = "lableDazu";
-            this.helpProvider1.SetShowHelp(this.lableDazu, ((bool)(resources.GetObject("lableDazu.ShowHelp"))));
+            resources.ApplyResources(this.label33, "label33");
+            this.label33.BackColor = System.Drawing.Color.Transparent;
+            this.label33.Name = "label33";
+            this.helpProvider1.SetShowHelp(this.label33, ((bool)(resources.GetObject("label33.ShowHelp"))));
+            // 
+            // label34
+            // 
+            resources.ApplyResources(this.label34, "label34");
+            this.label34.BackColor = System.Drawing.Color.Transparent;
+            this.label34.Name = "label34";
+            this.helpProvider1.SetShowHelp(this.label34, ((bool)(resources.GetObject("label34.ShowHelp"))));
+            // 
+            // label35
+            // 
+            resources.ApplyResources(this.label35, "label35");
+            this.label35.BackColor = System.Drawing.Color.Transparent;
+            this.label35.Name = "label35";
+            this.helpProvider1.SetShowHelp(this.label35, ((bool)(resources.GetObject("label35.ShowHelp"))));
+            // 
+            // label36
+            // 
+            resources.ApplyResources(this.label36, "label36");
+            this.label36.BackColor = System.Drawing.Color.Transparent;
+            this.label36.Name = "label36";
+            this.helpProvider1.SetShowHelp(this.label36, ((bool)(resources.GetObject("label36.ShowHelp"))));
+            // 
+            // label37
+            // 
+            resources.ApplyResources(this.label37, "label37");
+            this.label37.BackColor = System.Drawing.Color.Transparent;
+            this.label37.Name = "label37";
+            this.helpProvider1.SetShowHelp(this.label37, ((bool)(resources.GetObject("label37.ShowHelp"))));
+            // 
+            // label38
+            // 
+            resources.ApplyResources(this.label38, "label38");
+            this.label38.BackColor = System.Drawing.Color.Transparent;
+            this.label38.Name = "label38";
+            this.helpProvider1.SetShowHelp(this.label38, ((bool)(resources.GetObject("label38.ShowHelp"))));
+            // 
+            // label39
+            // 
+            resources.ApplyResources(this.label39, "label39");
+            this.label39.BackColor = System.Drawing.Color.Transparent;
+            this.label39.Name = "label39";
+            this.helpProvider1.SetShowHelp(this.label39, ((bool)(resources.GetObject("label39.ShowHelp"))));
+            // 
+            // label40
+            // 
+            resources.ApplyResources(this.label40, "label40");
+            this.label40.BackColor = System.Drawing.Color.Transparent;
+            this.label40.Name = "label40";
+            this.helpProvider1.SetShowHelp(this.label40, ((bool)(resources.GetObject("label40.ShowHelp"))));
+            // 
+            // label41
+            // 
+            resources.ApplyResources(this.label41, "label41");
+            this.label41.BackColor = System.Drawing.Color.Transparent;
+            this.label41.Name = "label41";
+            this.helpProvider1.SetShowHelp(this.label41, ((bool)(resources.GetObject("label41.ShowHelp"))));
+            // 
+            // label42
+            // 
+            resources.ApplyResources(this.label42, "label42");
+            this.label42.BackColor = System.Drawing.Color.Transparent;
+            this.label42.Name = "label42";
+            this.helpProvider1.SetShowHelp(this.label42, ((bool)(resources.GetObject("label42.ShowHelp"))));
+            // 
+            // label43
+            // 
+            resources.ApplyResources(this.label43, "label43");
+            this.label43.BackColor = System.Drawing.Color.Transparent;
+            this.label43.Name = "label43";
+            this.helpProvider1.SetShowHelp(this.label43, ((bool)(resources.GetObject("label43.ShowHelp"))));
+            // 
+            // label44
+            // 
+            resources.ApplyResources(this.label44, "label44");
+            this.label44.BackColor = System.Drawing.Color.Transparent;
+            this.label44.Name = "label44";
+            this.helpProvider1.SetShowHelp(this.label44, ((bool)(resources.GetObject("label44.ShowHelp"))));
+            // 
+            // label45
+            // 
+            resources.ApplyResources(this.label45, "label45");
+            this.label45.BackColor = System.Drawing.Color.Transparent;
+            this.label45.Name = "label45";
+            this.helpProvider1.SetShowHelp(this.label45, ((bool)(resources.GetObject("label45.ShowHelp"))));
+            // 
+            // label46
+            // 
+            resources.ApplyResources(this.label46, "label46");
+            this.label46.BackColor = System.Drawing.Color.Transparent;
+            this.label46.Name = "label46";
+            this.helpProvider1.SetShowHelp(this.label46, ((bool)(resources.GetObject("label46.ShowHelp"))));
+            // 
+            // label47
+            // 
+            resources.ApplyResources(this.label47, "label47");
+            this.label47.BackColor = System.Drawing.Color.Transparent;
+            this.label47.Name = "label47";
+            this.helpProvider1.SetShowHelp(this.label47, ((bool)(resources.GetObject("label47.ShowHelp"))));
+            // 
+            // label48
+            // 
+            resources.ApplyResources(this.label48, "label48");
+            this.label48.BackColor = System.Drawing.Color.Transparent;
+            this.label48.Name = "label48";
+            this.helpProvider1.SetShowHelp(this.label48, ((bool)(resources.GetObject("label48.ShowHelp"))));
+            // 
+            // label49
+            // 
+            resources.ApplyResources(this.label49, "label49");
+            this.label49.BackColor = System.Drawing.Color.Transparent;
+            this.label49.Name = "label49";
+            this.helpProvider1.SetShowHelp(this.label49, ((bool)(resources.GetObject("label49.ShowHelp"))));
+            // 
+            // label50
+            // 
+            resources.ApplyResources(this.label50, "label50");
+            this.label50.BackColor = System.Drawing.Color.Transparent;
+            this.label50.Name = "label50";
+            this.helpProvider1.SetShowHelp(this.label50, ((bool)(resources.GetObject("label50.ShowHelp"))));
+            // 
+            // label51
+            // 
+            resources.ApplyResources(this.label51, "label51");
+            this.label51.BackColor = System.Drawing.Color.Transparent;
+            this.label51.Name = "label51";
+            this.helpProvider1.SetShowHelp(this.label51, ((bool)(resources.GetObject("label51.ShowHelp"))));
+            // 
+            // label52
+            // 
+            resources.ApplyResources(this.label52, "label52");
+            this.label52.BackColor = System.Drawing.Color.Transparent;
+            this.label52.Name = "label52";
+            this.helpProvider1.SetShowHelp(this.label52, ((bool)(resources.GetObject("label52.ShowHelp"))));
+            // 
+            // label53
+            // 
+            resources.ApplyResources(this.label53, "label53");
+            this.label53.BackColor = System.Drawing.Color.Transparent;
+            this.label53.Name = "label53";
+            this.helpProvider1.SetShowHelp(this.label53, ((bool)(resources.GetObject("label53.ShowHelp"))));
+            // 
+            // label54
+            // 
+            resources.ApplyResources(this.label54, "label54");
+            this.label54.BackColor = System.Drawing.Color.Transparent;
+            this.label54.Name = "label54";
+            this.helpProvider1.SetShowHelp(this.label54, ((bool)(resources.GetObject("label54.ShowHelp"))));
+            // 
+            // label55
+            // 
+            resources.ApplyResources(this.label55, "label55");
+            this.label55.BackColor = System.Drawing.Color.Transparent;
+            this.label55.Name = "label55";
+            this.helpProvider1.SetShowHelp(this.label55, ((bool)(resources.GetObject("label55.ShowHelp"))));
+            // 
+            // label56
+            // 
+            resources.ApplyResources(this.label56, "label56");
+            this.label56.BackColor = System.Drawing.Color.Transparent;
+            this.label56.Name = "label56";
+            this.helpProvider1.SetShowHelp(this.label56, ((bool)(resources.GetObject("label56.ShowHelp"))));
+            // 
+            // label57
+            // 
+            resources.ApplyResources(this.label57, "label57");
+            this.label57.BackColor = System.Drawing.Color.Transparent;
+            this.label57.Name = "label57";
+            this.helpProvider1.SetShowHelp(this.label57, ((bool)(resources.GetObject("label57.ShowHelp"))));
+            // 
+            // label58
+            // 
+            resources.ApplyResources(this.label58, "label58");
+            this.label58.BackColor = System.Drawing.Color.Transparent;
+            this.label58.Name = "label58";
+            this.helpProvider1.SetShowHelp(this.label58, ((bool)(resources.GetObject("label58.ShowHelp"))));
+            // 
+            // label59
+            // 
+            resources.ApplyResources(this.label59, "label59");
+            this.label59.BackColor = System.Drawing.Color.Transparent;
+            this.label59.Name = "label59";
+            this.helpProvider1.SetShowHelp(this.label59, ((bool)(resources.GetObject("label59.ShowHelp"))));
+            // 
+            // label60
+            // 
+            resources.ApplyResources(this.label60, "label60");
+            this.label60.BackColor = System.Drawing.Color.Transparent;
+            this.label60.Name = "label60";
+            this.helpProvider1.SetShowHelp(this.label60, ((bool)(resources.GetObject("label60.ShowHelp"))));
+            // 
+            // label61
+            // 
+            resources.ApplyResources(this.label61, "label61");
+            this.label61.BackColor = System.Drawing.Color.Transparent;
+            this.label61.Name = "label61";
+            this.helpProvider1.SetShowHelp(this.label61, ((bool)(resources.GetObject("label61.ShowHelp"))));
+            // 
+            // label62
+            // 
+            resources.ApplyResources(this.label62, "label62");
+            this.label62.BackColor = System.Drawing.Color.Transparent;
+            this.label62.Name = "label62";
+            this.helpProvider1.SetShowHelp(this.label62, ((bool)(resources.GetObject("label62.ShowHelp"))));
+            // 
+            // label63
+            // 
+            resources.ApplyResources(this.label63, "label63");
+            this.label63.BackColor = System.Drawing.Color.Transparent;
+            this.label63.Name = "label63";
+            this.helpProvider1.SetShowHelp(this.label63, ((bool)(resources.GetObject("label63.ShowHelp"))));
+            // 
+            // label64
+            // 
+            resources.ApplyResources(this.label64, "label64");
+            this.label64.BackColor = System.Drawing.Color.Transparent;
+            this.label64.Name = "label64";
+            this.helpProvider1.SetShowHelp(this.label64, ((bool)(resources.GetObject("label64.ShowHelp"))));
+            // 
+            // label65
+            // 
+            resources.ApplyResources(this.label65, "label65");
+            this.label65.BackColor = System.Drawing.Color.Transparent;
+            this.label65.Name = "label65";
+            this.helpProvider1.SetShowHelp(this.label65, ((bool)(resources.GetObject("label65.ShowHelp"))));
+            // 
+            // label66
+            // 
+            resources.ApplyResources(this.label66, "label66");
+            this.label66.BackColor = System.Drawing.Color.Transparent;
+            this.label66.Name = "label66";
+            this.helpProvider1.SetShowHelp(this.label66, ((bool)(resources.GetObject("label66.ShowHelp"))));
+            // 
+            // label67
+            // 
+            resources.ApplyResources(this.label67, "label67");
+            this.label67.BackColor = System.Drawing.Color.Transparent;
+            this.label67.Name = "label67";
+            this.helpProvider1.SetShowHelp(this.label67, ((bool)(resources.GetObject("label67.ShowHelp"))));
+            // 
+            // label68
+            // 
+            resources.ApplyResources(this.label68, "label68");
+            this.label68.BackColor = System.Drawing.Color.Transparent;
+            this.label68.Name = "label68";
+            this.helpProvider1.SetShowHelp(this.label68, ((bool)(resources.GetObject("label68.ShowHelp"))));
+            // 
+            // label69
+            // 
+            resources.ApplyResources(this.label69, "label69");
+            this.label69.BackColor = System.Drawing.Color.Transparent;
+            this.label69.Name = "label69";
+            this.helpProvider1.SetShowHelp(this.label69, ((bool)(resources.GetObject("label69.ShowHelp"))));
+            // 
+            // label70
+            // 
+            resources.ApplyResources(this.label70, "label70");
+            this.label70.BackColor = System.Drawing.Color.Transparent;
+            this.label70.Name = "label70";
+            this.helpProvider1.SetShowHelp(this.label70, ((bool)(resources.GetObject("label70.ShowHelp"))));
+            // 
+            // label71
+            // 
+            resources.ApplyResources(this.label71, "label71");
+            this.label71.BackColor = System.Drawing.Color.Transparent;
+            this.label71.Name = "label71";
+            this.helpProvider1.SetShowHelp(this.label71, ((bool)(resources.GetObject("label71.ShowHelp"))));
+            // 
+            // label72
+            // 
+            resources.ApplyResources(this.label72, "label72");
+            this.label72.BackColor = System.Drawing.Color.Transparent;
+            this.label72.Name = "label72";
+            this.helpProvider1.SetShowHelp(this.label72, ((bool)(resources.GetObject("label72.ShowHelp"))));
+            // 
+            // label73
+            // 
+            resources.ApplyResources(this.label73, "label73");
+            this.label73.BackColor = System.Drawing.Color.Transparent;
+            this.label73.Name = "label73";
+            this.helpProvider1.SetShowHelp(this.label73, ((bool)(resources.GetObject("label73.ShowHelp"))));
+            // 
+            // label74
+            // 
+            resources.ApplyResources(this.label74, "label74");
+            this.label74.BackColor = System.Drawing.Color.Transparent;
+            this.label74.Name = "label74";
+            this.helpProvider1.SetShowHelp(this.label74, ((bool)(resources.GetObject("label74.ShowHelp"))));
+            // 
+            // label75
+            // 
+            resources.ApplyResources(this.label75, "label75");
+            this.label75.BackColor = System.Drawing.Color.Transparent;
+            this.label75.Name = "label75";
+            this.helpProvider1.SetShowHelp(this.label75, ((bool)(resources.GetObject("label75.ShowHelp"))));
+            // 
+            // label76
+            // 
+            resources.ApplyResources(this.label76, "label76");
+            this.label76.BackColor = System.Drawing.Color.Transparent;
+            this.label76.Name = "label76";
+            this.helpProvider1.SetShowHelp(this.label76, ((bool)(resources.GetObject("label76.ShowHelp"))));
+            // 
+            // label77
+            // 
+            resources.ApplyResources(this.label77, "label77");
+            this.label77.BackColor = System.Drawing.Color.Transparent;
+            this.label77.Name = "label77";
+            this.helpProvider1.SetShowHelp(this.label77, ((bool)(resources.GetObject("label77.ShowHelp"))));
+            // 
+            // label78
+            // 
+            resources.ApplyResources(this.label78, "label78");
+            this.label78.BackColor = System.Drawing.Color.Transparent;
+            this.label78.Name = "label78";
+            this.helpProvider1.SetShowHelp(this.label78, ((bool)(resources.GetObject("label78.ShowHelp"))));
+            // 
+            // label79
+            // 
+            resources.ApplyResources(this.label79, "label79");
+            this.label79.BackColor = System.Drawing.Color.Transparent;
+            this.label79.Name = "label79";
+            this.helpProvider1.SetShowHelp(this.label79, ((bool)(resources.GetObject("label79.ShowHelp"))));
+            // 
+            // label80
+            // 
+            resources.ApplyResources(this.label80, "label80");
+            this.label80.BackColor = System.Drawing.Color.Transparent;
+            this.label80.Name = "label80";
+            this.helpProvider1.SetShowHelp(this.label80, ((bool)(resources.GetObject("label80.ShowHelp"))));
+            // 
+            // label81
+            // 
+            resources.ApplyResources(this.label81, "label81");
+            this.label81.BackColor = System.Drawing.Color.Transparent;
+            this.label81.Name = "label81";
+            this.helpProvider1.SetShowHelp(this.label81, ((bool)(resources.GetObject("label81.ShowHelp"))));
+            // 
+            // label82
+            // 
+            resources.ApplyResources(this.label82, "label82");
+            this.label82.BackColor = System.Drawing.Color.Transparent;
+            this.label82.Name = "label82";
+            this.helpProvider1.SetShowHelp(this.label82, ((bool)(resources.GetObject("label82.ShowHelp"))));
+            // 
+            // label83
+            // 
+            resources.ApplyResources(this.label83, "label83");
+            this.label83.BackColor = System.Drawing.Color.Transparent;
+            this.label83.Name = "label83";
+            this.helpProvider1.SetShowHelp(this.label83, ((bool)(resources.GetObject("label83.ShowHelp"))));
+            // 
+            // label84
+            // 
+            resources.ApplyResources(this.label84, "label84");
+            this.label84.BackColor = System.Drawing.Color.Transparent;
+            this.label84.Name = "label84";
+            this.helpProvider1.SetShowHelp(this.label84, ((bool)(resources.GetObject("label84.ShowHelp"))));
+            // 
+            // label85
+            // 
+            resources.ApplyResources(this.label85, "label85");
+            this.label85.BackColor = System.Drawing.Color.Transparent;
+            this.label85.Name = "label85";
+            this.helpProvider1.SetShowHelp(this.label85, ((bool)(resources.GetObject("label85.ShowHelp"))));
+            // 
+            // label86
+            // 
+            resources.ApplyResources(this.label86, "label86");
+            this.label86.Name = "label86";
+            this.helpProvider1.SetShowHelp(this.label86, ((bool)(resources.GetObject("label86.ShowHelp"))));
+            // 
+            // label87
+            // 
+            resources.ApplyResources(this.label87, "label87");
+            this.label87.Name = "label87";
+            this.helpProvider1.SetShowHelp(this.label87, ((bool)(resources.GetObject("label87.ShowHelp"))));
+            // 
+            // label88
+            // 
+            resources.ApplyResources(this.label88, "label88");
+            this.label88.Name = "label88";
+            this.helpProvider1.SetShowHelp(this.label88, ((bool)(resources.GetObject("label88.ShowHelp"))));
+            // 
+            // label89
+            // 
+            resources.ApplyResources(this.label89, "label89");
+            this.label89.Name = "label89";
+            this.helpProvider1.SetShowHelp(this.label89, ((bool)(resources.GetObject("label89.ShowHelp"))));
+            // 
+            // label90
+            // 
+            resources.ApplyResources(this.label90, "label90");
+            this.label90.Name = "label90";
+            this.helpProvider1.SetShowHelp(this.label90, ((bool)(resources.GetObject("label90.ShowHelp"))));
+            // 
+            // label91
+            // 
+            resources.ApplyResources(this.label91, "label91");
+            this.label91.Name = "label91";
+            this.helpProvider1.SetShowHelp(this.label91, ((bool)(resources.GetObject("label91.ShowHelp"))));
+            // 
+            // tab_P2
+            // 
+            this.tab_P2.BackColor = System.Drawing.Color.Transparent;
+            this.tab_P2.Controls.Add(this.panel2);
+            resources.ApplyResources(this.tab_P2, "tab_P2");
+            this.tab_P2.Name = "tab_P2";
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.label92);
+            this.panel2.Controls.Add(this.label93);
+            this.panel2.Controls.Add(this.label94);
+            this.panel2.Controls.Add(this.label95);
+            this.panel2.Controls.Add(this.label96);
+            this.panel2.Controls.Add(this.label97);
+            this.panel2.Controls.Add(this.label98);
+            this.panel2.Controls.Add(this.label99);
+            this.panel2.Controls.Add(this.label100);
+            this.panel2.Controls.Add(this.label101);
+            this.panel2.Controls.Add(this.label102);
+            this.panel2.Controls.Add(this.label103);
+            this.panel2.Controls.Add(this.label104);
+            this.panel2.Controls.Add(this.label105);
+            this.panel2.Controls.Add(this.label106);
+            this.panel2.Controls.Add(this.label107);
+            this.panel2.Controls.Add(this.label108);
+            this.panel2.Controls.Add(this.label109);
+            this.panel2.Controls.Add(this.label110);
+            this.panel2.Controls.Add(this.label111);
+            this.panel2.Controls.Add(this.label112);
+            this.panel2.Controls.Add(this.label113);
+            this.panel2.Controls.Add(this.label114);
+            this.panel2.Controls.Add(this.label115);
+            this.panel2.Controls.Add(this.label116);
+            this.panel2.Controls.Add(this.label117);
+            this.panel2.Controls.Add(this.label118);
+            this.panel2.Controls.Add(this.label119);
+            this.panel2.Controls.Add(this.label120);
+            this.panel2.Controls.Add(this.label121);
+            this.panel2.Controls.Add(this.label122);
+            this.panel2.Controls.Add(this.label123);
+            this.panel2.Controls.Add(this.label124);
+            this.panel2.Controls.Add(this.label125);
+            this.panel2.Controls.Add(this.label126);
+            this.panel2.Controls.Add(this.label127);
+            this.panel2.Controls.Add(this.label128);
+            this.panel2.Controls.Add(this.label129);
+            this.panel2.Controls.Add(this.label130);
+            this.panel2.Controls.Add(this.label131);
+            this.panel2.Controls.Add(this.label132);
+            this.panel2.Controls.Add(this.label133);
+            this.panel2.Controls.Add(this.label134);
+            this.panel2.Controls.Add(this.label135);
+            this.panel2.Controls.Add(this.label136);
+            this.panel2.Controls.Add(this.label137);
+            this.panel2.Controls.Add(this.label138);
+            this.panel2.Controls.Add(this.label139);
+            this.panel2.Controls.Add(this.label140);
+            this.panel2.Controls.Add(this.label141);
+            this.panel2.Controls.Add(this.label142);
+            this.panel2.Controls.Add(this.label143);
+            this.panel2.Controls.Add(this.label144);
+            this.panel2.Controls.Add(this.label145);
+            this.panel2.Controls.Add(this.label146);
+            this.panel2.Controls.Add(this.label147);
+            this.panel2.Controls.Add(this.label148);
+            this.panel2.Controls.Add(this.label149);
+            this.panel2.Controls.Add(this.label150);
+            this.panel2.Controls.Add(this.label151);
+            this.panel2.Controls.Add(this.label152);
+            this.panel2.Controls.Add(this.label153);
+            this.panel2.Controls.Add(this.label154);
+            this.panel2.Controls.Add(this.label155);
+            this.panel2.Controls.Add(this.label156);
+            this.panel2.Controls.Add(this.label157);
+            this.panel2.Controls.Add(this.label158);
+            this.panel2.Controls.Add(this.label159);
+            this.panel2.Controls.Add(this.label160);
+            this.panel2.Controls.Add(this.label161);
+            this.panel2.Controls.Add(this.label162);
+            this.panel2.Controls.Add(this.label163);
+            this.panel2.Controls.Add(this.label164);
+            this.panel2.Controls.Add(this.label165);
+            this.panel2.Controls.Add(this.label166);
+            this.panel2.Controls.Add(this.label167);
+            this.panel2.Controls.Add(this.label168);
+            this.panel2.Controls.Add(this.label169);
+            this.panel2.Controls.Add(this.label170);
+            this.panel2.Controls.Add(this.label171);
+            this.panel2.Controls.Add(this.label172);
+            this.panel2.Controls.Add(this.label173);
+            this.panel2.Controls.Add(this.label174);
+            this.panel2.Controls.Add(this.label175);
+            this.panel2.Controls.Add(this.label176);
+            this.panel2.Controls.Add(this.label177);
+            this.panel2.Controls.Add(this.label178);
+            this.panel2.Controls.Add(this.label179);
+            this.panel2.Controls.Add(this.label180);
+            this.panel2.Controls.Add(this.p2plus_19);
+            this.panel2.Controls.Add(this.p2r_19);
+            this.panel2.Controls.Add(this.p2ls_19);
+            this.panel2.Controls.Add(this.p2iws_19);
+            this.panel2.Controls.Add(this.p2ib_19);
+            this.panel2.Controls.Add(this.p2pm_19);
+            this.panel2.Controls.Add(this.p2vw_19);
+            this.panel2.Controls.Add(this.p2plus_8);
+            this.panel2.Controls.Add(this.p2r_8);
+            this.panel2.Controls.Add(this.p2ls_8);
+            this.panel2.Controls.Add(this.p2iws_8);
+            this.panel2.Controls.Add(this.p2ib_8);
+            this.panel2.Controls.Add(this.p2pm_8);
+            this.panel2.Controls.Add(this.p2vw_8);
+            this.panel2.Controls.Add(this.p2plus_14);
+            this.panel2.Controls.Add(this.p2r_14);
+            this.panel2.Controls.Add(this.p2ls_14);
+            this.panel2.Controls.Add(this.p2iws_14);
+            this.panel2.Controls.Add(this.p2ib_14);
+            this.panel2.Controls.Add(this.p2pm_14);
+            this.panel2.Controls.Add(this.p2vw_14);
+            this.panel2.Controls.Add(this.p2plus_54);
+            this.panel2.Controls.Add(this.p2r_54);
+            this.panel2.Controls.Add(this.p2ls_54);
+            this.panel2.Controls.Add(this.p2iws_54);
+            this.panel2.Controls.Add(this.p2ib_54);
+            this.panel2.Controls.Add(this.p2pm_54);
+            this.panel2.Controls.Add(this.p2vw_54);
+            this.panel2.Controls.Add(this.p2plus_5);
+            this.panel2.Controls.Add(this.p2r_5);
+            this.panel2.Controls.Add(this.p2ls_5);
+            this.panel2.Controls.Add(this.p2iws_5);
+            this.panel2.Controls.Add(this.p2ib_5);
+            this.panel2.Controls.Add(this.p2pm_5);
+            this.panel2.Controls.Add(this.p2vw_5);
+            this.panel2.Controls.Add(this.p2plus_11);
+            this.panel2.Controls.Add(this.p2r_11);
+            this.panel2.Controls.Add(this.p2ls_11);
+            this.panel2.Controls.Add(this.p2iws_11);
+            this.panel2.Controls.Add(this.p2ib_11);
+            this.panel2.Controls.Add(this.p2pm_11);
+            this.panel2.Controls.Add(this.p2vw_11);
+            this.panel2.Controls.Add(this.p2plus_55);
+            this.panel2.Controls.Add(this.p2r_55);
+            this.panel2.Controls.Add(this.p2ls_55);
+            this.panel2.Controls.Add(this.p2iws_55);
+            this.panel2.Controls.Add(this.p2ib_55);
+            this.panel2.Controls.Add(this.p2pm_55);
+            this.panel2.Controls.Add(this.p2vw_55);
+            this.panel2.Controls.Add(this.p2plus_16);
+            this.panel2.Controls.Add(this.p2r_16);
+            this.panel2.Controls.Add(this.p2ls_16);
+            this.panel2.Controls.Add(this.p2iws_16);
+            this.panel2.Controls.Add(this.p2ib_16);
+            this.panel2.Controls.Add(this.p2pm_16);
+            this.panel2.Controls.Add(this.p2vw_16);
+            this.panel2.Controls.Add(this.p2plus_17);
+            this.panel2.Controls.Add(this.p2r_17);
+            this.panel2.Controls.Add(this.p2ls_17);
+            this.panel2.Controls.Add(this.p2iws_17);
+            this.panel2.Controls.Add(this.p2ib_17);
+            this.panel2.Controls.Add(this.p2pm_17);
+            this.panel2.Controls.Add(this.p2vw_17);
+            this.panel2.Controls.Add(this.p2plus_26);
+            this.panel2.Controls.Add(this.p2r_26);
+            this.panel2.Controls.Add(this.p2ls_26);
+            this.panel2.Controls.Add(this.p2iws_26);
+            this.panel2.Controls.Add(this.p2ib_26);
+            this.panel2.Controls.Add(this.p2pm_26);
+            this.panel2.Controls.Add(this.p2vw_26);
+            this.panel2.Controls.Add(this.p2plus_56);
+            this.panel2.Controls.Add(this.p2r_56);
+            this.panel2.Controls.Add(this.p2ls_56);
+            this.panel2.Controls.Add(this.p2iws_56);
+            this.panel2.Controls.Add(this.p2ib_56);
+            this.panel2.Controls.Add(this.p2pm_56);
+            this.panel2.Controls.Add(this.p2vw_56);
+            this.panel2.Controls.Add(this.p2r_0);
+            this.panel2.Controls.Add(this.p2ls_0);
+            this.panel2.Controls.Add(this.p2iws_0);
+            this.panel2.Controls.Add(this.p2ib_0);
+            this.panel2.Controls.Add(this.p2pm_0);
+            this.panel2.Controls.Add(this.p2vw_0);
+            resources.ApplyResources(this.panel2, "panel2");
+            this.panel2.Name = "panel2";
+            this.helpProvider1.SetShowHelp(this.panel2, ((bool)(resources.GetObject("panel2.ShowHelp"))));
+            // 
+            // label92
+            // 
+            resources.ApplyResources(this.label92, "label92");
+            this.label92.Name = "label92";
+            this.helpProvider1.SetShowHelp(this.label92, ((bool)(resources.GetObject("label92.ShowHelp"))));
+            // 
+            // label93
+            // 
+            resources.ApplyResources(this.label93, "label93");
+            this.label93.Name = "label93";
+            this.helpProvider1.SetShowHelp(this.label93, ((bool)(resources.GetObject("label93.ShowHelp"))));
+            // 
+            // label94
+            // 
+            resources.ApplyResources(this.label94, "label94");
+            this.label94.Name = "label94";
+            this.helpProvider1.SetShowHelp(this.label94, ((bool)(resources.GetObject("label94.ShowHelp"))));
+            // 
+            // label95
+            // 
+            resources.ApplyResources(this.label95, "label95");
+            this.label95.Name = "label95";
+            this.helpProvider1.SetShowHelp(this.label95, ((bool)(resources.GetObject("label95.ShowHelp"))));
+            // 
+            // label96
+            // 
+            resources.ApplyResources(this.label96, "label96");
+            this.label96.Name = "label96";
+            this.helpProvider1.SetShowHelp(this.label96, ((bool)(resources.GetObject("label96.ShowHelp"))));
+            // 
+            // label97
+            // 
+            resources.ApplyResources(this.label97, "label97");
+            this.label97.Name = "label97";
+            this.helpProvider1.SetShowHelp(this.label97, ((bool)(resources.GetObject("label97.ShowHelp"))));
+            // 
+            // label98
+            // 
+            resources.ApplyResources(this.label98, "label98");
+            this.label98.BackColor = System.Drawing.Color.Transparent;
+            this.label98.Name = "label98";
+            this.helpProvider1.SetShowHelp(this.label98, ((bool)(resources.GetObject("label98.ShowHelp"))));
+            // 
+            // label99
+            // 
+            resources.ApplyResources(this.label99, "label99");
+            this.label99.BackColor = System.Drawing.Color.Transparent;
+            this.label99.Name = "label99";
+            this.helpProvider1.SetShowHelp(this.label99, ((bool)(resources.GetObject("label99.ShowHelp"))));
+            // 
+            // label100
+            // 
+            resources.ApplyResources(this.label100, "label100");
+            this.label100.BackColor = System.Drawing.Color.Transparent;
+            this.label100.Name = "label100";
+            this.helpProvider1.SetShowHelp(this.label100, ((bool)(resources.GetObject("label100.ShowHelp"))));
+            // 
+            // label101
+            // 
+            resources.ApplyResources(this.label101, "label101");
+            this.label101.BackColor = System.Drawing.Color.Transparent;
+            this.label101.Name = "label101";
+            this.helpProvider1.SetShowHelp(this.label101, ((bool)(resources.GetObject("label101.ShowHelp"))));
+            // 
+            // label102
+            // 
+            resources.ApplyResources(this.label102, "label102");
+            this.label102.BackColor = System.Drawing.Color.Transparent;
+            this.label102.Name = "label102";
+            this.helpProvider1.SetShowHelp(this.label102, ((bool)(resources.GetObject("label102.ShowHelp"))));
+            // 
+            // label103
+            // 
+            resources.ApplyResources(this.label103, "label103");
+            this.label103.BackColor = System.Drawing.Color.Transparent;
+            this.label103.Name = "label103";
+            this.helpProvider1.SetShowHelp(this.label103, ((bool)(resources.GetObject("label103.ShowHelp"))));
+            // 
+            // label104
+            // 
+            resources.ApplyResources(this.label104, "label104");
+            this.label104.BackColor = System.Drawing.Color.Transparent;
+            this.label104.Name = "label104";
+            this.helpProvider1.SetShowHelp(this.label104, ((bool)(resources.GetObject("label104.ShowHelp"))));
+            // 
+            // label105
+            // 
+            resources.ApplyResources(this.label105, "label105");
+            this.label105.BackColor = System.Drawing.Color.Transparent;
+            this.label105.Name = "label105";
+            this.helpProvider1.SetShowHelp(this.label105, ((bool)(resources.GetObject("label105.ShowHelp"))));
+            // 
+            // label106
+            // 
+            resources.ApplyResources(this.label106, "label106");
+            this.label106.BackColor = System.Drawing.Color.Transparent;
+            this.label106.Name = "label106";
+            this.helpProvider1.SetShowHelp(this.label106, ((bool)(resources.GetObject("label106.ShowHelp"))));
+            // 
+            // label107
+            // 
+            resources.ApplyResources(this.label107, "label107");
+            this.label107.BackColor = System.Drawing.Color.Transparent;
+            this.label107.Name = "label107";
+            this.helpProvider1.SetShowHelp(this.label107, ((bool)(resources.GetObject("label107.ShowHelp"))));
+            // 
+            // label108
+            // 
+            resources.ApplyResources(this.label108, "label108");
+            this.label108.BackColor = System.Drawing.Color.Transparent;
+            this.label108.Name = "label108";
+            this.helpProvider1.SetShowHelp(this.label108, ((bool)(resources.GetObject("label108.ShowHelp"))));
+            // 
+            // label109
+            // 
+            resources.ApplyResources(this.label109, "label109");
+            this.label109.BackColor = System.Drawing.Color.Transparent;
+            this.label109.Name = "label109";
+            this.helpProvider1.SetShowHelp(this.label109, ((bool)(resources.GetObject("label109.ShowHelp"))));
+            // 
+            // label110
+            // 
+            resources.ApplyResources(this.label110, "label110");
+            this.label110.BackColor = System.Drawing.Color.Transparent;
+            this.label110.Name = "label110";
+            this.helpProvider1.SetShowHelp(this.label110, ((bool)(resources.GetObject("label110.ShowHelp"))));
+            // 
+            // label111
+            // 
+            resources.ApplyResources(this.label111, "label111");
+            this.label111.BackColor = System.Drawing.Color.Transparent;
+            this.label111.Name = "label111";
+            this.helpProvider1.SetShowHelp(this.label111, ((bool)(resources.GetObject("label111.ShowHelp"))));
+            // 
+            // label112
+            // 
+            resources.ApplyResources(this.label112, "label112");
+            this.label112.BackColor = System.Drawing.Color.Transparent;
+            this.label112.Name = "label112";
+            this.helpProvider1.SetShowHelp(this.label112, ((bool)(resources.GetObject("label112.ShowHelp"))));
+            // 
+            // label113
+            // 
+            resources.ApplyResources(this.label113, "label113");
+            this.label113.BackColor = System.Drawing.Color.Transparent;
+            this.label113.Name = "label113";
+            this.helpProvider1.SetShowHelp(this.label113, ((bool)(resources.GetObject("label113.ShowHelp"))));
+            // 
+            // label114
+            // 
+            resources.ApplyResources(this.label114, "label114");
+            this.label114.BackColor = System.Drawing.Color.Transparent;
+            this.label114.Name = "label114";
+            this.helpProvider1.SetShowHelp(this.label114, ((bool)(resources.GetObject("label114.ShowHelp"))));
+            // 
+            // label115
+            // 
+            resources.ApplyResources(this.label115, "label115");
+            this.label115.BackColor = System.Drawing.Color.Transparent;
+            this.label115.Name = "label115";
+            this.helpProvider1.SetShowHelp(this.label115, ((bool)(resources.GetObject("label115.ShowHelp"))));
+            // 
+            // label116
+            // 
+            resources.ApplyResources(this.label116, "label116");
+            this.label116.BackColor = System.Drawing.Color.Transparent;
+            this.label116.Name = "label116";
+            this.helpProvider1.SetShowHelp(this.label116, ((bool)(resources.GetObject("label116.ShowHelp"))));
+            // 
+            // label117
+            // 
+            resources.ApplyResources(this.label117, "label117");
+            this.label117.BackColor = System.Drawing.Color.Transparent;
+            this.label117.Name = "label117";
+            this.helpProvider1.SetShowHelp(this.label117, ((bool)(resources.GetObject("label117.ShowHelp"))));
+            // 
+            // label118
+            // 
+            resources.ApplyResources(this.label118, "label118");
+            this.label118.BackColor = System.Drawing.Color.Transparent;
+            this.label118.Name = "label118";
+            this.helpProvider1.SetShowHelp(this.label118, ((bool)(resources.GetObject("label118.ShowHelp"))));
+            // 
+            // label119
+            // 
+            resources.ApplyResources(this.label119, "label119");
+            this.label119.BackColor = System.Drawing.Color.Transparent;
+            this.label119.Name = "label119";
+            this.helpProvider1.SetShowHelp(this.label119, ((bool)(resources.GetObject("label119.ShowHelp"))));
+            // 
+            // label120
+            // 
+            resources.ApplyResources(this.label120, "label120");
+            this.label120.BackColor = System.Drawing.Color.Transparent;
+            this.label120.Name = "label120";
+            this.helpProvider1.SetShowHelp(this.label120, ((bool)(resources.GetObject("label120.ShowHelp"))));
+            // 
+            // label121
+            // 
+            resources.ApplyResources(this.label121, "label121");
+            this.label121.BackColor = System.Drawing.Color.Transparent;
+            this.label121.Name = "label121";
+            this.helpProvider1.SetShowHelp(this.label121, ((bool)(resources.GetObject("label121.ShowHelp"))));
+            // 
+            // label122
+            // 
+            resources.ApplyResources(this.label122, "label122");
+            this.label122.BackColor = System.Drawing.Color.Transparent;
+            this.label122.Name = "label122";
+            this.helpProvider1.SetShowHelp(this.label122, ((bool)(resources.GetObject("label122.ShowHelp"))));
+            // 
+            // label123
+            // 
+            resources.ApplyResources(this.label123, "label123");
+            this.label123.BackColor = System.Drawing.Color.Transparent;
+            this.label123.Name = "label123";
+            this.helpProvider1.SetShowHelp(this.label123, ((bool)(resources.GetObject("label123.ShowHelp"))));
+            // 
+            // label124
+            // 
+            resources.ApplyResources(this.label124, "label124");
+            this.label124.BackColor = System.Drawing.Color.Transparent;
+            this.label124.Name = "label124";
+            this.helpProvider1.SetShowHelp(this.label124, ((bool)(resources.GetObject("label124.ShowHelp"))));
+            // 
+            // label125
+            // 
+            resources.ApplyResources(this.label125, "label125");
+            this.label125.BackColor = System.Drawing.Color.Transparent;
+            this.label125.Name = "label125";
+            this.helpProvider1.SetShowHelp(this.label125, ((bool)(resources.GetObject("label125.ShowHelp"))));
+            // 
+            // label126
+            // 
+            resources.ApplyResources(this.label126, "label126");
+            this.label126.BackColor = System.Drawing.Color.Transparent;
+            this.label126.Name = "label126";
+            this.helpProvider1.SetShowHelp(this.label126, ((bool)(resources.GetObject("label126.ShowHelp"))));
+            // 
+            // label127
+            // 
+            resources.ApplyResources(this.label127, "label127");
+            this.label127.BackColor = System.Drawing.Color.Transparent;
+            this.label127.Name = "label127";
+            this.helpProvider1.SetShowHelp(this.label127, ((bool)(resources.GetObject("label127.ShowHelp"))));
+            // 
+            // label128
+            // 
+            resources.ApplyResources(this.label128, "label128");
+            this.label128.BackColor = System.Drawing.Color.Transparent;
+            this.label128.Name = "label128";
+            this.helpProvider1.SetShowHelp(this.label128, ((bool)(resources.GetObject("label128.ShowHelp"))));
+            // 
+            // label129
+            // 
+            resources.ApplyResources(this.label129, "label129");
+            this.label129.BackColor = System.Drawing.Color.Transparent;
+            this.label129.Name = "label129";
+            this.helpProvider1.SetShowHelp(this.label129, ((bool)(resources.GetObject("label129.ShowHelp"))));
+            // 
+            // label130
+            // 
+            resources.ApplyResources(this.label130, "label130");
+            this.label130.BackColor = System.Drawing.Color.Transparent;
+            this.label130.Name = "label130";
+            this.helpProvider1.SetShowHelp(this.label130, ((bool)(resources.GetObject("label130.ShowHelp"))));
+            // 
+            // label131
+            // 
+            resources.ApplyResources(this.label131, "label131");
+            this.label131.BackColor = System.Drawing.Color.Transparent;
+            this.label131.Name = "label131";
+            this.helpProvider1.SetShowHelp(this.label131, ((bool)(resources.GetObject("label131.ShowHelp"))));
+            // 
+            // label132
+            // 
+            resources.ApplyResources(this.label132, "label132");
+            this.label132.BackColor = System.Drawing.Color.Transparent;
+            this.label132.Name = "label132";
+            this.helpProvider1.SetShowHelp(this.label132, ((bool)(resources.GetObject("label132.ShowHelp"))));
+            // 
+            // label133
+            // 
+            resources.ApplyResources(this.label133, "label133");
+            this.label133.BackColor = System.Drawing.Color.Transparent;
+            this.label133.Name = "label133";
+            this.helpProvider1.SetShowHelp(this.label133, ((bool)(resources.GetObject("label133.ShowHelp"))));
+            // 
+            // label134
+            // 
+            resources.ApplyResources(this.label134, "label134");
+            this.label134.BackColor = System.Drawing.Color.Transparent;
+            this.label134.Name = "label134";
+            this.helpProvider1.SetShowHelp(this.label134, ((bool)(resources.GetObject("label134.ShowHelp"))));
+            // 
+            // label135
+            // 
+            resources.ApplyResources(this.label135, "label135");
+            this.label135.BackColor = System.Drawing.Color.Transparent;
+            this.label135.Name = "label135";
+            this.helpProvider1.SetShowHelp(this.label135, ((bool)(resources.GetObject("label135.ShowHelp"))));
+            // 
+            // label136
+            // 
+            resources.ApplyResources(this.label136, "label136");
+            this.label136.BackColor = System.Drawing.Color.Transparent;
+            this.label136.Name = "label136";
+            this.helpProvider1.SetShowHelp(this.label136, ((bool)(resources.GetObject("label136.ShowHelp"))));
+            // 
+            // label137
+            // 
+            resources.ApplyResources(this.label137, "label137");
+            this.label137.BackColor = System.Drawing.Color.Transparent;
+            this.label137.Name = "label137";
+            this.helpProvider1.SetShowHelp(this.label137, ((bool)(resources.GetObject("label137.ShowHelp"))));
+            // 
+            // label138
+            // 
+            resources.ApplyResources(this.label138, "label138");
+            this.label138.BackColor = System.Drawing.Color.Transparent;
+            this.label138.Name = "label138";
+            this.helpProvider1.SetShowHelp(this.label138, ((bool)(resources.GetObject("label138.ShowHelp"))));
+            // 
+            // label139
+            // 
+            resources.ApplyResources(this.label139, "label139");
+            this.label139.BackColor = System.Drawing.Color.Transparent;
+            this.label139.Name = "label139";
+            this.helpProvider1.SetShowHelp(this.label139, ((bool)(resources.GetObject("label139.ShowHelp"))));
+            // 
+            // label140
+            // 
+            resources.ApplyResources(this.label140, "label140");
+            this.label140.BackColor = System.Drawing.Color.Transparent;
+            this.label140.Name = "label140";
+            this.helpProvider1.SetShowHelp(this.label140, ((bool)(resources.GetObject("label140.ShowHelp"))));
+            // 
+            // label141
+            // 
+            resources.ApplyResources(this.label141, "label141");
+            this.label141.BackColor = System.Drawing.Color.Transparent;
+            this.label141.Name = "label141";
+            this.helpProvider1.SetShowHelp(this.label141, ((bool)(resources.GetObject("label141.ShowHelp"))));
+            // 
+            // label142
+            // 
+            resources.ApplyResources(this.label142, "label142");
+            this.label142.BackColor = System.Drawing.Color.Transparent;
+            this.label142.Name = "label142";
+            this.helpProvider1.SetShowHelp(this.label142, ((bool)(resources.GetObject("label142.ShowHelp"))));
+            // 
+            // label143
+            // 
+            resources.ApplyResources(this.label143, "label143");
+            this.label143.BackColor = System.Drawing.Color.Transparent;
+            this.label143.Name = "label143";
+            this.helpProvider1.SetShowHelp(this.label143, ((bool)(resources.GetObject("label143.ShowHelp"))));
+            // 
+            // label144
+            // 
+            resources.ApplyResources(this.label144, "label144");
+            this.label144.BackColor = System.Drawing.Color.Transparent;
+            this.label144.Name = "label144";
+            this.helpProvider1.SetShowHelp(this.label144, ((bool)(resources.GetObject("label144.ShowHelp"))));
+            // 
+            // label145
+            // 
+            resources.ApplyResources(this.label145, "label145");
+            this.label145.BackColor = System.Drawing.Color.Transparent;
+            this.label145.Name = "label145";
+            this.helpProvider1.SetShowHelp(this.label145, ((bool)(resources.GetObject("label145.ShowHelp"))));
+            // 
+            // label146
+            // 
+            resources.ApplyResources(this.label146, "label146");
+            this.label146.BackColor = System.Drawing.Color.Transparent;
+            this.label146.Name = "label146";
+            this.helpProvider1.SetShowHelp(this.label146, ((bool)(resources.GetObject("label146.ShowHelp"))));
+            // 
+            // label147
+            // 
+            resources.ApplyResources(this.label147, "label147");
+            this.label147.BackColor = System.Drawing.Color.Transparent;
+            this.label147.Name = "label147";
+            this.helpProvider1.SetShowHelp(this.label147, ((bool)(resources.GetObject("label147.ShowHelp"))));
+            // 
+            // label148
+            // 
+            resources.ApplyResources(this.label148, "label148");
+            this.label148.BackColor = System.Drawing.Color.Transparent;
+            this.label148.Name = "label148";
+            this.helpProvider1.SetShowHelp(this.label148, ((bool)(resources.GetObject("label148.ShowHelp"))));
+            // 
+            // label149
+            // 
+            resources.ApplyResources(this.label149, "label149");
+            this.label149.BackColor = System.Drawing.Color.Transparent;
+            this.label149.Name = "label149";
+            this.helpProvider1.SetShowHelp(this.label149, ((bool)(resources.GetObject("label149.ShowHelp"))));
+            // 
+            // label150
+            // 
+            resources.ApplyResources(this.label150, "label150");
+            this.label150.BackColor = System.Drawing.Color.Transparent;
+            this.label150.Name = "label150";
+            this.helpProvider1.SetShowHelp(this.label150, ((bool)(resources.GetObject("label150.ShowHelp"))));
+            // 
+            // label151
+            // 
+            resources.ApplyResources(this.label151, "label151");
+            this.label151.BackColor = System.Drawing.Color.Transparent;
+            this.label151.Name = "label151";
+            this.helpProvider1.SetShowHelp(this.label151, ((bool)(resources.GetObject("label151.ShowHelp"))));
+            // 
+            // label152
+            // 
+            resources.ApplyResources(this.label152, "label152");
+            this.label152.BackColor = System.Drawing.Color.Transparent;
+            this.label152.Name = "label152";
+            this.helpProvider1.SetShowHelp(this.label152, ((bool)(resources.GetObject("label152.ShowHelp"))));
+            // 
+            // label153
+            // 
+            resources.ApplyResources(this.label153, "label153");
+            this.label153.BackColor = System.Drawing.Color.Transparent;
+            this.label153.Name = "label153";
+            this.helpProvider1.SetShowHelp(this.label153, ((bool)(resources.GetObject("label153.ShowHelp"))));
+            // 
+            // label154
+            // 
+            resources.ApplyResources(this.label154, "label154");
+            this.label154.BackColor = System.Drawing.Color.Transparent;
+            this.label154.Name = "label154";
+            this.helpProvider1.SetShowHelp(this.label154, ((bool)(resources.GetObject("label154.ShowHelp"))));
+            // 
+            // label155
+            // 
+            resources.ApplyResources(this.label155, "label155");
+            this.label155.BackColor = System.Drawing.Color.Transparent;
+            this.label155.Name = "label155";
+            this.helpProvider1.SetShowHelp(this.label155, ((bool)(resources.GetObject("label155.ShowHelp"))));
+            // 
+            // label156
+            // 
+            resources.ApplyResources(this.label156, "label156");
+            this.label156.BackColor = System.Drawing.Color.Transparent;
+            this.label156.Name = "label156";
+            this.helpProvider1.SetShowHelp(this.label156, ((bool)(resources.GetObject("label156.ShowHelp"))));
+            // 
+            // label157
+            // 
+            resources.ApplyResources(this.label157, "label157");
+            this.label157.BackColor = System.Drawing.Color.Transparent;
+            this.label157.Name = "label157";
+            this.helpProvider1.SetShowHelp(this.label157, ((bool)(resources.GetObject("label157.ShowHelp"))));
+            // 
+            // label158
+            // 
+            resources.ApplyResources(this.label158, "label158");
+            this.label158.BackColor = System.Drawing.Color.Transparent;
+            this.label158.Name = "label158";
+            this.helpProvider1.SetShowHelp(this.label158, ((bool)(resources.GetObject("label158.ShowHelp"))));
+            // 
+            // label159
+            // 
+            resources.ApplyResources(this.label159, "label159");
+            this.label159.BackColor = System.Drawing.Color.Transparent;
+            this.label159.Name = "label159";
+            this.helpProvider1.SetShowHelp(this.label159, ((bool)(resources.GetObject("label159.ShowHelp"))));
+            // 
+            // label160
+            // 
+            resources.ApplyResources(this.label160, "label160");
+            this.label160.BackColor = System.Drawing.Color.Transparent;
+            this.label160.Name = "label160";
+            this.helpProvider1.SetShowHelp(this.label160, ((bool)(resources.GetObject("label160.ShowHelp"))));
+            // 
+            // label161
+            // 
+            resources.ApplyResources(this.label161, "label161");
+            this.label161.BackColor = System.Drawing.Color.Transparent;
+            this.label161.Name = "label161";
+            this.helpProvider1.SetShowHelp(this.label161, ((bool)(resources.GetObject("label161.ShowHelp"))));
+            // 
+            // label162
+            // 
+            resources.ApplyResources(this.label162, "label162");
+            this.label162.BackColor = System.Drawing.Color.Transparent;
+            this.label162.Name = "label162";
+            this.helpProvider1.SetShowHelp(this.label162, ((bool)(resources.GetObject("label162.ShowHelp"))));
+            // 
+            // label163
+            // 
+            resources.ApplyResources(this.label163, "label163");
+            this.label163.BackColor = System.Drawing.Color.Transparent;
+            this.label163.Name = "label163";
+            this.helpProvider1.SetShowHelp(this.label163, ((bool)(resources.GetObject("label163.ShowHelp"))));
+            // 
+            // label164
+            // 
+            resources.ApplyResources(this.label164, "label164");
+            this.label164.BackColor = System.Drawing.Color.Transparent;
+            this.label164.Name = "label164";
+            this.helpProvider1.SetShowHelp(this.label164, ((bool)(resources.GetObject("label164.ShowHelp"))));
+            // 
+            // label165
+            // 
+            resources.ApplyResources(this.label165, "label165");
+            this.label165.BackColor = System.Drawing.Color.Transparent;
+            this.label165.Name = "label165";
+            this.helpProvider1.SetShowHelp(this.label165, ((bool)(resources.GetObject("label165.ShowHelp"))));
+            // 
+            // label166
+            // 
+            resources.ApplyResources(this.label166, "label166");
+            this.label166.BackColor = System.Drawing.Color.Transparent;
+            this.label166.Name = "label166";
+            this.helpProvider1.SetShowHelp(this.label166, ((bool)(resources.GetObject("label166.ShowHelp"))));
+            // 
+            // label167
+            // 
+            resources.ApplyResources(this.label167, "label167");
+            this.label167.BackColor = System.Drawing.Color.Transparent;
+            this.label167.Name = "label167";
+            this.helpProvider1.SetShowHelp(this.label167, ((bool)(resources.GetObject("label167.ShowHelp"))));
+            // 
+            // label168
+            // 
+            resources.ApplyResources(this.label168, "label168");
+            this.label168.BackColor = System.Drawing.Color.Transparent;
+            this.label168.Name = "label168";
+            this.helpProvider1.SetShowHelp(this.label168, ((bool)(resources.GetObject("label168.ShowHelp"))));
+            // 
+            // label169
+            // 
+            resources.ApplyResources(this.label169, "label169");
+            this.label169.Name = "label169";
+            this.helpProvider1.SetShowHelp(this.label169, ((bool)(resources.GetObject("label169.ShowHelp"))));
+            // 
+            // label170
+            // 
+            resources.ApplyResources(this.label170, "label170");
+            this.label170.Name = "label170";
+            this.helpProvider1.SetShowHelp(this.label170, ((bool)(resources.GetObject("label170.ShowHelp"))));
+            // 
+            // label171
+            // 
+            resources.ApplyResources(this.label171, "label171");
+            this.label171.Name = "label171";
+            this.helpProvider1.SetShowHelp(this.label171, ((bool)(resources.GetObject("label171.ShowHelp"))));
+            // 
+            // label172
+            // 
+            resources.ApplyResources(this.label172, "label172");
+            this.label172.Name = "label172";
+            this.helpProvider1.SetShowHelp(this.label172, ((bool)(resources.GetObject("label172.ShowHelp"))));
+            // 
+            // label173
+            // 
+            resources.ApplyResources(this.label173, "label173");
+            this.label173.Name = "label173";
+            this.helpProvider1.SetShowHelp(this.label173, ((bool)(resources.GetObject("label173.ShowHelp"))));
+            // 
+            // label174
+            // 
+            resources.ApplyResources(this.label174, "label174");
+            this.label174.Name = "label174";
+            this.helpProvider1.SetShowHelp(this.label174, ((bool)(resources.GetObject("label174.ShowHelp"))));
+            // 
+            // label175
+            // 
+            resources.ApplyResources(this.label175, "label175");
+            this.label175.Name = "label175";
+            this.helpProvider1.SetShowHelp(this.label175, ((bool)(resources.GetObject("label175.ShowHelp"))));
+            // 
+            // label176
+            // 
+            resources.ApplyResources(this.label176, "label176");
+            this.label176.Name = "label176";
+            this.helpProvider1.SetShowHelp(this.label176, ((bool)(resources.GetObject("label176.ShowHelp"))));
+            // 
+            // label177
+            // 
+            resources.ApplyResources(this.label177, "label177");
+            this.label177.Name = "label177";
+            this.helpProvider1.SetShowHelp(this.label177, ((bool)(resources.GetObject("label177.ShowHelp"))));
+            // 
+            // label178
+            // 
+            resources.ApplyResources(this.label178, "label178");
+            this.label178.Name = "label178";
+            this.helpProvider1.SetShowHelp(this.label178, ((bool)(resources.GetObject("label178.ShowHelp"))));
+            // 
+            // label179
+            // 
+            resources.ApplyResources(this.label179, "label179");
+            this.label179.Name = "label179";
+            this.helpProvider1.SetShowHelp(this.label179, ((bool)(resources.GetObject("label179.ShowHelp"))));
+            // 
+            // label180
+            // 
+            resources.ApplyResources(this.label180, "label180");
+            this.label180.Name = "label180";
+            this.helpProvider1.SetShowHelp(this.label180, ((bool)(resources.GetObject("label180.ShowHelp"))));
+            // 
+            // p2plus_19
+            // 
+            this.p2plus_19.BackColor = System.Drawing.Color.AntiqueWhite;
+            resources.ApplyResources(this.p2plus_19, "p2plus_19");
+            this.p2plus_19.Name = "p2plus_19";
+            this.helpProvider1.SetShowHelp(this.p2plus_19, ((bool)(resources.GetObject("p2plus_19.ShowHelp"))));
+            // 
+            // p2r_19
+            // 
+            resources.ApplyResources(this.p2r_19, "p2r_19");
+            this.p2r_19.Name = "p2r_19";
+            this.helpProvider1.SetShowHelp(this.p2r_19, ((bool)(resources.GetObject("p2r_19.ShowHelp"))));
+            // 
+            // p2ls_19
+            // 
+            resources.ApplyResources(this.p2ls_19, "p2ls_19");
+            this.p2ls_19.Name = "p2ls_19";
+            this.helpProvider1.SetShowHelp(this.p2ls_19, ((bool)(resources.GetObject("p2ls_19.ShowHelp"))));
+            // 
+            // p2iws_19
+            // 
+            resources.ApplyResources(this.p2iws_19, "p2iws_19");
+            this.p2iws_19.Name = "p2iws_19";
+            this.helpProvider1.SetShowHelp(this.p2iws_19, ((bool)(resources.GetObject("p2iws_19.ShowHelp"))));
+            // 
+            // p2ib_19
+            // 
+            resources.ApplyResources(this.p2ib_19, "p2ib_19");
+            this.p2ib_19.Name = "p2ib_19";
+            this.helpProvider1.SetShowHelp(this.p2ib_19, ((bool)(resources.GetObject("p2ib_19.ShowHelp"))));
+            // 
+            // p2pm_19
+            // 
+            resources.ApplyResources(this.p2pm_19, "p2pm_19");
+            this.p2pm_19.Name = "p2pm_19";
+            this.helpProvider1.SetShowHelp(this.p2pm_19, ((bool)(resources.GetObject("p2pm_19.ShowHelp"))));
+            // 
+            // p2vw_19
+            // 
+            this.p2vw_19.BackColor = System.Drawing.Color.Honeydew;
+            resources.ApplyResources(this.p2vw_19, "p2vw_19");
+            this.p2vw_19.Name = "p2vw_19";
+            this.helpProvider1.SetShowHelp(this.p2vw_19, ((bool)(resources.GetObject("p2vw_19.ShowHelp"))));
+            // 
+            // p2plus_8
+            // 
+            this.p2plus_8.BackColor = System.Drawing.Color.AntiqueWhite;
+            resources.ApplyResources(this.p2plus_8, "p2plus_8");
+            this.p2plus_8.Name = "p2plus_8";
+            this.helpProvider1.SetShowHelp(this.p2plus_8, ((bool)(resources.GetObject("p2plus_8.ShowHelp"))));
+            // 
+            // p2r_8
+            // 
+            resources.ApplyResources(this.p2r_8, "p2r_8");
+            this.p2r_8.Name = "p2r_8";
+            this.helpProvider1.SetShowHelp(this.p2r_8, ((bool)(resources.GetObject("p2r_8.ShowHelp"))));
+            // 
+            // p2ls_8
+            // 
+            resources.ApplyResources(this.p2ls_8, "p2ls_8");
+            this.p2ls_8.Name = "p2ls_8";
+            this.helpProvider1.SetShowHelp(this.p2ls_8, ((bool)(resources.GetObject("p2ls_8.ShowHelp"))));
+            // 
+            // p2iws_8
+            // 
+            resources.ApplyResources(this.p2iws_8, "p2iws_8");
+            this.p2iws_8.Name = "p2iws_8";
+            this.helpProvider1.SetShowHelp(this.p2iws_8, ((bool)(resources.GetObject("p2iws_8.ShowHelp"))));
+            // 
+            // p2ib_8
+            // 
+            resources.ApplyResources(this.p2ib_8, "p2ib_8");
+            this.p2ib_8.Name = "p2ib_8";
+            this.helpProvider1.SetShowHelp(this.p2ib_8, ((bool)(resources.GetObject("p2ib_8.ShowHelp"))));
+            // 
+            // p2pm_8
+            // 
+            resources.ApplyResources(this.p2pm_8, "p2pm_8");
+            this.p2pm_8.Name = "p2pm_8";
+            this.helpProvider1.SetShowHelp(this.p2pm_8, ((bool)(resources.GetObject("p2pm_8.ShowHelp"))));
+            // 
+            // p2vw_8
+            // 
+            this.p2vw_8.BackColor = System.Drawing.Color.Honeydew;
+            resources.ApplyResources(this.p2vw_8, "p2vw_8");
+            this.p2vw_8.Name = "p2vw_8";
+            this.helpProvider1.SetShowHelp(this.p2vw_8, ((bool)(resources.GetObject("p2vw_8.ShowHelp"))));
+            // 
+            // p2plus_14
+            // 
+            this.p2plus_14.BackColor = System.Drawing.Color.AntiqueWhite;
+            resources.ApplyResources(this.p2plus_14, "p2plus_14");
+            this.p2plus_14.Name = "p2plus_14";
+            this.helpProvider1.SetShowHelp(this.p2plus_14, ((bool)(resources.GetObject("p2plus_14.ShowHelp"))));
+            // 
+            // p2r_14
+            // 
+            resources.ApplyResources(this.p2r_14, "p2r_14");
+            this.p2r_14.Name = "p2r_14";
+            this.helpProvider1.SetShowHelp(this.p2r_14, ((bool)(resources.GetObject("p2r_14.ShowHelp"))));
+            // 
+            // p2ls_14
+            // 
+            resources.ApplyResources(this.p2ls_14, "p2ls_14");
+            this.p2ls_14.Name = "p2ls_14";
+            this.helpProvider1.SetShowHelp(this.p2ls_14, ((bool)(resources.GetObject("p2ls_14.ShowHelp"))));
+            // 
+            // p2iws_14
+            // 
+            resources.ApplyResources(this.p2iws_14, "p2iws_14");
+            this.p2iws_14.Name = "p2iws_14";
+            this.helpProvider1.SetShowHelp(this.p2iws_14, ((bool)(resources.GetObject("p2iws_14.ShowHelp"))));
+            // 
+            // p2ib_14
+            // 
+            resources.ApplyResources(this.p2ib_14, "p2ib_14");
+            this.p2ib_14.Name = "p2ib_14";
+            this.helpProvider1.SetShowHelp(this.p2ib_14, ((bool)(resources.GetObject("p2ib_14.ShowHelp"))));
+            // 
+            // p2pm_14
+            // 
+            resources.ApplyResources(this.p2pm_14, "p2pm_14");
+            this.p2pm_14.Name = "p2pm_14";
+            this.helpProvider1.SetShowHelp(this.p2pm_14, ((bool)(resources.GetObject("p2pm_14.ShowHelp"))));
+            // 
+            // p2vw_14
+            // 
+            this.p2vw_14.BackColor = System.Drawing.Color.Honeydew;
+            resources.ApplyResources(this.p2vw_14, "p2vw_14");
+            this.p2vw_14.Name = "p2vw_14";
+            this.helpProvider1.SetShowHelp(this.p2vw_14, ((bool)(resources.GetObject("p2vw_14.ShowHelp"))));
+            // 
+            // p2plus_54
+            // 
+            this.p2plus_54.BackColor = System.Drawing.Color.AntiqueWhite;
+            resources.ApplyResources(this.p2plus_54, "p2plus_54");
+            this.p2plus_54.Name = "p2plus_54";
+            this.helpProvider1.SetShowHelp(this.p2plus_54, ((bool)(resources.GetObject("p2plus_54.ShowHelp"))));
+            // 
+            // p2r_54
+            // 
+            resources.ApplyResources(this.p2r_54, "p2r_54");
+            this.p2r_54.Name = "p2r_54";
+            this.helpProvider1.SetShowHelp(this.p2r_54, ((bool)(resources.GetObject("p2r_54.ShowHelp"))));
+            // 
+            // p2ls_54
+            // 
+            resources.ApplyResources(this.p2ls_54, "p2ls_54");
+            this.p2ls_54.Name = "p2ls_54";
+            this.helpProvider1.SetShowHelp(this.p2ls_54, ((bool)(resources.GetObject("p2ls_54.ShowHelp"))));
+            // 
+            // p2iws_54
+            // 
+            this.p2iws_54.BackColor = System.Drawing.Color.AntiqueWhite;
+            resources.ApplyResources(this.p2iws_54, "p2iws_54");
+            this.p2iws_54.Name = "p2iws_54";
+            this.helpProvider1.SetShowHelp(this.p2iws_54, ((bool)(resources.GetObject("p2iws_54.ShowHelp"))));
+            // 
+            // p2ib_54
+            // 
+            resources.ApplyResources(this.p2ib_54, "p2ib_54");
+            this.p2ib_54.Name = "p2ib_54";
+            this.helpProvider1.SetShowHelp(this.p2ib_54, ((bool)(resources.GetObject("p2ib_54.ShowHelp"))));
+            // 
+            // p2pm_54
+            // 
+            this.p2pm_54.BackColor = System.Drawing.Color.Honeydew;
+            resources.ApplyResources(this.p2pm_54, "p2pm_54");
+            this.p2pm_54.Name = "p2pm_54";
+            this.helpProvider1.SetShowHelp(this.p2pm_54, ((bool)(resources.GetObject("p2pm_54.ShowHelp"))));
+            // 
+            // p2vw_54
+            // 
+            this.p2vw_54.BackColor = System.Drawing.Color.Honeydew;
+            resources.ApplyResources(this.p2vw_54, "p2vw_54");
+            this.p2vw_54.Name = "p2vw_54";
+            this.helpProvider1.SetShowHelp(this.p2vw_54, ((bool)(resources.GetObject("p2vw_54.ShowHelp"))));
+            // 
+            // p2plus_5
+            // 
+            this.p2plus_5.BackColor = System.Drawing.Color.AntiqueWhite;
+            resources.ApplyResources(this.p2plus_5, "p2plus_5");
+            this.p2plus_5.Name = "p2plus_5";
+            this.helpProvider1.SetShowHelp(this.p2plus_5, ((bool)(resources.GetObject("p2plus_5.ShowHelp"))));
+            // 
+            // p2r_5
+            // 
+            resources.ApplyResources(this.p2r_5, "p2r_5");
+            this.p2r_5.Name = "p2r_5";
+            this.helpProvider1.SetShowHelp(this.p2r_5, ((bool)(resources.GetObject("p2r_5.ShowHelp"))));
+            // 
+            // p2ls_5
+            // 
+            resources.ApplyResources(this.p2ls_5, "p2ls_5");
+            this.p2ls_5.Name = "p2ls_5";
+            this.helpProvider1.SetShowHelp(this.p2ls_5, ((bool)(resources.GetObject("p2ls_5.ShowHelp"))));
+            // 
+            // p2iws_5
+            // 
+            resources.ApplyResources(this.p2iws_5, "p2iws_5");
+            this.p2iws_5.Name = "p2iws_5";
+            this.helpProvider1.SetShowHelp(this.p2iws_5, ((bool)(resources.GetObject("p2iws_5.ShowHelp"))));
+            // 
+            // p2ib_5
+            // 
+            resources.ApplyResources(this.p2ib_5, "p2ib_5");
+            this.p2ib_5.Name = "p2ib_5";
+            this.helpProvider1.SetShowHelp(this.p2ib_5, ((bool)(resources.GetObject("p2ib_5.ShowHelp"))));
+            // 
+            // p2pm_5
+            // 
+            resources.ApplyResources(this.p2pm_5, "p2pm_5");
+            this.p2pm_5.Name = "p2pm_5";
+            this.helpProvider1.SetShowHelp(this.p2pm_5, ((bool)(resources.GetObject("p2pm_5.ShowHelp"))));
+            // 
+            // p2vw_5
+            // 
+            this.p2vw_5.BackColor = System.Drawing.Color.Honeydew;
+            resources.ApplyResources(this.p2vw_5, "p2vw_5");
+            this.p2vw_5.Name = "p2vw_5";
+            this.helpProvider1.SetShowHelp(this.p2vw_5, ((bool)(resources.GetObject("p2vw_5.ShowHelp"))));
+            // 
+            // p2plus_11
+            // 
+            this.p2plus_11.BackColor = System.Drawing.Color.AntiqueWhite;
+            resources.ApplyResources(this.p2plus_11, "p2plus_11");
+            this.p2plus_11.Name = "p2plus_11";
+            this.helpProvider1.SetShowHelp(this.p2plus_11, ((bool)(resources.GetObject("p2plus_11.ShowHelp"))));
+            // 
+            // p2r_11
+            // 
+            resources.ApplyResources(this.p2r_11, "p2r_11");
+            this.p2r_11.Name = "p2r_11";
+            this.helpProvider1.SetShowHelp(this.p2r_11, ((bool)(resources.GetObject("p2r_11.ShowHelp"))));
+            // 
+            // p2ls_11
+            // 
+            resources.ApplyResources(this.p2ls_11, "p2ls_11");
+            this.p2ls_11.Name = "p2ls_11";
+            this.helpProvider1.SetShowHelp(this.p2ls_11, ((bool)(resources.GetObject("p2ls_11.ShowHelp"))));
+            // 
+            // p2iws_11
+            // 
+            resources.ApplyResources(this.p2iws_11, "p2iws_11");
+            this.p2iws_11.Name = "p2iws_11";
+            this.helpProvider1.SetShowHelp(this.p2iws_11, ((bool)(resources.GetObject("p2iws_11.ShowHelp"))));
+            // 
+            // p2ib_11
+            // 
+            resources.ApplyResources(this.p2ib_11, "p2ib_11");
+            this.p2ib_11.Name = "p2ib_11";
+            this.helpProvider1.SetShowHelp(this.p2ib_11, ((bool)(resources.GetObject("p2ib_11.ShowHelp"))));
+            // 
+            // p2pm_11
+            // 
+            resources.ApplyResources(this.p2pm_11, "p2pm_11");
+            this.p2pm_11.Name = "p2pm_11";
+            this.helpProvider1.SetShowHelp(this.p2pm_11, ((bool)(resources.GetObject("p2pm_11.ShowHelp"))));
+            // 
+            // p2vw_11
+            // 
+            this.p2vw_11.BackColor = System.Drawing.Color.Honeydew;
+            resources.ApplyResources(this.p2vw_11, "p2vw_11");
+            this.p2vw_11.Name = "p2vw_11";
+            this.helpProvider1.SetShowHelp(this.p2vw_11, ((bool)(resources.GetObject("p2vw_11.ShowHelp"))));
+            // 
+            // p2plus_55
+            // 
+            this.p2plus_55.BackColor = System.Drawing.Color.AntiqueWhite;
+            resources.ApplyResources(this.p2plus_55, "p2plus_55");
+            this.p2plus_55.Name = "p2plus_55";
+            this.helpProvider1.SetShowHelp(this.p2plus_55, ((bool)(resources.GetObject("p2plus_55.ShowHelp"))));
+            // 
+            // p2r_55
+            // 
+            resources.ApplyResources(this.p2r_55, "p2r_55");
+            this.p2r_55.Name = "p2r_55";
+            this.helpProvider1.SetShowHelp(this.p2r_55, ((bool)(resources.GetObject("p2r_55.ShowHelp"))));
+            // 
+            // p2ls_55
+            // 
+            resources.ApplyResources(this.p2ls_55, "p2ls_55");
+            this.p2ls_55.Name = "p2ls_55";
+            this.helpProvider1.SetShowHelp(this.p2ls_55, ((bool)(resources.GetObject("p2ls_55.ShowHelp"))));
+            // 
+            // p2iws_55
+            // 
+            this.p2iws_55.BackColor = System.Drawing.Color.AntiqueWhite;
+            resources.ApplyResources(this.p2iws_55, "p2iws_55");
+            this.p2iws_55.Name = "p2iws_55";
+            this.helpProvider1.SetShowHelp(this.p2iws_55, ((bool)(resources.GetObject("p2iws_55.ShowHelp"))));
+            // 
+            // p2ib_55
+            // 
+            resources.ApplyResources(this.p2ib_55, "p2ib_55");
+            this.p2ib_55.Name = "p2ib_55";
+            this.helpProvider1.SetShowHelp(this.p2ib_55, ((bool)(resources.GetObject("p2ib_55.ShowHelp"))));
+            // 
+            // p2pm_55
+            // 
+            this.p2pm_55.BackColor = System.Drawing.Color.Honeydew;
+            resources.ApplyResources(this.p2pm_55, "p2pm_55");
+            this.p2pm_55.Name = "p2pm_55";
+            this.helpProvider1.SetShowHelp(this.p2pm_55, ((bool)(resources.GetObject("p2pm_55.ShowHelp"))));
+            // 
+            // p2vw_55
+            // 
+            this.p2vw_55.BackColor = System.Drawing.Color.Honeydew;
+            resources.ApplyResources(this.p2vw_55, "p2vw_55");
+            this.p2vw_55.Name = "p2vw_55";
+            this.helpProvider1.SetShowHelp(this.p2vw_55, ((bool)(resources.GetObject("p2vw_55.ShowHelp"))));
+            // 
+            // p2plus_16
+            // 
+            this.p2plus_16.BackColor = System.Drawing.Color.AntiqueWhite;
+            resources.ApplyResources(this.p2plus_16, "p2plus_16");
+            this.p2plus_16.Name = "p2plus_16";
+            this.helpProvider1.SetShowHelp(this.p2plus_16, ((bool)(resources.GetObject("p2plus_16.ShowHelp"))));
+            // 
+            // p2r_16
+            // 
+            resources.ApplyResources(this.p2r_16, "p2r_16");
+            this.p2r_16.Name = "p2r_16";
+            this.helpProvider1.SetShowHelp(this.p2r_16, ((bool)(resources.GetObject("p2r_16.ShowHelp"))));
+            // 
+            // p2ls_16
+            // 
+            resources.ApplyResources(this.p2ls_16, "p2ls_16");
+            this.p2ls_16.Name = "p2ls_16";
+            this.helpProvider1.SetShowHelp(this.p2ls_16, ((bool)(resources.GetObject("p2ls_16.ShowHelp"))));
+            // 
+            // p2iws_16
+            // 
+            resources.ApplyResources(this.p2iws_16, "p2iws_16");
+            this.p2iws_16.Name = "p2iws_16";
+            this.helpProvider1.SetShowHelp(this.p2iws_16, ((bool)(resources.GetObject("p2iws_16.ShowHelp"))));
+            // 
+            // p2ib_16
+            // 
+            resources.ApplyResources(this.p2ib_16, "p2ib_16");
+            this.p2ib_16.Name = "p2ib_16";
+            this.helpProvider1.SetShowHelp(this.p2ib_16, ((bool)(resources.GetObject("p2ib_16.ShowHelp"))));
+            // 
+            // p2pm_16
+            // 
+            resources.ApplyResources(this.p2pm_16, "p2pm_16");
+            this.p2pm_16.Name = "p2pm_16";
+            this.helpProvider1.SetShowHelp(this.p2pm_16, ((bool)(resources.GetObject("p2pm_16.ShowHelp"))));
+            // 
+            // p2vw_16
+            // 
+            this.p2vw_16.BackColor = System.Drawing.Color.Honeydew;
+            resources.ApplyResources(this.p2vw_16, "p2vw_16");
+            this.p2vw_16.Name = "p2vw_16";
+            this.helpProvider1.SetShowHelp(this.p2vw_16, ((bool)(resources.GetObject("p2vw_16.ShowHelp"))));
+            // 
+            // p2plus_17
+            // 
+            this.p2plus_17.BackColor = System.Drawing.Color.AntiqueWhite;
+            resources.ApplyResources(this.p2plus_17, "p2plus_17");
+            this.p2plus_17.Name = "p2plus_17";
+            this.helpProvider1.SetShowHelp(this.p2plus_17, ((bool)(resources.GetObject("p2plus_17.ShowHelp"))));
+            // 
+            // p2r_17
+            // 
+            resources.ApplyResources(this.p2r_17, "p2r_17");
+            this.p2r_17.Name = "p2r_17";
+            this.helpProvider1.SetShowHelp(this.p2r_17, ((bool)(resources.GetObject("p2r_17.ShowHelp"))));
+            // 
+            // p2ls_17
+            // 
+            resources.ApplyResources(this.p2ls_17, "p2ls_17");
+            this.p2ls_17.Name = "p2ls_17";
+            this.helpProvider1.SetShowHelp(this.p2ls_17, ((bool)(resources.GetObject("p2ls_17.ShowHelp"))));
+            // 
+            // p2iws_17
+            // 
+            resources.ApplyResources(this.p2iws_17, "p2iws_17");
+            this.p2iws_17.Name = "p2iws_17";
+            this.helpProvider1.SetShowHelp(this.p2iws_17, ((bool)(resources.GetObject("p2iws_17.ShowHelp"))));
+            // 
+            // p2ib_17
+            // 
+            resources.ApplyResources(this.p2ib_17, "p2ib_17");
+            this.p2ib_17.Name = "p2ib_17";
+            this.helpProvider1.SetShowHelp(this.p2ib_17, ((bool)(resources.GetObject("p2ib_17.ShowHelp"))));
+            // 
+            // p2pm_17
+            // 
+            resources.ApplyResources(this.p2pm_17, "p2pm_17");
+            this.p2pm_17.Name = "p2pm_17";
+            this.helpProvider1.SetShowHelp(this.p2pm_17, ((bool)(resources.GetObject("p2pm_17.ShowHelp"))));
+            // 
+            // p2vw_17
+            // 
+            this.p2vw_17.BackColor = System.Drawing.Color.Honeydew;
+            resources.ApplyResources(this.p2vw_17, "p2vw_17");
+            this.p2vw_17.Name = "p2vw_17";
+            this.helpProvider1.SetShowHelp(this.p2vw_17, ((bool)(resources.GetObject("p2vw_17.ShowHelp"))));
+            // 
+            // p2plus_26
+            // 
+            this.p2plus_26.BackColor = System.Drawing.Color.AntiqueWhite;
+            resources.ApplyResources(this.p2plus_26, "p2plus_26");
+            this.p2plus_26.Name = "p2plus_26";
+            this.helpProvider1.SetShowHelp(this.p2plus_26, ((bool)(resources.GetObject("p2plus_26.ShowHelp"))));
+            // 
+            // p2r_26
+            // 
+            resources.ApplyResources(this.p2r_26, "p2r_26");
+            this.p2r_26.Name = "p2r_26";
+            this.helpProvider1.SetShowHelp(this.p2r_26, ((bool)(resources.GetObject("p2r_26.ShowHelp"))));
+            // 
+            // p2ls_26
+            // 
+            resources.ApplyResources(this.p2ls_26, "p2ls_26");
+            this.p2ls_26.Name = "p2ls_26";
+            this.helpProvider1.SetShowHelp(this.p2ls_26, ((bool)(resources.GetObject("p2ls_26.ShowHelp"))));
+            // 
+            // p2iws_26
+            // 
+            resources.ApplyResources(this.p2iws_26, "p2iws_26");
+            this.p2iws_26.Name = "p2iws_26";
+            this.helpProvider1.SetShowHelp(this.p2iws_26, ((bool)(resources.GetObject("p2iws_26.ShowHelp"))));
+            // 
+            // p2ib_26
+            // 
+            resources.ApplyResources(this.p2ib_26, "p2ib_26");
+            this.p2ib_26.Name = "p2ib_26";
+            this.helpProvider1.SetShowHelp(this.p2ib_26, ((bool)(resources.GetObject("p2ib_26.ShowHelp"))));
+            // 
+            // p2pm_26
+            // 
+            resources.ApplyResources(this.p2pm_26, "p2pm_26");
+            this.p2pm_26.Name = "p2pm_26";
+            this.helpProvider1.SetShowHelp(this.p2pm_26, ((bool)(resources.GetObject("p2pm_26.ShowHelp"))));
+            // 
+            // p2vw_26
+            // 
+            this.p2vw_26.BackColor = System.Drawing.Color.Honeydew;
+            resources.ApplyResources(this.p2vw_26, "p2vw_26");
+            this.p2vw_26.Name = "p2vw_26";
+            this.helpProvider1.SetShowHelp(this.p2vw_26, ((bool)(resources.GetObject("p2vw_26.ShowHelp"))));
+            // 
+            // p2plus_56
+            // 
+            this.p2plus_56.BackColor = System.Drawing.Color.AntiqueWhite;
+            resources.ApplyResources(this.p2plus_56, "p2plus_56");
+            this.p2plus_56.Name = "p2plus_56";
+            this.helpProvider1.SetShowHelp(this.p2plus_56, ((bool)(resources.GetObject("p2plus_56.ShowHelp"))));
+            // 
+            // p2r_56
+            // 
+            resources.ApplyResources(this.p2r_56, "p2r_56");
+            this.p2r_56.Name = "p2r_56";
+            this.helpProvider1.SetShowHelp(this.p2r_56, ((bool)(resources.GetObject("p2r_56.ShowHelp"))));
+            // 
+            // p2ls_56
+            // 
+            resources.ApplyResources(this.p2ls_56, "p2ls_56");
+            this.p2ls_56.Name = "p2ls_56";
+            this.helpProvider1.SetShowHelp(this.p2ls_56, ((bool)(resources.GetObject("p2ls_56.ShowHelp"))));
+            // 
+            // p2iws_56
+            // 
+            this.p2iws_56.BackColor = System.Drawing.Color.AntiqueWhite;
+            resources.ApplyResources(this.p2iws_56, "p2iws_56");
+            this.p2iws_56.Name = "p2iws_56";
+            this.helpProvider1.SetShowHelp(this.p2iws_56, ((bool)(resources.GetObject("p2iws_56.ShowHelp"))));
+            // 
+            // p2ib_56
+            // 
+            resources.ApplyResources(this.p2ib_56, "p2ib_56");
+            this.p2ib_56.Name = "p2ib_56";
+            this.helpProvider1.SetShowHelp(this.p2ib_56, ((bool)(resources.GetObject("p2ib_56.ShowHelp"))));
+            // 
+            // p2pm_56
+            // 
+            this.p2pm_56.BackColor = System.Drawing.Color.Honeydew;
+            resources.ApplyResources(this.p2pm_56, "p2pm_56");
+            this.p2pm_56.Name = "p2pm_56";
+            this.helpProvider1.SetShowHelp(this.p2pm_56, ((bool)(resources.GetObject("p2pm_56.ShowHelp"))));
+            // 
+            // p2vw_56
+            // 
+            this.p2vw_56.BackColor = System.Drawing.Color.Honeydew;
+            resources.ApplyResources(this.p2vw_56, "p2vw_56");
+            this.p2vw_56.Name = "p2vw_56";
+            this.helpProvider1.SetShowHelp(this.p2vw_56, ((bool)(resources.GetObject("p2vw_56.ShowHelp"))));
+            // 
+            // p2r_0
+            // 
+            resources.ApplyResources(this.p2r_0, "p2r_0");
+            this.p2r_0.Name = "p2r_0";
+            this.helpProvider1.SetShowHelp(this.p2r_0, ((bool)(resources.GetObject("p2r_0.ShowHelp"))));
+            // 
+            // p2ls_0
+            // 
+            resources.ApplyResources(this.p2ls_0, "p2ls_0");
+            this.p2ls_0.Name = "p2ls_0";
+            this.helpProvider1.SetShowHelp(this.p2ls_0, ((bool)(resources.GetObject("p2ls_0.ShowHelp"))));
+            // 
+            // p2iws_0
+            // 
+            this.p2iws_0.BackColor = System.Drawing.Color.AntiqueWhite;
+            resources.ApplyResources(this.p2iws_0, "p2iws_0");
+            this.p2iws_0.Name = "p2iws_0";
+            this.helpProvider1.SetShowHelp(this.p2iws_0, ((bool)(resources.GetObject("p2iws_0.ShowHelp"))));
+            // 
+            // p2ib_0
+            // 
+            resources.ApplyResources(this.p2ib_0, "p2ib_0");
+            this.p2ib_0.Name = "p2ib_0";
+            this.helpProvider1.SetShowHelp(this.p2ib_0, ((bool)(resources.GetObject("p2ib_0.ShowHelp"))));
+            // 
+            // p2pm_0
+            // 
+            this.p2pm_0.BackColor = System.Drawing.Color.Honeydew;
+            resources.ApplyResources(this.p2pm_0, "p2pm_0");
+            this.p2pm_0.Name = "p2pm_0";
+            this.helpProvider1.SetShowHelp(this.p2pm_0, ((bool)(resources.GetObject("p2pm_0.ShowHelp"))));
+            // 
+            // p2vw_0
+            // 
+            this.p2vw_0.BackColor = System.Drawing.Color.LightYellow;
+            resources.ApplyResources(this.p2vw_0, "p2vw_0");
+            this.p2vw_0.Name = "p2vw_0";
+            this.helpProvider1.SetShowHelp(this.p2vw_0, ((bool)(resources.GetObject("p2vw_0.ShowHelp"))));
             // 
             // Fahrrad
             // 
@@ -1376,10 +4339,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.upDownP11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.upDownAW1)).EndInit();
             this.tab_produktion.ResumeLayout(false);
-            this.tab_produktion.PerformLayout();
             this.tab1.ResumeLayout(false);
             this.tab_eTeil.ResumeLayout(false);
             this.tab_eTeil.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picReadOnlyETeile)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picResetETeil)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picEditEteile)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picSaveETeile)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewETeil)).EndInit();
             this.tab_APlatz.ResumeLayout(false);
             this.tab_APlatz.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picEditsAPlatz)).EndInit();
@@ -1387,6 +4354,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.picResetAPlatz)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picSaveAPlatz)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAPlatz)).EndInit();
+            this.tab_P1.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
             this.tab2.ResumeLayout(false);
@@ -1396,12 +4366,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
             this.menu.ResumeLayout(false);
             this.menu.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picSaveETeile)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picEditEteile)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picResetETeil)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picReadOnlyETeile)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewETeil)).EndInit();
+            this.tab_P2.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1511,9 +4478,6 @@
         private System.Windows.Forms.DataGridViewImageColumn b4;
         private System.Windows.Forms.TabPage tab_bestellung;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label lableDazu;
         private System.Windows.Forms.CheckBox cbMitOhne;
         private System.Windows.Forms.RadioButton rbReserve;
         private System.Windows.Forms.PictureBox picReadOnlyETeile;
@@ -1530,6 +4494,354 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn colBearbeitung;
         private System.Windows.Forms.DataGridViewTextBoxColumn colPlanung;
         private System.Windows.Forms.DataGridViewTextBoxColumn reserve;
+        private System.Windows.Forms.TabPage tab_P1;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox p1plus_18;
+        private System.Windows.Forms.TextBox p1r_18;
+        private System.Windows.Forms.TextBox p1ls_18;
+        private System.Windows.Forms.TextBox p1iws_18;
+        private System.Windows.Forms.TextBox p1ib_18;
+        private System.Windows.Forms.TextBox p1pm_18;
+        private System.Windows.Forms.TextBox p1vw_18;
+        private System.Windows.Forms.TextBox p1plus_7;
+        private System.Windows.Forms.TextBox p1r_7;
+        private System.Windows.Forms.TextBox p1ls_7;
+        private System.Windows.Forms.TextBox p1iws_7;
+        private System.Windows.Forms.TextBox p1ib_7;
+        private System.Windows.Forms.TextBox p1pm_7;
+        private System.Windows.Forms.TextBox p1vw_7;
+        private System.Windows.Forms.TextBox p1plus_13;
+        private System.Windows.Forms.TextBox p1r_13;
+        private System.Windows.Forms.TextBox p1ls_13;
+        private System.Windows.Forms.TextBox p1iws_13;
+        private System.Windows.Forms.TextBox p1ib_13;
+        private System.Windows.Forms.TextBox p1pm_13;
+        private System.Windows.Forms.TextBox p1vw_13;
+        private System.Windows.Forms.TextBox p1plus_49;
+        private System.Windows.Forms.TextBox p1r_49;
+        private System.Windows.Forms.TextBox p1ls_49;
+        private System.Windows.Forms.TextBox p1iws_49;
+        private System.Windows.Forms.TextBox p1ib_49;
+        private System.Windows.Forms.TextBox p1pm_49;
+        private System.Windows.Forms.TextBox p1vw_49;
+        private System.Windows.Forms.TextBox p1plus_4;
+        private System.Windows.Forms.TextBox p1r_4;
+        private System.Windows.Forms.TextBox p1ls_4;
+        private System.Windows.Forms.TextBox p1iws_4;
+        private System.Windows.Forms.TextBox p1ib_4;
+        private System.Windows.Forms.TextBox p1pm_4;
+        private System.Windows.Forms.TextBox p1vw_4;
+        private System.Windows.Forms.TextBox p1plus_10;
+        private System.Windows.Forms.TextBox p1r_10;
+        private System.Windows.Forms.TextBox p1ls_10;
+        private System.Windows.Forms.TextBox p1iws_10;
+        private System.Windows.Forms.TextBox p1ib_10;
+        private System.Windows.Forms.TextBox p1pm_10;
+        private System.Windows.Forms.TextBox p1vw_10;
+        private System.Windows.Forms.TextBox p1plus_50;
+        private System.Windows.Forms.TextBox p1r_50;
+        private System.Windows.Forms.TextBox p1ls_50;
+        private System.Windows.Forms.TextBox p1iws_50;
+        private System.Windows.Forms.TextBox p1ib_50;
+        private System.Windows.Forms.TextBox p1pm_50;
+        private System.Windows.Forms.TextBox p1vw_50;
+        private System.Windows.Forms.TextBox p1plus_16;
+        private System.Windows.Forms.TextBox p1r_16;
+        private System.Windows.Forms.TextBox p1ls_16;
+        private System.Windows.Forms.TextBox p1iws_16;
+        private System.Windows.Forms.TextBox p1ib_16;
+        private System.Windows.Forms.TextBox p1pm_16;
+        private System.Windows.Forms.TextBox p1vw_16;
+        private System.Windows.Forms.TextBox p1plus_17;
+        private System.Windows.Forms.TextBox p1r_17;
+        private System.Windows.Forms.TextBox p1ls_17;
+        private System.Windows.Forms.TextBox p1iws_17;
+        private System.Windows.Forms.TextBox p1ib_17;
+        private System.Windows.Forms.TextBox p1pm_17;
+        private System.Windows.Forms.TextBox p1vw_17;
+        private System.Windows.Forms.TextBox p1plus_26;
+        private System.Windows.Forms.TextBox p1r_26;
+        private System.Windows.Forms.TextBox p1ls_26;
+        private System.Windows.Forms.TextBox p1iws_26;
+        private System.Windows.Forms.TextBox p1ib_26;
+        private System.Windows.Forms.TextBox p1pm_26;
+        private System.Windows.Forms.TextBox p1vw_26;
+        private System.Windows.Forms.TextBox p1plus_51;
+        private System.Windows.Forms.TextBox p1r_51;
+        private System.Windows.Forms.TextBox p1ls_51;
+        private System.Windows.Forms.TextBox p1iws_51;
+        private System.Windows.Forms.TextBox p1ib_51;
+        private System.Windows.Forms.TextBox p1pm_51;
+        private System.Windows.Forms.TextBox p1vw_51;
+        private System.Windows.Forms.TextBox p1r_0;
+        private System.Windows.Forms.TextBox p1ls_0;
+        private System.Windows.Forms.TextBox p1iws_0;
+        private System.Windows.Forms.TextBox p1ib_0;
+        private System.Windows.Forms.TextBox p1pm_0;
+        private System.Windows.Forms.TextBox p1vw_0;
+        private System.Windows.Forms.Label label74;
+        private System.Windows.Forms.Label label75;
+        private System.Windows.Forms.Label label76;
+        private System.Windows.Forms.Label label77;
+        private System.Windows.Forms.Label label78;
+        private System.Windows.Forms.Label label79;
+        private System.Windows.Forms.Label label80;
+        private System.Windows.Forms.Label label81;
+        private System.Windows.Forms.Label label82;
+        private System.Windows.Forms.Label label83;
+        private System.Windows.Forms.Label label84;
+        private System.Windows.Forms.Label label85;
+        private System.Windows.Forms.Label label73;
+        private System.Windows.Forms.Label label72;
+        private System.Windows.Forms.Label label71;
+        private System.Windows.Forms.Label label60;
+        private System.Windows.Forms.Label label61;
+        private System.Windows.Forms.Label label62;
+        private System.Windows.Forms.Label label63;
+        private System.Windows.Forms.Label label64;
+        private System.Windows.Forms.Label label65;
+        private System.Windows.Forms.Label label66;
+        private System.Windows.Forms.Label label67;
+        private System.Windows.Forms.Label label68;
+        private System.Windows.Forms.Label label69;
+        private System.Windows.Forms.Label label70;
+        private System.Windows.Forms.Label label49;
+        private System.Windows.Forms.Label label50;
+        private System.Windows.Forms.Label label51;
+        private System.Windows.Forms.Label label52;
+        private System.Windows.Forms.Label label53;
+        private System.Windows.Forms.Label label54;
+        private System.Windows.Forms.Label label55;
+        private System.Windows.Forms.Label label56;
+        private System.Windows.Forms.Label label57;
+        private System.Windows.Forms.Label label58;
+        private System.Windows.Forms.Label label59;
+        private System.Windows.Forms.Label label38;
+        private System.Windows.Forms.Label label39;
+        private System.Windows.Forms.Label label40;
+        private System.Windows.Forms.Label label41;
+        private System.Windows.Forms.Label label42;
+        private System.Windows.Forms.Label label43;
+        private System.Windows.Forms.Label label44;
+        private System.Windows.Forms.Label label45;
+        private System.Windows.Forms.Label label46;
+        private System.Windows.Forms.Label label47;
+        private System.Windows.Forms.Label label48;
+        private System.Windows.Forms.Label label37;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label label27;
+        private System.Windows.Forms.Label label28;
+        private System.Windows.Forms.Label label29;
+        private System.Windows.Forms.Label label30;
+        private System.Windows.Forms.Label label31;
+        private System.Windows.Forms.Label label32;
+        private System.Windows.Forms.Label label33;
+        private System.Windows.Forms.Label label34;
+        private System.Windows.Forms.Label label35;
+        private System.Windows.Forms.Label label36;
+        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label label91;
+        private System.Windows.Forms.Label label90;
+        private System.Windows.Forms.Label label89;
+        private System.Windows.Forms.Label label88;
+        private System.Windows.Forms.Label label87;
+        private System.Windows.Forms.Label label86;
+        private System.Windows.Forms.TabPage tab_P2;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label label92;
+        private System.Windows.Forms.Label label93;
+        private System.Windows.Forms.Label label94;
+        private System.Windows.Forms.Label label95;
+        private System.Windows.Forms.Label label96;
+        private System.Windows.Forms.Label label97;
+        private System.Windows.Forms.Label label98;
+        private System.Windows.Forms.Label label99;
+        private System.Windows.Forms.Label label100;
+        private System.Windows.Forms.Label label101;
+        private System.Windows.Forms.Label label102;
+        private System.Windows.Forms.Label label103;
+        private System.Windows.Forms.Label label104;
+        private System.Windows.Forms.Label label105;
+        private System.Windows.Forms.Label label106;
+        private System.Windows.Forms.Label label107;
+        private System.Windows.Forms.Label label108;
+        private System.Windows.Forms.Label label109;
+        private System.Windows.Forms.Label label110;
+        private System.Windows.Forms.Label label111;
+        private System.Windows.Forms.Label label112;
+        private System.Windows.Forms.Label label113;
+        private System.Windows.Forms.Label label114;
+        private System.Windows.Forms.Label label115;
+        private System.Windows.Forms.Label label116;
+        private System.Windows.Forms.Label label117;
+        private System.Windows.Forms.Label label118;
+        private System.Windows.Forms.Label label119;
+        private System.Windows.Forms.Label label120;
+        private System.Windows.Forms.Label label121;
+        private System.Windows.Forms.Label label122;
+        private System.Windows.Forms.Label label123;
+        private System.Windows.Forms.Label label124;
+        private System.Windows.Forms.Label label125;
+        private System.Windows.Forms.Label label126;
+        private System.Windows.Forms.Label label127;
+        private System.Windows.Forms.Label label128;
+        private System.Windows.Forms.Label label129;
+        private System.Windows.Forms.Label label130;
+        private System.Windows.Forms.Label label131;
+        private System.Windows.Forms.Label label132;
+        private System.Windows.Forms.Label label133;
+        private System.Windows.Forms.Label label134;
+        private System.Windows.Forms.Label label135;
+        private System.Windows.Forms.Label label136;
+        private System.Windows.Forms.Label label137;
+        private System.Windows.Forms.Label label138;
+        private System.Windows.Forms.Label label139;
+        private System.Windows.Forms.Label label140;
+        private System.Windows.Forms.Label label141;
+        private System.Windows.Forms.Label label142;
+        private System.Windows.Forms.Label label143;
+        private System.Windows.Forms.Label label144;
+        private System.Windows.Forms.Label label145;
+        private System.Windows.Forms.Label label146;
+        private System.Windows.Forms.Label label147;
+        private System.Windows.Forms.Label label148;
+        private System.Windows.Forms.Label label149;
+        private System.Windows.Forms.Label label150;
+        private System.Windows.Forms.Label label151;
+        private System.Windows.Forms.Label label152;
+        private System.Windows.Forms.Label label153;
+        private System.Windows.Forms.Label label154;
+        private System.Windows.Forms.Label label155;
+        private System.Windows.Forms.Label label156;
+        private System.Windows.Forms.Label label157;
+        private System.Windows.Forms.Label label158;
+        private System.Windows.Forms.Label label159;
+        private System.Windows.Forms.Label label160;
+        private System.Windows.Forms.Label label161;
+        private System.Windows.Forms.Label label162;
+        private System.Windows.Forms.Label label163;
+        private System.Windows.Forms.Label label164;
+        private System.Windows.Forms.Label label165;
+        private System.Windows.Forms.Label label166;
+        private System.Windows.Forms.Label label167;
+        private System.Windows.Forms.Label label168;
+        private System.Windows.Forms.Label label169;
+        private System.Windows.Forms.Label label170;
+        private System.Windows.Forms.Label label171;
+        private System.Windows.Forms.Label label172;
+        private System.Windows.Forms.Label label173;
+        private System.Windows.Forms.Label label174;
+        private System.Windows.Forms.Label label175;
+        private System.Windows.Forms.Label label176;
+        private System.Windows.Forms.Label label177;
+        private System.Windows.Forms.Label label178;
+        private System.Windows.Forms.Label label179;
+        private System.Windows.Forms.Label label180;
+        private System.Windows.Forms.TextBox p2plus_19;
+        private System.Windows.Forms.TextBox p2r_19;
+        private System.Windows.Forms.TextBox p2ls_19;
+        private System.Windows.Forms.TextBox p2iws_19;
+        private System.Windows.Forms.TextBox p2ib_19;
+        private System.Windows.Forms.TextBox p2pm_19;
+        private System.Windows.Forms.TextBox p2vw_19;
+        private System.Windows.Forms.TextBox p2plus_8;
+        private System.Windows.Forms.TextBox p2r_8;
+        private System.Windows.Forms.TextBox p2ls_8;
+        private System.Windows.Forms.TextBox p2iws_8;
+        private System.Windows.Forms.TextBox p2ib_8;
+        private System.Windows.Forms.TextBox p2pm_8;
+        private System.Windows.Forms.TextBox p2vw_8;
+        private System.Windows.Forms.TextBox p2plus_14;
+        private System.Windows.Forms.TextBox p2r_14;
+        private System.Windows.Forms.TextBox p2ls_14;
+        private System.Windows.Forms.TextBox p2iws_14;
+        private System.Windows.Forms.TextBox p2ib_14;
+        private System.Windows.Forms.TextBox p2pm_14;
+        private System.Windows.Forms.TextBox p2vw_14;
+        private System.Windows.Forms.TextBox p2plus_54;
+        private System.Windows.Forms.TextBox p2r_54;
+        private System.Windows.Forms.TextBox p2ls_54;
+        private System.Windows.Forms.TextBox p2iws_54;
+        private System.Windows.Forms.TextBox p2ib_54;
+        private System.Windows.Forms.TextBox p2pm_54;
+        private System.Windows.Forms.TextBox p2vw_54;
+        private System.Windows.Forms.TextBox p2plus_5;
+        private System.Windows.Forms.TextBox p2r_5;
+        private System.Windows.Forms.TextBox p2ls_5;
+        private System.Windows.Forms.TextBox p2iws_5;
+        private System.Windows.Forms.TextBox p2ib_5;
+        private System.Windows.Forms.TextBox p2pm_5;
+        private System.Windows.Forms.TextBox p2vw_5;
+        private System.Windows.Forms.TextBox p2plus_11;
+        private System.Windows.Forms.TextBox p2r_11;
+        private System.Windows.Forms.TextBox p2ls_11;
+        private System.Windows.Forms.TextBox p2iws_11;
+        private System.Windows.Forms.TextBox p2ib_11;
+        private System.Windows.Forms.TextBox p2pm_11;
+        private System.Windows.Forms.TextBox p2vw_11;
+        private System.Windows.Forms.TextBox p2plus_55;
+        private System.Windows.Forms.TextBox p2r_55;
+        private System.Windows.Forms.TextBox p2ls_55;
+        private System.Windows.Forms.TextBox p2iws_55;
+        private System.Windows.Forms.TextBox p2ib_55;
+        private System.Windows.Forms.TextBox p2pm_55;
+        private System.Windows.Forms.TextBox p2vw_55;
+        private System.Windows.Forms.TextBox p2plus_16;
+        private System.Windows.Forms.TextBox p2r_16;
+        private System.Windows.Forms.TextBox p2ls_16;
+        private System.Windows.Forms.TextBox p2iws_16;
+        private System.Windows.Forms.TextBox p2ib_16;
+        private System.Windows.Forms.TextBox p2pm_16;
+        private System.Windows.Forms.TextBox p2vw_16;
+        private System.Windows.Forms.TextBox p2plus_17;
+        private System.Windows.Forms.TextBox p2r_17;
+        private System.Windows.Forms.TextBox p2ls_17;
+        private System.Windows.Forms.TextBox p2iws_17;
+        private System.Windows.Forms.TextBox p2ib_17;
+        private System.Windows.Forms.TextBox p2pm_17;
+        private System.Windows.Forms.TextBox p2vw_17;
+        private System.Windows.Forms.TextBox p2plus_26;
+        private System.Windows.Forms.TextBox p2r_26;
+        private System.Windows.Forms.TextBox p2ls_26;
+        private System.Windows.Forms.TextBox p2iws_26;
+        private System.Windows.Forms.TextBox p2ib_26;
+        private System.Windows.Forms.TextBox p2pm_26;
+        private System.Windows.Forms.TextBox p2vw_26;
+        private System.Windows.Forms.TextBox p2plus_56;
+        private System.Windows.Forms.TextBox p2r_56;
+        private System.Windows.Forms.TextBox p2ls_56;
+        private System.Windows.Forms.TextBox p2iws_56;
+        private System.Windows.Forms.TextBox p2ib_56;
+        private System.Windows.Forms.TextBox p2pm_56;
+        private System.Windows.Forms.TextBox p2vw_56;
+        private System.Windows.Forms.TextBox p2r_0;
+        private System.Windows.Forms.TextBox p2ls_0;
+        private System.Windows.Forms.TextBox p2iws_0;
+        private System.Windows.Forms.TextBox p2ib_0;
+        private System.Windows.Forms.TextBox p2pm_0;
+        private System.Windows.Forms.TextBox p2vw_0;
     }
 }
 
