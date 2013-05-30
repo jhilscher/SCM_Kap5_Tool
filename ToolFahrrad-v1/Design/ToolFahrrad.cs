@@ -1033,10 +1033,10 @@ namespace ToolFahrrad_v1
                 }
                 int pmTemp = 0;
                 if (index == 1) {
-                    pmTemp = et.VertriebPer0 + et.VaterInWarteschlange + pufTemp - et.Lagerstand - et.InWartschlange - et.InBearbeitung;
+                    pmTemp = et.VertriebPer0 + et.KdhVaterInWarteschlange[nr][index - 1] + pufTemp - et.Lagerstand - et.InWartschlange - et.InBearbeitung;
                 }
                 else {
-                    pmTemp = et.VertriebPer0 + et.VaterInWarteschlange + pufTemp;
+                    pmTemp = et.VertriebPer0 + et.KdhVaterInWarteschlange[nr][index - 1] + pufTemp;
                 }
                 if (et.KdhProduktionsmenge.ContainsKey(index.ToString() + "-" + Convert.ToString(nr))) {
                     et.KdhProduktionsmenge[index.ToString() + "-" + Convert.ToString(nr)] = pmTemp;
@@ -1044,7 +1044,7 @@ namespace ToolFahrrad_v1
             }
         }
         private void p1ETAusfueren_Click(object sender, EventArgs e) {
-
+            (instance.GetTeil(1) as ETeil).VertriebPer0 = Convert.ToInt32(p1vw_0.Text);            
             (instance.GetTeil(1) as ETeil).Puffer = Convert.ToInt32(p1r_0.Text);
             prodMenge(1, 1, Convert.ToInt32(p1r_0.Text));
             (instance.GetTeil(51) as ETeil).Puffer = Convert.ToInt32(p1r_51.Text);
@@ -1070,10 +1070,38 @@ namespace ToolFahrrad_v1
             (instance.GetTeil(17) as ETeil).KdhPuffer[(instance.GetTeil(17) as ETeil).KdhPuffer.Keys.ToList()[2]][0] = Convert.ToInt32(p1r_17.Text);
             prodMenge(1, 17, Convert.ToInt32(p1r_17.Text));
 
-            //PM rechnen
-
-
             DispositionDarstellung(1);
+            Information();
+        }
+        private void p2ETAusfueren_Click(object sender, EventArgs e) {
+            (instance.GetTeil(2) as ETeil).VertriebPer0 = Convert.ToInt32(p2vw_0.Text);
+            (instance.GetTeil(2) as ETeil).Puffer = Convert.ToInt32(p2r_0.Text);
+            prodMenge(2, 2, Convert.ToInt32(p2r_0.Text));
+            (instance.GetTeil(56) as ETeil).Puffer = Convert.ToInt32(p2r_56.Text);
+            prodMenge(2, 56, Convert.ToInt32(p2r_56.Text));
+            (instance.GetTeil(55) as ETeil).Puffer = Convert.ToInt32(p2r_55.Text);
+            prodMenge(2, 55, Convert.ToInt32(p2r_55.Text));
+            (instance.GetTeil(5) as ETeil).Puffer = Convert.ToInt32(p2r_5.Text);
+            prodMenge(2, 5, Convert.ToInt32(p2r_5.Text));
+            (instance.GetTeil(11) as ETeil).Puffer = Convert.ToInt32(p2r_11.Text);
+            prodMenge(2, 11, Convert.ToInt32(p2r_11.Text));
+            (instance.GetTeil(54) as ETeil).Puffer = Convert.ToInt32(p2r_54.Text);
+            prodMenge(2, 54, Convert.ToInt32(p2r_54.Text));
+            (instance.GetTeil(8) as ETeil).Puffer = Convert.ToInt32(p2r_8.Text);
+            prodMenge(2,8, Convert.ToInt32(p2r_8.Text));
+            (instance.GetTeil(14) as ETeil).Puffer = Convert.ToInt32(p2r_14.Text);
+            prodMenge(2, 14, Convert.ToInt32(p2r_14.Text));
+            (instance.GetTeil(19) as ETeil).Puffer = Convert.ToInt32(p2r_19.Text);
+            prodMenge(2, 19, Convert.ToInt32(p2r_19.Text));
+            (instance.GetTeil(26) as ETeil).KdhPuffer[(instance.GetTeil(26) as ETeil).KdhPuffer.Keys.ToList()[0]][1] = Convert.ToInt32(p2r_26.Text);
+            prodMenge(2, 26, Convert.ToInt32(p2r_26.Text));
+            (instance.GetTeil(16) as ETeil).KdhPuffer[(instance.GetTeil(16) as ETeil).KdhPuffer.Keys.ToList()[1]][1] = Convert.ToInt32(p2r_16.Text);
+            prodMenge(2, 16, Convert.ToInt32(p2r_16.Text));
+            (instance.GetTeil(17) as ETeil).KdhPuffer[(instance.GetTeil(17) as ETeil).KdhPuffer.Keys.ToList()[2]][1] = Convert.ToInt32(p2r_17.Text);
+            prodMenge(2, 17, Convert.ToInt32(p2r_17.Text));
+
+            DispositionDarstellung(2);
+            Information();
         }
     }
 }

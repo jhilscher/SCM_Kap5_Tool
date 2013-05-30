@@ -41,6 +41,13 @@ namespace ToolFahrrad_v1
             get { return kdhProduktionsmenge; }
             set { kdhProduktionsmenge = value; }
         }
+
+        private Dictionary<int, int[]> kdhVaterInWarteschlange;
+
+        public Dictionary<int, int[]> KdhVaterInWarteschlange {
+            get { return kdhVaterInWarteschlange; }
+            set { kdhVaterInWarteschlange = value; }
+        }
         Dictionary<Teil, int> zusammensetzung;
         Dictionary<int, int> position;
         List<int> benutzteArbeitsplaetze;
@@ -53,19 +60,21 @@ namespace ToolFahrrad_v1
             zusammensetzung = new Dictionary<Teil, int>();
             position = new Dictionary<int, int>();
             benutzteArbeitsplaetze = new List<int>();
-
-            KDHaufNULL();
-            
-
+            KDHaufNULL();     
             kdhProduktionsmenge = new Dictionary<string, int>();
         }
 
         public void KDHaufNULL(){
         int[] array = new int[]{-1,-1,-1};
+        int[] array2 = new int[] { 0, 0, 0 };
             kdhPuffer = new Dictionary<int,int[]>();
+            kdhVaterInWarteschlange = new Dictionary<int, int[]>();
             kdhPuffer.Add(26, array);
             kdhPuffer.Add(16, array);
             kdhPuffer.Add(17, array);
+            kdhVaterInWarteschlange.Add(26, array2);
+            kdhVaterInWarteschlange.Add(16, array2);
+            kdhVaterInWarteschlange.Add(17, array2);
         }
 
         // Getter / Setter
@@ -168,11 +177,11 @@ namespace ToolFahrrad_v1
                 else
                 {
                     // Set members
-                    vertriebPer0 = vaterTeil.ProduktionsMengePer0;
-                    vaterInWarteschlange = vaterTeil.InWartschlange;
+                    vertriebPer0 = vaterTeil.ProduktionsMengePer0;                    
                     // Calculation
                     if (Verwendung.Contains("KDH") == false)
                     {
+                        vaterInWarteschlange = vaterTeil.InWartschlange;
                         if (puffer == -1)
                         {
                             puffer = vaterTeil.Puffer;
@@ -189,14 +198,15 @@ namespace ToolFahrrad_v1
                                     pair.Value[index - 1] = vaterTeil.Puffer;
                                 }
                                 pufTemp = pair.Value[index - 1];
+                                kdhVaterInWarteschlange[nr][index - 1] = vaterTeil.InWartschlange;
                             }
                         }
                         int pmTemp = 0;
                         if (index == 1) {
-                            pmTemp = vertriebPer0 + vaterInWarteschlange + pufTemp - lagerstand - inWarteschlange - inBearbeitung;
+                            pmTemp = vertriebPer0 + kdhVaterInWarteschlange[nr][index - 1] + pufTemp - lagerstand - inWarteschlange - inBearbeitung;
                         }
                         else {
-                            pmTemp = vertriebPer0 + vaterInWarteschlange + pufTemp;
+                            pmTemp = vertriebPer0 + kdhVaterInWarteschlange[nr][index - 1] + pufTemp;
                         }
                         kdhProduktionsmenge.Add(index.ToString() + "-" + nr.ToString(), pmTemp);
 

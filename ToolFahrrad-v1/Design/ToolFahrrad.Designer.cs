@@ -664,6 +664,7 @@
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.helpProvider1 = new System.Windows.Forms.HelpProvider();
+            this.p2ETAusfueren = new System.Windows.Forms.PictureBox();
             this.tabs.SuspendLayout();
             this.tab_xml.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pufferP3)).BeginInit();
@@ -712,6 +713,7 @@
             this.tab_bestellung.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
             this.menu.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.p2ETAusfueren)).BeginInit();
             this.SuspendLayout();
             // 
             // tabs
@@ -2743,6 +2745,7 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.p2ETAusfueren);
             this.panel2.Controls.Add(this.label92);
             this.panel2.Controls.Add(this.label93);
             this.panel2.Controls.Add(this.label94);
@@ -5908,6 +5911,15 @@
             // 
             resources.ApplyResources(this.helpProvider1, "helpProvider1");
             // 
+            // p2ETAusfueren
+            // 
+            this.p2ETAusfueren.Cursor = System.Windows.Forms.Cursors.Hand;
+            resources.ApplyResources(this.p2ETAusfueren, "p2ETAusfueren");
+            this.p2ETAusfueren.Name = "p2ETAusfueren";
+            this.helpProvider1.SetShowHelp(this.p2ETAusfueren, ((bool)(resources.GetObject("p2ETAusfueren.ShowHelp"))));
+            this.p2ETAusfueren.TabStop = false;
+            this.p2ETAusfueren.Click += new System.EventHandler(this.p2ETAusfueren_Click);
+            // 
             // Fahrrad
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -5976,6 +5988,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
             this.menu.ResumeLayout(false);
             this.menu.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.p2ETAusfueren)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -6617,6 +6630,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn colBearbeitung;
         private System.Windows.Forms.DataGridViewTextBoxColumn colPlanung;
         private System.Windows.Forms.PictureBox p1ETAusfueren;
+        private System.Windows.Forms.PictureBox p2ETAusfueren;
     }
 }
 
