@@ -625,53 +625,6 @@ namespace ToolFahrrad_v1
             }
         }
 
-        /// <summary>
-        /// SAVE
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void pictureSaveETeile_Click(object sender, EventArgs e) {
-            DialogResult result = GetMessage(null, "Änderungen");
-            string text = string.Empty;
-            if (result == System.Windows.Forms.DialogResult.OK) {
-                Dictionary<int, string> ids = new Dictionary<int, string>();
-                foreach (DataGridViewRow row in dataGridViewETeil.Rows) {
-                    //  if (rbReserve.Checked == true) {
-                    int reserveAlt = (instance.GetTeil(Convert.ToInt32(row.Cells[0].Value.ToString())) as ETeil).Puffer;
-                    int reserveNeu = Convert.ToInt32(row.Cells[8].Value.ToString());
-                    if (!reserveAlt.Equals(reserveNeu)) {
-                        ids.Add(Convert.ToInt32(row.Cells[0].Value.ToString()), reserveAlt + ">" + reserveNeu + ">" + row.Cells[1].Value.ToString());
-                        //        }
-                    }
-                }
-
-                int a = 0;
-                if (ids.Count() > 0) {
-                    foreach (KeyValuePair<int, string> pair in ids) {
-                        if (instance.GetTeil(pair.Key).Verwendung.Equals("KDH"))
-                            ++a;
-                        string[] change = pair.Value.Split('>');
-                        (instance.GetTeil(pair.Key) as ETeil).FeldGeandert(0, Convert.ToInt32(change[1]), 0);
-                        text += change[2] + ": von " + change[0] + " auf " + change[1] + "\n";
-                    }
-                }
-
-                //KDH null
-                foreach (Teil t in instance.ListeETeile) {
-                    if (t.Verwendung.Equals("KDH") && a == 0) {
-                        (t as ETeil).KdhUpdate = false;
-                        (instance.GetTeil(t.Nummer) as ETeil).Puffer = -1;
-                    }
-                }
-
-                pp.Aufloesen();
-                Information();
-                if (!text.Equals(string.Empty))
-                    result = GetMessage(text, "Message");
-                else
-                    result = GetMessage("keine Spalte wurde geändert", "Message");
-            }
-        }
         private void picSaveAPlatz_Click(object sender, EventArgs e) {
             DialogResult result = GetMessage(null, "Änderungen");
             string text = string.Empty;
@@ -717,10 +670,6 @@ namespace ToolFahrrad_v1
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void pictureResetETeil_Click(object sender, EventArgs e) {
-            Information();
-            dataGridViewETeil.Columns[8].DefaultCellStyle.BackColor = Color.Honeydew;
-        }
         private void picResetAPlatz_Click(object sender, EventArgs e) {
             Information();
             dataGridViewAPlatz.Columns[4].DefaultCellStyle.BackColor = Color.Honeydew;
@@ -1018,9 +967,9 @@ namespace ToolFahrrad_v1
             List<Bestellposition> bp = bv.BvPositionen;
         }
 
-        private void prodMenge(int index, int nr, int reserve){
+        private void prodMenge(int index, int nr, int reserve) {
             ETeil et = instance.GetTeil(nr) as ETeil;
-            if(et.IstEndProdukt == true)
+            if (et.IstEndProdukt == true)
                 et.ProduktionsMengePer0 = et.VertriebPer0 + reserve - et.Lagerstand - et.InWartschlange - et.InBearbeitung;
             else if (et.IstEndProdukt != true && et.Verwendung.Contains("KDH") == false)
                 et.ProduktionsMengePer0 = et.VertriebPer0 + et.VaterInWarteschlange + reserve - et.Lagerstand - et.InWartschlange - et.InBearbeitung;
@@ -1044,7 +993,7 @@ namespace ToolFahrrad_v1
             }
         }
         private void p1ETAusfueren_Click(object sender, EventArgs e) {
-            (instance.GetTeil(1) as ETeil).VertriebPer0 = Convert.ToInt32(p1vw_0.Text);            
+            (instance.GetTeil(1) as ETeil).VertriebPer0 = Convert.ToInt32(p1vw_0.Text);
             (instance.GetTeil(1) as ETeil).Puffer = Convert.ToInt32(p1r_0.Text);
             prodMenge(1, 1, Convert.ToInt32(p1r_0.Text));
             (instance.GetTeil(51) as ETeil).Puffer = Convert.ToInt32(p1r_51.Text);
@@ -1088,7 +1037,7 @@ namespace ToolFahrrad_v1
             (instance.GetTeil(54) as ETeil).Puffer = Convert.ToInt32(p2r_54.Text);
             prodMenge(2, 54, Convert.ToInt32(p2r_54.Text));
             (instance.GetTeil(8) as ETeil).Puffer = Convert.ToInt32(p2r_8.Text);
-            prodMenge(2,8, Convert.ToInt32(p2r_8.Text));
+            prodMenge(2, 8, Convert.ToInt32(p2r_8.Text));
             (instance.GetTeil(14) as ETeil).Puffer = Convert.ToInt32(p2r_14.Text);
             prodMenge(2, 14, Convert.ToInt32(p2r_14.Text));
             (instance.GetTeil(19) as ETeil).Puffer = Convert.ToInt32(p2r_19.Text);
@@ -1101,6 +1050,45 @@ namespace ToolFahrrad_v1
             prodMenge(2, 17, Convert.ToInt32(p2r_17.Text));
 
             DispositionDarstellung(2);
+            Information();
+        }
+        private void p3ETAusfueren_Click(object sender, EventArgs e) {
+            (instance.GetTeil(3) as ETeil).VertriebPer0 = Convert.ToInt32(p3vw_0.Text);
+            (instance.GetTeil(3) as ETeil).Puffer = Convert.ToInt32(p3r_0.Text);
+            prodMenge(3, 3, Convert.ToInt32(p3r_0.Text));
+
+            (instance.GetTeil(31) as ETeil).Puffer = Convert.ToInt32(p3r_31.Text);
+            prodMenge(3, 31, Convert.ToInt32(p3r_31.Text));
+
+            (instance.GetTeil(30) as ETeil).Puffer = Convert.ToInt32(p3r_30.Text);
+            prodMenge(3, 30, Convert.ToInt32(p3r_30.Text));
+
+            (instance.GetTeil(6) as ETeil).Puffer = Convert.ToInt32(p3r_6.Text);
+            prodMenge(3, 6, Convert.ToInt32(p3r_6.Text));
+
+            (instance.GetTeil(12) as ETeil).Puffer = Convert.ToInt32(p3r_12.Text);
+            prodMenge(3, 12, Convert.ToInt32(p3r_12.Text));
+
+            (instance.GetTeil(29) as ETeil).Puffer = Convert.ToInt32(p3r_29.Text);
+            prodMenge(3, 29, Convert.ToInt32(p3r_29.Text));
+
+            (instance.GetTeil(9) as ETeil).Puffer = Convert.ToInt32(p3r_9.Text);
+            prodMenge(3, 9, Convert.ToInt32(p3r_9.Text));
+
+            (instance.GetTeil(15) as ETeil).Puffer = Convert.ToInt32(p3r_15.Text);
+            prodMenge(3, 15, Convert.ToInt32(p3r_15.Text));
+
+            (instance.GetTeil(20) as ETeil).Puffer = Convert.ToInt32(p3r_20.Text);
+            prodMenge(3, 20, Convert.ToInt32(p3r_20.Text));
+
+            (instance.GetTeil(26) as ETeil).KdhPuffer[(instance.GetTeil(26) as ETeil).KdhPuffer.Keys.ToList()[0]][2] = Convert.ToInt32(p3r_26.Text);
+            prodMenge(3, 26, Convert.ToInt32(p3r_26.Text));
+            (instance.GetTeil(16) as ETeil).KdhPuffer[(instance.GetTeil(16) as ETeil).KdhPuffer.Keys.ToList()[1]][2] = Convert.ToInt32(p3r_16.Text);
+            prodMenge(3, 16, Convert.ToInt32(p3r_16.Text));
+            (instance.GetTeil(17) as ETeil).KdhPuffer[(instance.GetTeil(17) as ETeil).KdhPuffer.Keys.ToList()[2]][2] = Convert.ToInt32(p3r_17.Text);
+            prodMenge(3, 17, Convert.ToInt32(p3r_17.Text));
+
+            DispositionDarstellung(3);
             Information();
         }
     }
