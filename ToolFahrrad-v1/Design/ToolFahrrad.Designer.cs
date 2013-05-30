@@ -244,6 +244,7 @@
             this.p1ib_0 = new System.Windows.Forms.TextBox();
             this.p1pm_0 = new System.Windows.Forms.TextBox();
             this.p1vw_0 = new System.Windows.Forms.TextBox();
+            this.p1ETAusfueren = new System.Windows.Forms.PictureBox();
             this.tab_P2 = new System.Windows.Forms.TabPage();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label92 = new System.Windows.Forms.Label();
@@ -593,12 +594,6 @@
             this.p3pm_0 = new System.Windows.Forms.TextBox();
             this.p3vw_0 = new System.Windows.Forms.TextBox();
             this.tab_eTeil = new System.Windows.Forms.TabPage();
-            this.cbMitOhne = new System.Windows.Forms.CheckBox();
-            this.rbReserve = new System.Windows.Forms.RadioButton();
-            this.picReadOnlyETeile = new System.Windows.Forms.PictureBox();
-            this.picResetETeil = new System.Windows.Forms.PictureBox();
-            this.picEditEteile = new System.Windows.Forms.PictureBox();
-            this.picSaveETeile = new System.Windows.Forms.PictureBox();
             this.dataGridViewETeil = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -608,7 +603,6 @@
             this.colWarteschlange = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colBearbeitung = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colPlanung = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.reserve = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tab_APlatz = new System.Windows.Forms.TabPage();
             this.picEditsAPlatz = new System.Windows.Forms.PictureBox();
             this.rbRuestzeit = new System.Windows.Forms.RadioButton();
@@ -698,15 +692,12 @@
             this.tab1.SuspendLayout();
             this.tab_P1.SuspendLayout();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.p1ETAusfueren)).BeginInit();
             this.tab_P2.SuspendLayout();
             this.panel2.SuspendLayout();
             this.tab_P3.SuspendLayout();
             this.panel3.SuspendLayout();
             this.tab_eTeil.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picReadOnlyETeile)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picResetETeil)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picEditEteile)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picSaveETeile)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewETeil)).BeginInit();
             this.tab_APlatz.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picEditsAPlatz)).BeginInit();
@@ -1418,8 +1409,10 @@
             this.panel1.Controls.Add(this.p1ib_0);
             this.panel1.Controls.Add(this.p1pm_0);
             this.panel1.Controls.Add(this.p1vw_0);
+            this.panel1.Controls.Add(this.p1ETAusfueren);
             resources.ApplyResources(this.panel1, "panel1");
             this.panel1.Name = "panel1";
+            this.toolTip.SetToolTip(this.panel1, resources.GetString("panel1.ToolTip"));
             // 
             // label91
             // 
@@ -2030,7 +2023,9 @@
             this.p1plus_18.BackColor = System.Drawing.Color.AntiqueWhite;
             resources.ApplyResources(this.p1plus_18, "p1plus_18");
             this.p1plus_18.Name = "p1plus_18";
+            this.p1plus_18.ReadOnly = true;
             this.helpProvider1.SetShowHelp(this.p1plus_18, ((bool)(resources.GetObject("p1plus_18.ShowHelp"))));
+            this.toolTip.SetToolTip(this.p1plus_18, resources.GetString("p1plus_18.ToolTip"));
             // 
             // p1r_18
             // 
@@ -2040,41 +2035,57 @@
             // 
             // p1ls_18
             // 
+            this.p1ls_18.BackColor = System.Drawing.SystemColors.InactiveBorder;
             resources.ApplyResources(this.p1ls_18, "p1ls_18");
             this.p1ls_18.Name = "p1ls_18";
+            this.p1ls_18.ReadOnly = true;
             this.helpProvider1.SetShowHelp(this.p1ls_18, ((bool)(resources.GetObject("p1ls_18.ShowHelp"))));
+            this.toolTip.SetToolTip(this.p1ls_18, resources.GetString("p1ls_18.ToolTip"));
             // 
             // p1iws_18
             // 
+            this.p1iws_18.BackColor = System.Drawing.SystemColors.InactiveBorder;
             resources.ApplyResources(this.p1iws_18, "p1iws_18");
             this.p1iws_18.Name = "p1iws_18";
+            this.p1iws_18.ReadOnly = true;
             this.helpProvider1.SetShowHelp(this.p1iws_18, ((bool)(resources.GetObject("p1iws_18.ShowHelp"))));
+            this.toolTip.SetToolTip(this.p1iws_18, resources.GetString("p1iws_18.ToolTip"));
             // 
             // p1ib_18
             // 
+            this.p1ib_18.BackColor = System.Drawing.SystemColors.InactiveBorder;
             resources.ApplyResources(this.p1ib_18, "p1ib_18");
             this.p1ib_18.Name = "p1ib_18";
+            this.p1ib_18.ReadOnly = true;
             this.helpProvider1.SetShowHelp(this.p1ib_18, ((bool)(resources.GetObject("p1ib_18.ShowHelp"))));
+            this.toolTip.SetToolTip(this.p1ib_18, resources.GetString("p1ib_18.ToolTip"));
             // 
             // p1pm_18
             // 
+            this.p1pm_18.BackColor = System.Drawing.SystemColors.InactiveBorder;
             resources.ApplyResources(this.p1pm_18, "p1pm_18");
             this.p1pm_18.Name = "p1pm_18";
+            this.p1pm_18.ReadOnly = true;
             this.helpProvider1.SetShowHelp(this.p1pm_18, ((bool)(resources.GetObject("p1pm_18.ShowHelp"))));
+            this.toolTip.SetToolTip(this.p1pm_18, resources.GetString("p1pm_18.ToolTip"));
             // 
             // p1vw_18
             // 
-            this.p1vw_18.BackColor = System.Drawing.Color.Honeydew;
+            this.p1vw_18.BackColor = System.Drawing.Color.MistyRose;
             resources.ApplyResources(this.p1vw_18, "p1vw_18");
             this.p1vw_18.Name = "p1vw_18";
+            this.p1vw_18.ReadOnly = true;
             this.helpProvider1.SetShowHelp(this.p1vw_18, ((bool)(resources.GetObject("p1vw_18.ShowHelp"))));
+            this.toolTip.SetToolTip(this.p1vw_18, resources.GetString("p1vw_18.ToolTip"));
             // 
             // p1plus_7
             // 
             this.p1plus_7.BackColor = System.Drawing.Color.AntiqueWhite;
             resources.ApplyResources(this.p1plus_7, "p1plus_7");
             this.p1plus_7.Name = "p1plus_7";
+            this.p1plus_7.ReadOnly = true;
             this.helpProvider1.SetShowHelp(this.p1plus_7, ((bool)(resources.GetObject("p1plus_7.ShowHelp"))));
+            this.toolTip.SetToolTip(this.p1plus_7, resources.GetString("p1plus_7.ToolTip"));
             // 
             // p1r_7
             // 
@@ -2084,41 +2095,57 @@
             // 
             // p1ls_7
             // 
+            this.p1ls_7.BackColor = System.Drawing.SystemColors.InactiveBorder;
             resources.ApplyResources(this.p1ls_7, "p1ls_7");
             this.p1ls_7.Name = "p1ls_7";
+            this.p1ls_7.ReadOnly = true;
             this.helpProvider1.SetShowHelp(this.p1ls_7, ((bool)(resources.GetObject("p1ls_7.ShowHelp"))));
+            this.toolTip.SetToolTip(this.p1ls_7, resources.GetString("p1ls_7.ToolTip"));
             // 
             // p1iws_7
             // 
+            this.p1iws_7.BackColor = System.Drawing.SystemColors.InactiveBorder;
             resources.ApplyResources(this.p1iws_7, "p1iws_7");
             this.p1iws_7.Name = "p1iws_7";
+            this.p1iws_7.ReadOnly = true;
             this.helpProvider1.SetShowHelp(this.p1iws_7, ((bool)(resources.GetObject("p1iws_7.ShowHelp"))));
+            this.toolTip.SetToolTip(this.p1iws_7, resources.GetString("p1iws_7.ToolTip"));
             // 
             // p1ib_7
             // 
+            this.p1ib_7.BackColor = System.Drawing.SystemColors.InactiveBorder;
             resources.ApplyResources(this.p1ib_7, "p1ib_7");
             this.p1ib_7.Name = "p1ib_7";
+            this.p1ib_7.ReadOnly = true;
             this.helpProvider1.SetShowHelp(this.p1ib_7, ((bool)(resources.GetObject("p1ib_7.ShowHelp"))));
+            this.toolTip.SetToolTip(this.p1ib_7, resources.GetString("p1ib_7.ToolTip"));
             // 
             // p1pm_7
             // 
+            this.p1pm_7.BackColor = System.Drawing.SystemColors.InactiveBorder;
             resources.ApplyResources(this.p1pm_7, "p1pm_7");
             this.p1pm_7.Name = "p1pm_7";
+            this.p1pm_7.ReadOnly = true;
             this.helpProvider1.SetShowHelp(this.p1pm_7, ((bool)(resources.GetObject("p1pm_7.ShowHelp"))));
+            this.toolTip.SetToolTip(this.p1pm_7, resources.GetString("p1pm_7.ToolTip"));
             // 
             // p1vw_7
             // 
-            this.p1vw_7.BackColor = System.Drawing.Color.Honeydew;
+            this.p1vw_7.BackColor = System.Drawing.Color.MistyRose;
             resources.ApplyResources(this.p1vw_7, "p1vw_7");
             this.p1vw_7.Name = "p1vw_7";
+            this.p1vw_7.ReadOnly = true;
             this.helpProvider1.SetShowHelp(this.p1vw_7, ((bool)(resources.GetObject("p1vw_7.ShowHelp"))));
+            this.toolTip.SetToolTip(this.p1vw_7, resources.GetString("p1vw_7.ToolTip"));
             // 
             // p1plus_13
             // 
             this.p1plus_13.BackColor = System.Drawing.Color.AntiqueWhite;
             resources.ApplyResources(this.p1plus_13, "p1plus_13");
             this.p1plus_13.Name = "p1plus_13";
+            this.p1plus_13.ReadOnly = true;
             this.helpProvider1.SetShowHelp(this.p1plus_13, ((bool)(resources.GetObject("p1plus_13.ShowHelp"))));
+            this.toolTip.SetToolTip(this.p1plus_13, resources.GetString("p1plus_13.ToolTip"));
             // 
             // p1r_13
             // 
@@ -2128,41 +2155,57 @@
             // 
             // p1ls_13
             // 
+            this.p1ls_13.BackColor = System.Drawing.SystemColors.InactiveBorder;
             resources.ApplyResources(this.p1ls_13, "p1ls_13");
             this.p1ls_13.Name = "p1ls_13";
+            this.p1ls_13.ReadOnly = true;
             this.helpProvider1.SetShowHelp(this.p1ls_13, ((bool)(resources.GetObject("p1ls_13.ShowHelp"))));
+            this.toolTip.SetToolTip(this.p1ls_13, resources.GetString("p1ls_13.ToolTip"));
             // 
             // p1iws_13
             // 
+            this.p1iws_13.BackColor = System.Drawing.SystemColors.InactiveBorder;
             resources.ApplyResources(this.p1iws_13, "p1iws_13");
             this.p1iws_13.Name = "p1iws_13";
+            this.p1iws_13.ReadOnly = true;
             this.helpProvider1.SetShowHelp(this.p1iws_13, ((bool)(resources.GetObject("p1iws_13.ShowHelp"))));
+            this.toolTip.SetToolTip(this.p1iws_13, resources.GetString("p1iws_13.ToolTip"));
             // 
             // p1ib_13
             // 
+            this.p1ib_13.BackColor = System.Drawing.SystemColors.InactiveBorder;
             resources.ApplyResources(this.p1ib_13, "p1ib_13");
             this.p1ib_13.Name = "p1ib_13";
+            this.p1ib_13.ReadOnly = true;
             this.helpProvider1.SetShowHelp(this.p1ib_13, ((bool)(resources.GetObject("p1ib_13.ShowHelp"))));
+            this.toolTip.SetToolTip(this.p1ib_13, resources.GetString("p1ib_13.ToolTip"));
             // 
             // p1pm_13
             // 
+            this.p1pm_13.BackColor = System.Drawing.SystemColors.InactiveBorder;
             resources.ApplyResources(this.p1pm_13, "p1pm_13");
             this.p1pm_13.Name = "p1pm_13";
+            this.p1pm_13.ReadOnly = true;
             this.helpProvider1.SetShowHelp(this.p1pm_13, ((bool)(resources.GetObject("p1pm_13.ShowHelp"))));
+            this.toolTip.SetToolTip(this.p1pm_13, resources.GetString("p1pm_13.ToolTip"));
             // 
             // p1vw_13
             // 
-            this.p1vw_13.BackColor = System.Drawing.Color.Honeydew;
+            this.p1vw_13.BackColor = System.Drawing.Color.MistyRose;
             resources.ApplyResources(this.p1vw_13, "p1vw_13");
             this.p1vw_13.Name = "p1vw_13";
+            this.p1vw_13.ReadOnly = true;
             this.helpProvider1.SetShowHelp(this.p1vw_13, ((bool)(resources.GetObject("p1vw_13.ShowHelp"))));
+            this.toolTip.SetToolTip(this.p1vw_13, resources.GetString("p1vw_13.ToolTip"));
             // 
             // p1plus_49
             // 
             this.p1plus_49.BackColor = System.Drawing.Color.AntiqueWhite;
             resources.ApplyResources(this.p1plus_49, "p1plus_49");
             this.p1plus_49.Name = "p1plus_49";
+            this.p1plus_49.ReadOnly = true;
             this.helpProvider1.SetShowHelp(this.p1plus_49, ((bool)(resources.GetObject("p1plus_49.ShowHelp"))));
+            this.toolTip.SetToolTip(this.p1plus_49, resources.GetString("p1plus_49.ToolTip"));
             // 
             // p1r_49
             // 
@@ -2172,43 +2215,57 @@
             // 
             // p1ls_49
             // 
+            this.p1ls_49.BackColor = System.Drawing.SystemColors.InactiveBorder;
             resources.ApplyResources(this.p1ls_49, "p1ls_49");
             this.p1ls_49.Name = "p1ls_49";
+            this.p1ls_49.ReadOnly = true;
             this.helpProvider1.SetShowHelp(this.p1ls_49, ((bool)(resources.GetObject("p1ls_49.ShowHelp"))));
+            this.toolTip.SetToolTip(this.p1ls_49, resources.GetString("p1ls_49.ToolTip"));
             // 
             // p1iws_49
             // 
             this.p1iws_49.BackColor = System.Drawing.Color.AntiqueWhite;
             resources.ApplyResources(this.p1iws_49, "p1iws_49");
             this.p1iws_49.Name = "p1iws_49";
+            this.p1iws_49.ReadOnly = true;
             this.helpProvider1.SetShowHelp(this.p1iws_49, ((bool)(resources.GetObject("p1iws_49.ShowHelp"))));
+            this.toolTip.SetToolTip(this.p1iws_49, resources.GetString("p1iws_49.ToolTip"));
             // 
             // p1ib_49
             // 
+            this.p1ib_49.BackColor = System.Drawing.SystemColors.InactiveBorder;
             resources.ApplyResources(this.p1ib_49, "p1ib_49");
             this.p1ib_49.Name = "p1ib_49";
+            this.p1ib_49.ReadOnly = true;
             this.helpProvider1.SetShowHelp(this.p1ib_49, ((bool)(resources.GetObject("p1ib_49.ShowHelp"))));
+            this.toolTip.SetToolTip(this.p1ib_49, resources.GetString("p1ib_49.ToolTip"));
             // 
             // p1pm_49
             // 
-            this.p1pm_49.BackColor = System.Drawing.Color.Honeydew;
+            this.p1pm_49.BackColor = System.Drawing.Color.MistyRose;
             resources.ApplyResources(this.p1pm_49, "p1pm_49");
             this.p1pm_49.Name = "p1pm_49";
+            this.p1pm_49.ReadOnly = true;
             this.helpProvider1.SetShowHelp(this.p1pm_49, ((bool)(resources.GetObject("p1pm_49.ShowHelp"))));
+            this.toolTip.SetToolTip(this.p1pm_49, resources.GetString("p1pm_49.ToolTip"));
             // 
             // p1vw_49
             // 
-            this.p1vw_49.BackColor = System.Drawing.Color.Honeydew;
+            this.p1vw_49.BackColor = System.Drawing.Color.MistyRose;
             resources.ApplyResources(this.p1vw_49, "p1vw_49");
             this.p1vw_49.Name = "p1vw_49";
+            this.p1vw_49.ReadOnly = true;
             this.helpProvider1.SetShowHelp(this.p1vw_49, ((bool)(resources.GetObject("p1vw_49.ShowHelp"))));
+            this.toolTip.SetToolTip(this.p1vw_49, resources.GetString("p1vw_49.ToolTip"));
             // 
             // p1plus_4
             // 
             this.p1plus_4.BackColor = System.Drawing.Color.AntiqueWhite;
             resources.ApplyResources(this.p1plus_4, "p1plus_4");
             this.p1plus_4.Name = "p1plus_4";
+            this.p1plus_4.ReadOnly = true;
             this.helpProvider1.SetShowHelp(this.p1plus_4, ((bool)(resources.GetObject("p1plus_4.ShowHelp"))));
+            this.toolTip.SetToolTip(this.p1plus_4, resources.GetString("p1plus_4.ToolTip"));
             // 
             // p1r_4
             // 
@@ -2218,41 +2275,57 @@
             // 
             // p1ls_4
             // 
+            this.p1ls_4.BackColor = System.Drawing.SystemColors.InactiveBorder;
             resources.ApplyResources(this.p1ls_4, "p1ls_4");
             this.p1ls_4.Name = "p1ls_4";
+            this.p1ls_4.ReadOnly = true;
             this.helpProvider1.SetShowHelp(this.p1ls_4, ((bool)(resources.GetObject("p1ls_4.ShowHelp"))));
+            this.toolTip.SetToolTip(this.p1ls_4, resources.GetString("p1ls_4.ToolTip"));
             // 
             // p1iws_4
             // 
+            this.p1iws_4.BackColor = System.Drawing.SystemColors.InactiveBorder;
             resources.ApplyResources(this.p1iws_4, "p1iws_4");
             this.p1iws_4.Name = "p1iws_4";
+            this.p1iws_4.ReadOnly = true;
             this.helpProvider1.SetShowHelp(this.p1iws_4, ((bool)(resources.GetObject("p1iws_4.ShowHelp"))));
+            this.toolTip.SetToolTip(this.p1iws_4, resources.GetString("p1iws_4.ToolTip"));
             // 
             // p1ib_4
             // 
+            this.p1ib_4.BackColor = System.Drawing.SystemColors.InactiveBorder;
             resources.ApplyResources(this.p1ib_4, "p1ib_4");
             this.p1ib_4.Name = "p1ib_4";
+            this.p1ib_4.ReadOnly = true;
             this.helpProvider1.SetShowHelp(this.p1ib_4, ((bool)(resources.GetObject("p1ib_4.ShowHelp"))));
+            this.toolTip.SetToolTip(this.p1ib_4, resources.GetString("p1ib_4.ToolTip"));
             // 
             // p1pm_4
             // 
+            this.p1pm_4.BackColor = System.Drawing.SystemColors.InactiveBorder;
             resources.ApplyResources(this.p1pm_4, "p1pm_4");
             this.p1pm_4.Name = "p1pm_4";
+            this.p1pm_4.ReadOnly = true;
             this.helpProvider1.SetShowHelp(this.p1pm_4, ((bool)(resources.GetObject("p1pm_4.ShowHelp"))));
+            this.toolTip.SetToolTip(this.p1pm_4, resources.GetString("p1pm_4.ToolTip"));
             // 
             // p1vw_4
             // 
-            this.p1vw_4.BackColor = System.Drawing.Color.Honeydew;
+            this.p1vw_4.BackColor = System.Drawing.Color.MistyRose;
             resources.ApplyResources(this.p1vw_4, "p1vw_4");
             this.p1vw_4.Name = "p1vw_4";
+            this.p1vw_4.ReadOnly = true;
             this.helpProvider1.SetShowHelp(this.p1vw_4, ((bool)(resources.GetObject("p1vw_4.ShowHelp"))));
+            this.toolTip.SetToolTip(this.p1vw_4, resources.GetString("p1vw_4.ToolTip"));
             // 
             // p1plus_10
             // 
             this.p1plus_10.BackColor = System.Drawing.Color.AntiqueWhite;
             resources.ApplyResources(this.p1plus_10, "p1plus_10");
             this.p1plus_10.Name = "p1plus_10";
+            this.p1plus_10.ReadOnly = true;
             this.helpProvider1.SetShowHelp(this.p1plus_10, ((bool)(resources.GetObject("p1plus_10.ShowHelp"))));
+            this.toolTip.SetToolTip(this.p1plus_10, resources.GetString("p1plus_10.ToolTip"));
             // 
             // p1r_10
             // 
@@ -2262,41 +2335,57 @@
             // 
             // p1ls_10
             // 
+            this.p1ls_10.BackColor = System.Drawing.SystemColors.InactiveBorder;
             resources.ApplyResources(this.p1ls_10, "p1ls_10");
             this.p1ls_10.Name = "p1ls_10";
+            this.p1ls_10.ReadOnly = true;
             this.helpProvider1.SetShowHelp(this.p1ls_10, ((bool)(resources.GetObject("p1ls_10.ShowHelp"))));
+            this.toolTip.SetToolTip(this.p1ls_10, resources.GetString("p1ls_10.ToolTip"));
             // 
             // p1iws_10
             // 
+            this.p1iws_10.BackColor = System.Drawing.SystemColors.InactiveBorder;
             resources.ApplyResources(this.p1iws_10, "p1iws_10");
             this.p1iws_10.Name = "p1iws_10";
+            this.p1iws_10.ReadOnly = true;
             this.helpProvider1.SetShowHelp(this.p1iws_10, ((bool)(resources.GetObject("p1iws_10.ShowHelp"))));
+            this.toolTip.SetToolTip(this.p1iws_10, resources.GetString("p1iws_10.ToolTip"));
             // 
             // p1ib_10
             // 
+            this.p1ib_10.BackColor = System.Drawing.SystemColors.InactiveBorder;
             resources.ApplyResources(this.p1ib_10, "p1ib_10");
             this.p1ib_10.Name = "p1ib_10";
+            this.p1ib_10.ReadOnly = true;
             this.helpProvider1.SetShowHelp(this.p1ib_10, ((bool)(resources.GetObject("p1ib_10.ShowHelp"))));
+            this.toolTip.SetToolTip(this.p1ib_10, resources.GetString("p1ib_10.ToolTip"));
             // 
             // p1pm_10
             // 
+            this.p1pm_10.BackColor = System.Drawing.SystemColors.InactiveBorder;
             resources.ApplyResources(this.p1pm_10, "p1pm_10");
             this.p1pm_10.Name = "p1pm_10";
+            this.p1pm_10.ReadOnly = true;
             this.helpProvider1.SetShowHelp(this.p1pm_10, ((bool)(resources.GetObject("p1pm_10.ShowHelp"))));
+            this.toolTip.SetToolTip(this.p1pm_10, resources.GetString("p1pm_10.ToolTip"));
             // 
             // p1vw_10
             // 
-            this.p1vw_10.BackColor = System.Drawing.Color.Honeydew;
+            this.p1vw_10.BackColor = System.Drawing.Color.MistyRose;
             resources.ApplyResources(this.p1vw_10, "p1vw_10");
             this.p1vw_10.Name = "p1vw_10";
+            this.p1vw_10.ReadOnly = true;
             this.helpProvider1.SetShowHelp(this.p1vw_10, ((bool)(resources.GetObject("p1vw_10.ShowHelp"))));
+            this.toolTip.SetToolTip(this.p1vw_10, resources.GetString("p1vw_10.ToolTip"));
             // 
             // p1plus_50
             // 
             this.p1plus_50.BackColor = System.Drawing.Color.AntiqueWhite;
             resources.ApplyResources(this.p1plus_50, "p1plus_50");
             this.p1plus_50.Name = "p1plus_50";
+            this.p1plus_50.ReadOnly = true;
             this.helpProvider1.SetShowHelp(this.p1plus_50, ((bool)(resources.GetObject("p1plus_50.ShowHelp"))));
+            this.toolTip.SetToolTip(this.p1plus_50, resources.GetString("p1plus_50.ToolTip"));
             // 
             // p1r_50
             // 
@@ -2306,43 +2395,57 @@
             // 
             // p1ls_50
             // 
+            this.p1ls_50.BackColor = System.Drawing.SystemColors.InactiveBorder;
             resources.ApplyResources(this.p1ls_50, "p1ls_50");
             this.p1ls_50.Name = "p1ls_50";
+            this.p1ls_50.ReadOnly = true;
             this.helpProvider1.SetShowHelp(this.p1ls_50, ((bool)(resources.GetObject("p1ls_50.ShowHelp"))));
+            this.toolTip.SetToolTip(this.p1ls_50, resources.GetString("p1ls_50.ToolTip"));
             // 
             // p1iws_50
             // 
             this.p1iws_50.BackColor = System.Drawing.Color.AntiqueWhite;
             resources.ApplyResources(this.p1iws_50, "p1iws_50");
             this.p1iws_50.Name = "p1iws_50";
+            this.p1iws_50.ReadOnly = true;
             this.helpProvider1.SetShowHelp(this.p1iws_50, ((bool)(resources.GetObject("p1iws_50.ShowHelp"))));
+            this.toolTip.SetToolTip(this.p1iws_50, resources.GetString("p1iws_50.ToolTip"));
             // 
             // p1ib_50
             // 
+            this.p1ib_50.BackColor = System.Drawing.SystemColors.InactiveBorder;
             resources.ApplyResources(this.p1ib_50, "p1ib_50");
             this.p1ib_50.Name = "p1ib_50";
+            this.p1ib_50.ReadOnly = true;
             this.helpProvider1.SetShowHelp(this.p1ib_50, ((bool)(resources.GetObject("p1ib_50.ShowHelp"))));
+            this.toolTip.SetToolTip(this.p1ib_50, resources.GetString("p1ib_50.ToolTip"));
             // 
             // p1pm_50
             // 
-            this.p1pm_50.BackColor = System.Drawing.Color.Honeydew;
+            this.p1pm_50.BackColor = System.Drawing.Color.MistyRose;
             resources.ApplyResources(this.p1pm_50, "p1pm_50");
             this.p1pm_50.Name = "p1pm_50";
+            this.p1pm_50.ReadOnly = true;
             this.helpProvider1.SetShowHelp(this.p1pm_50, ((bool)(resources.GetObject("p1pm_50.ShowHelp"))));
+            this.toolTip.SetToolTip(this.p1pm_50, resources.GetString("p1pm_50.ToolTip"));
             // 
             // p1vw_50
             // 
-            this.p1vw_50.BackColor = System.Drawing.Color.Honeydew;
+            this.p1vw_50.BackColor = System.Drawing.Color.MistyRose;
             resources.ApplyResources(this.p1vw_50, "p1vw_50");
             this.p1vw_50.Name = "p1vw_50";
+            this.p1vw_50.ReadOnly = true;
             this.helpProvider1.SetShowHelp(this.p1vw_50, ((bool)(resources.GetObject("p1vw_50.ShowHelp"))));
+            this.toolTip.SetToolTip(this.p1vw_50, resources.GetString("p1vw_50.ToolTip"));
             // 
             // p1plus_16
             // 
             this.p1plus_16.BackColor = System.Drawing.Color.AntiqueWhite;
             resources.ApplyResources(this.p1plus_16, "p1plus_16");
             this.p1plus_16.Name = "p1plus_16";
+            this.p1plus_16.ReadOnly = true;
             this.helpProvider1.SetShowHelp(this.p1plus_16, ((bool)(resources.GetObject("p1plus_16.ShowHelp"))));
+            this.toolTip.SetToolTip(this.p1plus_16, resources.GetString("p1plus_16.ToolTip"));
             // 
             // p1r_16
             // 
@@ -2352,42 +2455,57 @@
             // 
             // p1ls_16
             // 
+            this.p1ls_16.BackColor = System.Drawing.SystemColors.InactiveBorder;
             resources.ApplyResources(this.p1ls_16, "p1ls_16");
             this.p1ls_16.Name = "p1ls_16";
+            this.p1ls_16.ReadOnly = true;
             this.helpProvider1.SetShowHelp(this.p1ls_16, ((bool)(resources.GetObject("p1ls_16.ShowHelp"))));
+            this.toolTip.SetToolTip(this.p1ls_16, resources.GetString("p1ls_16.ToolTip"));
             // 
             // p1iws_16
             // 
+            this.p1iws_16.BackColor = System.Drawing.SystemColors.InactiveBorder;
             resources.ApplyResources(this.p1iws_16, "p1iws_16");
             this.p1iws_16.Name = "p1iws_16";
+            this.p1iws_16.ReadOnly = true;
             this.helpProvider1.SetShowHelp(this.p1iws_16, ((bool)(resources.GetObject("p1iws_16.ShowHelp"))));
+            this.toolTip.SetToolTip(this.p1iws_16, resources.GetString("p1iws_16.ToolTip"));
             // 
             // p1ib_16
             // 
+            this.p1ib_16.BackColor = System.Drawing.SystemColors.InactiveBorder;
             resources.ApplyResources(this.p1ib_16, "p1ib_16");
             this.p1ib_16.Name = "p1ib_16";
+            this.p1ib_16.ReadOnly = true;
             this.helpProvider1.SetShowHelp(this.p1ib_16, ((bool)(resources.GetObject("p1ib_16.ShowHelp"))));
+            this.toolTip.SetToolTip(this.p1ib_16, resources.GetString("p1ib_16.ToolTip"));
             // 
             // p1pm_16
             // 
             this.p1pm_16.BackColor = System.Drawing.Color.LemonChiffon;
             resources.ApplyResources(this.p1pm_16, "p1pm_16");
             this.p1pm_16.Name = "p1pm_16";
+            this.p1pm_16.ReadOnly = true;
             this.helpProvider1.SetShowHelp(this.p1pm_16, ((bool)(resources.GetObject("p1pm_16.ShowHelp"))));
+            this.toolTip.SetToolTip(this.p1pm_16, resources.GetString("p1pm_16.ToolTip"));
             // 
             // p1vw_16
             // 
-            this.p1vw_16.BackColor = System.Drawing.Color.Honeydew;
+            this.p1vw_16.BackColor = System.Drawing.Color.MistyRose;
             resources.ApplyResources(this.p1vw_16, "p1vw_16");
             this.p1vw_16.Name = "p1vw_16";
+            this.p1vw_16.ReadOnly = true;
             this.helpProvider1.SetShowHelp(this.p1vw_16, ((bool)(resources.GetObject("p1vw_16.ShowHelp"))));
+            this.toolTip.SetToolTip(this.p1vw_16, resources.GetString("p1vw_16.ToolTip"));
             // 
             // p1plus_17
             // 
             this.p1plus_17.BackColor = System.Drawing.Color.AntiqueWhite;
             resources.ApplyResources(this.p1plus_17, "p1plus_17");
             this.p1plus_17.Name = "p1plus_17";
+            this.p1plus_17.ReadOnly = true;
             this.helpProvider1.SetShowHelp(this.p1plus_17, ((bool)(resources.GetObject("p1plus_17.ShowHelp"))));
+            this.toolTip.SetToolTip(this.p1plus_17, resources.GetString("p1plus_17.ToolTip"));
             // 
             // p1r_17
             // 
@@ -2397,42 +2515,57 @@
             // 
             // p1ls_17
             // 
+            this.p1ls_17.BackColor = System.Drawing.SystemColors.InactiveBorder;
             resources.ApplyResources(this.p1ls_17, "p1ls_17");
             this.p1ls_17.Name = "p1ls_17";
+            this.p1ls_17.ReadOnly = true;
             this.helpProvider1.SetShowHelp(this.p1ls_17, ((bool)(resources.GetObject("p1ls_17.ShowHelp"))));
+            this.toolTip.SetToolTip(this.p1ls_17, resources.GetString("p1ls_17.ToolTip"));
             // 
             // p1iws_17
             // 
+            this.p1iws_17.BackColor = System.Drawing.SystemColors.InactiveBorder;
             resources.ApplyResources(this.p1iws_17, "p1iws_17");
             this.p1iws_17.Name = "p1iws_17";
+            this.p1iws_17.ReadOnly = true;
             this.helpProvider1.SetShowHelp(this.p1iws_17, ((bool)(resources.GetObject("p1iws_17.ShowHelp"))));
+            this.toolTip.SetToolTip(this.p1iws_17, resources.GetString("p1iws_17.ToolTip"));
             // 
             // p1ib_17
             // 
+            this.p1ib_17.BackColor = System.Drawing.SystemColors.InactiveBorder;
             resources.ApplyResources(this.p1ib_17, "p1ib_17");
             this.p1ib_17.Name = "p1ib_17";
+            this.p1ib_17.ReadOnly = true;
             this.helpProvider1.SetShowHelp(this.p1ib_17, ((bool)(resources.GetObject("p1ib_17.ShowHelp"))));
+            this.toolTip.SetToolTip(this.p1ib_17, resources.GetString("p1ib_17.ToolTip"));
             // 
             // p1pm_17
             // 
             this.p1pm_17.BackColor = System.Drawing.Color.LemonChiffon;
             resources.ApplyResources(this.p1pm_17, "p1pm_17");
             this.p1pm_17.Name = "p1pm_17";
+            this.p1pm_17.ReadOnly = true;
             this.helpProvider1.SetShowHelp(this.p1pm_17, ((bool)(resources.GetObject("p1pm_17.ShowHelp"))));
+            this.toolTip.SetToolTip(this.p1pm_17, resources.GetString("p1pm_17.ToolTip"));
             // 
             // p1vw_17
             // 
-            this.p1vw_17.BackColor = System.Drawing.Color.Honeydew;
+            this.p1vw_17.BackColor = System.Drawing.Color.MistyRose;
             resources.ApplyResources(this.p1vw_17, "p1vw_17");
             this.p1vw_17.Name = "p1vw_17";
+            this.p1vw_17.ReadOnly = true;
             this.helpProvider1.SetShowHelp(this.p1vw_17, ((bool)(resources.GetObject("p1vw_17.ShowHelp"))));
+            this.toolTip.SetToolTip(this.p1vw_17, resources.GetString("p1vw_17.ToolTip"));
             // 
             // p1plus_26
             // 
             this.p1plus_26.BackColor = System.Drawing.Color.AntiqueWhite;
             resources.ApplyResources(this.p1plus_26, "p1plus_26");
             this.p1plus_26.Name = "p1plus_26";
+            this.p1plus_26.ReadOnly = true;
             this.helpProvider1.SetShowHelp(this.p1plus_26, ((bool)(resources.GetObject("p1plus_26.ShowHelp"))));
+            this.toolTip.SetToolTip(this.p1plus_26, resources.GetString("p1plus_26.ToolTip"));
             // 
             // p1r_26
             // 
@@ -2442,42 +2575,57 @@
             // 
             // p1ls_26
             // 
+            this.p1ls_26.BackColor = System.Drawing.SystemColors.InactiveBorder;
             resources.ApplyResources(this.p1ls_26, "p1ls_26");
             this.p1ls_26.Name = "p1ls_26";
+            this.p1ls_26.ReadOnly = true;
             this.helpProvider1.SetShowHelp(this.p1ls_26, ((bool)(resources.GetObject("p1ls_26.ShowHelp"))));
+            this.toolTip.SetToolTip(this.p1ls_26, resources.GetString("p1ls_26.ToolTip"));
             // 
             // p1iws_26
             // 
+            this.p1iws_26.BackColor = System.Drawing.SystemColors.InactiveBorder;
             resources.ApplyResources(this.p1iws_26, "p1iws_26");
             this.p1iws_26.Name = "p1iws_26";
+            this.p1iws_26.ReadOnly = true;
             this.helpProvider1.SetShowHelp(this.p1iws_26, ((bool)(resources.GetObject("p1iws_26.ShowHelp"))));
+            this.toolTip.SetToolTip(this.p1iws_26, resources.GetString("p1iws_26.ToolTip"));
             // 
             // p1ib_26
             // 
+            this.p1ib_26.BackColor = System.Drawing.SystemColors.InactiveBorder;
             resources.ApplyResources(this.p1ib_26, "p1ib_26");
             this.p1ib_26.Name = "p1ib_26";
+            this.p1ib_26.ReadOnly = true;
             this.helpProvider1.SetShowHelp(this.p1ib_26, ((bool)(resources.GetObject("p1ib_26.ShowHelp"))));
+            this.toolTip.SetToolTip(this.p1ib_26, resources.GetString("p1ib_26.ToolTip"));
             // 
             // p1pm_26
             // 
             this.p1pm_26.BackColor = System.Drawing.Color.LemonChiffon;
             resources.ApplyResources(this.p1pm_26, "p1pm_26");
             this.p1pm_26.Name = "p1pm_26";
+            this.p1pm_26.ReadOnly = true;
             this.helpProvider1.SetShowHelp(this.p1pm_26, ((bool)(resources.GetObject("p1pm_26.ShowHelp"))));
+            this.toolTip.SetToolTip(this.p1pm_26, resources.GetString("p1pm_26.ToolTip"));
             // 
             // p1vw_26
             // 
-            this.p1vw_26.BackColor = System.Drawing.Color.Honeydew;
+            this.p1vw_26.BackColor = System.Drawing.Color.MistyRose;
             resources.ApplyResources(this.p1vw_26, "p1vw_26");
             this.p1vw_26.Name = "p1vw_26";
+            this.p1vw_26.ReadOnly = true;
             this.helpProvider1.SetShowHelp(this.p1vw_26, ((bool)(resources.GetObject("p1vw_26.ShowHelp"))));
+            this.toolTip.SetToolTip(this.p1vw_26, resources.GetString("p1vw_26.ToolTip"));
             // 
             // p1plus_51
             // 
             this.p1plus_51.BackColor = System.Drawing.Color.AntiqueWhite;
             resources.ApplyResources(this.p1plus_51, "p1plus_51");
             this.p1plus_51.Name = "p1plus_51";
+            this.p1plus_51.ReadOnly = true;
             this.helpProvider1.SetShowHelp(this.p1plus_51, ((bool)(resources.GetObject("p1plus_51.ShowHelp"))));
+            this.toolTip.SetToolTip(this.p1plus_51, resources.GetString("p1plus_51.ToolTip"));
             // 
             // p1r_51
             // 
@@ -2487,36 +2635,48 @@
             // 
             // p1ls_51
             // 
+            this.p1ls_51.BackColor = System.Drawing.SystemColors.InactiveBorder;
             resources.ApplyResources(this.p1ls_51, "p1ls_51");
             this.p1ls_51.Name = "p1ls_51";
+            this.p1ls_51.ReadOnly = true;
             this.helpProvider1.SetShowHelp(this.p1ls_51, ((bool)(resources.GetObject("p1ls_51.ShowHelp"))));
+            this.toolTip.SetToolTip(this.p1ls_51, resources.GetString("p1ls_51.ToolTip"));
             // 
             // p1iws_51
             // 
             this.p1iws_51.BackColor = System.Drawing.Color.AntiqueWhite;
             resources.ApplyResources(this.p1iws_51, "p1iws_51");
             this.p1iws_51.Name = "p1iws_51";
+            this.p1iws_51.ReadOnly = true;
             this.helpProvider1.SetShowHelp(this.p1iws_51, ((bool)(resources.GetObject("p1iws_51.ShowHelp"))));
+            this.toolTip.SetToolTip(this.p1iws_51, resources.GetString("p1iws_51.ToolTip"));
             // 
             // p1ib_51
             // 
+            this.p1ib_51.BackColor = System.Drawing.SystemColors.InactiveBorder;
             resources.ApplyResources(this.p1ib_51, "p1ib_51");
             this.p1ib_51.Name = "p1ib_51";
+            this.p1ib_51.ReadOnly = true;
             this.helpProvider1.SetShowHelp(this.p1ib_51, ((bool)(resources.GetObject("p1ib_51.ShowHelp"))));
+            this.toolTip.SetToolTip(this.p1ib_51, resources.GetString("p1ib_51.ToolTip"));
             // 
             // p1pm_51
             // 
-            this.p1pm_51.BackColor = System.Drawing.Color.Honeydew;
+            this.p1pm_51.BackColor = System.Drawing.Color.MistyRose;
             resources.ApplyResources(this.p1pm_51, "p1pm_51");
             this.p1pm_51.Name = "p1pm_51";
+            this.p1pm_51.ReadOnly = true;
             this.helpProvider1.SetShowHelp(this.p1pm_51, ((bool)(resources.GetObject("p1pm_51.ShowHelp"))));
+            this.toolTip.SetToolTip(this.p1pm_51, resources.GetString("p1pm_51.ToolTip"));
             // 
             // p1vw_51
             // 
-            this.p1vw_51.BackColor = System.Drawing.Color.Honeydew;
+            this.p1vw_51.BackColor = System.Drawing.Color.MistyRose;
             resources.ApplyResources(this.p1vw_51, "p1vw_51");
             this.p1vw_51.Name = "p1vw_51";
+            this.p1vw_51.ReadOnly = true;
             this.helpProvider1.SetShowHelp(this.p1vw_51, ((bool)(resources.GetObject("p1vw_51.ShowHelp"))));
+            this.toolTip.SetToolTip(this.p1vw_51, resources.GetString("p1vw_51.ToolTip"));
             // 
             // p1r_0
             // 
@@ -2526,35 +2686,53 @@
             // 
             // p1ls_0
             // 
+            this.p1ls_0.BackColor = System.Drawing.SystemColors.InactiveBorder;
             resources.ApplyResources(this.p1ls_0, "p1ls_0");
             this.p1ls_0.Name = "p1ls_0";
+            this.p1ls_0.ReadOnly = true;
             this.helpProvider1.SetShowHelp(this.p1ls_0, ((bool)(resources.GetObject("p1ls_0.ShowHelp"))));
+            this.toolTip.SetToolTip(this.p1ls_0, resources.GetString("p1ls_0.ToolTip"));
             // 
             // p1iws_0
             // 
             this.p1iws_0.BackColor = System.Drawing.Color.AntiqueWhite;
             resources.ApplyResources(this.p1iws_0, "p1iws_0");
             this.p1iws_0.Name = "p1iws_0";
+            this.p1iws_0.ReadOnly = true;
             this.helpProvider1.SetShowHelp(this.p1iws_0, ((bool)(resources.GetObject("p1iws_0.ShowHelp"))));
+            this.toolTip.SetToolTip(this.p1iws_0, resources.GetString("p1iws_0.ToolTip"));
             // 
             // p1ib_0
             // 
+            this.p1ib_0.BackColor = System.Drawing.SystemColors.InactiveBorder;
             resources.ApplyResources(this.p1ib_0, "p1ib_0");
             this.p1ib_0.Name = "p1ib_0";
+            this.p1ib_0.ReadOnly = true;
             this.helpProvider1.SetShowHelp(this.p1ib_0, ((bool)(resources.GetObject("p1ib_0.ShowHelp"))));
+            this.toolTip.SetToolTip(this.p1ib_0, resources.GetString("p1ib_0.ToolTip"));
             // 
             // p1pm_0
             // 
-            this.p1pm_0.BackColor = System.Drawing.Color.Honeydew;
+            this.p1pm_0.BackColor = System.Drawing.Color.MistyRose;
             resources.ApplyResources(this.p1pm_0, "p1pm_0");
             this.p1pm_0.Name = "p1pm_0";
+            this.p1pm_0.ReadOnly = true;
             this.helpProvider1.SetShowHelp(this.p1pm_0, ((bool)(resources.GetObject("p1pm_0.ShowHelp"))));
+            this.toolTip.SetToolTip(this.p1pm_0, resources.GetString("p1pm_0.ToolTip"));
             // 
             // p1vw_0
             // 
             this.p1vw_0.BackColor = System.Drawing.Color.LightYellow;
             resources.ApplyResources(this.p1vw_0, "p1vw_0");
             this.p1vw_0.Name = "p1vw_0";
+            // 
+            // p1ETAusfueren
+            // 
+            this.p1ETAusfueren.Cursor = System.Windows.Forms.Cursors.Hand;
+            resources.ApplyResources(this.p1ETAusfueren, "p1ETAusfueren");
+            this.p1ETAusfueren.Name = "p1ETAusfueren";
+            this.p1ETAusfueren.TabStop = false;
+            this.p1ETAusfueren.Click += new System.EventHandler(this.p1ETAusfueren_Click);
             // 
             // tab_P2
             // 
@@ -5203,78 +5381,10 @@
             // tab_eTeil
             // 
             this.tab_eTeil.BackColor = System.Drawing.Color.Transparent;
-            this.tab_eTeil.Controls.Add(this.cbMitOhne);
-            this.tab_eTeil.Controls.Add(this.rbReserve);
-            this.tab_eTeil.Controls.Add(this.picReadOnlyETeile);
-            this.tab_eTeil.Controls.Add(this.picResetETeil);
-            this.tab_eTeil.Controls.Add(this.picEditEteile);
-            this.tab_eTeil.Controls.Add(this.picSaveETeile);
             this.tab_eTeil.Controls.Add(this.dataGridViewETeil);
             resources.ApplyResources(this.tab_eTeil, "tab_eTeil");
             this.tab_eTeil.Name = "tab_eTeil";
             this.helpProvider1.SetShowHelp(this.tab_eTeil, ((bool)(resources.GetObject("tab_eTeil.ShowHelp"))));
-            // 
-            // cbMitOhne
-            // 
-            resources.ApplyResources(this.cbMitOhne, "cbMitOhne");
-            this.cbMitOhne.Checked = true;
-            this.cbMitOhne.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.helpProvider1.SetHelpKeyword(this.cbMitOhne, resources.GetString("cbMitOhne.HelpKeyword"));
-            this.helpProvider1.SetHelpNavigator(this.cbMitOhne, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("cbMitOhne.HelpNavigator"))));
-            this.helpProvider1.SetHelpString(this.cbMitOhne, resources.GetString("cbMitOhne.HelpString"));
-            this.cbMitOhne.Name = "cbMitOhne";
-            this.helpProvider1.SetShowHelp(this.cbMitOhne, ((bool)(resources.GetObject("cbMitOhne.ShowHelp"))));
-            this.cbMitOhne.UseVisualStyleBackColor = true;
-            this.cbMitOhne.CheckedChanged += new System.EventHandler(this.cbMitOhne_CheckedChanged);
-            // 
-            // rbReserve
-            // 
-            resources.ApplyResources(this.rbReserve, "rbReserve");
-            this.rbReserve.Checked = true;
-            this.rbReserve.Name = "rbReserve";
-            this.helpProvider1.SetShowHelp(this.rbReserve, ((bool)(resources.GetObject("rbReserve.ShowHelp"))));
-            this.rbReserve.TabStop = true;
-            this.rbReserve.UseVisualStyleBackColor = true;
-            // 
-            // picReadOnlyETeile
-            // 
-            this.picReadOnlyETeile.Cursor = System.Windows.Forms.Cursors.Hand;
-            resources.ApplyResources(this.picReadOnlyETeile, "picReadOnlyETeile");
-            this.picReadOnlyETeile.Name = "picReadOnlyETeile";
-            this.helpProvider1.SetShowHelp(this.picReadOnlyETeile, ((bool)(resources.GetObject("picReadOnlyETeile.ShowHelp"))));
-            this.picReadOnlyETeile.TabStop = false;
-            this.toolTip.SetToolTip(this.picReadOnlyETeile, resources.GetString("picReadOnlyETeile.ToolTip"));
-            this.picReadOnlyETeile.Click += new System.EventHandler(this.pictureReadOnly_Click);
-            // 
-            // picResetETeil
-            // 
-            this.picResetETeil.Cursor = System.Windows.Forms.Cursors.Hand;
-            resources.ApplyResources(this.picResetETeil, "picResetETeil");
-            this.picResetETeil.Name = "picResetETeil";
-            this.helpProvider1.SetShowHelp(this.picResetETeil, ((bool)(resources.GetObject("picResetETeil.ShowHelp"))));
-            this.picResetETeil.TabStop = false;
-            this.toolTip.SetToolTip(this.picResetETeil, resources.GetString("picResetETeil.ToolTip"));
-            this.picResetETeil.Click += new System.EventHandler(this.pictureResetETeil_Click);
-            // 
-            // picEditEteile
-            // 
-            this.picEditEteile.Cursor = System.Windows.Forms.Cursors.Hand;
-            resources.ApplyResources(this.picEditEteile, "picEditEteile");
-            this.picEditEteile.Name = "picEditEteile";
-            this.helpProvider1.SetShowHelp(this.picEditEteile, ((bool)(resources.GetObject("picEditEteile.ShowHelp"))));
-            this.picEditEteile.TabStop = false;
-            this.toolTip.SetToolTip(this.picEditEteile, resources.GetString("picEditEteile.ToolTip"));
-            this.picEditEteile.Click += new System.EventHandler(this.picEditEteile_Click);
-            // 
-            // picSaveETeile
-            // 
-            this.picSaveETeile.Cursor = System.Windows.Forms.Cursors.Hand;
-            resources.ApplyResources(this.picSaveETeile, "picSaveETeile");
-            this.picSaveETeile.Name = "picSaveETeile";
-            this.helpProvider1.SetShowHelp(this.picSaveETeile, ((bool)(resources.GetObject("picSaveETeile.ShowHelp"))));
-            this.picSaveETeile.TabStop = false;
-            this.toolTip.SetToolTip(this.picSaveETeile, resources.GetString("picSaveETeile.ToolTip"));
-            this.picSaveETeile.Click += new System.EventHandler(this.pictureSaveETeile_Click);
             // 
             // dataGridViewETeil
             // 
@@ -5291,8 +5401,7 @@
             this.dataGridViewImageColumn1,
             this.colWarteschlange,
             this.colBearbeitung,
-            this.colPlanung,
-            this.reserve});
+            this.colPlanung});
             resources.ApplyResources(this.dataGridViewETeil, "dataGridViewETeil");
             this.dataGridViewETeil.Name = "dataGridViewETeil";
             this.helpProvider1.SetShowHelp(this.dataGridViewETeil, ((bool)(resources.GetObject("dataGridViewETeil.ShowHelp"))));
@@ -5346,12 +5455,6 @@
             resources.ApplyResources(this.colPlanung, "colPlanung");
             this.colPlanung.Name = "colPlanung";
             this.colPlanung.ReadOnly = true;
-            // 
-            // reserve
-            // 
-            resources.ApplyResources(this.reserve, "reserve");
-            this.reserve.Name = "reserve";
-            this.reserve.ReadOnly = true;
             // 
             // tab_APlatz
             // 
@@ -5848,6 +5951,7 @@
             this.tab_P1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.p1ETAusfueren)).EndInit();
             this.tab_P2.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
@@ -5855,11 +5959,6 @@
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.tab_eTeil.ResumeLayout(false);
-            this.tab_eTeil.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picReadOnlyETeile)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picResetETeil)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picEditEteile)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picSaveETeile)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewETeil)).EndInit();
             this.tab_APlatz.ResumeLayout(false);
             this.tab_APlatz.PerformLayout();
@@ -5986,22 +6085,7 @@
         private System.Windows.Forms.DataGridViewImageColumn b4;
         private System.Windows.Forms.TabPage tab_bestellung;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.CheckBox cbMitOhne;
-        private System.Windows.Forms.RadioButton rbReserve;
-        private System.Windows.Forms.PictureBox picReadOnlyETeile;
-        private System.Windows.Forms.PictureBox picResetETeil;
-        private System.Windows.Forms.PictureBox picEditEteile;
-        private System.Windows.Forms.PictureBox picSaveETeile;
         private System.Windows.Forms.DataGridView dataGridViewETeil;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colWarteschlange;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colBearbeitung;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colPlanung;
-        private System.Windows.Forms.DataGridViewTextBoxColumn reserve;
         private System.Windows.Forms.TabPage tab_P1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label12;
@@ -6524,6 +6608,15 @@
         private System.Windows.Forms.TextBox p3ib_0;
         private System.Windows.Forms.TextBox p3pm_0;
         private System.Windows.Forms.TextBox p3vw_0;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colWarteschlange;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colBearbeitung;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colPlanung;
+        private System.Windows.Forms.PictureBox p1ETAusfueren;
     }
 }
 
