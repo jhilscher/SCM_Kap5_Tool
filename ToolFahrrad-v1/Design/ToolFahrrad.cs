@@ -608,90 +608,6 @@ namespace ToolFahrrad_v1
             //Help.ShowHelp(this, path, HelpNavigator.TableOfContents, "");
         }
 
-        /// <summary>
-        /// EDIT
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void picEditAPlatz_Click(object sender, EventArgs e) {
-            Dictionary<PictureBox, bool> dic = new Dictionary<PictureBox, bool>() 
-            {
-                {this.picSaveAPlatz, true},
-                {this.picResetAPlatz, true},
-                {this.picReadOnlyAPlatz, true}
-            };
-            if (rbRuestzeit.Checked == true) {
-                picEdit(dic, 5, dataGridViewAPlatz);
-            }
-        }
-
-        private void picSaveAPlatz_Click(object sender, EventArgs e) {
-            DialogResult result = GetMessage(null, "Änderungen");
-            string text = string.Empty;
-            if (result == System.Windows.Forms.DialogResult.OK) {
-                Dictionary<int, string> ids = new Dictionary<int, string>();
-                foreach (DataGridViewRow row in dataGridViewAPlatz.Rows) {
-                    if (rbRuestzeit.Checked == true) {
-                        int ruestAlt = (instance.GetArbeitsplatz(Convert.ToInt32(row.Cells[0].Value.ToString()))).RuestungCustom;
-                        int ruestNeu = Convert.ToInt32(row.Cells[5].Value.ToString());
-                        if (!ruestAlt.Equals(ruestNeu)) {
-                            ids.Add(Convert.ToInt32(row.Cells[0].Value.ToString()), ruestAlt + ">" + ruestNeu);
-                        }
-                    }
-                }
-
-                if (ids.Count() > 0) {
-                    foreach (KeyValuePair<int, string> pair in ids) {
-                        string[] change = pair.Value.Split('>');
-                        (instance.GetArbeitsplatz(pair.Key)).CustomRuestungGeaendert(Convert.ToInt32(change[1]));
-                        text += pair.Key + ": von " + change[0] + " auf " + change[1] + "\n";
-                    }
-                }
-                Dictionary<PictureBox, bool> dic = new Dictionary<PictureBox, bool>() 
-                {
-                    {this.picEditsAPlatz, true},
-                    {this.picResetAPlatz, false},
-                    {this.picSaveAPlatz, false},
-                    {this.picReadOnlyAPlatz, false}
-                };
-                picSave(dic, 5, dataGridViewAPlatz);
-                Information();
-                if (!text.Equals(string.Empty))
-                    result = GetMessage(text, "Message");
-                else
-                    result = GetMessage("keine Spalte wurde geändert", "Message");
-            }
-        }
-
-
-
-        /// <summary>
-        /// RESET
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void picResetAPlatz_Click(object sender, EventArgs e) {
-            Information();
-            dataGridViewAPlatz.Columns[4].DefaultCellStyle.BackColor = Color.Honeydew;
-        }
-
-        /// <summary>
-        /// READONLY
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void picReadOnlyAPlatz_Click(object sender, EventArgs e) {
-            Dictionary<PictureBox, bool> dic = new Dictionary<PictureBox, bool>() 
-            {
-                {this.picEditsAPlatz, true},
-                {this.picResetAPlatz, false},
-                {this.picSaveAPlatz, false},
-                {this.picReadOnlyAPlatz, false}
-            };
-            picReadOnly(dic, 5, dataGridViewAPlatz);
-        }
-
-
         ////////////////////////////////////////////////////////////////////////////
         /// <summary>
         /// HILFSMETHODEN
@@ -846,6 +762,7 @@ namespace ToolFahrrad_v1
                     dataGridViewETeil.Rows[index].Cells[7].Value = a.ProduktionsMengePer0;
                 else {
                     int prodMenge = 0;
+                    //TODO UMRECHNEN
                     foreach (KeyValuePair<string, int> pair in a.KdhProduktionsmenge) {
                         prodMenge += pair.Value;
                     }
@@ -870,55 +787,52 @@ namespace ToolFahrrad_v1
             this.DataGriedViewRemove(dataGridViewAPlatz);
             index = 0;
             foreach (var a in instance.ArbeitsplatzList) {
-                int gesammtZeit = (int)(a.GetRuestZeit * a.RuestungCustom);
-                int gesammt = gesammtZeit + a.GetBenoetigteZeit;
+                int gesammt = a.GetRuestZeit + a.GetBenoetigteZeit;
 
                 dataGridViewAPlatz.Rows.Add();
                 dataGridViewAPlatz.Rows[index].Cells[0].Value = a.GetNummerArbeitsplatz;
                 (instance.GetArbeitsplatz(a.GetNummerArbeitsplatz)).CustomRuestungGeaendert(-1);
                 dataGridViewAPlatz.Rows[index].Cells[1].Value = a.Leerzeit + " (" + a.RuestungVorPeriode + ") ";
                 dataGridViewAPlatz.Rows[index].Cells[2].Value = a.GetBenoetigteZeit + " min";
-                dataGridViewAPlatz.Rows[index].Cells[3].Value = (int)(a.GetRuestZeit * a.RuestungCustom) + " min";
-                dataGridViewAPlatz.Rows[index].Cells[4].Value = a.RuestNew;
-                dataGridViewAPlatz.Rows[index].Cells[5].Value = a.RuestungCustom;
-                dataGridViewAPlatz.Rows[index].Cells[6].Value = gesammt + " min";
-                dataGridViewAPlatz.Rows[index].Cells[10].Value = imageList1.Images[2];
+                dataGridViewAPlatz.Rows[index].Cells[3].Value = a.GetRuestZeit;
+                //dataGridViewAPlatz.Rows[index].Cells[4].Value = a.RuestNew;
+                //dataGridViewAPlatz.Rows[index].Cells[5].Value = a.RuestungCustom;
+                dataGridViewAPlatz.Rows[index].Cells[4].Value = gesammt + " min";
+                dataGridViewAPlatz.Rows[index].Cells[8].Value = imageList1.Images[2];
                 if (gesammt <= a.zeit) // newTeim <= 2400 
-                    dataGridViewAPlatz.Rows[index].Cells[7].Value = imageList1.Images[2];
+                    dataGridViewAPlatz.Rows[index].Cells[5].Value = imageList1.Images[2];
                 else if (gesammt > instance.ErsteSchicht) // gesammt > 3600
                 {
                     if (gesammt > 7200)
-                        dataGridViewAPlatz.Rows[index].Cells[10].Value = imageList1.Images[0];
+                        dataGridViewAPlatz.Rows[index].Cells[8].Value = imageList1.Images[0];
                     else if (gesammt > instance.ZweiteSchicht && gesammt < 7200)
-                        dataGridViewAPlatz.Rows[index].Cells[10].Value = imageList1.Images[1];
+                        dataGridViewAPlatz.Rows[index].Cells[8].Value = imageList1.Images[1];
                     else
-                        dataGridViewAPlatz.Rows[index].Cells[10].Value = imageList1.Images[2];
+                        dataGridViewAPlatz.Rows[index].Cells[8].Value = imageList1.Images[2];
 
                     if (gesammt < instance.ZweiteSchicht) {
-                        dataGridViewAPlatz.Rows[index].Cells[7].Value = imageList1.Images[0];
-                        dataGridViewAPlatz.Rows[index].Cells[8].Value = true;
+                        dataGridViewAPlatz.Rows[index].Cells[5].Value = imageList1.Images[0];
+                        dataGridViewAPlatz.Rows[index].Cells[6].Value = true;
                     }
                     else if (gesammt > instance.ZweiteSchicht) {
-                        dataGridViewAPlatz.Rows[index].Cells[7].Value = imageList1.Images[0];
-                        dataGridViewAPlatz.Rows[index].Cells[9].Value = true;
+                        dataGridViewAPlatz.Rows[index].Cells[5].Value = imageList1.Images[0];
+                        dataGridViewAPlatz.Rows[index].Cells[7].Value = true;
                     }
                 }
                 else if (gesammt > a.zeit && gesammt <= instance.ErsteSchicht) // 2400 < newTime < 3600 Überstunden
                 {
-                    dataGridViewAPlatz.Rows[index].Cells[7].Value = imageList1.Images[1];
+                    dataGridViewAPlatz.Rows[index].Cells[5].Value = imageList1.Images[1];
                 }
                 else {
-                    dataGridViewAPlatz.Rows[index].Cells[7].Value = imageList1.Images[2];
+                    dataGridViewAPlatz.Rows[index].Cells[5].Value = imageList1.Images[2];
                 }
 
                 //Farbe
-                for (int i = 0; i < 11; ++i) {
-                    if (i < 2 || i == 4)
+                for (int i = 0; i < 9; ++i) {
+                    if (i < 2)
                         dataGridViewAPlatz.Columns[i].DefaultCellStyle.BackColor = Color.FloralWhite;
-                    else if (i == 2 || i == 3 || (i >= 6 && i <= 11))
+                    else if (i==2 || i > 3)
                         dataGridViewAPlatz.Columns[i].DefaultCellStyle.BackColor = Color.LightYellow;
-                    else
-                        dataGridViewAPlatz.Columns[i].DefaultCellStyle.BackColor = Color.Honeydew;
                 }
 
                 ++index;
@@ -952,14 +866,29 @@ namespace ToolFahrrad_v1
             else
                 return MessageBox.Show(t, s, MessageBoxButtons.OK);
         }
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void dataGridViewKTeil_CellContentClick_1(object sender, DataGridViewCellEventArgs e) {
             if (e.ColumnIndex == 0) {
-                TeilInformation ti = new TeilInformation(Convert.ToInt32(dataGridViewKTeil.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString()));
+                TeilInformation ti = new TeilInformation("kteil", Convert.ToInt32(dataGridViewKTeil.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString()));
                 ti.GetTeilvonETeilMitMenge();
                 ti.Show();
             }
         }
+
+        private void dataGridViewAPlatz_CellContentClick(object sender, DataGridViewCellEventArgs e) {
+            if (e.ColumnIndex == 0) {
+                TeilInformation ti = new TeilInformation("arbeitsplatz", Convert.ToInt32(dataGridViewAPlatz.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString()));
+                ti.GetZeitInformation();
+                ti.Show();
+            }
+        }
+
+
+
 
         private void button1_Click(object sender, EventArgs e) {
             Bestellverwaltung bv = new Bestellverwaltung();
@@ -1091,6 +1020,8 @@ namespace ToolFahrrad_v1
             DispositionDarstellung(3);
             Information();
         }
+
+
     }
 }
 

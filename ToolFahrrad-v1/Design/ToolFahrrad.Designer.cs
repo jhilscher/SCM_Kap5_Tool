@@ -605,6 +605,8 @@
             this.colWarteschlange = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colBearbeitung = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colPlanung = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tab_arbeitzeit = new System.Windows.Forms.TabPage();
+            this.dataGridViewAPlatz = new System.Windows.Forms.DataGridView();
             this.tab_bestellverwaltung = new System.Windows.Forms.TabPage();
             this.tab2 = new System.Windows.Forms.TabControl();
             this.tabPage2 = new System.Windows.Forms.TabPage();
@@ -648,19 +650,10 @@
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.helpProvider1 = new System.Windows.Forms.HelpProvider();
-            this.tab_arbeitzeit = new System.Windows.Forms.TabPage();
-            this.picEditsAPlatz = new System.Windows.Forms.PictureBox();
-            this.rbRuestzeit = new System.Windows.Forms.RadioButton();
-            this.picReadOnlyAPlatz = new System.Windows.Forms.PictureBox();
-            this.picResetAPlatz = new System.Windows.Forms.PictureBox();
-            this.picSaveAPlatz = new System.Windows.Forms.PictureBox();
-            this.dataGridViewAPlatz = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewLinkColumn();
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.rap = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Ruestanzahl = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewImageColumn2 = new System.Windows.Forms.DataGridViewImageColumn();
             this.s1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
@@ -703,6 +696,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.p3ETAusfueren)).BeginInit();
             this.tab_eTeil.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewETeil)).BeginInit();
+            this.tab_arbeitzeit.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAPlatz)).BeginInit();
             this.tab_bestellverwaltung.SuspendLayout();
             this.tab2.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -710,12 +705,6 @@
             this.tab_bestellung.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
             this.menu.SuspendLayout();
-            this.tab_arbeitzeit.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picEditsAPlatz)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picReadOnlyAPlatz)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picResetAPlatz)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picSaveAPlatz)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAPlatz)).BeginInit();
             this.SuspendLayout();
             // 
             // tabs
@@ -5835,6 +5824,35 @@
             this.colPlanung.Name = "colPlanung";
             this.colPlanung.ReadOnly = true;
             // 
+            // tab_arbeitzeit
+            // 
+            this.tab_arbeitzeit.BackColor = System.Drawing.Color.Transparent;
+            this.tab_arbeitzeit.Controls.Add(this.dataGridViewAPlatz);
+            resources.ApplyResources(this.tab_arbeitzeit, "tab_arbeitzeit");
+            this.tab_arbeitzeit.Name = "tab_arbeitzeit";
+            // 
+            // dataGridViewAPlatz
+            // 
+            this.dataGridViewAPlatz.AllowUserToAddRows = false;
+            this.dataGridViewAPlatz.AllowUserToDeleteRows = false;
+            this.dataGridViewAPlatz.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.dataGridViewAPlatz.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridViewAPlatz.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewAPlatz.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn5,
+            this.dataGridViewTextBoxColumn7,
+            this.dataGridViewTextBoxColumn8,
+            this.dataGridViewTextBoxColumn9,
+            this.dataGridViewTextBoxColumn10,
+            this.dataGridViewImageColumn2,
+            this.s1,
+            this.s3,
+            this.ueber});
+            resources.ApplyResources(this.dataGridViewAPlatz, "dataGridViewAPlatz");
+            this.dataGridViewAPlatz.Name = "dataGridViewAPlatz";
+            this.helpProvider1.SetShowHelp(this.dataGridViewAPlatz, ((bool)(resources.GetObject("dataGridViewAPlatz.ShowHelp"))));
+            this.dataGridViewAPlatz.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewAPlatz_CellContentClick);
+            // 
             // tab_bestellverwaltung
             // 
             this.tab_bestellverwaltung.BackColor = System.Drawing.Color.Transparent;
@@ -6133,92 +6151,14 @@
             // 
             resources.ApplyResources(this.helpProvider1, "helpProvider1");
             // 
-            // tab_arbeitzeit
-            // 
-            this.tab_arbeitzeit.BackColor = System.Drawing.Color.Transparent;
-            this.tab_arbeitzeit.Controls.Add(this.picEditsAPlatz);
-            this.tab_arbeitzeit.Controls.Add(this.rbRuestzeit);
-            this.tab_arbeitzeit.Controls.Add(this.picReadOnlyAPlatz);
-            this.tab_arbeitzeit.Controls.Add(this.picResetAPlatz);
-            this.tab_arbeitzeit.Controls.Add(this.picSaveAPlatz);
-            this.tab_arbeitzeit.Controls.Add(this.dataGridViewAPlatz);
-            resources.ApplyResources(this.tab_arbeitzeit, "tab_arbeitzeit");
-            this.tab_arbeitzeit.Name = "tab_arbeitzeit";
-            // 
-            // picEditsAPlatz
-            // 
-            this.picEditsAPlatz.Cursor = System.Windows.Forms.Cursors.Hand;
-            resources.ApplyResources(this.picEditsAPlatz, "picEditsAPlatz");
-            this.picEditsAPlatz.Name = "picEditsAPlatz";
-            this.helpProvider1.SetShowHelp(this.picEditsAPlatz, ((bool)(resources.GetObject("picEditsAPlatz.ShowHelp"))));
-            this.picEditsAPlatz.TabStop = false;
-            this.toolTip.SetToolTip(this.picEditsAPlatz, resources.GetString("picEditsAPlatz.ToolTip"));
-            // 
-            // rbRuestzeit
-            // 
-            resources.ApplyResources(this.rbRuestzeit, "rbRuestzeit");
-            this.rbRuestzeit.Checked = true;
-            this.rbRuestzeit.Name = "rbRuestzeit";
-            this.helpProvider1.SetShowHelp(this.rbRuestzeit, ((bool)(resources.GetObject("rbRuestzeit.ShowHelp"))));
-            this.rbRuestzeit.TabStop = true;
-            this.rbRuestzeit.UseVisualStyleBackColor = true;
-            // 
-            // picReadOnlyAPlatz
-            // 
-            this.picReadOnlyAPlatz.Cursor = System.Windows.Forms.Cursors.Hand;
-            resources.ApplyResources(this.picReadOnlyAPlatz, "picReadOnlyAPlatz");
-            this.picReadOnlyAPlatz.Name = "picReadOnlyAPlatz";
-            this.helpProvider1.SetShowHelp(this.picReadOnlyAPlatz, ((bool)(resources.GetObject("picReadOnlyAPlatz.ShowHelp"))));
-            this.picReadOnlyAPlatz.TabStop = false;
-            this.toolTip.SetToolTip(this.picReadOnlyAPlatz, resources.GetString("picReadOnlyAPlatz.ToolTip"));
-            // 
-            // picResetAPlatz
-            // 
-            this.picResetAPlatz.Cursor = System.Windows.Forms.Cursors.Hand;
-            resources.ApplyResources(this.picResetAPlatz, "picResetAPlatz");
-            this.picResetAPlatz.Name = "picResetAPlatz";
-            this.helpProvider1.SetShowHelp(this.picResetAPlatz, ((bool)(resources.GetObject("picResetAPlatz.ShowHelp"))));
-            this.picResetAPlatz.TabStop = false;
-            this.toolTip.SetToolTip(this.picResetAPlatz, resources.GetString("picResetAPlatz.ToolTip"));
-            // 
-            // picSaveAPlatz
-            // 
-            this.picSaveAPlatz.Cursor = System.Windows.Forms.Cursors.Hand;
-            resources.ApplyResources(this.picSaveAPlatz, "picSaveAPlatz");
-            this.picSaveAPlatz.Name = "picSaveAPlatz";
-            this.helpProvider1.SetShowHelp(this.picSaveAPlatz, ((bool)(resources.GetObject("picSaveAPlatz.ShowHelp"))));
-            this.picSaveAPlatz.TabStop = false;
-            this.toolTip.SetToolTip(this.picSaveAPlatz, resources.GetString("picSaveAPlatz.ToolTip"));
-            // 
-            // dataGridViewAPlatz
-            // 
-            this.dataGridViewAPlatz.AllowUserToAddRows = false;
-            this.dataGridViewAPlatz.AllowUserToDeleteRows = false;
-            this.dataGridViewAPlatz.BackgroundColor = System.Drawing.SystemColors.Control;
-            this.dataGridViewAPlatz.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridViewAPlatz.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewAPlatz.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn5,
-            this.dataGridViewTextBoxColumn7,
-            this.dataGridViewTextBoxColumn8,
-            this.dataGridViewTextBoxColumn9,
-            this.rap,
-            this.Ruestanzahl,
-            this.dataGridViewTextBoxColumn10,
-            this.dataGridViewImageColumn2,
-            this.s1,
-            this.s3,
-            this.ueber});
-            resources.ApplyResources(this.dataGridViewAPlatz, "dataGridViewAPlatz");
-            this.dataGridViewAPlatz.Name = "dataGridViewAPlatz";
-            this.helpProvider1.SetShowHelp(this.dataGridViewAPlatz, ((bool)(resources.GetObject("dataGridViewAPlatz.ShowHelp"))));
-            // 
             // dataGridViewTextBoxColumn5
             // 
             resources.ApplyResources(this.dataGridViewTextBoxColumn5, "dataGridViewTextBoxColumn5");
+            this.dataGridViewTextBoxColumn5.LinkColor = System.Drawing.Color.Black;
             this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
             this.dataGridViewTextBoxColumn5.ReadOnly = true;
             this.dataGridViewTextBoxColumn5.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewTextBoxColumn5.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
             // dataGridViewTextBoxColumn7
             // 
@@ -6231,24 +6171,13 @@
             resources.ApplyResources(this.dataGridViewTextBoxColumn8, "dataGridViewTextBoxColumn8");
             this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
             this.dataGridViewTextBoxColumn8.ReadOnly = true;
+            this.dataGridViewTextBoxColumn8.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             // 
             // dataGridViewTextBoxColumn9
             // 
             resources.ApplyResources(this.dataGridViewTextBoxColumn9, "dataGridViewTextBoxColumn9");
             this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
-            this.dataGridViewTextBoxColumn9.ReadOnly = true;
-            // 
-            // rap
-            // 
-            resources.ApplyResources(this.rap, "rap");
-            this.rap.Name = "rap";
-            this.rap.ReadOnly = true;
-            // 
-            // Ruestanzahl
-            // 
-            resources.ApplyResources(this.Ruestanzahl, "Ruestanzahl");
-            this.Ruestanzahl.Name = "Ruestanzahl";
-            this.Ruestanzahl.ReadOnly = true;
+            this.dataGridViewTextBoxColumn9.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             // 
             // dataGridViewTextBoxColumn10
             // 
@@ -6339,6 +6268,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.p3ETAusfueren)).EndInit();
             this.tab_eTeil.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewETeil)).EndInit();
+            this.tab_arbeitzeit.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAPlatz)).EndInit();
             this.tab_bestellverwaltung.ResumeLayout(false);
             this.tab_bestellverwaltung.PerformLayout();
             this.tab2.ResumeLayout(false);
@@ -6348,13 +6279,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
             this.menu.ResumeLayout(false);
             this.menu.PerformLayout();
-            this.tab_arbeitzeit.ResumeLayout(false);
-            this.tab_arbeitzeit.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picEditsAPlatz)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picReadOnlyAPlatz)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picResetAPlatz)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picSaveAPlatz)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAPlatz)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -6981,18 +6905,11 @@
         private System.Windows.Forms.PictureBox p2ETAusfueren;
         private System.Windows.Forms.PictureBox p3ETAusfueren;
         private System.Windows.Forms.TabPage tab_arbeitzeit;
-        private System.Windows.Forms.PictureBox picEditsAPlatz;
-        private System.Windows.Forms.RadioButton rbRuestzeit;
-        private System.Windows.Forms.PictureBox picReadOnlyAPlatz;
-        private System.Windows.Forms.PictureBox picResetAPlatz;
-        private System.Windows.Forms.PictureBox picSaveAPlatz;
         private System.Windows.Forms.DataGridView dataGridViewAPlatz;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.DataGridViewLinkColumn dataGridViewTextBoxColumn5;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
-        private System.Windows.Forms.DataGridViewTextBoxColumn rap;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Ruestanzahl;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
         private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn2;
         private System.Windows.Forms.DataGridViewCheckBoxColumn s1;

@@ -47,7 +47,13 @@ namespace ToolFahrrad_v1
 
         // Needed time to produce Teil with given number
         private Dictionary<int, int> werk_zeiten;
-        protected Dictionary<int, int> ruest_zeiten;
+        public Dictionary<int, int> Werk_zeiten {
+            get { return werk_zeiten; }
+        }
+        private Dictionary<int, int> ruest_zeiten;
+        public Dictionary<int, int> Ruest_zeiten {
+            get { return ruest_zeiten; }
+        }
         private Dictionary<int, int> naechster_schritt;
         // Constructor
         public Arbeitsplatz(int nr_neu)
@@ -76,7 +82,7 @@ namespace ToolFahrrad_v1
         /// <summary>
         /// Kapazitätsplan
         /// </summary>
-        public double GetRuestZeit
+        public int GetRuestZeit
         {            
             get
             {
@@ -84,14 +90,14 @@ namespace ToolFahrrad_v1
                     this.ruestNew = 0;
 
                 dc = DataContainer.Instance;
-                double sum = 0;
-                foreach (KeyValuePair<int, int> kvp in ruest_zeiten)
+                int sum = 0;
+                foreach (KeyValuePair<int, int> kvp in Ruest_zeiten)
                 {
                     sum += kvp.Value;
                     if ((dc.GetTeil(kvp.Key) as ETeil).ProduktionsMengePer0 > 0)
                         ++this.ruestNew;
                 }
-                return sum / ruest_zeiten.Count();
+                return sum;
 
                 //ruestungCustom = (newRuest + ruestungVorPeriode) / 2;
                 //if (ruestungCustom < newRuest)
@@ -158,7 +164,7 @@ namespace ToolFahrrad_v1
                 werk_zeiten[teil] = zeit;
                 if (werk_zeiten.ContainsKey(teil) == false)
                 {
-                    ruest_zeiten[teil] = 0;
+                    Ruest_zeiten[teil] = 0;
                 }
                 if ((DataContainer.Instance.GetTeil(teil) as ETeil).BenutzteArbeitsplaetze.Contains(this) == false)
                 {
@@ -178,15 +184,15 @@ namespace ToolFahrrad_v1
             {
                 throw new InvalidValueException(zeit.ToString(), string.Format("Ruestzeit am Arbeitsplatz {0}", nr));
             }
-            if ((ruest_zeiten.ContainsKey(teil) && ruest_zeiten[teil] == 0) || ruest_zeiten.ContainsKey(teil) == false)
+            if ((Ruest_zeiten.ContainsKey(teil) && Ruest_zeiten[teil] == 0) || Ruest_zeiten.ContainsKey(teil) == false)
             {
-                ruest_zeiten[teil] = zeit;
+                Ruest_zeiten[teil] = zeit;
                 if (werk_zeiten.ContainsKey(teil) == false)
                 {
                     werk_zeiten[teil] = 0;
                 }
             }
-            if (ruest_zeiten.ContainsKey(teil) == false && this.ruest_zeiten[teil] != 0)
+            if (Ruest_zeiten.ContainsKey(teil) == false && this.Ruest_zeiten[teil] != 0)
             {
                 throw new InvalidValueException(string.Format("Am Arbeitsplatz {0} ist bereits eine Rüstzeit für das Teil {1} hinterlegt!", nr, teil));
             }
