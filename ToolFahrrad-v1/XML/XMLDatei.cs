@@ -78,7 +78,7 @@ namespace ToolFahrrad_v1
                         {
                             if (Convert.ToInt32(attr.Attributes[3].Value).Equals(a.Nummer))
                             {
-                                a.LagerZugang = Convert.ToInt32(attr.Attributes[4].Value);
+                                a.AddOffeneBestellung(Convert.ToInt32(attr.Attributes[0].Value), Convert.ToInt32(attr.Attributes[2].Value), Convert.ToInt32(attr.Attributes[4].Value));
                             }
                         }
                     }

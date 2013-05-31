@@ -10,10 +10,16 @@ namespace ToolFahrrad_v1
         // Class members
         DataContainer dc;
         bool aufgeloest = false;
+        int aktPeriode;
         // Constructor
         public Produktionsplanung()
         {
             dc = DataContainer.Instance;
+        }
+        public int AktPeriode
+        {
+            get { return aktPeriode; }
+            set { aktPeriode = value; }
         }
         // Aufloesung der Teile, setzen der Ueberstunden, anpassen Reihenfolge
         public void Planen()
@@ -48,26 +54,29 @@ namespace ToolFahrrad_v1
             }
             for (int index = 1; index < 4; index++)
             {
-                RekursAufloesen(index, null, dc.GetTeil(index) as ETeil);
+                RekursAufloesenETeile(index, null, dc.GetTeil(index) as ETeil);
             }
-            // Aufloesung der KTeile
+                       // Aufloesung der KTeile
+            // Prüfung, ob Bruttobedarf schon gerechnet wurde
+            if ((dc.GetTeil(21) as KTeil).BruttoBedarfPer0 != 0 || (dc.GetTeil(21) as KTeil).BruttoBedarfPer1 != 0 ||
+                (dc.GetTeil(21) as KTeil).BruttoBedarfPer2 != 0 || (dc.GetTeil(21) as KTeil).BruttoBedarfPer3 != 0)
+            {
+                foreach (KTeil k in dc.ListeKTeile)
+                {
+                    k.BruttoBedarfPer0 = 0;
+                    k.BruttoBedarfPer1 = 0;
+                    k.BruttoBedarfPer2 = 0;
+                    k.BruttoBedarfPer3 = 0;
+                }
+            }
             for (int index = 1; index < 4; index++)
             {
-                ETeil et = dc.GetTeil(index) as ETeil;
-                foreach (KeyValuePair<Teil, int> kvp in et.Zusammensetzung)
-                {
-                    if (kvp.Key is KTeil)
-                    {
-                        //ToDo: Produktionsmenge auch fuer Prog1, Prog2, Prog3!!!
-                        KTeil kt = kvp.Key as KTeil;
-                        kt.initBruttoBedarf(index, et.ProduktionsMengePer0);
-                    }
-                }
+                RekursAufloesenKTeile(index, null, dc.GetTeil(index) as ETeil);
             }
             aufgeloest = true;
         }
         // Rekursive Prozedur zum Iterieren ueber die Zusammensetzung der Teile
-        private void RekursAufloesen(int index, ETeil vaterTeil, ETeil kindTeil)
+        private void RekursAufloesenETeile(int index, ETeil vaterTeil, ETeil kindTeil)
         {
             kindTeil.SetProduktionsMenge(index, vaterTeil);
             if (kindTeil.Zusammensetzung.Count() != 0)
@@ -76,8 +85,30 @@ namespace ToolFahrrad_v1
                 {
                     if (kvp.Key is ETeil)
                     {
-                        RekursAufloesen(index, kindTeil, kvp.Key as ETeil);
+                        RekursAufloesenETeile(index, kindTeil, kvp.Key as ETeil);
                     }
+                }
+            }
+        }
+        private void RekursAufloesenKTeile(int index, ETeil vaterTeil, ETeil kindTeil)
+        {
+            if (vaterTeil != null)
+            {
+                kindTeil.VerbrauchPer1 = vaterTeil.VerbrauchPer1;
+                kindTeil.VerbrauchPer2 = vaterTeil.VerbrauchPer2;
+                kindTeil.VerbrauchPer3 = vaterTeil.VerbrauchPer3;
+            }
+            foreach (KeyValuePair<Teil, int> kvp in kindTeil.Zusammensetzung)
+            {
+                if (kvp.Key is KTeil)
+                {
+                    KTeil kt = kvp.Key as KTeil;
+                    kt.initBruttoBedarf(index, kindTeil, kvp.Value);
+                    kt.berechnungVerbrauchPrognose(aktPeriode, dc.VerwendeAbweichung);
+                }
+                else
+                {
+                    RekursAufloesenKTeile(index, kindTeil, kvp.Key as ETeil);
                 }
             }
         }

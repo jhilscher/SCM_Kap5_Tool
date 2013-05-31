@@ -23,6 +23,19 @@ namespace ToolFahrrad_v1
         private string saveFile;
         private int ersteSchicht = 3600;
         private int zweiteSchicht = 6000;
+        private double verwendeAbweichung = 0.5;
+        private double verwendeDiskount = 0.5;
+        // Getter / Setter
+        public double VerwendeAbweichung
+        {
+            get { return verwendeAbweichung * 100; }
+            set { verwendeAbweichung = value / 100; }
+        }
+        public double VerwendeDiskount
+        {
+            get { return verwendeDiskount * 100; }
+            set { verwendeDiskount = value / 100; }
+        }
         public int ZweiteSchicht
         {
             get { return zweiteSchicht; }
@@ -295,7 +308,7 @@ namespace ToolFahrrad_v1
             }
         }
         // Create new KTeil and add this to member liste_teile
-        public void NewTeil(int nr, string bez, double p, double bk, double ld, double abw, int dm, int bs, string vw, int TVP1, int TVP2, int TVP3)
+        public void NewTeil(int nr, string bez, double p, double bk, double ld, double abw, int dm, int bs, string vw)
         {
             if (listeTeile.ContainsKey(nr) == false)
             {
@@ -307,9 +320,6 @@ namespace ToolFahrrad_v1
                 kt.DiskontMenge = dm;
                 kt.Lagerstand = bs;
                 kt.Verwendung = vw;
-                kt.VerwendungProdukt1 = TVP1;
-                kt.VerwendungProdukt2 = TVP2;
-                kt.VerwendungProdukt3 = TVP3;
                 listeTeile[nr] = kt;
             }
             else
@@ -381,7 +391,7 @@ namespace ToolFahrrad_v1
             pp.Aufloesen();
             pp.Planen();
             Bestellverwaltung bv = new Bestellverwaltung();
-            bv.erzeugeBestellListe();
+            bv.generiereBestellListe();
         }
         // Reset of Arbeitsplatz
         public void Reset()

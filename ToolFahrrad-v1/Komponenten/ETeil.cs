@@ -10,7 +10,19 @@ namespace ToolFahrrad_v1
     {
         // Class members
         private int puffer;
+        private bool kdhUpdate = false;
+        public bool KdhUpdate
+        {
+            get { return kdhUpdate; }
+            set { kdhUpdate = value; }
+        }
         private int produktionsMenge = 0;
+        private int vaterInWarteschlange = 0;
+
+        public int VaterInWarteschlange {
+            get { return vaterInWarteschlange; }
+            set { vaterInWarteschlange = value; }
+        }
         private int inWarteschlange = 0;
         private int inBearbeitung = 0;
         private bool istEndProdukt = false;
@@ -18,6 +30,23 @@ namespace ToolFahrrad_v1
         {
             get { return istEndProdukt; }
             set { istEndProdukt = value; }
+        }
+        private Dictionary<int, int[]> kdhPuffer;
+        public Dictionary<int, int[]> KdhPuffer {
+            get { return kdhPuffer; }
+            set { kdhPuffer = value; }
+        }
+        private Dictionary<string, int> kdhProduktionsmenge;
+        public Dictionary<string, int> KdhProduktionsmenge {
+            get { return kdhProduktionsmenge; }
+            set { kdhProduktionsmenge = value; }
+        }
+
+        private Dictionary<int, int[]> kdhVaterInWarteschlange;
+
+        public Dictionary<int, int[]> KdhVaterInWarteschlange {
+            get { return kdhVaterInWarteschlange; }
+            set { kdhVaterInWarteschlange = value; }
         }
         Dictionary<Teil, int> zusammensetzung;
         Dictionary<int, int> position;
@@ -31,7 +60,23 @@ namespace ToolFahrrad_v1
             zusammensetzung = new Dictionary<Teil, int>();
             position = new Dictionary<int, int>();
             benutzteArbeitsplaetze = new List<int>();
+            KDHaufNULL();     
+            kdhProduktionsmenge = new Dictionary<string, int>();
         }
+
+        public void KDHaufNULL(){
+        int[] array = new int[]{-1,-1,-1};
+        int[] array2 = new int[] { 0, 0, 0 };
+            kdhPuffer = new Dictionary<int,int[]>();
+            kdhVaterInWarteschlange = new Dictionary<int, int[]>();
+            kdhPuffer.Add(26, array);
+            kdhPuffer.Add(16, array);
+            kdhPuffer.Add(17, array);
+            kdhVaterInWarteschlange.Add(26, array2);
+            kdhVaterInWarteschlange.Add(16, array2);
+            kdhVaterInWarteschlange.Add(17, array2);
+        }
+
         // Getter / Setter
         public int Puffer
         {
@@ -53,12 +98,32 @@ namespace ToolFahrrad_v1
         public int InWartschlange
         {
             get { return inWarteschlange; }
-            set { inWarteschlange = value; }
+            set
+            {
+                if (inWarteschlange != 0)
+                {
+                    inWarteschlange += value;
+                }
+                else
+                {
+                    inWarteschlange = value;
+                }
+            }
         }
         public int InBearbeitung
         {
             get { return inBearbeitung; }
-            set { inBearbeitung = value; }
+            set
+            {
+                if (inBearbeitung != 0)
+                {
+                    inBearbeitung += value;
+                }
+                else
+                {
+                    inBearbeitung = value;
+                }
+            }
         }
         public Dictionary<Teil, int> Zusammensetzung
         {
@@ -112,47 +177,86 @@ namespace ToolFahrrad_v1
                 else
                 {
                     // Set members
-                    vertriebPer0 = vaterTeil.ProduktionsMengePer0 + vaterTeil.InWartschlange;
-                    if (puffer == -1)
-                    {
-                        puffer = vaterTeil.Puffer;
-                    }
+                    vertriebPer0 = vaterTeil.ProduktionsMengePer0;                    
                     // Calculation
                     if (Verwendung.Contains("KDH") == false)
                     {
-                        produktionsMenge = vertriebPer0 + Puffer - lagerstand - inWarteschlange - inBearbeitung;
+                        vaterInWarteschlange = vaterTeil.InWartschlange;
+                        if (puffer == -1)
+                        {
+                            puffer = vaterTeil.Puffer;
+                        }
+                        produktionsMenge = vertriebPer0 + vaterInWarteschlange + Puffer - lagerstand - inWarteschlange - inBearbeitung;
+                        Aufgeloest = true;
                     }
                     else
                     {
-                        produktionsMenge += (vertriebPer0 + Puffer - lagerstand - inWarteschlange - inBearbeitung) / 3;
+                        int pufTemp = 0;
+                        foreach (KeyValuePair<int, int[]> pair in kdhPuffer) {
+                            if (pair.Key.Equals(nr)) {
+                                if (pair.Value[index - 1] == -1) {
+                                    pair.Value[index - 1] = vaterTeil.Puffer;
+                                }
+                                pufTemp = pair.Value[index - 1];
+                                kdhVaterInWarteschlange[nr][index - 1] = vaterTeil.InWartschlange;
+                            }
+                        }
+                        int pmTemp = 0;
+                        if (index == 1) {
+                            pmTemp = vertriebPer0 + kdhVaterInWarteschlange[nr][index - 1] + pufTemp - lagerstand - inWarteschlange - inBearbeitung;
+                        }
+                        else {
+                            pmTemp = vertriebPer0 + kdhVaterInWarteschlange[nr][index - 1] + pufTemp;
+                        }
+                        kdhProduktionsmenge.Add(index.ToString() + "-" + nr.ToString(), pmTemp);
+
+                        //if (index == 1 && puffer != -1) {
+                        //    kdhUpdate = true;
+                        //    produktionsMenge = 0;
+                        //}
+                        //if (puffer == -1)
+                        //{
+                        //    puffer = 0;
+                        //    produktionsMenge = 0;
+                        //}
+                        //if (kdhUpdate == false)
+                        //    puffer += vaterTeil.Puffer;
+                        //if (index == 1) {
+                        //    produktionsMenge += vertriebPer0 + vaterInWarteschlange + Puffer - lagerstand - inWarteschlange - inBearbeitung;
+                        //    Aufgeloest = false;
+                        //}
+                        //else
+                        //{
+                        //    produktionsMenge += vertriebPer0 + Puffer - lagerstand - inWarteschlange - inBearbeitung;
+                        //    Aufgeloest = true;
+                        //}
                     }
                 }
-                Aufgeloest = true;
             }
         }
         // Public function to change members puffer (0)
-        public void FeldGeandert(int member, int value)
+        public void FeldGeandert(int member, int value, int p)
         {
-            //if (aufgeloest == true )
-            //{
             aufgeloest = false;
             // puffer
             if (member == 0)
             {
-                puffer = value;
-                if (zusammensetzung.Count() != 0 && DataContainer.Instance.BerechneKindTeil == true)
+                if (Verwendung.Contains("KDH") && p.Equals(0))
+                    puffer = value;
+                else if (zusammensetzung.Count() != 0 && DataContainer.Instance.BerechneKindTeil == true)
                 {
+                    if (!Verwendung.Contains("KDH"))
+                        puffer = value;
                     foreach (KeyValuePair<Teil, int> kvp in zusammensetzung)
                     {
                         if (kvp.Key is ETeil)
                         {
                             ETeil et = kvp.Key as ETeil;
-                            et.FeldGeandert(member, value);
+                            et.FeldGeandert(member, value, 1);
                         }
                     }
                 }
             }
-            //}
         }
         public void AddArbeitsplatz(int nr)
         {

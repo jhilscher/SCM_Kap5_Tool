@@ -23,8 +23,7 @@ namespace ToolFahrrad_v1
         /// <summary>
         /// Konstruktor
         /// </summary>
-        public Fahrrad()
-        {
+        public Fahrrad() {
             //if (sprache.GetCheck == "EN")
             //{
             //    Thread.CurrentThread.CurrentUICulture = new CultureInfo("en");
@@ -37,29 +36,431 @@ namespace ToolFahrrad_v1
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void toolAusfueren_Click(object sender, EventArgs e)
-        {
-            if ((instance.GetTeil(4) as ETeil).Puffer != -1)
-            {
-                foreach (Teil t in instance.ListeETeile)
-                {
-                    t.Aufgeloest = false;
-                    if ((instance.GetTeil(t.Nummer) as ETeil).IstEndProdukt == false)
-                        (instance.GetTeil(t.Nummer) as ETeil).Puffer = -1;
-                }
-            }
-            pp.Aufloesen();
-            if (!lableDazu.Text.Contains("aus der Periode"))
-                lableDazu.Text = lableDazu.Text + "aus der Periode " + xml.period;
-
-            foreach (Arbeitsplatz a in instance.ArbeitsplatzList)
-            {
-                a.Geaendert = false;
-            }
-            this.Information();
+        private void toolAusfueren_Click(object sender, EventArgs e) {
+            ausführen();
             this.toolAusfueren.Visible = false;
             this.save.Visible = true;
-            this.Tab.Visible = true;
+            this.tab1.Visible = true;
+            this.tab2.Visible = true;
+        }
+        private void ausführen() {
+            if ((instance.GetTeil(4) as ETeil).Puffer != -1) {
+                foreach (Teil t in instance.ListeETeile) {
+                    t.Aufgeloest = false;
+                    (t as ETeil).KdhUpdate = false;
+                    (t as ETeil).InBearbeitung = 0;
+                    (t as ETeil).InWartschlange = 0;
+                    (t as ETeil).KdhProduktionsmenge = new Dictionary<string, int>();
+                    if ((instance.GetTeil(t.Nummer) as ETeil).IstEndProdukt == false) {
+                        (instance.GetTeil(t.Nummer) as ETeil).Puffer = -1;
+                        (instance.GetTeil(t.Nummer) as ETeil).KDHaufNULL();
+                    }
+                }
+            }
+            pp.AktPeriode = Convert.ToInt32(xml.period);
+            pp.Aufloesen();
+            foreach (Arbeitsplatz a in instance.ArbeitsplatzList) {
+                a.Geaendert = false;
+                a.RuestNew = 0;
+            }
+            for (int index = 1; index < 4; ++index) {
+                this.DispositionDarstellung(index);
+            }
+            this.Information();
+        }
+
+        private void DispositionDarstellung(int index) {
+            ETeil et;
+            int n;
+            if (index == 1) {
+                #region P1
+                //P1
+                n = 1;
+                et = instance.GetTeil(n) as ETeil;
+                p1vw_0.Text = et.VertriebPer0.ToString();
+                p1r_0.Text = et.Puffer.ToString();
+                p1ls_0.Text = et.Lagerstand.ToString();
+                p1iws_0.Text = et.InWartschlange.ToString();
+                p1ib_0.Text = et.InBearbeitung.ToString();
+                p1pm_0.Text = et.ProduktionsMengePer0.ToString();
+                //26
+                n = 26;
+                et = instance.GetTeil(n) as ETeil;
+                p1vw_26.Text = p1pm_0.Text;
+                p1plus_26.Text = p1iws_0.Text;
+                if (et.KdhPuffer.ContainsKey(n)) {
+                    p1r_26.Text = et.KdhPuffer[n][index - 1].ToString();
+                }
+                if (et.KdhProduktionsmenge.ContainsKey(index.ToString() + "-" + Convert.ToString(n))) {
+                    p1pm_26.Text = et.KdhProduktionsmenge[index.ToString() + "-" + Convert.ToString(n)].ToString();
+                }
+                p1ls_26.Text = et.Lagerstand.ToString();
+                p1iws_26.Text = et.InWartschlange.ToString();
+                p1ib_26.Text = et.InBearbeitung.ToString();
+                //51
+                n = 51;
+                et = instance.GetTeil(n) as ETeil;
+                p1vw_51.Text = et.VertriebPer0.ToString();
+                p1plus_51.Text = et.VaterInWarteschlange.ToString();
+                p1r_51.Text = et.Puffer.ToString();
+                p1ls_51.Text = et.Lagerstand.ToString();
+                p1iws_51.Text = et.InWartschlange.ToString();
+                p1ib_51.Text = et.InBearbeitung.ToString();
+                p1pm_51.Text = et.ProduktionsMengePer0.ToString();
+                //16
+                n = 16;
+                et = instance.GetTeil(n) as ETeil;
+                p1vw_16.Text = p1pm_51.Text;
+                p1plus_16.Text = p1iws_51.Text;
+                if (et.KdhPuffer.ContainsKey(n)) {
+                    p1r_16.Text = et.KdhPuffer[n][index - 1].ToString();
+                }
+                if (et.KdhProduktionsmenge.ContainsKey(index.ToString() + "-" + Convert.ToString(n))) {
+                    p1pm_16.Text = et.KdhProduktionsmenge[index.ToString() + "-" + Convert.ToString(n)].ToString();
+                }
+                p1ls_16.Text = et.Lagerstand.ToString();
+                p1iws_16.Text = et.InWartschlange.ToString();
+                p1ib_16.Text = et.InBearbeitung.ToString();
+                //17 
+                n = 17;
+                et = instance.GetTeil(n) as ETeil;
+                p1vw_17.Text = p1pm_51.Text;
+                p1plus_17.Text = p1iws_51.Text;
+                if (et.KdhPuffer.ContainsKey(n)) {
+                    p1r_17.Text = et.KdhPuffer[n][index - 1].ToString();
+                }
+                if (et.KdhProduktionsmenge.ContainsKey(index.ToString() + "-" + Convert.ToString(n))) {
+                    p1pm_17.Text = et.KdhProduktionsmenge[index.ToString() + "-" + Convert.ToString(n)].ToString();
+                }
+                p1ls_17.Text = et.Lagerstand.ToString();
+                p1iws_17.Text = et.InWartschlange.ToString();
+                p1ib_17.Text = et.InBearbeitung.ToString();
+                //50
+                n = 50;
+                et = instance.GetTeil(n) as ETeil;
+                p1vw_50.Text = et.VertriebPer0.ToString();
+                p1plus_50.Text = et.VaterInWarteschlange.ToString();
+                p1r_50.Text = et.Puffer.ToString();
+                p1ls_50.Text = et.Lagerstand.ToString();
+                p1iws_50.Text = et.InWartschlange.ToString();
+                p1ib_50.Text = et.InBearbeitung.ToString();
+                p1pm_50.Text = et.ProduktionsMengePer0.ToString();
+                //4
+                n = 4;
+                et = instance.GetTeil(n) as ETeil;
+                p1vw_4.Text = et.VertriebPer0.ToString();
+                p1plus_4.Text = et.VaterInWarteschlange.ToString();
+                p1r_4.Text = et.Puffer.ToString();
+                p1ls_4.Text = et.Lagerstand.ToString();
+                p1iws_4.Text = et.InWartschlange.ToString();
+                p1ib_4.Text = et.InBearbeitung.ToString();
+                p1pm_4.Text = et.ProduktionsMengePer0.ToString();
+                //10
+                n = 10;
+                et = instance.GetTeil(n) as ETeil;
+                p1vw_10.Text = et.VertriebPer0.ToString();
+                p1plus_10.Text = et.VaterInWarteschlange.ToString();
+                p1r_10.Text = et.Puffer.ToString();
+                p1ls_10.Text = et.Lagerstand.ToString();
+                p1iws_10.Text = et.InWartschlange.ToString();
+                p1ib_10.Text = et.InBearbeitung.ToString();
+                p1pm_10.Text = et.ProduktionsMengePer0.ToString();
+                //49
+                n = 49;
+                et = instance.GetTeil(n) as ETeil;
+                p1vw_49.Text = et.VertriebPer0.ToString();
+                p1plus_49.Text = et.VaterInWarteschlange.ToString();
+                p1r_49.Text = et.Puffer.ToString();
+                p1ls_49.Text = et.Lagerstand.ToString();
+                p1iws_49.Text = et.InWartschlange.ToString();
+                p1ib_49.Text = et.InBearbeitung.ToString();
+                p1pm_49.Text = et.ProduktionsMengePer0.ToString();
+                //7
+                n = 7;
+                et = instance.GetTeil(n) as ETeil;
+                p1vw_7.Text = et.VertriebPer0.ToString();
+                p1plus_7.Text = et.VaterInWarteschlange.ToString();
+                p1r_7.Text = et.Puffer.ToString();
+                p1ls_7.Text = et.Lagerstand.ToString();
+                p1iws_7.Text = et.InWartschlange.ToString();
+                p1ib_7.Text = et.InBearbeitung.ToString();
+                p1pm_7.Text = et.ProduktionsMengePer0.ToString();
+                //13
+                n = 13;
+                et = instance.GetTeil(n) as ETeil;
+                p1vw_13.Text = et.VertriebPer0.ToString();
+                p1plus_13.Text = et.VaterInWarteschlange.ToString();
+                p1r_13.Text = et.Puffer.ToString();
+                p1ls_13.Text = et.Lagerstand.ToString();
+                p1iws_13.Text = et.InWartschlange.ToString();
+                p1ib_13.Text = et.InBearbeitung.ToString();
+                p1pm_13.Text = et.ProduktionsMengePer0.ToString();
+                //18
+                n = 18;
+                et = instance.GetTeil(n) as ETeil;
+                p1vw_18.Text = et.VertriebPer0.ToString();
+                p1plus_18.Text = et.VaterInWarteschlange.ToString();
+                p1r_18.Text = et.Puffer.ToString();
+                p1ls_18.Text = et.Lagerstand.ToString();
+                p1iws_18.Text = et.InWartschlange.ToString();
+                p1ib_18.Text = et.InBearbeitung.ToString();
+                p1pm_18.Text = et.ProduktionsMengePer0.ToString();
+
+                #endregion
+            }
+            if (index == 2) {
+                #region P2
+                //P2
+                n = 2;
+                et = instance.GetTeil(n) as ETeil;
+                p2vw_0.Text = et.VertriebPer0.ToString();
+                p2r_0.Text = et.Puffer.ToString();
+                p2ls_0.Text = et.Lagerstand.ToString();
+                p2iws_0.Text = et.InWartschlange.ToString();
+                p2ib_0.Text = et.InBearbeitung.ToString();
+                p2pm_0.Text = et.ProduktionsMengePer0.ToString();
+                //26
+                n = 26;
+                et = instance.GetTeil(n) as ETeil;
+                p2vw_26.Text = p2pm_0.Text;
+                p2plus_26.Text = p2iws_0.Text;
+                if (et.KdhPuffer.ContainsKey(n)) {
+                    p2r_26.Text = et.KdhPuffer[n][index - 1].ToString();
+                }
+                if (et.KdhProduktionsmenge.ContainsKey(index.ToString() + "-" + Convert.ToString(n))) {
+                    p2pm_26.Text = et.KdhProduktionsmenge[index.ToString() + "-" + Convert.ToString(n)].ToString();
+                }
+                //56
+                n = 56;
+                et = instance.GetTeil(n) as ETeil;
+                p2vw_56.Text = et.VertriebPer0.ToString();
+                p2plus_56.Text = et.VaterInWarteschlange.ToString();
+                p2r_56.Text = et.Puffer.ToString();
+                p2ls_56.Text = et.Lagerstand.ToString();
+                p2iws_56.Text = et.InWartschlange.ToString();
+                p2ib_56.Text = et.InBearbeitung.ToString();
+                p2pm_56.Text = et.ProduktionsMengePer0.ToString();
+                //16
+                n = 16;
+                et = instance.GetTeil(n) as ETeil;
+                p2vw_16.Text = p2pm_56.Text;
+                p2plus_16.Text = p2iws_56.Text;
+                if (et.KdhPuffer.ContainsKey(n)) {
+                    p2r_16.Text = et.KdhPuffer[n][index - 1].ToString();
+                }
+                if (et.KdhProduktionsmenge.ContainsKey(index.ToString() + "-" + Convert.ToString(n))) {
+                    p2pm_16.Text = et.KdhProduktionsmenge[index.ToString() + "-" + Convert.ToString(n)].ToString();
+                }
+                //17
+                n = 17;
+                et = instance.GetTeil(n) as ETeil;
+                p2vw_17.Text = p2pm_56.Text;
+                p2plus_17.Text = p2iws_56.Text;
+                if (et.KdhPuffer.ContainsKey(n)) {
+                    p2r_17.Text = et.KdhPuffer[n][index - 1].ToString();
+                }
+                if (et.KdhProduktionsmenge.ContainsKey(index.ToString() + "-" + Convert.ToString(n))) {
+                    p2pm_17.Text = et.KdhProduktionsmenge[index.ToString() + "-" + Convert.ToString(n)].ToString();
+                }
+                //55
+                n = 55;
+                et = instance.GetTeil(n) as ETeil;
+                p2vw_55.Text = et.VertriebPer0.ToString();
+                p2plus_55.Text = et.VaterInWarteschlange.ToString();
+                p2r_55.Text = et.Puffer.ToString();
+                p2ls_55.Text = et.Lagerstand.ToString();
+                p2iws_55.Text = et.InWartschlange.ToString();
+                p2ib_55.Text = et.InBearbeitung.ToString();
+                p2pm_55.Text = et.ProduktionsMengePer0.ToString();
+                //5
+                n = 5;
+                et = instance.GetTeil(n) as ETeil;
+                p2vw_5.Text = et.VertriebPer0.ToString();
+                p2plus_5.Text = et.VaterInWarteschlange.ToString();
+                p2r_5.Text = et.Puffer.ToString();
+                p2ls_5.Text = et.Lagerstand.ToString();
+                p2iws_5.Text = et.InWartschlange.ToString();
+                p2ib_5.Text = et.InBearbeitung.ToString();
+                p2pm_5.Text = et.ProduktionsMengePer0.ToString();
+                //11
+                n = 11;
+                et = instance.GetTeil(n) as ETeil;
+                p2vw_11.Text = et.VertriebPer0.ToString();
+                p2plus_11.Text = et.VaterInWarteschlange.ToString();
+                p2r_11.Text = et.Puffer.ToString();
+                p2ls_11.Text = et.Lagerstand.ToString();
+                p2iws_11.Text = et.InWartschlange.ToString();
+                p2ib_11.Text = et.InBearbeitung.ToString();
+                p2pm_11.Text = et.ProduktionsMengePer0.ToString();
+                //54
+                n = 54;
+                et = instance.GetTeil(n) as ETeil;
+                p2vw_54.Text = et.VertriebPer0.ToString();
+                p2plus_54.Text = et.VaterInWarteschlange.ToString();
+                p2r_54.Text = et.Puffer.ToString();
+                p2ls_54.Text = et.Lagerstand.ToString();
+                p2iws_54.Text = et.InWartschlange.ToString();
+                p2ib_54.Text = et.InBearbeitung.ToString();
+                p2pm_54.Text = et.ProduktionsMengePer0.ToString();
+                //8
+                n = 8;
+                et = instance.GetTeil(n) as ETeil;
+                p2vw_8.Text = et.VertriebPer0.ToString();
+                p2plus_8.Text = et.VaterInWarteschlange.ToString();
+                p2r_8.Text = et.Puffer.ToString();
+                p2ls_8.Text = et.Lagerstand.ToString();
+                p2iws_8.Text = et.InWartschlange.ToString();
+                p2ib_8.Text = et.InBearbeitung.ToString();
+                p2pm_8.Text = et.ProduktionsMengePer0.ToString();
+                //14
+                n = 14;
+                et = instance.GetTeil(n) as ETeil;
+                p2vw_14.Text = et.VertriebPer0.ToString();
+                p2plus_14.Text = et.VaterInWarteschlange.ToString();
+                p2r_14.Text = et.Puffer.ToString();
+                p2ls_14.Text = et.Lagerstand.ToString();
+                p2iws_14.Text = et.InWartschlange.ToString();
+                p2ib_14.Text = et.InBearbeitung.ToString();
+                p2pm_14.Text = et.ProduktionsMengePer0.ToString();
+                //19
+                n = 19;
+                et = instance.GetTeil(n) as ETeil;
+                p2vw_19.Text = et.VertriebPer0.ToString();
+                p2plus_19.Text = et.VaterInWarteschlange.ToString();
+                p2r_19.Text = et.Puffer.ToString();
+                p2ls_19.Text = et.Lagerstand.ToString();
+                p2iws_19.Text = et.InWartschlange.ToString();
+                p2ib_19.Text = et.InBearbeitung.ToString();
+                p2pm_19.Text = et.ProduktionsMengePer0.ToString();
+                #endregion
+            }
+
+            if (index == 3) {
+                #region P3
+                //p3
+                n = 3;
+                et = instance.GetTeil(n) as ETeil;
+                p3vw_0.Text = et.VertriebPer0.ToString();
+                p3r_0.Text = et.Puffer.ToString();
+                p3ls_0.Text = et.Lagerstand.ToString();
+                p3iws_0.Text = et.InWartschlange.ToString();
+                p3ib_0.Text = et.InBearbeitung.ToString();
+                p3pm_0.Text = et.ProduktionsMengePer0.ToString();
+                //26
+                n = 26;
+                et = instance.GetTeil(n) as ETeil;
+                p3vw_26.Text = p3pm_0.Text;
+                p3plus_26.Text = p3iws_0.Text;
+                if (et.KdhPuffer.ContainsKey(n)) {
+                    p3r_26.Text = et.KdhPuffer[n][index - 1].ToString();
+                }
+                if (et.KdhProduktionsmenge.ContainsKey(index.ToString() + "-" + Convert.ToString(n))) {
+                    p3pm_26.Text = et.KdhProduktionsmenge[index.ToString() + "-" + Convert.ToString(n)].ToString();
+                }
+                //31
+                n = 31;
+                et = instance.GetTeil(n) as ETeil;
+                p3vw_31.Text = et.VertriebPer0.ToString();
+                p3plus_31.Text = et.VaterInWarteschlange.ToString();
+                p3r_31.Text = et.Puffer.ToString();
+                p3ls_31.Text = et.Lagerstand.ToString();
+                p3iws_31.Text = et.InWartschlange.ToString();
+                p3ib_31.Text = et.InBearbeitung.ToString();
+                p3pm_31.Text = et.ProduktionsMengePer0.ToString();
+                //16
+                n = 16;
+                et = instance.GetTeil(n) as ETeil;
+                p3vw_16.Text = p3pm_31.Text;
+                p3plus_16.Text = p3iws_31.Text;
+                if (et.KdhPuffer.ContainsKey(n)) {
+                    p3r_16.Text = et.KdhPuffer[n][index - 1].ToString();
+                }
+                if (et.KdhProduktionsmenge.ContainsKey(index.ToString() + "-" + Convert.ToString(n))) {
+                    p3pm_16.Text = et.KdhProduktionsmenge[index.ToString() + "-" + Convert.ToString(n)].ToString();
+                }
+                //17
+                n = 17;
+                et = instance.GetTeil(n) as ETeil;
+                p3vw_17.Text = p3pm_0.Text;
+                p3plus_17.Text = p3iws_0.Text;
+                if (et.KdhPuffer.ContainsKey(n)) {
+                    p3r_17.Text = et.KdhPuffer[n][index - 1].ToString();
+                }
+                if (et.KdhProduktionsmenge.ContainsKey(index.ToString() + "-" + Convert.ToString(n))) {
+                    p3pm_17.Text = et.KdhProduktionsmenge[index.ToString() + "-" + Convert.ToString(n)].ToString();
+                }
+                //30
+                n = 30;
+                et = instance.GetTeil(n) as ETeil;
+                p3vw_30.Text = et.VertriebPer0.ToString();
+                p3plus_30.Text = et.VaterInWarteschlange.ToString();
+                p3r_30.Text = et.Puffer.ToString();
+                p3ls_30.Text = et.Lagerstand.ToString();
+                p3iws_30.Text = et.InWartschlange.ToString();
+                p3ib_30.Text = et.InBearbeitung.ToString();
+                p3pm_30.Text = et.ProduktionsMengePer0.ToString();
+                //6
+                n = 6;
+                et = instance.GetTeil(n) as ETeil;
+                p3vw_6.Text = et.VertriebPer0.ToString();
+                p3plus_6.Text = et.VaterInWarteschlange.ToString();
+                p3r_6.Text = et.Puffer.ToString();
+                p3ls_6.Text = et.Lagerstand.ToString();
+                p3iws_6.Text = et.InWartschlange.ToString();
+                p3ib_6.Text = et.InBearbeitung.ToString();
+                p3pm_6.Text = et.ProduktionsMengePer0.ToString();
+                //12
+                n = 12;
+                et = instance.GetTeil(n) as ETeil;
+                p3vw_12.Text = et.VertriebPer0.ToString();
+                p3plus_12.Text = et.VaterInWarteschlange.ToString();
+                p3r_12.Text = et.Puffer.ToString();
+                p3ls_12.Text = et.Lagerstand.ToString();
+                p3iws_12.Text = et.InWartschlange.ToString();
+                p3ib_12.Text = et.InBearbeitung.ToString();
+                p3pm_12.Text = et.ProduktionsMengePer0.ToString();
+                //29
+                n = 29;
+                et = instance.GetTeil(n) as ETeil;
+                p3vw_29.Text = et.VertriebPer0.ToString();
+                p3plus_29.Text = et.VaterInWarteschlange.ToString();
+                p3r_29.Text = et.Puffer.ToString();
+                p3ls_29.Text = et.Lagerstand.ToString();
+                p3iws_29.Text = et.InWartschlange.ToString();
+                p3ib_29.Text = et.InBearbeitung.ToString();
+                p3pm_29.Text = et.ProduktionsMengePer0.ToString();
+                //9
+                n = 9;
+                et = instance.GetTeil(n) as ETeil;
+                p3vw_9.Text = et.VertriebPer0.ToString();
+                p3plus_9.Text = et.VaterInWarteschlange.ToString();
+                p3r_9.Text = et.Puffer.ToString();
+                p3ls_9.Text = et.Lagerstand.ToString();
+                p3iws_9.Text = et.InWartschlange.ToString();
+                p3ib_9.Text = et.InBearbeitung.ToString();
+                p3pm_9.Text = et.ProduktionsMengePer0.ToString();
+                //15
+                n = 15;
+                et = instance.GetTeil(n) as ETeil;
+                p3vw_15.Text = et.VertriebPer0.ToString();
+                p3plus_15.Text = et.VaterInWarteschlange.ToString();
+                p3r_15.Text = et.Puffer.ToString();
+                p3ls_15.Text = et.Lagerstand.ToString();
+                p3iws_15.Text = et.InWartschlange.ToString();
+                p3ib_15.Text = et.InBearbeitung.ToString();
+                p3pm_15.Text = et.ProduktionsMengePer0.ToString();
+                //20
+                n = 20;
+                et = instance.GetTeil(n) as ETeil;
+                p3vw_20.Text = et.VertriebPer0.ToString();
+                p3plus_20.Text = et.VaterInWarteschlange.ToString();
+                p3r_20.Text = et.Puffer.ToString();
+                p3ls_20.Text = et.Lagerstand.ToString();
+                p3iws_20.Text = et.InWartschlange.ToString();
+                p3ib_20.Text = et.InBearbeitung.ToString();
+                p3pm_20.Text = et.ProduktionsMengePer0.ToString();
+                #endregion
+            }
         }
 
         /// <summary>
@@ -67,69 +468,53 @@ namespace ToolFahrrad_v1
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void upDownAW1_ValueChanged(object sender, EventArgs e)
-        {
+        private void upDownAW1_ValueChanged(object sender, EventArgs e) {
             TextVisibleFalse();
         }
-        private void upDownAW2_ValueChanged(object sender, EventArgs e)
-        {
+        private void upDownAW2_ValueChanged(object sender, EventArgs e) {
             TextVisibleFalse();
         }
-        private void upDownAW3_ValueChanged(object sender, EventArgs e)
-        {
+        private void upDownAW3_ValueChanged(object sender, EventArgs e) {
             TextVisibleFalse();
         }
-        private void upDownP13_ValueChanged(object sender, EventArgs e)
-        {
+        private void upDownP13_ValueChanged(object sender, EventArgs e) {
             TextVisibleFalse();
         }
-        private void upDownP12_ValueChanged(object sender, EventArgs e)
-        {
+        private void upDownP12_ValueChanged(object sender, EventArgs e) {
             TextVisibleFalse();
         }
-        private void upDownP11_ValueChanged(object sender, EventArgs e)
-        {
+        private void upDownP11_ValueChanged(object sender, EventArgs e) {
             TextVisibleFalse();
         }
-        private void upDownP21_ValueChanged(object sender, EventArgs e)
-        {
+        private void upDownP21_ValueChanged(object sender, EventArgs e) {
             TextVisibleFalse();
         }
-        private void upDownP22_ValueChanged(object sender, EventArgs e)
-        {
+        private void upDownP22_ValueChanged(object sender, EventArgs e) {
             TextVisibleFalse();
         }
-        private void upDownP23_ValueChanged(object sender, EventArgs e)
-        {
+        private void upDownP23_ValueChanged(object sender, EventArgs e) {
             TextVisibleFalse();
         }
-        private void upDownP33_ValueChanged(object sender, EventArgs e)
-        {
+        private void upDownP33_ValueChanged(object sender, EventArgs e) {
             TextVisibleFalse();
         }
-        private void upDownP32_ValueChanged(object sender, EventArgs e)
-        {
+        private void upDownP32_ValueChanged(object sender, EventArgs e) {
             TextVisibleFalse();
         }
-        private void upDownP31_ValueChanged(object sender, EventArgs e)
-        {
+        private void upDownP31_ValueChanged(object sender, EventArgs e) {
             TextVisibleFalse();
         }
-        private void pufferP1_ValueChanged(object sender, EventArgs e)
-        {
+        private void pufferP1_ValueChanged(object sender, EventArgs e) {
             TextVisibleFalse();
         }
-        private void pufferP2_ValueChanged(object sender, EventArgs e)
-        {
+        private void pufferP2_ValueChanged(object sender, EventArgs e) {
             TextVisibleFalse();
         }
-        private void pufferP3_ValueChanged(object sender, EventArgs e)
-        {
+        private void pufferP3_ValueChanged(object sender, EventArgs e) {
             TextVisibleFalse();
         }
 
-        private void prognoseSpeichern_Click(object sender, EventArgs e)
-        {
+        private void prognoseSpeichern_Click(object sender, EventArgs e) {
             instance.GetTeil(1).VertriebPer0 = Convert.ToInt32(upDownAW1.Value);
             instance.GetTeil(2).VertriebPer0 = Convert.ToInt32(upDownAW2.Value);
             instance.GetTeil(3).VertriebPer0 = Convert.ToInt32(upDownAW3.Value);
@@ -139,15 +524,15 @@ namespace ToolFahrrad_v1
             (instance.GetTeil(3) as ETeil).Puffer = Convert.ToInt32(pufferP3.Value);
 
             instance.GetTeil(1).VerbrauchPer1 = Convert.ToInt32(upDownP11.Value);
-            instance.GetTeil(1).VerbrauchPer2 = Convert.ToInt32(upDownP12.Value);
-            instance.GetTeil(1).VerbrauchPer3 = Convert.ToInt32(upDownP13.Value);
+            instance.GetTeil(1).VerbrauchPer2 = Convert.ToInt32(upDownP21.Value);
+            instance.GetTeil(1).VerbrauchPer3 = Convert.ToInt32(upDownP31.Value);
 
-            instance.GetTeil(2).VerbrauchPer1 = Convert.ToInt32(upDownP21.Value);
+            instance.GetTeil(2).VerbrauchPer1 = Convert.ToInt32(upDownP12.Value);
             instance.GetTeil(2).VerbrauchPer2 = Convert.ToInt32(upDownP22.Value);
-            instance.GetTeil(2).VerbrauchPer3 = Convert.ToInt32(upDownP23.Value);
+            instance.GetTeil(2).VerbrauchPer3 = Convert.ToInt32(upDownP32.Value);
 
-            instance.GetTeil(3).VerbrauchPer1 = Convert.ToInt32(upDownP31.Value);
-            instance.GetTeil(3).VerbrauchPer2 = Convert.ToInt32(upDownP32.Value);
+            instance.GetTeil(3).VerbrauchPer1 = Convert.ToInt32(upDownP13.Value);
+            instance.GetTeil(3).VerbrauchPer2 = Convert.ToInt32(upDownP23.Value);
             instance.GetTeil(3).VerbrauchPer3 = Convert.ToInt32(upDownP33.Value);
 
             this.bildSpeichOk.Visible = true;
@@ -162,12 +547,10 @@ namespace ToolFahrrad_v1
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void xml_suchen_Click(object sender, EventArgs e)
-        {
+        private void xml_suchen_Click(object sender, EventArgs e) {
             xmlOeffnen();
         }
-        private void dateiÖffnenToolStripMenuItem_Click(object sender, EventArgs e)
-        {
+        private void dateiÖffnenToolStripMenuItem_Click(object sender, EventArgs e) {
             xmlOeffnen();
         }
 
@@ -176,237 +559,60 @@ namespace ToolFahrrad_v1
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void englischToolStripMenuItem_Click_1(object sender, EventArgs e)
-        {
+        private void englischToolStripMenuItem_Click_1(object sender, EventArgs e) {
             Thread.CurrentThread.CurrentUICulture = new CultureInfo("en");
             Controls.Clear();
             Events.Dispose();
             InitializeComponent();
         }
-        private void gewichtungToolStripMenuItem_Click(object sender, EventArgs e)
-        {
+        private void gewichtungToolStripMenuItem_Click(object sender, EventArgs e) {
             Einstellungen einstellungen = new Einstellungen();
             einstellungen.Show();
         }
-        private void startSeiteToolStripMenuItem_Click(object sender, EventArgs e)
-        {
+        private void startSeiteToolStripMenuItem_Click(object sender, EventArgs e) {
             System.Diagnostics.Process.Start("http://scsim.de/");
         }
-        private void englischToolStripMenuItem1_Click(object sender, EventArgs e)
-        {
+        private void englischToolStripMenuItem1_Click(object sender, EventArgs e) {
+            ChangeLanguage("englisch");
             englischToolStripMenuItem1.Checked = true;
             deutschToolStripMenuItem1.Checked = false;
         }
-        private void deutschToolStripMenuItem1_Click(object sender, EventArgs e)
-        {
+        private void deutschToolStripMenuItem1_Click(object sender, EventArgs e) {
+            ChangeLanguage("deutsch");
             englischToolStripMenuItem1.Checked = false;
             deutschToolStripMenuItem1.Checked = true;
         }
-        private void schließenToolStripMenuItem_Click_1(object sender, EventArgs e)
-        {
+        private void ChangeLanguage(string language) {
+            switch (language) {
+                case "deutsch":
+                    Thread.CurrentThread.CurrentUICulture = new CultureInfo("de");
+                    Controls.Clear();
+                    Events.Dispose();
+                    InitializeComponent();
+                    okXml = false;
+                    break;
+                case "englisch":
+                    Thread.CurrentThread.CurrentUICulture = new CultureInfo("en");
+                    Controls.Clear();
+                    Events.Dispose();
+                    InitializeComponent();
+                    okXml = false;
+                    break;
+            }
+        }
+        private void schließenToolStripMenuItem_Click_1(object sender, EventArgs e) {
             this.Close();
         }
-        private void handbuchToolStripMenuItem_Click(object sender, EventArgs e)
-        {
+        private void handbuchToolStripMenuItem_Click(object sender, EventArgs e) {
             //string path = Directory.GetCurrentDirectory() + @"\chm\dv_aspnetmmc.chm";
             //Help.ShowHelp(this, path, HelpNavigator.TableOfContents, "");
-        }
-
-        /// <summary>
-        /// EDIT
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void picEditEteile_Click(object sender, EventArgs e)
-        {
-            Dictionary<PictureBox, bool> dic = new Dictionary<PictureBox, bool>() 
-            {
-                {this.picSaveETeile, true},
-                {this.picResetETeil, true},
-                {this.picReadOnlyETeile, true}
-            };
-            if (rbReserve.Checked == true)
-            {
-                picEdit(dic, 8, dataGridViewETeil);
-            }
-        }
-        private void picEditAPlatz_Click(object sender, EventArgs e)
-        {
-            Dictionary<PictureBox, bool> dic = new Dictionary<PictureBox, bool>() 
-            {
-                {this.picSaveAPlatz, true},
-                {this.picResetAPlatz, true},
-                {this.picReadOnlyAPlatz, true}
-            };
-            if (rbRuestzeit.Checked == true)
-            {
-                picEdit(dic, 5, dataGridViewAPlatz);
-            }
-        }
-
-        /// <summary>
-        /// SAVE
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void pictureSaveETeile_Click(object sender, EventArgs e)
-        {
-            DialogResult result = GetMessage(null, "Änderungen");
-            string text = string.Empty;
-            if (result == System.Windows.Forms.DialogResult.OK)
-            {
-                Dictionary<int, string> ids = new Dictionary<int, string>();
-                foreach (DataGridViewRow row in dataGridViewETeil.Rows)
-                {
-                    if (rbReserve.Checked == true)
-                    {
-                        int reserveAlt = (instance.GetTeil(Convert.ToInt32(row.Cells[0].Value.ToString())) as ETeil).Puffer;
-                        int reserveNeu = Convert.ToInt32(row.Cells[8].Value.ToString());
-                        if (!reserveAlt.Equals(reserveNeu))
-                        {
-                            ids.Add(Convert.ToInt32(row.Cells[0].Value.ToString()), reserveAlt + ">" + reserveNeu + ">" + row.Cells[1].Value.ToString());
-                        }
-                    }
-                }
-
-                if (ids.Count() > 0)
-                {
-                    foreach (KeyValuePair<int, string> pair in ids)
-                    {
-                        string[] change = pair.Value.Split('>');
-                        (instance.GetTeil(pair.Key) as ETeil).FeldGeandert(0, Convert.ToInt32(change[1]));
-                        text += change[2] + ": von " + change[0] + " auf " + change[1] + "\n";
-                    }
-                }
-
-                Dictionary<PictureBox, bool> dic = new Dictionary<PictureBox, bool>() 
-                {
-                    {this.picEditsAPlatz, true},
-                    {this.picResetAPlatz, false},
-                    {this.picSaveAPlatz, false},
-                    {this.picReadOnlyAPlatz, false}
-                };
-                picSave(dic, 5, dataGridViewAPlatz);
-
-                pp.Aufloesen();
-                Information();
-                if (!text.Equals(string.Empty))
-                    result = GetMessage(text, "Message");
-                else
-                    result = GetMessage("keine Spalte wurde geändert", "Message");
-            }
-        }
-        private void picSaveAPlatz_Click(object sender, EventArgs e)
-        {
-            DialogResult result = GetMessage(null, "Änderungen");
-            string text = string.Empty;
-            if (result == System.Windows.Forms.DialogResult.OK)
-            {
-                Dictionary<int, string> ids = new Dictionary<int, string>();
-                foreach (DataGridViewRow row in dataGridViewAPlatz.Rows)
-                {
-                    if (rbRuestzeit.Checked == true)
-                    {
-                        int ruestAlt = (instance.GetArbeitsplatz(Convert.ToInt32(row.Cells[0].Value.ToString()))).RuestungCustom;
-                        int ruestNeu = Convert.ToInt32(row.Cells[5].Value.ToString());
-                        if (!ruestAlt.Equals(ruestNeu))
-                        {
-                            ids.Add(Convert.ToInt32(row.Cells[0].Value.ToString()), ruestAlt + ">" + ruestNeu);
-                        }
-                    }
-                }
-
-                if (ids.Count() > 0)
-                {
-                    foreach (KeyValuePair<int, string> pair in ids)
-                    {
-                        string[] change = pair.Value.Split('>');
-                        (instance.GetArbeitsplatz(pair.Key)).CustomRuestungGeaendert(Convert.ToInt32(change[1]));
-                        text += pair.Key + ": von " + change[0] + " auf " + change[1] + "\n";
-                    }
-                }
-                Dictionary<PictureBox, bool> dic = new Dictionary<PictureBox, bool>() 
-                {
-                    {this.picEditsAPlatz, true},
-                    {this.picResetAPlatz, false},
-                    {this.picSaveAPlatz, false},
-                    {this.picReadOnlyAPlatz, false}
-                };
-                picSave(dic, 5, dataGridViewAPlatz);
-                Information();
-                if (!text.Equals(string.Empty))
-                    result = GetMessage(text, "Message");
-                else
-                    result = GetMessage("keine Spalte wurde geändert", "Message");
-            }
-        }
-
-
-
-        /// <summary>
-        /// RESET
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void pictureResetETeil_Click(object sender, EventArgs e)
-        {
-            Information();
-            dataGridViewETeil.Columns[8].DefaultCellStyle.BackColor = Color.Honeydew;
-        }
-        private void picResetAPlatz_Click(object sender, EventArgs e)
-        {
-            Information();
-            dataGridViewAPlatz.Columns[4].DefaultCellStyle.BackColor = Color.Honeydew;
-        }
-
-        /// <summary>
-        /// READONLY
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void pictureReadOnly_Click(object sender, EventArgs e)
-        {
-            Dictionary<PictureBox, bool> dic = new Dictionary<PictureBox, bool>() 
-            {
-                {this.picEditEteile, true},
-                {this.picResetETeil, false},
-                {this.picSaveETeile, false},
-                {this.picReadOnlyETeile, false}
-            };
-            picReadOnly(dic, 8, dataGridViewETeil);
-        }
-        private void picReadOnlyAPlatz_Click(object sender, EventArgs e)
-        {
-            Dictionary<PictureBox, bool> dic = new Dictionary<PictureBox, bool>() 
-            {
-                {this.picEditsAPlatz, true},
-                {this.picResetAPlatz, false},
-                {this.picSaveAPlatz, false},
-                {this.picReadOnlyAPlatz, false}
-            };
-            picReadOnly(dic, 5, dataGridViewAPlatz);
-        }
-
-
-        /// <summary>
-        /// CHECK
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void cbMitOhne_CheckedChanged(object sender, System.EventArgs e)
-        {
-            if (cbMitOhne.Checked == true)
-                instance.BerechneKindTeil = true;
-            else
-                instance.BerechneKindTeil = false;
         }
 
         ////////////////////////////////////////////////////////////////////////////
         /// <summary>
         /// HILFSMETHODEN
         /// </summary>
-        private void TextVisibleFalse()
-        {
+        private void TextVisibleFalse() {
             this.bildSpeichOk.Visible = false;
             this.okPrognose = false;
             this.toolAusfueren.Visible = false;
@@ -426,14 +632,11 @@ namespace ToolFahrrad_v1
         //    return base.ProcessCmdKey(ref msg, keyData);
         //}
 
-        private void xmlOeffnen()
-        {
+        private void xmlOeffnen() {
             OpenFileDialog openFileDialog = new OpenFileDialog();
             openFileDialog.Filter = "xml-Datei öffnen (*.xml)|*.xml";
-            if (openFileDialog.ShowDialog() == DialogResult.OK)
-            {
-                if (xml.ReadDatei(openFileDialog.FileName) == true)
-                {
+            if (openFileDialog.ShowDialog() == DialogResult.OK) {
+                if (xml.ReadDatei(openFileDialog.FileName) == true) {
                     xmlTextBox.Text = openFileDialog.FileName;
                     pfadText.ForeColor = Color.ForestGreen;
                     xmlOffenOK.Visible = true;
@@ -442,8 +645,7 @@ namespace ToolFahrrad_v1
                     if (this.okPrognose == true)
                         toolAusfueren.Visible = true;
                 }
-                else
-                {
+                else {
                     xmlTextBox.Text = openFileDialog.FileName;
                     pfadText.ForeColor = Color.Red;
                     toolAusfueren.Visible = false;
@@ -456,54 +658,93 @@ namespace ToolFahrrad_v1
             this.panelXML.Visible = true;
         }
 
-        private void DataGriedViewRemove(DataGridView dgv)
-        {
-            if (dgv.DataSource != null)
-            {
+        private void DataGriedViewRemove(DataGridView dgv) {
+            if (dgv.DataSource != null) {
                 dgv.DataSource = null;
             }
-            else
-            {
+            else {
                 dgv.Rows.Clear();
             }
         }
 
-        private void Information()
-        {
+        private void Information() {
             // KTeile
+            #region KTEILE
             this.DataGriedViewRemove(dataGridViewKTeil);
             int index = 0;
-            foreach (var a in instance.ListeKTeile)
-            {
+            for (int i = 4; i < 8; ++i) {
+                dataGridViewKTeil.Columns[i].HeaderText = "P" + (Convert.ToInt32(xml.period) + (i - 4));
+            }
+
+            dataGridViewKTeil.Columns[8].HeaderText = "B" + ((Convert.ToInt32(xml.period)) + 1);
+            dataGridViewKTeil.Columns[10].HeaderText = "B" + ((Convert.ToInt32(xml.period)) + 2);
+            dataGridViewKTeil.Columns[12].HeaderText = "B" + (Convert.ToInt32(xml.period) + 3);
+            dataGridViewKTeil.Columns[14].HeaderText = "B" + (Convert.ToInt32(xml.period) + 4);
+
+            foreach (var a in instance.ListeKTeile) {
+                //Lagerzugang berechnen
+                int lagerZugang = 0;
+                List<List<int>> list = a.OffeneBestellungen;
+                foreach (List<int> l in list) {
+                    lagerZugang += l[2];
+                }
+
                 dataGridViewKTeil.Rows.Add();
                 dataGridViewKTeil.Rows[index].Cells[0].Value = a.Nummer;
                 dataGridViewKTeil.Rows[index].Cells[1].Value = a.Verwendung + " - " + a.Bezeichnung;
                 dataGridViewKTeil.Rows[index].Cells[2].Value = a.Lagerstand;
-                dataGridViewKTeil.Rows[index].Cells[3].Value = a.Verhaeltnis + "%";
-                if (a.Verhaeltnis < 40)
-                    dataGridViewKTeil.Rows[index].Cells[4].Value = imageList1.Images[0];
-                else if (a.Verhaeltnis <= 100)
-                    dataGridViewKTeil.Rows[index].Cells[4].Value = imageList1.Images[2];
+                dataGridViewKTeil.Rows[index].Cells[3].Value = lagerZugang;
+                dataGridViewKTeil.Rows[index].Cells[4].Value = a.BruttoBedarfPer0;
+                dataGridViewKTeil.Rows[index].Cells[5].Value = a.BruttoBedarfPer1;
+                dataGridViewKTeil.Rows[index].Cells[6].Value = a.BruttoBedarfPer2;
+                dataGridViewKTeil.Rows[index].Cells[7].Value = a.BruttoBedarfPer3;
+
+                dataGridViewKTeil.Rows[index].Cells[8].Value = a.BestandPer1;
+                if (a.BestandPer1 - a.BruttoBedarfPer0 < 0)
+                    dataGridViewKTeil.Rows[index].Cells[9].Value = imageList1.Images[0];
+                else if (a.BestandPer1 - a.BruttoBedarfPer0 > 0)
+                    dataGridViewKTeil.Rows[index].Cells[9].Value = imageList1.Images[2];
                 else
-                    dataGridViewKTeil.Rows[index].Cells[4].Value = imageList1.Images[1];
-                dataGridViewKTeil.Rows[index].Cells[5].Value = a.LagerZugang;
+                    dataGridViewKTeil.Rows[index].Cells[9].Value = imageList1.Images[1];
+                dataGridViewKTeil.Rows[index].Cells[10].Value = a.BestandPer2;
+                if (a.BestandPer2 - a.BruttoBedarfPer1 < 0)
+                    dataGridViewKTeil.Rows[index].Cells[11].Value = imageList1.Images[0];
+                else if (a.BestandPer2 - a.BruttoBedarfPer1 > 0)
+                    dataGridViewKTeil.Rows[index].Cells[11].Value = imageList1.Images[2];
+                else
+                    dataGridViewKTeil.Rows[index].Cells[11].Value = imageList1.Images[1];
+                dataGridViewKTeil.Rows[index].Cells[12].Value = a.BestandPer3;
+                if (a.BestandPer3 - a.BruttoBedarfPer2 < 0)
+                    dataGridViewKTeil.Rows[index].Cells[13].Value = imageList1.Images[0];
+                else if (a.BestandPer3 - a.BruttoBedarfPer2 > 0)
+                    dataGridViewKTeil.Rows[index].Cells[13].Value = imageList1.Images[2];
+                else
+                    dataGridViewKTeil.Rows[index].Cells[13].Value = imageList1.Images[1];
+                dataGridViewKTeil.Rows[index].Cells[14].Value = a.BestandPer4;
+                if (a.BestandPer4 - a.BruttoBedarfPer3 < 0)
+                    dataGridViewKTeil.Rows[index].Cells[15].Value = imageList1.Images[0];
+                else if (a.BestandPer4 - a.BruttoBedarfPer3 > 0)
+                    dataGridViewKTeil.Rows[index].Cells[15].Value = imageList1.Images[2];
+                else
+                    dataGridViewKTeil.Rows[index].Cells[15].Value = imageList1.Images[1];
 
                 //Farbe
-                for (int i = 0; i < 6; ++i)
-                {
-                    if (i == 4)
-                        dataGridViewETeil.Columns[i].DefaultCellStyle.BackColor = Color.LightYellow;
-                    else
+                for (int i = 0; i < 16; ++i) {
+                    if (i >= 0 && i < 4)
                         dataGridViewKTeil.Columns[i].DefaultCellStyle.BackColor = Color.FloralWhite;
+                    else if (i == 8 || i == 10 || i == 12 || i == 14)
+                        dataGridViewKTeil.Columns[i].DefaultCellStyle.BackColor = Color.LightYellow;
+                    else if (i > 3 && i < 8)
+                        dataGridViewKTeil.Columns[i].DefaultCellStyle.BackColor = Color.Honeydew;
                 }
                 ++index;
             }
-
+            #endregion
             // Eteile
+            #region ETeile
             this.DataGriedViewRemove(dataGridViewETeil);
             index = 0;
-            foreach (var a in instance.ListeETeile)
-            {
+            foreach (var a in instance.ListeETeile) {
                 dataGridViewETeil.Rows.Add();
                 dataGridViewETeil.Rows[index].Cells[0].Value = a.Nummer;
                 dataGridViewETeil.Rows[index].Cells[1].Value = a.Verwendung + " - " + a.Bezeichnung;
@@ -517,121 +758,271 @@ namespace ToolFahrrad_v1
                     dataGridViewETeil.Rows[index].Cells[4].Value = imageList1.Images[1];
                 dataGridViewETeil.Rows[index].Cells[5].Value = a.InWartschlange;
                 dataGridViewETeil.Rows[index].Cells[6].Value = a.InBearbeitung;
-                dataGridViewETeil.Rows[index].Cells[7].Value = a.ProduktionsMengePer0;
-                dataGridViewETeil.Rows[index].Cells[8].Value = a.Puffer;
+                if (!a.Verwendung.Equals("KDH"))
+                    dataGridViewETeil.Rows[index].Cells[7].Value = a.ProduktionsMengePer0;
+                else {
+                    int prodMenge = 0;
+                    //TODO UMRECHNEN
+                    foreach (KeyValuePair<string, int> pair in a.KdhProduktionsmenge) {
+                        prodMenge += pair.Value;
+                    }
+                    dataGridViewETeil.Rows[index].Cells[7].Value = prodMenge;
+                }
 
                 //Farbe
-                for (int i = 0; i < 9; ++i)
-                {
-                    if (i == 4 || i == 7)
-                        dataGridViewETeil.Columns[i].DefaultCellStyle.BackColor = Color.LightYellow;
-                    else if (i == 8)
-                    {
+                for (int i = 0; i < 8; ++i) {
+                    if (i == 7)
                         dataGridViewETeil.Columns[i].DefaultCellStyle.BackColor = Color.Honeydew;
-                    }
                     else
                         dataGridViewETeil.Columns[i].DefaultCellStyle.BackColor = Color.FloralWhite;
                 }
+                if (a.Verwendung.Equals("KDH")) {
+                    dataGridViewETeil.Rows[index].DefaultCellStyle.BackColor = Color.LemonChiffon;
+                }
+
                 ++index;
             }
-
+            #endregion
             // Arbeitsplätze
             this.DataGriedViewRemove(dataGridViewAPlatz);
             index = 0;
-            foreach (var a in instance.ArbeitsplatzList)
-            {
-                int gesammtZeit = (int)(a.GetRuestZeit * a.RuestungCustom);
-                int gesammt = gesammtZeit + a.GetBenoetigteZeit;
+            foreach (var a in instance.ArbeitsplatzList) {
+                int gesammt = a.GetRuestZeit + a.GetBenoetigteZeit;
 
                 dataGridViewAPlatz.Rows.Add();
                 dataGridViewAPlatz.Rows[index].Cells[0].Value = a.GetNummerArbeitsplatz;
                 (instance.GetArbeitsplatz(a.GetNummerArbeitsplatz)).CustomRuestungGeaendert(-1);
                 dataGridViewAPlatz.Rows[index].Cells[1].Value = a.Leerzeit + " (" + a.RuestungVorPeriode + ") ";
                 dataGridViewAPlatz.Rows[index].Cells[2].Value = a.GetBenoetigteZeit + " min";
-                dataGridViewAPlatz.Rows[index].Cells[3].Value = (int)(a.GetRuestZeit * a.RuestungCustom) + " min";
-                dataGridViewAPlatz.Rows[index].Cells[4].Value = a.RuestNew;
-                dataGridViewAPlatz.Rows[index].Cells[5].Value = a.RuestungCustom;
-                dataGridViewAPlatz.Rows[index].Cells[6].Value = gesammt + " min";
-                dataGridViewAPlatz.Rows[index].Cells[10].Value = imageList1.Images[2];
+                dataGridViewAPlatz.Rows[index].Cells[3].Value = a.GetRuestZeit;
+                //dataGridViewAPlatz.Rows[index].Cells[4].Value = a.RuestNew;
+                //dataGridViewAPlatz.Rows[index].Cells[5].Value = a.RuestungCustom;
+                dataGridViewAPlatz.Rows[index].Cells[4].Value = gesammt + " min";
+                dataGridViewAPlatz.Rows[index].Cells[8].Value = imageList1.Images[2];
                 if (gesammt <= a.zeit) // newTeim <= 2400 
-                    dataGridViewAPlatz.Rows[index].Cells[7].Value = imageList1.Images[2];
+                    dataGridViewAPlatz.Rows[index].Cells[5].Value = imageList1.Images[2];
                 else if (gesammt > instance.ErsteSchicht) // gesammt > 3600
                 {
                     if (gesammt > 7200)
-                        dataGridViewAPlatz.Rows[index].Cells[10].Value = imageList1.Images[0];
+                        dataGridViewAPlatz.Rows[index].Cells[8].Value = imageList1.Images[0];
                     else if (gesammt > instance.ZweiteSchicht && gesammt < 7200)
-                        dataGridViewAPlatz.Rows[index].Cells[10].Value = imageList1.Images[1];
+                        dataGridViewAPlatz.Rows[index].Cells[8].Value = imageList1.Images[1];
                     else
-                        dataGridViewAPlatz.Rows[index].Cells[10].Value = imageList1.Images[2];
+                        dataGridViewAPlatz.Rows[index].Cells[8].Value = imageList1.Images[2];
 
-                    if (gesammt < instance.ZweiteSchicht)
-                    {
-                        dataGridViewAPlatz.Rows[index].Cells[7].Value = imageList1.Images[0];
-                        dataGridViewAPlatz.Rows[index].Cells[8].Value = true;
+                    if (gesammt < instance.ZweiteSchicht) {
+                        dataGridViewAPlatz.Rows[index].Cells[5].Value = imageList1.Images[0];
+                        dataGridViewAPlatz.Rows[index].Cells[6].Value = true;
                     }
-                    else if (gesammt > instance.ZweiteSchicht)
-                    {
-                        dataGridViewAPlatz.Rows[index].Cells[7].Value = imageList1.Images[0];
-                        dataGridViewAPlatz.Rows[index].Cells[9].Value = true;
+                    else if (gesammt > instance.ZweiteSchicht) {
+                        dataGridViewAPlatz.Rows[index].Cells[5].Value = imageList1.Images[0];
+                        dataGridViewAPlatz.Rows[index].Cells[7].Value = true;
                     }
                 }
                 else if (gesammt > a.zeit && gesammt <= instance.ErsteSchicht) // 2400 < newTime < 3600 Überstunden
                 {
-                    dataGridViewAPlatz.Rows[index].Cells[7].Value = imageList1.Images[1];
+                    dataGridViewAPlatz.Rows[index].Cells[5].Value = imageList1.Images[1];
                 }
-                else
-                {
-                    dataGridViewAPlatz.Rows[index].Cells[7].Value = imageList1.Images[2];
+                else {
+                    dataGridViewAPlatz.Rows[index].Cells[5].Value = imageList1.Images[2];
                 }
 
                 //Farbe
-                for (int i = 0; i < 11; ++i)
-                {
-                    if (i < 2 || i == 4)
+                for (int i = 0; i < 9; ++i) {
+                    if (i < 2)
                         dataGridViewAPlatz.Columns[i].DefaultCellStyle.BackColor = Color.FloralWhite;
-                    else if (i == 2 || i == 3 || (i >= 6 && i <= 11))
+                    else if (i==2 || i > 3)
                         dataGridViewAPlatz.Columns[i].DefaultCellStyle.BackColor = Color.LightYellow;
-                    else
-                        dataGridViewAPlatz.Columns[i].DefaultCellStyle.BackColor = Color.Honeydew;
                 }
 
                 ++index;
             }
         }
 
-        private void picEdit(Dictionary<PictureBox, bool> dic, int index, DataGridView dataGrid)
-        {
+        private void picEdit(Dictionary<PictureBox, bool> dic, int index, DataGridView dataGrid) {
             dataGrid.Columns[index].DefaultCellStyle.BackColor = Color.LightBlue;
             dataGrid.Columns[index].ReadOnly = false;
-            foreach (KeyValuePair<PictureBox, bool> pair in dic)
-            {
+            foreach (KeyValuePair<PictureBox, bool> pair in dic) {
                 pair.Key.Visible = pair.Value;
             }
         }
-        private void picReadOnly(Dictionary<PictureBox, bool> dic, int index, DataGridView dataGrid)
-        {
-            foreach (KeyValuePair<PictureBox, bool> pair in dic)
-            {
+        private void picReadOnly(Dictionary<PictureBox, bool> dic, int index, DataGridView dataGrid) {
+            foreach (KeyValuePair<PictureBox, bool> pair in dic) {
                 pair.Key.Visible = pair.Value;
             }
             dataGrid.Columns[index].DefaultCellStyle.BackColor = Color.Honeydew;
             dataGrid.Columns[index].ReadOnly = true;
         }
-        private void picSave(Dictionary<PictureBox, bool> dic, int index, DataGridView dataGrid)
-        {
-            foreach (KeyValuePair<PictureBox, bool> pair in dic)
-            {
+        private void picSave(Dictionary<PictureBox, bool> dic, int index, DataGridView dataGrid) {
+            foreach (KeyValuePair<PictureBox, bool> pair in dic) {
                 pair.Key.Visible = pair.Value;
             }
             dataGrid.Columns[index].DefaultCellStyle.BackColor = Color.Honeydew;
             dataGrid.Columns[index].ReadOnly = true;
         }
-        private System.Windows.Forms.DialogResult GetMessage(string t, string s)
-        {
+        private System.Windows.Forms.DialogResult GetMessage(string t, string s) {
             if (s.Contains("Änderungen"))
                 return MessageBox.Show("Wollen Sie sicher was ändern?", s, MessageBoxButtons.OKCancel);
             else
                 return MessageBox.Show(t, s, MessageBoxButtons.OK);
         }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void dataGridViewKTeil_CellContentClick_1(object sender, DataGridViewCellEventArgs e) {
+            if (e.ColumnIndex == 0) {
+                TeilInformation ti = new TeilInformation("kteil", Convert.ToInt32(dataGridViewKTeil.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString()));
+                ti.GetTeilvonETeilMitMenge();
+                ti.Show();
+            }
+        }
+
+        private void dataGridViewAPlatz_CellContentClick(object sender, DataGridViewCellEventArgs e) {
+            if (e.ColumnIndex == 0) {
+                TeilInformation ti = new TeilInformation("arbeitsplatz", Convert.ToInt32(dataGridViewAPlatz.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString()));
+                ti.GetZeitInformation();
+                ti.Show();
+            }
+        }
+
+
+
+
+        private void button1_Click(object sender, EventArgs e) {
+            Bestellverwaltung bv = new Bestellverwaltung();
+            bv.generiereBestellListe();
+            List<Bestellposition> bp = bv.BvPositionen;
+        }
+
+        private void prodMenge(int index, int nr, int reserve) {
+            ETeil et = instance.GetTeil(nr) as ETeil;
+            if (et.IstEndProdukt == true)
+                et.ProduktionsMengePer0 = et.VertriebPer0 + reserve - et.Lagerstand - et.InWartschlange - et.InBearbeitung;
+            else if (et.IstEndProdukt != true && et.Verwendung.Contains("KDH") == false)
+                et.ProduktionsMengePer0 = et.VertriebPer0 + et.VaterInWarteschlange + reserve - et.Lagerstand - et.InWartschlange - et.InBearbeitung;
+            else {
+                int pufTemp = 0;
+                foreach (KeyValuePair<int, int[]> pair in et.KdhPuffer) {
+                    if (pair.Key.Equals(nr)) {
+                        pufTemp = pair.Value[index - 1];
+                    }
+                }
+                int pmTemp = 0;
+                if (index == 1) {
+                    pmTemp = et.VertriebPer0 + et.KdhVaterInWarteschlange[nr][index - 1] + pufTemp - et.Lagerstand - et.InWartschlange - et.InBearbeitung;
+                }
+                else {
+                    pmTemp = et.VertriebPer0 + et.KdhVaterInWarteschlange[nr][index - 1] + pufTemp;
+                }
+                if (et.KdhProduktionsmenge.ContainsKey(index.ToString() + "-" + Convert.ToString(nr))) {
+                    et.KdhProduktionsmenge[index.ToString() + "-" + Convert.ToString(nr)] = pmTemp;
+                }
+            }
+        }
+        private void p1ETAusfueren_Click(object sender, EventArgs e) {
+            (instance.GetTeil(1) as ETeil).VertriebPer0 = Convert.ToInt32(p1vw_0.Text);
+            (instance.GetTeil(1) as ETeil).Puffer = Convert.ToInt32(p1r_0.Text);
+            prodMenge(1, 1, Convert.ToInt32(p1r_0.Text));
+            (instance.GetTeil(51) as ETeil).Puffer = Convert.ToInt32(p1r_51.Text);
+            prodMenge(1, 51, Convert.ToInt32(p1r_51.Text));
+            (instance.GetTeil(50) as ETeil).Puffer = Convert.ToInt32(p1r_50.Text);
+            prodMenge(1, 50, Convert.ToInt32(p1r_50.Text));
+            (instance.GetTeil(4) as ETeil).Puffer = Convert.ToInt32(p1r_4.Text);
+            prodMenge(1, 4, Convert.ToInt32(p1r_4.Text));
+            (instance.GetTeil(10) as ETeil).Puffer = Convert.ToInt32(p1r_10.Text);
+            prodMenge(1, 10, Convert.ToInt32(p1r_10.Text));
+            (instance.GetTeil(49) as ETeil).Puffer = Convert.ToInt32(p1r_49.Text);
+            prodMenge(1, 49, Convert.ToInt32(p1r_49.Text));
+            (instance.GetTeil(7) as ETeil).Puffer = Convert.ToInt32(p1r_7.Text);
+            prodMenge(1, 7, Convert.ToInt32(p1r_7.Text));
+            (instance.GetTeil(13) as ETeil).Puffer = Convert.ToInt32(p1r_13.Text);
+            prodMenge(1, 13, Convert.ToInt32(p1r_13.Text));
+            (instance.GetTeil(18) as ETeil).Puffer = Convert.ToInt32(p1r_18.Text);
+            prodMenge(1, 18, Convert.ToInt32(p1r_18.Text));
+            (instance.GetTeil(26) as ETeil).KdhPuffer[(instance.GetTeil(26) as ETeil).KdhPuffer.Keys.ToList()[0]][0] = Convert.ToInt32(p1r_26.Text);
+            prodMenge(1, 26, Convert.ToInt32(p1r_26.Text));
+            (instance.GetTeil(16) as ETeil).KdhPuffer[(instance.GetTeil(16) as ETeil).KdhPuffer.Keys.ToList()[1]][0] = Convert.ToInt32(p1r_16.Text);
+            prodMenge(1, 16, Convert.ToInt32(p1r_16.Text));
+            (instance.GetTeil(17) as ETeil).KdhPuffer[(instance.GetTeil(17) as ETeil).KdhPuffer.Keys.ToList()[2]][0] = Convert.ToInt32(p1r_17.Text);
+            prodMenge(1, 17, Convert.ToInt32(p1r_17.Text));
+
+            DispositionDarstellung(1);
+            Information();
+        }
+        private void p2ETAusfueren_Click(object sender, EventArgs e) {
+            (instance.GetTeil(2) as ETeil).VertriebPer0 = Convert.ToInt32(p2vw_0.Text);
+            (instance.GetTeil(2) as ETeil).Puffer = Convert.ToInt32(p2r_0.Text);
+            prodMenge(2, 2, Convert.ToInt32(p2r_0.Text));
+            (instance.GetTeil(56) as ETeil).Puffer = Convert.ToInt32(p2r_56.Text);
+            prodMenge(2, 56, Convert.ToInt32(p2r_56.Text));
+            (instance.GetTeil(55) as ETeil).Puffer = Convert.ToInt32(p2r_55.Text);
+            prodMenge(2, 55, Convert.ToInt32(p2r_55.Text));
+            (instance.GetTeil(5) as ETeil).Puffer = Convert.ToInt32(p2r_5.Text);
+            prodMenge(2, 5, Convert.ToInt32(p2r_5.Text));
+            (instance.GetTeil(11) as ETeil).Puffer = Convert.ToInt32(p2r_11.Text);
+            prodMenge(2, 11, Convert.ToInt32(p2r_11.Text));
+            (instance.GetTeil(54) as ETeil).Puffer = Convert.ToInt32(p2r_54.Text);
+            prodMenge(2, 54, Convert.ToInt32(p2r_54.Text));
+            (instance.GetTeil(8) as ETeil).Puffer = Convert.ToInt32(p2r_8.Text);
+            prodMenge(2, 8, Convert.ToInt32(p2r_8.Text));
+            (instance.GetTeil(14) as ETeil).Puffer = Convert.ToInt32(p2r_14.Text);
+            prodMenge(2, 14, Convert.ToInt32(p2r_14.Text));
+            (instance.GetTeil(19) as ETeil).Puffer = Convert.ToInt32(p2r_19.Text);
+            prodMenge(2, 19, Convert.ToInt32(p2r_19.Text));
+            (instance.GetTeil(26) as ETeil).KdhPuffer[(instance.GetTeil(26) as ETeil).KdhPuffer.Keys.ToList()[0]][1] = Convert.ToInt32(p2r_26.Text);
+            prodMenge(2, 26, Convert.ToInt32(p2r_26.Text));
+            (instance.GetTeil(16) as ETeil).KdhPuffer[(instance.GetTeil(16) as ETeil).KdhPuffer.Keys.ToList()[1]][1] = Convert.ToInt32(p2r_16.Text);
+            prodMenge(2, 16, Convert.ToInt32(p2r_16.Text));
+            (instance.GetTeil(17) as ETeil).KdhPuffer[(instance.GetTeil(17) as ETeil).KdhPuffer.Keys.ToList()[2]][1] = Convert.ToInt32(p2r_17.Text);
+            prodMenge(2, 17, Convert.ToInt32(p2r_17.Text));
+
+            DispositionDarstellung(2);
+            Information();
+        }
+        private void p3ETAusfueren_Click(object sender, EventArgs e) {
+            (instance.GetTeil(3) as ETeil).VertriebPer0 = Convert.ToInt32(p3vw_0.Text);
+            (instance.GetTeil(3) as ETeil).Puffer = Convert.ToInt32(p3r_0.Text);
+            prodMenge(3, 3, Convert.ToInt32(p3r_0.Text));
+
+            (instance.GetTeil(31) as ETeil).Puffer = Convert.ToInt32(p3r_31.Text);
+            prodMenge(3, 31, Convert.ToInt32(p3r_31.Text));
+
+            (instance.GetTeil(30) as ETeil).Puffer = Convert.ToInt32(p3r_30.Text);
+            prodMenge(3, 30, Convert.ToInt32(p3r_30.Text));
+
+            (instance.GetTeil(6) as ETeil).Puffer = Convert.ToInt32(p3r_6.Text);
+            prodMenge(3, 6, Convert.ToInt32(p3r_6.Text));
+
+            (instance.GetTeil(12) as ETeil).Puffer = Convert.ToInt32(p3r_12.Text);
+            prodMenge(3, 12, Convert.ToInt32(p3r_12.Text));
+
+            (instance.GetTeil(29) as ETeil).Puffer = Convert.ToInt32(p3r_29.Text);
+            prodMenge(3, 29, Convert.ToInt32(p3r_29.Text));
+
+            (instance.GetTeil(9) as ETeil).Puffer = Convert.ToInt32(p3r_9.Text);
+            prodMenge(3, 9, Convert.ToInt32(p3r_9.Text));
+
+            (instance.GetTeil(15) as ETeil).Puffer = Convert.ToInt32(p3r_15.Text);
+            prodMenge(3, 15, Convert.ToInt32(p3r_15.Text));
+
+            (instance.GetTeil(20) as ETeil).Puffer = Convert.ToInt32(p3r_20.Text);
+            prodMenge(3, 20, Convert.ToInt32(p3r_20.Text));
+
+            (instance.GetTeil(26) as ETeil).KdhPuffer[(instance.GetTeil(26) as ETeil).KdhPuffer.Keys.ToList()[0]][2] = Convert.ToInt32(p3r_26.Text);
+            prodMenge(3, 26, Convert.ToInt32(p3r_26.Text));
+            (instance.GetTeil(16) as ETeil).KdhPuffer[(instance.GetTeil(16) as ETeil).KdhPuffer.Keys.ToList()[1]][2] = Convert.ToInt32(p3r_16.Text);
+            prodMenge(3, 16, Convert.ToInt32(p3r_16.Text));
+            (instance.GetTeil(17) as ETeil).KdhPuffer[(instance.GetTeil(17) as ETeil).KdhPuffer.Keys.ToList()[2]][2] = Convert.ToInt32(p3r_17.Text);
+            prodMenge(3, 17, Convert.ToInt32(p3r_17.Text));
+
+            DispositionDarstellung(3);
+            Information();
+        }
+
+
     }
 }
+
+

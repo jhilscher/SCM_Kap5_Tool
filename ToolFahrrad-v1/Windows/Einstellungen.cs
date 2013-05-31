@@ -21,11 +21,13 @@ namespace ToolFahrrad_v1
             InitializeComponent();
             numericUpDown1.Value = instance.ErsteSchicht;
             numericUpDown2.Value = instance.ZweiteSchicht;
+
+            trackBarAbweichung.Value = (int)instance.VerwendeAbweichung / 10;
         }
 
         private void btn_ok_Click(object sender, EventArgs e)
         {
-            bv.VerwendeAbweichung = trackBarAbweichung.Value * 10;
+            instance.VerwendeAbweichung = trackBarAbweichung.Value * 10;
             panel1.Visible = true;
         }
 
@@ -56,6 +58,11 @@ namespace ToolFahrrad_v1
         private void Change()
         {
             panel2.Visible = false;
+        }
+
+        private void trackBar1_Scroll(object sender, EventArgs e) {
+            label6.Text = "Diskount = " + trackBar1.Value.ToString() + "0%";
+            panel1.Visible = false;
         }
     }
 }

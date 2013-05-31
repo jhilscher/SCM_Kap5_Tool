@@ -15,6 +15,11 @@ namespace ToolFahrrad_v1
         private double abweichungLieferdauer;
         private int diskontMenge;
         private int lagerZugang;
+        private List<List<int>> offeneBestellungen;
+        public List<List<int>> OffeneBestellungen
+        {
+            get { return offeneBestellungen; }
+        }
         // ToDo speichern in welcher periode bestellt bei offenen bestellungen
         private int periodeBestellung;
         private List<ETeil> istTeil = null;
@@ -26,12 +31,12 @@ namespace ToolFahrrad_v1
         private int bestandPer2;
         private int bestandPer3;
         private int bestandPer4;
-        private int verwendungProdukt1;
-        private int verwendungProdukt2;
-        private int verwendungProdukt3;
         // Constructor
-        public KTeil(int nummer, string bez) : base(nummer, bez)
-        {}
+        public KTeil(int nummer, string bez)
+            : base(nummer, bez)
+        {
+            offeneBestellungen = new List<List<int>>();
+        }
         // Getter / Setter
         public double Bestellkosten
         {
@@ -68,6 +73,22 @@ namespace ToolFahrrad_v1
             get { return periodeBestellung; }
             set { periodeBestellung = value; }
         }
+        public void AddOffeneBestellung(int periode, int mode, int menge)
+        {
+            List<int> neueOffeneBestellung = new List<int>();
+            neueOffeneBestellung.Add(periode);
+            neueOffeneBestellung.Add(mode);
+            neueOffeneBestellung.Add(menge);
+            offeneBestellungen.Add(neueOffeneBestellung);
+        }
+        public void RemoveOffeneBestellung(int periode, int mode, int menge)
+        {
+            List<int> alteOffeneBestellung = new List<int>();
+            alteOffeneBestellung.Add(periode);
+            alteOffeneBestellung.Add(mode);
+            alteOffeneBestellung.Add(menge);
+            offeneBestellungen.Remove(alteOffeneBestellung);
+        }
         // Function shows where KTeil is used
         public List<ETeil> IstTeilVon
         {
@@ -79,7 +100,7 @@ namespace ToolFahrrad_v1
                     foreach (ETeil teil in DataContainer.Instance.ListeETeile)
                     {
                         if (teil.Nummer == 17)
-                        {}
+                        { }
                         if (teil.Zusammensetzung.ContainsKey(this))
                         {
                             res.Add(teil);
@@ -130,65 +151,76 @@ namespace ToolFahrrad_v1
             get { return bestandPer4; }
             set { bestandPer4 = value; }
         }
-        public int VerwendungProdukt1
-        {
-            get { return verwendungProdukt1; }
-            set { verwendungProdukt1 = value; }
-        }
-        public int VerwendungProdukt2
-        {
-            get { return verwendungProdukt2; }
-            set { verwendungProdukt2 = value; }
-        }
-        public int VerwendungProdukt3
-        {
-            get { return verwendungProdukt3; }
-            set { verwendungProdukt3 = value; }
-        }
         // Public function to initialize BruttoBedarf
-        public void initBruttoBedarf(int index, int prodMengeAkt)
+        public void initBruttoBedarf(int index, ETeil teil, int menge)
         {
             if (index == 1)
             {
-                bruttoBedarfPer0 += prodMengeAkt * verwendungProdukt1;
+                bruttoBedarf(teil, menge);
             }
             else if (index == 2)
             {
-                bruttoBedarfPer0 += prodMengeAkt * verwendungProdukt2;
+                bruttoBedarf(teil, menge);
             }
             else if (index == 3)
             {
-                bruttoBedarfPer0 += prodMengeAkt * verwendungProdukt3;
+                bruttoBedarf(teil, menge);
             }
         }
-        // Public function to calculate forecast consumption for next 3 periods
-        public void berechnungVerbrauchPrognose(double verwendeAbweichung)
+        // Set Bruttobedarf, when periode0 check that Produktionsmenge is > 0
+        private void bruttoBedarf(ETeil teil, int menge)
         {
-            // Future period 1
-/*            verbProg1MA = Convert.ToInt32(
-                lagerstand + erwarteteBestellung - vertriebAktuell * (lieferdauer + abweichungLieferdauer));
-            verbProg1OA = Convert.ToInt32(
-                lagerstand + erwarteteBestellung - vertriebAktuell * lieferdauer);
-            // Future period 2
-            verbProg2MA = Convert.ToInt32(
-                lagerstand + erwarteteBestellung - (
-                    vertriebAktuell + (vertriebAktuell + verbrauchPrognose1 + verbrauchPrognose2) / 3) *
-                    (lieferdauer + abweichungLieferdauer));
-            verbProg2OA = Convert.ToInt32(
-                lagerstand + erwarteteBestellung - (
-                    vertriebAktuell + (vertriebAktuell + verbrauchPrognose1 + verbrauchPrognose2) / 3) *
-                    lieferdauer);
-            // Future period 3
-            verbProg3MA = Convert.ToInt32(
-                lagerstand + erwarteteBestellung - (
-                    vertriebAktuell + (
-                        vertriebAktuell + verbrauchPrognose1 + verbrauchPrognose2 + verbrauchPrognose3) / 4) *
-                        (lieferdauer + abweichungLieferdauer));
-            verbProg3OA = Convert.ToInt32(
-                lagerstand + erwarteteBestellung - (
-                    vertriebAktuell + (
-                        vertriebAktuell + verbrauchPrognose1 + verbrauchPrognose2 + verbrauchPrognose3) / 4) *
-                        lieferdauer);*/
+            if (teil.ProduktionsMengePer0 > 0)
+            {
+                bruttoBedarfPer0 += teil.ProduktionsMengePer0 * menge;
+            }
+            bruttoBedarfPer1 += teil.VerbrauchPer1 * menge;
+            bruttoBedarfPer2 += teil.VerbrauchPer2 * menge;
+            bruttoBedarfPer3 += teil.VerbrauchPer3 * menge;
+        }
+        // Public function to calculate forecast consumption for next 3 periods
+        public void berechnungVerbrauchPrognose(int aktPeriode, double verwendeAbweichung)
+        {
+            // Future period: 0+1
+            bestandPer1 = lagerstand + eingetroffeneBestellmenge(aktPeriode, verwendeAbweichung) - bruttoBedarfPer0;
+            // Future peroid: 0+2
+            bestandPer2 = bestandPer1 + eingetroffeneBestellmenge(aktPeriode + 1, verwendeAbweichung) - bruttoBedarfPer1;
+            // Future peroid: 0+3
+            bestandPer3 = bestandPer2 + eingetroffeneBestellmenge(aktPeriode + 2, verwendeAbweichung) - bruttoBedarfPer2;
+            // Future peroid: 0+4
+            bestandPer4 = bestandPer3 + eingetroffeneBestellmenge(aktPeriode + 3, verwendeAbweichung) - bruttoBedarfPer3;
+        }
+        // Private function to calculate period when ordered KTeil will arrive
+        private int eingetroffeneBestellmenge(int aktPeriode, double abweichung)
+        {
+            int menge = 0;
+            if(offeneBestellungen.Count() != 0)
+            {
+                foreach (List<int> ob in offeneBestellungen)
+                {
+                    double zeitpunktEintreffen = 0;
+                    if (ob[1] == 5)
+                    {
+                        zeitpunktEintreffen = (double)(ob[0] + lieferdauer + abweichungLieferdauer * abweichung/100);
+                    }
+                    else if (ob[1] == 4)
+                    {
+                        zeitpunktEintreffen = (double)(ob[0] + lieferdauer / 2);
+                    }
+                    // Check if KTeil arrive at actual period
+                    if (zeitpunktEintreffen >= aktPeriode && zeitpunktEintreffen < (aktPeriode + 0.8))
+                    {
+                        menge += ob[2];
+                    }
+                    // Check if KTeil arrived at last period last day, and count value to next period
+                    else if (zeitpunktEintreffen < aktPeriode &&
+                        ((aktPeriode - zeitpunktEintreffen) > 0 && (aktPeriode - zeitpunktEintreffen) <= 0.2))
+                    {
+                        menge += ob[2];
+                    }
+                }
+            }
+            return menge;
         }
         // Equals function
         public bool Equals(KTeil kt)
