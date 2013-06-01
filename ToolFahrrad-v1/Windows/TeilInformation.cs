@@ -49,6 +49,7 @@ namespace ToolFahrrad_v1
                             ausgabe.Text += "wird in Teil " + e.Nummer + "  " + kvp.Value + " * " + val +
                                " = " + kvp.Value * val + "\n";
                             sum += kvp.Value * val;
+                            val = 0;
                         }
                     }
                 }                
