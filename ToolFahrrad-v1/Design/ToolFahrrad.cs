@@ -1055,15 +1055,6 @@ namespace ToolFahrrad_v1
             }
             Information();
         }
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-
     }
 }
 

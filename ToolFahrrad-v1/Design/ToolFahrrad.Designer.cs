@@ -1618,7 +1618,6 @@
             this.label91.Name = "label91";
             this.helpProvider1.SetShowHelp(this.label91, ((bool)(resources.GetObject("label91.ShowHelp"))));
             this.toolTip.SetToolTip(this.label91, resources.GetString("label91.ToolTip"));
-            this.label91.Click += new System.EventHandler(this.label91_Click);
             // 
             // label90
             // 
@@ -7870,7 +7869,6 @@
             this.dataGridViewETeil.Name = "dataGridViewETeil";
             this.helpProvider1.SetShowHelp(this.dataGridViewETeil, ((bool)(resources.GetObject("dataGridViewETeil.ShowHelp"))));
             this.toolTip.SetToolTip(this.dataGridViewETeil, resources.GetString("dataGridViewETeil.ToolTip"));
-            this.dataGridViewETeil.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewETeil_CellContentClick);
             // 
             // tab_arbeitzeit
             // 
@@ -8026,7 +8024,6 @@
             this.label3.Name = "label3";
             this.helpProvider1.SetShowHelp(this.label3, ((bool)(resources.GetObject("label3.ShowHelp"))));
             this.toolTip.SetToolTip(this.label3, resources.GetString("label3.ToolTip"));
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // openFileDialog
             // 
