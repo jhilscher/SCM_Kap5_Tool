@@ -671,6 +671,17 @@ namespace ToolFahrrad_v1
         private void Information() {
             // KTeile
             #region KTEILE
+            //Bruttobedarf
+            foreach (KTeil k in instance.ListeKTeile) {
+                k.BruttoBedarfPer0 = 0;
+                k.BruttoBedarfPer1 = 0;
+                k.BruttoBedarfPer2 = 0;
+                k.BruttoBedarfPer3 = 0;
+            }
+            for(int i = 1; i < 4; ++i){
+                pp.RekursAufloesenKTeile(i, null, instance.GetTeil(i) as ETeil);
+            }
+
             this.DataGriedViewRemove(dataGridViewKTeil);
             int index = 0;
             for (int i = 4; i < 8; ++i) {
