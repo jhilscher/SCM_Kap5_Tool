@@ -1021,6 +1021,21 @@ namespace ToolFahrrad_v1
             Information();
         }
 
+        private void label91_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridViewETeil_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
 
     }
 }
