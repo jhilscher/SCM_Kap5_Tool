@@ -784,6 +784,7 @@ namespace ToolFahrrad_v1
             }
             #endregion
             // Arbeitsplätze
+            #region Arbetsplatz
             this.DataGriedViewRemove(dataGridViewAPlatz);
             index = 0;
             foreach (var a in instance.ArbeitsplatzList) {
@@ -840,9 +841,6 @@ namespace ToolFahrrad_v1
 
                 dataGridViewAPlatz.Rows[index].Cells[3].Value = a.RuestungCustom;
                 int gesammt = a.RuestungCustom + sum;
-                //dataGridViewAPlatz.Rows[index].Cells[3].Value = a.GetRuestZeit;
-                //dataGridViewAPlatz.Rows[index].Cells[4].Value = a.RuestNew;
-                //dataGridViewAPlatz.Rows[index].Cells[5].Value = a.RuestungCustom;
                 dataGridViewAPlatz.Rows[index].Cells[4].Value = gesammt + " min";
                 dataGridViewAPlatz.Rows[index].Cells[8].Value = imageList1.Images[2];
                 if (gesammt <= a.zeit) // newTeim <= 2400 
@@ -872,7 +870,6 @@ namespace ToolFahrrad_v1
                 else {
                     dataGridViewAPlatz.Rows[index].Cells[5].Value = imageList1.Images[2];
                 }
-
                 //Farbe
                 for (int i = 0; i < 9; ++i) {
                     if (i < 2)
@@ -880,38 +877,11 @@ namespace ToolFahrrad_v1
                     else if (i == 2 || i > 3)
                         dataGridViewAPlatz.Columns[i].DefaultCellStyle.BackColor = Color.LightYellow;
                 }
-
                 ++index;
             }
+            #endregion
         }
-
-        private void picEdit(Dictionary<PictureBox, bool> dic, int index, DataGridView dataGrid) {
-            dataGrid.Columns[index].DefaultCellStyle.BackColor = Color.LightBlue;
-            dataGrid.Columns[index].ReadOnly = false;
-            foreach (KeyValuePair<PictureBox, bool> pair in dic) {
-                pair.Key.Visible = pair.Value;
-            }
-        }
-        private void picReadOnly(Dictionary<PictureBox, bool> dic, int index, DataGridView dataGrid) {
-            foreach (KeyValuePair<PictureBox, bool> pair in dic) {
-                pair.Key.Visible = pair.Value;
-            }
-            dataGrid.Columns[index].DefaultCellStyle.BackColor = Color.Honeydew;
-            dataGrid.Columns[index].ReadOnly = true;
-        }
-        private void picSave(Dictionary<PictureBox, bool> dic, int index, DataGridView dataGrid) {
-            foreach (KeyValuePair<PictureBox, bool> pair in dic) {
-                pair.Key.Visible = pair.Value;
-            }
-            dataGrid.Columns[index].DefaultCellStyle.BackColor = Color.Honeydew;
-            dataGrid.Columns[index].ReadOnly = true;
-        }
-        private System.Windows.Forms.DialogResult GetMessage(string t, string s) {
-            if (s.Contains("Änderungen"))
-                return MessageBox.Show("Wollen Sie sicher was ändern?", s, MessageBoxButtons.OKCancel);
-            else
-                return MessageBox.Show(t, s, MessageBoxButtons.OK);
-        }
+            
         /// <summary>
         /// 
         /// </summary>

@@ -32,15 +32,34 @@ namespace ToolFahrrad_v1
                             "Diskontmenge: " + (dc.GetTeil(_nummer) as KTeil).DiskontMenge + "\n" +
                             "Bestellkosten: " + (dc.GetTeil(_nummer) as KTeil).Bestellkosten + "\n\n";
             List<ETeil> list = (dc.GetTeil(_nummer) as KTeil).IstTeilVon;
+            int sum = 0;
+            int val = 0;
             foreach (ETeil e in list) {
                 foreach (KeyValuePair<Teil, int> kvp in e.Zusammensetzung) {
                     if (kvp.Key.Nummer == _nummer) {
-
-                        ausgabe.Text += "wird in Teil " + e.Nummer + "  " + kvp.Value + " mal verwendet\n";
+                        if (!e.Verwendung.Contains("KDH")) {
+                            ausgabe.Text += "wird in Teil " + e.Nummer + "  " + kvp.Value + " * " + e.ProduktionsMengePer0 +
+                                " = " + kvp.Value * e.ProduktionsMengePer0 + "\n";
+                            sum += kvp.Value * e.ProduktionsMengePer0;
+                        }
+                        else {
+                            foreach (KeyValuePair<string, int> pair in e.KdhProduktionsmenge) {
+                                val += pair.Value;
+                            }
+                            ausgabe.Text += "wird in Teil " + e.Nummer + "  " + kvp.Value + " * " + val +
+                               " = " + kvp.Value * val + "\n";
+                            sum += kvp.Value * val;
+                        }
                     }
-                }
+                }                
             }
+            ausgabe.Text += "Summe: " + sum;
         }
+
+
+
+
+
 
         internal void GetZeitInformation() {
             ausgabe2.Text = "Rüstungszeit: \n";
