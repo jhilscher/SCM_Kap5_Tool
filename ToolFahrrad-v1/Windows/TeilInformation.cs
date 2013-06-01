@@ -43,7 +43,7 @@ namespace ToolFahrrad_v1
         }
 
         internal void GetZeitInformation() {
-            ausgabe.Text = "Rüstungszeit: \n";
+            ausgabe2.Text = "Rüstungszeit: \n";
             int sum = 0;
             int val = 0;
             int prMenge = 0;
@@ -57,19 +57,21 @@ namespace ToolFahrrad_v1
                 else {
                     foreach (KeyValuePair<string, int> pair in (dc.GetTeil(kvp.Key) as ETeil).KdhProduktionsmenge) {
                         prMenge += pair.Value;
-                        if (prMenge <= 0)
+                        if (prMenge >= 0)
                             val = kvp.Value;
                         else
                             val = 0;
                     }
                 }
-                ausgabe.Text += "Teil " + kvp.Key + ": " + val + " min. \n";
+                ausgabe2.Text += "Teil " + kvp.Key + ": " + val + " min. \n";
                 sum += val;
             }
-            ausgabe.Text += "Summe: " + sum + "\n\n";
-
-            ausgabe2.Text += "Kapazitätsbedarf: \n";
+            ausgabe2.Text += "Summe: " + sum + "\n\n";
+            
+            //
+            ausgabe.Text += "Kapazitätsbedarf: \n";
             sum = 0;
+            prMenge = 0;
             foreach (KeyValuePair<int, int> kvp in dc.GetArbeitsplatz(_nummer).Werk_zeiten) {
                 {
                     if (!(dc.GetTeil(kvp.Key) as ETeil).Verwendung.Contains("KDH")) {
@@ -82,12 +84,12 @@ namespace ToolFahrrad_v1
                     }
                     if (prMenge < 0)
                         prMenge = 0;
-                    ausgabe2.Text += "Teil " + kvp.Key + ": " + kvp.Value + " * " + prMenge + " = " + kvp.Value * prMenge + " min.\n";
+                    ausgabe.Text += "Teil " + kvp.Key + ": " + kvp.Value + " * " + prMenge + " = " + kvp.Value * prMenge + " min.\n";
                     sum += kvp.Value * prMenge;
                     prMenge = 0;
                 }
             }
-            ausgabe2.Text += "Summe: " + sum + "\n\n";
+            ausgabe.Text += "Summe: " + sum + "\n\n";
         }
     }
 }

@@ -62,6 +62,7 @@ namespace ToolFahrrad_v1
             foreach (Arbeitsplatz a in instance.ArbeitsplatzList) {
                 a.Geaendert = false;
                 a.RuestNew = 0;
+                a.RuestungCustom = 0;
             }
             for (int index = 1; index < 4; ++index) {
                 this.DispositionDarstellung(index);
@@ -762,7 +763,6 @@ namespace ToolFahrrad_v1
                     dataGridViewETeil.Rows[index].Cells[7].Value = a.ProduktionsMengePer0;
                 else {
                     int prodMenge = 0;
-                    //TODO UMRECHNEN
                     foreach (KeyValuePair<string, int> pair in a.KdhProduktionsmenge) {
                         prodMenge += pair.Value;
                     }
@@ -787,14 +787,60 @@ namespace ToolFahrrad_v1
             this.DataGriedViewRemove(dataGridViewAPlatz);
             index = 0;
             foreach (var a in instance.ArbeitsplatzList) {
-                int gesammt = a.GetRuestZeit + a.GetBenoetigteZeit;
-
                 dataGridViewAPlatz.Rows.Add();
                 dataGridViewAPlatz.Rows[index].Cells[0].Value = a.GetNummerArbeitsplatz;
-                (instance.GetArbeitsplatz(a.GetNummerArbeitsplatz)).CustomRuestungGeaendert(-1);
                 dataGridViewAPlatz.Rows[index].Cells[1].Value = a.Leerzeit + " (" + a.RuestungVorPeriode + ") ";
-                dataGridViewAPlatz.Rows[index].Cells[2].Value = a.GetBenoetigteZeit + " min";
-                dataGridViewAPlatz.Rows[index].Cells[3].Value = a.GetRuestZeit;
+                //TODO KDH ZEIT UMRECHNEN
+                int prMenge = 0;
+                int val = 0;
+                int sum = 0;
+                foreach (KeyValuePair<int, int> kvp in a.Werk_zeiten) {
+                    {
+                        if (!(instance.GetTeil(kvp.Key) as ETeil).Verwendung.Contains("KDH")) {
+
+                            prMenge += (instance.GetTeil(kvp.Key) as ETeil).ProduktionsMengePer0;
+                        }
+                        else {
+                            foreach (KeyValuePair<string, int> pair in (instance.GetTeil(kvp.Key) as ETeil).KdhProduktionsmenge) {
+                                prMenge += pair.Value;
+                            }
+                        }
+                        if (prMenge < 0)
+                            prMenge = 0;
+                        sum += kvp.Value * prMenge;
+                        prMenge = 0;
+                    }
+                }
+                dataGridViewAPlatz.Rows[index].Cells[2].Value = sum + " min";
+                //TODO KDH RÜST UMRECHNEN
+                prMenge = 0;
+                val = 0;
+                string key = "";
+                if (a.Geaendert == false) {
+                    foreach (KeyValuePair<int, int> kvp in a.Ruest_zeiten) {
+                        if (!(instance.GetTeil(kvp.Key) as ETeil).Verwendung.Contains("KDH")) {
+                            if ((instance.GetTeil(kvp.Key) as ETeil).ProduktionsMengePer0 >= 0)
+                                val += kvp.Value;
+                        }
+                        else {
+                            foreach (KeyValuePair<string, int> pair in (instance.GetTeil(kvp.Key) as ETeil).KdhProduktionsmenge) {
+                                prMenge += pair.Value;
+                                string[] split = pair.Key.Split('-');
+                                if (prMenge >= 0) {
+                                    if (key != split[1] || val == 0)
+                                        val += kvp.Value;
+                                }
+                                key = split[1];
+                            }
+                        }                        
+                    }
+                    a.Geaendert = true;
+                    a.RuestungCustom = val;
+                }
+
+                dataGridViewAPlatz.Rows[index].Cells[3].Value = a.RuestungCustom;
+                int gesammt = a.RuestungCustom + sum;
+                //dataGridViewAPlatz.Rows[index].Cells[3].Value = a.GetRuestZeit;
                 //dataGridViewAPlatz.Rows[index].Cells[4].Value = a.RuestNew;
                 //dataGridViewAPlatz.Rows[index].Cells[5].Value = a.RuestungCustom;
                 dataGridViewAPlatz.Rows[index].Cells[4].Value = gesammt + " min";
@@ -831,7 +877,7 @@ namespace ToolFahrrad_v1
                 for (int i = 0; i < 9; ++i) {
                     if (i < 2)
                         dataGridViewAPlatz.Columns[i].DefaultCellStyle.BackColor = Color.FloralWhite;
-                    else if (i==2 || i > 3)
+                    else if (i == 2 || i > 3)
                         dataGridViewAPlatz.Columns[i].DefaultCellStyle.BackColor = Color.LightYellow;
                 }
 
@@ -1021,7 +1067,13 @@ namespace ToolFahrrad_v1
             Information();
         }
 
-
+        private void arbPlatzAusfueren_Click(object sender, EventArgs e) {
+            for (int index = 0; index < dataGridViewAPlatz.Rows.Count; ++index) {
+                instance.GetArbeitsplatz(Convert.ToInt32(dataGridViewAPlatz.Rows[index].Cells[0].Value.ToString())).RuestungCustom =
+                    (Convert.ToInt32(dataGridViewAPlatz.Rows[index].Cells[3].Value.ToString()));
+            }
+            Information();
+        }
     }
 }
 
