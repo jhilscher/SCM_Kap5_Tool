@@ -1048,6 +1048,7 @@ namespace ToolFahrrad_v1
             Information();
         }
 
+<<<<<<< HEAD
         private void arbPlatzAusfueren_Click(object sender, EventArgs e) {
             for (int index = 0; index < dataGridViewAPlatz.Rows.Count; ++index) {
                 instance.GetArbeitsplatz(Convert.ToInt32(dataGridViewAPlatz.Rows[index].Cells[0].Value.ToString())).RuestungCustom =
@@ -1055,6 +1056,14 @@ namespace ToolFahrrad_v1
             }
             Information();
         }
+=======
+        private void label91_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridViewETeil_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
 
         }
 
@@ -1063,6 +1072,8 @@ namespace ToolFahrrad_v1
 
         }
 
+
+>>>>>>> origin/wase1013
     }
 }
 
