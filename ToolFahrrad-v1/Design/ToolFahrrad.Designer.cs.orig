@@ -636,8 +636,6 @@
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.helpProvider1 = new System.Windows.Forms.HelpProvider();
-<<<<<<< HEAD
-=======
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -646,6 +644,8 @@
             this.colWarteschlange = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colBearbeitung = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colPlanung = new System.Windows.Forms.DataGridViewTextBoxColumn();
+<<<<<<< HEAD
+=======
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewLinkColumn();
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -655,6 +655,7 @@
             this.s1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.s3 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.ueber = new System.Windows.Forms.DataGridViewImageColumn();
+>>>>>>> origin/wase1013
             this.dataGridViewLinkColumn1 = new System.Windows.Forms.DataGridViewLinkColumn();
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -671,7 +672,6 @@
             this.b3 = new System.Windows.Forms.DataGridViewImageColumn();
             this.dataGridViewTextBoxColumn21 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.b4 = new System.Windows.Forms.DataGridViewImageColumn();
->>>>>>> origin/wase1013
             this.tabs.SuspendLayout();
             this.tab_xml.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pufferP3)).BeginInit();
@@ -7898,6 +7898,7 @@
             this.tab_arbeitzeit.Name = "tab_arbeitzeit";
             this.helpProvider1.SetShowHelp(this.tab_arbeitzeit, ((bool)(resources.GetObject("tab_arbeitzeit.ShowHelp"))));
             this.toolTip.SetToolTip(this.tab_arbeitzeit, resources.GetString("tab_arbeitzeit.ToolTip"));
+<<<<<<< HEAD
             // 
             // arbPlatzAusfueren
             // 
@@ -7907,6 +7908,8 @@
             this.helpProvider1.SetShowHelp(this.arbPlatzAusfueren, ((bool)(resources.GetObject("arbPlatzAusfueren.ShowHelp"))));
             this.arbPlatzAusfueren.TabStop = false;
             this.arbPlatzAusfueren.Click += new System.EventHandler(this.arbPlatzAusfueren_Click);
+=======
+>>>>>>> origin/wase1013
             // 
             // dataGridViewAPlatz
             // 
@@ -8242,9 +8245,9 @@
             // 
             resources.ApplyResources(this.helpProvider1, "helpProvider1");
             // 
+            // dataGridViewTextBoxColumn1
 <<<<<<< HEAD
 =======
-            // dataGridViewTextBoxColumn1
             // 
             resources.ApplyResources(this.dataGridViewTextBoxColumn1, "dataGridViewTextBoxColumn1");
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
@@ -8295,67 +8298,55 @@
             this.colPlanung.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn5
+>>>>>>> origin/wase1013
             // 
-            resources.ApplyResources(this.dataGridViewTextBoxColumn5, "dataGridViewTextBoxColumn5");
-            this.dataGridViewTextBoxColumn5.LinkColor = System.Drawing.Color.Black;
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            this.dataGridViewTextBoxColumn5.ReadOnly = true;
-            this.dataGridViewTextBoxColumn5.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewTextBoxColumn5.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            resources.ApplyResources(this.dataGridViewTextBoxColumn1, "dataGridViewTextBoxColumn1");
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.dataGridViewTextBoxColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             // 
-            // dataGridViewTextBoxColumn7
+            // dataGridViewTextBoxColumn2
             // 
-            resources.ApplyResources(this.dataGridViewTextBoxColumn7, "dataGridViewTextBoxColumn7");
-            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
-            this.dataGridViewTextBoxColumn7.ReadOnly = true;
+            resources.ApplyResources(this.dataGridViewTextBoxColumn2, "dataGridViewTextBoxColumn2");
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
             // 
-            // dataGridViewTextBoxColumn8
+            // dataGridViewTextBoxColumn3
             // 
-            resources.ApplyResources(this.dataGridViewTextBoxColumn8, "dataGridViewTextBoxColumn8");
-            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
-            this.dataGridViewTextBoxColumn8.ReadOnly = true;
-            this.dataGridViewTextBoxColumn8.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            resources.ApplyResources(this.dataGridViewTextBoxColumn3, "dataGridViewTextBoxColumn3");
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
             // 
-            // dataGridViewTextBoxColumn9
+            // dataGridViewTextBoxColumn4
             // 
-            resources.ApplyResources(this.dataGridViewTextBoxColumn9, "dataGridViewTextBoxColumn9");
-            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
-            this.dataGridViewTextBoxColumn9.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            resources.ApplyResources(this.dataGridViewTextBoxColumn4, "dataGridViewTextBoxColumn4");
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
             // 
-            // dataGridViewTextBoxColumn10
+            // dataGridViewImageColumn1
             // 
-            resources.ApplyResources(this.dataGridViewTextBoxColumn10, "dataGridViewTextBoxColumn10");
-            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
-            this.dataGridViewTextBoxColumn10.ReadOnly = true;
+            resources.ApplyResources(this.dataGridViewImageColumn1, "dataGridViewImageColumn1");
+            this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
+            this.dataGridViewImageColumn1.ReadOnly = true;
+            this.dataGridViewImageColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             // 
-            // dataGridViewImageColumn2
+            // colWarteschlange
             // 
-            resources.ApplyResources(this.dataGridViewImageColumn2, "dataGridViewImageColumn2");
-            this.dataGridViewImageColumn2.Name = "dataGridViewImageColumn2";
-            this.dataGridViewImageColumn2.ReadOnly = true;
-            this.dataGridViewImageColumn2.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            resources.ApplyResources(this.colWarteschlange, "colWarteschlange");
+            this.colWarteschlange.Name = "colWarteschlange";
+            this.colWarteschlange.ReadOnly = true;
             // 
-            // s1
+            // colBearbeitung
             // 
-            resources.ApplyResources(this.s1, "s1");
-            this.s1.Name = "s1";
-            this.s1.ReadOnly = true;
-            this.s1.TrueValue = "123";
+            resources.ApplyResources(this.colBearbeitung, "colBearbeitung");
+            this.colBearbeitung.Name = "colBearbeitung";
+            this.colBearbeitung.ReadOnly = true;
             // 
-            // s3
+            // colPlanung
             // 
-            resources.ApplyResources(this.s3, "s3");
-            this.s3.Name = "s3";
-            this.s3.ReadOnly = true;
-            this.s3.TrueValue = "";
-            // 
-            // ueber
-            // 
-            resources.ApplyResources(this.ueber, "ueber");
-            this.ueber.Name = "ueber";
-            this.ueber.ReadOnly = true;
-            this.ueber.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.ueber.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            resources.ApplyResources(this.colPlanung, "colPlanung");
+            this.colPlanung.Name = "colPlanung";
+            this.colPlanung.ReadOnly = true;
             // 
             // dataGridViewLinkColumn1
             // 
@@ -8451,7 +8442,100 @@
             this.b4.Name = "b4";
             this.b4.ReadOnly = true;
             // 
->>>>>>> origin/wase1013
+            // dataGridViewLinkColumn1
+            // 
+            resources.ApplyResources(this.dataGridViewLinkColumn1, "dataGridViewLinkColumn1");
+            this.dataGridViewLinkColumn1.Name = "dataGridViewLinkColumn1";
+            this.dataGridViewLinkColumn1.ReadOnly = true;
+            this.dataGridViewLinkColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewLinkColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            resources.ApplyResources(this.dataGridViewTextBoxColumn6, "dataGridViewTextBoxColumn6");
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            this.dataGridViewTextBoxColumn6.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn11
+            // 
+            resources.ApplyResources(this.dataGridViewTextBoxColumn11, "dataGridViewTextBoxColumn11");
+            this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
+            this.dataGridViewTextBoxColumn11.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn13
+            // 
+            resources.ApplyResources(this.dataGridViewTextBoxColumn13, "dataGridViewTextBoxColumn13");
+            this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
+            this.dataGridViewTextBoxColumn13.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn14
+            // 
+            resources.ApplyResources(this.dataGridViewTextBoxColumn14, "dataGridViewTextBoxColumn14");
+            this.dataGridViewTextBoxColumn14.Name = "dataGridViewTextBoxColumn14";
+            this.dataGridViewTextBoxColumn14.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn15
+            // 
+            resources.ApplyResources(this.dataGridViewTextBoxColumn15, "dataGridViewTextBoxColumn15");
+            this.dataGridViewTextBoxColumn15.Name = "dataGridViewTextBoxColumn15";
+            this.dataGridViewTextBoxColumn15.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn16
+            // 
+            resources.ApplyResources(this.dataGridViewTextBoxColumn16, "dataGridViewTextBoxColumn16");
+            this.dataGridViewTextBoxColumn16.Name = "dataGridViewTextBoxColumn16";
+            this.dataGridViewTextBoxColumn16.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn17
+            // 
+            resources.ApplyResources(this.dataGridViewTextBoxColumn17, "dataGridViewTextBoxColumn17");
+            this.dataGridViewTextBoxColumn17.Name = "dataGridViewTextBoxColumn17";
+            this.dataGridViewTextBoxColumn17.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn18
+            // 
+            resources.ApplyResources(this.dataGridViewTextBoxColumn18, "dataGridViewTextBoxColumn18");
+            this.dataGridViewTextBoxColumn18.Name = "dataGridViewTextBoxColumn18";
+            // 
+            // b1
+            // 
+            resources.ApplyResources(this.b1, "b1");
+            this.b1.Name = "b1";
+            this.b1.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn19
+            // 
+            resources.ApplyResources(this.dataGridViewTextBoxColumn19, "dataGridViewTextBoxColumn19");
+            this.dataGridViewTextBoxColumn19.Name = "dataGridViewTextBoxColumn19";
+            // 
+            // b2
+            // 
+            resources.ApplyResources(this.b2, "b2");
+            this.b2.Name = "b2";
+            this.b2.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn20
+            // 
+            resources.ApplyResources(this.dataGridViewTextBoxColumn20, "dataGridViewTextBoxColumn20");
+            this.dataGridViewTextBoxColumn20.Name = "dataGridViewTextBoxColumn20";
+            // 
+            // b3
+            // 
+            resources.ApplyResources(this.b3, "b3");
+            this.b3.Name = "b3";
+            this.b3.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn21
+            // 
+            resources.ApplyResources(this.dataGridViewTextBoxColumn21, "dataGridViewTextBoxColumn21");
+            this.dataGridViewTextBoxColumn21.Name = "dataGridViewTextBoxColumn21";
+            // 
+            // b4
+            // 
+            resources.ApplyResources(this.b4, "b4");
+            this.b4.Name = "b4";
+            this.b4.ReadOnly = true;
+            // 
             // Fahrrad
             // 
             resources.ApplyResources(this, "$this");
@@ -9143,6 +9227,7 @@
         private System.Windows.Forms.PictureBox arbPlatzAusfueren;
 =======
         private System.Windows.Forms.DataGridViewLinkColumn dataGridViewLinkColumn1;
+>>>>>>> origin/wase1013
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn13;
@@ -9158,7 +9243,6 @@
         private System.Windows.Forms.DataGridViewImageColumn b3;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn21;
         private System.Windows.Forms.DataGridViewImageColumn b4;
->>>>>>> origin/wase1013
     }
 }
 

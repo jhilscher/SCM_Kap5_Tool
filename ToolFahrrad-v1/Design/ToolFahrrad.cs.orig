@@ -1056,6 +1056,7 @@ namespace ToolFahrrad_v1
             }
             Information();
         }
+
 =======
         private void label91_Click(object sender, EventArgs e)
         {
@@ -1065,15 +1066,18 @@ namespace ToolFahrrad_v1
         private void dataGridViewETeil_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+>>>>>>> origin/wase1013
         }
 
         private void label3_Click(object sender, EventArgs e)
         {
 
         }
-
+<<<<<<< HEAD
+=======
 
 >>>>>>> origin/wase1013
+
     }
 }
 
