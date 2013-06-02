@@ -34,13 +34,18 @@ namespace ToolFahrrad_v1
             List<ETeil> list = (dc.GetTeil(_nummer) as KTeil).IstTeilVon;
             int sum = 0;
             int val = 0;
+            int pm = 0;
             foreach (ETeil e in list) {
                 foreach (KeyValuePair<Teil, int> kvp in e.Zusammensetzung) {
                     if (kvp.Key.Nummer == _nummer) {
                         if (!e.Verwendung.Contains("KDH")) {
-                            ausgabe.Text += "wird in Teil " + e.Nummer + "  " + kvp.Value + " * " + e.ProduktionsMengePer0 +
-                                " = " + kvp.Value * e.ProduktionsMengePer0 + "\n";
-                            sum += kvp.Value * e.ProduktionsMengePer0;
+                            if(e.ProduktionsMengePer0 < 0)
+                                pm = 0;
+                            else 
+                                pm = e.ProduktionsMengePer0;
+                            ausgabe.Text += "wird in Teil " + e.Nummer + "  " + kvp.Value + " * " + pm +
+                                " = " + kvp.Value * pm + "\n";
+                            sum += kvp.Value * pm;
                         }
                         else {
                             foreach (KeyValuePair<string, int> pair in e.KdhProduktionsmenge) {
