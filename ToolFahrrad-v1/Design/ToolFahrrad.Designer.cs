@@ -638,8 +638,12 @@
             this.dataGridViewTextBoxColumn21 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.b4 = new System.Windows.Forms.DataGridViewImageColumn();
             this.tab_bestellung = new System.Windows.Forms.TabPage();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.uebernehmen = new System.Windows.Forms.PictureBox();
             this.dataGridViewBestellung = new System.Windows.Forms.DataGridView();
+            this.kNr = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.menge = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.eil = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.del = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.pictureBox12 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
@@ -661,10 +665,7 @@
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.helpProvider1 = new System.Windows.Forms.HelpProvider();
-            this.kNr = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.menge = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.eil = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.del = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.zurueck = new System.Windows.Forms.PictureBox();
             this.tabs.SuspendLayout();
             this.tab_xml.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pufferP3)).BeginInit();
@@ -710,10 +711,11 @@
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewKTeil)).BeginInit();
             this.tab_bestellung.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.uebernehmen)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewBestellung)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
             this.menu.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.zurueck)).BeginInit();
             this.SuspendLayout();
             // 
             // tabs
@@ -6135,19 +6137,21 @@
             // tab_bestellung
             // 
             this.tab_bestellung.BackColor = System.Drawing.Color.Transparent;
-            this.tab_bestellung.Controls.Add(this.pictureBox3);
+            this.tab_bestellung.Controls.Add(this.zurueck);
+            this.tab_bestellung.Controls.Add(this.uebernehmen);
             this.tab_bestellung.Controls.Add(this.dataGridViewBestellung);
             resources.ApplyResources(this.tab_bestellung, "tab_bestellung");
             this.tab_bestellung.Name = "tab_bestellung";
             this.helpProvider1.SetShowHelp(this.tab_bestellung, ((bool)(resources.GetObject("tab_bestellung.ShowHelp"))));
             // 
-            // pictureBox3
+            // uebernehmen
             // 
-            this.pictureBox3.Cursor = System.Windows.Forms.Cursors.Hand;
-            resources.ApplyResources(this.pictureBox3, "pictureBox3");
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.TabStop = false;
-            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
+            this.uebernehmen.Cursor = System.Windows.Forms.Cursors.Hand;
+            resources.ApplyResources(this.uebernehmen, "uebernehmen");
+            this.uebernehmen.Name = "uebernehmen";
+            this.uebernehmen.TabStop = false;
+            this.toolTip.SetToolTip(this.uebernehmen, resources.GetString("uebernehmen.ToolTip"));
+            this.uebernehmen.Click += new System.EventHandler(this.pictureBox3_Click);
             // 
             // dataGridViewBestellung
             // 
@@ -6163,6 +6167,32 @@
             this.del});
             resources.ApplyResources(this.dataGridViewBestellung, "dataGridViewBestellung");
             this.dataGridViewBestellung.Name = "dataGridViewBestellung";
+            // 
+            // kNr
+            // 
+            resources.ApplyResources(this.kNr, "kNr");
+            this.kNr.Name = "kNr";
+            this.kNr.ReadOnly = true;
+            // 
+            // menge
+            // 
+            resources.ApplyResources(this.menge, "menge");
+            this.menge.Name = "menge";
+            // 
+            // eil
+            // 
+            this.eil.FalseValue = "false";
+            resources.ApplyResources(this.eil, "eil");
+            this.eil.Name = "eil";
+            this.eil.TrueValue = "true";
+            // 
+            // del
+            // 
+            this.del.FalseValue = "false";
+            resources.ApplyResources(this.del, "del");
+            this.del.IndeterminateValue = "false";
+            this.del.Name = "del";
+            this.del.TrueValue = "true";
             // 
             // pictureBox12
             // 
@@ -6299,31 +6329,15 @@
             // 
             resources.ApplyResources(this.helpProvider1, "helpProvider1");
             // 
-            // kNr
+            // zurueck
             // 
-            resources.ApplyResources(this.kNr, "kNr");
-            this.kNr.Name = "kNr";
-            this.kNr.ReadOnly = true;
-            // 
-            // menge
-            // 
-            resources.ApplyResources(this.menge, "menge");
-            this.menge.Name = "menge";
-            // 
-            // eil
-            // 
-            this.eil.FalseValue = "false";
-            resources.ApplyResources(this.eil, "eil");
-            this.eil.Name = "eil";
-            this.eil.TrueValue = "true";
-            // 
-            // del
-            // 
-            this.del.FalseValue = "false";
-            resources.ApplyResources(this.del, "del");
-            this.del.IndeterminateValue = "false";
-            this.del.Name = "del";
-            this.del.TrueValue = "true";
+            this.zurueck.Cursor = System.Windows.Forms.Cursors.Hand;
+            resources.ApplyResources(this.zurueck, "zurueck");
+            this.zurueck.Name = "zurueck";
+            this.helpProvider1.SetShowHelp(this.zurueck, ((bool)(resources.GetObject("zurueck.ShowHelp"))));
+            this.zurueck.TabStop = false;
+            this.toolTip.SetToolTip(this.zurueck, resources.GetString("zurueck.ToolTip"));
+            this.zurueck.Click += new System.EventHandler(this.zurueck_Click);
             // 
             // Fahrrad
             // 
@@ -6388,11 +6402,12 @@
             this.tabPage2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewKTeil)).EndInit();
             this.tab_bestellung.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.uebernehmen)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewBestellung)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
             this.menu.ResumeLayout(false);
             this.menu.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.zurueck)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -7030,11 +7045,12 @@
         private System.Windows.Forms.DataGridViewImageColumn b4;
         private System.Windows.Forms.PictureBox arbPlatzAusfueren;
         private System.Windows.Forms.DataGridView dataGridViewBestellung;
-        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.PictureBox uebernehmen;
         private System.Windows.Forms.DataGridViewTextBoxColumn kNr;
         private System.Windows.Forms.DataGridViewTextBoxColumn menge;
         private System.Windows.Forms.DataGridViewCheckBoxColumn eil;
         private System.Windows.Forms.DataGridViewCheckBoxColumn del;
+        private System.Windows.Forms.PictureBox zurueck;
     }
 }
 

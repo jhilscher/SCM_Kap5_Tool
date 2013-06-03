@@ -1101,7 +1101,12 @@ namespace ToolFahrrad_v1
             this.bestellungUpdate = true;
             bv.SetBvPositionen(bp);
             Information();
+        }
 
+        private void zurueck_Click(object sender, EventArgs e) {
+            this.bestellungUpdate = false;
+            bv.clearBvPositionen();
+            Information();
         }
     }
 }

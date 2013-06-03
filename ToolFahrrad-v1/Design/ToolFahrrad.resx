@@ -19179,7 +19179,51 @@
   <data name="&gt;&gt;tabPage2.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="pictureBox3.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="zurueck.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAZdEVYdFNvZnR3YXJlAEFkb2JlIEltYWdlUmVhZHlxyWU8AAAByklEQVRYR82W0UYFURSGDxFd
+        dRsREdFV9BIRXfUYEV112wP0ANFjRERv0FVEtxHdRlcR0/+Zs806y9p7Zs+pc/r5jjGz1j//mb1n75k0
+        TbNUwpOLJDy5SNqfZWpggE1xKu7Eo/iewjHnuEZNvXoCbIhrwc0oLEENtfQMVyHAofgU/kZ90EPvMGUC
+        nAlvXAse/QoCHIvokb+Ic3EgVqZwzDmu+Xo88CrLBWAifQhvdiXWRE5co8b34VWenC4Ak8gafInh49nW
+        0mM98MzLBNgS/tEPG8dZMSTWA0+8Y5kAF8I2PgnGuVb0PAvrhXcsE+BB2KYx/z7JP4V7EcsEeBO2aVeM
+        1Z6wXnjHMgH85FkVY7UurBfesX4xAG9AtB54qOnerMIQ7IgavQvbX4LaVoVJyA5XI/8HSnRzwgSY9zXM
+        LeEeao5EKxNgW3iD2qdwIkohuEZNJxMAzbsUo1wIvGZvjlwANo7oG6BvM/LyIeKbIxcAMZap0ZK2432R
+        xDErZrTW48Nsh/y2HARAtR8kr4I5VK9MAETqmk8yXq365bsQADEnbkRpZicIeynq1BMgiSD2szzdlPG9
+        FVxj/a/XwAB/p38RYJmEJxdHM/kBEn8/YWvQ5DsAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="zurueck.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="zurueck.Location" type="System.Drawing.Point, System.Drawing">
+    <value>450, 251</value>
+  </data>
+  <data name="zurueck.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="zurueck.Size" type="System.Drawing.Size, System.Drawing">
+    <value>35, 35</value>
+  </data>
+  <data name="zurueck.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="zurueck.ToolTip" xml:space="preserve">
+    <value>Zurück setzen</value>
+  </data>
+  <data name="&gt;&gt;zurueck.Name" xml:space="preserve">
+    <value>zurueck</value>
+  </data>
+  <data name="&gt;&gt;zurueck.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;zurueck.Parent" xml:space="preserve">
+    <value>tab_bestellung</value>
+  </data>
+  <data name="&gt;&gt;zurueck.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="uebernehmen.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29m
         dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAF/SURBVFhHvZdBSixBEEQbvITgPdy69RKCt3TrVhC8
@@ -19192,26 +19236,29 @@
         TgAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="pictureBox3.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="uebernehmen.Location" type="System.Drawing.Point, System.Drawing">
     <value>409, 251</value>
   </data>
-  <data name="pictureBox3.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="uebernehmen.Size" type="System.Drawing.Size, System.Drawing">
     <value>35, 35</value>
   </data>
-  <data name="pictureBox3.TabIndex" type="System.Int32, mscorlib">
+  <data name="uebernehmen.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
   </data>
-  <data name="&gt;&gt;pictureBox3.Name" xml:space="preserve">
-    <value>pictureBox3</value>
+  <data name="uebernehmen.ToolTip" xml:space="preserve">
+    <value>Übernehmen</value>
   </data>
-  <data name="&gt;&gt;pictureBox3.Type" xml:space="preserve">
+  <data name="&gt;&gt;uebernehmen.Name" xml:space="preserve">
+    <value>uebernehmen</value>
+  </data>
+  <data name="&gt;&gt;uebernehmen.Type" xml:space="preserve">
     <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;pictureBox3.Parent" xml:space="preserve">
+  <data name="&gt;&gt;uebernehmen.Parent" xml:space="preserve">
     <value>tab_bestellung</value>
   </data>
-  <data name="&gt;&gt;pictureBox3.ZOrder" xml:space="preserve">
-    <value>0</value>
+  <data name="&gt;&gt;uebernehmen.ZOrder" xml:space="preserve">
+    <value>1</value>
   </data>
   <metadata name="kNr.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -19262,7 +19309,7 @@
     <value>tab_bestellung</value>
   </data>
   <data name="&gt;&gt;dataGridViewBestellung.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="tab_bestellung.Location" type="System.Drawing.Point, System.Drawing">
     <value>4, 22</value>
@@ -19630,56 +19677,56 @@
     <value>
         AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
         LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
-        ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAABS
-        CwAAAk1TRnQBSQFMAgEBAwEAAfgBAQH4AQEBEAEAARABAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
-        AwABQAMAARADAAEBAQABCAYAAQQYAAGAAgABgAMAAoABAAGAAwABgAEAAYABAAKAAgADwAEAAcAB3AHA
-        AQAB8AHKAaYBAAEzBQABMwEAATMBAAEzAQACMwIAAxYBAAMcAQADIgEAAykBAANVAQADTQEAA0IBAAM5
-        AQABgAF8Af8BAAJQAf8BAAGTAQAB1gEAAf8B7AHMAQABxgHWAe8BAAHWAucBAAGQAakBrQIAAf8BMwMA
-        AWYDAAGZAwABzAIAATMDAAIzAgABMwFmAgABMwGZAgABMwHMAgABMwH/AgABZgMAAWYBMwIAAmYCAAFm
-        AZkCAAFmAcwCAAFmAf8CAAGZAwABmQEzAgABmQFmAgACmQIAAZkBzAIAAZkB/wIAAcwDAAHMATMCAAHM
-        AWYCAAHMAZkCAALMAgABzAH/AgAB/wFmAgAB/wGZAgAB/wHMAQABMwH/AgAB/wEAATMBAAEzAQABZgEA
-        ATMBAAGZAQABMwEAAcwBAAEzAQAB/wEAAf8BMwIAAzMBAAIzAWYBAAIzAZkBAAIzAcwBAAIzAf8BAAEz
-        AWYCAAEzAWYBMwEAATMCZgEAATMBZgGZAQABMwFmAcwBAAEzAWYB/wEAATMBmQIAATMBmQEzAQABMwGZ
-        AWYBAAEzApkBAAEzAZkBzAEAATMBmQH/AQABMwHMAgABMwHMATMBAAEzAcwBZgEAATMBzAGZAQABMwLM
-        AQABMwHMAf8BAAEzAf8BMwEAATMB/wFmAQABMwH/AZkBAAEzAf8BzAEAATMC/wEAAWYDAAFmAQABMwEA
-        AWYBAAFmAQABZgEAAZkBAAFmAQABzAEAAWYBAAH/AQABZgEzAgABZgIzAQABZgEzAWYBAAFmATMBmQEA
-        AWYBMwHMAQABZgEzAf8BAAJmAgACZgEzAQADZgEAAmYBmQEAAmYBzAEAAWYBmQIAAWYBmQEzAQABZgGZ
-        AWYBAAFmApkBAAFmAZkBzAEAAWYBmQH/AQABZgHMAgABZgHMATMBAAFmAcwBmQEAAWYCzAEAAWYBzAH/
-        AQABZgH/AgABZgH/ATMBAAFmAf8BmQEAAWYB/wHMAQABzAEAAf8BAAH/AQABzAEAApkCAAGZATMBmQEA
-        AZkBAAGZAQABmQEAAcwBAAGZAwABmQIzAQABmQEAAWYBAAGZATMBzAEAAZkBAAH/AQABmQFmAgABmQFm
-        ATMBAAGZATMBZgEAAZkBZgGZAQABmQFmAcwBAAGZATMB/wEAApkBMwEAApkBZgEAA5kBAAKZAcwBAAKZ
-        Af8BAAGZAcwCAAGZAcwBMwEAAWYBzAFmAQABmQHMAZkBAAGZAswBAAGZAcwB/wEAAZkB/wIAAZkB/wEz
-        AQABmQHMAWYBAAGZAf8BmQEAAZkB/wHMAQABmQL/AQABzAMAAZkBAAEzAQABzAEAAWYBAAHMAQABmQEA
-        AcwBAAHMAQABmQEzAgABzAIzAQABzAEzAWYBAAHMATMBmQEAAcwBMwHMAQABzAEzAf8BAAHMAWYCAAHM
-        AWYBMwEAAZkCZgEAAcwBZgGZAQABzAFmAcwBAAGZAWYB/wEAAcwBmQIAAcwBmQEzAQABzAGZAWYBAAHM
-        ApkBAAHMAZkBzAEAAcwBmQH/AQACzAIAAswBMwEAAswBZgEAAswBmQEAA8wBAALMAf8BAAHMAf8CAAHM
-        Af8BMwEAAZkB/wFmAQABzAH/AZkBAAHMAf8BzAEAAcwC/wEAAcwBAAEzAQAB/wEAAWYBAAH/AQABmQEA
-        AcwBMwIAAf8CMwEAAf8BMwFmAQAB/wEzAZkBAAH/ATMBzAEAAf8BMwH/AQAB/wFmAgAB/wFmATMBAAHM
-        AmYBAAH/AWYBmQEAAf8BZgHMAQABzAFmAf8BAAH/AZkCAAH/AZkBMwEAAf8BmQFmAQAB/wKZAQAB/wGZ
-        AcwBAAH/AZkB/wEAAf8BzAIAAf8BzAEzAQAB/wHMAWYBAAH/AcwBmQEAAf8CzAEAAf8BzAH/AQAC/wEz
-        AQABzAH/AWYBAAL/AZkBAAL/AcwBAAJmAf8BAAFmAf8BZgEAAWYC/wEAAf8CZgEAAf8BZgH/AQAC/wFm
-        AQABIQEAAaUBAANfAQADdwEAA4YBAAOWAQADywEAA7IBAAPXAQAD3QEAA+MBAAPqAQAD8QEAA/gBAAHw
-        AfsB/wEAAaQCoAEAA4ADAAH/AgAB/wMAAv8BAAH/AwAB/wEAAf8BAAL/AgAD/wQAAfQH8wH0BwAB9Afz
-        AfQHAAH0B/MB9BcAAZIH6gGSBwABkgfqAZIHAAGSB+oBkhcAAeoBkgH3AwcB9wGSAeoHAAHqAZIB9wMH
-        AfcBkgHqBwAB6gGSAfcDBwH3AZIB6hUAAf8B8wHqAZIB6wPsAesBkgHqAfMB/wMAAf8B8wHqAZIB6wPs
-        AesBkgHqAfMB/wMAAf8B8wHqAZIB6wNQAesBkgHqAfMB/xMAAfEBbQESAZIBFQPrARUBkgESAW0B8QMA
-        AfEBbQESAZIBFQPrARUBkgESAW0B8QMAAfEBbQESAe0BFQNWARUB7QESAW0B8RMAAu0BEgGSAW0DEgFt
-        AZIBEgLtAwAC7QESAZIBbQMSAW0BkgESAu0DAALtARIB7QFtA1cBbQHtARIC7RMAAxIB7QHsA+8B7AHt
-        AxIDAAMSAe0B7APvAewB7QMSAwADEgHtAewD7wHsAe0DEhMAAf8B8wESAe0BbQPsAW0B7QESAfMB/wMA
-        Af8B8wESAe0BbQNTAW0B7QESAfMB/wMAAf8B8wESAe0BbQPsAW0B7QESAfMB/xMAAfEBbQESAZIBQwPr
-        AUMBkgESAW0B8QMAAfEBbQESAe0BQwNZAUMB7QESAW0B8QMAAfEBbQESAZIBQwPrAUMBkgESAW0B8RMA
-        Au0BEgGSBRIBkgESAu0DAALtARIBkgETA1kBEwGSARIC7QMAAu0BEgGSBRIBkgESAu0TAAMSAZIB6wPv
-        AesBkgMSAwADEgGSAesD9wHrAZIDEgMAAxIBkgHrA+8B6wGSAxITAAH0AfMBEgGSAesD+QHrAZIBEgHz
-        AfQDAAH0AfMBEgGSAesD7AHrAZIBEgHzAfQDAAH0AfMBEgGSAesD7AHrAZIBEgHzAfQSAAH0AfcBbQET
-        AfcBFANHARQB9wETAW0B9wH0AQAB9AH3AW0BEwH3ARUD6wEVAfcBEwFtAfcB9AEAAfQB9wFtARMB9wEV
-        A+sBFQH3ARMBbQH3AfQRAAHvAu0BEwH3AREBRwEXAUcBEQH3ARMC7QHvAQAB7wLtARMB9wEQAxIBEAH3
-        ARMC7QHvAQAB7wLtARMB9wEQAxIBEAH3ARMC7QHvEQADEgETAvcB6gESAeoC9wETAxIBAAMSARMC9wPq
-        AZIB9wETAxIBAAMSARMC9wPqAZIB9wETAxIUAAHvAhMDEgITAe8HAAHvAhMDEgITAe8HAAHvAhMDEgIT
-        Ae8UAAFCAU0BPgcAAT4DAAEoAwABQAMAARADAAEBAQABAQUAAYAXAAP/AQAB4AEPAeABDwHgAQ8CAAHg
-        AQ8B4AEPAeABDwIAAeABDwHgAQ8B4AEPAgABgAEDAYABAwGAAQMCAAGAAQMBgAEDAYABAwIAAYABAwGA
-        AQMBgAEDAgABgAEDAYABAwGAAQMCAAGAAQMBgAEDAYABAwIAAYABAwGAAQMBgAEDAgABgAEDAYABAwGA
-        AQMCAAGAAQMBgAEDAYABAwIAAYABAwGAAQMBgAEDAwABAQEAAQEBAAEBAwABAQEAAQEBAAEBAwABAQEA
-        AQEBAAEBAgAB4AEPAeABDwHgAQ8CAAs=
+        ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAABQ
+        CwAAAk1TRnQBSQFMAgEBAwIAAQIBAAECARABAAEQAQAE/wEJAQAI/wFCAU0BNgEEBgABNgEEAgABKAMA
+        AUADAAEQAwABAQEAAQgGAAEEGAABgAIAAYADAAKAAQABgAMAAYABAAGAAQACgAIAA8ABAAHAAdwBwAEA
+        AfABygGmAQABMwUAATMBAAEzAQABMwEAAjMCAAMWAQADHAEAAyIBAAMpAQADVQEAA00BAANCAQADOQEA
+        AYABfAH/AQACUAH/AQABkwEAAdYBAAH/AewBzAEAAcYB1gHvAQAB1gLnAQABkAGpAa0CAAH/ATMDAAFm
+        AwABmQMAAcwCAAEzAwACMwIAATMBZgIAATMBmQIAATMBzAIAATMB/wIAAWYDAAFmATMCAAJmAgABZgGZ
+        AgABZgHMAgABZgH/AgABmQMAAZkBMwIAAZkBZgIAApkCAAGZAcwCAAGZAf8CAAHMAwABzAEzAgABzAFm
+        AgABzAGZAgACzAIAAcwB/wIAAf8BZgIAAf8BmQIAAf8BzAEAATMB/wIAAf8BAAEzAQABMwEAAWYBAAEz
+        AQABmQEAATMBAAHMAQABMwEAAf8BAAH/ATMCAAMzAQACMwFmAQACMwGZAQACMwHMAQACMwH/AQABMwFm
+        AgABMwFmATMBAAEzAmYBAAEzAWYBmQEAATMBZgHMAQABMwFmAf8BAAEzAZkCAAEzAZkBMwEAATMBmQFm
+        AQABMwKZAQABMwGZAcwBAAEzAZkB/wEAATMBzAIAATMBzAEzAQABMwHMAWYBAAEzAcwBmQEAATMCzAEA
+        ATMBzAH/AQABMwH/ATMBAAEzAf8BZgEAATMB/wGZAQABMwH/AcwBAAEzAv8BAAFmAwABZgEAATMBAAFm
+        AQABZgEAAWYBAAGZAQABZgEAAcwBAAFmAQAB/wEAAWYBMwIAAWYCMwEAAWYBMwFmAQABZgEzAZkBAAFm
+        ATMBzAEAAWYBMwH/AQACZgIAAmYBMwEAA2YBAAJmAZkBAAJmAcwBAAFmAZkCAAFmAZkBMwEAAWYBmQFm
+        AQABZgKZAQABZgGZAcwBAAFmAZkB/wEAAWYBzAIAAWYBzAEzAQABZgHMAZkBAAFmAswBAAFmAcwB/wEA
+        AWYB/wIAAWYB/wEzAQABZgH/AZkBAAFmAf8BzAEAAcwBAAH/AQAB/wEAAcwBAAKZAgABmQEzAZkBAAGZ
+        AQABmQEAAZkBAAHMAQABmQMAAZkCMwEAAZkBAAFmAQABmQEzAcwBAAGZAQAB/wEAAZkBZgIAAZkBZgEz
+        AQABmQEzAWYBAAGZAWYBmQEAAZkBZgHMAQABmQEzAf8BAAKZATMBAAKZAWYBAAOZAQACmQHMAQACmQH/
+        AQABmQHMAgABmQHMATMBAAFmAcwBZgEAAZkBzAGZAQABmQLMAQABmQHMAf8BAAGZAf8CAAGZAf8BMwEA
+        AZkBzAFmAQABmQH/AZkBAAGZAf8BzAEAAZkC/wEAAcwDAAGZAQABMwEAAcwBAAFmAQABzAEAAZkBAAHM
+        AQABzAEAAZkBMwIAAcwCMwEAAcwBMwFmAQABzAEzAZkBAAHMATMBzAEAAcwBMwH/AQABzAFmAgABzAFm
+        ATMBAAGZAmYBAAHMAWYBmQEAAcwBZgHMAQABmQFmAf8BAAHMAZkCAAHMAZkBMwEAAcwBmQFmAQABzAKZ
+        AQABzAGZAcwBAAHMAZkB/wEAAswCAALMATMBAALMAWYBAALMAZkBAAPMAQACzAH/AQABzAH/AgABzAH/
+        ATMBAAGZAf8BZgEAAcwB/wGZAQABzAH/AcwBAAHMAv8BAAHMAQABMwEAAf8BAAFmAQAB/wEAAZkBAAHM
+        ATMCAAH/AjMBAAH/ATMBZgEAAf8BMwGZAQAB/wEzAcwBAAH/ATMB/wEAAf8BZgIAAf8BZgEzAQABzAJm
+        AQAB/wFmAZkBAAH/AWYBzAEAAcwBZgH/AQAB/wGZAgAB/wGZATMBAAH/AZkBZgEAAf8CmQEAAf8BmQHM
+        AQAB/wGZAf8BAAH/AcwCAAH/AcwBMwEAAf8BzAFmAQAB/wHMAZkBAAH/AswBAAH/AcwB/wEAAv8BMwEA
+        AcwB/wFmAQAC/wGZAQAC/wHMAQACZgH/AQABZgH/AWYBAAFmAv8BAAH/AmYBAAH/AWYB/wEAAv8BZgEA
+        ASEBAAGlAQADXwEAA3cBAAOGAQADlgEAA8sBAAOyAQAD1wEAA90BAAPjAQAD6gEAA/EBAAP4AQAB8AH7
+        Af8BAAGkAqABAAOAAwAB/wIAAf8DAAL/AQAB/wMAAf8BAAH/AQAC/wIAA/8EAAH0B/MB9AcAAfQH8wH0
+        BwAB9AfzAfQXAAGSB+oBkgcAAZIH6gGSBwABkgfqAZIXAAHqAZIB9wMHAfcBkgHqBwAB6gGSAfcDBwH3
+        AZIB6gcAAeoBkgH3AwcB9wGSAeoVAAH/AfMB6gGSAesD7AHrAZIB6gHzAf8DAAH/AfMB6gGSAesD7AHr
+        AZIB6gHzAf8DAAH/AfMB6gGSAesDUAHrAZIB6gHzAf8TAAHxAW0BEgGSARUD6wEVAZIBEgFtAfEDAAHx
+        AW0BEgGSARUD6wEVAZIBEgFtAfEDAAHxAW0BEgHtARUDVgEVAe0BEgFtAfETAALtARIBkgFtAxIBbQGS
+        ARIC7QMAAu0BEgGSAW0DEgFtAZIBEgLtAwAC7QESAe0BbQNXAW0B7QESAu0TAAMSAe0B7APvAewB7QMS
+        AwADEgHtAewD7wHsAe0DEgMAAxIB7QHsA+8B7AHtAxITAAH/AfMBEgHtAW0D7AFtAe0BEgHzAf8DAAH/
+        AfMBEgHtAW0DUwFtAe0BEgHzAf8DAAH/AfMBEgHtAW0D7AFtAe0BEgHzAf8TAAHxAW0BEgGSAUMD6wFD
+        AZIBEgFtAfEDAAHxAW0BEgHtAUMDWQFDAe0BEgFtAfEDAAHxAW0BEgGSAUMD6wFDAZIBEgFtAfETAALt
+        ARIBkgUSAZIBEgLtAwAC7QESAZIBEwNZARMBkgESAu0DAALtARIBkgUSAZIBEgLtEwADEgGSAesD7wHr
+        AZIDEgMAAxIBkgHrA/cB6wGSAxIDAAMSAZIB6wPvAesBkgMSEwAB9AHzARIBkgHrA/kB6wGSARIB8wH0
+        AwAB9AHzARIBkgHrA+wB6wGSARIB8wH0AwAB9AHzARIBkgHrA+wB6wGSARIB8wH0EgAB9AH3AW0BEwH3
+        ARQDRwEUAfcBEwFtAfcB9AEAAfQB9wFtARMB9wEVA+sBFQH3ARMBbQH3AfQBAAH0AfcBbQETAfcBFQPr
+        ARUB9wETAW0B9wH0EQAB7wLtARMB9wERAUcBFwFHAREB9wETAu0B7wEAAe8C7QETAfcBEAMSARAB9wET
+        Au0B7wEAAe8C7QETAfcBEAMSARAB9wETAu0B7xEAAxIBEwL3AeoBEgHqAvcBEwMSAQADEgETAvcD6gGS
+        AfcBEwMSAQADEgETAvcD6gGSAfcBEwMSFAAB7wITAxICEwHvBwAB7wITAxICEwHvBwAB7wITAxICEwHv
+        FAABQgFNAT4HAAE+AwABKAMAAUADAAEQAwABAQEAAQEFAAGAFwAD/wEAAeABDwHgAQ8B4AEPAgAB4AEP
+        AeABDwHgAQ8CAAHgAQ8B4AEPAeABDwIAAYABAwGAAQMBgAEDAgABgAEDAYABAwGAAQMCAAGAAQMBgAED
+        AYABAwIAAYABAwGAAQMBgAEDAgABgAEDAYABAwGAAQMCAAGAAQMBgAEDAYABAwIAAYABAwGAAQMBgAED
+        AgABgAEDAYABAwGAAQMCAAGAAQMBgAEDAYABAwMAAQEBAAEBAQABAQMAAQEBAAEBAQABAQMAAQEBAAEB
+        AQABAQIAAeABDwHgAQ8B4AEPAgAL
 </value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
@@ -21778,6 +21825,30 @@
   <data name="&gt;&gt;b4.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridViewImageColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="&gt;&gt;kNr.Name" xml:space="preserve">
+    <value>kNr</value>
+  </data>
+  <data name="&gt;&gt;kNr.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;menge.Name" xml:space="preserve">
+    <value>menge</value>
+  </data>
+  <data name="&gt;&gt;menge.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;eil.Name" xml:space="preserve">
+    <value>eil</value>
+  </data>
+  <data name="&gt;&gt;eil.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewCheckBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;del.Name" xml:space="preserve">
+    <value>del</value>
+  </data>
+  <data name="&gt;&gt;del.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewCheckBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="&gt;&gt;openFileDialog.Name" xml:space="preserve">
     <value>openFileDialog</value>
   </data>
@@ -21885,30 +21956,6 @@
   </data>
   <data name="&gt;&gt;helpProvider1.Type" xml:space="preserve">
     <value>System.Windows.Forms.HelpProvider, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;kNr.Name" xml:space="preserve">
-    <value>kNr</value>
-  </data>
-  <data name="&gt;&gt;kNr.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;menge.Name" xml:space="preserve">
-    <value>menge</value>
-  </data>
-  <data name="&gt;&gt;menge.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;eil.Name" xml:space="preserve">
-    <value>eil</value>
-  </data>
-  <data name="&gt;&gt;eil.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewCheckBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;del.Name" xml:space="preserve">
-    <value>del</value>
-  </data>
-  <data name="&gt;&gt;del.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewCheckBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>Fahrrad</value>
