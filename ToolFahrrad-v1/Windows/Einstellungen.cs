@@ -21,7 +21,9 @@ namespace ToolFahrrad_v1
             InitializeComponent();
             numericUpDown1.Value = instance.ErsteSchicht;
             numericUpDown2.Value = instance.ZweiteSchicht;
-
+            diskGrenze.Value = Convert.ToDecimal(instance.DiskountGrenze);
+            mengeGrenze.Value = Convert.ToDecimal(instance.GrenzeMenge);
+            trackBar1.Value = (int)instance.VerwendeDiskount / 10;
             trackBarAbweichung.Value = (int)instance.VerwendeAbweichung / 10;
         }
 
@@ -33,7 +35,6 @@ namespace ToolFahrrad_v1
 
         private void trackBarAbweichung_Scroll(object sender, EventArgs e)
         {
-            lbl_text.Text = "Abweichung = " + trackBarAbweichung.Value.ToString() + "0%";
             panel1.Visible = false;
         }
 
@@ -61,8 +62,26 @@ namespace ToolFahrrad_v1
         }
 
         private void trackBar1_Scroll(object sender, EventArgs e) {
-            label6.Text = "Diskount = " + trackBar1.Value.ToString() + "0%";
             panel1.Visible = false;
+        }
+
+        private void diskGrenze_ValueChanged(object sender, EventArgs e) {
+            if (diskGrenze.Value >= mengeGrenze.Value) {
+                diskGrenze.Value = mengeGrenze.Value - 1;
+            }
+        }
+
+        private void mengeGrenze_ValueChanged(object sender, EventArgs e) {
+            if (diskGrenze.Value >= mengeGrenze.Value) {
+                mengeGrenze.Value = diskGrenze.Value + 1;
+            }
+        }
+
+        private void diskSpeichern_Click(object sender, EventArgs e) {
+            instance.DiskountGrenze = Convert.ToDouble(diskGrenze.Value);
+            instance.GrenzeMenge = Convert.ToDouble(mengeGrenze.Value);
+            instance.VerwendeDiskount = trackBar1.Value * 10;
+            panel3.Visible = true;
         }
     }
 }

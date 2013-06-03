@@ -32,18 +32,43 @@ namespace ToolFahrrad_v1
                             "Diskontmenge: " + (dc.GetTeil(_nummer) as KTeil).DiskontMenge + "\n" +
                             "Bestellkosten: " + (dc.GetTeil(_nummer) as KTeil).Bestellkosten + "\n\n";
             List<ETeil> list = (dc.GetTeil(_nummer) as KTeil).IstTeilVon;
+            int sum = 0;
+            int val = 0;
+            int pm = 0;
             foreach (ETeil e in list) {
                 foreach (KeyValuePair<Teil, int> kvp in e.Zusammensetzung) {
                     if (kvp.Key.Nummer == _nummer) {
-
-                        ausgabe.Text += "wird in Teil " + e.Nummer + "  " + kvp.Value + " mal verwendet\n";
+                        if (!e.Verwendung.Contains("KDH")) {
+                            if(e.ProduktionsMengePer0 < 0)
+                                pm = 0;
+                            else 
+                                pm = e.ProduktionsMengePer0;
+                            ausgabe.Text += "wird in Teil " + e.Nummer + "  " + kvp.Value + " * " + pm +
+                                " = " + kvp.Value * pm + "\n";
+                            sum += kvp.Value * pm;
+                        }
+                        else {
+                            foreach (KeyValuePair<string, int> pair in e.KdhProduktionsmenge) {
+                                val += pair.Value;
+                            }
+                            ausgabe.Text += "wird in Teil " + e.Nummer + "  " + kvp.Value + " * " + val +
+                               " = " + kvp.Value * val + "\n";
+                            sum += kvp.Value * val;
+                            val = 0;
+                        }
                     }
-                }
+                }                
             }
+            ausgabe.Text += "Summe: " + sum;
         }
 
+
+
+
+
+
         internal void GetZeitInformation() {
-            ausgabe.Text = "Rüstungszeit: \n";
+            ausgabe2.Text = "Rüstungszeit: \n";
             int sum = 0;
             int val = 0;
             int prMenge = 0;
@@ -57,19 +82,21 @@ namespace ToolFahrrad_v1
                 else {
                     foreach (KeyValuePair<string, int> pair in (dc.GetTeil(kvp.Key) as ETeil).KdhProduktionsmenge) {
                         prMenge += pair.Value;
-                        if (prMenge <= 0)
+                        if (prMenge >= 0)
                             val = kvp.Value;
                         else
                             val = 0;
                     }
                 }
-                ausgabe.Text += "Teil " + kvp.Key + ": " + val + " min. \n";
+                ausgabe2.Text += "Teil " + kvp.Key + ": " + val + " min. \n";
                 sum += val;
             }
-            ausgabe.Text += "Summe: " + sum + "\n\n";
-
-            ausgabe2.Text += "Kapazitätsbedarf: \n";
+            ausgabe2.Text += "Summe: " + sum + "\n\n";
+            
+            //
+            ausgabe.Text += "Kapazitätsbedarf: \n";
             sum = 0;
+            prMenge = 0;
             foreach (KeyValuePair<int, int> kvp in dc.GetArbeitsplatz(_nummer).Werk_zeiten) {
                 {
                     if (!(dc.GetTeil(kvp.Key) as ETeil).Verwendung.Contains("KDH")) {
@@ -82,12 +109,12 @@ namespace ToolFahrrad_v1
                     }
                     if (prMenge < 0)
                         prMenge = 0;
-                    ausgabe2.Text += "Teil " + kvp.Key + ": " + kvp.Value + " * " + prMenge + " = " + kvp.Value * prMenge + " min.\n";
+                    ausgabe.Text += "Teil " + kvp.Key + ": " + kvp.Value + " * " + prMenge + " = " + kvp.Value * prMenge + " min.\n";
                     sum += kvp.Value * prMenge;
                     prMenge = 0;
                 }
             }
-            ausgabe2.Text += "Summe: " + sum + "\n\n";
+            ausgabe.Text += "Summe: " + sum + "\n\n";
         }
     }
 }

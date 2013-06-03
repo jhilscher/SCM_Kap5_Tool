@@ -18,9 +18,6 @@ namespace ToolFahrrad_v1
         DataContainer instance = DataContainer.Instance;
         XMLDatei xml = new XMLDatei();
         Produktionsplanung pp = new Produktionsplanung();
-        Bestellverwaltung bv = new Bestellverwaltung();
-        List<Bestellposition> bp;
-        private bool bestellungUpdate = false;
         private bool okPrognose = false;
         private bool okXml = false;
         /// <summary>
@@ -45,7 +42,6 @@ namespace ToolFahrrad_v1
             this.save.Visible = true;
             this.tab1.Visible = true;
             this.tab2.Visible = true;
-            this.bestellungUpdate = false;
         }
         private void ausführen() {
             if ((instance.GetTeil(4) as ETeil).Puffer != -1) {
@@ -682,7 +678,7 @@ namespace ToolFahrrad_v1
                 k.BruttoBedarfPer2 = 0;
                 k.BruttoBedarfPer3 = 0;
             }
-            for (int i = 1; i < 4; ++i) {
+            for(int i = 1; i < 4; ++i){
                 pp.RekursAufloesenKTeile(i, null, instance.GetTeil(i) as ETeil);
             }
 
@@ -848,7 +844,7 @@ namespace ToolFahrrad_v1
                                 }
                                 key = split[1];
                             }
-                        }
+                        }                        
                     }
                     a.Geaendert = true;
                     a.RuestungCustom = val;
@@ -895,26 +891,8 @@ namespace ToolFahrrad_v1
                 ++index;
             }
             #endregion
-
-            //Bestellung
-            #region Bestellung
-            this.DataGriedViewRemove(dataGridViewBestellung);
-            if(this.bestellungUpdate == false)
-                bv.generiereBestellListe();
-            List<Bestellposition> bp = bv.BvPositionen;
-            index = 0;
-            foreach (var a in bp) {
-                dataGridViewBestellung.Rows.Add();
-                dataGridViewBestellung.Rows[index].Cells[0].Value = a.Kaufteil.Nummer;
-                dataGridViewBestellung.Rows[index].Cells[1].Value = a.Menge;
-                if (a.Eil == true) {
-                    dataGridViewBestellung.Rows[index].Cells[2].Value = true;
-                }
-                ++index;
-            }
-            #endregion
         }
-
+            
         /// <summary>
         /// 
         /// </summary>
@@ -936,16 +914,21 @@ namespace ToolFahrrad_v1
             }
         }
 
+
+
+
+        private void button1_Click(object sender, EventArgs e) {
+            Bestellverwaltung bv = new Bestellverwaltung();
+            bv.generiereBestellListe();
+            List<Bestellposition> bp = bv.BvPositionen;
+        }
+
         private void prodMenge(int index, int nr, int reserve) {
             ETeil et = instance.GetTeil(nr) as ETeil;
             if (et.IstEndProdukt == true)
                 et.ProduktionsMengePer0 = et.VertriebPer0 + reserve - et.Lagerstand - et.InWartschlange - et.InBearbeitung;
-            else if (et.IstEndProdukt != true && et.Verwendung.Contains("KDH") == false) {
-                if (et.VertriebPer0 < 0) {
-                    et.VertriebPer0 = 0;
-                }
+            else if (et.IstEndProdukt != true && et.Verwendung.Contains("KDH") == false)
                 et.ProduktionsMengePer0 = et.VertriebPer0 + et.VaterInWarteschlange + reserve - et.Lagerstand - et.InWartschlange - et.InBearbeitung;
-            }
             else {
                 int pufTemp = 0;
                 foreach (KeyValuePair<int, int[]> pair in et.KdhPuffer) {
@@ -1065,6 +1048,7 @@ namespace ToolFahrrad_v1
             Information();
         }
 
+<<<<<<< HEAD
         private void arbPlatzAusfueren_Click(object sender, EventArgs e) {
             for (int index = 0; index < dataGridViewAPlatz.Rows.Count; ++index) {
                 instance.GetArbeitsplatz(Convert.ToInt32(dataGridViewAPlatz.Rows[index].Cells[0].Value.ToString())).RuestungCustom =
@@ -1073,41 +1057,27 @@ namespace ToolFahrrad_v1
             Information();
         }
 
-        private void pictureBox3_Click(object sender, EventArgs e) {
-            Bestellposition bbp;
-            bp = new List<Bestellposition>();
+=======
+        private void label91_Click(object sender, EventArgs e)
+        {
 
-
-            //for (int index = 0; index < dataGridViewBestellung.Rows.Count; ++index) {
-
-            //    string a = dataGridViewBestellung.Rows[index].Cells[3].Value.ToString();
-
-            //}
-
-            DataGridViewCheckBoxCell check = new DataGridViewCheckBoxCell();          
-
-
-            foreach (DataGridViewRow row in dataGridViewBestellung.Rows) {
-                check = (DataGridViewCheckBoxCell)row.Cells[3];
-                if (check.Value == null)
-                    check.Value = false;                
-                if (check.Value.ToString() != "true") {
-                    bbp = new Bestellposition(instance.GetTeil(Convert.ToInt32(row.Cells[0].Value.ToString())) as KTeil,
-                    Convert.ToInt32(row.Cells[1].Value.ToString()),
-                    row.Cells[2].Selected);
-                    bp.Add(bbp);
-                }
-            }
-            this.bestellungUpdate = true;
-            bv.SetBvPositionen(bp);
-            Information();
         }
 
-        private void zurueck_Click(object sender, EventArgs e) {
-            this.bestellungUpdate = false;
-            bv.clearBvPositionen();
-            Information();
+        private void dataGridViewETeil_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+>>>>>>> origin/wase1013
         }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/wase1013
+
     }
 }
 

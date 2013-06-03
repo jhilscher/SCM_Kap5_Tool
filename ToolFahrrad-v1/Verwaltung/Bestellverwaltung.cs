@@ -27,6 +27,12 @@ namespace ToolFahrrad_v1
         {
             get { return bvPositionen; }
         }
+        // Set new list bvPositionen
+        public void SetBvPositionen(List<Bestellposition> newBvPositionen)
+        {
+            clearBvPositionen();
+            bvPositionen = newBvPositionen;
+        }
         // Clear list bvPositionen
         public void clearBvPositionen()
         {
@@ -62,7 +68,7 @@ namespace ToolFahrrad_v1
                     }
                     else if (lieferDauer >= (endPeriod + n))
                     {
-                        // Check needed amount
+                        // Make order as Eilbestellung
                         bvPositionen.Add(new Bestellposition(kt, kt.BruttoBedarfPer1 - kt.BestandPer1, true));
                         teilMengeSumme = teilMengeSumme - kt.BruttoBedarfPer1 + (kt.BruttoBedarfPer1 - kt.BestandPer1);
                     }

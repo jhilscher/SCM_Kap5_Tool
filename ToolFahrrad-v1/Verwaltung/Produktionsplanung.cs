@@ -90,7 +90,7 @@ namespace ToolFahrrad_v1
                 }
             }
         }
-        private void RekursAufloesenKTeile(int index, ETeil vaterTeil, ETeil kindTeil)
+        public void RekursAufloesenKTeile(int index, ETeil vaterTeil, ETeil kindTeil)
         {
             if (vaterTeil != null)
             {
