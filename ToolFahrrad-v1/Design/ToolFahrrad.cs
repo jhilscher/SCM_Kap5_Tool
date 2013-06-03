@@ -891,6 +891,25 @@ namespace ToolFahrrad_v1
                 ++index;
             }
             #endregion
+
+            //Bestellung
+            #region Bestellung
+            this.DataGriedViewRemove(dataGridViewBestellung);
+
+            Bestellverwaltung bv = new Bestellverwaltung();
+            bv.generiereBestellListe();
+            List<Bestellposition> bp = bv.BvPositionen;
+            index = 0;
+            foreach (var a in bp) {
+                dataGridViewBestellung.Rows.Add();
+                dataGridViewBestellung.Rows[index].Cells[0].Value = a.Kaufteil.Nummer;
+                dataGridViewBestellung.Rows[index].Cells[1].Value = a.Menge;
+                if (a.Eil == true) {
+                    dataGridViewBestellung.Rows[index].Cells[2].Value = true;
+                }
+                ++index;
+            }
+            #endregion
         }
             
         /// <summary>
@@ -912,15 +931,6 @@ namespace ToolFahrrad_v1
                 ti.GetZeitInformation();
                 ti.Show();
             }
-        }
-
-
-
-
-        private void button1_Click(object sender, EventArgs e) {
-            Bestellverwaltung bv = new Bestellverwaltung();
-            bv.generiereBestellListe();
-            List<Bestellposition> bp = bv.BvPositionen;
         }
 
         private void prodMenge(int index, int nr, int reserve) {
@@ -1054,6 +1064,10 @@ namespace ToolFahrrad_v1
                     (Convert.ToInt32(dataGridViewAPlatz.Rows[index].Cells[3].Value.ToString()));
             }
             Information();
+        }
+
+        private void dataGridViewBestellung_RowsRemoved(object sender, DataGridViewRowsRemovedEventArgs e) {
+            
         }
     }
 }

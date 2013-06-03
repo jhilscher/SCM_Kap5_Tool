@@ -606,6 +606,7 @@
             this.colBearbeitung = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colPlanung = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tab_arbeitzeit = new System.Windows.Forms.TabPage();
+            this.arbPlatzAusfueren = new System.Windows.Forms.PictureBox();
             this.dataGridViewAPlatz = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewLinkColumn();
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -637,7 +638,6 @@
             this.dataGridViewTextBoxColumn21 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.b4 = new System.Windows.Forms.DataGridViewImageColumn();
             this.tab_bestellung = new System.Windows.Forms.TabPage();
-            this.button1 = new System.Windows.Forms.Button();
             this.pictureBox12 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
@@ -659,7 +659,10 @@
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.helpProvider1 = new System.Windows.Forms.HelpProvider();
-            this.arbPlatzAusfueren = new System.Windows.Forms.PictureBox();
+            this.dataGridViewBestellung = new System.Windows.Forms.DataGridView();
+            this.kNr = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.menge = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.eil = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.tabs.SuspendLayout();
             this.tab_xml.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pufferP3)).BeginInit();
@@ -698,6 +701,7 @@
             this.tab_eTeil.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewETeil)).BeginInit();
             this.tab_arbeitzeit.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.arbPlatzAusfueren)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAPlatz)).BeginInit();
             this.tab_bestellverwaltung.SuspendLayout();
             this.tab2.SuspendLayout();
@@ -706,7 +710,7 @@
             this.tab_bestellung.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
             this.menu.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.arbPlatzAusfueren)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewBestellung)).BeginInit();
             this.SuspendLayout();
             // 
             // tabs
@@ -5881,6 +5885,15 @@
             this.tab_arbeitzeit.Name = "tab_arbeitzeit";
             this.helpProvider1.SetShowHelp(this.tab_arbeitzeit, ((bool)(resources.GetObject("tab_arbeitzeit.ShowHelp"))));
             // 
+            // arbPlatzAusfueren
+            // 
+            this.arbPlatzAusfueren.Cursor = System.Windows.Forms.Cursors.Hand;
+            resources.ApplyResources(this.arbPlatzAusfueren, "arbPlatzAusfueren");
+            this.arbPlatzAusfueren.Name = "arbPlatzAusfueren";
+            this.helpProvider1.SetShowHelp(this.arbPlatzAusfueren, ((bool)(resources.GetObject("arbPlatzAusfueren.ShowHelp"))));
+            this.arbPlatzAusfueren.TabStop = false;
+            this.arbPlatzAusfueren.Click += new System.EventHandler(this.arbPlatzAusfueren_Click);
+            // 
             // dataGridViewAPlatz
             // 
             this.dataGridViewAPlatz.AllowUserToAddRows = false;
@@ -6119,18 +6132,10 @@
             // tab_bestellung
             // 
             this.tab_bestellung.BackColor = System.Drawing.Color.Transparent;
-            this.tab_bestellung.Controls.Add(this.button1);
+            this.tab_bestellung.Controls.Add(this.dataGridViewBestellung);
             resources.ApplyResources(this.tab_bestellung, "tab_bestellung");
             this.tab_bestellung.Name = "tab_bestellung";
             this.helpProvider1.SetShowHelp(this.tab_bestellung, ((bool)(resources.GetObject("tab_bestellung.ShowHelp"))));
-            // 
-            // button1
-            // 
-            resources.ApplyResources(this.button1, "button1");
-            this.button1.Name = "button1";
-            this.helpProvider1.SetShowHelp(this.button1, ((bool)(resources.GetObject("button1.ShowHelp"))));
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // pictureBox12
             // 
@@ -6267,14 +6272,35 @@
             // 
             resources.ApplyResources(this.helpProvider1, "helpProvider1");
             // 
-            // arbPlatzAusfueren
+            // dataGridViewBestellung
             // 
-            this.arbPlatzAusfueren.Cursor = System.Windows.Forms.Cursors.Hand;
-            resources.ApplyResources(this.arbPlatzAusfueren, "arbPlatzAusfueren");
-            this.arbPlatzAusfueren.Name = "arbPlatzAusfueren";
-            this.helpProvider1.SetShowHelp(this.arbPlatzAusfueren, ((bool)(resources.GetObject("arbPlatzAusfueren.ShowHelp"))));
-            this.arbPlatzAusfueren.TabStop = false;
-            this.arbPlatzAusfueren.Click += new System.EventHandler(this.arbPlatzAusfueren_Click);
+            this.dataGridViewBestellung.AllowUserToAddRows = false;
+            this.dataGridViewBestellung.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.dataGridViewBestellung.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridViewBestellung.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewBestellung.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.kNr,
+            this.menge,
+            this.eil});
+            resources.ApplyResources(this.dataGridViewBestellung, "dataGridViewBestellung");
+            this.dataGridViewBestellung.Name = "dataGridViewBestellung";
+            this.dataGridViewBestellung.RowsRemoved += new System.Windows.Forms.DataGridViewRowsRemovedEventHandler(this.dataGridViewBestellung_RowsRemoved);
+            // 
+            // kNr
+            // 
+            resources.ApplyResources(this.kNr, "kNr");
+            this.kNr.Name = "kNr";
+            this.kNr.ReadOnly = true;
+            // 
+            // menge
+            // 
+            resources.ApplyResources(this.menge, "menge");
+            this.menge.Name = "menge";
+            // 
+            // eil
+            // 
+            resources.ApplyResources(this.eil, "eil");
+            this.eil.Name = "eil";
             // 
             // Fahrrad
             // 
@@ -6331,6 +6357,7 @@
             this.tab_eTeil.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewETeil)).EndInit();
             this.tab_arbeitzeit.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.arbPlatzAusfueren)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAPlatz)).EndInit();
             this.tab_bestellverwaltung.ResumeLayout(false);
             this.tab_bestellverwaltung.PerformLayout();
@@ -6341,7 +6368,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
             this.menu.ResumeLayout(false);
             this.menu.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.arbPlatzAusfueren)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewBestellung)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -6416,7 +6443,6 @@
         private System.Windows.Forms.PictureBox pictureBox12;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TabPage tab_bestellung;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.DataGridView dataGridViewETeil;
         private System.Windows.Forms.TabPage tab_P1;
         private System.Windows.Forms.Panel panel1;
@@ -6979,6 +7005,10 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn21;
         private System.Windows.Forms.DataGridViewImageColumn b4;
         private System.Windows.Forms.PictureBox arbPlatzAusfueren;
+        private System.Windows.Forms.DataGridView dataGridViewBestellung;
+        private System.Windows.Forms.DataGridViewTextBoxColumn kNr;
+        private System.Windows.Forms.DataGridViewTextBoxColumn menge;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn eil;
     }
 }
 

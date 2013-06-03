@@ -40,13 +40,18 @@
             this.lbl_10 = new System.Windows.Forms.Label();
             this.trackBarAbweichung = new System.Windows.Forms.TrackBar();
             this.tab_diskount = new System.Windows.Forms.TabPage();
+            this.label8 = new System.Windows.Forms.Label();
+            this.mengeGrenze = new System.Windows.Forms.NumericUpDown();
+            this.diskGrenze = new System.Windows.Forms.NumericUpDown();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.diskSpeichern = new System.Windows.Forms.Button();
             this.trackBar1 = new System.Windows.Forms.TrackBar();
             this.tab_schicht = new System.Windows.Forms.TabPage();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -57,17 +62,14 @@
             this.btn_schicht_save = new System.Windows.Forms.Button();
             this.lbl_3schicht = new System.Windows.Forms.Label();
             this.lbl_2schicht = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.diskGrenze = new System.Windows.Forms.NumericUpDown();
-            this.mengeGrenze = new System.Windows.Forms.NumericUpDown();
-            this.label8 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tab_abweichung.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBarAbweichung)).BeginInit();
             this.tab_diskount.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.mengeGrenze)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.diskGrenze)).BeginInit();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
@@ -76,8 +78,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.diskGrenze)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mengeGrenze)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -200,7 +200,7 @@
             this.tab_diskount.Controls.Add(this.label4);
             this.tab_diskount.Controls.Add(this.label5);
             this.tab_diskount.Controls.Add(this.panel3);
-            this.tab_diskount.Controls.Add(this.button1);
+            this.tab_diskount.Controls.Add(this.diskSpeichern);
             this.tab_diskount.Controls.Add(this.trackBar1);
             this.tab_diskount.Location = new System.Drawing.Point(4, 22);
             this.tab_diskount.Name = "tab_diskount";
@@ -208,6 +208,69 @@
             this.tab_diskount.Size = new System.Drawing.Size(657, 391);
             this.tab_diskount.TabIndex = 2;
             this.tab_diskount.Text = "Diskount";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(11, 94);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(234, 13);
+            this.label8.TabIndex = 18;
+            this.label8.Text = "Prozensatz zur Verwendung der Diskontmenge: ";
+            // 
+            // mengeGrenze
+            // 
+            this.mengeGrenze.Location = new System.Drawing.Point(112, 48);
+            this.mengeGrenze.Minimum = new decimal(new int[] {
+            2,
+            0,
+            0,
+            0});
+            this.mengeGrenze.Name = "mengeGrenze";
+            this.mengeGrenze.Size = new System.Drawing.Size(39, 20);
+            this.mengeGrenze.TabIndex = 17;
+            this.mengeGrenze.Value = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            this.mengeGrenze.ValueChanged += new System.EventHandler(this.mengeGrenze_ValueChanged);
+            // 
+            // diskGrenze
+            // 
+            this.diskGrenze.Location = new System.Drawing.Point(112, 16);
+            this.diskGrenze.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.diskGrenze.Name = "diskGrenze";
+            this.diskGrenze.Size = new System.Drawing.Size(39, 20);
+            this.diskGrenze.TabIndex = 16;
+            this.diskGrenze.Value = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
+            this.diskGrenze.ValueChanged += new System.EventHandler(this.diskGrenze_ValueChanged);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(11, 50);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(93, 13);
+            this.label7.TabIndex = 15;
+            this.label7.Text = "Mengegrenze (€): ";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(11, 19);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(96, 13);
+            this.label6.TabIndex = 14;
+            this.label6.Text = "Diskontgrenze (€): ";
             // 
             // label3
             // 
@@ -257,9 +320,9 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(54, 23);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(126, 13);
+            this.label2.Size = new System.Drawing.Size(120, 13);
             this.label2.TabIndex = 6;
-            this.label2.Text = "Diskaunt wurde geändert";
+            this.label2.Text = "Diskont wurde geändert";
             // 
             // pictureBox3
             // 
@@ -270,15 +333,15 @@
             this.pictureBox3.TabIndex = 5;
             this.pictureBox3.TabStop = false;
             // 
-            // button1
+            // diskSpeichern
             // 
-            this.button1.Location = new System.Drawing.Point(190, 173);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 9;
-            this.button1.Text = "Speichern";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.diskSpeichern.Location = new System.Drawing.Point(190, 173);
+            this.diskSpeichern.Name = "diskSpeichern";
+            this.diskSpeichern.Size = new System.Drawing.Size(75, 23);
+            this.diskSpeichern.TabIndex = 9;
+            this.diskSpeichern.Text = "Speichern";
+            this.diskSpeichern.UseVisualStyleBackColor = true;
+            this.diskSpeichern.Click += new System.EventHandler(this.diskSpeichern_Click);
             // 
             // trackBar1
             // 
@@ -420,69 +483,6 @@
             this.lbl_2schicht.TabIndex = 0;
             this.lbl_2schicht.Text = "2. Schicht ab: ";
             // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(11, 19);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(96, 13);
-            this.label6.TabIndex = 14;
-            this.label6.Text = "Diskontgrenze (€): ";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(11, 50);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(93, 13);
-            this.label7.TabIndex = 15;
-            this.label7.Text = "Mengegrenze (€): ";
-            // 
-            // diskGrenze
-            // 
-            this.diskGrenze.Location = new System.Drawing.Point(112, 16);
-            this.diskGrenze.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.diskGrenze.Name = "diskGrenze";
-            this.diskGrenze.Size = new System.Drawing.Size(39, 20);
-            this.diskGrenze.TabIndex = 16;
-            this.diskGrenze.Value = new decimal(new int[] {
-            5,
-            0,
-            0,
-            0});
-            this.diskGrenze.ValueChanged += new System.EventHandler(this.diskGrenze_ValueChanged);
-            // 
-            // mengeGrenze
-            // 
-            this.mengeGrenze.Location = new System.Drawing.Point(112, 48);
-            this.mengeGrenze.Minimum = new decimal(new int[] {
-            2,
-            0,
-            0,
-            0});
-            this.mengeGrenze.Name = "mengeGrenze";
-            this.mengeGrenze.Size = new System.Drawing.Size(39, 20);
-            this.mengeGrenze.TabIndex = 17;
-            this.mengeGrenze.Value = new decimal(new int[] {
-            10,
-            0,
-            0,
-            0});
-            this.mengeGrenze.ValueChanged += new System.EventHandler(this.mengeGrenze_ValueChanged);
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(11, 94);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(234, 13);
-            this.label8.TabIndex = 18;
-            this.label8.Text = "Prozensatz zur Verwendung der Diskontmenge: ";
-            // 
             // Einstellungen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -501,6 +501,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.trackBarAbweichung)).EndInit();
             this.tab_diskount.ResumeLayout(false);
             this.tab_diskount.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.mengeGrenze)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.diskGrenze)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
@@ -512,8 +514,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.diskGrenze)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mengeGrenze)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -546,7 +546,7 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button diskSpeichern;
         private System.Windows.Forms.TrackBar trackBar1;
         private System.Windows.Forms.NumericUpDown mengeGrenze;
         private System.Windows.Forms.NumericUpDown diskGrenze;

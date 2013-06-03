@@ -23,7 +23,7 @@ namespace ToolFahrrad_v1
             numericUpDown2.Value = instance.ZweiteSchicht;
             diskGrenze.Value = Convert.ToDecimal(instance.DiskountGrenze);
             mengeGrenze.Value = Convert.ToDecimal(instance.GrenzeMenge);
-
+            trackBar1.Value = (int)instance.VerwendeDiskount / 10;
             trackBarAbweichung.Value = (int)instance.VerwendeAbweichung / 10;
         }
 
@@ -77,9 +77,11 @@ namespace ToolFahrrad_v1
             }
         }
 
-        private void button1_Click(object sender, EventArgs e) {
+        private void diskSpeichern_Click(object sender, EventArgs e) {
             instance.DiskountGrenze = Convert.ToDouble(diskGrenze.Value);
             instance.GrenzeMenge = Convert.ToDouble(mengeGrenze.Value);
+            instance.VerwendeDiskount = trackBar1.Value * 10;
+            panel3.Visible = true;
         }
     }
 }
