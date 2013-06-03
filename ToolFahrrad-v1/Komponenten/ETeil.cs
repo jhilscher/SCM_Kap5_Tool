@@ -177,7 +177,10 @@ namespace ToolFahrrad_v1
                 else
                 {
                     // Set members
-                    vertriebPer0 = vaterTeil.ProduktionsMengePer0;                    
+                    if (vaterTeil.ProduktionsMengePer0 > 0)
+                        vertriebPer0 = vaterTeil.ProduktionsMengePer0;
+                    else
+                        vertriebPer0 = 0;
                     // Calculation
                     if (Verwendung.Contains("KDH") == false)
                     {
