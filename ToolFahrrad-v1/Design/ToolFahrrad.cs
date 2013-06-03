@@ -937,8 +937,12 @@ namespace ToolFahrrad_v1
             ETeil et = instance.GetTeil(nr) as ETeil;
             if (et.IstEndProdukt == true)
                 et.ProduktionsMengePer0 = et.VertriebPer0 + reserve - et.Lagerstand - et.InWartschlange - et.InBearbeitung;
-            else if (et.IstEndProdukt != true && et.Verwendung.Contains("KDH") == false)
+            else if (et.IstEndProdukt != true && et.Verwendung.Contains("KDH") == false) {
+                if (et.VertriebPer0 < 0) {
+                    et.VertriebPer0 = 0;
+                }
                 et.ProduktionsMengePer0 = et.VertriebPer0 + et.VaterInWarteschlange + reserve - et.Lagerstand - et.InWartschlange - et.InBearbeitung;
+            }
             else {
                 int pufTemp = 0;
                 foreach (KeyValuePair<int, int[]> pair in et.KdhPuffer) {
