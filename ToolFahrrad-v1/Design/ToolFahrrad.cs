@@ -18,6 +18,9 @@ namespace ToolFahrrad_v1
         DataContainer instance = DataContainer.Instance;
         XMLDatei xml = new XMLDatei();
         Produktionsplanung pp = new Produktionsplanung();
+        Bestellverwaltung bv = new Bestellverwaltung();
+        List<Bestellposition> bp;
+        private bool bestellungUpdate = false;
         private bool okPrognose = false;
         private bool okXml = false;
         /// <summary>
@@ -42,6 +45,7 @@ namespace ToolFahrrad_v1
             this.save.Visible = true;
             this.tab1.Visible = true;
             this.tab2.Visible = true;
+            this.bestellungUpdate = false;
         }
         private void ausführen() {
             if ((instance.GetTeil(4) as ETeil).Puffer != -1) {
@@ -678,7 +682,7 @@ namespace ToolFahrrad_v1
                 k.BruttoBedarfPer2 = 0;
                 k.BruttoBedarfPer3 = 0;
             }
-            for(int i = 1; i < 4; ++i){
+            for (int i = 1; i < 4; ++i) {
                 pp.RekursAufloesenKTeile(i, null, instance.GetTeil(i) as ETeil);
             }
 
@@ -844,7 +848,7 @@ namespace ToolFahrrad_v1
                                 }
                                 key = split[1];
                             }
-                        }                        
+                        }
                     }
                     a.Geaendert = true;
                     a.RuestungCustom = val;
@@ -895,9 +899,8 @@ namespace ToolFahrrad_v1
             //Bestellung
             #region Bestellung
             this.DataGriedViewRemove(dataGridViewBestellung);
-
-            Bestellverwaltung bv = new Bestellverwaltung();
-            bv.generiereBestellListe();
+            if(this.bestellungUpdate == false)
+                bv.generiereBestellListe();
             List<Bestellposition> bp = bv.BvPositionen;
             index = 0;
             foreach (var a in bp) {
@@ -911,7 +914,7 @@ namespace ToolFahrrad_v1
             }
             #endregion
         }
-            
+
         /// <summary>
         /// 
         /// </summary>
@@ -1070,8 +1073,35 @@ namespace ToolFahrrad_v1
             Information();
         }
 
-        private void dataGridViewBestellung_RowsRemoved(object sender, DataGridViewRowsRemovedEventArgs e) {
-            
+        private void pictureBox3_Click(object sender, EventArgs e) {
+            Bestellposition bbp;
+            bp = new List<Bestellposition>();
+
+
+            //for (int index = 0; index < dataGridViewBestellung.Rows.Count; ++index) {
+
+            //    string a = dataGridViewBestellung.Rows[index].Cells[3].Value.ToString();
+
+            //}
+
+            DataGridViewCheckBoxCell check = new DataGridViewCheckBoxCell();          
+
+
+            foreach (DataGridViewRow row in dataGridViewBestellung.Rows) {
+                check = (DataGridViewCheckBoxCell)row.Cells[3];
+                if (check.Value == null)
+                    check.Value = false;                
+                if (check.Value.ToString() != "true") {
+                    bbp = new Bestellposition(instance.GetTeil(Convert.ToInt32(row.Cells[0].Value.ToString())) as KTeil,
+                    Convert.ToInt32(row.Cells[1].Value.ToString()),
+                    row.Cells[2].Selected);
+                    bp.Add(bbp);
+                }
+            }
+            this.bestellungUpdate = true;
+            bv.SetBvPositionen(bp);
+            Information();
+
         }
     }
 }
