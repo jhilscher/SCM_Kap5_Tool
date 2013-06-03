@@ -25,6 +25,17 @@ namespace ToolFahrrad_v1
         private int zweiteSchicht = 6000;
         private double verwendeAbweichung = 0.5;
         private double verwendeDiskount = 0.5;
+
+        private double diskountGrenze = 5;        
+        private double grenzeMenge = 10;
+        public double DiskountGrenze {
+            get { return diskountGrenze; }
+            set { diskountGrenze = value; }
+        }
+        public double GrenzeMenge {
+            get { return grenzeMenge; }
+            set { grenzeMenge = value; }
+        }
         // Getter / Setter
         public double VerwendeAbweichung
         {
