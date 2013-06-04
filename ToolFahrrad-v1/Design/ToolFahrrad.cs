@@ -910,6 +910,16 @@ namespace ToolFahrrad_v1
                 if (a.Eil == true) {
                     dataGridViewBestellung.Rows[index].Cells[2].Value = true;
                 }
+
+                //Farbe
+                for (int i = 0; i < 4; ++i) {
+                    if (i == 0)
+                        dataGridViewBestellung.Columns[i].DefaultCellStyle.BackColor = Color.FloralWhite;
+                    else
+                        dataGridViewBestellung.Columns[i].DefaultCellStyle.BackColor = Color.LightYellow;
+                }
+
+
                 ++index;
             }
             #endregion
