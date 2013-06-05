@@ -178,6 +178,10 @@ namespace ToolFahrrad_v1
             }
             optimiereBvPositionen();
         }
+        public void ladeBvPositionenInDc()
+        {
+            dc.Bestellungen = BvPositionen;
+        }
         private int berechneMenge(double verwDiskont, int bestellMenge, int diskont)
         {
             int outputMenge = 0;
