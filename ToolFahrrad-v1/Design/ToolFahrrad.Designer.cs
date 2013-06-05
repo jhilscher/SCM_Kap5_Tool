@@ -606,7 +606,6 @@
             this.colBearbeitung = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colPlanung = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tab_arbeitzeit = new System.Windows.Forms.TabPage();
-            this.arbPlatzAusfueren = new System.Windows.Forms.PictureBox();
             this.dataGridViewAPlatz = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewLinkColumn();
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -621,22 +620,6 @@
             this.tab2 = new System.Windows.Forms.TabControl();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.dataGridViewKTeil = new System.Windows.Forms.DataGridView();
-            this.dataGridViewLinkColumn1 = new System.Windows.Forms.DataGridViewLinkColumn();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn18 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.b1 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.dataGridViewTextBoxColumn19 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.b2 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.dataGridViewTextBoxColumn20 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.b3 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.dataGridViewTextBoxColumn21 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.b4 = new System.Windows.Forms.DataGridViewImageColumn();
             this.tab_bestellung = new System.Windows.Forms.TabPage();
             this.label3 = new System.Windows.Forms.Label();
             this.uebernehmenXML = new System.Windows.Forms.PictureBox();
@@ -692,6 +675,19 @@
             this.dg_p2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dg_p3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label270 = new System.Windows.Forms.Label();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.dataGridViewLinkColumn1 = new System.Windows.Forms.DataGridViewLinkColumn();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn18 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn19 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn20 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn21 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabs.SuspendLayout();
             this.tab_xml.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pufferP3)).BeginInit();
@@ -730,7 +726,6 @@
             this.tab_eTeil.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewETeil)).BeginInit();
             this.tab_arbeitzeit.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.arbPlatzAusfueren)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAPlatz)).BeginInit();
             this.tab_bestellverwaltung.SuspendLayout();
             this.tab2.SuspendLayout();
@@ -749,6 +744,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewEinkauf)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDirekt)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewVertrieb)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // tabs
@@ -2814,6 +2810,7 @@
             this.p1ETAusfueren.Name = "p1ETAusfueren";
             this.helpProvider1.SetShowHelp(this.p1ETAusfueren, ((bool)(resources.GetObject("p1ETAusfueren.ShowHelp"))));
             this.p1ETAusfueren.TabStop = false;
+            this.toolTip.SetToolTip(this.p1ETAusfueren, resources.GetString("p1ETAusfueren.ToolTip"));
             this.p1ETAusfueren.Click += new System.EventHandler(this.p1ETAusfueren_Click);
             // 
             // tab_P2
@@ -3011,6 +3008,7 @@
             this.p2ETAusfueren.Name = "p2ETAusfueren";
             this.helpProvider1.SetShowHelp(this.p2ETAusfueren, ((bool)(resources.GetObject("p2ETAusfueren.ShowHelp"))));
             this.p2ETAusfueren.TabStop = false;
+            this.toolTip.SetToolTip(this.p2ETAusfueren, resources.GetString("p2ETAusfueren.ToolTip"));
             this.p2ETAusfueren.Click += new System.EventHandler(this.p2ETAusfueren_Click);
             // 
             // label92
@@ -4521,6 +4519,7 @@
             this.p3ETAusfueren.Name = "p3ETAusfueren";
             this.helpProvider1.SetShowHelp(this.p3ETAusfueren, ((bool)(resources.GetObject("p3ETAusfueren.ShowHelp"))));
             this.p3ETAusfueren.TabStop = false;
+            this.toolTip.SetToolTip(this.p3ETAusfueren, resources.GetString("p3ETAusfueren.ToolTip"));
             this.p3ETAusfueren.Click += new System.EventHandler(this.p3ETAusfueren_Click);
             // 
             // label181
@@ -5918,20 +5917,11 @@
             // tab_arbeitzeit
             // 
             this.tab_arbeitzeit.BackColor = System.Drawing.Color.Transparent;
-            this.tab_arbeitzeit.Controls.Add(this.arbPlatzAusfueren);
+            this.tab_arbeitzeit.Controls.Add(this.pictureBox3);
             this.tab_arbeitzeit.Controls.Add(this.dataGridViewAPlatz);
             resources.ApplyResources(this.tab_arbeitzeit, "tab_arbeitzeit");
             this.tab_arbeitzeit.Name = "tab_arbeitzeit";
             this.helpProvider1.SetShowHelp(this.tab_arbeitzeit, ((bool)(resources.GetObject("tab_arbeitzeit.ShowHelp"))));
-            // 
-            // arbPlatzAusfueren
-            // 
-            this.arbPlatzAusfueren.Cursor = System.Windows.Forms.Cursors.Hand;
-            resources.ApplyResources(this.arbPlatzAusfueren, "arbPlatzAusfueren");
-            this.arbPlatzAusfueren.Name = "arbPlatzAusfueren";
-            this.helpProvider1.SetShowHelp(this.arbPlatzAusfueren, ((bool)(resources.GetObject("arbPlatzAusfueren.ShowHelp"))));
-            this.arbPlatzAusfueren.TabStop = false;
-            this.arbPlatzAusfueren.Click += new System.EventHandler(this.arbPlatzAusfueren_Click);
             // 
             // dataGridViewAPlatz
             // 
@@ -6060,111 +6050,13 @@
             this.dataGridViewTextBoxColumn16,
             this.dataGridViewTextBoxColumn17,
             this.dataGridViewTextBoxColumn18,
-            this.b1,
             this.dataGridViewTextBoxColumn19,
-            this.b2,
             this.dataGridViewTextBoxColumn20,
-            this.b3,
-            this.dataGridViewTextBoxColumn21,
-            this.b4});
+            this.dataGridViewTextBoxColumn21});
             resources.ApplyResources(this.dataGridViewKTeil, "dataGridViewKTeil");
             this.dataGridViewKTeil.Name = "dataGridViewKTeil";
             this.helpProvider1.SetShowHelp(this.dataGridViewKTeil, ((bool)(resources.GetObject("dataGridViewKTeil.ShowHelp"))));
             this.dataGridViewKTeil.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewKTeil_CellContentClick_1);
-            // 
-            // dataGridViewLinkColumn1
-            // 
-            resources.ApplyResources(this.dataGridViewLinkColumn1, "dataGridViewLinkColumn1");
-            this.dataGridViewLinkColumn1.Name = "dataGridViewLinkColumn1";
-            this.dataGridViewLinkColumn1.ReadOnly = true;
-            this.dataGridViewLinkColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewLinkColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            // 
-            // dataGridViewTextBoxColumn6
-            // 
-            resources.ApplyResources(this.dataGridViewTextBoxColumn6, "dataGridViewTextBoxColumn6");
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            this.dataGridViewTextBoxColumn6.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn11
-            // 
-            resources.ApplyResources(this.dataGridViewTextBoxColumn11, "dataGridViewTextBoxColumn11");
-            this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
-            this.dataGridViewTextBoxColumn11.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn13
-            // 
-            resources.ApplyResources(this.dataGridViewTextBoxColumn13, "dataGridViewTextBoxColumn13");
-            this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
-            this.dataGridViewTextBoxColumn13.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn14
-            // 
-            resources.ApplyResources(this.dataGridViewTextBoxColumn14, "dataGridViewTextBoxColumn14");
-            this.dataGridViewTextBoxColumn14.Name = "dataGridViewTextBoxColumn14";
-            this.dataGridViewTextBoxColumn14.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn15
-            // 
-            resources.ApplyResources(this.dataGridViewTextBoxColumn15, "dataGridViewTextBoxColumn15");
-            this.dataGridViewTextBoxColumn15.Name = "dataGridViewTextBoxColumn15";
-            this.dataGridViewTextBoxColumn15.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn16
-            // 
-            resources.ApplyResources(this.dataGridViewTextBoxColumn16, "dataGridViewTextBoxColumn16");
-            this.dataGridViewTextBoxColumn16.Name = "dataGridViewTextBoxColumn16";
-            this.dataGridViewTextBoxColumn16.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn17
-            // 
-            resources.ApplyResources(this.dataGridViewTextBoxColumn17, "dataGridViewTextBoxColumn17");
-            this.dataGridViewTextBoxColumn17.Name = "dataGridViewTextBoxColumn17";
-            this.dataGridViewTextBoxColumn17.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn18
-            // 
-            resources.ApplyResources(this.dataGridViewTextBoxColumn18, "dataGridViewTextBoxColumn18");
-            this.dataGridViewTextBoxColumn18.Name = "dataGridViewTextBoxColumn18";
-            // 
-            // b1
-            // 
-            resources.ApplyResources(this.b1, "b1");
-            this.b1.Name = "b1";
-            this.b1.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn19
-            // 
-            resources.ApplyResources(this.dataGridViewTextBoxColumn19, "dataGridViewTextBoxColumn19");
-            this.dataGridViewTextBoxColumn19.Name = "dataGridViewTextBoxColumn19";
-            // 
-            // b2
-            // 
-            resources.ApplyResources(this.b2, "b2");
-            this.b2.Name = "b2";
-            this.b2.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn20
-            // 
-            resources.ApplyResources(this.dataGridViewTextBoxColumn20, "dataGridViewTextBoxColumn20");
-            this.dataGridViewTextBoxColumn20.Name = "dataGridViewTextBoxColumn20";
-            // 
-            // b3
-            // 
-            resources.ApplyResources(this.b3, "b3");
-            this.b3.Name = "b3";
-            this.b3.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn21
-            // 
-            resources.ApplyResources(this.dataGridViewTextBoxColumn21, "dataGridViewTextBoxColumn21");
-            this.dataGridViewTextBoxColumn21.Name = "dataGridViewTextBoxColumn21";
-            // 
-            // b4
-            // 
-            resources.ApplyResources(this.b4, "b4");
-            this.b4.Name = "b4";
-            this.b4.ReadOnly = true;
             // 
             // tab_bestellung
             // 
@@ -6191,6 +6083,7 @@
             this.helpProvider1.SetShowHelp(this.uebernehmenXML, ((bool)(resources.GetObject("uebernehmenXML.ShowHelp"))));
             this.uebernehmenXML.TabStop = false;
             this.toolTip.SetToolTip(this.uebernehmenXML, resources.GetString("uebernehmenXML.ToolTip"));
+            this.uebernehmenXML.Click += new System.EventHandler(this.uebernehmenXML_Click);
             // 
             // zurueck
             // 
@@ -6591,6 +6484,85 @@
             this.label270.Name = "label270";
             this.helpProvider1.SetShowHelp(this.label270, ((bool)(resources.GetObject("label270.ShowHelp"))));
             // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Cursor = System.Windows.Forms.Cursors.Hand;
+            resources.ApplyResources(this.pictureBox3, "pictureBox3");
+            this.pictureBox3.Name = "pictureBox3";
+            this.helpProvider1.SetShowHelp(this.pictureBox3, ((bool)(resources.GetObject("pictureBox3.ShowHelp"))));
+            this.pictureBox3.TabStop = false;
+            this.toolTip.SetToolTip(this.pictureBox3, resources.GetString("pictureBox3.ToolTip"));
+            // 
+            // dataGridViewLinkColumn1
+            // 
+            resources.ApplyResources(this.dataGridViewLinkColumn1, "dataGridViewLinkColumn1");
+            this.dataGridViewLinkColumn1.Name = "dataGridViewLinkColumn1";
+            this.dataGridViewLinkColumn1.ReadOnly = true;
+            this.dataGridViewLinkColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewLinkColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            resources.ApplyResources(this.dataGridViewTextBoxColumn6, "dataGridViewTextBoxColumn6");
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            this.dataGridViewTextBoxColumn6.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn11
+            // 
+            resources.ApplyResources(this.dataGridViewTextBoxColumn11, "dataGridViewTextBoxColumn11");
+            this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
+            this.dataGridViewTextBoxColumn11.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn13
+            // 
+            resources.ApplyResources(this.dataGridViewTextBoxColumn13, "dataGridViewTextBoxColumn13");
+            this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
+            this.dataGridViewTextBoxColumn13.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn14
+            // 
+            resources.ApplyResources(this.dataGridViewTextBoxColumn14, "dataGridViewTextBoxColumn14");
+            this.dataGridViewTextBoxColumn14.Name = "dataGridViewTextBoxColumn14";
+            this.dataGridViewTextBoxColumn14.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn15
+            // 
+            resources.ApplyResources(this.dataGridViewTextBoxColumn15, "dataGridViewTextBoxColumn15");
+            this.dataGridViewTextBoxColumn15.Name = "dataGridViewTextBoxColumn15";
+            this.dataGridViewTextBoxColumn15.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn16
+            // 
+            resources.ApplyResources(this.dataGridViewTextBoxColumn16, "dataGridViewTextBoxColumn16");
+            this.dataGridViewTextBoxColumn16.Name = "dataGridViewTextBoxColumn16";
+            this.dataGridViewTextBoxColumn16.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn17
+            // 
+            resources.ApplyResources(this.dataGridViewTextBoxColumn17, "dataGridViewTextBoxColumn17");
+            this.dataGridViewTextBoxColumn17.Name = "dataGridViewTextBoxColumn17";
+            this.dataGridViewTextBoxColumn17.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn18
+            // 
+            resources.ApplyResources(this.dataGridViewTextBoxColumn18, "dataGridViewTextBoxColumn18");
+            this.dataGridViewTextBoxColumn18.Name = "dataGridViewTextBoxColumn18";
+            // 
+            // dataGridViewTextBoxColumn19
+            // 
+            resources.ApplyResources(this.dataGridViewTextBoxColumn19, "dataGridViewTextBoxColumn19");
+            this.dataGridViewTextBoxColumn19.Name = "dataGridViewTextBoxColumn19";
+            // 
+            // dataGridViewTextBoxColumn20
+            // 
+            resources.ApplyResources(this.dataGridViewTextBoxColumn20, "dataGridViewTextBoxColumn20");
+            this.dataGridViewTextBoxColumn20.Name = "dataGridViewTextBoxColumn20";
+            // 
+            // dataGridViewTextBoxColumn21
+            // 
+            resources.ApplyResources(this.dataGridViewTextBoxColumn21, "dataGridViewTextBoxColumn21");
+            this.dataGridViewTextBoxColumn21.Name = "dataGridViewTextBoxColumn21";
+            // 
             // Fahrrad
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -6646,7 +6618,6 @@
             this.tab_eTeil.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewETeil)).EndInit();
             this.tab_arbeitzeit.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.arbPlatzAusfueren)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAPlatz)).EndInit();
             this.tab_bestellverwaltung.ResumeLayout(false);
             this.tab2.ResumeLayout(false);
@@ -6668,6 +6639,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewEinkauf)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDirekt)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewVertrieb)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -7285,23 +7257,6 @@
         private System.Windows.Forms.DataGridViewCheckBoxColumn s1;
         private System.Windows.Forms.DataGridViewCheckBoxColumn s3;
         private System.Windows.Forms.DataGridViewImageColumn ueber;
-        private System.Windows.Forms.DataGridViewLinkColumn dataGridViewLinkColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn13;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn14;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn15;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn16;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn17;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn18;
-        private System.Windows.Forms.DataGridViewImageColumn b1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn19;
-        private System.Windows.Forms.DataGridViewImageColumn b2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn20;
-        private System.Windows.Forms.DataGridViewImageColumn b3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn21;
-        private System.Windows.Forms.DataGridViewImageColumn b4;
-        private System.Windows.Forms.PictureBox arbPlatzAusfueren;
         private System.Windows.Forms.DataGridView dataGridViewBestellung;
         private System.Windows.Forms.PictureBox saveAenderungen;
         private System.Windows.Forms.DataGridViewTextBoxColumn kNr;
@@ -7337,6 +7292,19 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dg_p2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dg_p3;
         private System.Windows.Forms.Label label270;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.DataGridViewLinkColumn dataGridViewLinkColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn13;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn14;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn15;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn16;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn17;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn18;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn19;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn20;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn21;
     }
 }
 
