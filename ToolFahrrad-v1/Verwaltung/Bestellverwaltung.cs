@@ -176,6 +176,7 @@ namespace ToolFahrrad_v1
                     }
                 }
             }
+            optimiereBvPositionen();
         }
         private int berechneMenge(double verwDiskont, int bestellMenge, int diskont)
         {
@@ -207,6 +208,31 @@ namespace ToolFahrrad_v1
             }
             // Return output
             return outputMenge;
+        }
+        private void optimiereBvPositionen()
+        {
+            // When found several "eil" orders for the same KTeil, delete orders and create only one with sum amount
+            foreach (KTeil kt in dc.ListeKTeile)
+            {
+                List<Bestellposition> eilPositionen = new List<Bestellposition>();
+                foreach (Bestellposition bp in bvPositionen)
+                {
+                    if (bp.Kaufteil.Nummer == kt.Nummer && bp.Eil == true)
+                    {
+                        eilPositionen.Add(bp);
+                    }
+                }
+                if (eilPositionen.Count() > 1)
+                {
+                    int bestellMenge = 0;
+                    foreach (Bestellposition bp2 in eilPositionen)
+                    {
+                        bestellMenge += bp2.Menge;
+                        bvPositionen.Remove(bp2);
+                    }
+                    bvPositionen.Add(new Bestellposition(kt, bestellMenge, true));
+                }
+            }
         }
     }
 }
