@@ -48,6 +48,7 @@ namespace ToolFahrrad_v1
             this.bestellungUpdate = false;
         }
         private void ausführen() {
+            bv.clearBvPositionen();
             if ((instance.GetTeil(4) as ETeil).Puffer != -1) {
                 foreach (Teil t in instance.ListeETeile) {
                     t.Aufgeloest = false;
@@ -75,6 +76,7 @@ namespace ToolFahrrad_v1
         }
 
         private void DispositionDarstellung(int index) {
+            bv.clearBvPositionen();
             ETeil et;
             int n;
             if (index == 1) {
@@ -1076,6 +1078,7 @@ namespace ToolFahrrad_v1
         }
 
         private void arbPlatzAusfueren_Click(object sender, EventArgs e) {
+            bv.clearBvPositionen();
             for (int index = 0; index < dataGridViewAPlatz.Rows.Count; ++index) {
                 instance.GetArbeitsplatz(Convert.ToInt32(dataGridViewAPlatz.Rows[index].Cells[0].Value.ToString())).RuestungCustom =
                     (Convert.ToInt32(dataGridViewAPlatz.Rows[index].Cells[3].Value.ToString()));
