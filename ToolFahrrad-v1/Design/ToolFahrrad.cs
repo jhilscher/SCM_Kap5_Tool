@@ -20,6 +20,7 @@ namespace ToolFahrrad_v1
         Produktionsplanung pp = new Produktionsplanung();
         Bestellverwaltung bv = new Bestellverwaltung();
         List<Bestellposition> bp;
+        List<int[]> xmlAP;
         private bool bestellungUpdate = false;
         private bool okPrognose = false;
         private bool okXml = false;
@@ -782,9 +783,12 @@ namespace ToolFahrrad_v1
             #region Arbetsplatz
             this.DataGriedViewRemove(dataGridViewAPlatz);
             index = 0;
+            xmlAP = new List<int[]>();        
             foreach (var a in instance.ArbeitsplatzList) {
+                int[] apXML = new int[3];
                 dataGridViewAPlatz.Rows.Add();
                 dataGridViewAPlatz.Rows[index].Cells[0].Value = a.GetNummerArbeitsplatz;
+                apXML[0] = a.GetNummerArbeitsplatz;
                 dataGridViewAPlatz.Rows[index].Cells[1].Value = a.Leerzeit + " (" + a.RuestungVorPeriode + ") ";
                 int prMenge = 0;
                 int val = 0;
@@ -836,20 +840,31 @@ namespace ToolFahrrad_v1
                 int gesammt = a.RuestungCustom + sum;
                 dataGridViewAPlatz.Rows[index].Cells[4].Value = gesammt + " min";
                 dataGridViewAPlatz.Rows[index].Cells[8].Value = imageList1.Images[2];
-                if (gesammt <= a.zeit) // newTeim <= 2400 
+                if (gesammt <= a.zeit) { // newTeim <= 2400 
                     dataGridViewAPlatz.Rows[index].Cells[5].Value = imageList1.Images[2];
+                    apXML[1] = 1;
+                    apXML[2] = 0;
+                }
                 else if (gesammt > instance.ErsteSchicht) // gesammt > 3600
                 {
-                    if (gesammt > 7200)
-                        dataGridViewAPlatz.Rows[index].Cells[8].Value = imageList1.Images[0];
-                    else if (gesammt > instance.ZweiteSchicht && gesammt < 7200)
-                        dataGridViewAPlatz.Rows[index].Cells[8].Value = imageList1.Images[1];
-                    else
-                        dataGridViewAPlatz.Rows[index].Cells[8].Value = imageList1.Images[2];
-
+                    if (gesammt > instance.ZweiteSchicht) {
+                        if (gesammt > 7200)
+                            dataGridViewAPlatz.Rows[index].Cells[8].Value = imageList1.Images[0];
+                        else if (gesammt < 7200)
+                            dataGridViewAPlatz.Rows[index].Cells[8].Value = imageList1.Images[1];
+                        else
+                            dataGridViewAPlatz.Rows[index].Cells[8].Value = imageList1.Images[2];
+                        apXML[1] = 3;
+                        if(gesammt < 7200)
+                            apXML[2] = gesammt - instance.ZweiteSchicht;
+                        else
+                            apXML[2] = 7200 - instance.ZweiteSchicht;
+                    }
                     if (gesammt < instance.ZweiteSchicht) {
                         dataGridViewAPlatz.Rows[index].Cells[5].Value = imageList1.Images[0];
                         dataGridViewAPlatz.Rows[index].Cells[6].Value = true;
+                        apXML[1] = 2;
+                        apXML[2] = gesammt - instance.ErsteSchicht;
                     }
                     else if (gesammt > instance.ZweiteSchicht) {
                         dataGridViewAPlatz.Rows[index].Cells[5].Value = imageList1.Images[0];
@@ -858,10 +873,14 @@ namespace ToolFahrrad_v1
                 }
                 else if (gesammt > a.zeit && gesammt <= instance.ErsteSchicht) { // 2400 < newTime < 3600 Überstunden
                     dataGridViewAPlatz.Rows[index].Cells[5].Value = imageList1.Images[1];
+                    apXML[1] = 1;
+                    apXML[2] = gesammt - a.zeit;
                 }
                 else {
                     dataGridViewAPlatz.Rows[index].Cells[5].Value = imageList1.Images[2];
                 }
+
+                xmlAP.Add(apXML);
                 //Farbe
                 for (int i = 0; i < 9; ++i) {
                     if (i < 2)
@@ -926,6 +945,18 @@ namespace ToolFahrrad_v1
                         dataGridViewEinkauf.Rows[index].Cells[2].Value = "N";
                     ++index;
                 }
+            }
+            if (p == 100 || p == 5) {
+                index = 0;
+                this.DataGriedViewRemove(dataGridViewProduktKapazit);
+                foreach (int[] i in xmlAP) {
+                    dataGridViewProduktKapazit.Rows.Add();
+                    dataGridViewProduktKapazit.Rows[index].Cells[0].Value = i[0];
+                    dataGridViewProduktKapazit.Rows[index].Cells[1].Value = i[1];
+                    dataGridViewProduktKapazit.Rows[index].Cells[2].Value = i[2] / 5;
+                    ++index;
+                }
+
             }
         }
 
