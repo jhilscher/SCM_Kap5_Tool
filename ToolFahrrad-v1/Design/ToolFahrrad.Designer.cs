@@ -606,6 +606,7 @@
             this.colBearbeitung = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colPlanung = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tab_arbeitzeit = new System.Windows.Forms.TabPage();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.dataGridViewAPlatz = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewLinkColumn();
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -620,6 +621,18 @@
             this.tab2 = new System.Windows.Forms.TabControl();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.dataGridViewKTeil = new System.Windows.Forms.DataGridView();
+            this.dataGridViewLinkColumn1 = new System.Windows.Forms.DataGridViewLinkColumn();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn18 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn19 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn20 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn21 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tab_bestellung = new System.Windows.Forms.TabPage();
             this.label3 = new System.Windows.Forms.Label();
             this.uebernehmenXML = new System.Windows.Forms.PictureBox();
@@ -631,25 +644,6 @@
             this.eil = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.del = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.xmlOutput = new System.Windows.Forms.TabPage();
-            this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
-            this.menu = new System.Windows.Forms.MenuStrip();
-            this.dateiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.dateiÖffnenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.xMLexportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.schließenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.einstellungenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.hilfeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.handbuchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.spracheToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.deutschToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.englischToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.gewichtungToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.scimToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.startSeiteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolTip = new System.Windows.Forms.ToolTip(this.components);
-            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
-            this.helpProvider1 = new System.Windows.Forms.HelpProvider();
             this.panelXMLerstellen = new System.Windows.Forms.Panel();
             this.dataGridViewProduktKapazit = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn29 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -675,19 +669,26 @@
             this.dg_p2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dg_p3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label270 = new System.Windows.Forms.Label();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.dataGridViewLinkColumn1 = new System.Windows.Forms.DataGridViewLinkColumn();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn18 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn19 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn20 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn21 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
+            this.menu = new System.Windows.Forms.MenuStrip();
+            this.dateiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.dateiÖffnenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.xMLexportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.schließenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.einstellungenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.hilfeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.handbuchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.spracheToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.deutschToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.englischToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.gewichtungToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.scimToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.startSeiteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolTip = new System.Windows.Forms.ToolTip(this.components);
+            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
+            this.helpProvider1 = new System.Windows.Forms.HelpProvider();
+            this.addNr = new System.Windows.Forms.PictureBox();
             this.tabs.SuspendLayout();
             this.tab_xml.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pufferP3)).BeginInit();
@@ -726,6 +727,7 @@
             this.tab_eTeil.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewETeil)).BeginInit();
             this.tab_arbeitzeit.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAPlatz)).BeginInit();
             this.tab_bestellverwaltung.SuspendLayout();
             this.tab2.SuspendLayout();
@@ -737,14 +739,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.saveAenderungen)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewBestellung)).BeginInit();
             this.xmlOutput.SuspendLayout();
-            this.menu.SuspendLayout();
             this.panelXMLerstellen.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewProduktKapazit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewProduktAuftrag)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewEinkauf)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDirekt)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewVertrieb)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            this.menu.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.addNr)).BeginInit();
             this.SuspendLayout();
             // 
             // tabs
@@ -5923,6 +5925,15 @@
             this.tab_arbeitzeit.Name = "tab_arbeitzeit";
             this.helpProvider1.SetShowHelp(this.tab_arbeitzeit, ((bool)(resources.GetObject("tab_arbeitzeit.ShowHelp"))));
             // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Cursor = System.Windows.Forms.Cursors.Hand;
+            resources.ApplyResources(this.pictureBox3, "pictureBox3");
+            this.pictureBox3.Name = "pictureBox3";
+            this.helpProvider1.SetShowHelp(this.pictureBox3, ((bool)(resources.GetObject("pictureBox3.ShowHelp"))));
+            this.pictureBox3.TabStop = false;
+            this.toolTip.SetToolTip(this.pictureBox3, resources.GetString("pictureBox3.ToolTip"));
+            // 
             // dataGridViewAPlatz
             // 
             this.dataGridViewAPlatz.AllowUserToAddRows = false;
@@ -6058,9 +6069,80 @@
             this.helpProvider1.SetShowHelp(this.dataGridViewKTeil, ((bool)(resources.GetObject("dataGridViewKTeil.ShowHelp"))));
             this.dataGridViewKTeil.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewKTeil_CellContentClick_1);
             // 
+            // dataGridViewLinkColumn1
+            // 
+            resources.ApplyResources(this.dataGridViewLinkColumn1, "dataGridViewLinkColumn1");
+            this.dataGridViewLinkColumn1.Name = "dataGridViewLinkColumn1";
+            this.dataGridViewLinkColumn1.ReadOnly = true;
+            this.dataGridViewLinkColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewLinkColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            resources.ApplyResources(this.dataGridViewTextBoxColumn6, "dataGridViewTextBoxColumn6");
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            this.dataGridViewTextBoxColumn6.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn11
+            // 
+            resources.ApplyResources(this.dataGridViewTextBoxColumn11, "dataGridViewTextBoxColumn11");
+            this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
+            this.dataGridViewTextBoxColumn11.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn13
+            // 
+            resources.ApplyResources(this.dataGridViewTextBoxColumn13, "dataGridViewTextBoxColumn13");
+            this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
+            this.dataGridViewTextBoxColumn13.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn14
+            // 
+            resources.ApplyResources(this.dataGridViewTextBoxColumn14, "dataGridViewTextBoxColumn14");
+            this.dataGridViewTextBoxColumn14.Name = "dataGridViewTextBoxColumn14";
+            this.dataGridViewTextBoxColumn14.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn15
+            // 
+            resources.ApplyResources(this.dataGridViewTextBoxColumn15, "dataGridViewTextBoxColumn15");
+            this.dataGridViewTextBoxColumn15.Name = "dataGridViewTextBoxColumn15";
+            this.dataGridViewTextBoxColumn15.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn16
+            // 
+            resources.ApplyResources(this.dataGridViewTextBoxColumn16, "dataGridViewTextBoxColumn16");
+            this.dataGridViewTextBoxColumn16.Name = "dataGridViewTextBoxColumn16";
+            this.dataGridViewTextBoxColumn16.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn17
+            // 
+            resources.ApplyResources(this.dataGridViewTextBoxColumn17, "dataGridViewTextBoxColumn17");
+            this.dataGridViewTextBoxColumn17.Name = "dataGridViewTextBoxColumn17";
+            this.dataGridViewTextBoxColumn17.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn18
+            // 
+            resources.ApplyResources(this.dataGridViewTextBoxColumn18, "dataGridViewTextBoxColumn18");
+            this.dataGridViewTextBoxColumn18.Name = "dataGridViewTextBoxColumn18";
+            // 
+            // dataGridViewTextBoxColumn19
+            // 
+            resources.ApplyResources(this.dataGridViewTextBoxColumn19, "dataGridViewTextBoxColumn19");
+            this.dataGridViewTextBoxColumn19.Name = "dataGridViewTextBoxColumn19";
+            // 
+            // dataGridViewTextBoxColumn20
+            // 
+            resources.ApplyResources(this.dataGridViewTextBoxColumn20, "dataGridViewTextBoxColumn20");
+            this.dataGridViewTextBoxColumn20.Name = "dataGridViewTextBoxColumn20";
+            // 
+            // dataGridViewTextBoxColumn21
+            // 
+            resources.ApplyResources(this.dataGridViewTextBoxColumn21, "dataGridViewTextBoxColumn21");
+            this.dataGridViewTextBoxColumn21.Name = "dataGridViewTextBoxColumn21";
+            // 
             // tab_bestellung
             // 
             this.tab_bestellung.BackColor = System.Drawing.Color.Transparent;
+            this.tab_bestellung.Controls.Add(this.addNr);
             this.tab_bestellung.Controls.Add(this.label3);
             this.tab_bestellung.Controls.Add(this.uebernehmenXML);
             this.tab_bestellung.Controls.Add(this.zurueck);
@@ -6153,128 +6235,6 @@
             this.xmlOutput.Controls.Add(this.panelXMLerstellen);
             resources.ApplyResources(this.xmlOutput, "xmlOutput");
             this.xmlOutput.Name = "xmlOutput";
-            // 
-            // openFileDialog
-            // 
-            this.openFileDialog.FileName = "openFileDialog";
-            // 
-            // menu
-            // 
-            this.menu.BackColor = System.Drawing.Color.Transparent;
-            this.menu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.dateiToolStripMenuItem,
-            this.einstellungenToolStripMenuItem,
-            this.scimToolStripMenuItem});
-            resources.ApplyResources(this.menu, "menu");
-            this.menu.Name = "menu";
-            this.helpProvider1.SetShowHelp(this.menu, ((bool)(resources.GetObject("menu.ShowHelp"))));
-            // 
-            // dateiToolStripMenuItem
-            // 
-            this.dateiToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.dateiÖffnenToolStripMenuItem,
-            this.xMLexportToolStripMenuItem,
-            this.toolStripSeparator1,
-            this.schließenToolStripMenuItem});
-            this.dateiToolStripMenuItem.Name = "dateiToolStripMenuItem";
-            resources.ApplyResources(this.dateiToolStripMenuItem, "dateiToolStripMenuItem");
-            // 
-            // dateiÖffnenToolStripMenuItem
-            // 
-            resources.ApplyResources(this.dateiÖffnenToolStripMenuItem, "dateiÖffnenToolStripMenuItem");
-            this.dateiÖffnenToolStripMenuItem.Name = "dateiÖffnenToolStripMenuItem";
-            this.dateiÖffnenToolStripMenuItem.Click += new System.EventHandler(this.dateiÖffnenToolStripMenuItem_Click);
-            // 
-            // xMLexportToolStripMenuItem
-            // 
-            resources.ApplyResources(this.xMLexportToolStripMenuItem, "xMLexportToolStripMenuItem");
-            this.xMLexportToolStripMenuItem.Name = "xMLexportToolStripMenuItem";
-            // 
-            // toolStripSeparator1
-            // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            resources.ApplyResources(this.toolStripSeparator1, "toolStripSeparator1");
-            // 
-            // schließenToolStripMenuItem
-            // 
-            resources.ApplyResources(this.schließenToolStripMenuItem, "schließenToolStripMenuItem");
-            this.schließenToolStripMenuItem.Name = "schließenToolStripMenuItem";
-            this.schließenToolStripMenuItem.Click += new System.EventHandler(this.schließenToolStripMenuItem_Click_1);
-            // 
-            // einstellungenToolStripMenuItem
-            // 
-            this.einstellungenToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.hilfeToolStripMenuItem,
-            this.spracheToolStripMenuItem1,
-            this.gewichtungToolStripMenuItem});
-            this.einstellungenToolStripMenuItem.Name = "einstellungenToolStripMenuItem";
-            resources.ApplyResources(this.einstellungenToolStripMenuItem, "einstellungenToolStripMenuItem");
-            // 
-            // hilfeToolStripMenuItem
-            // 
-            this.hilfeToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.handbuchToolStripMenuItem});
-            resources.ApplyResources(this.hilfeToolStripMenuItem, "hilfeToolStripMenuItem");
-            this.hilfeToolStripMenuItem.Name = "hilfeToolStripMenuItem";
-            // 
-            // handbuchToolStripMenuItem
-            // 
-            this.handbuchToolStripMenuItem.Name = "handbuchToolStripMenuItem";
-            resources.ApplyResources(this.handbuchToolStripMenuItem, "handbuchToolStripMenuItem");
-            this.handbuchToolStripMenuItem.Click += new System.EventHandler(this.handbuchToolStripMenuItem_Click);
-            // 
-            // spracheToolStripMenuItem1
-            // 
-            this.spracheToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.deutschToolStripMenuItem1,
-            this.englischToolStripMenuItem1});
-            this.spracheToolStripMenuItem1.Name = "spracheToolStripMenuItem1";
-            resources.ApplyResources(this.spracheToolStripMenuItem1, "spracheToolStripMenuItem1");
-            // 
-            // deutschToolStripMenuItem1
-            // 
-            this.deutschToolStripMenuItem1.Checked = true;
-            this.deutschToolStripMenuItem1.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.deutschToolStripMenuItem1.Name = "deutschToolStripMenuItem1";
-            resources.ApplyResources(this.deutschToolStripMenuItem1, "deutschToolStripMenuItem1");
-            this.deutschToolStripMenuItem1.Click += new System.EventHandler(this.deutschToolStripMenuItem1_Click);
-            // 
-            // englischToolStripMenuItem1
-            // 
-            this.englischToolStripMenuItem1.Name = "englischToolStripMenuItem1";
-            resources.ApplyResources(this.englischToolStripMenuItem1, "englischToolStripMenuItem1");
-            this.englischToolStripMenuItem1.Click += new System.EventHandler(this.englischToolStripMenuItem1_Click);
-            // 
-            // gewichtungToolStripMenuItem
-            // 
-            resources.ApplyResources(this.gewichtungToolStripMenuItem, "gewichtungToolStripMenuItem");
-            this.gewichtungToolStripMenuItem.Name = "gewichtungToolStripMenuItem";
-            this.gewichtungToolStripMenuItem.Click += new System.EventHandler(this.gewichtungToolStripMenuItem_Click);
-            // 
-            // scimToolStripMenuItem
-            // 
-            this.scimToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.startSeiteToolStripMenuItem});
-            this.scimToolStripMenuItem.Name = "scimToolStripMenuItem";
-            resources.ApplyResources(this.scimToolStripMenuItem, "scimToolStripMenuItem");
-            // 
-            // startSeiteToolStripMenuItem
-            // 
-            this.startSeiteToolStripMenuItem.Name = "startSeiteToolStripMenuItem";
-            resources.ApplyResources(this.startSeiteToolStripMenuItem, "startSeiteToolStripMenuItem");
-            this.startSeiteToolStripMenuItem.Click += new System.EventHandler(this.startSeiteToolStripMenuItem_Click);
-            // 
-            // imageList1
-            // 
-            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
-            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
-            this.imageList1.Images.SetKeyName(0, "red");
-            this.imageList1.Images.SetKeyName(1, "yellow");
-            this.imageList1.Images.SetKeyName(2, "green");
-            // 
-            // helpProvider1
-            // 
-            resources.ApplyResources(this.helpProvider1, "helpProvider1");
             // 
             // panelXMLerstellen
             // 
@@ -6484,84 +6444,137 @@
             this.label270.Name = "label270";
             this.helpProvider1.SetShowHelp(this.label270, ((bool)(resources.GetObject("label270.ShowHelp"))));
             // 
-            // pictureBox3
+            // openFileDialog
             // 
-            this.pictureBox3.Cursor = System.Windows.Forms.Cursors.Hand;
-            resources.ApplyResources(this.pictureBox3, "pictureBox3");
-            this.pictureBox3.Name = "pictureBox3";
-            this.helpProvider1.SetShowHelp(this.pictureBox3, ((bool)(resources.GetObject("pictureBox3.ShowHelp"))));
-            this.pictureBox3.TabStop = false;
-            this.toolTip.SetToolTip(this.pictureBox3, resources.GetString("pictureBox3.ToolTip"));
+            this.openFileDialog.FileName = "openFileDialog";
             // 
-            // dataGridViewLinkColumn1
+            // menu
             // 
-            resources.ApplyResources(this.dataGridViewLinkColumn1, "dataGridViewLinkColumn1");
-            this.dataGridViewLinkColumn1.Name = "dataGridViewLinkColumn1";
-            this.dataGridViewLinkColumn1.ReadOnly = true;
-            this.dataGridViewLinkColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewLinkColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.menu.BackColor = System.Drawing.Color.Transparent;
+            this.menu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.dateiToolStripMenuItem,
+            this.einstellungenToolStripMenuItem,
+            this.scimToolStripMenuItem});
+            resources.ApplyResources(this.menu, "menu");
+            this.menu.Name = "menu";
+            this.helpProvider1.SetShowHelp(this.menu, ((bool)(resources.GetObject("menu.ShowHelp"))));
             // 
-            // dataGridViewTextBoxColumn6
+            // dateiToolStripMenuItem
             // 
-            resources.ApplyResources(this.dataGridViewTextBoxColumn6, "dataGridViewTextBoxColumn6");
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            this.dataGridViewTextBoxColumn6.ReadOnly = true;
+            this.dateiToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.dateiÖffnenToolStripMenuItem,
+            this.xMLexportToolStripMenuItem,
+            this.toolStripSeparator1,
+            this.schließenToolStripMenuItem});
+            this.dateiToolStripMenuItem.Name = "dateiToolStripMenuItem";
+            resources.ApplyResources(this.dateiToolStripMenuItem, "dateiToolStripMenuItem");
             // 
-            // dataGridViewTextBoxColumn11
+            // dateiÖffnenToolStripMenuItem
             // 
-            resources.ApplyResources(this.dataGridViewTextBoxColumn11, "dataGridViewTextBoxColumn11");
-            this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
-            this.dataGridViewTextBoxColumn11.ReadOnly = true;
+            resources.ApplyResources(this.dateiÖffnenToolStripMenuItem, "dateiÖffnenToolStripMenuItem");
+            this.dateiÖffnenToolStripMenuItem.Name = "dateiÖffnenToolStripMenuItem";
+            this.dateiÖffnenToolStripMenuItem.Click += new System.EventHandler(this.dateiÖffnenToolStripMenuItem_Click);
             // 
-            // dataGridViewTextBoxColumn13
+            // xMLexportToolStripMenuItem
             // 
-            resources.ApplyResources(this.dataGridViewTextBoxColumn13, "dataGridViewTextBoxColumn13");
-            this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
-            this.dataGridViewTextBoxColumn13.ReadOnly = true;
+            resources.ApplyResources(this.xMLexportToolStripMenuItem, "xMLexportToolStripMenuItem");
+            this.xMLexportToolStripMenuItem.Name = "xMLexportToolStripMenuItem";
             // 
-            // dataGridViewTextBoxColumn14
+            // toolStripSeparator1
             // 
-            resources.ApplyResources(this.dataGridViewTextBoxColumn14, "dataGridViewTextBoxColumn14");
-            this.dataGridViewTextBoxColumn14.Name = "dataGridViewTextBoxColumn14";
-            this.dataGridViewTextBoxColumn14.ReadOnly = true;
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            resources.ApplyResources(this.toolStripSeparator1, "toolStripSeparator1");
             // 
-            // dataGridViewTextBoxColumn15
+            // schließenToolStripMenuItem
             // 
-            resources.ApplyResources(this.dataGridViewTextBoxColumn15, "dataGridViewTextBoxColumn15");
-            this.dataGridViewTextBoxColumn15.Name = "dataGridViewTextBoxColumn15";
-            this.dataGridViewTextBoxColumn15.ReadOnly = true;
+            resources.ApplyResources(this.schließenToolStripMenuItem, "schließenToolStripMenuItem");
+            this.schließenToolStripMenuItem.Name = "schließenToolStripMenuItem";
+            this.schließenToolStripMenuItem.Click += new System.EventHandler(this.schließenToolStripMenuItem_Click_1);
             // 
-            // dataGridViewTextBoxColumn16
+            // einstellungenToolStripMenuItem
             // 
-            resources.ApplyResources(this.dataGridViewTextBoxColumn16, "dataGridViewTextBoxColumn16");
-            this.dataGridViewTextBoxColumn16.Name = "dataGridViewTextBoxColumn16";
-            this.dataGridViewTextBoxColumn16.ReadOnly = true;
+            this.einstellungenToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.hilfeToolStripMenuItem,
+            this.spracheToolStripMenuItem1,
+            this.gewichtungToolStripMenuItem});
+            this.einstellungenToolStripMenuItem.Name = "einstellungenToolStripMenuItem";
+            resources.ApplyResources(this.einstellungenToolStripMenuItem, "einstellungenToolStripMenuItem");
             // 
-            // dataGridViewTextBoxColumn17
+            // hilfeToolStripMenuItem
             // 
-            resources.ApplyResources(this.dataGridViewTextBoxColumn17, "dataGridViewTextBoxColumn17");
-            this.dataGridViewTextBoxColumn17.Name = "dataGridViewTextBoxColumn17";
-            this.dataGridViewTextBoxColumn17.ReadOnly = true;
+            this.hilfeToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.handbuchToolStripMenuItem});
+            resources.ApplyResources(this.hilfeToolStripMenuItem, "hilfeToolStripMenuItem");
+            this.hilfeToolStripMenuItem.Name = "hilfeToolStripMenuItem";
             // 
-            // dataGridViewTextBoxColumn18
+            // handbuchToolStripMenuItem
             // 
-            resources.ApplyResources(this.dataGridViewTextBoxColumn18, "dataGridViewTextBoxColumn18");
-            this.dataGridViewTextBoxColumn18.Name = "dataGridViewTextBoxColumn18";
+            this.handbuchToolStripMenuItem.Name = "handbuchToolStripMenuItem";
+            resources.ApplyResources(this.handbuchToolStripMenuItem, "handbuchToolStripMenuItem");
+            this.handbuchToolStripMenuItem.Click += new System.EventHandler(this.handbuchToolStripMenuItem_Click);
             // 
-            // dataGridViewTextBoxColumn19
+            // spracheToolStripMenuItem1
             // 
-            resources.ApplyResources(this.dataGridViewTextBoxColumn19, "dataGridViewTextBoxColumn19");
-            this.dataGridViewTextBoxColumn19.Name = "dataGridViewTextBoxColumn19";
+            this.spracheToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.deutschToolStripMenuItem1,
+            this.englischToolStripMenuItem1});
+            this.spracheToolStripMenuItem1.Name = "spracheToolStripMenuItem1";
+            resources.ApplyResources(this.spracheToolStripMenuItem1, "spracheToolStripMenuItem1");
             // 
-            // dataGridViewTextBoxColumn20
+            // deutschToolStripMenuItem1
             // 
-            resources.ApplyResources(this.dataGridViewTextBoxColumn20, "dataGridViewTextBoxColumn20");
-            this.dataGridViewTextBoxColumn20.Name = "dataGridViewTextBoxColumn20";
+            this.deutschToolStripMenuItem1.Checked = true;
+            this.deutschToolStripMenuItem1.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.deutschToolStripMenuItem1.Name = "deutschToolStripMenuItem1";
+            resources.ApplyResources(this.deutschToolStripMenuItem1, "deutschToolStripMenuItem1");
+            this.deutschToolStripMenuItem1.Click += new System.EventHandler(this.deutschToolStripMenuItem1_Click);
             // 
-            // dataGridViewTextBoxColumn21
+            // englischToolStripMenuItem1
             // 
-            resources.ApplyResources(this.dataGridViewTextBoxColumn21, "dataGridViewTextBoxColumn21");
-            this.dataGridViewTextBoxColumn21.Name = "dataGridViewTextBoxColumn21";
+            this.englischToolStripMenuItem1.Name = "englischToolStripMenuItem1";
+            resources.ApplyResources(this.englischToolStripMenuItem1, "englischToolStripMenuItem1");
+            this.englischToolStripMenuItem1.Click += new System.EventHandler(this.englischToolStripMenuItem1_Click);
+            // 
+            // gewichtungToolStripMenuItem
+            // 
+            resources.ApplyResources(this.gewichtungToolStripMenuItem, "gewichtungToolStripMenuItem");
+            this.gewichtungToolStripMenuItem.Name = "gewichtungToolStripMenuItem";
+            this.gewichtungToolStripMenuItem.Click += new System.EventHandler(this.gewichtungToolStripMenuItem_Click);
+            // 
+            // scimToolStripMenuItem
+            // 
+            this.scimToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.startSeiteToolStripMenuItem});
+            this.scimToolStripMenuItem.Name = "scimToolStripMenuItem";
+            resources.ApplyResources(this.scimToolStripMenuItem, "scimToolStripMenuItem");
+            // 
+            // startSeiteToolStripMenuItem
+            // 
+            this.startSeiteToolStripMenuItem.Name = "startSeiteToolStripMenuItem";
+            resources.ApplyResources(this.startSeiteToolStripMenuItem, "startSeiteToolStripMenuItem");
+            this.startSeiteToolStripMenuItem.Click += new System.EventHandler(this.startSeiteToolStripMenuItem_Click);
+            // 
+            // imageList1
+            // 
+            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
+            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageList1.Images.SetKeyName(0, "red");
+            this.imageList1.Images.SetKeyName(1, "yellow");
+            this.imageList1.Images.SetKeyName(2, "green");
+            // 
+            // helpProvider1
+            // 
+            resources.ApplyResources(this.helpProvider1, "helpProvider1");
+            // 
+            // addNr
+            // 
+            this.addNr.Cursor = System.Windows.Forms.Cursors.Hand;
+            resources.ApplyResources(this.addNr, "addNr");
+            this.addNr.Name = "addNr";
+            this.helpProvider1.SetShowHelp(this.addNr, ((bool)(resources.GetObject("addNr.ShowHelp"))));
+            this.addNr.TabStop = false;
+            this.toolTip.SetToolTip(this.addNr, resources.GetString("addNr.ToolTip"));
+            this.addNr.Click += new System.EventHandler(this.addNr_Click);
             // 
             // Fahrrad
             // 
@@ -6618,6 +6631,7 @@
             this.tab_eTeil.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewETeil)).EndInit();
             this.tab_arbeitzeit.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAPlatz)).EndInit();
             this.tab_bestellverwaltung.ResumeLayout(false);
             this.tab2.ResumeLayout(false);
@@ -6630,8 +6644,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.saveAenderungen)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewBestellung)).EndInit();
             this.xmlOutput.ResumeLayout(false);
-            this.menu.ResumeLayout(false);
-            this.menu.PerformLayout();
             this.panelXMLerstellen.ResumeLayout(false);
             this.panelXMLerstellen.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewProduktKapazit)).EndInit();
@@ -6639,7 +6651,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewEinkauf)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDirekt)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewVertrieb)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            this.menu.ResumeLayout(false);
+            this.menu.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.addNr)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -7305,6 +7319,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn19;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn20;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn21;
+        private System.Windows.Forms.PictureBox addNr;
     }
 }
 

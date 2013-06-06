@@ -77,7 +77,7 @@ namespace ToolFahrrad_v1
             this.xmlVorbereitung(100); // 100=all
         }
 
-       
+
 
         private void DispositionDarstellung(int index) {
             bv.clearBvPositionen();
@@ -856,8 +856,7 @@ namespace ToolFahrrad_v1
                         dataGridViewAPlatz.Rows[index].Cells[7].Value = true;
                     }
                 }
-                else if (gesammt > a.zeit && gesammt <= instance.ErsteSchicht) // 2400 < newTime < 3600 Überstunden
-                {
+                else if (gesammt > a.zeit && gesammt <= instance.ErsteSchicht) { // 2400 < newTime < 3600 Überstunden
                     dataGridViewAPlatz.Rows[index].Cells[5].Value = imageList1.Images[1];
                 }
                 else {
@@ -877,7 +876,7 @@ namespace ToolFahrrad_v1
             //Bestellung
             #region Bestellung
             this.DataGriedViewRemove(dataGridViewBestellung);
-            if(this.bestellungUpdate == false)
+            if (this.bestellungUpdate == false)
                 bv.generiereBestellListe();
             List<Bestellposition> bp = bv.BvPositionen;
             index = 0;
@@ -909,14 +908,14 @@ namespace ToolFahrrad_v1
             if (p == 100 || p == 1) { //1 = Vertriebswunsch                
                 this.DataGriedViewRemove(dataGridViewVertrieb);
                 dataGridViewVertrieb.Rows.Add();
-                for (int i = 0; i < 3; ++i) {                    
-                    dataGridViewVertrieb.Rows[0].Cells[i].Value = instance.GetTeil(i+1).VertriebPer0;
+                for (int i = 0; i < 3; ++i) {
+                    dataGridViewVertrieb.Rows[0].Cells[i].Value = instance.GetTeil(i + 1).VertriebPer0;
                 }
             }
             if (p == 100 || p == 3) {
                 bv.ladeBvPositionenInDc();
                 index = 0;
-                this.DataGriedViewRemove(dataGridViewEinkauf);                
+                this.DataGriedViewRemove(dataGridViewEinkauf);
                 foreach (Bestellposition b in instance.Bestellungen) {
                     dataGridViewEinkauf.Rows.Add();
                     dataGridViewEinkauf.Rows[index].Cells[0].Value = b.Kaufteil.Nummer;
@@ -1093,10 +1092,14 @@ namespace ToolFahrrad_v1
         }
 
         private void pictureBox3_Click(object sender, EventArgs e) {
+            if (this.dataGridViewBestellung.AllowUserToAddRows == true) {
+                this.dataGridViewBestellung.AllowUserToAddRows = false;
+                this.kNr.ReadOnly = true;
+            }
             Bestellposition bbp;
             bp = new List<Bestellposition>();
             DataGridViewCheckBoxCell check = new DataGridViewCheckBoxCell();
-            DataGridViewCheckBoxCell check2 = new DataGridViewCheckBoxCell();  
+            DataGridViewCheckBoxCell check2 = new DataGridViewCheckBoxCell();
 
             foreach (DataGridViewRow row in dataGridViewBestellung.Rows) {
                 check = (DataGridViewCheckBoxCell)row.Cells[3];
@@ -1106,13 +1109,26 @@ namespace ToolFahrrad_v1
                     c = false;
                 else
                     c = true;
-
                 if (check.Value == null)
-                    check.Value = false;                
-                if (check.Value.ToString() != "true") {
-                    bbp = new Bestellposition(instance.GetTeil(Convert.ToInt32(row.Cells[0].Value.ToString())) as KTeil,
-                    Convert.ToInt32(row.Cells[1].Value.ToString()), c);
-                    bp.Add(bbp);
+                    check.Value = false;
+
+                KTeil teil = instance.GetTeil(Convert.ToInt32(row.Cells[0].Value.ToString())) as KTeil;
+
+                if (teil != null) {
+                    if (row.Cells[1].Value != null) {
+                        if (check.Value.ToString() != "true") {
+                            bbp = new Bestellposition(teil, Convert.ToInt32(row.Cells[1].Value.ToString()), c);
+                            bp.Add(bbp);
+                        }
+                    }
+                    else {
+                        MessageBox.Show("Kaufteil N" + row.Cells[0].Value.ToString() + " kann nicht keine Menge haben. \nDiese zeile wird ignoriert", "Fehlermeldung",
+                       MessageBoxButtons.OK, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button1);
+                    }
+                }
+                else {
+                    MessageBox.Show("Kaufteil N" + row.Cells[0].Value.ToString() + " exsistiert nicht im System. \nDiese zeile wird ignoriert", "Fehlermeldung",
+                        MessageBoxButtons.OK, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button1);
                 }
             }
             this.bestellungUpdate = true;
@@ -1121,6 +1137,10 @@ namespace ToolFahrrad_v1
         }
 
         private void zurueck_Click(object sender, EventArgs e) {
+            if (this.dataGridViewBestellung.AllowUserToAddRows == true) {
+                this.dataGridViewBestellung.AllowUserToAddRows = false;
+                this.kNr.ReadOnly = true;
+            }
             this.bestellungUpdate = false;
             bv.clearBvPositionen();
             Information();
@@ -1128,6 +1148,11 @@ namespace ToolFahrrad_v1
 
         private void uebernehmenXML_Click(object sender, EventArgs e) {
             this.xmlVorbereitung(3);
+        }
+
+        private void addNr_Click(object sender, EventArgs e) {
+            this.dataGridViewBestellung.AllowUserToAddRows = true;
+            this.kNr.ReadOnly = false;
         }
     }
 }

@@ -15,6 +15,11 @@ namespace ToolFahrrad_v1
         private List<Bestellposition> listeBestellungen;
         private Dictionary<int, Teil> listeTeile;
         private Dictionary<int, Arbeitsplatz> listeArbeitsplaetze;
+        private List<int> xmlProduktionskapazitaet;
+        public List<int> XmlProduktionskapazitaet {
+            get { return xmlProduktionskapazitaet; }
+            set { xmlProduktionskapazitaet = value; }
+        }
         private int[] listeReihenfolge;
         private bool sonderProduktion = false;
         private bool ueberstundenErlaubt = true;
