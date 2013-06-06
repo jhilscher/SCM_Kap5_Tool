@@ -324,12 +324,11 @@
   </data>
   <data name="xmlOffenOK.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29m
-        dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAADDSURBVDhPvZLBBgJRFIaHiOidWkWrHiYiolXvNKto
-        G9GqVUT0EhH1/eOe253r3GtW/XzunP+c87tmpgk6wKfCDqrylnKqITbkaVDI0ADhhljTU7pcnCs2Mv0/
-        YAQrOMMbbG4MPXkBWj6C9VL03/RCrJFqC/KesAQt6FQtfwNRXsAd5M276tefgZ5vXRXkBbxA3jSchm6i
-        U/0oa6a6grzSDXTDKC/A3sEDFjLCqVr+XobJAoZygglEteAN5lxgDfrEqGm+wL55EgtKnKoAAAAASUVO
-        RK5CYII=
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAZdEVYdFNvZnR3YXJlAEFkb2JlIEltYWdlUmVhZHlxyWU8AAAArUlEQVQ4T8WQsQ3CMBREf5UZ
+        mIFJmIEN2IAqLRISI9FSIdGyAVIGoEKCe8E/MuFHxmk46Sn2+e5bsRV0TMzWMzFb/xvAf3vZqXqLixgP
+        OImilum7EFfhZdZ4yDNfasVdrPrdu3BOeJkzMmQ/hMFND7HGmBBnZMgOQ7wMG4yCyHi+H+KbLZsfRdZ7
+        wyJnSmE2Mv0hc+FFWetGRg10bZcZteyFNeIgbiIKRZBVx5oXO2psedV0b0sAAAAASUVORK5CYII=
 </value>
   </data>
   <data name="xmlOffenOK.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
@@ -435,11 +434,15 @@
   </data>
   <data name="pictureBox2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29m
-        dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAACRSURBVFhH7ddbDkAwEIXh7syrVdmffUgsY8wpmqpe
-        qKZF5iT/i8T4XikiMm3ruJHDg5wGLjnzTQ9g5uyDOSURMYB96ElRRA0ACiLuAK7OfW/Pi6gJQCdEbQA6
-        IFoAkEG0AiC9XwJC894TgAAEIAABCEAAAvgUoHR6rwZMnP1CyXBbLwbouRJ/yG64idt66zdJLfRRXdzf
-        3j1ZAAAAAElFTkSuQmCC
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAZdEVYdFNvZnR3YXJlAEFkb2JlIEltYWdlUmVhZHlxyWU8AAABnklEQVRYR72XPUoEQRBGO/IA
+        RoL3MDUVBCOPIXgwD2AqCIKRYOQBBMHUSBC03jK71H7f9HTvOrMPHgxfV3WN8yM7JXEU3oQP4Xf4Kyrn
+        4fMgx4r2syd7M4NZW5yGL6E2ZZWPcL3GsZJ7VWYxcwVn8xqOFWaVXddVZq6uBJdkrEBVdl0fk9nlMQXI
+        fToLW+QebMGe7J17mG0P3EnYQ+7BHtg79zB7K8BeZuuzoJPZ+iyocBG+hVqvUkNtDa33oEJ+71uO/V9Y
+        o7UeVHgPtbYmtTW01oMKV+FPqPUqNZdhDa33YILrcOokWKNmCu3xoEHtJHinW8NB+zzoQE+idzjkWehB
+        JzwTPO3IcS82z4KFsXkWLIzNs2BhbJ4FC2PzLBiBJ1zrWtbeCq3zQDgOP0Ota0kPvYrWeSDchVrTK72K
+        1niQ2OfSq3ordN2DgX0vvaq3Qtc9GPjPpVfzrdA1+1G6+WBYAPbOs77C8pQCvA97fxnvAnuyd57F7HKb
+        gkPL7O5Ps7ndfJoB9+aQJ8Ese9Y4Gy6Jfj7NKZ9izBj+8lL+AO90Mv+FQb5nAAAAAElFTkSuQmCC
 </value>
   </data>
   <data name="pictureBox2.Location" type="System.Drawing.Point, System.Drawing">
@@ -18769,7 +18772,7 @@
   <data name="&gt;&gt;tab_produktion.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="pictureBox3.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="arbPlatzAusfueren.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29m
         dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAF0SURBVFhH1ZZNSgQxFIR75RkE7+HWrSC48hiCx3Mr
@@ -18782,34 +18785,34 @@
         YII=
 </value>
   </data>
-  <data name="pictureBox3.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="arbPlatzAusfueren.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="pictureBox3.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="arbPlatzAusfueren.Location" type="System.Drawing.Point, System.Drawing">
     <value>832, 328</value>
   </data>
-  <data name="pictureBox3.ShowHelp" type="System.Boolean, mscorlib">
+  <data name="arbPlatzAusfueren.ShowHelp" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="pictureBox3.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="arbPlatzAusfueren.Size" type="System.Drawing.Size, System.Drawing">
     <value>36, 36</value>
   </data>
-  <data name="pictureBox3.TabIndex" type="System.Int32, mscorlib">
+  <data name="arbPlatzAusfueren.TabIndex" type="System.Int32, mscorlib">
     <value>177</value>
   </data>
-  <data name="pictureBox3.ToolTip" xml:space="preserve">
+  <data name="arbPlatzAusfueren.ToolTip" xml:space="preserve">
     <value>Speichern und in XML übernehmen</value>
   </data>
-  <data name="&gt;&gt;pictureBox3.Name" xml:space="preserve">
-    <value>pictureBox3</value>
+  <data name="&gt;&gt;arbPlatzAusfueren.Name" xml:space="preserve">
+    <value>arbPlatzAusfueren</value>
   </data>
-  <data name="&gt;&gt;pictureBox3.Type" xml:space="preserve">
+  <data name="&gt;&gt;arbPlatzAusfueren.Type" xml:space="preserve">
     <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;pictureBox3.Parent" xml:space="preserve">
+  <data name="&gt;&gt;arbPlatzAusfueren.Parent" xml:space="preserve">
     <value>tab_arbeitzeit</value>
   </data>
-  <data name="&gt;&gt;pictureBox3.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;arbPlatzAusfueren.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <metadata name="dataGridViewTextBoxColumn5.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
@@ -18899,28 +18902,28 @@
   <data name="ueber.Width" type="System.Int32, mscorlib">
     <value>19</value>
   </data>
-  <data name="dataGridViewAPlatz.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="DataGridViewAP.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 3</value>
   </data>
-  <data name="dataGridViewAPlatz.ShowHelp" type="System.Boolean, mscorlib">
+  <data name="DataGridViewAP.ShowHelp" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="dataGridViewAPlatz.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="DataGridViewAP.Size" type="System.Drawing.Size, System.Drawing">
     <value>728, 370</value>
   </data>
-  <data name="dataGridViewAPlatz.TabIndex" type="System.Int32, mscorlib">
+  <data name="DataGridViewAP.TabIndex" type="System.Int32, mscorlib">
     <value>67</value>
   </data>
-  <data name="&gt;&gt;dataGridViewAPlatz.Name" xml:space="preserve">
-    <value>dataGridViewAPlatz</value>
+  <data name="&gt;&gt;DataGridViewAP.Name" xml:space="preserve">
+    <value>DataGridViewAP</value>
   </data>
-  <data name="&gt;&gt;dataGridViewAPlatz.Type" xml:space="preserve">
+  <data name="&gt;&gt;DataGridViewAP.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;dataGridViewAPlatz.Parent" xml:space="preserve">
+  <data name="&gt;&gt;DataGridViewAP.Parent" xml:space="preserve">
     <value>tab_arbeitzeit</value>
   </data>
-  <data name="&gt;&gt;dataGridViewAPlatz.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;DataGridViewAP.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
   <data name="tab_arbeitzeit.Location" type="System.Drawing.Point, System.Drawing">
@@ -19516,7 +19519,7 @@
     <value>True</value>
   </data>
   <data name="dataGridViewProduktKapazit.Size" type="System.Drawing.Size, System.Drawing">
-    <value>225, 308</value>
+    <value>225, 332</value>
   </data>
   <data name="dataGridViewProduktKapazit.TabIndex" type="System.Int32, mscorlib">
     <value>19</value>
@@ -19990,7 +19993,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;tabs.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <metadata name="openFileDialog.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
@@ -20009,7 +20012,7 @@
 </value>
   </data>
   <data name="dateiÖffnenToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>137, 22</value>
+    <value>152, 22</value>
   </data>
   <data name="dateiÖffnenToolStripMenuItem.Text" xml:space="preserve">
     <value>XML import</value>
@@ -20028,13 +20031,13 @@
 </value>
   </data>
   <data name="xMLexportToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>137, 22</value>
+    <value>152, 22</value>
   </data>
   <data name="xMLexportToolStripMenuItem.Text" xml:space="preserve">
     <value>XML export</value>
   </data>
   <data name="toolStripSeparator1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>134, 6</value>
+    <value>149, 6</value>
   </data>
   <data name="schließenToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -20048,7 +20051,7 @@
 </value>
   </data>
   <data name="schließenToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>137, 22</value>
+    <value>152, 22</value>
   </data>
   <data name="schließenToolStripMenuItem.Text" xml:space="preserve">
     <value>Beenden</value>
@@ -20077,7 +20080,7 @@
 </value>
   </data>
   <data name="hilfeToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>145, 22</value>
+    <value>152, 22</value>
   </data>
   <data name="hilfeToolStripMenuItem.Text" xml:space="preserve">
     <value>Support</value>
@@ -20095,7 +20098,7 @@
     <value>Englisch</value>
   </data>
   <data name="spracheToolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>145, 22</value>
+    <value>152, 22</value>
   </data>
   <data name="spracheToolStripMenuItem1.Text" xml:space="preserve">
     <value>Sprache</value>
@@ -20110,16 +20113,16 @@
 </value>
   </data>
   <data name="gewichtungToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>145, 22</value>
+    <value>152, 22</value>
   </data>
   <data name="gewichtungToolStripMenuItem.Text" xml:space="preserve">
     <value>Einstellungen</value>
   </data>
   <data name="einstellungenToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>43, 20</value>
+    <value>76, 20</value>
   </data>
   <data name="einstellungenToolStripMenuItem.Text" xml:space="preserve">
-    <value>Tool</value>
+    <value>Programm</value>
   </data>
   <data name="startSeiteToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>123, 22</value>
@@ -20158,7 +20161,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;menu.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <metadata name="imageList1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>113, 52</value>
@@ -20218,6 +20221,47 @@
         AQMCAAGAAQMBgAEDAYABAwIAAYABAwGAAQMBgAEDAwABAQEAAQEBAAEBAwABAQEAAQEBAAEBAwABAQEA
         AQEBAAEBAgAB4AEPAeABDwHgAQ8CAAs=
 </value>
+  </data>
+  <data name="xml_export.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAZdEVYdFNvZnR3YXJlAEFkb2JlIEltYWdlUmVhZHlxyWU8AAABrklEQVRYR72XQUrEQBBFs/IA
+        rgRB8AyCZxAEVx5D8CrewwO4FQS3ggcQBEFw60oQtN6QHmr+74ztTGc+PAg/VfV7ugeSDEl7wVVwH3wF
+        PyOvwXGgugjeR7hW0UNvmcNMZpNB1ooOg6egFBfeglr4ZfAdlDqG46mOAmbkmUAWmQuxmudAixh6Eqg0
+        PNfXFsGMvKMFMhc7wZboTbgJVFPhBe7VFsGsWj3Zw0MygHM6DVTnwbrwAjXUqpjJ7FxLtm3PQVATf7Zc
+        t46PoCZm5zqyVwyYEkO1doqpBSCtdWNCbOtLoPUKNbUjKNJ6NxrVrc+MRnXrM6NR3frMaFS3PjMa1a3P
+        jEZ16zOjUfkhw3Wrcha40aizoDyOuW6V5ZkxsyzPjJlleWbMLMszY2ZZnhkV8ZKhdX9RezFBWueGaD/4
+        z6O4QA+9Kq1zQ3QbaE0r9Kq0xo2kTbZe0aPQ+26M2nTrFT0Kve/GqG22XslHoffspXT5wTCDmJ2zPoPh
+        MRlwF0y9GW8jZjI7Z5E9XCdj15A9+Wk2N8tPM8TZ7HIRZNl/jdWwJfr51BM+xcgYf/kw/ALkhiEC3DUR
+        6QAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="xml_export.Location" type="System.Drawing.Point, System.Drawing">
+    <value>844, 6</value>
+  </data>
+  <data name="xml_export.Size" type="System.Drawing.Size, System.Drawing">
+    <value>34, 32</value>
+  </data>
+  <data name="xml_export.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="xml_export.ToolTip" xml:space="preserve">
+    <value>XmlExport</value>
+  </data>
+  <data name="xml_export.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;xml_export.Name" xml:space="preserve">
+    <value>xml_export</value>
+  </data>
+  <data name="&gt;&gt;xml_export.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;xml_export.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;xml_export.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>

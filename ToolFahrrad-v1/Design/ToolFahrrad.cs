@@ -781,15 +781,15 @@ namespace ToolFahrrad_v1
             #endregion
             // Arbeitsplätze
             #region Arbetsplatz
-            this.DataGriedViewRemove(dataGridViewAPlatz);
+            this.DataGriedViewRemove(DataGridViewAP);
             index = 0;
             xmlAP = new List<int[]>();        
             foreach (var a in instance.ArbeitsplatzList) {
                 int[] apXML = new int[3];
-                dataGridViewAPlatz.Rows.Add();
-                dataGridViewAPlatz.Rows[index].Cells[0].Value = a.GetNummerArbeitsplatz;
+                DataGridViewAP.Rows.Add();
+                DataGridViewAP.Rows[index].Cells[0].Value = a.GetNummerArbeitsplatz;
                 apXML[0] = a.GetNummerArbeitsplatz;
-                dataGridViewAPlatz.Rows[index].Cells[1].Value = a.Leerzeit + " (" + a.RuestungVorPeriode + ") ";
+                DataGridViewAP.Rows[index].Cells[1].Value = a.Leerzeit + " (" + a.RuestungVorPeriode + ") ";
                 int prMenge = 0;
                 int val = 0;
                 int sum = 0;
@@ -809,7 +809,7 @@ namespace ToolFahrrad_v1
                         prMenge = 0;
                     }
                 }
-                dataGridViewAPlatz.Rows[index].Cells[2].Value = sum + " min";
+                DataGridViewAP.Rows[index].Cells[2].Value = sum + " min";
 
                 prMenge = 0;
                 val = 0;
@@ -836,12 +836,12 @@ namespace ToolFahrrad_v1
                     a.RuestungCustom = val;
                 }
 
-                dataGridViewAPlatz.Rows[index].Cells[3].Value = a.RuestungCustom;
+                DataGridViewAP.Rows[index].Cells[3].Value = a.RuestungCustom;
                 int gesammt = a.RuestungCustom + sum;
-                dataGridViewAPlatz.Rows[index].Cells[4].Value = gesammt + " min";
-                dataGridViewAPlatz.Rows[index].Cells[8].Value = imageList1.Images[2];
+                DataGridViewAP.Rows[index].Cells[4].Value = gesammt + " min";
+                DataGridViewAP.Rows[index].Cells[8].Value = imageList1.Images[2];
                 if (gesammt <= a.zeit) { // newTeim <= 2400 
-                    dataGridViewAPlatz.Rows[index].Cells[5].Value = imageList1.Images[2];
+                    DataGridViewAP.Rows[index].Cells[5].Value = imageList1.Images[2];
                     apXML[1] = 1;
                     apXML[2] = 0;
                 }
@@ -849,11 +849,11 @@ namespace ToolFahrrad_v1
                 {
                     if (gesammt > instance.ZweiteSchicht) {
                         if (gesammt > 7200)
-                            dataGridViewAPlatz.Rows[index].Cells[8].Value = imageList1.Images[0];
+                            DataGridViewAP.Rows[index].Cells[8].Value = imageList1.Images[0];
                         else if (gesammt < 7200)
-                            dataGridViewAPlatz.Rows[index].Cells[8].Value = imageList1.Images[1];
+                            DataGridViewAP.Rows[index].Cells[8].Value = imageList1.Images[1];
                         else
-                            dataGridViewAPlatz.Rows[index].Cells[8].Value = imageList1.Images[2];
+                            DataGridViewAP.Rows[index].Cells[8].Value = imageList1.Images[2];
                         apXML[1] = 3;
                         if(gesammt < 7200)
                             apXML[2] = gesammt - instance.ZweiteSchicht;
@@ -861,32 +861,32 @@ namespace ToolFahrrad_v1
                             apXML[2] = 7200 - instance.ZweiteSchicht;
                     }
                     if (gesammt < instance.ZweiteSchicht) {
-                        dataGridViewAPlatz.Rows[index].Cells[5].Value = imageList1.Images[0];
-                        dataGridViewAPlatz.Rows[index].Cells[6].Value = true;
+                        DataGridViewAP.Rows[index].Cells[5].Value = imageList1.Images[0];
+                        DataGridViewAP.Rows[index].Cells[6].Value = true;
                         apXML[1] = 2;
                         apXML[2] = gesammt - instance.ErsteSchicht;
                     }
                     else if (gesammt > instance.ZweiteSchicht) {
-                        dataGridViewAPlatz.Rows[index].Cells[5].Value = imageList1.Images[0];
-                        dataGridViewAPlatz.Rows[index].Cells[7].Value = true;
+                        DataGridViewAP.Rows[index].Cells[5].Value = imageList1.Images[0];
+                        DataGridViewAP.Rows[index].Cells[7].Value = true;
                     }
                 }
                 else if (gesammt > a.zeit && gesammt <= instance.ErsteSchicht) { // 2400 < newTime < 3600 Überstunden
-                    dataGridViewAPlatz.Rows[index].Cells[5].Value = imageList1.Images[1];
+                    DataGridViewAP.Rows[index].Cells[5].Value = imageList1.Images[1];
                     apXML[1] = 1;
                     apXML[2] = gesammt - a.zeit;
                 }
                 else {
-                    dataGridViewAPlatz.Rows[index].Cells[5].Value = imageList1.Images[2];
+                    DataGridViewAP.Rows[index].Cells[5].Value = imageList1.Images[2];
                 }
 
                 xmlAP.Add(apXML);
                 //Farbe
                 for (int i = 0; i < 9; ++i) {
                     if (i < 2)
-                        dataGridViewAPlatz.Columns[i].DefaultCellStyle.BackColor = Color.FloralWhite;
+                        DataGridViewAP.Columns[i].DefaultCellStyle.BackColor = Color.FloralWhite;
                     else if (i == 2 || i > 3)
-                        dataGridViewAPlatz.Columns[i].DefaultCellStyle.BackColor = Color.LightYellow;
+                        DataGridViewAP.Columns[i].DefaultCellStyle.BackColor = Color.LightYellow;
                 }
                 ++index;
             }
@@ -975,7 +975,7 @@ namespace ToolFahrrad_v1
 
         private void dataGridViewAPlatz_CellContentClick(object sender, DataGridViewCellEventArgs e) {
             if (e.ColumnIndex == 0) {
-                TeilInformation ti = new TeilInformation("arbeitsplatz", Convert.ToInt32(dataGridViewAPlatz.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString()));
+                TeilInformation ti = new TeilInformation("arbeitsplatz", Convert.ToInt32(DataGridViewAP.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString()));
                 ti.GetZeitInformation();
                 ti.Show();
             }
@@ -1115,11 +1115,12 @@ namespace ToolFahrrad_v1
 
         private void arbPlatzAusfueren_Click(object sender, EventArgs e) {
             bv.clearBvPositionen();
-            for (int index = 0; index < dataGridViewAPlatz.Rows.Count; ++index) {
-                instance.GetArbeitsplatz(Convert.ToInt32(dataGridViewAPlatz.Rows[index].Cells[0].Value.ToString())).RuestungCustom =
-                    (Convert.ToInt32(dataGridViewAPlatz.Rows[index].Cells[3].Value.ToString()));
+            for (int index = 0; index < DataGridViewAP.Rows.Count; ++index) {
+                instance.GetArbeitsplatz(Convert.ToInt32(DataGridViewAP.Rows[index].Cells[0].Value.ToString())).RuestungCustom =
+                    (Convert.ToInt32(DataGridViewAP.Rows[index].Cells[3].Value.ToString()));
             }
             Information();
+            this.xmlVorbereitung(5);
         }
 
         private void pictureBox3_Click(object sender, EventArgs e) {
