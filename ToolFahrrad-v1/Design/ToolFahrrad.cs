@@ -728,10 +728,25 @@ namespace ToolFahrrad_v1
                 dataGridViewKTeil.Rows[index].Cells[7].Value = a.BruttoBedarfPer3;
 
                 dataGridViewKTeil.Rows[index].Cells[8].Value = a.BestandPer1;
+                if (a.BestandPer1 < 0) {
+                    dataGridViewKTeil.Rows[index].Cells[8].Style.ForeColor = Color.Red;
+                    dataGridViewKTeil.Rows[index].Cells[8].Style.Font = new Font(dataGridViewKTeil.Rows[index].Cells[8].InheritedStyle.Font, FontStyle.Bold);
+                }
                 dataGridViewKTeil.Rows[index].Cells[9].Value = a.BestandPer2;
+                if (a.BestandPer2 < 0) {
+                    dataGridViewKTeil.Rows[index].Cells[9].Style.ForeColor = Color.Red;
+                    dataGridViewKTeil.Rows[index].Cells[9].Style.Font = new Font(dataGridViewKTeil.Rows[index].Cells[9].InheritedStyle.Font, FontStyle.Bold);
+                }
                 dataGridViewKTeil.Rows[index].Cells[10].Value = a.BestandPer3;
+                if (a.BestandPer3 < 0) {
+                    dataGridViewKTeil.Rows[index].Cells[10].Style.ForeColor = Color.Red;
+                    dataGridViewKTeil.Rows[index].Cells[10].Style.Font = new Font(dataGridViewKTeil.Rows[index].Cells[10].InheritedStyle.Font, FontStyle.Bold);
+                }
                 dataGridViewKTeil.Rows[index].Cells[11].Value = a.BestandPer4;
-
+                if (a.BestandPer4 < 0) {
+                    dataGridViewKTeil.Rows[index].Cells[11].Style.ForeColor = Color.Red;
+                    dataGridViewKTeil.Rows[index].Cells[11].Style.Font = new Font(dataGridViewKTeil.Rows[index].Cells[11].InheritedStyle.Font, FontStyle.Bold);
+                }
                 //Farbe
                 for (int i = 0; i < 12; ++i) {
                     if (i >= 0 && i < 4)
