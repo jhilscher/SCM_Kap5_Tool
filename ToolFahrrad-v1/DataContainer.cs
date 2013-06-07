@@ -15,6 +15,11 @@ namespace ToolFahrrad_v1
         private List<Bestellposition> listeBestellungen;
         private Dictionary<int, Teil> listeTeile;
         private Dictionary<int, Arbeitsplatz> listeArbeitsplaetze;
+        private List<int[]> apKapazitaet;
+        public List<int[]> ApKapazitaet {
+            get { return apKapazitaet; }
+            set { apKapazitaet = value; }
+        }
         private int[] listeReihenfolge;
         private bool sonderProduktion = false;
         private bool ueberstundenErlaubt = true;
@@ -25,9 +30,9 @@ namespace ToolFahrrad_v1
         private int zweiteSchicht = 6000;
         private double verwendeAbweichung = 0.5;
         private double verwendeDiskount = 0.5;
-
-        private double diskountGrenze = 5;        
+        private double diskountGrenze = 5;
         private double grenzeMenge = 10;
+        // Getter / Setter
         public double DiskountGrenze {
             get { return diskountGrenze; }
             set { diskountGrenze = value; }
@@ -36,7 +41,6 @@ namespace ToolFahrrad_v1
             get { return grenzeMenge; }
             set { grenzeMenge = value; }
         }
-        // Getter / Setter
         public double VerwendeAbweichung
         {
             get { return verwendeAbweichung * 100; }
@@ -60,6 +64,7 @@ namespace ToolFahrrad_v1
         // Constructor
         private DataContainer()
         {
+            apKapazitaet = new List<int[]>();
             berechneKindTeil = true;
             listeBestellungen = new List<Bestellposition>();
             listeTeile = new Dictionary<int, Teil>();
@@ -119,6 +124,14 @@ namespace ToolFahrrad_v1
         public List<Bestellposition> Bestellungen
         {
             get { return listeBestellungen; }
+            set
+            {
+                listeBestellungen.Clear();
+                foreach (Bestellposition bp in value)
+                {
+                    listeBestellungen.Add(new Bestellposition(bp.Kaufteil, bp.Menge, bp.Eil));
+                }
+            }
         }
         // Path of input file
         public string OpenFile
@@ -148,8 +161,7 @@ namespace ToolFahrrad_v1
             get { return ueberstundenErlaubt; }
             set { ueberstundenErlaubt = value; }
         }
-
-                // Getter for Teil with given number
+        // Getter for Teil with given number
         public Teil GetTeil(int nr)
         {
             if (listeTeile.ContainsKey(nr))
