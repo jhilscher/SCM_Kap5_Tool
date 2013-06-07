@@ -30,6 +30,7 @@ namespace ToolFahrrad_v1
         internal void GetTeilvonETeilMitMenge() {
             ausgabe.Text = "Lieferdauer: " + (dc.GetTeil(_nummer) as KTeil).Lieferdauer + " (" + (dc.GetTeil(_nummer) as KTeil).AbweichungLieferdauer + ")\n" +
                             "Diskontmenge: " + (dc.GetTeil(_nummer) as KTeil).DiskontMenge + "\n" +
+                            "Preis: " + (dc.GetTeil(_nummer) as KTeil).Preis + "\n" +
                             "Bestellkosten: " + (dc.GetTeil(_nummer) as KTeil).Bestellkosten + "\n\n";
             List<ETeil> list = (dc.GetTeil(_nummer) as KTeil).IstTeilVon;
             int sum = 0;

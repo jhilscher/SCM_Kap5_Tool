@@ -24,6 +24,10 @@ namespace ToolFahrrad_v1
         private bool bestellungUpdate = false;
         private bool okPrognose = false;
         private bool okXml = false;
+
+        private Rectangle dragBoxSrc;
+        private int rowIndexSrc;
+        private int rowIndexTar;
         /// <summary>
         /// Konstruktor
         /// </summary>
@@ -48,6 +52,7 @@ namespace ToolFahrrad_v1
             this.tab2.Visible = true;
             this.panelXMLerstellen.Visible = true;
             this.bestellungUpdate = false;
+            this.xml_export.Visible = true;
         }
         private void ausführen() {
             bv.clearBvPositionen();
@@ -650,21 +655,21 @@ namespace ToolFahrrad_v1
             if (openFileDialog.ShowDialog() == DialogResult.OK) {
                 if (xml.ReadDatei(openFileDialog.FileName) == true) {
                     xmlTextBox.Text = openFileDialog.FileName;
-                    pfadText.ForeColor = Color.ForestGreen;
                     xmlOffenOK.Visible = true;
-                    pfadText.Visible = false;
                     okXml = true;
                     if (this.okPrognose == true)
                         toolAusfueren.Visible = true;
                 }
                 else {
                     xmlTextBox.Text = openFileDialog.FileName;
-                    pfadText.ForeColor = Color.Red;
                     toolAusfueren.Visible = false;
                     xmlOffenOK.Visible = false;
                     save.Visible = false;
-                    pfadText.Visible = true;
                     okXml = false;
+
+                    MessageBox.Show("Es wurde zum Laden falsche Datei ausgewählt. \nDas Programm kann nicht ausgeführt werden", "Fehlermeldung",
+                       MessageBoxButtons.OK, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button1);
+
                 }
             }
             this.panelXML.Visible = true;
@@ -783,7 +788,7 @@ namespace ToolFahrrad_v1
             #region Arbetsplatz
             this.DataGriedViewRemove(DataGridViewAP);
             index = 0;
-            xmlAP = new List<int[]>();        
+            xmlAP = new List<int[]>();
             foreach (var a in instance.ArbeitsplatzList) {
                 int[] apXML = new int[3];
                 DataGridViewAP.Rows.Add();
@@ -855,7 +860,7 @@ namespace ToolFahrrad_v1
                         else
                             DataGridViewAP.Rows[index].Cells[8].Value = imageList1.Images[2];
                         apXML[1] = 3;
-                        if(gesammt < 7200)
+                        if (gesammt < 7200)
                             apXML[2] = gesammt - instance.ZweiteSchicht;
                         else
                             apXML[2] = 7200 - instance.ZweiteSchicht;
@@ -957,6 +962,14 @@ namespace ToolFahrrad_v1
                     ++index;
                 }
 
+            }
+            if (p == 100 || p == 4) {
+                index = 0;
+                this.DataGriedViewRemove(dataGridViewProduktAuftrag);
+                dataGridViewProduktAuftrag.Rows.Add(5); int i = 0;
+                foreach (DataGridViewRow dr in dataGridViewProduktAuftrag.Rows)
+                    foreach (DataGridViewCell dc in dr.Cells) dc.Value = i++;
+                
             }
         }
 
@@ -1186,6 +1199,91 @@ namespace ToolFahrrad_v1
             this.dataGridViewBestellung.AllowUserToAddRows = true;
             this.kNr.ReadOnly = false;
         }
+
+////////////////////////////////////////////////////////////////
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="x"></param>
+        /// <param name="y"></param>
+        /// <returns></returns>
+        private bool IsCellOrRowHeader(int x, int y) {
+            DataGridViewHitTestType dgt = dataGridViewProduktAuftrag.HitTest(x, y).Type;
+            return (dgt == DataGridViewHitTestType.Cell ||
+                            dgt == DataGridViewHitTestType.RowHeader);
+        }
+
+        private void dataGridViewProduktAuftrag_MouseMove(object sender, MouseEventArgs e) {
+            if ((e.Button & MouseButtons.Left) == MouseButtons.Left) {
+                if (!IsCellOrRowHeader(e.X, e.Y) && rowIndexSrc >= 0) {
+                    DragDropEffects dropEffect = dataGridViewProduktAuftrag.DoDragDrop(
+                        dataGridViewProduktAuftrag.Rows[rowIndexSrc], DragDropEffects.None);
+                    return;
+                }
+
+                if (dragBoxSrc != Rectangle.Empty &&
+                        !dragBoxSrc.Contains(e.X, e.Y)) {
+                            DragDropEffects dropEffect = dataGridViewProduktAuftrag.DoDragDrop(
+                        dataGridViewProduktAuftrag.Rows[rowIndexSrc], DragDropEffects.Move);
+                }
+            }
+        }
+
+        private void dataGridViewProduktAuftrag_MouseDown(object sender, MouseEventArgs e) {
+            rowIndexSrc = dataGridViewProduktAuftrag.HitTest(e.X, e.Y).RowIndex;
+            if (rowIndexSrc != -1) {
+                Size dragSize = SystemInformation.DragSize;
+                dragBoxSrc = new Rectangle(new Point(e.X, e.Y), dragSize);
+            }
+            else
+                dragBoxSrc = Rectangle.Empty;
+        }
+
+        private void dataGridViewProduktAuftrag_DragDrop(object sender, DragEventArgs e) {
+            Point clientPoint = dataGridViewProduktAuftrag.PointToClient(new Point(e.X, e.Y));
+            rowIndexTar = dataGridViewProduktAuftrag.HitTest(clientPoint.X, clientPoint.Y).RowIndex;
+            if (e.Effect == DragDropEffects.Move) {
+                DataGridViewRow rowToMove = e.Data.GetData(
+                    typeof(DataGridViewRow)) as DataGridViewRow;
+                MoveRow(rowIndexSrc, rowIndexTar);
+            }
+        }
+
+        void SwapCell(int c, int srcRow, int tarRow, out object tmp0, out object tmp1) {
+            DataGridViewCell srcCell = dataGridViewProduktAuftrag.Rows[srcRow].Cells[c];
+            DataGridViewCell tarCell = dataGridViewProduktAuftrag.Rows[tarRow].Cells[c];
+            tmp0 = tarCell.Value;
+            tmp1 = srcCell.Value;
+            tarCell.Value = tmp1;
+        }
+
+        void MoveRow(int srcRow, int tarRow) {
+            int cellCount = dataGridViewProduktAuftrag.Rows[srcRow].Cells.Count;
+            for (int c = 0; c < cellCount; c++)
+                ShiftRows(srcRow, tarRow, c);
+        }
+
+        private void ShiftRows(int srcRow, int tarRow, int c) {
+            object tmp0, tmp1;
+            SwapCell(c, srcRow, tarRow, out tmp0, out tmp1);
+            int delta = tarRow < srcRow ? 1 : -1;
+            for (int r = tarRow + delta; r != srcRow + delta; r += delta) {
+                tmp1 = dataGridViewProduktAuftrag.Rows[r].Cells[c].Value;
+                dataGridViewProduktAuftrag.Rows[r].Cells[c].Value = tmp0;
+                tmp0 = tmp1;
+            }
+            dataGridViewProduktAuftrag.Rows[tarRow].Selected = true;
+            dataGridViewProduktAuftrag.CurrentCell = dataGridViewProduktAuftrag.Rows[tarRow].Cells[0];
+        }
+
+        private void dataGridViewProduktAuftrag_DragOver(object sender, DragEventArgs e) {
+            Point p = dataGridViewProduktAuftrag.PointToClient(new Point(e.X, e.Y));
+            DataGridViewHitTestType dgt = dataGridViewProduktAuftrag.HitTest(p.X, p.Y).Type;
+            if (IsCellOrRowHeader(p.X, p.Y))
+                e.Effect = DragDropEffects.Move;
+            else e.Effect = DragDropEffects.None;
+        }
+
     }
 }
 

@@ -44,7 +44,6 @@
             this.xmlTextBox = new System.Windows.Forms.TextBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.titleXmlLaden = new System.Windows.Forms.Label();
-            this.pfadText = new System.Windows.Forms.Label();
             this.xml_suchen = new System.Windows.Forms.Button();
             this.bildSpeichOk = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -634,6 +633,7 @@
             this.dataGridViewTextBoxColumn20 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn21 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tab_bestellung = new System.Windows.Forms.TabPage();
+            this.addNr = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.uebernehmenXML = new System.Windows.Forms.PictureBox();
             this.zurueck = new System.Windows.Forms.PictureBox();
@@ -686,10 +686,9 @@
             this.scimToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.startSeiteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
+            this.xml_export = new System.Windows.Forms.PictureBox();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.helpProvider1 = new System.Windows.Forms.HelpProvider();
-            this.addNr = new System.Windows.Forms.PictureBox();
-            this.xml_export = new System.Windows.Forms.PictureBox();
             this.tabs.SuspendLayout();
             this.tab_xml.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pufferP3)).BeginInit();
@@ -735,6 +734,7 @@
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewKTeil)).BeginInit();
             this.tab_bestellung.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.addNr)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.uebernehmenXML)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.zurueck)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.saveAenderungen)).BeginInit();
@@ -747,7 +747,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDirekt)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewVertrieb)).BeginInit();
             this.menu.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.addNr)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xml_export)).BeginInit();
             this.SuspendLayout();
             // 
@@ -885,7 +884,6 @@
             this.panelXML.Controls.Add(this.xmlTextBox);
             this.panelXML.Controls.Add(this.pictureBox2);
             this.panelXML.Controls.Add(this.titleXmlLaden);
-            this.panelXML.Controls.Add(this.pfadText);
             this.panelXML.Controls.Add(this.xml_suchen);
             resources.ApplyResources(this.panelXML, "panelXML");
             this.panelXML.Name = "panelXML";
@@ -936,13 +934,6 @@
             resources.ApplyResources(this.titleXmlLaden, "titleXmlLaden");
             this.titleXmlLaden.Name = "titleXmlLaden";
             this.helpProvider1.SetShowHelp(this.titleXmlLaden, ((bool)(resources.GetObject("titleXmlLaden.ShowHelp"))));
-            // 
-            // pfadText
-            // 
-            resources.ApplyResources(this.pfadText, "pfadText");
-            this.pfadText.ForeColor = System.Drawing.Color.Red;
-            this.pfadText.Name = "pfadText";
-            this.helpProvider1.SetShowHelp(this.pfadText, ((bool)(resources.GetObject("pfadText.ShowHelp"))));
             // 
             // xml_suchen
             // 
@@ -5962,7 +5953,7 @@
             // dataGridViewTextBoxColumn5
             // 
             resources.ApplyResources(this.dataGridViewTextBoxColumn5, "dataGridViewTextBoxColumn5");
-            this.dataGridViewTextBoxColumn5.LinkColor = System.Drawing.Color.Black;
+            this.dataGridViewTextBoxColumn5.LinkColor = System.Drawing.Color.Blue;
             this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
             this.dataGridViewTextBoxColumn5.ReadOnly = true;
             this.dataGridViewTextBoxColumn5.Resizable = System.Windows.Forms.DataGridViewTriState.True;
@@ -6075,6 +6066,7 @@
             // dataGridViewLinkColumn1
             // 
             resources.ApplyResources(this.dataGridViewLinkColumn1, "dataGridViewLinkColumn1");
+            this.dataGridViewLinkColumn1.LinkColor = System.Drawing.Color.Blue;
             this.dataGridViewLinkColumn1.Name = "dataGridViewLinkColumn1";
             this.dataGridViewLinkColumn1.ReadOnly = true;
             this.dataGridViewLinkColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
@@ -6154,6 +6146,16 @@
             resources.ApplyResources(this.tab_bestellung, "tab_bestellung");
             this.tab_bestellung.Name = "tab_bestellung";
             this.helpProvider1.SetShowHelp(this.tab_bestellung, ((bool)(resources.GetObject("tab_bestellung.ShowHelp"))));
+            // 
+            // addNr
+            // 
+            this.addNr.Cursor = System.Windows.Forms.Cursors.Hand;
+            resources.ApplyResources(this.addNr, "addNr");
+            this.addNr.Name = "addNr";
+            this.helpProvider1.SetShowHelp(this.addNr, ((bool)(resources.GetObject("addNr.ShowHelp"))));
+            this.addNr.TabStop = false;
+            this.toolTip.SetToolTip(this.addNr, resources.GetString("addNr.ToolTip"));
+            this.addNr.Click += new System.EventHandler(this.addNr_Click);
             // 
             // label3
             // 
@@ -6296,8 +6298,10 @@
             // 
             // dataGridViewProduktAuftrag
             // 
+            this.dataGridViewProduktAuftrag.AllowDrop = true;
             this.dataGridViewProduktAuftrag.AllowUserToAddRows = false;
             this.dataGridViewProduktAuftrag.AllowUserToDeleteRows = false;
+            this.dataGridViewProduktAuftrag.AllowUserToOrderColumns = true;
             this.dataGridViewProduktAuftrag.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dataGridViewProduktAuftrag.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridViewProduktAuftrag.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -6306,20 +6310,21 @@
             this.dataGridViewTextBoxColumn28});
             resources.ApplyResources(this.dataGridViewProduktAuftrag, "dataGridViewProduktAuftrag");
             this.dataGridViewProduktAuftrag.Name = "dataGridViewProduktAuftrag";
-            this.dataGridViewProduktAuftrag.ReadOnly = true;
             this.helpProvider1.SetShowHelp(this.dataGridViewProduktAuftrag, ((bool)(resources.GetObject("dataGridViewProduktAuftrag.ShowHelp"))));
+            this.dataGridViewProduktAuftrag.DragDrop += new System.Windows.Forms.DragEventHandler(this.dataGridViewProduktAuftrag_DragDrop);
+            this.dataGridViewProduktAuftrag.DragOver += new System.Windows.Forms.DragEventHandler(this.dataGridViewProduktAuftrag_DragOver);
+            this.dataGridViewProduktAuftrag.MouseDown += new System.Windows.Forms.MouseEventHandler(this.dataGridViewProduktAuftrag_MouseDown);
+            this.dataGridViewProduktAuftrag.MouseMove += new System.Windows.Forms.MouseEventHandler(this.dataGridViewProduktAuftrag_MouseMove);
             // 
             // dataGridViewTextBoxColumn27
             // 
             resources.ApplyResources(this.dataGridViewTextBoxColumn27, "dataGridViewTextBoxColumn27");
             this.dataGridViewTextBoxColumn27.Name = "dataGridViewTextBoxColumn27";
-            this.dataGridViewTextBoxColumn27.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn28
             // 
             resources.ApplyResources(this.dataGridViewTextBoxColumn28, "dataGridViewTextBoxColumn28");
             this.dataGridViewTextBoxColumn28.Name = "dataGridViewTextBoxColumn28";
-            this.dataGridViewTextBoxColumn28.ReadOnly = true;
             // 
             // label273
             // 
@@ -6557,6 +6562,14 @@
             resources.ApplyResources(this.startSeiteToolStripMenuItem, "startSeiteToolStripMenuItem");
             this.startSeiteToolStripMenuItem.Click += new System.EventHandler(this.startSeiteToolStripMenuItem_Click);
             // 
+            // xml_export
+            // 
+            this.xml_export.Cursor = System.Windows.Forms.Cursors.Hand;
+            resources.ApplyResources(this.xml_export, "xml_export");
+            this.xml_export.Name = "xml_export";
+            this.xml_export.TabStop = false;
+            this.toolTip.SetToolTip(this.xml_export, resources.GetString("xml_export.ToolTip"));
+            // 
             // imageList1
             // 
             this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
@@ -6568,24 +6581,6 @@
             // helpProvider1
             // 
             resources.ApplyResources(this.helpProvider1, "helpProvider1");
-            // 
-            // addNr
-            // 
-            this.addNr.Cursor = System.Windows.Forms.Cursors.Hand;
-            resources.ApplyResources(this.addNr, "addNr");
-            this.addNr.Name = "addNr";
-            this.helpProvider1.SetShowHelp(this.addNr, ((bool)(resources.GetObject("addNr.ShowHelp"))));
-            this.addNr.TabStop = false;
-            this.toolTip.SetToolTip(this.addNr, resources.GetString("addNr.ToolTip"));
-            this.addNr.Click += new System.EventHandler(this.addNr_Click);
-            // 
-            // xml_export
-            // 
-            this.xml_export.Cursor = System.Windows.Forms.Cursors.Hand;
-            resources.ApplyResources(this.xml_export, "xml_export");
-            this.xml_export.Name = "xml_export";
-            this.xml_export.TabStop = false;
-            this.toolTip.SetToolTip(this.xml_export, resources.GetString("xml_export.ToolTip"));
             // 
             // Fahrrad
             // 
@@ -6651,6 +6646,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewKTeil)).EndInit();
             this.tab_bestellung.ResumeLayout(false);
             this.tab_bestellung.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.addNr)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.uebernehmenXML)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.zurueck)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.saveAenderungen)).EndInit();
@@ -6665,7 +6661,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewVertrieb)).EndInit();
             this.menu.ResumeLayout(false);
             this.menu.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.addNr)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.xml_export)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -6678,7 +6673,6 @@
         private System.Windows.Forms.TabPage tab_xml;
         private System.Windows.Forms.Button xml_suchen;
         private System.Windows.Forms.OpenFileDialog openFileDialog;
-        private System.Windows.Forms.Label pfadText;
         private System.Windows.Forms.Label titlePrognose;
         private System.Windows.Forms.Label titleXmlLaden;
         private System.Windows.Forms.Label aktulleWoche;
@@ -7275,15 +7269,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn colWarteschlange;
         private System.Windows.Forms.DataGridViewTextBoxColumn colBearbeitung;
         private System.Windows.Forms.DataGridViewTextBoxColumn colPlanung;
-        private System.Windows.Forms.DataGridViewLinkColumn dataGridViewTextBoxColumn5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
-        private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn2;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn s1;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn s3;
-        private System.Windows.Forms.DataGridViewImageColumn ueber;
         private System.Windows.Forms.DataGridView dataGridViewBestellung;
         private System.Windows.Forms.PictureBox saveAenderungen;
         private System.Windows.Forms.DataGridViewTextBoxColumn kNr;
@@ -7320,6 +7305,17 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dg_p3;
         private System.Windows.Forms.Label label270;
         private System.Windows.Forms.PictureBox arbPlatzAusfueren;
+        private System.Windows.Forms.PictureBox addNr;
+        private System.Windows.Forms.PictureBox xml_export;
+        private System.Windows.Forms.DataGridViewLinkColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
+        private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn2;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn s1;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn s3;
+        private System.Windows.Forms.DataGridViewImageColumn ueber;
         private System.Windows.Forms.DataGridViewLinkColumn dataGridViewLinkColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
@@ -7332,8 +7328,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn19;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn20;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn21;
-        private System.Windows.Forms.PictureBox addNr;
-        private System.Windows.Forms.PictureBox xml_export;
     }
 }
 
