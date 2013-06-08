@@ -611,6 +611,8 @@
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.minus = new System.Windows.Forms.DataGridViewImageColumn();
+            this.plus = new System.Windows.Forms.DataGridViewImageColumn();
             this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewImageColumn2 = new System.Windows.Forms.DataGridViewImageColumn();
             this.s1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
@@ -639,6 +641,10 @@
             this.zurueck = new System.Windows.Forms.PictureBox();
             this.saveAenderungen = new System.Windows.Forms.PictureBox();
             this.dataGridViewBestellung = new System.Windows.Forms.DataGridView();
+            this.kNr = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.menge = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.eil = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.del = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.xmlOutput = new System.Windows.Forms.TabPage();
             this.panelXMLerstellen = new System.Windows.Forms.Panel();
             this.dataGridViewProduktKapazit = new System.Windows.Forms.DataGridView();
@@ -683,12 +689,9 @@
             this.startSeiteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
             this.xml_export = new System.Windows.Forms.PictureBox();
-            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
+            this.imageListAmpel = new System.Windows.Forms.ImageList(this.components);
             this.helpProvider1 = new System.Windows.Forms.HelpProvider();
-            this.kNr = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.menge = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.eil = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.del = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.imageListPlusMinus = new System.Windows.Forms.ImageList(this.components);
             this.tabs.SuspendLayout();
             this.tab_xml.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pufferP3)).BeginInit();
@@ -5940,6 +5943,8 @@
             this.dataGridViewTextBoxColumn7,
             this.dataGridViewTextBoxColumn8,
             this.dataGridViewTextBoxColumn9,
+            this.minus,
+            this.plus,
             this.dataGridViewTextBoxColumn10,
             this.dataGridViewImageColumn2,
             this.s1,
@@ -5949,6 +5954,7 @@
             this.DataGridViewAP.Name = "DataGridViewAP";
             this.helpProvider1.SetShowHelp(this.DataGridViewAP, ((bool)(resources.GetObject("DataGridViewAP.ShowHelp"))));
             this.DataGridViewAP.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewAPlatz_CellContentClick);
+            this.DataGridViewAP.CellMouseEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridViewAP_CellMouseEnter);
             // 
             // dataGridViewTextBoxColumn5
             // 
@@ -5977,6 +5983,18 @@
             resources.ApplyResources(this.dataGridViewTextBoxColumn9, "dataGridViewTextBoxColumn9");
             this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
             this.dataGridViewTextBoxColumn9.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            // 
+            // minus
+            // 
+            resources.ApplyResources(this.minus, "minus");
+            this.minus.Name = "minus";
+            // 
+            // plus
+            // 
+            resources.ApplyResources(this.plus, "plus");
+            this.plus.Name = "plus";
+            this.plus.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.plus.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
             // dataGridViewTextBoxColumn10
             // 
@@ -6207,6 +6225,32 @@
             this.del});
             resources.ApplyResources(this.dataGridViewBestellung, "dataGridViewBestellung");
             this.dataGridViewBestellung.Name = "dataGridViewBestellung";
+            // 
+            // kNr
+            // 
+            resources.ApplyResources(this.kNr, "kNr");
+            this.kNr.Name = "kNr";
+            this.kNr.ReadOnly = true;
+            // 
+            // menge
+            // 
+            resources.ApplyResources(this.menge, "menge");
+            this.menge.Name = "menge";
+            // 
+            // eil
+            // 
+            this.eil.FalseValue = "false";
+            resources.ApplyResources(this.eil, "eil");
+            this.eil.Name = "eil";
+            this.eil.TrueValue = "true";
+            // 
+            // del
+            // 
+            this.del.FalseValue = "false";
+            resources.ApplyResources(this.del, "del");
+            this.del.IndeterminateValue = "false";
+            this.del.Name = "del";
+            this.del.TrueValue = "true";
             // 
             // xmlOutput
             // 
@@ -6544,43 +6588,24 @@
             this.xml_export.TabStop = false;
             this.toolTip.SetToolTip(this.xml_export, resources.GetString("xml_export.ToolTip"));
             // 
-            // imageList1
+            // imageListAmpel
             // 
-            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
-            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
-            this.imageList1.Images.SetKeyName(0, "red");
-            this.imageList1.Images.SetKeyName(1, "yellow");
-            this.imageList1.Images.SetKeyName(2, "green");
+            this.imageListAmpel.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageListAmpel.ImageStream")));
+            this.imageListAmpel.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageListAmpel.Images.SetKeyName(0, "red");
+            this.imageListAmpel.Images.SetKeyName(1, "yellow");
+            this.imageListAmpel.Images.SetKeyName(2, "green");
             // 
             // helpProvider1
             // 
             resources.ApplyResources(this.helpProvider1, "helpProvider1");
             // 
-            // kNr
+            // imageListPlusMinus
             // 
-            resources.ApplyResources(this.kNr, "kNr");
-            this.kNr.Name = "kNr";
-            this.kNr.ReadOnly = true;
-            // 
-            // menge
-            // 
-            resources.ApplyResources(this.menge, "menge");
-            this.menge.Name = "menge";
-            // 
-            // eil
-            // 
-            this.eil.FalseValue = "false";
-            resources.ApplyResources(this.eil, "eil");
-            this.eil.Name = "eil";
-            this.eil.TrueValue = "true";
-            // 
-            // del
-            // 
-            this.del.FalseValue = "false";
-            resources.ApplyResources(this.del, "del");
-            this.del.IndeterminateValue = "false";
-            this.del.Name = "del";
-            this.del.TrueValue = "true";
+            this.imageListPlusMinus.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageListPlusMinus.ImageStream")));
+            this.imageListPlusMinus.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageListPlusMinus.Images.SetKeyName(0, "minus.png");
+            this.imageListPlusMinus.Images.SetKeyName(1, "plus.png");
             // 
             // Fahrrad
             // 
@@ -6714,7 +6739,7 @@
         private System.Windows.Forms.TabPage tab_produktion;
         private System.Windows.Forms.TabControl tab1;
         private System.Windows.Forms.TabPage tab_eTeil;
-        private System.Windows.Forms.ImageList imageList1;
+        private System.Windows.Forms.ImageList imageListAmpel;
         private System.Windows.Forms.ToolStripMenuItem gewichtungToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem handbuchToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem scimToolStripMenuItem;
@@ -7303,15 +7328,6 @@
         private System.Windows.Forms.PictureBox arbPlatzAusfueren;
         private System.Windows.Forms.PictureBox addNr;
         private System.Windows.Forms.PictureBox xml_export;
-        private System.Windows.Forms.DataGridViewLinkColumn dataGridViewTextBoxColumn5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
-        private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn2;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn s1;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn s3;
-        private System.Windows.Forms.DataGridViewImageColumn ueber;
         private System.Windows.Forms.DataGridViewLinkColumn dataGridViewLinkColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
@@ -7328,6 +7344,18 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn menge;
         private System.Windows.Forms.DataGridViewCheckBoxColumn eil;
         private System.Windows.Forms.DataGridViewCheckBoxColumn del;
+        private System.Windows.Forms.DataGridViewLinkColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
+        private System.Windows.Forms.DataGridViewImageColumn minus;
+        private System.Windows.Forms.DataGridViewImageColumn plus;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
+        private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn2;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn s1;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn s3;
+        private System.Windows.Forms.DataGridViewImageColumn ueber;
+        private System.Windows.Forms.ImageList imageListPlusMinus;
     }
 }
 
