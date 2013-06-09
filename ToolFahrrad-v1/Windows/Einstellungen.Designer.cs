@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Einstellungen));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tab_abweichung = new System.Windows.Forms.TabPage();
+            this.LabelAbweichung = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lbl_info = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -40,6 +41,7 @@
             this.lbl_10 = new System.Windows.Forms.Label();
             this.trackBarAbweichung = new System.Windows.Forms.TrackBar();
             this.tab_diskount = new System.Windows.Forms.TabPage();
+            this.LabelDiskont = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.mengeGrenze = new System.Windows.Forms.NumericUpDown();
             this.diskGrenze = new System.Windows.Forms.NumericUpDown();
@@ -54,6 +56,7 @@
             this.diskSpeichern = new System.Windows.Forms.Button();
             this.trackBar1 = new System.Windows.Forms.TrackBar();
             this.tab_schicht = new System.Windows.Forms.TabPage();
+            this.LabelSchichten = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -82,115 +85,91 @@
             // 
             // tabControl1
             // 
+            resources.ApplyResources(this.tabControl1, "tabControl1");
             this.tabControl1.Controls.Add(this.tab_abweichung);
             this.tabControl1.Controls.Add(this.tab_diskount);
             this.tabControl1.Controls.Add(this.tab_schicht);
-            this.tabControl1.Location = new System.Drawing.Point(12, 12);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(665, 417);
-            this.tabControl1.TabIndex = 0;
             // 
             // tab_abweichung
             // 
+            resources.ApplyResources(this.tab_abweichung, "tab_abweichung");
             this.tab_abweichung.BackColor = System.Drawing.Color.Transparent;
+            this.tab_abweichung.Controls.Add(this.LabelAbweichung);
             this.tab_abweichung.Controls.Add(this.panel1);
             this.tab_abweichung.Controls.Add(this.lbl_100);
             this.tab_abweichung.Controls.Add(this.lbl_50);
             this.tab_abweichung.Controls.Add(this.btn_ok);
             this.tab_abweichung.Controls.Add(this.lbl_10);
             this.tab_abweichung.Controls.Add(this.trackBarAbweichung);
-            this.tab_abweichung.Location = new System.Drawing.Point(4, 22);
             this.tab_abweichung.Name = "tab_abweichung";
-            this.tab_abweichung.Padding = new System.Windows.Forms.Padding(3);
-            this.tab_abweichung.Size = new System.Drawing.Size(657, 391);
-            this.tab_abweichung.TabIndex = 0;
-            this.tab_abweichung.Text = "Abweichung";
+            this.tab_abweichung.Click += new System.EventHandler(this.tab_abweichung_Click);
+            // 
+            // LabelAbweichung
+            // 
+            resources.ApplyResources(this.LabelAbweichung, "LabelAbweichung");
+            this.LabelAbweichung.Name = "LabelAbweichung";
             // 
             // panel1
             // 
+            resources.ApplyResources(this.panel1, "panel1");
             this.panel1.Controls.Add(this.lbl_info);
             this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Location = new System.Drawing.Point(3, 329);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(339, 60);
-            this.panel1.TabIndex = 7;
-            this.panel1.Visible = false;
             // 
             // lbl_info
             // 
-            this.lbl_info.AutoSize = true;
-            this.lbl_info.Location = new System.Drawing.Point(54, 23);
+            resources.ApplyResources(this.lbl_info, "lbl_info");
             this.lbl_info.Name = "lbl_info";
-            this.lbl_info.Size = new System.Drawing.Size(143, 13);
-            this.lbl_info.TabIndex = 6;
-            this.lbl_info.Text = "Abweichung wurde geändert";
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(11, 11);
+            resources.ApplyResources(this.pictureBox1, "pictureBox1");
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(37, 35);
-            this.pictureBox1.TabIndex = 5;
             this.pictureBox1.TabStop = false;
             // 
             // lbl_100
             // 
-            this.lbl_100.AutoSize = true;
+            resources.ApplyResources(this.lbl_100, "lbl_100");
             this.lbl_100.BackColor = System.Drawing.Color.Transparent;
             this.lbl_100.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.lbl_100.Location = new System.Drawing.Point(240, 51);
             this.lbl_100.Name = "lbl_100";
-            this.lbl_100.Size = new System.Drawing.Size(25, 13);
-            this.lbl_100.TabIndex = 4;
-            this.lbl_100.Text = "100";
             // 
             // lbl_50
             // 
-            this.lbl_50.AutoSize = true;
+            resources.ApplyResources(this.lbl_50, "lbl_50");
             this.lbl_50.BackColor = System.Drawing.Color.Transparent;
             this.lbl_50.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.lbl_50.Location = new System.Drawing.Point(127, 51);
             this.lbl_50.Name = "lbl_50";
-            this.lbl_50.Size = new System.Drawing.Size(19, 13);
-            this.lbl_50.TabIndex = 3;
-            this.lbl_50.Text = "50";
             // 
             // btn_ok
             // 
-            this.btn_ok.Location = new System.Drawing.Point(190, 95);
+            resources.ApplyResources(this.btn_ok, "btn_ok");
             this.btn_ok.Name = "btn_ok";
-            this.btn_ok.Size = new System.Drawing.Size(75, 23);
-            this.btn_ok.TabIndex = 2;
-            this.btn_ok.Text = "Speichern";
             this.btn_ok.UseVisualStyleBackColor = true;
             this.btn_ok.Click += new System.EventHandler(this.btn_ok_Click);
             // 
             // lbl_10
             // 
-            this.lbl_10.AutoSize = true;
+            resources.ApplyResources(this.lbl_10, "lbl_10");
             this.lbl_10.BackColor = System.Drawing.Color.Transparent;
             this.lbl_10.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.lbl_10.Location = new System.Drawing.Point(11, 51);
             this.lbl_10.Name = "lbl_10";
-            this.lbl_10.Size = new System.Drawing.Size(13, 13);
-            this.lbl_10.TabIndex = 1;
-            this.lbl_10.Text = "0";
             // 
             // trackBarAbweichung
             // 
+            resources.ApplyResources(this.trackBarAbweichung, "trackBarAbweichung");
             this.trackBarAbweichung.BackColor = System.Drawing.SystemColors.Control;
-            this.trackBarAbweichung.Location = new System.Drawing.Point(6, 19);
             this.trackBarAbweichung.Name = "trackBarAbweichung";
-            this.trackBarAbweichung.Size = new System.Drawing.Size(259, 45);
-            this.trackBarAbweichung.TabIndex = 0;
             this.trackBarAbweichung.Value = 5;
             this.trackBarAbweichung.Scroll += new System.EventHandler(this.trackBarAbweichung_Scroll);
             // 
             // tab_diskount
             // 
+            resources.ApplyResources(this.tab_diskount, "tab_diskount");
             this.tab_diskount.BackColor = System.Drawing.Color.Transparent;
+            this.tab_diskount.Controls.Add(this.LabelDiskont);
             this.tab_diskount.Controls.Add(this.label8);
             this.tab_diskount.Controls.Add(this.mengeGrenze);
             this.tab_diskount.Controls.Add(this.diskGrenze);
@@ -202,33 +181,27 @@
             this.tab_diskount.Controls.Add(this.panel3);
             this.tab_diskount.Controls.Add(this.diskSpeichern);
             this.tab_diskount.Controls.Add(this.trackBar1);
-            this.tab_diskount.Location = new System.Drawing.Point(4, 22);
             this.tab_diskount.Name = "tab_diskount";
-            this.tab_diskount.Padding = new System.Windows.Forms.Padding(3);
-            this.tab_diskount.Size = new System.Drawing.Size(657, 391);
-            this.tab_diskount.TabIndex = 2;
-            this.tab_diskount.Text = "Diskount";
+            // 
+            // LabelDiskont
+            // 
+            resources.ApplyResources(this.LabelDiskont, "LabelDiskont");
+            this.LabelDiskont.Name = "LabelDiskont";
             // 
             // label8
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(11, 94);
+            resources.ApplyResources(this.label8, "label8");
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(234, 13);
-            this.label8.TabIndex = 18;
-            this.label8.Text = "Prozensatz zur Verwendung der Diskontmenge: ";
             // 
             // mengeGrenze
             // 
-            this.mengeGrenze.Location = new System.Drawing.Point(112, 48);
+            resources.ApplyResources(this.mengeGrenze, "mengeGrenze");
             this.mengeGrenze.Minimum = new decimal(new int[] {
             2,
             0,
             0,
             0});
             this.mengeGrenze.Name = "mengeGrenze";
-            this.mengeGrenze.Size = new System.Drawing.Size(39, 20);
-            this.mengeGrenze.TabIndex = 17;
             this.mengeGrenze.Value = new decimal(new int[] {
             10,
             0,
@@ -238,15 +211,13 @@
             // 
             // diskGrenze
             // 
-            this.diskGrenze.Location = new System.Drawing.Point(112, 16);
+            resources.ApplyResources(this.diskGrenze, "diskGrenze");
             this.diskGrenze.Minimum = new decimal(new int[] {
             1,
             0,
             0,
             0});
             this.diskGrenze.Name = "diskGrenze";
-            this.diskGrenze.Size = new System.Drawing.Size(39, 20);
-            this.diskGrenze.TabIndex = 16;
             this.diskGrenze.Value = new decimal(new int[] {
             5,
             0,
@@ -256,155 +227,112 @@
             // 
             // label7
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(11, 50);
+            resources.ApplyResources(this.label7, "label7");
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(93, 13);
-            this.label7.TabIndex = 15;
-            this.label7.Text = "Mengegrenze (€): ";
             // 
             // label6
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(11, 19);
+            resources.ApplyResources(this.label6, "label6");
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(96, 13);
-            this.label6.TabIndex = 14;
-            this.label6.Text = "Diskontgrenze (€): ";
             // 
             // label3
             // 
-            this.label3.AutoSize = true;
+            resources.ApplyResources(this.label3, "label3");
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.label3.Location = new System.Drawing.Point(240, 141);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(25, 13);
-            this.label3.TabIndex = 13;
-            this.label3.Text = "100";
             // 
             // label4
             // 
-            this.label4.AutoSize = true;
+            resources.ApplyResources(this.label4, "label4");
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.label4.Location = new System.Drawing.Point(127, 141);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(19, 13);
-            this.label4.TabIndex = 12;
-            this.label4.Text = "50";
             // 
             // label5
             // 
-            this.label5.AutoSize = true;
+            resources.ApplyResources(this.label5, "label5");
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.label5.Location = new System.Drawing.Point(11, 141);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(13, 13);
-            this.label5.TabIndex = 11;
-            this.label5.Text = "0";
             // 
             // panel3
             // 
+            resources.ApplyResources(this.panel3, "panel3");
             this.panel3.Controls.Add(this.label2);
             this.panel3.Controls.Add(this.pictureBox3);
-            this.panel3.Location = new System.Drawing.Point(3, 329);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(339, 60);
-            this.panel3.TabIndex = 10;
-            this.panel3.Visible = false;
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(54, 23);
+            resources.ApplyResources(this.label2, "label2");
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(120, 13);
-            this.label2.TabIndex = 6;
-            this.label2.Text = "Diskont wurde geändert";
             // 
             // pictureBox3
             // 
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(11, 11);
+            resources.ApplyResources(this.pictureBox3, "pictureBox3");
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(37, 35);
-            this.pictureBox3.TabIndex = 5;
             this.pictureBox3.TabStop = false;
             // 
             // diskSpeichern
             // 
-            this.diskSpeichern.Location = new System.Drawing.Point(190, 173);
+            resources.ApplyResources(this.diskSpeichern, "diskSpeichern");
             this.diskSpeichern.Name = "diskSpeichern";
-            this.diskSpeichern.Size = new System.Drawing.Size(75, 23);
-            this.diskSpeichern.TabIndex = 9;
-            this.diskSpeichern.Text = "Speichern";
             this.diskSpeichern.UseVisualStyleBackColor = true;
             this.diskSpeichern.Click += new System.EventHandler(this.diskSpeichern_Click);
             // 
             // trackBar1
             // 
+            resources.ApplyResources(this.trackBar1, "trackBar1");
             this.trackBar1.BackColor = System.Drawing.SystemColors.Control;
-            this.trackBar1.Location = new System.Drawing.Point(6, 110);
             this.trackBar1.Name = "trackBar1";
-            this.trackBar1.Size = new System.Drawing.Size(259, 45);
-            this.trackBar1.TabIndex = 8;
             this.trackBar1.Value = 5;
             this.trackBar1.Scroll += new System.EventHandler(this.trackBar1_Scroll);
             // 
             // tab_schicht
             // 
+            resources.ApplyResources(this.tab_schicht, "tab_schicht");
             this.tab_schicht.BackColor = System.Drawing.Color.Transparent;
+            this.tab_schicht.Controls.Add(this.LabelSchichten);
             this.tab_schicht.Controls.Add(this.panel2);
             this.tab_schicht.Controls.Add(this.numericUpDown2);
             this.tab_schicht.Controls.Add(this.numericUpDown1);
             this.tab_schicht.Controls.Add(this.btn_schicht_save);
             this.tab_schicht.Controls.Add(this.lbl_3schicht);
             this.tab_schicht.Controls.Add(this.lbl_2schicht);
-            this.tab_schicht.Location = new System.Drawing.Point(4, 22);
             this.tab_schicht.Name = "tab_schicht";
-            this.tab_schicht.Padding = new System.Windows.Forms.Padding(3);
-            this.tab_schicht.Size = new System.Drawing.Size(657, 391);
-            this.tab_schicht.TabIndex = 1;
-            this.tab_schicht.Text = "Schichten";
+            // 
+            // LabelSchichten
+            // 
+            resources.ApplyResources(this.LabelSchichten, "LabelSchichten");
+            this.LabelSchichten.Name = "LabelSchichten";
             // 
             // panel2
             // 
+            resources.ApplyResources(this.panel2, "panel2");
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.pictureBox2);
-            this.panel2.Location = new System.Drawing.Point(3, 329);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(339, 60);
-            this.panel2.TabIndex = 52;
-            this.panel2.Visible = false;
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(54, 21);
+            resources.ApplyResources(this.label1, "label1");
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(132, 13);
-            this.label1.TabIndex = 6;
-            this.label1.Text = "Schichten wurde geändert";
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(11, 11);
+            resources.ApplyResources(this.pictureBox2, "pictureBox2");
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(37, 35);
-            this.pictureBox2.TabIndex = 5;
             this.pictureBox2.TabStop = false;
             // 
             // numericUpDown2
             // 
+            resources.ApplyResources(this.numericUpDown2, "numericUpDown2");
             this.numericUpDown2.Increment = new decimal(new int[] {
             50,
             0,
             0,
             0});
-            this.numericUpDown2.Location = new System.Drawing.Point(105, 49);
             this.numericUpDown2.Maximum = new decimal(new int[] {
             6000,
             0,
@@ -416,8 +344,6 @@
             0,
             0});
             this.numericUpDown2.Name = "numericUpDown2";
-            this.numericUpDown2.Size = new System.Drawing.Size(56, 20);
-            this.numericUpDown2.TabIndex = 51;
             this.numericUpDown2.TabStop = false;
             this.numericUpDown2.Value = new decimal(new int[] {
             6000,
@@ -428,12 +354,12 @@
             // 
             // numericUpDown1
             // 
+            resources.ApplyResources(this.numericUpDown1, "numericUpDown1");
             this.numericUpDown1.Increment = new decimal(new int[] {
             50,
             0,
             0,
             0});
-            this.numericUpDown1.Location = new System.Drawing.Point(106, 22);
             this.numericUpDown1.Maximum = new decimal(new int[] {
             3600,
             0,
@@ -445,8 +371,6 @@
             0,
             0});
             this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(56, 20);
-            this.numericUpDown1.TabIndex = 50;
             this.numericUpDown1.TabStop = false;
             this.numericUpDown1.Value = new decimal(new int[] {
             3600,
@@ -457,41 +381,27 @@
             // 
             // btn_schicht_save
             // 
-            this.btn_schicht_save.Location = new System.Drawing.Point(87, 75);
+            resources.ApplyResources(this.btn_schicht_save, "btn_schicht_save");
             this.btn_schicht_save.Name = "btn_schicht_save";
-            this.btn_schicht_save.Size = new System.Drawing.Size(75, 23);
-            this.btn_schicht_save.TabIndex = 4;
-            this.btn_schicht_save.Text = "Speichern";
             this.btn_schicht_save.UseVisualStyleBackColor = true;
             this.btn_schicht_save.Click += new System.EventHandler(this.btn_schicht_save_Click);
             // 
             // lbl_3schicht
             // 
-            this.lbl_3schicht.AutoSize = true;
-            this.lbl_3schicht.Location = new System.Drawing.Point(23, 52);
+            resources.ApplyResources(this.lbl_3schicht, "lbl_3schicht");
             this.lbl_3schicht.Name = "lbl_3schicht";
-            this.lbl_3schicht.Size = new System.Drawing.Size(76, 13);
-            this.lbl_3schicht.TabIndex = 2;
-            this.lbl_3schicht.Text = "3. Schicht ab: ";
             // 
             // lbl_2schicht
             // 
-            this.lbl_2schicht.AutoSize = true;
-            this.lbl_2schicht.Location = new System.Drawing.Point(23, 25);
+            resources.ApplyResources(this.lbl_2schicht, "lbl_2schicht");
             this.lbl_2schicht.Name = "lbl_2schicht";
-            this.lbl_2schicht.Size = new System.Drawing.Size(76, 13);
-            this.lbl_2schicht.TabIndex = 0;
-            this.lbl_2schicht.Text = "2. Schicht ab: ";
             // 
             // Einstellungen
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(680, 435);
             this.Controls.Add(this.tabControl1);
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Einstellungen";
-            this.Text = "Einstellungen";
             this.tabControl1.ResumeLayout(false);
             this.tab_abweichung.ResumeLayout(false);
             this.tab_abweichung.PerformLayout();
@@ -508,7 +418,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).EndInit();
             this.tab_schicht.ResumeLayout(false);
-            this.tab_schicht.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
@@ -553,5 +462,8 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label LabelAbweichung;
+        private System.Windows.Forms.Label LabelDiskont;
+        private System.Windows.Forms.Label LabelSchichten;
     }
 }
