@@ -117,6 +117,21 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="tab_xml.Text" xml:space="preserve">
+    <value>XML import</value>
+  </data>
+  <data name="tab_produktion.Text" xml:space="preserve">
+    <value>Production planning</value>
+  </data>
+  <data name="tab_arbeitzeit.Text" xml:space="preserve">
+    <value>Capacity planning</value>
+  </data>
+  <data name="tab_bestellverwaltung.Text" xml:space="preserve">
+    <value>Order planning</value>
+  </data>
+  <data name="xmlOutput.Text" xml:space="preserve">
+    <value>XML export</value>
+  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="prognose1.Size" type="System.Drawing.Size, System.Drawing">
     <value>66, 13</value>
@@ -191,11 +206,8 @@
   <data name="titleXmlLaden.Text" xml:space="preserve">
     <value>XML import</value>
   </data>
-  <data name="pfadText.Text" xml:space="preserve">
-    <value>Error: Invalid XML file</value>
-  </data>
   <data name="xml_suchen.Text" xml:space="preserve">
-    <value>XML open</value>
+    <value>XML load</value>
   </data>
   <data name="xml_suchen.ToolTip" xml:space="preserve">
     <value>Dataimport from XML-file</value>
@@ -275,8 +287,8 @@
   <data name="titlePrognose.Text" xml:space="preserve">
     <value>Forecast</value>
   </data>
-  <data name="tab_xml.Text" xml:space="preserve">
-    <value>XML import</value>
+  <data name="tab_P1.Text" xml:space="preserve">
+    <value>Child's bicycle</value>
   </data>
   <data name="label91.Size" type="System.Drawing.Size, System.Drawing">
     <value>116, 16</value>
@@ -322,8 +334,11 @@
         iCGZugAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="tab_P1.Text" xml:space="preserve">
-    <value>Child's bicycle</value>
+  <data name="p1ETAusfueren.ToolTip" xml:space="preserve">
+    <value>Save data and load into XML</value>
+  </data>
+  <data name="tab_P2.Text" xml:space="preserve">
+    <value>Ladies' bicycle</value>
   </data>
   <data name="p2ETAusfueren.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -338,6 +353,9 @@
         5c+DHGJMxrZeeGe/ZDQB7+SFpA/wrN4u1qbPSeAV9RqzoSRcSFJfygGXHzxy7istlfqXuT+KwQc1pnZA
         iCGZugAAAABJRU5ErkJggg==
 </value>
+  </data>
+  <data name="p2ETAusfueren.ToolTip" xml:space="preserve">
+    <value>Save data and load into XML</value>
   </data>
   <data name="label92.Size" type="System.Drawing.Size, System.Drawing">
     <value>116, 16</value>
@@ -369,8 +387,8 @@
   <data name="label97.Text" xml:space="preserve">
     <value>Distribution request</value>
   </data>
-  <data name="tab_P2.Text" xml:space="preserve">
-    <value>Ladies' bicycle</value>
+  <data name="tab_P3.Text" xml:space="preserve">
+    <value>Man's bicycle</value>
   </data>
   <data name="p3ETAusfueren.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -385,6 +403,9 @@
         5c+DHGJMxrZeeGe/ZDQB7+SFpA/wrN4u1qbPSeAV9RqzoSRcSFJfygGXHzxy7istlfqXuT+KwQc1pnZA
         iCGZugAAAABJRU5ErkJggg==
 </value>
+  </data>
+  <data name="p3ETAusfueren.ToolTip" xml:space="preserve">
+    <value>Save data and load into XML</value>
   </data>
   <data name="label181.Size" type="System.Drawing.Size, System.Drawing">
     <value>116, 16</value>
@@ -416,8 +437,8 @@
   <data name="label186.Text" xml:space="preserve">
     <value>Distribution request</value>
   </data>
-  <data name="tab_P3.Text" xml:space="preserve">
-    <value>Man's bicycle</value>
+  <data name="tab_eTeil.Text" xml:space="preserve">
+    <value>Production parts</value>
   </data>
   <data name="dataGridViewTextBoxColumn1.HeaderText" xml:space="preserve">
     <value>No.</value>
@@ -458,11 +479,18 @@
   <data name="colPlanung.HeaderText" xml:space="preserve">
     <value>Planned</value>
   </data>
-  <data name="tab_eTeil.Text" xml:space="preserve">
-    <value>Production parts</value>
-  </data>
-  <data name="tab_produktion.Text" xml:space="preserve">
-    <value>Production planning</value>
+  <data name="arbPlatzAusfueren.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29m
+        dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAF0SURBVFhH1ZZNSgQxFIR75RkE7+HWrSC48hiCx3Mr
+        CIKrAVeuBEHwAK4EQauaaclUKu91pHsGP/hg6FeZ/HTSZFiBM/gIvxOZYXZx3qHr0MlskyN4De/gJ9TG
+        rRloLtNyAjfQNSh1M3C5yArO/Am6sPoGFc0oWX1cdg05OftzqGhOyerDPSwD3AOncC5lW6pk9WrDHcMe
+        yrZUqepcxufiQUtm3JIrrm3kuJFcwRme2y2uXeTwKg8i3a5XeiY0/t8F/No+iGSG2Qy+pjlfw51TdAWj
+        QbDGzKq0BsFTsXrnEzqIvXY+cQn5fih//3sOOqGDvlLtfK+DaHU+ydrvIJa+w3V/2Lg5XMDJbEb3p9gV
+        IjO6J+QKkRlc1hfo2pYyM74CLShZPYKX27LtB6woA1TJ6i14k7qFZdsHWFEGqJLV554iegMrNKRk9bmb
+        jld9XvkrXDhSmXPs2Dn3g8U1iFSiGxCv+Fx2O/OJ7g/H0vzpDrcMw/ADL27aGfjYuXUAAAAASUVORK5C
+        YII=
+</value>
   </data>
   <data name="dataGridViewTextBoxColumn5.HeaderText" xml:space="preserve">
     <value>No.</value>
@@ -491,8 +519,8 @@
   <data name="s3.ToolTipText" xml:space="preserve">
     <value>3rd shift needed above 6000 min</value>
   </data>
-  <data name="tab_arbeitzeit.Text" xml:space="preserve">
-    <value>Capacity planning</value>
+  <data name="tabPage2.Text" xml:space="preserve">
+    <value>Purchase parts</value>
   </data>
   <data name="dataGridViewLinkColumn1.HeaderText" xml:space="preserve">
     <value>No.</value>
@@ -533,37 +561,108 @@
   <data name="dataGridViewTextBoxColumn21.ToolTipText" xml:space="preserve">
     <value>Stock</value>
   </data>
-  <data name="tabPage2.Text" xml:space="preserve">
-    <value>Purchase parts</value>
-  </data>
   <data name="tab_bestellung.Text" xml:space="preserve">
     <value>Orders</value>
   </data>
-  <data name="pictureBox12.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="addNr.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29m
-        dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAJ9SURBVFhHvdfBx1ZBFMfxS0RE23i3Ea0iolVERLRq
-        1Tb6S6JVRET/QUS8q7atIqJVtIqIiIiIiDqfxzOv805z55l7PfrxZZx75px758w9d+60QCeCG8HD4E3w
-        Nvi9xZjNNT5896azwdPge/BnEL7mmLtap4L7wY+glWQEc8UQa5HcuSVtBV2DWMOrcTH4FLQCfQ4eB+p8
-        KVBrGLO5xmdurthductWgC/BvWBkc/Hha04dR+zZlTgZtJb9ZXA6qHU14A/jWuaYW8fjL9c/sllq50fB
-        nPITGs9JjBwTch3TQVDv9sOgt+S5VMZzEkOsHFsuOY9k82QHAc8EPdl0nhzGPYlV7y05N1Krn0G+aBPt
-        W2LmHHJu9tadraHgFRzZ7UslZv16y71pmdn4INgl9XsWWFYYH6vpjMTOueSeXicDrgU9nQ++BXkO2C4E
-        PV0P8hy5p6/JgF1P8jzg9yq4vMWY7UXQk9g5l9zTr2RAs0kkla9i7mjGbF6vnsTOueRefQN5pcqTrbqB
-        pSWwzPy0WU+O0nJXlaC3CdX3feD1uc0QstF2bUK+5nwIxChqbsLeayh5sVveUh5PYjOWTmhcVo5Pbuti
-        FDVfw7oRfQxKI3LWK3ZPONKg+OQV8vUjdrGLHZtG1GvFVwLLaDlvMQyKbymBGDTbiulJkC/qbkcX9yCx
-        Zj9GpH65bvAJ3Zd2fo5p6YFkVEMHEnJ0zru+4O7XlMOc+skhx+wx/VxQNyao391g9C3gW9ccYsvRlSN2
-        azLY87G8aPRYnud0pb22TshrESt/vIakTjpX3SOWYK4Yi3/Nsty5lvnff05r6fE3A3XWot8FJaExm2t8
-        dn3St5qmv27FptRenFc7AAAAAElFTkSuQmCC
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29m
+        dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAD7SURBVDhPnZNBCgIxEAT35Ml/CILgVRD8k/8QBB/j
+        yR8IngTBqw8QBEEQtCukl+y42YMNDZmezuxkkm16MBE34lF8Z7JGIzeItfgUPxWSw/ODkbgXMb3EnbgS
+        0SFrNHJ48KK32IokbuIcoQJyePBypISZyDmpzrrEIbMEHrzsmSL467QYgQ4j8LZdXHKwJAioFcCLfibw
+        YDwUWvbGSB8HL/GdIBbwbfSRHBiLxA+Caw4WBAHeGIEXPR3BA2GYEbUCHnzaM3SNtOy2jfIaW7+74JHE
+        IiXI+SF1OmaAHh7VSfJ8Da4NzQPH23nKxt8/Uwn/zifRG1n3/M5N8wW4eG/fCAGusgAAAABJRU5ErkJg
+        gg==
 </value>
   </data>
+  <data name="addNr.ToolTip" xml:space="preserve">
+    <value>Add new row</value>
+  </data>
   <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>230, 37</value>
+    <value>137, 24</value>
   </data>
   <data name="label3.Text" xml:space="preserve">
     <value>Order planning</value>
   </data>
-  <data name="tab_bestellverwaltung.Text" xml:space="preserve">
-    <value>Order planning</value>
+  <data name="uebernehmenXML.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29m
+        dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAF0SURBVFhH1ZZNSgQxFIR75RkE7+HWrSC48hiCx3Mr
+        CIKrAVeuBEHwAK4EQauaaclUKu91pHsGP/hg6FeZ/HTSZFiBM/gIvxOZYXZx3qHr0MlskyN4De/gJ9TG
+        rRloLtNyAjfQNSh1M3C5yArO/Am6sPoGFc0oWX1cdg05OftzqGhOyerDPSwD3AOncC5lW6pk9WrDHcMe
+        yrZUqepcxufiQUtm3JIrrm3kuJFcwRme2y2uXeTwKg8i3a5XeiY0/t8F/No+iGSG2Qy+pjlfw51TdAWj
+        QbDGzKq0BsFTsXrnEzqIvXY+cQn5fih//3sOOqGDvlLtfK+DaHU+ydrvIJa+w3V/2Lg5XMDJbEb3p9gV
+        IjO6J+QKkRlc1hfo2pYyM74CLShZPYKX27LtB6woA1TJ6i14k7qFZdsHWFEGqJLV554iegMrNKRk9bmb
+        jld9XvkrXDhSmXPs2Dn3g8U1iFSiGxCv+Fx2O/OJ7g/H0vzpDrcMw/ADL27aGfjYuXUAAAAASUVORK5C
+        YII=
+</value>
+  </data>
+  <data name="zurueck.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29m
+        dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAADOSURBVDhPzZIxCsJAEEVTWQmClWDlbWwFwRtYCZ4w
+        IAiCIAiC4AG8gZVVfC9kQ0wGFbTww4PdP3+XyWyyoii+4ufqwQo2cK9wrWftpcZwBPuKsGYmlLefwOAV
+        FmBYXOtZMxN2YosGLjDUaEnvDGbMdrQFi/NyF2sGZsx25LAsDspdrD6YMdvRuwtysN5Er9YONG0zUqo3
+        2UOtNWg6qGiII3DA6bBrvVrtZ3SYBmQCyvWh4ulwkm+eLmnifKbwkezEz/H39fANfLYl/KWy7AFhXnQd
+        DEtoLQAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="zurueck.ToolTip" xml:space="preserve">
+    <value>Reset changes</value>
+  </data>
+  <data name="saveAenderungen.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29m
+        dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAACsSURBVDhPnZNRCsIwEAUDvZlfvVlB8Dx+9UiCN9Ad
+        ydu+prWNDgx52XSD4KYEQzgRjDl8fZEzoIfecg05cNomvFTJwHojPOvGUZMrlFnp3XwAqrlCOevtB6Ca
+        O1bJoPoSjHuoeitnoH0Gbu9Fv2R1wb/uFn8xA/9xL5qH1QVwNIFSk6j9EuraI2TeK54JmX2UVTwTWB8E
+        HoQXewTWz2PiSfIi4WgCpSYxesrwBjTZs3EhGb7+AAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="saveAenderungen.ToolTip" xml:space="preserve">
+    <value>Save changes</value>
+  </data>
+  <data name="label274.Size" type="System.Drawing.Size, System.Drawing">
+    <value>164, 25</value>
+  </data>
+  <data name="label274.Text" xml:space="preserve">
+    <value>Workingtime list</value>
+  </data>
+  <data name="label273.Size" type="System.Drawing.Size, System.Drawing">
+    <value>148, 25</value>
+  </data>
+  <data name="label273.Text" xml:space="preserve">
+    <value>Production list</value>
+  </data>
+  <data name="label272.Size" type="System.Drawing.Size, System.Drawing">
+    <value>99, 25</value>
+  </data>
+  <data name="label272.Text" xml:space="preserve">
+    <value>Order list</value>
+  </data>
+  <data name="label271.Size" type="System.Drawing.Size, System.Drawing">
+    <value>176, 25</value>
+  </data>
+  <data name="label271.Text" xml:space="preserve">
+    <value>Marketplace sale</value>
+  </data>
+  <data name="label270.Size" type="System.Drawing.Size, System.Drawing">
+    <value>198, 25</value>
+  </data>
+  <data name="label270.Text" xml:space="preserve">
+    <value>Distribution request</value>
+  </data>
+  <data name="dateiToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>32, 20</value>
+  </data>
+  <data name="dateiToolStripMenuItem.Text" xml:space="preserve">
+    <value>File</value>
+  </data>
+  <data name="einstellungenToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>39, 20</value>
+  </data>
+  <data name="einstellungenToolStripMenuItem.Text" xml:space="preserve">
+    <value>Tools</value>
   </data>
   <data name="dateiÖffnenToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -576,7 +675,7 @@
 </value>
   </data>
   <data name="dateiÖffnenToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>137, 22</value>
+    <value>152, 22</value>
   </data>
   <data name="xMLexportToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -589,10 +688,10 @@
 </value>
   </data>
   <data name="xMLexportToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>137, 22</value>
+    <value>152, 22</value>
   </data>
   <data name="toolStripSeparator1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>134, 6</value>
+    <value>149, 6</value>
   </data>
   <data name="schließenToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -606,22 +705,10 @@
 </value>
   </data>
   <data name="schließenToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>137, 22</value>
+    <value>152, 22</value>
   </data>
   <data name="schließenToolStripMenuItem.Text" xml:space="preserve">
-    <value>Close</value>
-  </data>
-  <data name="dateiToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>37, 20</value>
-  </data>
-  <data name="dateiToolStripMenuItem.Text" xml:space="preserve">
-    <value>File</value>
-  </data>
-  <data name="handbuchToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>114, 22</value>
-  </data>
-  <data name="handbuchToolStripMenuItem.Text" xml:space="preserve">
-    <value>Manual</value>
+    <value>Close application</value>
   </data>
   <data name="hilfeToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -635,28 +722,34 @@
 </value>
   </data>
   <data name="hilfeToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>126, 22</value>
+    <value>152, 22</value>
   </data>
   <data name="hilfeToolStripMenuItem.Text" xml:space="preserve">
     <value>Help</value>
   </data>
+  <data name="handbuchToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>152, 22</value>
+  </data>
+  <data name="handbuchToolStripMenuItem.Text" xml:space="preserve">
+    <value>Manual</value>
+  </data>
+  <data name="spracheToolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>152, 22</value>
+  </data>
+  <data name="spracheToolStripMenuItem1.Text" xml:space="preserve">
+    <value>Language</value>
+  </data>
   <data name="deutschToolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>122, 22</value>
+    <value>152, 22</value>
   </data>
   <data name="deutschToolStripMenuItem1.Text" xml:space="preserve">
     <value>Germany</value>
   </data>
   <data name="englischToolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>122, 22</value>
+    <value>152, 22</value>
   </data>
   <data name="englischToolStripMenuItem1.Text" xml:space="preserve">
     <value>English</value>
-  </data>
-  <data name="spracheToolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>126, 22</value>
-  </data>
-  <data name="spracheToolStripMenuItem1.Text" xml:space="preserve">
-    <value>Language</value>
   </data>
   <data name="gewichtungToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -668,35 +761,36 @@
 </value>
   </data>
   <data name="gewichtungToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>126, 22</value>
+    <value>152, 22</value>
   </data>
   <data name="gewichtungToolStripMenuItem.Text" xml:space="preserve">
     <value>Settings</value>
   </data>
-  <data name="einstellungenToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>61, 20</value>
-  </data>
-  <data name="einstellungenToolStripMenuItem.Text" xml:space="preserve">
-    <value>Settings</value>
-  </data>
   <data name="startSeiteToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>133, 22</value>
+    <value>152, 22</value>
   </data>
   <data name="startSeiteToolStripMenuItem.Text" xml:space="preserve">
     <value>Homepage</value>
   </data>
-  <data name="scimToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>50, 20</value>
+  <data name="xml_export.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29m
+        dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAGuSURBVFhHvZdBSsRAEEWz8gCuBEHwDIJnEARXHkPw
+        Kt7DA7gVBLeCBxAEQXDrShC03pAeav7vjO1MZz48CD9V9Xu6B5IMSXvBVXAffAU/I6/BcaC6CN5HuFbR
+        Q2+Zw0xmk0HWig6Dp6AUF96CWvhl8B2UOobjqY4CZuSZQBaZC7Ga50CLGHoSqDQ819cWwYy8owUyFzvB
+        luhNuAlUU+EF7tUWwaxaPdnDQzKAczoNVOfBuvACNdSqmMnsXEu2bc9BUBN/tly3jo+gJmbnOrJXDJgS
+        Q7V2iqkFIK11Y0Js60ug9Qo1tSMo0no3GtWtz4xGdeszo1Hd+sxoVLc+MxrVrc+MRnXrM6NR+SHDdaty
+        FrjRqLOgPI65bpXlmTGzLM+MmWV5ZswsyzNjZlmeGRXxkqF1f1F7MUFa54ZoP/jPo7hAD70qrXNDdBto
+        TSv0qrTGjaRNtl7Ro9D7bozadOsVPQq978aobbZeyUeh9+yldPnBMIOYnbM+g+ExGXAXTL0ZbyNmMjtn
+        kT1cJ2PXkD35aTY3y08zxNnschFk2X+N1bAl+vnUEz7FyBh/+TD8AuSGIQLcNRHpAAAAAElFTkSuQmCC
+</value>
   </data>
-  <data name="menu.Size" type="System.Drawing.Size, System.Drawing">
-    <value>884, 24</value>
-  </data>
-  <data name="imageList1.ImageStream" mimetype="application/x-microsoft.net.object.binary.base64">
+  <data name="imageListAmpel.ImageStream" mimetype="application/x-microsoft.net.object.binary.base64">
     <value>
         AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
         LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
         ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAABS
-        CwAAAk1TRnQBSQFMAgEBAwEAAUgBAQFIAQEBEAEAARABAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
+        CwAAAk1TRnQBSQFMAgEBAwEAAWABAgFgAQIBEAEAARABAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
         AwABQAMAARADAAEBAQABCAYAAQQYAAGAAgABgAMAAoABAAGAAwABgAEAAYABAAKAAgADwAEAAcAB3AHA
         AQAB8AHKAaYBAAEzBQABMwEAATMBAAEzAQACMwIAAxYBAAMcAQADIgEAAykBAANVAQADTQEAA0IBAAM5
         AQABgAF8Af8BAAJQAf8BAAGTAQAB1gEAAf8B7AHMAQABxgHWAe8BAAHWAucBAAGQAakBrQIAAf8BMwMA
@@ -747,8 +841,101 @@
         AQEBAAEBAgAB4AEPAeABDwHgAQ8CAAs=
 </value>
   </data>
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>884, 426</value>
+  <data name="imageListPlusMinus.ImageStream" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
+        LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
+        ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAAAM
+        CAAAAk1TRnQBSQFMAgEBAgEAASABAAEgAQABEAEAARABAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
+        AwABQAMAARADAAEBAQABCAYAAQQYAAGAAgABgAMAAoABAAGAAwABgAEAAYABAAKAAgADwAEAAcAB3AHA
+        AQAB8AHKAaYBAAEzBQABMwEAATMBAAEzAQACMwIAAxYBAAMcAQADIgEAAykBAANVAQADTQEAA0IBAAM5
+        AQABgAF8Af8BAAJQAf8BAAGTAQAB1gEAAf8B7AHMAQABxgHWAe8BAAHWAucBAAGQAakBrQIAAf8BMwMA
+        AWYDAAGZAwABzAIAATMDAAIzAgABMwFmAgABMwGZAgABMwHMAgABMwH/AgABZgMAAWYBMwIAAmYCAAFm
+        AZkCAAFmAcwCAAFmAf8CAAGZAwABmQEzAgABmQFmAgACmQIAAZkBzAIAAZkB/wIAAcwDAAHMATMCAAHM
+        AWYCAAHMAZkCAALMAgABzAH/AgAB/wFmAgAB/wGZAgAB/wHMAQABMwH/AgAB/wEAATMBAAEzAQABZgEA
+        ATMBAAGZAQABMwEAAcwBAAEzAQAB/wEAAf8BMwIAAzMBAAIzAWYBAAIzAZkBAAIzAcwBAAIzAf8BAAEz
+        AWYCAAEzAWYBMwEAATMCZgEAATMBZgGZAQABMwFmAcwBAAEzAWYB/wEAATMBmQIAATMBmQEzAQABMwGZ
+        AWYBAAEzApkBAAEzAZkBzAEAATMBmQH/AQABMwHMAgABMwHMATMBAAEzAcwBZgEAATMBzAGZAQABMwLM
+        AQABMwHMAf8BAAEzAf8BMwEAATMB/wFmAQABMwH/AZkBAAEzAf8BzAEAATMC/wEAAWYDAAFmAQABMwEA
+        AWYBAAFmAQABZgEAAZkBAAFmAQABzAEAAWYBAAH/AQABZgEzAgABZgIzAQABZgEzAWYBAAFmATMBmQEA
+        AWYBMwHMAQABZgEzAf8BAAJmAgACZgEzAQADZgEAAmYBmQEAAmYBzAEAAWYBmQIAAWYBmQEzAQABZgGZ
+        AWYBAAFmApkBAAFmAZkBzAEAAWYBmQH/AQABZgHMAgABZgHMATMBAAFmAcwBmQEAAWYCzAEAAWYBzAH/
+        AQABZgH/AgABZgH/ATMBAAFmAf8BmQEAAWYB/wHMAQABzAEAAf8BAAH/AQABzAEAApkCAAGZATMBmQEA
+        AZkBAAGZAQABmQEAAcwBAAGZAwABmQIzAQABmQEAAWYBAAGZATMBzAEAAZkBAAH/AQABmQFmAgABmQFm
+        ATMBAAGZATMBZgEAAZkBZgGZAQABmQFmAcwBAAGZATMB/wEAApkBMwEAApkBZgEAA5kBAAKZAcwBAAKZ
+        Af8BAAGZAcwCAAGZAcwBMwEAAWYBzAFmAQABmQHMAZkBAAGZAswBAAGZAcwB/wEAAZkB/wIAAZkB/wEz
+        AQABmQHMAWYBAAGZAf8BmQEAAZkB/wHMAQABmQL/AQABzAMAAZkBAAEzAQABzAEAAWYBAAHMAQABmQEA
+        AcwBAAHMAQABmQEzAgABzAIzAQABzAEzAWYBAAHMATMBmQEAAcwBMwHMAQABzAEzAf8BAAHMAWYCAAHM
+        AWYBMwEAAZkCZgEAAcwBZgGZAQABzAFmAcwBAAGZAWYB/wEAAcwBmQIAAcwBmQEzAQABzAGZAWYBAAHM
+        ApkBAAHMAZkBzAEAAcwBmQH/AQACzAIAAswBMwEAAswBZgEAAswBmQEAA8wBAALMAf8BAAHMAf8CAAHM
+        Af8BMwEAAZkB/wFmAQABzAH/AZkBAAHMAf8BzAEAAcwC/wEAAcwBAAEzAQAB/wEAAWYBAAH/AQABmQEA
+        AcwBMwIAAf8CMwEAAf8BMwFmAQAB/wEzAZkBAAH/ATMBzAEAAf8BMwH/AQAB/wFmAgAB/wFmATMBAAHM
+        AmYBAAH/AWYBmQEAAf8BZgHMAQABzAFmAf8BAAH/AZkCAAH/AZkBMwEAAf8BmQFmAQAB/wKZAQAB/wGZ
+        AcwBAAH/AZkB/wEAAf8BzAIAAf8BzAEzAQAB/wHMAWYBAAH/AcwBmQEAAf8CzAEAAf8BzAH/AQAC/wEz
+        AQABzAH/AWYBAAL/AZkBAAL/AcwBAAJmAf8BAAFmAf8BZgEAAWYC/wEAAf8CZgEAAf8BZgH/AQAC/wFm
+        AQABIQEAAaUBAANfAQADdwEAA4YBAAOWAQADywEAA7IBAAPXAQAD3QEAA+MBAAPqAQAD8QEAA/gBAAHw
+        AfsB/wEAAaQCoAEAA4ADAAH/AgAB/wMAAv8BAAH/AwAB/wEAAf8BAAL/AgAD/wEAAf8B9wERCgABEQH3
+        Av8B9wERCgABEQH3Af8gAAHvDgAC7w4AAe8gAAEQAQAB8goAAfIBAAIQAQAB8goAAfIBAAEQdwAC66sA
+        AesGAAHrCAAB6wYAAesoAAFtBgABbQgAAW0GAAFtuwACbWcAARABAAHyCgAB8gEAAhABAAHyCgAB8gEA
+        ARAgAAHvDgAC7w4AAe8gAAH/Ae8BEQoAAREB7wL/Ae8BEQoAAREB7wH/IAABQgFNAT4HAAE+AwABKAMA
+        AUADAAEQAwABAQEAAQEFAAGAFwAD/xEAAR8B+AEfAfgEAAE/AfwBPwH8BAABPwH8AT4BfAQAAT8B/AE+
+        AXwEAAE/AfwBPgF8BAABMAEMATABDAQAATABDAEwAQwEAAE/AfwBPgF8BAABPwH8AT4BfAQAAT8B/AE+
+        AXwEAAE/AfwBPwH8BAABHwH4AR8B+BQACw==
+</value>
+  </data>
+  <data name="kNr.HeaderText" xml:space="preserve">
+    <value>No.</value>
+  </data>
+  <data name="menge.HeaderText" xml:space="preserve">
+    <value>Amount</value>
+  </data>
+  <data name="eil.HeaderText" xml:space="preserve">
+    <value>Express order</value>
+  </data>
+  <data name="del.HeaderText" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="dataGridViewTextBoxColumn24.HeaderText" xml:space="preserve">
+    <value>No.</value>
+  </data>
+  <data name="dataGridViewTextBoxColumn25.HeaderText" xml:space="preserve">
+    <value>Amount</value>
+  </data>
+  <data name="dataGridViewTextBoxColumn26.ToolTipText" xml:space="preserve">
+    <value>Ordertype (N=normal, E=express)</value>
+  </data>
+  <data name="dataGridViewTextBoxColumn12.HeaderText" xml:space="preserve">
+    <value>No.</value>
+  </data>
+  <data name="dataGridViewTextBoxColumn22.HeaderText" xml:space="preserve">
+    <value>Amount</value>
+  </data>
+  <data name="dataGridViewTextBoxColumn23.HeaderText" xml:space="preserve">
+    <value>Price</value>
+  </data>
+  <data name="dataGridViewTextBoxColumn27.HeaderText" xml:space="preserve">
+    <value>No.</value>
+  </data>
+  <data name="dataGridViewTextBoxColumn28.HeaderText" xml:space="preserve">
+    <value>Amount</value>
+  </data>
+  <data name="dataGridViewTextBoxColumn29.HeaderText" xml:space="preserve">
+    <value>WS</value>
+  </data>
+  <data name="dataGridViewTextBoxColumn29.ToolTipText" xml:space="preserve">
+    <value>Workstation</value>
+  </data>
+  <data name="dataGridViewTextBoxColumn30.HeaderText" xml:space="preserve">
+    <value>Shift</value>
+  </data>
+  <data name="dataGridViewTextBoxColumn30.ToolTipText" xml:space="preserve">
+    <value>1, 2, 3</value>
+  </data>
+  <data name="ueberStunden.HeaderText" xml:space="preserve">
+    <value>Overtime</value>
+  </data>
+  <data name="ueberStunden.ToolTipText" xml:space="preserve">
+    <value>min/day</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>

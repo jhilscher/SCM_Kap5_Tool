@@ -9,45 +9,17 @@ namespace ToolFahrrad_v1
     public class ETeil : Teil
     {
         // Class members
+        private double wert;
         private int puffer;
         private bool kdhUpdate = false;
-        public bool KdhUpdate
-        {
-            get { return kdhUpdate; }
-            set { kdhUpdate = value; }
-        }
         private int produktionsMenge = 0;
         private int vaterInWarteschlange = 0;
-
-        public int VaterInWarteschlange {
-            get { return vaterInWarteschlange; }
-            set { vaterInWarteschlange = value; }
-        }
         private int inWarteschlange = 0;
         private int inBearbeitung = 0;
         private bool istEndProdukt = false;
-        public bool IstEndProdukt
-        {
-            get { return istEndProdukt; }
-            set { istEndProdukt = value; }
-        }
         private Dictionary<int, int[]> kdhPuffer;
-        public Dictionary<int, int[]> KdhPuffer {
-            get { return kdhPuffer; }
-            set { kdhPuffer = value; }
-        }
         private Dictionary<string, int> kdhProduktionsmenge;
-        public Dictionary<string, int> KdhProduktionsmenge {
-            get { return kdhProduktionsmenge; }
-            set { kdhProduktionsmenge = value; }
-        }
-
         private Dictionary<int, int[]> kdhVaterInWarteschlange;
-
-        public Dictionary<int, int[]> KdhVaterInWarteschlange {
-            get { return kdhVaterInWarteschlange; }
-            set { kdhVaterInWarteschlange = value; }
-        }
         Dictionary<Teil, int> zusammensetzung;
         Dictionary<int, int> position;
         List<int> benutzteArbeitsplaetze;
@@ -56,14 +28,14 @@ namespace ToolFahrrad_v1
         public ETeil(int nummer, string bez)
             : base(nummer, bez)
         {
+            wert = 0.0;
             puffer = -1;
             zusammensetzung = new Dictionary<Teil, int>();
             position = new Dictionary<int, int>();
             benutzteArbeitsplaetze = new List<int>();
-            KDHaufNULL();     
+            KDHaufNULL();
             kdhProduktionsmenge = new Dictionary<string, int>();
         }
-
         public void KDHaufNULL(){
         int[] array = new int[]{-1,-1,-1};
         int[] array2 = new int[] { 0, 0, 0 };
@@ -76,12 +48,46 @@ namespace ToolFahrrad_v1
             kdhVaterInWarteschlange.Add(16, array2);
             kdhVaterInWarteschlange.Add(17, array2);
         }
-
         // Getter / Setter
+        public double Wert
+        {
+            get { return wert; }
+            set { wert = value; }
+        }
+        public bool KdhUpdate
+        {
+            get { return kdhUpdate; }
+            set { kdhUpdate = value; }
+        }
         public int Puffer
         {
             get { return puffer; }
             set { puffer = value; }
+        }
+        public int VaterInWarteschlange
+        {
+            get { return vaterInWarteschlange; }
+            set { vaterInWarteschlange = value; }
+        }
+        public bool IstEndProdukt
+        {
+            get { return istEndProdukt; }
+            set { istEndProdukt = value; }
+        }
+        public Dictionary<int, int[]> KdhPuffer
+        {
+            get { return kdhPuffer; }
+            set { kdhPuffer = value; }
+        }
+        public Dictionary<string, int> KdhProduktionsmenge
+        {
+            get { return kdhProduktionsmenge; }
+            set { kdhProduktionsmenge = value; }
+        }
+        public Dictionary<int, int[]> KdhVaterInWarteschlange
+        {
+            get { return kdhVaterInWarteschlange; }
+            set { kdhVaterInWarteschlange = value; }
         }
         public int ProduktionsMengePer0
         {
