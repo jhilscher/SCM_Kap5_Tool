@@ -11,11 +11,13 @@ namespace ToolFahrrad_v1
         DataContainer dc;
         int aktPeriode;
         List<Bestellposition> bvPositionen;
+        List<DvPosition> dvPositionen;
         // Constructor
         public Bestellverwaltung()
         {
             dc = DataContainer.Instance;
             bvPositionen = new List<Bestellposition>();
+            dvPositionen = new List<DvPosition>();
         }
         // Getter / Setter
         public int AktPeriode
@@ -37,6 +39,22 @@ namespace ToolFahrrad_v1
         public void clearBvPositionen()
         {
             bvPositionen.Clear();
+        }
+        public List<DvPosition> DvPositionen
+        {
+            get { return dvPositionen; }
+        }
+        public void addDvPosition(int nr, int menge, double preis, double strafe)
+        {
+            dvPositionen.Add(new DvPosition(nr, menge, preis, strafe));
+        }
+        public void delDvPosition(int nr, int menge, double preis, double strafe)
+        {
+            dvPositionen.Remove(new DvPosition(nr, menge, preis, strafe));
+        }
+        public void clearDvPositionen()
+        {
+            dvPositionen.Clear();
         }
         // Create list of orders
         public void generiereBestellListe()
@@ -178,9 +196,21 @@ namespace ToolFahrrad_v1
             }
             optimiereBvPositionen();
         }
+        // Transfer list bvPositionen into data container
         public void ladeBvPositionenInDc()
         {
             dc.Bestellungen = BvPositionen;
+        }
+        public void generiereListeDV()
+        {
+            dvPositionen.Clear();
+            foreach (ETeil et in dc.ListeETeile)
+            {
+                if (et.ProduktionsMengePer0 < 0)
+                {
+                    addDvPosition(et.Nummer, et.ProduktionsMengePer0 * -1, et.Wert, 0.0);
+                }
+            }
         }
         private int berechneMenge(double verwDiskont, int bestellMenge, int diskont)
         {
