@@ -15,6 +15,11 @@ namespace ToolFahrrad_v1
         private List<Bestellposition> listeBestellungen;
         private Dictionary<int, Teil> listeTeile;
         private Dictionary<int, Arbeitsplatz> listeArbeitsplaetze;
+        private List<int[]> apKapazitaet;
+        public List<int[]> ApKapazitaet {
+            get { return apKapazitaet; }
+            set { apKapazitaet = value; }
+        }
         private int[] listeReihenfolge;
         private bool sonderProduktion = false;
         private bool ueberstundenErlaubt = true;
@@ -59,6 +64,7 @@ namespace ToolFahrrad_v1
         // Constructor
         private DataContainer()
         {
+            apKapazitaet = new List<int[]>();
             berechneKindTeil = true;
             listeBestellungen = new List<Bestellposition>();
             listeTeile = new Dictionary<int, Teil>();

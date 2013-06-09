@@ -20,9 +20,14 @@ namespace ToolFahrrad_v1
         Produktionsplanung pp = new Produktionsplanung();
         Bestellverwaltung bv = new Bestellverwaltung();
         List<Bestellposition> bp;
+        List<int[]> xmlAP;
         private bool bestellungUpdate = false;
         private bool okPrognose = false;
         private bool okXml = false;
+
+        private Rectangle dragBoxSrc;
+        private int rowIndexSrc;
+        private int rowIndexTar;
         /// <summary>
         /// Konstruktor
         /// </summary>
@@ -45,7 +50,9 @@ namespace ToolFahrrad_v1
             this.save.Visible = true;
             this.tab1.Visible = true;
             this.tab2.Visible = true;
+            this.panelXMLerstellen.Visible = true;
             this.bestellungUpdate = false;
+            this.xml_export.Visible = true;
         }
         private void ausführen() {
             bv.clearBvPositionen();
@@ -73,7 +80,10 @@ namespace ToolFahrrad_v1
                 this.DispositionDarstellung(index);
             }
             this.Information();
+            this.xmlVorbereitung(100); // 100=all
         }
+
+
 
         private void DispositionDarstellung(int index) {
             bv.clearBvPositionen();
@@ -645,21 +655,21 @@ namespace ToolFahrrad_v1
             if (openFileDialog.ShowDialog() == DialogResult.OK) {
                 if (xml.ReadDatei(openFileDialog.FileName) == true) {
                     xmlTextBox.Text = openFileDialog.FileName;
-                    pfadText.ForeColor = Color.ForestGreen;
                     xmlOffenOK.Visible = true;
-                    pfadText.Visible = false;
                     okXml = true;
                     if (this.okPrognose == true)
                         toolAusfueren.Visible = true;
                 }
                 else {
                     xmlTextBox.Text = openFileDialog.FileName;
-                    pfadText.ForeColor = Color.Red;
                     toolAusfueren.Visible = false;
                     xmlOffenOK.Visible = false;
                     save.Visible = false;
-                    pfadText.Visible = true;
                     okXml = false;
+
+                    MessageBox.Show("Es wurde zum Laden falsche Datei ausgewählt. \nDas Programm kann nicht ausgeführt werden", "Fehlermeldung",
+                       MessageBoxButtons.OK, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button1);
+
                 }
             }
             this.panelXML.Visible = true;
@@ -695,9 +705,9 @@ namespace ToolFahrrad_v1
             }
 
             dataGridViewKTeil.Columns[8].HeaderText = "B" + ((Convert.ToInt32(xml.period)) + 1);
-            dataGridViewKTeil.Columns[10].HeaderText = "B" + ((Convert.ToInt32(xml.period)) + 2);
-            dataGridViewKTeil.Columns[12].HeaderText = "B" + (Convert.ToInt32(xml.period) + 3);
-            dataGridViewKTeil.Columns[14].HeaderText = "B" + (Convert.ToInt32(xml.period) + 4);
+            dataGridViewKTeil.Columns[9].HeaderText = "B" + ((Convert.ToInt32(xml.period)) + 2);
+            dataGridViewKTeil.Columns[10].HeaderText = "B" + (Convert.ToInt32(xml.period) + 3);
+            dataGridViewKTeil.Columns[11].HeaderText = "B" + (Convert.ToInt32(xml.period) + 4);
 
             foreach (var a in instance.ListeKTeile) {
                 //Lagerzugang berechnen
@@ -718,40 +728,29 @@ namespace ToolFahrrad_v1
                 dataGridViewKTeil.Rows[index].Cells[7].Value = a.BruttoBedarfPer3;
 
                 dataGridViewKTeil.Rows[index].Cells[8].Value = a.BestandPer1;
-                if (a.BestandPer1 - a.BruttoBedarfPer0 < 0)
-                    dataGridViewKTeil.Rows[index].Cells[9].Value = imageList1.Images[0];
-                else if (a.BestandPer1 - a.BruttoBedarfPer0 > 0)
-                    dataGridViewKTeil.Rows[index].Cells[9].Value = imageList1.Images[2];
-                else
-                    dataGridViewKTeil.Rows[index].Cells[9].Value = imageList1.Images[1];
-                dataGridViewKTeil.Rows[index].Cells[10].Value = a.BestandPer2;
-                if (a.BestandPer2 - a.BruttoBedarfPer1 < 0)
-                    dataGridViewKTeil.Rows[index].Cells[11].Value = imageList1.Images[0];
-                else if (a.BestandPer2 - a.BruttoBedarfPer1 > 0)
-                    dataGridViewKTeil.Rows[index].Cells[11].Value = imageList1.Images[2];
-                else
-                    dataGridViewKTeil.Rows[index].Cells[11].Value = imageList1.Images[1];
-                dataGridViewKTeil.Rows[index].Cells[12].Value = a.BestandPer3;
-                if (a.BestandPer3 - a.BruttoBedarfPer2 < 0)
-                    dataGridViewKTeil.Rows[index].Cells[13].Value = imageList1.Images[0];
-                else if (a.BestandPer3 - a.BruttoBedarfPer2 > 0)
-                    dataGridViewKTeil.Rows[index].Cells[13].Value = imageList1.Images[2];
-                else
-                    dataGridViewKTeil.Rows[index].Cells[13].Value = imageList1.Images[1];
-                dataGridViewKTeil.Rows[index].Cells[14].Value = a.BestandPer4;
-                if (a.BestandPer4 - a.BruttoBedarfPer3 < 0)
-                    dataGridViewKTeil.Rows[index].Cells[15].Value = imageList1.Images[0];
-                else if (a.BestandPer4 - a.BruttoBedarfPer3 > 0)
-                    dataGridViewKTeil.Rows[index].Cells[15].Value = imageList1.Images[2];
-                else
-                    dataGridViewKTeil.Rows[index].Cells[15].Value = imageList1.Images[1];
-
+                if (a.BestandPer1 < 0) {
+                    dataGridViewKTeil.Rows[index].Cells[8].Style.ForeColor = Color.Red;
+                    dataGridViewKTeil.Rows[index].Cells[8].Style.Font = new Font(dataGridViewKTeil.Rows[index].Cells[8].InheritedStyle.Font, FontStyle.Bold);
+                }
+                dataGridViewKTeil.Rows[index].Cells[9].Value = a.BestandPer2;
+                if (a.BestandPer2 < 0) {
+                    dataGridViewKTeil.Rows[index].Cells[9].Style.ForeColor = Color.Red;
+                    dataGridViewKTeil.Rows[index].Cells[9].Style.Font = new Font(dataGridViewKTeil.Rows[index].Cells[9].InheritedStyle.Font, FontStyle.Bold);
+                }
+                dataGridViewKTeil.Rows[index].Cells[10].Value = a.BestandPer3;
+                if (a.BestandPer3 < 0) {
+                    dataGridViewKTeil.Rows[index].Cells[10].Style.ForeColor = Color.Red;
+                    dataGridViewKTeil.Rows[index].Cells[10].Style.Font = new Font(dataGridViewKTeil.Rows[index].Cells[10].InheritedStyle.Font, FontStyle.Bold);
+                }
+                dataGridViewKTeil.Rows[index].Cells[11].Value = a.BestandPer4;
+                if (a.BestandPer4 < 0) {
+                    dataGridViewKTeil.Rows[index].Cells[11].Style.ForeColor = Color.Red;
+                    dataGridViewKTeil.Rows[index].Cells[11].Style.Font = new Font(dataGridViewKTeil.Rows[index].Cells[11].InheritedStyle.Font, FontStyle.Bold);
+                }
                 //Farbe
-                for (int i = 0; i < 16; ++i) {
+                for (int i = 0; i < 12; ++i) {
                     if (i >= 0 && i < 4)
                         dataGridViewKTeil.Columns[i].DefaultCellStyle.BackColor = Color.FloralWhite;
-                    else if (i == 8 || i == 10 || i == 12 || i == 14)
-                        dataGridViewKTeil.Columns[i].DefaultCellStyle.BackColor = Color.LightYellow;
                     else if (i > 3 && i < 8)
                         dataGridViewKTeil.Columns[i].DefaultCellStyle.BackColor = Color.Honeydew;
                 }
@@ -769,11 +768,11 @@ namespace ToolFahrrad_v1
                 dataGridViewETeil.Rows[index].Cells[2].Value = a.Lagerstand;
                 dataGridViewETeil.Rows[index].Cells[3].Value = a.Verhaeltnis + "%";
                 if (a.Verhaeltnis < 40)
-                    dataGridViewETeil.Rows[index].Cells[4].Value = imageList1.Images[0];
+                    dataGridViewETeil.Rows[index].Cells[4].Value = imageListAmpel.Images[0];
                 else if (a.Verhaeltnis <= 100)
-                    dataGridViewETeil.Rows[index].Cells[4].Value = imageList1.Images[2];
+                    dataGridViewETeil.Rows[index].Cells[4].Value = imageListAmpel.Images[2];
                 else
-                    dataGridViewETeil.Rows[index].Cells[4].Value = imageList1.Images[1];
+                    dataGridViewETeil.Rows[index].Cells[4].Value = imageListAmpel.Images[1];
                 dataGridViewETeil.Rows[index].Cells[5].Value = a.InWartschlange;
                 dataGridViewETeil.Rows[index].Cells[6].Value = a.InBearbeitung;
                 if (!a.Verwendung.Equals("KDH"))
@@ -802,20 +801,25 @@ namespace ToolFahrrad_v1
             #endregion
             // Arbeitsplätze
             #region Arbetsplatz
-            this.DataGriedViewRemove(dataGridViewAPlatz);
+            this.DataGriedViewRemove(DataGridViewAP);
             index = 0;
+            xmlAP = new List<int[]>();
             foreach (var a in instance.ArbeitsplatzList) {
-                dataGridViewAPlatz.Rows.Add();
-                dataGridViewAPlatz.Rows[index].Cells[0].Value = a.GetNummerArbeitsplatz;
-                dataGridViewAPlatz.Rows[index].Cells[1].Value = a.Leerzeit + " (" + a.RuestungVorPeriode + ") ";
-                //TODO KDH ZEIT UMRECHNEN
+                int[] apXML = new int[3];
+               
+
+                DataGridViewAP.Rows.Add();
+                DataGridViewAP.Rows[index].Cells[4].Value = imageListPlusMinus.Images[0];
+                DataGridViewAP.Rows[index].Cells[5].Value = imageListPlusMinus.Images[1];
+                DataGridViewAP.Rows[index].Cells[0].Value = a.GetNummerArbeitsplatz;
+                apXML[0] = a.GetNummerArbeitsplatz;
+                DataGridViewAP.Rows[index].Cells[1].Value = a.Leerzeit + " (" + a.RuestungVorPeriode + ") ";
                 int prMenge = 0;
                 int val = 0;
                 int sum = 0;
                 foreach (KeyValuePair<int, int> kvp in a.Werk_zeiten) {
                     {
                         if (!(instance.GetTeil(kvp.Key) as ETeil).Verwendung.Contains("KDH")) {
-
                             prMenge += (instance.GetTeil(kvp.Key) as ETeil).ProduktionsMengePer0;
                         }
                         else {
@@ -829,8 +833,8 @@ namespace ToolFahrrad_v1
                         prMenge = 0;
                     }
                 }
-                dataGridViewAPlatz.Rows[index].Cells[2].Value = sum + " min";
-                //TODO KDH RÜST UMRECHNEN
+                DataGridViewAP.Rows[index].Cells[2].Value = sum + " min";
+
                 prMenge = 0;
                 val = 0;
                 string key = "";
@@ -856,43 +860,57 @@ namespace ToolFahrrad_v1
                     a.RuestungCustom = val;
                 }
 
-                dataGridViewAPlatz.Rows[index].Cells[3].Value = a.RuestungCustom;
+                DataGridViewAP.Rows[index].Cells[3].Value = a.RuestungCustom;
                 int gesammt = a.RuestungCustom + sum;
-                dataGridViewAPlatz.Rows[index].Cells[4].Value = gesammt + " min";
-                dataGridViewAPlatz.Rows[index].Cells[8].Value = imageList1.Images[2];
-                if (gesammt <= a.zeit) // newTeim <= 2400 
-                    dataGridViewAPlatz.Rows[index].Cells[5].Value = imageList1.Images[2];
+                DataGridViewAP.Rows[index].Cells[6].Value = gesammt + " min";
+                DataGridViewAP.Rows[index].Cells[10].Value = imageListAmpel.Images[2];
+                if (gesammt <= a.zeit) { // newTeim <= 2400 
+                    DataGridViewAP.Rows[index].Cells[7].Value = imageListAmpel.Images[2];
+                    apXML[1] = 1;
+                    apXML[2] = 0;
+                }
                 else if (gesammt > instance.ErsteSchicht) // gesammt > 3600
                 {
-                    if (gesammt > 7200)
-                        dataGridViewAPlatz.Rows[index].Cells[8].Value = imageList1.Images[0];
-                    else if (gesammt > instance.ZweiteSchicht && gesammt < 7200)
-                        dataGridViewAPlatz.Rows[index].Cells[8].Value = imageList1.Images[1];
-                    else
-                        dataGridViewAPlatz.Rows[index].Cells[8].Value = imageList1.Images[2];
-
+                    if (gesammt > instance.ZweiteSchicht) {
+                        if (gesammt > 7200)
+                            DataGridViewAP.Rows[index].Cells[10].Value = imageListAmpel.Images[0];
+                        else if (gesammt < 7200)
+                            DataGridViewAP.Rows[index].Cells[10].Value = imageListAmpel.Images[1];
+                        else
+                            DataGridViewAP.Rows[index].Cells[10].Value = imageListAmpel.Images[2];
+                        apXML[1] = 3;
+                        if (gesammt < 7200)
+                            apXML[2] = gesammt - instance.ZweiteSchicht;
+                        else
+                            apXML[2] = 7200 - instance.ZweiteSchicht;
+                    }
                     if (gesammt < instance.ZweiteSchicht) {
-                        dataGridViewAPlatz.Rows[index].Cells[5].Value = imageList1.Images[0];
-                        dataGridViewAPlatz.Rows[index].Cells[6].Value = true;
+                        DataGridViewAP.Rows[index].Cells[7].Value = imageListAmpel.Images[0];
+                        DataGridViewAP.Rows[index].Cells[8].Value = true;
+                        apXML[1] = 2;
+                        apXML[2] = gesammt - instance.ErsteSchicht;
                     }
                     else if (gesammt > instance.ZweiteSchicht) {
-                        dataGridViewAPlatz.Rows[index].Cells[5].Value = imageList1.Images[0];
-                        dataGridViewAPlatz.Rows[index].Cells[7].Value = true;
+                        DataGridViewAP.Rows[index].Cells[7].Value = imageListAmpel.Images[0];
+                        DataGridViewAP.Rows[index].Cells[9].Value = true;
                     }
                 }
-                else if (gesammt > a.zeit && gesammt <= instance.ErsteSchicht) // 2400 < newTime < 3600 Überstunden
-                {
-                    dataGridViewAPlatz.Rows[index].Cells[5].Value = imageList1.Images[1];
+                else if (gesammt > a.zeit && gesammt <= instance.ErsteSchicht) { // 2400 < newTime < 3600 Überstunden
+                    DataGridViewAP.Rows[index].Cells[7].Value = imageListAmpel.Images[1];
+                    apXML[1] = 1;
+                    apXML[2] = gesammt - a.zeit;
                 }
                 else {
-                    dataGridViewAPlatz.Rows[index].Cells[5].Value = imageList1.Images[2];
+                    DataGridViewAP.Rows[index].Cells[7].Value = imageListAmpel.Images[2];
                 }
+
+                xmlAP.Add(apXML);
                 //Farbe
-                for (int i = 0; i < 9; ++i) {
+                for (int i = 0; i < 11; ++i) {
                     if (i < 2)
-                        dataGridViewAPlatz.Columns[i].DefaultCellStyle.BackColor = Color.FloralWhite;
+                        DataGridViewAP.Columns[i].DefaultCellStyle.BackColor = Color.FloralWhite;
                     else if (i == 2 || i > 3)
-                        dataGridViewAPlatz.Columns[i].DefaultCellStyle.BackColor = Color.LightYellow;
+                        DataGridViewAP.Columns[i].DefaultCellStyle.BackColor = Color.LightYellow;
                 }
                 ++index;
             }
@@ -901,7 +919,7 @@ namespace ToolFahrrad_v1
             //Bestellung
             #region Bestellung
             this.DataGriedViewRemove(dataGridViewBestellung);
-            if(this.bestellungUpdate == false)
+            if (this.bestellungUpdate == false)
                 bv.generiereBestellListe();
             List<Bestellposition> bp = bv.BvPositionen;
             index = 0;
@@ -927,6 +945,53 @@ namespace ToolFahrrad_v1
             #endregion
         }
 
+
+        private void xmlVorbereitung(int p) {
+            int index = 0;
+            if (p == 100 || p == 1) { //1 = Vertriebswunsch                
+                this.DataGriedViewRemove(dataGridViewVertrieb);
+                dataGridViewVertrieb.Rows.Add();
+                for (int i = 0; i < 3; ++i) {
+                    dataGridViewVertrieb.Rows[0].Cells[i].Value = instance.GetTeil(i + 1).VertriebPer0;
+                }
+            }
+            if (p == 100 || p == 3) {
+                bv.ladeBvPositionenInDc();
+                index = 0;
+                this.DataGriedViewRemove(dataGridViewEinkauf);
+                foreach (Bestellposition b in instance.Bestellungen) {
+                    dataGridViewEinkauf.Rows.Add();
+                    dataGridViewEinkauf.Rows[index].Cells[0].Value = b.Kaufteil.Nummer;
+                    dataGridViewEinkauf.Rows[index].Cells[1].Value = b.Menge;
+                    if (b.Eil == true)
+                        dataGridViewEinkauf.Rows[index].Cells[2].Value = "E";
+                    else
+                        dataGridViewEinkauf.Rows[index].Cells[2].Value = "N";
+                    ++index;
+                }
+            }
+            if (p == 100 || p == 5) {
+                index = 0;
+                this.DataGriedViewRemove(dataGridViewProduktKapazit);
+                foreach (int[] i in xmlAP) {
+                    dataGridViewProduktKapazit.Rows.Add();
+                    dataGridViewProduktKapazit.Rows[index].Cells[0].Value = i[0];
+                    dataGridViewProduktKapazit.Rows[index].Cells[1].Value = i[1];
+                    dataGridViewProduktKapazit.Rows[index].Cells[2].Value = i[2] / 5;
+                    ++index;
+                }
+
+            }
+            if (p == 100 || p == 4) {
+                index = 0;
+                this.DataGriedViewRemove(dataGridViewProduktAuftrag);
+                dataGridViewProduktAuftrag.Rows.Add(5); int i = 0;
+                foreach (DataGridViewRow dr in dataGridViewProduktAuftrag.Rows)
+                    foreach (DataGridViewCell dc in dr.Cells) dc.Value = i++;
+                
+            }
+        }
+
         /// <summary>
         /// 
         /// </summary>
@@ -941,12 +1006,33 @@ namespace ToolFahrrad_v1
         }
 
         private void dataGridViewAPlatz_CellContentClick(object sender, DataGridViewCellEventArgs e) {
-            if (e.ColumnIndex == 0) {
-                TeilInformation ti = new TeilInformation("arbeitsplatz", Convert.ToInt32(dataGridViewAPlatz.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString()));
-                ti.GetZeitInformation();
-                ti.Show();
+            int zahl = Convert.ToInt32(DataGridViewAP.Rows[e.RowIndex].Cells[3].Value.ToString());
+            switch (e.ColumnIndex) { 
+                case 0:
+                    TeilInformation ti = new TeilInformation("arbeitsplatz", Convert.ToInt32(DataGridViewAP.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString()));
+                    ti.GetZeitInformation();
+                    ti.Show();
+                    break;
+                case 4:
+                    if (zahl - 10 > 0)
+                        DataGridViewAP.Rows[e.RowIndex].Cells[3].Value = zahl - 10;
+                    else
+                        DataGridViewAP.Rows[e.RowIndex].Cells[3].Value = 0;
+                    break;
+                case 5:
+                    DataGridViewAP.Rows[e.RowIndex].Cells[3].Value = zahl + 10;
+                    break;
             }
         }
+        private void DataGridViewAP_CellMouseEnter(object sender, DataGridViewCellEventArgs e) {
+
+            if (e.ColumnIndex == 4 || e.ColumnIndex == 5)
+                DataGridViewAP.Cursor = Cursors.Hand;
+            else
+                DataGridViewAP.Cursor = Cursors.Default;
+            
+        }
+
 
         private void prodMenge(int index, int nr, int reserve) {
             ETeil et = instance.GetTeil(nr) as ETeil;
@@ -1004,8 +1090,9 @@ namespace ToolFahrrad_v1
             (instance.GetTeil(17) as ETeil).KdhPuffer[(instance.GetTeil(17) as ETeil).KdhPuffer.Keys.ToList()[2]][0] = Convert.ToInt32(p1r_17.Text);
             prodMenge(1, 17, Convert.ToInt32(p1r_17.Text));
 
-            DispositionDarstellung(1);
-            Information();
+            this.DispositionDarstellung(1);
+            this.Information();
+            this.xmlVorbereitung(1); //1=vertriebswunsch
         }
         private void p2ETAusfueren_Click(object sender, EventArgs e) {
             (instance.GetTeil(2) as ETeil).VertriebPer0 = Convert.ToInt32(p2vw_0.Text);
@@ -1034,8 +1121,9 @@ namespace ToolFahrrad_v1
             (instance.GetTeil(17) as ETeil).KdhPuffer[(instance.GetTeil(17) as ETeil).KdhPuffer.Keys.ToList()[2]][1] = Convert.ToInt32(p2r_17.Text);
             prodMenge(2, 17, Convert.ToInt32(p2r_17.Text));
 
-            DispositionDarstellung(2);
-            Information();
+            this.DispositionDarstellung(2);
+            this.Information();
+            this.xmlVorbereitung(1); //1=vertriebswunsch
         }
         private void p3ETAusfueren_Click(object sender, EventArgs e) {
             (instance.GetTeil(3) as ETeil).VertriebPer0 = Convert.ToInt32(p3vw_0.Text);
@@ -1073,42 +1161,59 @@ namespace ToolFahrrad_v1
             (instance.GetTeil(17) as ETeil).KdhPuffer[(instance.GetTeil(17) as ETeil).KdhPuffer.Keys.ToList()[2]][2] = Convert.ToInt32(p3r_17.Text);
             prodMenge(3, 17, Convert.ToInt32(p3r_17.Text));
 
-            DispositionDarstellung(3);
-            Information();
+            this.DispositionDarstellung(3);
+            this.Information();
+            this.xmlVorbereitung(1); //1=vertriebswunsch
         }
 
         private void arbPlatzAusfueren_Click(object sender, EventArgs e) {
             bv.clearBvPositionen();
-            for (int index = 0; index < dataGridViewAPlatz.Rows.Count; ++index) {
-                instance.GetArbeitsplatz(Convert.ToInt32(dataGridViewAPlatz.Rows[index].Cells[0].Value.ToString())).RuestungCustom =
-                    (Convert.ToInt32(dataGridViewAPlatz.Rows[index].Cells[3].Value.ToString()));
+            for (int index = 0; index < DataGridViewAP.Rows.Count; ++index) {
+                instance.GetArbeitsplatz(Convert.ToInt32(DataGridViewAP.Rows[index].Cells[0].Value.ToString())).RuestungCustom =
+                    (Convert.ToInt32(DataGridViewAP.Rows[index].Cells[3].Value.ToString()));
             }
             Information();
+            this.xmlVorbereitung(5);
         }
 
         private void pictureBox3_Click(object sender, EventArgs e) {
+            if (this.dataGridViewBestellung.AllowUserToAddRows == true) {
+                this.dataGridViewBestellung.AllowUserToAddRows = false;
+                this.kNr.ReadOnly = true;
+            }
             Bestellposition bbp;
             bp = new List<Bestellposition>();
-
-
-            //for (int index = 0; index < dataGridViewBestellung.Rows.Count; ++index) {
-
-            //    string a = dataGridViewBestellung.Rows[index].Cells[3].Value.ToString();
-
-            //}
-
-            DataGridViewCheckBoxCell check = new DataGridViewCheckBoxCell();          
-
+            DataGridViewCheckBoxCell check = new DataGridViewCheckBoxCell();
+            DataGridViewCheckBoxCell check2 = new DataGridViewCheckBoxCell();
 
             foreach (DataGridViewRow row in dataGridViewBestellung.Rows) {
                 check = (DataGridViewCheckBoxCell)row.Cells[3];
+                check2 = (DataGridViewCheckBoxCell)row.Cells[2];
+                bool c;
+                if (check2.Value == null)
+                    c = false;
+                else
+                    c = true;
                 if (check.Value == null)
-                    check.Value = false;                
-                if (check.Value.ToString() != "true") {
-                    bbp = new Bestellposition(instance.GetTeil(Convert.ToInt32(row.Cells[0].Value.ToString())) as KTeil,
-                    Convert.ToInt32(row.Cells[1].Value.ToString()),
-                    row.Cells[2].Selected);
-                    bp.Add(bbp);
+                    check.Value = false;
+
+                KTeil teil = instance.GetTeil(Convert.ToInt32(row.Cells[0].Value.ToString())) as KTeil;
+
+                if (teil != null) {
+                    if (row.Cells[1].Value != null) {
+                        if (check.Value.ToString() != "true") {
+                            bbp = new Bestellposition(teil, Convert.ToInt32(row.Cells[1].Value.ToString()), c);
+                            bp.Add(bbp);
+                        }
+                    }
+                    else {
+                        MessageBox.Show("Kaufteil N" + row.Cells[0].Value.ToString() + " kann nicht keine Menge haben. \nDiese zeile wird ignoriert", "Fehlermeldung",
+                       MessageBoxButtons.OK, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button1);
+                    }
+                }
+                else {
+                    MessageBox.Show("Kaufteil N" + row.Cells[0].Value.ToString() + " exsistiert nicht im System. \nDiese zeile wird ignoriert", "Fehlermeldung",
+                        MessageBoxButtons.OK, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button1);
                 }
             }
             this.bestellungUpdate = true;
@@ -1117,10 +1222,110 @@ namespace ToolFahrrad_v1
         }
 
         private void zurueck_Click(object sender, EventArgs e) {
+            if (this.dataGridViewBestellung.AllowUserToAddRows == true) {
+                this.dataGridViewBestellung.AllowUserToAddRows = false;
+                this.kNr.ReadOnly = true;
+            }
             this.bestellungUpdate = false;
             bv.clearBvPositionen();
             Information();
         }
+
+        private void uebernehmenXML_Click(object sender, EventArgs e) {
+            this.xmlVorbereitung(3);
+        }
+
+        private void addNr_Click(object sender, EventArgs e) {
+            this.dataGridViewBestellung.AllowUserToAddRows = true;
+            this.kNr.ReadOnly = false;
+        }
+
+////////////////////////////////////////////////////////////////
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="x"></param>
+        /// <param name="y"></param>
+        /// <returns></returns>
+        private bool IsCellOrRowHeader(int x, int y) {
+            DataGridViewHitTestType dgt = dataGridViewProduktAuftrag.HitTest(x, y).Type;
+            return (dgt == DataGridViewHitTestType.Cell ||
+                            dgt == DataGridViewHitTestType.RowHeader);
+        }
+
+        private void dataGridViewProduktAuftrag_MouseMove(object sender, MouseEventArgs e) {
+            if ((e.Button & MouseButtons.Left) == MouseButtons.Left) {
+                if (!IsCellOrRowHeader(e.X, e.Y) && rowIndexSrc >= 0) {
+                    DragDropEffects dropEffect = dataGridViewProduktAuftrag.DoDragDrop(
+                        dataGridViewProduktAuftrag.Rows[rowIndexSrc], DragDropEffects.None);
+                    return;
+                }
+
+                if (dragBoxSrc != Rectangle.Empty &&
+                        !dragBoxSrc.Contains(e.X, e.Y)) {
+                            DragDropEffects dropEffect = dataGridViewProduktAuftrag.DoDragDrop(
+                        dataGridViewProduktAuftrag.Rows[rowIndexSrc], DragDropEffects.Move);
+                }
+            }
+        }
+
+        private void dataGridViewProduktAuftrag_MouseDown(object sender, MouseEventArgs e) {
+            rowIndexSrc = dataGridViewProduktAuftrag.HitTest(e.X, e.Y).RowIndex;
+            if (rowIndexSrc != -1) {
+                Size dragSize = SystemInformation.DragSize;
+                dragBoxSrc = new Rectangle(new Point(e.X, e.Y), dragSize);
+            }
+            else
+                dragBoxSrc = Rectangle.Empty;
+        }
+
+        private void dataGridViewProduktAuftrag_DragDrop(object sender, DragEventArgs e) {
+            Point clientPoint = dataGridViewProduktAuftrag.PointToClient(new Point(e.X, e.Y));
+            rowIndexTar = dataGridViewProduktAuftrag.HitTest(clientPoint.X, clientPoint.Y).RowIndex;
+            if (e.Effect == DragDropEffects.Move) {
+                DataGridViewRow rowToMove = e.Data.GetData(
+                    typeof(DataGridViewRow)) as DataGridViewRow;
+                MoveRow(rowIndexSrc, rowIndexTar);
+            }
+        }
+
+        void SwapCell(int c, int srcRow, int tarRow, out object tmp0, out object tmp1) {
+            DataGridViewCell srcCell = dataGridViewProduktAuftrag.Rows[srcRow].Cells[c];
+            DataGridViewCell tarCell = dataGridViewProduktAuftrag.Rows[tarRow].Cells[c];
+            tmp0 = tarCell.Value;
+            tmp1 = srcCell.Value;
+            tarCell.Value = tmp1;
+        }
+
+        void MoveRow(int srcRow, int tarRow) {
+            int cellCount = dataGridViewProduktAuftrag.Rows[srcRow].Cells.Count;
+            for (int c = 0; c < cellCount; c++)
+                ShiftRows(srcRow, tarRow, c);
+        }
+
+        private void ShiftRows(int srcRow, int tarRow, int c) {
+            object tmp0, tmp1;
+            SwapCell(c, srcRow, tarRow, out tmp0, out tmp1);
+            int delta = tarRow < srcRow ? 1 : -1;
+            for (int r = tarRow + delta; r != srcRow + delta; r += delta) {
+                tmp1 = dataGridViewProduktAuftrag.Rows[r].Cells[c].Value;
+                dataGridViewProduktAuftrag.Rows[r].Cells[c].Value = tmp0;
+                tmp0 = tmp1;
+            }
+            dataGridViewProduktAuftrag.Rows[tarRow].Selected = true;
+            dataGridViewProduktAuftrag.CurrentCell = dataGridViewProduktAuftrag.Rows[tarRow].Cells[0];
+        }
+
+        private void dataGridViewProduktAuftrag_DragOver(object sender, DragEventArgs e) {
+            Point p = dataGridViewProduktAuftrag.PointToClient(new Point(e.X, e.Y));
+            DataGridViewHitTestType dgt = dataGridViewProduktAuftrag.HitTest(p.X, p.Y).Type;
+            if (IsCellOrRowHeader(p.X, p.Y))
+                e.Effect = DragDropEffects.Move;
+            else e.Effect = DragDropEffects.None;
+        }
+
+
+
     }
 }
 
