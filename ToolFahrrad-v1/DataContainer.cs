@@ -13,13 +13,10 @@ namespace ToolFahrrad_v1
         private bool berechneKindTeil;
         private static DataContainer instance = new DataContainer();
         private List<Bestellposition> listeBestellungen;
+        private List<DvPosition> listeDVerkauf;
         private Dictionary<int, Teil> listeTeile;
         private Dictionary<int, Arbeitsplatz> listeArbeitsplaetze;
         private List<int[]> apKapazitaet;
-        public List<int[]> ApKapazitaet {
-            get { return apKapazitaet; }
-            set { apKapazitaet = value; }
-        }
         private int[] listeReihenfolge;
         private bool sonderProduktion = false;
         private bool ueberstundenErlaubt = true;
@@ -33,6 +30,11 @@ namespace ToolFahrrad_v1
         private double diskountGrenze = 5;
         private double grenzeMenge = 10;
         // Getter / Setter
+        public List<int[]> ApKapazitaet
+        {
+            get { return apKapazitaet; }
+            set { apKapazitaet = value; }
+        }
         public double DiskountGrenze {
             get { return diskountGrenze; }
             set { diskountGrenze = value; }
@@ -67,6 +69,7 @@ namespace ToolFahrrad_v1
             apKapazitaet = new List<int[]>();
             berechneKindTeil = true;
             listeBestellungen = new List<Bestellposition>();
+            listeDVerkauf = new List<DvPosition>();
             listeTeile = new Dictionary<int, Teil>();
             listeArbeitsplaetze = new Dictionary<int, Arbeitsplatz>();
             openFile = Application.StartupPath + "//output.xml";
@@ -130,6 +133,19 @@ namespace ToolFahrrad_v1
                 foreach (Bestellposition bp in value)
                 {
                     listeBestellungen.Add(new Bestellposition(bp.Kaufteil, bp.Menge, bp.Eil));
+                }
+            }
+        }
+        // Getter of list direct distribution (Direktverkauf)
+        public List<DvPosition> DVerkauf
+        {
+            get { return listeDVerkauf; }
+            set
+            {
+                listeDVerkauf.Clear();
+                foreach (DvPosition dvp in value)
+                {
+                    listeDVerkauf.Add(new DvPosition(dvp.DvTeilNr, dvp.DvMenge, dvp.DvPreis, dvp.DvStrafe));
                 }
             }
         }

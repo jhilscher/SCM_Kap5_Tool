@@ -212,6 +212,10 @@ namespace ToolFahrrad_v1
                 }
             }
         }
+        public void ladeDvPositioneninDc()
+        {
+            dc.DVerkauf = DvPositionen;
+        }
         private int berechneMenge(double verwDiskont, int bestellMenge, int diskont)
         {
             int outputMenge = 0;

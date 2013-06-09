@@ -938,17 +938,14 @@ namespace ToolFahrrad_v1
                     else
                         dataGridViewBestellung.Columns[i].DefaultCellStyle.BackColor = Color.LightYellow;
                 }
-
-
                 ++index;
             }
             #endregion
         }
 
-
         private void xmlVorbereitung(int p) {
             int index = 0;
-            if (p == 100 || p == 1) { //1 = Vertriebswunsch                
+            if (p == 100 || p == 1) { //1 = Vertriebswunsch
                 this.DataGriedViewRemove(dataGridViewVertrieb);
                 dataGridViewVertrieb.Rows.Add();
                 for (int i = 0; i < 3; ++i) {
@@ -1322,6 +1319,16 @@ namespace ToolFahrrad_v1
             if (IsCellOrRowHeader(p.X, p.Y))
                 e.Effect = DragDropEffects.Move;
             else e.Effect = DragDropEffects.None;
+        }
+
+        private void dataGridViewEinkauf_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void dataGridViewProduktKapazit_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
 
 
