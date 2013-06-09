@@ -1320,19 +1320,6 @@ namespace ToolFahrrad_v1
                 e.Effect = DragDropEffects.Move;
             else e.Effect = DragDropEffects.None;
         }
-
-        private void dataGridViewEinkauf_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void dataGridViewProduktKapazit_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-
-
     }
 }
 
