@@ -16,7 +16,7 @@ namespace ToolFahrrad_v1
     public partial class Fahrrad : Form
     {
         DataContainer instance = DataContainer.Instance;
-        XMLDatei xml = new XMLDatei();
+        XmlDatei xml = new XmlDatei();
         Produktionsplanung pp = new Produktionsplanung();
         Bestellverwaltung bv = new Bestellverwaltung();
         List<Bestellposition> bp;

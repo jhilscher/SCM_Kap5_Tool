@@ -8,12 +8,12 @@ using System.Xml;
 
 namespace ToolFahrrad_v1
 {
-    public class XMLDatei
+    public class XmlDatei
     {
         public string period = "";
 
         private static DataContainer dc = DataContainer.Instance;
-        public XMLDatei() {
+        public XmlDatei() {
 
         }
 
