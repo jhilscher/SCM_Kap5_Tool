@@ -20,8 +20,10 @@ namespace ToolFahrrad_v1
         Produktionsplanung pp = new Produktionsplanung();
         Bestellverwaltung bv = new Bestellverwaltung();
         List<Bestellposition> bp;
+        List<DvPosition> dirv;
         List<int[]> xmlAP;
         private bool bestellungUpdate = false;
+        private bool dvUpdate = false;
         private bool okPrognose = false;
         private bool okXml = false;
 
@@ -52,6 +54,7 @@ namespace ToolFahrrad_v1
             this.tab2.Visible = true;
             this.panelXMLerstellen.Visible = true;
             this.bestellungUpdate = false;
+            this.dvUpdate = false;
             this.xml_export.Visible = true;
         }
         private void ausführen() {
@@ -941,6 +944,23 @@ namespace ToolFahrrad_v1
                 ++index;
             }
             #endregion
+
+            #region Direktverkauf
+            this.DataGriedViewRemove(dataGridViewDirektverkauf);
+            if (this.dvUpdate == false)
+                bv.generiereListeDV();
+            List<DvPosition> dv = bv.DvPositionen;
+            index = 0;
+            foreach(var a in dv){
+                dataGridViewDirektverkauf.Rows.Add();
+                dataGridViewDirektverkauf.Rows[index].Cells[0].Value = a.DvTeilNr;
+                dataGridViewDirektverkauf.Rows[index].Cells[1].Value = a.DvMenge;
+                dataGridViewDirektverkauf.Rows[index].Cells[2].Value = a.DvPreis;
+                dataGridViewDirektverkauf.Rows[index].Cells[3].Value = a.DvStrafe;
+
+                ++index;
+            }
+            #endregion
         }
 
         private void xmlVorbereitung(int p) {
@@ -1235,6 +1255,67 @@ namespace ToolFahrrad_v1
         private void addNr_Click(object sender, EventArgs e) {
             this.dataGridViewBestellung.AllowUserToAddRows = true;
             this.kNr.ReadOnly = false;
+        }
+
+
+        private void saveAenderungen2_Click(object sender, EventArgs e) {
+            if (this.dataGridViewDirektverkauf.AllowUserToAddRows == true) {
+                this.dataGridViewDirektverkauf.AllowUserToAddRows = false;
+                this.knr2.ReadOnly = true;
+            }
+
+            DvPosition dv;
+            dirv = new List<DvPosition>();
+            DataGridViewCheckBoxCell check = new DataGridViewCheckBoxCell();
+
+            foreach (DataGridViewRow row in dataGridViewDirektverkauf.Rows) {
+                check = (DataGridViewCheckBoxCell)row.Cells[4];
+                if (check.Value == null)
+                    check.Value = false;
+                if (check.Value.ToString() != "true") {
+
+                    ETeil teil = instance.GetTeil(Convert.ToInt32(row.Cells[0].Value.ToString())) as ETeil;
+                    if (teil != null) {
+                        object n = row.Cells[0].Value; //nr
+                        object m = row.Cells[1].Value; //menge
+                        object p = row.Cells[2].Value; //preis
+                        object s = row.Cells[3].Value; //straffe
+
+                        if (n != null && m != null && p != null && s != null) {
+                            dv = new DvPosition(Convert.ToInt32(n.ToString()), Convert.ToInt32(m.ToString()), Convert.ToDouble(p.ToString()), Convert.ToDouble(s.ToString()));
+                            dirv.Add(dv);
+                        }
+                        else {
+                            MessageBox.Show("kein Fehld darf null sein", "Fehlermeldung",
+                       MessageBoxButtons.OK, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button1);
+                        }
+                    }
+                    else {
+                        MessageBox.Show("Eigenfertigte Teil N" + row.Cells[0].Value.ToString() + " exsistiert nicht im System. \nDiese zeile wird ignoriert", "Fehlermeldung",
+                       MessageBoxButtons.OK, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button1);
+                    }
+                }
+            }
+            this.dvUpdate = true;
+            bv.SetDvPositionen(dirv);
+            Information();
+        }
+
+
+        private void addNr2_Click(object sender, EventArgs e) {
+            this.dataGridViewDirektverkauf.AllowUserToAddRows = true;
+            this.knr2.ReadOnly = false;
+        }
+
+
+        private void zurueck2_Click(object sender, EventArgs e) {
+            if (this.dataGridViewDirektverkauf.AllowUserToAddRows == true) {
+                this.dataGridViewDirektverkauf.AllowUserToAddRows = false;
+                this.knr2.ReadOnly = true;
+            }
+            this.dvUpdate = false;
+            bv.clearDvPositionen();
+            Information();
         }
 
 ////////////////////////////////////////////////////////////////

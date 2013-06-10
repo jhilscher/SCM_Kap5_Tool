@@ -44,6 +44,12 @@ namespace ToolFahrrad_v1
         {
             get { return dvPositionen; }
         }
+
+        public void SetDvPositionen(List<DvPosition> newDvPosition) {
+            clearDvPositionen();
+            dvPositionen = newDvPosition;
+        }
+
         public void addDvPosition(int nr, int menge, double preis, double strafe)
         {
             dvPositionen.Add(new DvPosition(nr, menge, preis, strafe));
