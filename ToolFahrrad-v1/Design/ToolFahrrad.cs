@@ -986,6 +986,20 @@ namespace ToolFahrrad_v1
                         dataGridViewEinkauf.Rows[index].Cells[2].Value = "N";
                     ++index;
                 }
+                ////
+                this.DataGriedViewRemove(dataGridViewDirekt);
+                if (dvVerwenden.Checked == true) {
+                    bv.ladeDvPositioneninDc();
+                    index = 0;
+                    foreach (DvPosition d in instance.DVerkauf) {
+                        dataGridViewDirekt.Rows.Add();
+                        dataGridViewDirekt.Rows[index].Cells[0].Value = d.DvTeilNr;
+                        dataGridViewDirekt.Rows[index].Cells[1].Value = d.DvMenge;
+                        dataGridViewDirekt.Rows[index].Cells[2].Value = d.DvPreis;
+                        dataGridViewDirekt.Rows[index].Cells[3].Value = d.DvStrafe;
+                        ++index;
+                    }
+                }
             }
             if (p == 100 || p == 5) {
                 index = 0;

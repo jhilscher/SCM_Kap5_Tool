@@ -635,12 +635,22 @@
             this.dataGridViewTextBoxColumn20 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn21 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tab_bestellung = new System.Windows.Forms.TabPage();
+            this.dvVerwenden = new System.Windows.Forms.CheckBox();
+            this.addNr2 = new System.Windows.Forms.PictureBox();
+            this.zurueck2 = new System.Windows.Forms.PictureBox();
+            this.saveAenderungen2 = new System.Windows.Forms.PictureBox();
+            this.label275 = new System.Windows.Forms.Label();
+            this.dataGridViewDirektverkauf = new System.Windows.Forms.DataGridView();
             this.addNr = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.uebernehmenXML = new System.Windows.Forms.PictureBox();
             this.zurueck = new System.Windows.Forms.PictureBox();
             this.saveAenderungen = new System.Windows.Forms.PictureBox();
             this.dataGridViewBestellung = new System.Windows.Forms.DataGridView();
+            this.kNr = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.menge = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.eil = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.del = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.xmlOutput = new System.Windows.Forms.TabPage();
             this.panelXMLerstellen = new System.Windows.Forms.Panel();
             this.dataGridViewProduktKapazit = new System.Windows.Forms.DataGridView();
@@ -658,9 +668,6 @@
             this.dataGridViewTextBoxColumn26 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label272 = new System.Windows.Forms.Label();
             this.dataGridViewDirekt = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn22 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn23 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label271 = new System.Windows.Forms.Label();
             this.dataGridViewVertrieb = new System.Windows.Forms.DataGridView();
             this.dg_p1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -688,16 +695,10 @@
             this.imageListAmpel = new System.Windows.Forms.ImageList(this.components);
             this.helpProvider1 = new System.Windows.Forms.HelpProvider();
             this.imageListPlusMinus = new System.Windows.Forms.ImageList(this.components);
-            this.dataGridViewDirektverkauf = new System.Windows.Forms.DataGridView();
-            this.kNr = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.menge = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.eil = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.del = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.label275 = new System.Windows.Forms.Label();
-            this.addNr2 = new System.Windows.Forms.PictureBox();
-            this.zurueck2 = new System.Windows.Forms.PictureBox();
-            this.saveAenderungen2 = new System.Windows.Forms.PictureBox();
-            this.dvVerwenden = new System.Windows.Forms.CheckBox();
+            this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn22 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn23 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.straf = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.knr2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn32 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pr = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -748,6 +749,10 @@
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewKTeil)).BeginInit();
             this.tab_bestellung.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.addNr2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.zurueck2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.saveAenderungen2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDirektverkauf)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.addNr)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.uebernehmenXML)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.zurueck)).BeginInit();
@@ -762,10 +767,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewVertrieb)).BeginInit();
             this.menu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.xml_export)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDirektverkauf)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.addNr2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.zurueck2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.saveAenderungen2)).BeginInit();
             this.SuspendLayout();
             // 
             // tabs
@@ -6186,6 +6187,68 @@
             this.tab_bestellung.Name = "tab_bestellung";
             this.helpProvider1.SetShowHelp(this.tab_bestellung, ((bool)(resources.GetObject("tab_bestellung.ShowHelp"))));
             // 
+            // dvVerwenden
+            // 
+            resources.ApplyResources(this.dvVerwenden, "dvVerwenden");
+            this.dvVerwenden.BackColor = System.Drawing.Color.ForestGreen;
+            this.dvVerwenden.Name = "dvVerwenden";
+            this.toolTip.SetToolTip(this.dvVerwenden, resources.GetString("dvVerwenden.ToolTip"));
+            this.dvVerwenden.UseVisualStyleBackColor = false;
+            // 
+            // addNr2
+            // 
+            this.addNr2.Cursor = System.Windows.Forms.Cursors.Hand;
+            resources.ApplyResources(this.addNr2, "addNr2");
+            this.addNr2.Name = "addNr2";
+            this.helpProvider1.SetShowHelp(this.addNr2, ((bool)(resources.GetObject("addNr2.ShowHelp"))));
+            this.addNr2.TabStop = false;
+            this.toolTip.SetToolTip(this.addNr2, resources.GetString("addNr2.ToolTip"));
+            this.addNr2.Click += new System.EventHandler(this.addNr2_Click);
+            // 
+            // zurueck2
+            // 
+            this.zurueck2.Cursor = System.Windows.Forms.Cursors.Hand;
+            resources.ApplyResources(this.zurueck2, "zurueck2");
+            this.zurueck2.Name = "zurueck2";
+            this.helpProvider1.SetShowHelp(this.zurueck2, ((bool)(resources.GetObject("zurueck2.ShowHelp"))));
+            this.zurueck2.TabStop = false;
+            this.toolTip.SetToolTip(this.zurueck2, resources.GetString("zurueck2.ToolTip"));
+            this.zurueck2.Click += new System.EventHandler(this.zurueck2_Click);
+            // 
+            // saveAenderungen2
+            // 
+            this.saveAenderungen2.Cursor = System.Windows.Forms.Cursors.Hand;
+            resources.ApplyResources(this.saveAenderungen2, "saveAenderungen2");
+            this.saveAenderungen2.Name = "saveAenderungen2";
+            this.helpProvider1.SetShowHelp(this.saveAenderungen2, ((bool)(resources.GetObject("saveAenderungen2.ShowHelp"))));
+            this.saveAenderungen2.TabStop = false;
+            this.toolTip.SetToolTip(this.saveAenderungen2, resources.GetString("saveAenderungen2.ToolTip"));
+            this.saveAenderungen2.Click += new System.EventHandler(this.saveAenderungen2_Click);
+            // 
+            // label275
+            // 
+            resources.ApplyResources(this.label275, "label275");
+            this.label275.Name = "label275";
+            this.helpProvider1.SetShowHelp(this.label275, ((bool)(resources.GetObject("label275.ShowHelp"))));
+            // 
+            // dataGridViewDirektverkauf
+            // 
+            this.dataGridViewDirektverkauf.AllowUserToAddRows = false;
+            this.dataGridViewDirektverkauf.AllowUserToDeleteRows = false;
+            this.dataGridViewDirektverkauf.AllowUserToOrderColumns = true;
+            this.dataGridViewDirektverkauf.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.dataGridViewDirektverkauf.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridViewDirektverkauf.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewDirektverkauf.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.knr2,
+            this.dataGridViewTextBoxColumn32,
+            this.pr,
+            this.str,
+            this.dataGridViewCheckBoxColumn2});
+            resources.ApplyResources(this.dataGridViewDirektverkauf, "dataGridViewDirektverkauf");
+            this.dataGridViewDirektverkauf.Name = "dataGridViewDirektverkauf";
+            this.helpProvider1.SetShowHelp(this.dataGridViewDirektverkauf, ((bool)(resources.GetObject("dataGridViewDirektverkauf.ShowHelp"))));
+            // 
             // addNr
             // 
             this.addNr.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -6248,6 +6311,32 @@
             resources.ApplyResources(this.dataGridViewBestellung, "dataGridViewBestellung");
             this.dataGridViewBestellung.Name = "dataGridViewBestellung";
             this.helpProvider1.SetShowHelp(this.dataGridViewBestellung, ((bool)(resources.GetObject("dataGridViewBestellung.ShowHelp"))));
+            // 
+            // kNr
+            // 
+            resources.ApplyResources(this.kNr, "kNr");
+            this.kNr.Name = "kNr";
+            this.kNr.ReadOnly = true;
+            // 
+            // menge
+            // 
+            resources.ApplyResources(this.menge, "menge");
+            this.menge.Name = "menge";
+            // 
+            // eil
+            // 
+            this.eil.FalseValue = "false";
+            resources.ApplyResources(this.eil, "eil");
+            this.eil.Name = "eil";
+            this.eil.TrueValue = "true";
+            // 
+            // del
+            // 
+            this.del.FalseValue = "false";
+            resources.ApplyResources(this.del, "del");
+            this.del.IndeterminateValue = "false";
+            this.del.Name = "del";
+            this.del.TrueValue = "true";
             // 
             // xmlOutput
             // 
@@ -6399,29 +6488,12 @@
             this.dataGridViewDirekt.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn12,
             this.dataGridViewTextBoxColumn22,
-            this.dataGridViewTextBoxColumn23});
+            this.dataGridViewTextBoxColumn23,
+            this.straf});
             resources.ApplyResources(this.dataGridViewDirekt, "dataGridViewDirekt");
             this.dataGridViewDirekt.Name = "dataGridViewDirekt";
             this.dataGridViewDirekt.ReadOnly = true;
             this.helpProvider1.SetShowHelp(this.dataGridViewDirekt, ((bool)(resources.GetObject("dataGridViewDirekt.ShowHelp"))));
-            // 
-            // dataGridViewTextBoxColumn12
-            // 
-            resources.ApplyResources(this.dataGridViewTextBoxColumn12, "dataGridViewTextBoxColumn12");
-            this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
-            this.dataGridViewTextBoxColumn12.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn22
-            // 
-            resources.ApplyResources(this.dataGridViewTextBoxColumn22, "dataGridViewTextBoxColumn22");
-            this.dataGridViewTextBoxColumn22.Name = "dataGridViewTextBoxColumn22";
-            this.dataGridViewTextBoxColumn22.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn23
-            // 
-            resources.ApplyResources(this.dataGridViewTextBoxColumn23, "dataGridViewTextBoxColumn23");
-            this.dataGridViewTextBoxColumn23.Name = "dataGridViewTextBoxColumn23";
-            this.dataGridViewTextBoxColumn23.ReadOnly = true;
             // 
             // label271
             // 
@@ -6607,93 +6679,29 @@
             this.imageListPlusMinus.Images.SetKeyName(0, "minus.png");
             this.imageListPlusMinus.Images.SetKeyName(1, "plus.png");
             // 
-            // dataGridViewDirektverkauf
+            // dataGridViewTextBoxColumn12
             // 
-            this.dataGridViewDirektverkauf.AllowUserToAddRows = false;
-            this.dataGridViewDirektverkauf.AllowUserToDeleteRows = false;
-            this.dataGridViewDirektverkauf.AllowUserToOrderColumns = true;
-            this.dataGridViewDirektverkauf.BackgroundColor = System.Drawing.SystemColors.Control;
-            this.dataGridViewDirektverkauf.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridViewDirektverkauf.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewDirektverkauf.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.knr2,
-            this.dataGridViewTextBoxColumn32,
-            this.pr,
-            this.str,
-            this.dataGridViewCheckBoxColumn2});
-            resources.ApplyResources(this.dataGridViewDirektverkauf, "dataGridViewDirektverkauf");
-            this.dataGridViewDirektverkauf.Name = "dataGridViewDirektverkauf";
-            this.helpProvider1.SetShowHelp(this.dataGridViewDirektverkauf, ((bool)(resources.GetObject("dataGridViewDirektverkauf.ShowHelp"))));
+            resources.ApplyResources(this.dataGridViewTextBoxColumn12, "dataGridViewTextBoxColumn12");
+            this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
+            this.dataGridViewTextBoxColumn12.ReadOnly = true;
             // 
-            // kNr
+            // dataGridViewTextBoxColumn22
             // 
-            resources.ApplyResources(this.kNr, "kNr");
-            this.kNr.Name = "kNr";
-            this.kNr.ReadOnly = true;
+            resources.ApplyResources(this.dataGridViewTextBoxColumn22, "dataGridViewTextBoxColumn22");
+            this.dataGridViewTextBoxColumn22.Name = "dataGridViewTextBoxColumn22";
+            this.dataGridViewTextBoxColumn22.ReadOnly = true;
             // 
-            // menge
+            // dataGridViewTextBoxColumn23
             // 
-            resources.ApplyResources(this.menge, "menge");
-            this.menge.Name = "menge";
+            resources.ApplyResources(this.dataGridViewTextBoxColumn23, "dataGridViewTextBoxColumn23");
+            this.dataGridViewTextBoxColumn23.Name = "dataGridViewTextBoxColumn23";
+            this.dataGridViewTextBoxColumn23.ReadOnly = true;
             // 
-            // eil
+            // straf
             // 
-            this.eil.FalseValue = "false";
-            resources.ApplyResources(this.eil, "eil");
-            this.eil.Name = "eil";
-            this.eil.TrueValue = "true";
-            // 
-            // del
-            // 
-            this.del.FalseValue = "false";
-            resources.ApplyResources(this.del, "del");
-            this.del.IndeterminateValue = "false";
-            this.del.Name = "del";
-            this.del.TrueValue = "true";
-            // 
-            // label275
-            // 
-            resources.ApplyResources(this.label275, "label275");
-            this.label275.Name = "label275";
-            this.helpProvider1.SetShowHelp(this.label275, ((bool)(resources.GetObject("label275.ShowHelp"))));
-            // 
-            // addNr2
-            // 
-            this.addNr2.Cursor = System.Windows.Forms.Cursors.Hand;
-            resources.ApplyResources(this.addNr2, "addNr2");
-            this.addNr2.Name = "addNr2";
-            this.helpProvider1.SetShowHelp(this.addNr2, ((bool)(resources.GetObject("addNr2.ShowHelp"))));
-            this.addNr2.TabStop = false;
-            this.toolTip.SetToolTip(this.addNr2, resources.GetString("addNr2.ToolTip"));
-            this.addNr2.Click += new System.EventHandler(this.addNr2_Click);
-            // 
-            // zurueck2
-            // 
-            this.zurueck2.Cursor = System.Windows.Forms.Cursors.Hand;
-            resources.ApplyResources(this.zurueck2, "zurueck2");
-            this.zurueck2.Name = "zurueck2";
-            this.helpProvider1.SetShowHelp(this.zurueck2, ((bool)(resources.GetObject("zurueck2.ShowHelp"))));
-            this.zurueck2.TabStop = false;
-            this.toolTip.SetToolTip(this.zurueck2, resources.GetString("zurueck2.ToolTip"));
-            this.zurueck2.Click += new System.EventHandler(this.zurueck2_Click);
-            // 
-            // saveAenderungen2
-            // 
-            this.saveAenderungen2.Cursor = System.Windows.Forms.Cursors.Hand;
-            resources.ApplyResources(this.saveAenderungen2, "saveAenderungen2");
-            this.saveAenderungen2.Name = "saveAenderungen2";
-            this.helpProvider1.SetShowHelp(this.saveAenderungen2, ((bool)(resources.GetObject("saveAenderungen2.ShowHelp"))));
-            this.saveAenderungen2.TabStop = false;
-            this.toolTip.SetToolTip(this.saveAenderungen2, resources.GetString("saveAenderungen2.ToolTip"));
-            this.saveAenderungen2.Click += new System.EventHandler(this.saveAenderungen2_Click);
-            // 
-            // dvVerwenden
-            // 
-            resources.ApplyResources(this.dvVerwenden, "dvVerwenden");
-            this.dvVerwenden.BackColor = System.Drawing.Color.ForestGreen;
-            this.dvVerwenden.Name = "dvVerwenden";
-            this.toolTip.SetToolTip(this.dvVerwenden, resources.GetString("dvVerwenden.ToolTip"));
-            this.dvVerwenden.UseVisualStyleBackColor = false;
+            resources.ApplyResources(this.straf, "straf");
+            this.straf.Name = "straf";
+            this.straf.ReadOnly = true;
             // 
             // knr2
             // 
@@ -6788,6 +6796,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewKTeil)).EndInit();
             this.tab_bestellung.ResumeLayout(false);
             this.tab_bestellung.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.addNr2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.zurueck2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.saveAenderungen2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDirektverkauf)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.addNr)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.uebernehmenXML)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.zurueck)).EndInit();
@@ -6804,10 +6816,6 @@
             this.menu.ResumeLayout(false);
             this.menu.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.xml_export)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDirektverkauf)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.addNr2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.zurueck2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.saveAenderungen2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -7467,9 +7475,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn24;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn25;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn26;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn12;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn22;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn23;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn29;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn30;
         private System.Windows.Forms.DataGridViewTextBoxColumn ueberStunden;
@@ -7488,6 +7493,10 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn pr;
         private System.Windows.Forms.DataGridViewTextBoxColumn str;
         private System.Windows.Forms.DataGridViewCheckBoxColumn dataGridViewCheckBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn12;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn22;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn23;
+        private System.Windows.Forms.DataGridViewTextBoxColumn straf;
     }
 }
 
