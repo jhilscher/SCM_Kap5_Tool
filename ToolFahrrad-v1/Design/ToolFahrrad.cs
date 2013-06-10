@@ -918,6 +918,7 @@ namespace ToolFahrrad_v1
                 }
                 ++index;
             }
+            instance.ApKapazitaet = xmlAP;
             #endregion
 
             //Bestellung
@@ -1203,9 +1204,9 @@ namespace ToolFahrrad_v1
             for (int index = 0; index < DataGridViewAP.Rows.Count; ++index) {
                 instance.GetArbeitsplatz(Convert.ToInt32(DataGridViewAP.Rows[index].Cells[0].Value.ToString())).RuestungCustom =
                     (Convert.ToInt32(DataGridViewAP.Rows[index].Cells[3].Value.ToString()));
-            }
-            Information();
+            }            
             this.xmlVorbereitung(5);
+            this.Information();
         }
 
         private void pictureBox3_Click(object sender, EventArgs e) {
@@ -1281,13 +1282,13 @@ namespace ToolFahrrad_v1
 
             DvPosition dv;
             dirv = new List<DvPosition>();
-            DataGridViewCheckBoxCell check = new DataGridViewCheckBoxCell();
+            DataGridViewCheckBoxCell ch = new DataGridViewCheckBoxCell();
 
             foreach (DataGridViewRow row in dataGridViewDirektverkauf.Rows) {
-                check = (DataGridViewCheckBoxCell)row.Cells[4];
-                if (check.Value == null)
-                    check.Value = false;
-                if (check.Value.ToString() != "true") {
+                ch = (DataGridViewCheckBoxCell)row.Cells[4];
+                if (ch.Value == null)
+                    ch.Value = false;
+                if (ch.Value.ToString() != "true") {
 
                     ETeil teil = instance.GetTeil(Convert.ToInt32(row.Cells[0].Value.ToString())) as ETeil;
                     if (teil != null) {
@@ -1312,6 +1313,7 @@ namespace ToolFahrrad_v1
                 }
             }
             this.dvUpdate = true;
+            this.bestellungUpdate = true;
             bv.SetDvPositionen(dirv);
             Information();
         }
@@ -1329,6 +1331,7 @@ namespace ToolFahrrad_v1
                 this.knr2.ReadOnly = true;
             }
             this.dvUpdate = false;
+            this.bestellungUpdate = true;
             bv.clearDvPositionen();
             Information();
         }

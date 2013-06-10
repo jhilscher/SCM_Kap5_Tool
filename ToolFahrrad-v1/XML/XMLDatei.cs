@@ -225,7 +225,26 @@ namespace ToolFahrrad_v1
                 }                
             }
             sw.WriteLine("</selldirect>");
-            
+
+            //Einkaufsaufträge
+            sw.WriteLine("<orderlist>");
+            foreach (Bestellposition bp in dc.Bestellungen) {
+                sw.WriteLine("<order article=\"" + bp.Kaufteil.Nummer + "\" quantity=\"" + bp.Menge + "\" modus=\"" + bp.OutputEil + "\"/>");
+            }
+            sw.WriteLine("</orderlist>");
+
+            //Produktionsaufträge
+            sw.WriteLine("<productionlist>");
+            sw.WriteLine("NIX VERTIG");
+            sw.WriteLine("</productionlist>");
+
+            //Produktionskapaziläten
+            sw.WriteLine("<workingtimelist>");
+            foreach (int[] a in dc.ApKapazitaet) {
+                sw.WriteLine("<workingtime station=\"" + a[0] + "\" shift=\"" + a[1] + "\" overtime=\"" + a[2] + "\"/>");  
+            }
+            sw.WriteLine("</workingtimelist>");
+
             sw.WriteLine("</input>");
 
             sw.Flush();
