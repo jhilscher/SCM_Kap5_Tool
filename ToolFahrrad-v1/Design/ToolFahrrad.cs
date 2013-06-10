@@ -944,35 +944,34 @@ namespace ToolFahrrad_v1
         private void schließenToolStripMenuItem_Click_1(object sender, EventArgs e) {
             this.Close();
         }
-        private void handbuchToolStripMenuItem_Click(object sender, EventArgs e) {
-            //string path = Directory.GetCurrentDirectory() + @"\chm\dv_aspnetmmc.chm";
-            //Help.ShowHelp(this, path, HelpNavigator.TableOfContents, "");
-        }
 
-        ////////////////////////////////////////////////////////////////////////////
         /// <summary>
-        /// HILFSMETHODEN
+        /// F1 / Handbuch
         /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void handbuchToolStripMenuItem_Click(object sender, EventArgs e) {
+            this.benutzerHandbuch();
+            
+        }
+        protected override bool ProcessCmdKey(ref Message msg, Keys keyData) {
+            if (keyData == Keys.F1) {
+                this.benutzerHandbuch();
+            }
+            return base.ProcessCmdKey(ref msg, keyData);
+        }
+        private void benutzerHandbuch() { 
+            string path = Directory.GetCurrentDirectory() + @"\chm\Handbuch_SS2013_P004_V2.docx";
+            Help.ShowHelp(this, path, HelpNavigator.TableOfContents, "");
+        }
+        ////////////////////////////////////////////////////////////////////////////
+
         private void TextVisibleFalse() {
             this.bildSpeichOk.Visible = false;
             this.okPrognose = false;
             this.toolAusfueren.Visible = false;
             this.save.Visible = false;
         }
-
-        // F1
-        //protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
-        //{
-        //    if (keyData == Keys.F1)
-        //    {
-        //        MessageBox.Show("You pressed the F1 key");
-        //        return true;    // indicate that you handled this keystroke
-        //    }
-
-        //    // Call the base class
-        //    return base.ProcessCmdKey(ref msg, keyData);
-        //}
-
         private void DataGriedViewRemove(DataGridView dgv) {
             if (dgv.DataSource != null) {
                 dgv.DataSource = null;
