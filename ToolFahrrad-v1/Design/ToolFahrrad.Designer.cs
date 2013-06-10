@@ -641,6 +641,11 @@
             this.saveAenderungen2 = new System.Windows.Forms.PictureBox();
             this.label275 = new System.Windows.Forms.Label();
             this.dataGridViewDirektverkauf = new System.Windows.Forms.DataGridView();
+            this.knr2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn32 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pr = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.str = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewCheckBoxColumn2 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.addNr = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.uebernehmenXML = new System.Windows.Forms.PictureBox();
@@ -654,9 +659,6 @@
             this.xmlOutput = new System.Windows.Forms.TabPage();
             this.panelXMLerstellen = new System.Windows.Forms.Panel();
             this.dataGridViewProduktKapazit = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn29 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn30 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ueberStunden = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label274 = new System.Windows.Forms.Label();
             this.dataGridViewProduktAuftrag = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn27 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -668,6 +670,10 @@
             this.dataGridViewTextBoxColumn26 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label272 = new System.Windows.Forms.Label();
             this.dataGridViewDirekt = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn22 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn23 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.straf = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label271 = new System.Windows.Forms.Label();
             this.dataGridViewVertrieb = new System.Windows.Forms.DataGridView();
             this.dg_p1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -695,16 +701,10 @@
             this.imageListAmpel = new System.Windows.Forms.ImageList(this.components);
             this.helpProvider1 = new System.Windows.Forms.HelpProvider();
             this.imageListPlusMinus = new System.Windows.Forms.ImageList(this.components);
-            this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn22 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn23 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.straf = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.knr2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn32 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pr = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.str = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewCheckBoxColumn2 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
+            this.dataGridViewTextBoxColumn29 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn30 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ueberStunden = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabs.SuspendLayout();
             this.tab_xml.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pufferP3)).BeginInit();
@@ -6191,7 +6191,7 @@
             // dvVerwenden
             // 
             resources.ApplyResources(this.dvVerwenden, "dvVerwenden");
-            this.dvVerwenden.BackColor = System.Drawing.Color.ForestGreen;
+            this.dvVerwenden.BackColor = System.Drawing.SystemColors.Control;
             this.dvVerwenden.Name = "dvVerwenden";
             this.toolTip.SetToolTip(this.dvVerwenden, resources.GetString("dvVerwenden.ToolTip"));
             this.dvVerwenden.UseVisualStyleBackColor = false;
@@ -6249,6 +6249,35 @@
             resources.ApplyResources(this.dataGridViewDirektverkauf, "dataGridViewDirektverkauf");
             this.dataGridViewDirektverkauf.Name = "dataGridViewDirektverkauf";
             this.helpProvider1.SetShowHelp(this.dataGridViewDirektverkauf, ((bool)(resources.GetObject("dataGridViewDirektverkauf.ShowHelp"))));
+            // 
+            // knr2
+            // 
+            resources.ApplyResources(this.knr2, "knr2");
+            this.knr2.Name = "knr2";
+            this.knr2.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn32
+            // 
+            resources.ApplyResources(this.dataGridViewTextBoxColumn32, "dataGridViewTextBoxColumn32");
+            this.dataGridViewTextBoxColumn32.Name = "dataGridViewTextBoxColumn32";
+            // 
+            // pr
+            // 
+            resources.ApplyResources(this.pr, "pr");
+            this.pr.Name = "pr";
+            // 
+            // str
+            // 
+            resources.ApplyResources(this.str, "str");
+            this.str.Name = "str";
+            // 
+            // dataGridViewCheckBoxColumn2
+            // 
+            this.dataGridViewCheckBoxColumn2.FalseValue = "false";
+            resources.ApplyResources(this.dataGridViewCheckBoxColumn2, "dataGridViewCheckBoxColumn2");
+            this.dataGridViewCheckBoxColumn2.IndeterminateValue = "false";
+            this.dataGridViewCheckBoxColumn2.Name = "dataGridViewCheckBoxColumn2";
+            this.dataGridViewCheckBoxColumn2.TrueValue = "true";
             // 
             // addNr
             // 
@@ -6379,24 +6408,6 @@
             this.dataGridViewProduktKapazit.ReadOnly = true;
             this.helpProvider1.SetShowHelp(this.dataGridViewProduktKapazit, ((bool)(resources.GetObject("dataGridViewProduktKapazit.ShowHelp"))));
             // 
-            // dataGridViewTextBoxColumn29
-            // 
-            resources.ApplyResources(this.dataGridViewTextBoxColumn29, "dataGridViewTextBoxColumn29");
-            this.dataGridViewTextBoxColumn29.Name = "dataGridViewTextBoxColumn29";
-            this.dataGridViewTextBoxColumn29.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn30
-            // 
-            resources.ApplyResources(this.dataGridViewTextBoxColumn30, "dataGridViewTextBoxColumn30");
-            this.dataGridViewTextBoxColumn30.Name = "dataGridViewTextBoxColumn30";
-            this.dataGridViewTextBoxColumn30.ReadOnly = true;
-            // 
-            // ueberStunden
-            // 
-            resources.ApplyResources(this.ueberStunden, "ueberStunden");
-            this.ueberStunden.Name = "ueberStunden";
-            this.ueberStunden.ReadOnly = true;
-            // 
             // label274
             // 
             resources.ApplyResources(this.label274, "label274");
@@ -6495,6 +6506,30 @@
             this.dataGridViewDirekt.Name = "dataGridViewDirekt";
             this.dataGridViewDirekt.ReadOnly = true;
             this.helpProvider1.SetShowHelp(this.dataGridViewDirekt, ((bool)(resources.GetObject("dataGridViewDirekt.ShowHelp"))));
+            // 
+            // dataGridViewTextBoxColumn12
+            // 
+            resources.ApplyResources(this.dataGridViewTextBoxColumn12, "dataGridViewTextBoxColumn12");
+            this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
+            this.dataGridViewTextBoxColumn12.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn22
+            // 
+            resources.ApplyResources(this.dataGridViewTextBoxColumn22, "dataGridViewTextBoxColumn22");
+            this.dataGridViewTextBoxColumn22.Name = "dataGridViewTextBoxColumn22";
+            this.dataGridViewTextBoxColumn22.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn23
+            // 
+            resources.ApplyResources(this.dataGridViewTextBoxColumn23, "dataGridViewTextBoxColumn23");
+            this.dataGridViewTextBoxColumn23.Name = "dataGridViewTextBoxColumn23";
+            this.dataGridViewTextBoxColumn23.ReadOnly = true;
+            // 
+            // straf
+            // 
+            resources.ApplyResources(this.straf, "straf");
+            this.straf.Name = "straf";
+            this.straf.ReadOnly = true;
             // 
             // label271
             // 
@@ -6682,58 +6717,23 @@
             this.imageListPlusMinus.Images.SetKeyName(0, "minus.png");
             this.imageListPlusMinus.Images.SetKeyName(1, "plus.png");
             // 
-            // dataGridViewTextBoxColumn12
+            // dataGridViewTextBoxColumn29
             // 
-            resources.ApplyResources(this.dataGridViewTextBoxColumn12, "dataGridViewTextBoxColumn12");
-            this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
-            this.dataGridViewTextBoxColumn12.ReadOnly = true;
+            resources.ApplyResources(this.dataGridViewTextBoxColumn29, "dataGridViewTextBoxColumn29");
+            this.dataGridViewTextBoxColumn29.Name = "dataGridViewTextBoxColumn29";
+            this.dataGridViewTextBoxColumn29.ReadOnly = true;
             // 
-            // dataGridViewTextBoxColumn22
+            // dataGridViewTextBoxColumn30
             // 
-            resources.ApplyResources(this.dataGridViewTextBoxColumn22, "dataGridViewTextBoxColumn22");
-            this.dataGridViewTextBoxColumn22.Name = "dataGridViewTextBoxColumn22";
-            this.dataGridViewTextBoxColumn22.ReadOnly = true;
+            resources.ApplyResources(this.dataGridViewTextBoxColumn30, "dataGridViewTextBoxColumn30");
+            this.dataGridViewTextBoxColumn30.Name = "dataGridViewTextBoxColumn30";
+            this.dataGridViewTextBoxColumn30.ReadOnly = true;
             // 
-            // dataGridViewTextBoxColumn23
+            // ueberStunden
             // 
-            resources.ApplyResources(this.dataGridViewTextBoxColumn23, "dataGridViewTextBoxColumn23");
-            this.dataGridViewTextBoxColumn23.Name = "dataGridViewTextBoxColumn23";
-            this.dataGridViewTextBoxColumn23.ReadOnly = true;
-            // 
-            // straf
-            // 
-            resources.ApplyResources(this.straf, "straf");
-            this.straf.Name = "straf";
-            this.straf.ReadOnly = true;
-            // 
-            // knr2
-            // 
-            resources.ApplyResources(this.knr2, "knr2");
-            this.knr2.Name = "knr2";
-            this.knr2.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn32
-            // 
-            resources.ApplyResources(this.dataGridViewTextBoxColumn32, "dataGridViewTextBoxColumn32");
-            this.dataGridViewTextBoxColumn32.Name = "dataGridViewTextBoxColumn32";
-            // 
-            // pr
-            // 
-            resources.ApplyResources(this.pr, "pr");
-            this.pr.Name = "pr";
-            // 
-            // str
-            // 
-            resources.ApplyResources(this.str, "str");
-            this.str.Name = "str";
-            // 
-            // dataGridViewCheckBoxColumn2
-            // 
-            this.dataGridViewCheckBoxColumn2.FalseValue = "false";
-            resources.ApplyResources(this.dataGridViewCheckBoxColumn2, "dataGridViewCheckBoxColumn2");
-            this.dataGridViewCheckBoxColumn2.IndeterminateValue = "false";
-            this.dataGridViewCheckBoxColumn2.Name = "dataGridViewCheckBoxColumn2";
-            this.dataGridViewCheckBoxColumn2.TrueValue = "true";
+            resources.ApplyResources(this.ueberStunden, "ueberStunden");
+            this.ueberStunden.Name = "ueberStunden";
+            this.ueberStunden.ReadOnly = true;
             // 
             // Fahrrad
             // 
@@ -7478,9 +7478,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn24;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn25;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn26;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn29;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn30;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ueberStunden;
         private System.Windows.Forms.PictureBox addNr2;
         private System.Windows.Forms.PictureBox zurueck2;
         private System.Windows.Forms.PictureBox saveAenderungen2;
@@ -7501,6 +7498,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn23;
         private System.Windows.Forms.DataGridViewTextBoxColumn straf;
         private System.Windows.Forms.SaveFileDialog saveFileDialog1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn29;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn30;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ueberStunden;
     }
 }
 
