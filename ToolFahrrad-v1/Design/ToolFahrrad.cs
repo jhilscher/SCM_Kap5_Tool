@@ -33,10 +33,6 @@ namespace ToolFahrrad_v1
         /// Konstruktor
         /// </summary>
         public Fahrrad() {
-            //if (sprache.GetCheck == "EN")
-            //{
-            //    Thread.CurrentThread.CurrentUICulture = new CultureInfo("en");
-            //}
             InitializeComponent();
         }
 
@@ -52,6 +48,8 @@ namespace ToolFahrrad_v1
             this.tab1.Visible = true;
             this.tab2.Visible = true;
             this.panelXMLerstellen.Visible = true;
+            this.arbPlatzAusfueren.Visible = true;
+            this.DataGridViewAP.Visible = true;
             this.bestellungUpdate = false;
             this.dvUpdate = false;
             this.xMLexportToolStripMenuItem.Enabled = true;
