@@ -20,9 +20,15 @@ namespace ToolFahrrad_v1
         Produktionsplanung pp = new Produktionsplanung();
         Bestellverwaltung bv = new Bestellverwaltung();
         List<Bestellposition> bp;
+        List<DvPosition> dirv;
+        List<int[]> xmlAP;
         private bool bestellungUpdate = false;
+        private bool dvUpdate = false;
         private bool okPrognose = false;
         private bool okXml = false;
+        private Rectangle dragBoxSrc;
+        private int rowIndexSrc;
+        private int rowIndexTar;
         /// <summary>
         /// Konstruktor
         /// </summary>
@@ -45,9 +51,14 @@ namespace ToolFahrrad_v1
             this.save.Visible = true;
             this.tab1.Visible = true;
             this.tab2.Visible = true;
+            this.panelXMLerstellen.Visible = true;
             this.bestellungUpdate = false;
+            this.dvUpdate = false;
+            this.xMLexportToolStripMenuItem.Enabled = true;
+            this.xml_export.Visible = true;
         }
         private void ausführen() {
+            bv.clearBvPositionen();
             if ((instance.GetTeil(4) as ETeil).Puffer != -1) {
                 foreach (Teil t in instance.ListeETeile) {
                     t.Aufgeloest = false;
@@ -72,9 +83,373 @@ namespace ToolFahrrad_v1
                 this.DispositionDarstellung(index);
             }
             this.Information();
+            this.xmlVorbereitung(100); // 100=all
         }
 
+        /// <summary>
+        /// Informationsdarstellung
+        /// </summary>
+        private void Information() {
+            // KTeile
+            #region KTEILE
+            //Bruttobedarf
+            foreach (KTeil k in instance.ListeKTeile) {
+                k.BruttoBedarfPer0 = 0;
+                k.BruttoBedarfPer1 = 0;
+                k.BruttoBedarfPer2 = 0;
+                k.BruttoBedarfPer3 = 0;
+            }
+            for (int i = 1; i < 4; ++i) {
+                pp.RekursAufloesenKTeile(i, null, instance.GetTeil(i) as ETeil);
+            }
+
+            this.DataGriedViewRemove(dataGridViewKTeil);
+            int index = 0;
+            for (int i = 4; i < 8; ++i) {
+                dataGridViewKTeil.Columns[i].HeaderText = "P" + (Convert.ToInt32(xml.period) + (i - 4));
+            }
+
+            dataGridViewKTeil.Columns[8].HeaderText = "B" + ((Convert.ToInt32(xml.period)) + 1);
+            dataGridViewKTeil.Columns[9].HeaderText = "B" + ((Convert.ToInt32(xml.period)) + 2);
+            dataGridViewKTeil.Columns[10].HeaderText = "B" + (Convert.ToInt32(xml.period) + 3);
+            dataGridViewKTeil.Columns[11].HeaderText = "B" + (Convert.ToInt32(xml.period) + 4);
+
+            foreach (var a in instance.ListeKTeile) {
+                //Lagerzugang berechnen
+                int lagerZugang = 0;
+                List<List<int>> list = a.OffeneBestellungen;
+                foreach (List<int> l in list) {
+                    lagerZugang += l[2];
+                }
+
+                dataGridViewKTeil.Rows.Add();
+                dataGridViewKTeil.Rows[index].Cells[0].Value = a.Nummer;
+                dataGridViewKTeil.Rows[index].Cells[1].Value = a.Verwendung + " - " + a.Bezeichnung;
+                dataGridViewKTeil.Rows[index].Cells[2].Value = a.Lagerstand;
+                dataGridViewKTeil.Rows[index].Cells[3].Value = lagerZugang;
+                dataGridViewKTeil.Rows[index].Cells[4].Value = a.BruttoBedarfPer0;
+                dataGridViewKTeil.Rows[index].Cells[5].Value = a.BruttoBedarfPer1;
+                dataGridViewKTeil.Rows[index].Cells[6].Value = a.BruttoBedarfPer2;
+                dataGridViewKTeil.Rows[index].Cells[7].Value = a.BruttoBedarfPer3;
+
+                dataGridViewKTeil.Rows[index].Cells[8].Value = a.BestandPer1;
+                if (a.BestandPer1 < 0) {
+                    dataGridViewKTeil.Rows[index].Cells[8].Style.ForeColor = Color.Red;
+                    dataGridViewKTeil.Rows[index].Cells[8].Style.Font = new Font(dataGridViewKTeil.Rows[index].Cells[8].InheritedStyle.Font, FontStyle.Bold);
+                }
+                dataGridViewKTeil.Rows[index].Cells[9].Value = a.BestandPer2;
+                if (a.BestandPer2 < 0) {
+                    dataGridViewKTeil.Rows[index].Cells[9].Style.ForeColor = Color.Red;
+                    dataGridViewKTeil.Rows[index].Cells[9].Style.Font = new Font(dataGridViewKTeil.Rows[index].Cells[9].InheritedStyle.Font, FontStyle.Bold);
+                }
+                dataGridViewKTeil.Rows[index].Cells[10].Value = a.BestandPer3;
+                if (a.BestandPer3 < 0) {
+                    dataGridViewKTeil.Rows[index].Cells[10].Style.ForeColor = Color.Red;
+                    dataGridViewKTeil.Rows[index].Cells[10].Style.Font = new Font(dataGridViewKTeil.Rows[index].Cells[10].InheritedStyle.Font, FontStyle.Bold);
+                }
+                dataGridViewKTeil.Rows[index].Cells[11].Value = a.BestandPer4;
+                if (a.BestandPer4 < 0) {
+                    dataGridViewKTeil.Rows[index].Cells[11].Style.ForeColor = Color.Red;
+                    dataGridViewKTeil.Rows[index].Cells[11].Style.Font = new Font(dataGridViewKTeil.Rows[index].Cells[11].InheritedStyle.Font, FontStyle.Bold);
+                }
+                //Farbe
+                for (int i = 0; i < 12; ++i) {
+                    if (i >= 0 && i < 4)
+                        dataGridViewKTeil.Columns[i].DefaultCellStyle.BackColor = Color.FloralWhite;
+                    else if (i > 3 && i < 8)
+                        dataGridViewKTeil.Columns[i].DefaultCellStyle.BackColor = Color.Honeydew;
+                }
+                ++index;
+            }
+            #endregion
+            // Eteile
+            #region ETeile
+            this.DataGriedViewRemove(dataGridViewETeil);
+            index = 0;
+            foreach (var a in instance.ListeETeile) {
+                dataGridViewETeil.Rows.Add();
+                dataGridViewETeil.Rows[index].Cells[0].Value = a.Nummer;
+                dataGridViewETeil.Rows[index].Cells[1].Value = a.Verwendung + " - " + a.Bezeichnung;
+                dataGridViewETeil.Rows[index].Cells[2].Value = a.Lagerstand;
+                dataGridViewETeil.Rows[index].Cells[3].Value = a.Verhaeltnis + "%";
+                if (a.Verhaeltnis < 40)
+                    dataGridViewETeil.Rows[index].Cells[4].Value = imageListAmpel.Images[0];
+                else if (a.Verhaeltnis <= 100)
+                    dataGridViewETeil.Rows[index].Cells[4].Value = imageListAmpel.Images[2];
+                else
+                    dataGridViewETeil.Rows[index].Cells[4].Value = imageListAmpel.Images[1];
+                dataGridViewETeil.Rows[index].Cells[5].Value = a.InWartschlange;
+                dataGridViewETeil.Rows[index].Cells[6].Value = a.InBearbeitung;
+                if (!a.Verwendung.Equals("KDH"))
+                    dataGridViewETeil.Rows[index].Cells[7].Value = a.ProduktionsMengePer0;
+                else {
+                    int prodMenge = 0;
+                    foreach (KeyValuePair<string, int> pair in a.KdhProduktionsmenge) {
+                        prodMenge += pair.Value;
+                    }
+                    dataGridViewETeil.Rows[index].Cells[7].Value = prodMenge;
+                }
+
+                //Farbe
+                for (int i = 0; i < 8; ++i) {
+                    if (i == 7)
+                        dataGridViewETeil.Columns[i].DefaultCellStyle.BackColor = Color.Honeydew;
+                    else
+                        dataGridViewETeil.Columns[i].DefaultCellStyle.BackColor = Color.FloralWhite;
+                }
+                if (a.Verwendung.Equals("KDH")) {
+                    dataGridViewETeil.Rows[index].DefaultCellStyle.BackColor = Color.LemonChiffon;
+                }
+
+                ++index;
+            }
+            #endregion
+            // Arbeitsplätze
+            #region Arbetsplatz
+            this.DataGriedViewRemove(DataGridViewAP);
+            index = 0;
+            xmlAP = new List<int[]>();
+            foreach (var a in instance.ArbeitsplatzList) {
+                int[] apXML = new int[3];
+
+
+                DataGridViewAP.Rows.Add();
+                DataGridViewAP.Rows[index].Cells[4].Value = imageListPlusMinus.Images[0];
+                DataGridViewAP.Rows[index].Cells[5].Value = imageListPlusMinus.Images[1];
+                DataGridViewAP.Rows[index].Cells[0].Value = a.GetNummerArbeitsplatz;
+                apXML[0] = a.GetNummerArbeitsplatz;
+                DataGridViewAP.Rows[index].Cells[1].Value = a.Leerzeit + " (" + a.RuestungVorPeriode + ") ";
+                int prMenge = 0;
+                int val = 0;
+                int sum = 0;
+                foreach (KeyValuePair<int, int> kvp in a.Werk_zeiten) {
+                    {
+                        if (!(instance.GetTeil(kvp.Key) as ETeil).Verwendung.Contains("KDH")) {
+                            prMenge += (instance.GetTeil(kvp.Key) as ETeil).ProduktionsMengePer0;
+                        }
+                        else {
+                            foreach (KeyValuePair<string, int> pair in (instance.GetTeil(kvp.Key) as ETeil).KdhProduktionsmenge) {
+                                prMenge += pair.Value;
+                            }
+                        }
+                        if (prMenge < 0)
+                            prMenge = 0;
+                        sum += kvp.Value * prMenge;
+                        prMenge = 0;
+                    }
+                }
+                DataGridViewAP.Rows[index].Cells[2].Value = sum + " min";
+
+                prMenge = 0;
+                val = 0;
+                string key = "";
+                if (a.Geaendert == false) {
+                    foreach (KeyValuePair<int, int> kvp in a.Ruest_zeiten) {
+                        if (!(instance.GetTeil(kvp.Key) as ETeil).Verwendung.Contains("KDH")) {
+                            if ((instance.GetTeil(kvp.Key) as ETeil).ProduktionsMengePer0 >= 0)
+                                val += kvp.Value;
+                        }
+                        else {
+                            foreach (KeyValuePair<string, int> pair in (instance.GetTeil(kvp.Key) as ETeil).KdhProduktionsmenge) {
+                                prMenge += pair.Value;
+                                string[] split = pair.Key.Split('-');
+                                if (prMenge >= 0) {
+                                    if (key != split[1] || val == 0)
+                                        val += kvp.Value;
+                                }
+                                key = split[1];
+                            }
+                        }
+                    }
+                    a.Geaendert = true;
+                    a.RuestungCustom = val;
+                }
+
+                DataGridViewAP.Rows[index].Cells[3].Value = a.RuestungCustom;
+                int gesammt = a.RuestungCustom + sum;
+                DataGridViewAP.Rows[index].Cells[6].Value = gesammt + " min";
+                DataGridViewAP.Rows[index].Cells[10].Value = imageListAmpel.Images[2];
+                if (gesammt <= a.zeit) { // newTeim <= 2400 
+                    DataGridViewAP.Rows[index].Cells[7].Value = imageListAmpel.Images[2];
+                    apXML[1] = 1;
+                    apXML[2] = 0;
+                }
+                else if (gesammt > instance.ErsteSchicht) // gesammt > 3600
+                {
+                    if (gesammt > instance.ZweiteSchicht) {
+                        if (gesammt > 7200)
+                            DataGridViewAP.Rows[index].Cells[10].Value = imageListAmpel.Images[0];
+                        else if (gesammt < 7200)
+                            DataGridViewAP.Rows[index].Cells[10].Value = imageListAmpel.Images[1];
+                        else
+                            DataGridViewAP.Rows[index].Cells[10].Value = imageListAmpel.Images[2];
+                        apXML[1] = 3;
+                        if (gesammt < 7200)
+                            apXML[2] = gesammt - instance.ZweiteSchicht;
+                        else
+                            apXML[2] = 7200 - instance.ZweiteSchicht;
+                    }
+                    if (gesammt < instance.ZweiteSchicht) {
+                        DataGridViewAP.Rows[index].Cells[7].Value = imageListAmpel.Images[0];
+                        DataGridViewAP.Rows[index].Cells[8].Value = true;
+                        apXML[1] = 2;
+                        apXML[2] = gesammt - instance.ErsteSchicht;
+                    }
+                    else if (gesammt > instance.ZweiteSchicht) {
+                        DataGridViewAP.Rows[index].Cells[7].Value = imageListAmpel.Images[0];
+                        DataGridViewAP.Rows[index].Cells[9].Value = true;
+                    }
+                }
+                else if (gesammt > a.zeit && gesammt <= instance.ErsteSchicht) { // 2400 < newTime < 3600 Überstunden
+                    DataGridViewAP.Rows[index].Cells[7].Value = imageListAmpel.Images[1];
+                    apXML[1] = 1;
+                    apXML[2] = gesammt - a.zeit;
+                }
+                else {
+                    DataGridViewAP.Rows[index].Cells[7].Value = imageListAmpel.Images[2];
+                }
+
+                xmlAP.Add(apXML);
+                //Farbe
+                for (int i = 0; i < 11; ++i) {
+                    if (i < 2)
+                        DataGridViewAP.Columns[i].DefaultCellStyle.BackColor = Color.FloralWhite;
+                    else if (i == 2 || i > 3)
+                        DataGridViewAP.Columns[i].DefaultCellStyle.BackColor = Color.LightYellow;
+                }
+                ++index;
+            }
+            instance.ApKapazitaet = xmlAP;
+            #endregion
+
+            //Bestellung
+            #region Bestellung
+            this.DataGriedViewRemove(dataGridViewBestellung);
+            if (this.bestellungUpdate == false)
+                bv.generiereBestellListe();
+            List<Bestellposition> bp = bv.BvPositionen;
+            index = 0;
+            foreach (var a in bp) {
+                dataGridViewBestellung.Rows.Add();
+                dataGridViewBestellung.Rows[index].Cells[0].Value = a.Kaufteil.Nummer;
+                dataGridViewBestellung.Rows[index].Cells[1].Value = a.Menge;
+                if (a.Eil == true) {
+                    dataGridViewBestellung.Rows[index].Cells[2].Value = true;
+                }
+
+                //Farbe
+                for (int i = 0; i < 4; ++i) {
+                    if (i == 0)
+                        dataGridViewBestellung.Columns[i].DefaultCellStyle.BackColor = Color.FloralWhite;
+                    else
+                        dataGridViewBestellung.Columns[i].DefaultCellStyle.BackColor = Color.LightYellow;
+                }
+                ++index;
+            }
+            #endregion
+
+            #region Direktverkauf
+            this.DataGriedViewRemove(dataGridViewDirektverkauf);
+            if (this.dvUpdate == false)
+                bv.generiereListeDV();
+            List<DvPosition> dv = bv.DvPositionen;
+            index = 0;
+            foreach (var a in dv) {
+                dataGridViewDirektverkauf.Rows.Add();
+                dataGridViewDirektverkauf.Rows[index].Cells[0].Value = a.DvTeilNr;
+                dataGridViewDirektverkauf.Rows[index].Cells[1].Value = a.DvMenge;
+                dataGridViewDirektverkauf.Rows[index].Cells[2].Value = a.DvPreis;
+                dataGridViewDirektverkauf.Rows[index].Cells[3].Value = a.DvStrafe;
+
+                ++index;
+            }
+            #endregion
+        }
+
+        /// <summary>
+        /// Dropdownmenu Startseite PROGNOSE
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void upDownAW1_ValueChanged(object sender, EventArgs e) {
+            TextVisibleFalse();
+        }
+        private void upDownAW2_ValueChanged(object sender, EventArgs e) {
+            TextVisibleFalse();
+        }
+        private void upDownAW3_ValueChanged(object sender, EventArgs e) {
+            TextVisibleFalse();
+        }
+        private void upDownP13_ValueChanged(object sender, EventArgs e) {
+            TextVisibleFalse();
+        }
+        private void upDownP12_ValueChanged(object sender, EventArgs e) {
+            TextVisibleFalse();
+        }
+        private void upDownP11_ValueChanged(object sender, EventArgs e) {
+            TextVisibleFalse();
+        }
+        private void upDownP21_ValueChanged(object sender, EventArgs e) {
+            TextVisibleFalse();
+        }
+        private void upDownP22_ValueChanged(object sender, EventArgs e) {
+            TextVisibleFalse();
+        }
+        private void upDownP23_ValueChanged(object sender, EventArgs e) {
+            TextVisibleFalse();
+        }
+        private void upDownP33_ValueChanged(object sender, EventArgs e) {
+            TextVisibleFalse();
+        }
+        private void upDownP32_ValueChanged(object sender, EventArgs e) {
+            TextVisibleFalse();
+        }
+        private void upDownP31_ValueChanged(object sender, EventArgs e) {
+            TextVisibleFalse();
+        }
+        private void pufferP1_ValueChanged(object sender, EventArgs e) {
+            TextVisibleFalse();
+        }
+        private void pufferP2_ValueChanged(object sender, EventArgs e) {
+            TextVisibleFalse();
+        }
+        private void pufferP3_ValueChanged(object sender, EventArgs e) {
+            TextVisibleFalse();
+        }
+        private void prognoseSpeichern_Click(object sender, EventArgs e) {
+            instance.GetTeil(1).VertriebPer0 = Convert.ToInt32(upDownAW1.Value);
+            instance.GetTeil(2).VertriebPer0 = Convert.ToInt32(upDownAW2.Value);
+            instance.GetTeil(3).VertriebPer0 = Convert.ToInt32(upDownAW3.Value);
+
+            (instance.GetTeil(1) as ETeil).Puffer = Convert.ToInt32(pufferP1.Value);
+            (instance.GetTeil(2) as ETeil).Puffer = Convert.ToInt32(pufferP2.Value);
+            (instance.GetTeil(3) as ETeil).Puffer = Convert.ToInt32(pufferP3.Value);
+
+            instance.GetTeil(1).VerbrauchPer1 = Convert.ToInt32(upDownP11.Value);
+            instance.GetTeil(1).VerbrauchPer2 = Convert.ToInt32(upDownP21.Value);
+            instance.GetTeil(1).VerbrauchPer3 = Convert.ToInt32(upDownP31.Value);
+
+            instance.GetTeil(2).VerbrauchPer1 = Convert.ToInt32(upDownP12.Value);
+            instance.GetTeil(2).VerbrauchPer2 = Convert.ToInt32(upDownP22.Value);
+            instance.GetTeil(2).VerbrauchPer3 = Convert.ToInt32(upDownP32.Value);
+
+            instance.GetTeil(3).VerbrauchPer1 = Convert.ToInt32(upDownP13.Value);
+            instance.GetTeil(3).VerbrauchPer2 = Convert.ToInt32(upDownP23.Value);
+            instance.GetTeil(3).VerbrauchPer3 = Convert.ToInt32(upDownP33.Value);
+
+            this.bildSpeichOk.Visible = true;
+            this.panelXML.Visible = true;
+            this.okPrognose = true;
+            if (this.okXml == true)
+                this.toolAusfueren.Visible = true;
+        }
+
+        /// <summary>
+        /// Dispositionsdarstellung
+        /// </summary>
+        /// <param name="index"></param>
         private void DispositionDarstellung(int index) {
+            bv.clearBvPositionen();
             ETeil et;
             int n;
             if (index == 1) {
@@ -469,86 +844,7 @@ namespace ToolFahrrad_v1
         }
 
         /// <summary>
-        /// Dropdownmenu Startseite
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void upDownAW1_ValueChanged(object sender, EventArgs e) {
-            TextVisibleFalse();
-        }
-        private void upDownAW2_ValueChanged(object sender, EventArgs e) {
-            TextVisibleFalse();
-        }
-        private void upDownAW3_ValueChanged(object sender, EventArgs e) {
-            TextVisibleFalse();
-        }
-        private void upDownP13_ValueChanged(object sender, EventArgs e) {
-            TextVisibleFalse();
-        }
-        private void upDownP12_ValueChanged(object sender, EventArgs e) {
-            TextVisibleFalse();
-        }
-        private void upDownP11_ValueChanged(object sender, EventArgs e) {
-            TextVisibleFalse();
-        }
-        private void upDownP21_ValueChanged(object sender, EventArgs e) {
-            TextVisibleFalse();
-        }
-        private void upDownP22_ValueChanged(object sender, EventArgs e) {
-            TextVisibleFalse();
-        }
-        private void upDownP23_ValueChanged(object sender, EventArgs e) {
-            TextVisibleFalse();
-        }
-        private void upDownP33_ValueChanged(object sender, EventArgs e) {
-            TextVisibleFalse();
-        }
-        private void upDownP32_ValueChanged(object sender, EventArgs e) {
-            TextVisibleFalse();
-        }
-        private void upDownP31_ValueChanged(object sender, EventArgs e) {
-            TextVisibleFalse();
-        }
-        private void pufferP1_ValueChanged(object sender, EventArgs e) {
-            TextVisibleFalse();
-        }
-        private void pufferP2_ValueChanged(object sender, EventArgs e) {
-            TextVisibleFalse();
-        }
-        private void pufferP3_ValueChanged(object sender, EventArgs e) {
-            TextVisibleFalse();
-        }
-
-        private void prognoseSpeichern_Click(object sender, EventArgs e) {
-            instance.GetTeil(1).VertriebPer0 = Convert.ToInt32(upDownAW1.Value);
-            instance.GetTeil(2).VertriebPer0 = Convert.ToInt32(upDownAW2.Value);
-            instance.GetTeil(3).VertriebPer0 = Convert.ToInt32(upDownAW3.Value);
-
-            (instance.GetTeil(1) as ETeil).Puffer = Convert.ToInt32(pufferP1.Value);
-            (instance.GetTeil(2) as ETeil).Puffer = Convert.ToInt32(pufferP2.Value);
-            (instance.GetTeil(3) as ETeil).Puffer = Convert.ToInt32(pufferP3.Value);
-
-            instance.GetTeil(1).VerbrauchPer1 = Convert.ToInt32(upDownP11.Value);
-            instance.GetTeil(1).VerbrauchPer2 = Convert.ToInt32(upDownP21.Value);
-            instance.GetTeil(1).VerbrauchPer3 = Convert.ToInt32(upDownP31.Value);
-
-            instance.GetTeil(2).VerbrauchPer1 = Convert.ToInt32(upDownP12.Value);
-            instance.GetTeil(2).VerbrauchPer2 = Convert.ToInt32(upDownP22.Value);
-            instance.GetTeil(2).VerbrauchPer3 = Convert.ToInt32(upDownP32.Value);
-
-            instance.GetTeil(3).VerbrauchPer1 = Convert.ToInt32(upDownP13.Value);
-            instance.GetTeil(3).VerbrauchPer2 = Convert.ToInt32(upDownP23.Value);
-            instance.GetTeil(3).VerbrauchPer3 = Convert.ToInt32(upDownP33.Value);
-
-            this.bildSpeichOk.Visible = true;
-            this.panelXML.Visible = true;
-            this.okPrognose = true;
-            if (this.okXml == true)
-                this.toolAusfueren.Visible = true;
-        }
-
-        /// <summary>
-        /// XML-Bearbeitung
+        /// XML-Bearbeitung INPUT/OUTPUT
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -557,6 +853,46 @@ namespace ToolFahrrad_v1
         }
         private void dateiÖffnenToolStripMenuItem_Click(object sender, EventArgs e) {
             xmlOeffnen();
+        }
+        private void xmlOeffnen() {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Filter = "xml-Datei öffnen (*.xml)|*.xml";
+            if (openFileDialog.ShowDialog() == DialogResult.OK) {
+                if (xml.ReadDatei(openFileDialog.FileName) == true) {
+                    xmlTextBox.Text = openFileDialog.FileName;
+                    xmlOffenOK.Visible = true;
+                    okXml = true;
+                    if (this.okPrognose == true)
+                        toolAusfueren.Visible = true;
+                }
+                else {
+                    xmlTextBox.Text = openFileDialog.FileName;
+                    toolAusfueren.Visible = false;
+                    xmlOffenOK.Visible = false;
+                    save.Visible = false;
+                    okXml = false;
+
+                    MessageBox.Show("Es wurde zum Laden falsche Datei ausgewählt. \nDas Programm kann nicht ausgeführt werden", "Fehlermeldung",
+                       MessageBoxButtons.OK, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button1);
+
+                }
+            }
+            this.panelXML.Visible = true;
+        }
+        private void xml_export_Click(object sender, EventArgs e) {
+            this.xmlExport();
+        }
+        private void xMLexportToolStripMenuItem_Click(object sender, EventArgs e) {
+            this.xmlExport();
+        }
+        private void xmlExport() {
+            saveFileDialog1.Filter = "xml-Datei öffnen (*.xml)|*.xml";
+            saveFileDialog1.Title = "xml-Datei erstellen";
+            saveFileDialog1.ShowDialog();
+
+            if (saveFileDialog1.FileName != "") {
+                xml.WriteDatei(saveFileDialog1.FileName);
+            }
         }
 
         /// <summary>
@@ -637,32 +973,6 @@ namespace ToolFahrrad_v1
         //    return base.ProcessCmdKey(ref msg, keyData);
         //}
 
-        private void xmlOeffnen() {
-            OpenFileDialog openFileDialog = new OpenFileDialog();
-            openFileDialog.Filter = "xml-Datei öffnen (*.xml)|*.xml";
-            if (openFileDialog.ShowDialog() == DialogResult.OK) {
-                if (xml.ReadDatei(openFileDialog.FileName) == true) {
-                    xmlTextBox.Text = openFileDialog.FileName;
-                    pfadText.ForeColor = Color.ForestGreen;
-                    xmlOffenOK.Visible = true;
-                    pfadText.Visible = false;
-                    okXml = true;
-                    if (this.okPrognose == true)
-                        toolAusfueren.Visible = true;
-                }
-                else {
-                    xmlTextBox.Text = openFileDialog.FileName;
-                    pfadText.ForeColor = Color.Red;
-                    toolAusfueren.Visible = false;
-                    xmlOffenOK.Visible = false;
-                    save.Visible = false;
-                    pfadText.Visible = true;
-                    okXml = false;
-                }
-            }
-            this.panelXML.Visible = true;
-        }
-
         private void DataGriedViewRemove(DataGridView dgv) {
             if (dgv.DataSource != null) {
                 dgv.DataSource = null;
@@ -671,248 +981,64 @@ namespace ToolFahrrad_v1
                 dgv.Rows.Clear();
             }
         }
-
-        private void Information() {
-            // KTeile
-            #region KTEILE
-            //Bruttobedarf
-            foreach (KTeil k in instance.ListeKTeile) {
-                k.BruttoBedarfPer0 = 0;
-                k.BruttoBedarfPer1 = 0;
-                k.BruttoBedarfPer2 = 0;
-                k.BruttoBedarfPer3 = 0;
-            }
-            for (int i = 1; i < 4; ++i) {
-                pp.RekursAufloesenKTeile(i, null, instance.GetTeil(i) as ETeil);
-            }
-
-            this.DataGriedViewRemove(dataGridViewKTeil);
+        private void xmlVorbereitung(int p) {
             int index = 0;
-            for (int i = 4; i < 8; ++i) {
-                dataGridViewKTeil.Columns[i].HeaderText = "P" + (Convert.ToInt32(xml.period) + (i - 4));
+            if (p == 100 || p == 1) { //1 = Vertriebswunsch
+                this.DataGriedViewRemove(dataGridViewVertrieb);
+                dataGridViewVertrieb.Rows.Add();
+                for (int i = 0; i < 3; ++i) {
+                    dataGridViewVertrieb.Rows[0].Cells[i].Value = instance.GetTeil(i + 1).VertriebPer0;
+                }
             }
-
-            dataGridViewKTeil.Columns[8].HeaderText = "B" + ((Convert.ToInt32(xml.period)) + 1);
-            dataGridViewKTeil.Columns[10].HeaderText = "B" + ((Convert.ToInt32(xml.period)) + 2);
-            dataGridViewKTeil.Columns[12].HeaderText = "B" + (Convert.ToInt32(xml.period) + 3);
-            dataGridViewKTeil.Columns[14].HeaderText = "B" + (Convert.ToInt32(xml.period) + 4);
-
-            foreach (var a in instance.ListeKTeile) {
-                //Lagerzugang berechnen
-                int lagerZugang = 0;
-                List<List<int>> list = a.OffeneBestellungen;
-                foreach (List<int> l in list) {
-                    lagerZugang += l[2];
-                }
-
-                dataGridViewKTeil.Rows.Add();
-                dataGridViewKTeil.Rows[index].Cells[0].Value = a.Nummer;
-                dataGridViewKTeil.Rows[index].Cells[1].Value = a.Verwendung + " - " + a.Bezeichnung;
-                dataGridViewKTeil.Rows[index].Cells[2].Value = a.Lagerstand;
-                dataGridViewKTeil.Rows[index].Cells[3].Value = lagerZugang;
-                dataGridViewKTeil.Rows[index].Cells[4].Value = a.BruttoBedarfPer0;
-                dataGridViewKTeil.Rows[index].Cells[5].Value = a.BruttoBedarfPer1;
-                dataGridViewKTeil.Rows[index].Cells[6].Value = a.BruttoBedarfPer2;
-                dataGridViewKTeil.Rows[index].Cells[7].Value = a.BruttoBedarfPer3;
-
-                dataGridViewKTeil.Rows[index].Cells[8].Value = a.BestandPer1;
-                if (a.BestandPer1 - a.BruttoBedarfPer0 < 0)
-                    dataGridViewKTeil.Rows[index].Cells[9].Value = imageList1.Images[0];
-                else if (a.BestandPer1 - a.BruttoBedarfPer0 > 0)
-                    dataGridViewKTeil.Rows[index].Cells[9].Value = imageList1.Images[2];
-                else
-                    dataGridViewKTeil.Rows[index].Cells[9].Value = imageList1.Images[1];
-                dataGridViewKTeil.Rows[index].Cells[10].Value = a.BestandPer2;
-                if (a.BestandPer2 - a.BruttoBedarfPer1 < 0)
-                    dataGridViewKTeil.Rows[index].Cells[11].Value = imageList1.Images[0];
-                else if (a.BestandPer2 - a.BruttoBedarfPer1 > 0)
-                    dataGridViewKTeil.Rows[index].Cells[11].Value = imageList1.Images[2];
-                else
-                    dataGridViewKTeil.Rows[index].Cells[11].Value = imageList1.Images[1];
-                dataGridViewKTeil.Rows[index].Cells[12].Value = a.BestandPer3;
-                if (a.BestandPer3 - a.BruttoBedarfPer2 < 0)
-                    dataGridViewKTeil.Rows[index].Cells[13].Value = imageList1.Images[0];
-                else if (a.BestandPer3 - a.BruttoBedarfPer2 > 0)
-                    dataGridViewKTeil.Rows[index].Cells[13].Value = imageList1.Images[2];
-                else
-                    dataGridViewKTeil.Rows[index].Cells[13].Value = imageList1.Images[1];
-                dataGridViewKTeil.Rows[index].Cells[14].Value = a.BestandPer4;
-                if (a.BestandPer4 - a.BruttoBedarfPer3 < 0)
-                    dataGridViewKTeil.Rows[index].Cells[15].Value = imageList1.Images[0];
-                else if (a.BestandPer4 - a.BruttoBedarfPer3 > 0)
-                    dataGridViewKTeil.Rows[index].Cells[15].Value = imageList1.Images[2];
-                else
-                    dataGridViewKTeil.Rows[index].Cells[15].Value = imageList1.Images[1];
-
-                //Farbe
-                for (int i = 0; i < 16; ++i) {
-                    if (i >= 0 && i < 4)
-                        dataGridViewKTeil.Columns[i].DefaultCellStyle.BackColor = Color.FloralWhite;
-                    else if (i == 8 || i == 10 || i == 12 || i == 14)
-                        dataGridViewKTeil.Columns[i].DefaultCellStyle.BackColor = Color.LightYellow;
-                    else if (i > 3 && i < 8)
-                        dataGridViewKTeil.Columns[i].DefaultCellStyle.BackColor = Color.Honeydew;
-                }
-                ++index;
-            }
-            #endregion
-            // Eteile
-            #region ETeile
-            this.DataGriedViewRemove(dataGridViewETeil);
-            index = 0;
-            foreach (var a in instance.ListeETeile) {
-                dataGridViewETeil.Rows.Add();
-                dataGridViewETeil.Rows[index].Cells[0].Value = a.Nummer;
-                dataGridViewETeil.Rows[index].Cells[1].Value = a.Verwendung + " - " + a.Bezeichnung;
-                dataGridViewETeil.Rows[index].Cells[2].Value = a.Lagerstand;
-                dataGridViewETeil.Rows[index].Cells[3].Value = a.Verhaeltnis + "%";
-                if (a.Verhaeltnis < 40)
-                    dataGridViewETeil.Rows[index].Cells[4].Value = imageList1.Images[0];
-                else if (a.Verhaeltnis <= 100)
-                    dataGridViewETeil.Rows[index].Cells[4].Value = imageList1.Images[2];
-                else
-                    dataGridViewETeil.Rows[index].Cells[4].Value = imageList1.Images[1];
-                dataGridViewETeil.Rows[index].Cells[5].Value = a.InWartschlange;
-                dataGridViewETeil.Rows[index].Cells[6].Value = a.InBearbeitung;
-                if (!a.Verwendung.Equals("KDH"))
-                    dataGridViewETeil.Rows[index].Cells[7].Value = a.ProduktionsMengePer0;
-                else {
-                    int prodMenge = 0;
-                    foreach (KeyValuePair<string, int> pair in a.KdhProduktionsmenge) {
-                        prodMenge += pair.Value;
-                    }
-                    dataGridViewETeil.Rows[index].Cells[7].Value = prodMenge;
-                }
-
-                //Farbe
-                for (int i = 0; i < 8; ++i) {
-                    if (i == 7)
-                        dataGridViewETeil.Columns[i].DefaultCellStyle.BackColor = Color.Honeydew;
+            if (p == 100 || p == 3) {
+                bv.ladeBvPositionenInDc();
+                index = 0;
+                this.DataGriedViewRemove(dataGridViewEinkauf);
+                foreach (Bestellposition b in instance.Bestellungen) {
+                    dataGridViewEinkauf.Rows.Add();
+                    dataGridViewEinkauf.Rows[index].Cells[0].Value = b.Kaufteil.Nummer;
+                    dataGridViewEinkauf.Rows[index].Cells[1].Value = b.Menge;
+                    if (b.Eil == true)
+                        dataGridViewEinkauf.Rows[index].Cells[2].Value = "E";
                     else
-                        dataGridViewETeil.Columns[i].DefaultCellStyle.BackColor = Color.FloralWhite;
+                        dataGridViewEinkauf.Rows[index].Cells[2].Value = "N";
+                    ++index;
                 }
-                if (a.Verwendung.Equals("KDH")) {
-                    dataGridViewETeil.Rows[index].DefaultCellStyle.BackColor = Color.LemonChiffon;
+                ////
+                this.DataGriedViewRemove(dataGridViewDirekt);
+                if (dvVerwenden.Checked == true) {
+                    bv.ladeDvPositioneninDc();
+                    index = 0;
+                    foreach (DvPosition d in instance.DVerkauf) {
+                        dataGridViewDirekt.Rows.Add();
+                        dataGridViewDirekt.Rows[index].Cells[0].Value = d.DvTeilNr;
+                        dataGridViewDirekt.Rows[index].Cells[1].Value = d.DvMenge;
+                        dataGridViewDirekt.Rows[index].Cells[2].Value = d.DvPreis;
+                        dataGridViewDirekt.Rows[index].Cells[3].Value = d.DvStrafe;
+                        ++index;
+                    }
                 }
-
-                ++index;
             }
-            #endregion
-            // Arbeitsplätze
-            #region Arbetsplatz
-            this.DataGriedViewRemove(dataGridViewAPlatz);
-            index = 0;
-            foreach (var a in instance.ArbeitsplatzList) {
-                dataGridViewAPlatz.Rows.Add();
-                dataGridViewAPlatz.Rows[index].Cells[0].Value = a.GetNummerArbeitsplatz;
-                dataGridViewAPlatz.Rows[index].Cells[1].Value = a.Leerzeit + " (" + a.RuestungVorPeriode + ") ";
-                //TODO KDH ZEIT UMRECHNEN
-                int prMenge = 0;
-                int val = 0;
-                int sum = 0;
-                foreach (KeyValuePair<int, int> kvp in a.Werk_zeiten) {
-                    {
-                        if (!(instance.GetTeil(kvp.Key) as ETeil).Verwendung.Contains("KDH")) {
-
-                            prMenge += (instance.GetTeil(kvp.Key) as ETeil).ProduktionsMengePer0;
-                        }
-                        else {
-                            foreach (KeyValuePair<string, int> pair in (instance.GetTeil(kvp.Key) as ETeil).KdhProduktionsmenge) {
-                                prMenge += pair.Value;
-                            }
-                        }
-                        if (prMenge < 0)
-                            prMenge = 0;
-                        sum += kvp.Value * prMenge;
-                        prMenge = 0;
-                    }
-                }
-                dataGridViewAPlatz.Rows[index].Cells[2].Value = sum + " min";
-                //TODO KDH RÜST UMRECHNEN
-                prMenge = 0;
-                val = 0;
-                string key = "";
-                if (a.Geaendert == false) {
-                    foreach (KeyValuePair<int, int> kvp in a.Ruest_zeiten) {
-                        if (!(instance.GetTeil(kvp.Key) as ETeil).Verwendung.Contains("KDH")) {
-                            if ((instance.GetTeil(kvp.Key) as ETeil).ProduktionsMengePer0 >= 0)
-                                val += kvp.Value;
-                        }
-                        else {
-                            foreach (KeyValuePair<string, int> pair in (instance.GetTeil(kvp.Key) as ETeil).KdhProduktionsmenge) {
-                                prMenge += pair.Value;
-                                string[] split = pair.Key.Split('-');
-                                if (prMenge >= 0) {
-                                    if (key != split[1] || val == 0)
-                                        val += kvp.Value;
-                                }
-                                key = split[1];
-                            }
-                        }
-                    }
-                    a.Geaendert = true;
-                    a.RuestungCustom = val;
+            if (p == 100 || p == 5) {
+                index = 0;
+                this.DataGriedViewRemove(dataGridViewProduktKapazit);
+                foreach (int[] i in xmlAP) {
+                    dataGridViewProduktKapazit.Rows.Add();
+                    dataGridViewProduktKapazit.Rows[index].Cells[0].Value = i[0];
+                    dataGridViewProduktKapazit.Rows[index].Cells[1].Value = i[1];
+                    dataGridViewProduktKapazit.Rows[index].Cells[2].Value = i[2] / 5;
+                    ++index;
                 }
 
-                dataGridViewAPlatz.Rows[index].Cells[3].Value = a.RuestungCustom;
-                int gesammt = a.RuestungCustom + sum;
-                dataGridViewAPlatz.Rows[index].Cells[4].Value = gesammt + " min";
-                dataGridViewAPlatz.Rows[index].Cells[8].Value = imageList1.Images[2];
-                if (gesammt <= a.zeit) // newTeim <= 2400 
-                    dataGridViewAPlatz.Rows[index].Cells[5].Value = imageList1.Images[2];
-                else if (gesammt > instance.ErsteSchicht) // gesammt > 3600
-                {
-                    if (gesammt > 7200)
-                        dataGridViewAPlatz.Rows[index].Cells[8].Value = imageList1.Images[0];
-                    else if (gesammt > instance.ZweiteSchicht && gesammt < 7200)
-                        dataGridViewAPlatz.Rows[index].Cells[8].Value = imageList1.Images[1];
-                    else
-                        dataGridViewAPlatz.Rows[index].Cells[8].Value = imageList1.Images[2];
-
-                    if (gesammt < instance.ZweiteSchicht) {
-                        dataGridViewAPlatz.Rows[index].Cells[5].Value = imageList1.Images[0];
-                        dataGridViewAPlatz.Rows[index].Cells[6].Value = true;
-                    }
-                    else if (gesammt > instance.ZweiteSchicht) {
-                        dataGridViewAPlatz.Rows[index].Cells[5].Value = imageList1.Images[0];
-                        dataGridViewAPlatz.Rows[index].Cells[7].Value = true;
-                    }
-                }
-                else if (gesammt > a.zeit && gesammt <= instance.ErsteSchicht) // 2400 < newTime < 3600 Überstunden
-                {
-                    dataGridViewAPlatz.Rows[index].Cells[5].Value = imageList1.Images[1];
-                }
-                else {
-                    dataGridViewAPlatz.Rows[index].Cells[5].Value = imageList1.Images[2];
-                }
-                //Farbe
-                for (int i = 0; i < 9; ++i) {
-                    if (i < 2)
-                        dataGridViewAPlatz.Columns[i].DefaultCellStyle.BackColor = Color.FloralWhite;
-                    else if (i == 2 || i > 3)
-                        dataGridViewAPlatz.Columns[i].DefaultCellStyle.BackColor = Color.LightYellow;
-                }
-                ++index;
             }
-            #endregion
+            if (p == 100 || p == 4) {
+                index = 0;
+                this.DataGriedViewRemove(dataGridViewProduktAuftrag);
+                dataGridViewProduktAuftrag.Rows.Add(5); int i = 0;
+                foreach (DataGridViewRow dr in dataGridViewProduktAuftrag.Rows)
+                    foreach (DataGridViewCell dc in dr.Cells) dc.Value = i++;
 
-            //Bestellung
-            #region Bestellung
-            this.DataGriedViewRemove(dataGridViewBestellung);
-            if(this.bestellungUpdate == false)
-                bv.generiereBestellListe();
-            List<Bestellposition> bp = bv.BvPositionen;
-            index = 0;
-            foreach (var a in bp) {
-                dataGridViewBestellung.Rows.Add();
-                dataGridViewBestellung.Rows[index].Cells[0].Value = a.Kaufteil.Nummer;
-                dataGridViewBestellung.Rows[index].Cells[1].Value = a.Menge;
-                if (a.Eil == true) {
-                    dataGridViewBestellung.Rows[index].Cells[2].Value = true;
-                }
-                ++index;
             }
-            #endregion
         }
 
         /// <summary>
@@ -927,15 +1053,33 @@ namespace ToolFahrrad_v1
                 ti.Show();
             }
         }
-
         private void dataGridViewAPlatz_CellContentClick(object sender, DataGridViewCellEventArgs e) {
-            if (e.ColumnIndex == 0) {
-                TeilInformation ti = new TeilInformation("arbeitsplatz", Convert.ToInt32(dataGridViewAPlatz.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString()));
-                ti.GetZeitInformation();
-                ti.Show();
+            int zahl = Convert.ToInt32(DataGridViewAP.Rows[e.RowIndex].Cells[3].Value.ToString());
+            switch (e.ColumnIndex) {
+                case 0:
+                    TeilInformation ti = new TeilInformation("arbeitsplatz", Convert.ToInt32(DataGridViewAP.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString()));
+                    ti.GetZeitInformation();
+                    ti.Show();
+                    break;
+                case 4:
+                    if (zahl - 10 > 0)
+                        DataGridViewAP.Rows[e.RowIndex].Cells[3].Value = zahl - 10;
+                    else
+                        DataGridViewAP.Rows[e.RowIndex].Cells[3].Value = 0;
+                    break;
+                case 5:
+                    DataGridViewAP.Rows[e.RowIndex].Cells[3].Value = zahl + 10;
+                    break;
             }
         }
+        private void DataGridViewAP_CellMouseEnter(object sender, DataGridViewCellEventArgs e) {
 
+            if (e.ColumnIndex == 4 || e.ColumnIndex == 5)
+                DataGridViewAP.Cursor = Cursors.Hand;
+            else
+                DataGridViewAP.Cursor = Cursors.Default;
+
+        }
         private void prodMenge(int index, int nr, int reserve) {
             ETeil et = instance.GetTeil(nr) as ETeil;
             if (et.IstEndProdukt == true)
@@ -992,8 +1136,9 @@ namespace ToolFahrrad_v1
             (instance.GetTeil(17) as ETeil).KdhPuffer[(instance.GetTeil(17) as ETeil).KdhPuffer.Keys.ToList()[2]][0] = Convert.ToInt32(p1r_17.Text);
             prodMenge(1, 17, Convert.ToInt32(p1r_17.Text));
 
-            DispositionDarstellung(1);
-            Information();
+            this.DispositionDarstellung(1);
+            this.Information();
+            this.xmlVorbereitung(1); //1=vertriebswunsch
         }
         private void p2ETAusfueren_Click(object sender, EventArgs e) {
             (instance.GetTeil(2) as ETeil).VertriebPer0 = Convert.ToInt32(p2vw_0.Text);
@@ -1022,8 +1167,9 @@ namespace ToolFahrrad_v1
             (instance.GetTeil(17) as ETeil).KdhPuffer[(instance.GetTeil(17) as ETeil).KdhPuffer.Keys.ToList()[2]][1] = Convert.ToInt32(p2r_17.Text);
             prodMenge(2, 17, Convert.ToInt32(p2r_17.Text));
 
-            DispositionDarstellung(2);
-            Information();
+            this.DispositionDarstellung(2);
+            this.Information();
+            this.xmlVorbereitung(1); //1=vertriebswunsch
         }
         private void p3ETAusfueren_Click(object sender, EventArgs e) {
             (instance.GetTeil(3) as ETeil).VertriebPer0 = Convert.ToInt32(p3vw_0.Text);
@@ -1061,53 +1207,214 @@ namespace ToolFahrrad_v1
             (instance.GetTeil(17) as ETeil).KdhPuffer[(instance.GetTeil(17) as ETeil).KdhPuffer.Keys.ToList()[2]][2] = Convert.ToInt32(p3r_17.Text);
             prodMenge(3, 17, Convert.ToInt32(p3r_17.Text));
 
-            DispositionDarstellung(3);
-            Information();
+            this.DispositionDarstellung(3);
+            this.Information();
+            this.xmlVorbereitung(1); //1=vertriebswunsch
         }
-
         private void arbPlatzAusfueren_Click(object sender, EventArgs e) {
-            for (int index = 0; index < dataGridViewAPlatz.Rows.Count; ++index) {
-                instance.GetArbeitsplatz(Convert.ToInt32(dataGridViewAPlatz.Rows[index].Cells[0].Value.ToString())).RuestungCustom =
-                    (Convert.ToInt32(dataGridViewAPlatz.Rows[index].Cells[3].Value.ToString()));
+            bv.clearBvPositionen();
+            for (int index = 0; index < DataGridViewAP.Rows.Count; ++index) {
+                instance.GetArbeitsplatz(Convert.ToInt32(DataGridViewAP.Rows[index].Cells[0].Value.ToString())).RuestungCustom =
+                    (Convert.ToInt32(DataGridViewAP.Rows[index].Cells[3].Value.ToString()));
             }
-            Information();
+            this.xmlVorbereitung(5);
+            this.Information();
         }
-
         private void pictureBox3_Click(object sender, EventArgs e) {
+            if (this.dataGridViewBestellung.AllowUserToAddRows == true) {
+                this.dataGridViewBestellung.AllowUserToAddRows = false;
+                this.kNr.ReadOnly = true;
+            }
             Bestellposition bbp;
             bp = new List<Bestellposition>();
-
-
-            //for (int index = 0; index < dataGridViewBestellung.Rows.Count; ++index) {
-
-            //    string a = dataGridViewBestellung.Rows[index].Cells[3].Value.ToString();
-
-            //}
-
-            DataGridViewCheckBoxCell check = new DataGridViewCheckBoxCell();          
-
+            DataGridViewCheckBoxCell check = new DataGridViewCheckBoxCell();
+            DataGridViewCheckBoxCell check2 = new DataGridViewCheckBoxCell();
 
             foreach (DataGridViewRow row in dataGridViewBestellung.Rows) {
                 check = (DataGridViewCheckBoxCell)row.Cells[3];
+                check2 = (DataGridViewCheckBoxCell)row.Cells[2];
+                bool c;
+                if (check2.Value == null)
+                    c = false;
+                else
+                    c = true;
                 if (check.Value == null)
-                    check.Value = false;                
-                if (check.Value.ToString() != "true") {
-                    bbp = new Bestellposition(instance.GetTeil(Convert.ToInt32(row.Cells[0].Value.ToString())) as KTeil,
-                    Convert.ToInt32(row.Cells[1].Value.ToString()),
-                    row.Cells[2].Selected);
-                    bp.Add(bbp);
+                    check.Value = false;
+
+                KTeil teil = instance.GetTeil(Convert.ToInt32(row.Cells[0].Value.ToString())) as KTeil;
+
+                if (teil != null) {
+                    if (row.Cells[1].Value != null) {
+                        if (check.Value.ToString() != "true") {
+                            bbp = new Bestellposition(teil, Convert.ToInt32(row.Cells[1].Value.ToString()), c);
+                            bp.Add(bbp);
+                        }
+                    }
+                    else {
+                        MessageBox.Show("Kaufteil N" + row.Cells[0].Value.ToString() + " kann nicht keine Menge haben. \nDiese zeile wird ignoriert", "Fehlermeldung",
+                       MessageBoxButtons.OK, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button1);
+                    }
+                }
+                else {
+                    MessageBox.Show("Kaufteil N" + row.Cells[0].Value.ToString() + " exsistiert nicht im System. \nDiese zeile wird ignoriert", "Fehlermeldung",
+                        MessageBoxButtons.OK, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button1);
                 }
             }
             this.bestellungUpdate = true;
             bv.SetBvPositionen(bp);
             Information();
         }
-
         private void zurueck_Click(object sender, EventArgs e) {
+            if (this.dataGridViewBestellung.AllowUserToAddRows == true) {
+                this.dataGridViewBestellung.AllowUserToAddRows = false;
+                this.kNr.ReadOnly = true;
+            }
             this.bestellungUpdate = false;
             bv.clearBvPositionen();
             Information();
         }
+        private void uebernehmenXML_Click(object sender, EventArgs e) {
+            this.xmlVorbereitung(3);
+        }
+        private void addNr_Click(object sender, EventArgs e) {
+            this.dataGridViewBestellung.AllowUserToAddRows = true;
+            this.kNr.ReadOnly = false;
+        }
+        private void saveAenderungen2_Click(object sender, EventArgs e) {
+            if (this.dataGridViewDirektverkauf.AllowUserToAddRows == true) {
+                this.dataGridViewDirektverkauf.AllowUserToAddRows = false;
+                this.knr2.ReadOnly = true;
+            }
+
+            DvPosition dv;
+            dirv = new List<DvPosition>();
+            DataGridViewCheckBoxCell ch = new DataGridViewCheckBoxCell();
+
+            foreach (DataGridViewRow row in dataGridViewDirektverkauf.Rows) {
+                ch = (DataGridViewCheckBoxCell)row.Cells[4];
+                if (ch.Value == null)
+                    ch.Value = false;
+                if (ch.Value.ToString() != "true") {
+
+                    ETeil teil = instance.GetTeil(Convert.ToInt32(row.Cells[0].Value.ToString())) as ETeil;
+                    if (teil != null) {
+                        object n = row.Cells[0].Value; //nr
+                        object m = row.Cells[1].Value; //menge
+                        object p = row.Cells[2].Value; //preis
+                        object s = row.Cells[3].Value; //straffe
+
+                        if (n != null && m != null && p != null && s != null) {
+                            dv = new DvPosition(Convert.ToInt32(n.ToString()), Convert.ToInt32(m.ToString()), Convert.ToDouble(p.ToString()), Convert.ToDouble(s.ToString()));
+                            dirv.Add(dv);
+                        }
+                        else {
+                            MessageBox.Show("kein Fehld darf null sein", "Fehlermeldung",
+                       MessageBoxButtons.OK, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button1);
+                        }
+                    }
+                    else {
+                        MessageBox.Show("Eigenfertigte Teil N" + row.Cells[0].Value.ToString() + " exsistiert nicht im System. \nDiese zeile wird ignoriert", "Fehlermeldung",
+                       MessageBoxButtons.OK, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button1);
+                    }
+                }
+            }
+            this.dvUpdate = true;
+            this.bestellungUpdate = true;
+            bv.SetDvPositionen(dirv);
+            Information();
+        }
+        private void addNr2_Click(object sender, EventArgs e) {
+            this.dataGridViewDirektverkauf.AllowUserToAddRows = true;
+            this.knr2.ReadOnly = false;
+        }
+        private void zurueck2_Click(object sender, EventArgs e) {
+            if (this.dataGridViewDirektverkauf.AllowUserToAddRows == true) {
+                this.dataGridViewDirektverkauf.AllowUserToAddRows = false;
+                this.knr2.ReadOnly = true;
+            }
+            this.dvUpdate = false;
+            this.bestellungUpdate = true;
+            bv.clearDvPositionen();
+            Information();
+        }
+
+        ////////////////////////////////////////////////////////////////
+        /// <summary>
+        /// DragAndDrop
+        /// </summary>
+        /// <param name="x"></param>
+        /// <param name="y"></param>
+        /// <returns></returns>
+        private bool IsCellOrRowHeader(int x, int y) {
+            DataGridViewHitTestType dgt = dataGridViewProduktAuftrag.HitTest(x, y).Type;
+            return (dgt == DataGridViewHitTestType.Cell ||
+                            dgt == DataGridViewHitTestType.RowHeader);
+        }
+        private void dataGridViewProduktAuftrag_MouseMove(object sender, MouseEventArgs e) {
+            if ((e.Button & MouseButtons.Left) == MouseButtons.Left) {
+                if (!IsCellOrRowHeader(e.X, e.Y) && rowIndexSrc >= 0) {
+                    DragDropEffects dropEffect = dataGridViewProduktAuftrag.DoDragDrop(
+                        dataGridViewProduktAuftrag.Rows[rowIndexSrc], DragDropEffects.None);
+                    return;
+                }
+
+                if (dragBoxSrc != Rectangle.Empty &&
+                        !dragBoxSrc.Contains(e.X, e.Y)) {
+                    DragDropEffects dropEffect = dataGridViewProduktAuftrag.DoDragDrop(
+                dataGridViewProduktAuftrag.Rows[rowIndexSrc], DragDropEffects.Move);
+                }
+            }
+        }
+        private void dataGridViewProduktAuftrag_MouseDown(object sender, MouseEventArgs e) {
+            rowIndexSrc = dataGridViewProduktAuftrag.HitTest(e.X, e.Y).RowIndex;
+            if (rowIndexSrc != -1) {
+                Size dragSize = SystemInformation.DragSize;
+                dragBoxSrc = new Rectangle(new Point(e.X, e.Y), dragSize);
+            }
+            else
+                dragBoxSrc = Rectangle.Empty;
+        }
+        private void dataGridViewProduktAuftrag_DragDrop(object sender, DragEventArgs e) {
+            Point clientPoint = dataGridViewProduktAuftrag.PointToClient(new Point(e.X, e.Y));
+            rowIndexTar = dataGridViewProduktAuftrag.HitTest(clientPoint.X, clientPoint.Y).RowIndex;
+            if (e.Effect == DragDropEffects.Move) {
+                DataGridViewRow rowToMove = e.Data.GetData(
+                    typeof(DataGridViewRow)) as DataGridViewRow;
+                MoveRow(rowIndexSrc, rowIndexTar);
+            }
+        }
+        void SwapCell(int c, int srcRow, int tarRow, out object tmp0, out object tmp1) {
+            DataGridViewCell srcCell = dataGridViewProduktAuftrag.Rows[srcRow].Cells[c];
+            DataGridViewCell tarCell = dataGridViewProduktAuftrag.Rows[tarRow].Cells[c];
+            tmp0 = tarCell.Value;
+            tmp1 = srcCell.Value;
+            tarCell.Value = tmp1;
+        }
+        void MoveRow(int srcRow, int tarRow) {
+            int cellCount = dataGridViewProduktAuftrag.Rows[srcRow].Cells.Count;
+            for (int c = 0; c < cellCount; c++)
+                ShiftRows(srcRow, tarRow, c);
+        }
+        private void ShiftRows(int srcRow, int tarRow, int c) {
+            object tmp0, tmp1;
+            SwapCell(c, srcRow, tarRow, out tmp0, out tmp1);
+            int delta = tarRow < srcRow ? 1 : -1;
+            for (int r = tarRow + delta; r != srcRow + delta; r += delta) {
+                tmp1 = dataGridViewProduktAuftrag.Rows[r].Cells[c].Value;
+                dataGridViewProduktAuftrag.Rows[r].Cells[c].Value = tmp0;
+                tmp0 = tmp1;
+            }
+            dataGridViewProduktAuftrag.Rows[tarRow].Selected = true;
+            dataGridViewProduktAuftrag.CurrentCell = dataGridViewProduktAuftrag.Rows[tarRow].Cells[0];
+        }
+        private void dataGridViewProduktAuftrag_DragOver(object sender, DragEventArgs e) {
+            Point p = dataGridViewProduktAuftrag.PointToClient(new Point(e.X, e.Y));
+            DataGridViewHitTestType dgt = dataGridViewProduktAuftrag.HitTest(p.X, p.Y).Type;
+            if (IsCellOrRowHeader(p.X, p.Y))
+                e.Effect = DragDropEffects.Move;
+            else e.Effect = DragDropEffects.None;
+        }
+        ////////////////////////////////////////////////////////////////////////////////
     }
 }
 

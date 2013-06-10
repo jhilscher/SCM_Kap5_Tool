@@ -69,6 +69,7 @@
     <Compile Include="Design\ToolFahrrad.Designer.cs">
       <DependentUpon>ToolFahrrad.cs</DependentUpon>
     </Compile>
+    <Compile Include="Komponenten\DvPosition.cs" />
     <Compile Include="Windows\Einstellungen.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -101,6 +102,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Design\ToolFahrrad.resx">
       <DependentUpon>ToolFahrrad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\Einstellungen.de.resx">
+      <DependentUpon>Einstellungen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\Einstellungen.en.resx">
+      <DependentUpon>Einstellungen.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Windows\Einstellungen.resx">
       <DependentUpon>Einstellungen.cs</DependentUpon>

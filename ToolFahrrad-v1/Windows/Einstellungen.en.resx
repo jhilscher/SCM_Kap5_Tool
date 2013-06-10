@@ -117,124 +117,24 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="&gt;&gt;diskGrenze.Type" xml:space="preserve">
-    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="tab_abweichung.Text" xml:space="preserve">
+    <value>Divergence</value>
   </data>
-  <data name="&gt;&gt;LabelSchichten.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="tab_diskount.Text" xml:space="preserve">
+    <value>Discount</value>
+  </data>
+  <data name="tab_schicht.Text" xml:space="preserve">
+    <value>Shifts</value>
+  </data>
+  <data name="LabelAbweichung.Text" xml:space="preserve">
+    <value>Here, the percentage of divergence can be specified. The selected percentage is multiplied with the divergence (Delivery time of KTeile). 0 = no divergence, 100 = full divergence</value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>36, 13</value>
+  <data name="lbl_info.Size" type="System.Drawing.Size, System.Drawing">
+    <value>138, 13</value>
   </data>
-  <data name="pictureBox1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>37, 35</value>
-  </data>
-  <data name="lbl_3schicht.Size" type="System.Drawing.Size, System.Drawing">
-    <value>110, 13</value>
-  </data>
-  <data name="&gt;&gt;label6.Name" xml:space="preserve">
-    <value>label6</value>
-  </data>
-  <data name="&gt;&gt;diskSpeichern.Parent" xml:space="preserve">
-    <value>tab_diskount</value>
-  </data>
-  <data name="&gt;&gt;label8.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="lbl_10.Location" type="System.Drawing.Point, System.Drawing">
-    <value>11, 51</value>
-  </data>
-  <data name="&gt;&gt;label8.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;lbl_3schicht.Parent" xml:space="preserve">
-    <value>tab_schicht</value>
-  </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="tabControl1.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;label5.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;LabelSchichten.Parent" xml:space="preserve">
-    <value>tab_schicht</value>
-  </data>
-  <data name="label4.TabIndex" type="System.Int32, mscorlib">
-    <value>12</value>
-  </data>
-  <data name="&gt;&gt;lbl_50.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="mengeGrenze.TabIndex" type="System.Int32, mscorlib">
-    <value>17</value>
-  </data>
-  <data name="&gt;&gt;tab_diskount.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="numericUpDown1.TabIndex" type="System.Int32, mscorlib">
-    <value>50</value>
-  </data>
-  <data name="panel3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 281</value>
-  </data>
-  <data name="panel3.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;lbl_2schicht.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="tab_schicht.Size" type="System.Drawing.Size, System.Drawing">
-    <value>279, 344</value>
-  </data>
-  <data name="label5.TabIndex" type="System.Int32, mscorlib">
-    <value>11</value>
-  </data>
-  <data name="&gt;&gt;lbl_2schicht.Parent" xml:space="preserve">
-    <value>tab_schicht</value>
-  </data>
-  <data name="LabelAbweichung.Size" type="System.Drawing.Size, System.Drawing">
-    <value>259, 86</value>
-  </data>
-  <data name="label6.Text" xml:space="preserve">
-    <value>Diskont Grenze (€): </value>
-  </data>
-  <data name="&gt;&gt;LabelDiskont.Name" xml:space="preserve">
-    <value>LabelDiskont</value>
-  </data>
-  <data name="pictureBox1.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
-  <data name="label3.Text" xml:space="preserve">
-    <value>100 %</value>
-  </data>
-  <data name="&gt;&gt;label1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;numericUpDown2.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="pictureBox3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>11, 11</value>
-  </data>
-  <data name="&gt;&gt;label6.Parent" xml:space="preserve">
-    <value>tab_diskount</value>
-  </data>
-  <data name="&gt;&gt;label2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="tab_schicht.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 22</value>
-  </data>
-  <data name="&gt;&gt;diskGrenze.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="LabelSchichten.Text" xml:space="preserve">
-    <value>Hier köennen die Verwendung der 2. und 3. Schicht eingestellt werden. Dabei können die Stunden angegeben werden, ab denen eine 2. bzw. 3. Schicht verwendet wird.</value>
-  </data>
-  <data name="&gt;&gt;trackBarAbweichung.Parent" xml:space="preserve">
-    <value>tab_abweichung</value>
+  <data name="lbl_info.Text" xml:space="preserve">
+    <value>Changed divergence saved</value>
   </data>
   <data name="pictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -249,99 +149,82 @@
         TgAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="diskGrenze.Location" type="System.Drawing.Point, System.Drawing">
-    <value>130, 17</value>
+  <data name="btn_ok.Text" xml:space="preserve">
+    <value>Save</value>
   </data>
-  <data name="&gt;&gt;lbl_10.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="LabelDiskont.Text" xml:space="preserve">
+    <value>Discount border indicates to which price discount amount is ordered. Quantity limit specifies from what price alway quantity is ordered. Between this limits: use of selected percentage. The lower the percentage -&gt; lower use of discount amount.</value>
   </data>
-  <data name="numericUpDown1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>60, 20</value>
+  <data name="label8.Size" type="System.Drawing.Size, System.Drawing">
+    <value>145, 13</value>
   </data>
-  <data name="&gt;&gt;pictureBox2.Name" xml:space="preserve">
-    <value>pictureBox2</value>
+  <data name="label8.Text" xml:space="preserve">
+    <value>Percentage of using discount</value>
   </data>
-  <data name="&gt;&gt;panel3.Parent" xml:space="preserve">
-    <value>tab_diskount</value>
+  <data name="label7.Size" type="System.Drawing.Size, System.Drawing">
+    <value>84, 13</value>
   </data>
-  <data name="&gt;&gt;label7.ZOrder" xml:space="preserve">
-    <value>4</value>
+  <data name="label7.Text" xml:space="preserve">
+    <value>Amount limit (€): </value>
   </data>
-  <data name="label7.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="label6.Size" type="System.Drawing.Size, System.Drawing">
+    <value>90, 13</value>
   </data>
-  <data name="&gt;&gt;numericUpDown2.Parent" xml:space="preserve">
-    <value>tab_schicht</value>
+  <data name="label6.Text" xml:space="preserve">
+    <value>Discount limit (€): </value>
   </data>
-  <data name="diskGrenze.Size" type="System.Drawing.Size, System.Drawing">
-    <value>39, 20</value>
+  <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>125, 13</value>
   </data>
-  <data name="lbl_100.Location" type="System.Drawing.Point, System.Drawing">
-    <value>240, 51</value>
+  <data name="label2.Text" xml:space="preserve">
+    <value>Changed discount saved</value>
   </data>
-  <data name="lbl_info.Location" type="System.Drawing.Point, System.Drawing">
-    <value>54, 23</value>
+  <data name="pictureBox3.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29m
+        dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAF/SURBVFhHvZdBSixBEEQbvITgPdy69RKCt3TrVhC8
+        hOAN3GpGUTGEkZXtOFX2g8fveZ3d5WfGsXozHvq/I+7Cl/Drj+IaXEuGa1yHvHnFR+g3P1dcS/Aaa2HN
+        xlX4GnK4gud/8zm87eKYnfD1W4i1t8cefNDRmT1P/7MAx+xEZ7F2el8rdGZPx7vOYu3tUwKs0Jk9He86
+        i7V/BFjhc5WOd51tPYUCn6t0vOts6ykU+FzlTUhwzE50tvUUCnyu8inEpx/imJ3obOspFLyHPnuuuJb4
+        uRwK7sNLvg1xDa4lfj4FfQ9Xo58JmgLfw9X4Z4KmcLTDeKTDeKTDeKQp8O/5anx/QFP4j98Agnv7ejl0
+        Lt0DuriH7gn9fA6dmT2g63tCNYeO91lJ6il0vM9KUk+h431WknoKHe+zktSrTam2FRJtbVNabcu1rZBo
+        a9vy6sFE2wqJtvZgUj2a6eAKCV+fHs0AviL5Q5CZPaDre0KsNfzK10fnS/eAru8JZY1t+wZNvM4bkMX7
+        TgAAAABJRU5ErkJggg==
+</value>
   </data>
-  <data name="trackBarAbweichung.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
+  <data name="diskSpeichern.Text" xml:space="preserve">
+    <value>Save</value>
   </data>
-  <data name="lbl_2schicht.Size" type="System.Drawing.Size, System.Drawing">
-    <value>110, 13</value>
+  <data name="LabelSchichten.Text" xml:space="preserve">
+    <value>This settings will affect the use of 2nd and 3rd shifts. To use the second or third shift adjust the amounts of hours. Equal or greather than the specified hours the application will toggle use of 2nd, or 3rd shift.</value>
   </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>Einstellungen</value>
+  <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>109, 13</value>
   </data>
-  <data name="&gt;&gt;btn_schicht_save.Parent" xml:space="preserve">
-    <value>tab_schicht</value>
+  <data name="label1.Text" xml:space="preserve">
+    <value>Changed shifts saved</value>
   </data>
-  <data name="panel1.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
+  <data name="pictureBox2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29m
+        dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAF/SURBVFhHvZdBSixBEEQbvITgPdy69RKCt3TrVhC8
+        hOAN3GpGUTGEkZXtOFX2g8fveZ3d5WfGsXozHvq/I+7Cl/Drj+IaXEuGa1yHvHnFR+g3P1dcS/Aaa2HN
+        xlX4GnK4gud/8zm87eKYnfD1W4i1t8cefNDRmT1P/7MAx+xEZ7F2el8rdGZPx7vOYu3tUwKs0Jk9He86
+        i7V/BFjhc5WOd51tPYUCn6t0vOts6ykU+FzlTUhwzE50tvUUCnyu8inEpx/imJ3obOspFLyHPnuuuJb4
+        uRwK7sNLvg1xDa4lfj4FfQ9Xo58JmgLfw9X4Z4KmcLTDeKTDeKTDeKQp8O/5anx/QFP4j98Agnv7ejl0
+        Lt0DuriH7gn9fA6dmT2g63tCNYeO91lJ6il0vM9KUk+h431WknoKHe+zktSrTam2FRJtbVNabcu1rZBo
+        a9vy6sFE2wqJtvZgUj2a6eAKCV+fHs0AviL5Q5CZPaDre0KsNfzK10fnS/eAru8JZY1t+wZNvM4bkMX7
+        TgAAAABJRU5ErkJggg==
+</value>
   </data>
-  <data name="lbl_2schicht.Location" type="System.Drawing.Point, System.Drawing">
-    <value>11, 19</value>
+  <data name="btn_schicht_save.Text" xml:space="preserve">
+    <value>Save</value>
   </data>
-  <data name="&gt;&gt;lbl_2schicht.Name" xml:space="preserve">
-    <value>lbl_2schicht</value>
+  <data name="lbl_3schicht.Text" xml:space="preserve">
+    <value>3rd shift from [h]: </value>
   </data>
-  <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;label5.Name" xml:space="preserve">
-    <value>label5</value>
-  </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="tab_diskount.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 3, 3, 3</value>
-  </data>
-  <data name="&gt;&gt;label1.Name" xml:space="preserve">
-    <value>label1</value>
-  </data>
-  <data name="&gt;&gt;trackBar1.ZOrder" xml:space="preserve">
-    <value>11</value>
-  </data>
-  <data name="&gt;&gt;trackBar1.Name" xml:space="preserve">
-    <value>trackBar1</value>
-  </data>
-  <data name="&gt;&gt;panel1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="label3.TabIndex" type="System.Int32, mscorlib">
-    <value>13</value>
-  </data>
-  <data name="&gt;&gt;tab_schicht.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="label7.TabIndex" type="System.Int32, mscorlib">
-    <value>15</value>
-  </data>
-  <data name="&gt;&gt;pictureBox1.Name" xml:space="preserve">
-    <value>pictureBox1</value>
-  </data>
-  <data name="&gt;&gt;lbl_100.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>6, 13</value>
+  <data name="lbl_2schicht.Text" xml:space="preserve">
+    <value>2nd shift from [h]: </value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -2211,720 +2094,7 @@
         HwAA8I8AAAAAAAAEIAAAnDkAABgYAAAYGAAAEAgAAAAAAAAAAAAACBAAAM/jAADD4wAAwAcAAPAHAAA=
 </value>
   </data>
-  <data name="&gt;&gt;pictureBox3.ZOrder" xml:space="preserve">
-    <value>1</value>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Settings</value>
   </data>
-  <data name="tab_diskount.Text" xml:space="preserve">
-    <value>Diskount</value>
-  </data>
-  <data name="label5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>24, 13</value>
-  </data>
-  <data name="&gt;&gt;pictureBox1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tab_schicht.Name" xml:space="preserve">
-    <value>tab_schicht</value>
-  </data>
-  <data name="tab_schicht.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 3, 3, 3</value>
-  </data>
-  <data name="tab_schicht.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="panel2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>267, 60</value>
-  </data>
-  <data name="&gt;&gt;lbl_info.Name" xml:space="preserve">
-    <value>lbl_info</value>
-  </data>
-  <data name="panel1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 281</value>
-  </data>
-  <data name="&gt;&gt;diskGrenze.Parent" xml:space="preserve">
-    <value>tab_diskount</value>
-  </data>
-  <data name="label5.Text" xml:space="preserve">
-    <value>0 %</value>
-  </data>
-  <data name="&gt;&gt;LabelDiskont.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;LabelDiskont.Parent" xml:space="preserve">
-    <value>tab_diskount</value>
-  </data>
-  <data name="label2.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="LabelDiskont.Location" type="System.Drawing.Point, System.Drawing">
-    <value>11, 192</value>
-  </data>
-  <data name="&gt;&gt;panel3.Name" xml:space="preserve">
-    <value>panel3</value>
-  </data>
-  <data name="label3.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="LabelDiskont.Size" type="System.Drawing.Size, System.Drawing">
-    <value>259, 86</value>
-  </data>
-  <data name="&gt;&gt;trackBarAbweichung.Name" xml:space="preserve">
-    <value>trackBarAbweichung</value>
-  </data>
-  <data name="tab_abweichung.Text" xml:space="preserve">
-    <value>Abweichung</value>
-  </data>
-  <data name="&gt;&gt;panel1.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="btn_ok.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 23</value>
-  </data>
-  <data name="&gt;&gt;lbl_100.Name" xml:space="preserve">
-    <value>lbl_100</value>
-  </data>
-  <data name="numericUpDown2.TabIndex" type="System.Int32, mscorlib">
-    <value>51</value>
-  </data>
-  <data name="lbl_2schicht.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;lbl_50.Parent" xml:space="preserve">
-    <value>tab_abweichung</value>
-  </data>
-  <data name="&gt;&gt;tab_abweichung.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="panel1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>267, 60</value>
-  </data>
-  <data name="panel3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>267, 60</value>
-  </data>
-  <data name="&gt;&gt;tabControl1.Name" xml:space="preserve">
-    <value>tabControl1</value>
-  </data>
-  <data name="&gt;&gt;lbl_10.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="lbl_100.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="tab_abweichung.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="label8.Text" xml:space="preserve">
-    <value>Prozensatz zur Verwendung der Diskontmenge: </value>
-  </data>
-  <data name="diskSpeichern.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 23</value>
-  </data>
-  <data name="pictureBox2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>37, 35</value>
-  </data>
-  <data name="tabControl1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>287, 370</value>
-  </data>
-  <data name="lbl_3schicht.Text" xml:space="preserve">
-    <value>3. Schicht ab [Std.]: </value>
-  </data>
-  <data name="pictureBox3.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
-  <data name="label8.Size" type="System.Drawing.Size, System.Drawing">
-    <value>234, 13</value>
-  </data>
-  <data name="label7.Size" type="System.Drawing.Size, System.Drawing">
-    <value>104, 13</value>
-  </data>
-  <data name="LabelDiskont.Text" xml:space="preserve">
-    <value>Diskontgrenze gibt an, bis zu welchem Preis immer Diskontmenge bestellt wird. Mengegrenze gibt an, ab welchem Preis immer die Mengenanzahl bestellt wird. Dazwischen verwendung des Prozentsatzes. Je niedriger desto unwahrscheinliche Verwendung Diskontmenge.</value>
-  </data>
-  <data name="&gt;&gt;lbl_3schicht.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="&gt;&gt;diskSpeichern.ZOrder" xml:space="preserve">
-    <value>10</value>
-  </data>
-  <data name="label4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>127, 141</value>
-  </data>
-  <data name="&gt;&gt;tabControl1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabControl, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="tab_abweichung.Size" type="System.Drawing.Size, System.Drawing">
-    <value>279, 344</value>
-  </data>
-  <data name="&gt;&gt;tab_diskount.Name" xml:space="preserve">
-    <value>tab_diskount</value>
-  </data>
-  <data name="&gt;&gt;panel2.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="pictureBox2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>11, 11</value>
-  </data>
-  <data name="panel2.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>Einstellungen</value>
-  </data>
-  <data name="pictureBox2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29m
-        dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAF/SURBVFhHvZdBSixBEEQbvITgPdy69RKCt3TrVhC8
-        hOAN3GpGUTGEkZXtOFX2g8fveZ3d5WfGsXozHvq/I+7Cl/Drj+IaXEuGa1yHvHnFR+g3P1dcS/Aaa2HN
-        xlX4GnK4gud/8zm87eKYnfD1W4i1t8cefNDRmT1P/7MAx+xEZ7F2el8rdGZPx7vOYu3tUwKs0Jk9He86
-        i7V/BFjhc5WOd51tPYUCn6t0vOts6ykU+FzlTUhwzE50tvUUCnyu8inEpx/imJ3obOspFLyHPnuuuJb4
-        uRwK7sNLvg1xDa4lfj4FfQ9Xo58JmgLfw9X4Z4KmcLTDeKTDeKTDeKQp8O/5anx/QFP4j98Agnv7ejl0
-        Lt0DuriH7gn9fA6dmT2g63tCNYeO91lJ6il0vM9KUk+h431WknoKHe+zktSrTam2FRJtbVNabcu1rZBo
-        a9vy6sFE2wqJtvZgUj2a6eAKCV+fHs0AviL5Q5CZPaDre0KsNfzK10fnS/eAru8JZY1t+wZNvM4bkMX7
-        TgAAAABJRU5ErkJggg==
-</value>
-  </data>
-  <data name="&gt;&gt;label4.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="tab_abweichung.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 3, 3, 3</value>
-  </data>
-  <data name="&gt;&gt;diskGrenze.Name" xml:space="preserve">
-    <value>diskGrenze</value>
-  </data>
-  <data name="&gt;&gt;tab_abweichung.Name" xml:space="preserve">
-    <value>tab_abweichung</value>
-  </data>
-  <data name="lbl_2schicht.Text" xml:space="preserve">
-    <value>2. Schicht ab [Std.]: </value>
-  </data>
-  <data name="lbl_50.Text" xml:space="preserve">
-    <value>50 %</value>
-  </data>
-  <data name="&gt;&gt;pictureBox2.Parent" xml:space="preserve">
-    <value>panel2</value>
-  </data>
-  <data name="&gt;&gt;label4.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="&gt;&gt;tab_abweichung.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="lbl_info.Size" type="System.Drawing.Size, System.Drawing">
-    <value>143, 13</value>
-  </data>
-  <data name="&gt;&gt;label7.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="LabelSchichten.Size" type="System.Drawing.Size, System.Drawing">
-    <value>259, 86</value>
-  </data>
-  <data name="lbl_50.Size" type="System.Drawing.Size, System.Drawing">
-    <value>30, 13</value>
-  </data>
-  <data name="&gt;&gt;mengeGrenze.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;tab_diskount.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>120, 13</value>
-  </data>
-  <data name="&gt;&gt;tab_abweichung.Parent" xml:space="preserve">
-    <value>tabControl1</value>
-  </data>
-  <data name="tab_diskount.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 22</value>
-  </data>
-  <data name="&gt;&gt;panel1.Parent" xml:space="preserve">
-    <value>tab_abweichung</value>
-  </data>
-  <data name="label5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>11, 141</value>
-  </data>
-  <data name="lbl_info.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="&gt;&gt;pictureBox1.Parent" xml:space="preserve">
-    <value>panel1</value>
-  </data>
-  <data name="&gt;&gt;label2.Parent" xml:space="preserve">
-    <value>panel3</value>
-  </data>
-  <data name="&gt;&gt;tabControl1.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;trackBarAbweichung.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TrackBar, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;diskSpeichern.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;numericUpDown2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="diskGrenze.TabIndex" type="System.Int32, mscorlib">
-    <value>16</value>
-  </data>
-  <data name="trackBar1.TabIndex" type="System.Int32, mscorlib">
-    <value>8</value>
-  </data>
-  <data name="&gt;&gt;pictureBox2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;numericUpDown1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="tab_diskount.Size" type="System.Drawing.Size, System.Drawing">
-    <value>279, 344</value>
-  </data>
-  <data name="LabelSchichten.TabIndex" type="System.Int32, mscorlib">
-    <value>53</value>
-  </data>
-  <data name="btn_ok.Text" xml:space="preserve">
-    <value>Speichern</value>
-  </data>
-  <data name="trackBar1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 110</value>
-  </data>
-  <data name="tab_schicht.Text" xml:space="preserve">
-    <value>Schichten</value>
-  </data>
-  <data name="&gt;&gt;lbl_100.Parent" xml:space="preserve">
-    <value>tab_abweichung</value>
-  </data>
-  <data name="diskSpeichern.TabIndex" type="System.Int32, mscorlib">
-    <value>9</value>
-  </data>
-  <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>54, 21</value>
-  </data>
-  <data name="&gt;&gt;label5.Parent" xml:space="preserve">
-    <value>tab_diskount</value>
-  </data>
-  <data name="trackBarAbweichung.Size" type="System.Drawing.Size, System.Drawing">
-    <value>259, 29</value>
-  </data>
-  <data name="numericUpDown2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>60, 20</value>
-  </data>
-  <data name="tabControl1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 12</value>
-  </data>
-  <data name="&gt;&gt;label4.Name" xml:space="preserve">
-    <value>label4</value>
-  </data>
-  <data name="&gt;&gt;trackBar1.Parent" xml:space="preserve">
-    <value>tab_diskount</value>
-  </data>
-  <data name="&gt;&gt;tabControl1.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="btn_schicht_save.Location" type="System.Drawing.Point, System.Drawing">
-    <value>190, 95</value>
-  </data>
-  <data name="label7.Text" xml:space="preserve">
-    <value>Mengen Grenze (€): </value>
-  </data>
-  <data name="tab_diskount.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;panel2.Parent" xml:space="preserve">
-    <value>tab_schicht</value>
-  </data>
-  <data name="label1.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
-  <data name="&gt;&gt;pictureBox3.Name" xml:space="preserve">
-    <value>pictureBox3</value>
-  </data>
-  <data name="&gt;&gt;btn_schicht_save.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="label3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>240, 141</value>
-  </data>
-  <data name="label2.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
-  <data name="trackBarAbweichung.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 19</value>
-  </data>
-  <data name="label6.TabIndex" type="System.Int32, mscorlib">
-    <value>14</value>
-  </data>
-  <data name="LabelDiskont.TabIndex" type="System.Int32, mscorlib">
-    <value>19</value>
-  </data>
-  <data name="pictureBox3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>37, 35</value>
-  </data>
-  <data name="btn_schicht_save.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 23</value>
-  </data>
-  <data name="&gt;&gt;panel3.ZOrder" xml:space="preserve">
-    <value>9</value>
-  </data>
-  <data name="lbl_10.Size" type="System.Drawing.Size, System.Drawing">
-    <value>24, 13</value>
-  </data>
-  <data name="label6.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="LabelAbweichung.Text" xml:space="preserve">
-    <value>Hier kann der Prozentsatz der verwendeten Abweichung angegeben werden. Der ausgewählte Prozentsatzt wird mit der Abweichung (Lieferdauer KTeile) multipliziert. 0 = keine, 100 = volle Abweichung</value>
-  </data>
-  <data name="diskSpeichern.Location" type="System.Drawing.Point, System.Drawing">
-    <value>190, 166</value>
-  </data>
-  <data name="&gt;&gt;label3.Parent" xml:space="preserve">
-    <value>tab_diskount</value>
-  </data>
-  <data name="numericUpDown2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>130, 48</value>
-  </data>
-  <data name="&gt;&gt;trackBar1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TrackBar, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="label7.Location" type="System.Drawing.Point, System.Drawing">
-    <value>11, 50</value>
-  </data>
-  <data name="&gt;&gt;diskSpeichern.Name" xml:space="preserve">
-    <value>diskSpeichern</value>
-  </data>
-  <data name="numericUpDown1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>130, 17</value>
-  </data>
-  <data name="LabelSchichten.Location" type="System.Drawing.Point, System.Drawing">
-    <value>11, 192</value>
-  </data>
-  <data name="&gt;&gt;lbl_info.Parent" xml:space="preserve">
-    <value>panel1</value>
-  </data>
-  <data name="&gt;&gt;label6.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="panel1.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
-  </data>
-  <data name="&gt;&gt;label7.Parent" xml:space="preserve">
-    <value>tab_diskount</value>
-  </data>
-  <data name="&gt;&gt;lbl_10.Name" xml:space="preserve">
-    <value>lbl_10</value>
-  </data>
-  <data name="panel2.TabIndex" type="System.Int32, mscorlib">
-    <value>52</value>
-  </data>
-  <data name="&gt;&gt;LabelAbweichung.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;btn_ok.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;lbl_3schicht.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="lbl_10.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;label1.Parent" xml:space="preserve">
-    <value>panel2</value>
-  </data>
-  <data name="&gt;&gt;lbl_50.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label3.Name" xml:space="preserve">
-    <value>label3</value>
-  </data>
-  <data name="label2.Text" xml:space="preserve">
-    <value>Diskont wurde geändert</value>
-  </data>
-  <data name="&gt;&gt;panel2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;mengeGrenze.Parent" xml:space="preserve">
-    <value>tab_diskount</value>
-  </data>
-  <data name="label8.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="&gt;&gt;lbl_2schicht.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="panel2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 281</value>
-  </data>
-  <data name="lbl_100.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="lbl_3schicht.Location" type="System.Drawing.Point, System.Drawing">
-    <value>11, 50</value>
-  </data>
-  <data name="btn_ok.Location" type="System.Drawing.Point, System.Drawing">
-    <value>190, 95</value>
-  </data>
-  <data name="&gt;&gt;label8.Parent" xml:space="preserve">
-    <value>tab_diskount</value>
-  </data>
-  <data name="&gt;&gt;mengeGrenze.Name" xml:space="preserve">
-    <value>mengeGrenze</value>
-  </data>
-  <data name="&gt;&gt;tab_schicht.Parent" xml:space="preserve">
-    <value>tabControl1</value>
-  </data>
-  <data name="&gt;&gt;lbl_50.Name" xml:space="preserve">
-    <value>lbl_50</value>
-  </data>
-  <data name="&gt;&gt;label5.ZOrder" xml:space="preserve">
-    <value>8</value>
-  </data>
-  <data name="tab_abweichung.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 22</value>
-  </data>
-  <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>132, 13</value>
-  </data>
-  <data name="&gt;&gt;numericUpDown1.Name" xml:space="preserve">
-    <value>numericUpDown1</value>
-  </data>
-  <data name="&gt;&gt;mengeGrenze.Type" xml:space="preserve">
-    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btn_schicht_save.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="mengeGrenze.Location" type="System.Drawing.Point, System.Drawing">
-    <value>130, 48</value>
-  </data>
-  <data name="&gt;&gt;pictureBox1.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="label8.Location" type="System.Drawing.Point, System.Drawing">
-    <value>11, 94</value>
-  </data>
-  <data name="lbl_50.Location" type="System.Drawing.Point, System.Drawing">
-    <value>127, 51</value>
-  </data>
-  <data name="mengeGrenze.Size" type="System.Drawing.Size, System.Drawing">
-    <value>39, 20</value>
-  </data>
-  <data name="label5.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="&gt;&gt;label8.Name" xml:space="preserve">
-    <value>label8</value>
-  </data>
-  <data name="label1.Text" xml:space="preserve">
-    <value>Schichten wurde geändert</value>
-  </data>
-  <data name="&gt;&gt;LabelAbweichung.Parent" xml:space="preserve">
-    <value>tab_abweichung</value>
-  </data>
-  <data name="pictureBox3.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29m
-        dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAF/SURBVFhHvZdBSixBEEQbvITgPdy69RKCt3TrVhC8
-        hOAN3GpGUTGEkZXtOFX2g8fveZ3d5WfGsXozHvq/I+7Cl/Drj+IaXEuGa1yHvHnFR+g3P1dcS/Aaa2HN
-        xlX4GnK4gud/8zm87eKYnfD1W4i1t8cefNDRmT1P/7MAx+xEZ7F2el8rdGZPx7vOYu3tUwKs0Jk9He86
-        i7V/BFjhc5WOd51tPYUCn6t0vOts6ykU+FzlTUhwzE50tvUUCnyu8inEpx/imJ3obOspFLyHPnuuuJb4
-        uRwK7sNLvg1xDa4lfj4FfQ9Xo58JmgLfw9X4Z4KmcLTDeKTDeKTDeKQp8O/5anx/QFP4j98Agnv7ejl0
-        Lt0DuriH7gn9fA6dmT2g63tCNYeO91lJ6il0vM9KUk+h431WknoKHe+zktSrTam2FRJtbVNabcu1rZBo
-        a9vy6sFE2wqJtvZgUj2a6eAKCV+fHs0AviL5Q5CZPaDre0KsNfzK10fnS/eAru8JZY1t+wZNvM4bkMX7
-        TgAAAABJRU5ErkJggg==
-</value>
-  </data>
-  <data name="&gt;&gt;LabelAbweichung.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="label8.TabIndex" type="System.Int32, mscorlib">
-    <value>18</value>
-  </data>
-  <data name="pictureBox2.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
-  <data name="lbl_100.Size" type="System.Drawing.Size, System.Drawing">
-    <value>36, 13</value>
-  </data>
-  <data name="label6.Size" type="System.Drawing.Size, System.Drawing">
-    <value>101, 13</value>
-  </data>
-  <data name="&gt;&gt;btn_ok.Name" xml:space="preserve">
-    <value>btn_ok</value>
-  </data>
-  <data name="btn_ok.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;label3.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btn_schicht_save.Name" xml:space="preserve">
-    <value>btn_schicht_save</value>
-  </data>
-  <data name="pictureBox1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>11, 11</value>
-  </data>
-  <data name="&gt;&gt;pictureBox2.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;label2.Name" xml:space="preserve">
-    <value>label2</value>
-  </data>
-  <data name="&gt;&gt;lbl_3schicht.Name" xml:space="preserve">
-    <value>lbl_3schicht</value>
-  </data>
-  <data name="&gt;&gt;panel1.Name" xml:space="preserve">
-    <value>panel1</value>
-  </data>
-  <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>54, 23</value>
-  </data>
-  <data name="&gt;&gt;lbl_info.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="lbl_info.Text" xml:space="preserve">
-    <value>Abweichung wurde geändert</value>
-  </data>
-  <data name="&gt;&gt;LabelSchichten.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="LabelAbweichung.TabIndex" type="System.Int32, mscorlib">
-    <value>8</value>
-  </data>
-  <data name="lbl_info.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
-  <data name="&gt;&gt;btn_ok.Parent" xml:space="preserve">
-    <value>tab_abweichung</value>
-  </data>
-  <data name="&gt;&gt;label7.Name" xml:space="preserve">
-    <value>label7</value>
-  </data>
-  <data name="&gt;&gt;numericUpDown1.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;label6.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="&gt;&gt;tab_schicht.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="lbl_10.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="lbl_10.Text" xml:space="preserve">
-    <value>0 %</value>
-  </data>
-  <data name="&gt;&gt;lbl_info.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;LabelAbweichung.Name" xml:space="preserve">
-    <value>LabelAbweichung</value>
-  </data>
-  <data name="&gt;&gt;pictureBox3.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="btn_schicht_save.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="btn_schicht_save.Text" xml:space="preserve">
-    <value>Speichern</value>
-  </data>
-  <data name="&gt;&gt;label3.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="&gt;&gt;lbl_10.Parent" xml:space="preserve">
-    <value>tab_abweichung</value>
-  </data>
-  <data name="&gt;&gt;panel2.Name" xml:space="preserve">
-    <value>panel2</value>
-  </data>
-  <data name="lbl_50.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="&gt;&gt;btn_ok.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="diskSpeichern.Text" xml:space="preserve">
-    <value>Speichern</value>
-  </data>
-  <data name="label1.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="trackBar1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>259, 29</value>
-  </data>
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>311, 382</value>
-  </data>
-  <data name="&gt;&gt;trackBarAbweichung.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="&gt;&gt;numericUpDown1.Parent" xml:space="preserve">
-    <value>tab_schicht</value>
-  </data>
-  <data name="&gt;&gt;tab_diskount.Parent" xml:space="preserve">
-    <value>tabControl1</value>
-  </data>
-  <data name="&gt;&gt;panel3.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;pictureBox3.Parent" xml:space="preserve">
-    <value>panel3</value>
-  </data>
-  <data name="panel3.TabIndex" type="System.Int32, mscorlib">
-    <value>10</value>
-  </data>
-  <data name="&gt;&gt;lbl_100.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;numericUpDown2.Name" xml:space="preserve">
-    <value>numericUpDown2</value>
-  </data>
-  <data name="label4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>30, 13</value>
-  </data>
-  <data name="&gt;&gt;LabelDiskont.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="lbl_100.Text" xml:space="preserve">
-    <value>100 %</value>
-  </data>
-  <data name="&gt;&gt;label4.Parent" xml:space="preserve">
-    <value>tab_diskount</value>
-  </data>
-  <data name="&gt;&gt;LabelSchichten.Name" xml:space="preserve">
-    <value>LabelSchichten</value>
-  </data>
-  <data name="lbl_3schicht.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="label6.Location" type="System.Drawing.Point, System.Drawing">
-    <value>11, 19</value>
-  </data>
-  <data name="label4.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="label4.Text" xml:space="preserve">
-    <value>50 %</value>
-  </data>
-  <data name="lbl_50.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="LabelAbweichung.Location" type="System.Drawing.Point, System.Drawing">
-    <value>11, 192</value>
-  </data>
-  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="$this.Language" type="System.Globalization.CultureInfo, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>de</value>
-  </metadata>
 </root>

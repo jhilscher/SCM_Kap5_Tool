@@ -83,5 +83,10 @@ namespace ToolFahrrad_v1
             instance.VerwendeDiskount = trackBar1.Value * 10;
             panel3.Visible = true;
         }
+
+        private void tab_abweichung_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

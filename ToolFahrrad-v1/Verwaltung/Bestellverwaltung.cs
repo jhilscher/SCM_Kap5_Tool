@@ -11,11 +11,13 @@ namespace ToolFahrrad_v1
         DataContainer dc;
         int aktPeriode;
         List<Bestellposition> bvPositionen;
+        List<DvPosition> dvPositionen;
         // Constructor
         public Bestellverwaltung()
         {
             dc = DataContainer.Instance;
             bvPositionen = new List<Bestellposition>();
+            dvPositionen = new List<DvPosition>();
         }
         // Getter / Setter
         public int AktPeriode
@@ -38,6 +40,28 @@ namespace ToolFahrrad_v1
         {
             bvPositionen.Clear();
         }
+        public List<DvPosition> DvPositionen
+        {
+            get { return dvPositionen; }
+        }
+
+        public void SetDvPositionen(List<DvPosition> newDvPosition) {
+            clearDvPositionen();
+            dvPositionen = newDvPosition;
+        }
+
+        public void addDvPosition(int nr, int menge, double preis, double strafe)
+        {
+            dvPositionen.Add(new DvPosition(nr, menge, preis, strafe));
+        }
+        public void delDvPosition(int nr, int menge, double preis, double strafe)
+        {
+            dvPositionen.Remove(new DvPosition(nr, menge, preis, strafe));
+        }
+        public void clearDvPositionen()
+        {
+            dvPositionen.Clear();
+        }
         // Create list of orders
         public void generiereBestellListe()
         {
@@ -49,67 +73,154 @@ namespace ToolFahrrad_v1
                 int n = 0;
                 double lieferDauer = kt.Lieferdauer + kt.AbweichungLieferdauer * (dc.VerwendeAbweichung / 100);
                 int teilMengeSumme = kt.Lagerstand;
+                bool eil = false;
+                int menge = 0;
                 // Actual period ---------------------------------------------------------------------------------------
                 if (kt.BestandPer1 < 0)
                 {
-                    bvPositionen.Add(new Bestellposition(kt, kt.BruttoBedarfPer0 - kt.Lagerstand, true));
-                    teilMengeSumme = teilMengeSumme - kt.BruttoBedarfPer0 + (kt.BruttoBedarfPer0 - kt.Lagerstand);
+                    if(lieferDauer > endPeriod)
+                    {
+                        eil = true;
+                    }
+                    if(dc.DiskountGrenze >= kt.Preis && eil != true)
+                    {
+                        menge = kt.DiskontMenge;
+                    }
+                    else if (dc.DiskountGrenze < kt.Preis && kt.Preis < dc.GrenzeMenge)
+                    {
+                        menge = berechneMenge(dc.VerwendeDiskount, kt.BruttoBedarfPer0 - kt.Lagerstand, kt.DiskontMenge);
+                    }
+                    else if (dc.GrenzeMenge <= kt.Preis || eil == true)
+                    {
+                        menge = kt.BruttoBedarfPer0 - kt.Lagerstand;
+                    }
+                    if(menge != 0)
+                    {
+                        bvPositionen.Add(new Bestellposition(kt, menge, eil));
+                        teilMengeSumme = teilMengeSumme - kt.BruttoBedarfPer0 + menge;
+                    }
                 }
                 // Actual + 1 period -----------------------------------------------------------------------------------
                 n++;
+                eil = false;
+                menge = 0;
                 if (kt.BestandPer2 < 0)
                 {
                     // Check if Lieferdauer of KTeil will be in time
                     if (lieferDauer >= (startPeriod + n) && lieferDauer < (endPeriod + n))
                     {
-                        int bestellMenge = berechneMenge(dc.VerwendeDiskount, kt.BruttoBedarfPer1 - kt.BestandPer1, kt.DiskontMenge);
-                        bvPositionen.Add(new Bestellposition(kt, bestellMenge, false));
-                        teilMengeSumme = teilMengeSumme - kt.BruttoBedarfPer1 + bestellMenge;
+                        if (dc.DiskountGrenze >= kt.Preis)
+                        {
+                            menge = kt.DiskontMenge;
+                        }
+                        else if (dc.DiskountGrenze < kt.Preis && kt.Preis < dc.GrenzeMenge)
+                        {
+                            menge = berechneMenge(dc.VerwendeDiskount, kt.BruttoBedarfPer1 - kt.BestandPer1, kt.DiskontMenge);
+                        }
+                        else if (dc.GrenzeMenge <= kt.Preis)
+                        {
+                            menge = kt.BruttoBedarfPer1 - kt.BestandPer1;
+                        }
                     }
                     else if (lieferDauer >= (endPeriod + n))
                     {
-                        // Make order as Eilbestellung
-                        bvPositionen.Add(new Bestellposition(kt, kt.BruttoBedarfPer1 - kt.BestandPer1, true));
-                        teilMengeSumme = teilMengeSumme - kt.BruttoBedarfPer1 + (kt.BruttoBedarfPer1 - kt.BestandPer1);
+                        eil = true;
+                        menge = kt.BruttoBedarfPer1 - kt.BestandPer1;
+                    }
+                    if (menge != 0)
+                    {
+                        bvPositionen.Add(new Bestellposition(kt, menge, eil));
+                        teilMengeSumme = teilMengeSumme - kt.BruttoBedarfPer1 + menge;
                     }
                 }
                 // Actual + 2 period -----------------------------------------------------------------------------------
                 n++;
+                eil = false;
+                menge = 0;
                 if (kt.BestandPer3 < 0)
                 {
                     // Check if Lieferdauer of KTeil will be in time
                     if (lieferDauer >= (startPeriod + n) && lieferDauer < (endPeriod + n))
                     {
-                        int bestellMenge = berechneMenge(dc.VerwendeDiskount, kt.BruttoBedarfPer2 - kt.BestandPer2, kt.DiskontMenge);
-                        bvPositionen.Add(new Bestellposition(kt, bestellMenge, false));
-                        teilMengeSumme = teilMengeSumme - kt.BruttoBedarfPer2 + bestellMenge;
+                        if (dc.DiskountGrenze >= kt.Preis)
+                        {
+                            menge = kt.DiskontMenge;
+                        }
+                        else if (dc.DiskountGrenze < kt.Preis && kt.Preis < dc.GrenzeMenge)
+                        {
+                            menge = berechneMenge(dc.VerwendeDiskount, kt.BruttoBedarfPer2 - kt.BestandPer2, kt.DiskontMenge);
+                        }
+                        else if (dc.GrenzeMenge <= kt.Preis)
+                        {
+                            menge = kt.BruttoBedarfPer2 - kt.BestandPer2;
+                        }
                     }
                     else if (lieferDauer >= (endPeriod + n))
                     {
-                        // Check needed amount
-                        bvPositionen.Add(new Bestellposition(kt, kt.BruttoBedarfPer2 - kt.BestandPer2, true));
-                        teilMengeSumme = teilMengeSumme - kt.BruttoBedarfPer2 + (kt.BruttoBedarfPer2 - kt.BestandPer2);
+                        eil = true;
+                        menge = kt.BruttoBedarfPer2 - kt.BestandPer2;
+                    }
+                    if (menge != 0)
+                    {
+                        bvPositionen.Add(new Bestellposition(kt, menge, eil));
+                        teilMengeSumme = teilMengeSumme - kt.BruttoBedarfPer2 + menge;
                     }
                 }
                 // Actual + 3 period -----------------------------------------------------------------------------------
                 n++;
+                eil = false;
+                menge = 0;
                 if (kt.BestandPer4 < 0)
                 {
                     // Check if Lieferdauer of KTeil will be in time
                     if (lieferDauer >= (startPeriod + n) && lieferDauer < (endPeriod + n))
                     {
-                        int bestellMenge = berechneMenge(dc.VerwendeDiskount, kt.BruttoBedarfPer3 - kt.BestandPer3, kt.DiskontMenge);
-                        bvPositionen.Add(new Bestellposition(kt, bestellMenge, false));
-                        teilMengeSumme = teilMengeSumme - kt.BruttoBedarfPer3 + bestellMenge;
+                        if (dc.DiskountGrenze >= kt.Preis)
+                        {
+                            menge = kt.DiskontMenge;
+                        }
+                        else if (dc.DiskountGrenze < kt.Preis && kt.Preis < dc.GrenzeMenge)
+                        {
+                            menge = berechneMenge(dc.VerwendeDiskount, kt.BruttoBedarfPer3 - kt.BestandPer3, kt.DiskontMenge);
+                        }
+                        else if (dc.GrenzeMenge <= kt.Preis)
+                        {
+                            menge = kt.BruttoBedarfPer3 - kt.BestandPer3;
+                        }
                     }
                     else if (lieferDauer >= (endPeriod + n))
                     {
-                        // Check needed amount
-                        bvPositionen.Add(new Bestellposition(kt, kt.BruttoBedarfPer3 - kt.BestandPer3, true));
-                        teilMengeSumme = teilMengeSumme - kt.BruttoBedarfPer3 + (kt.BruttoBedarfPer3 - kt.BestandPer3);
+                        eil = true;
+                        menge = kt.BruttoBedarfPer3 - kt.BestandPer3;
+                    }
+                    if (menge != 0)
+                    {
+                        bvPositionen.Add(new Bestellposition(kt, menge, eil));
+                        teilMengeSumme = teilMengeSumme - kt.BruttoBedarfPer3 + menge;
                     }
                 }
             }
+            optimiereBvPositionen();
+        }
+        // Transfer list bvPositionen into data container
+        public void ladeBvPositionenInDc()
+        {
+            dc.Bestellungen = BvPositionen;
+        }
+        public void generiereListeDV()
+        {
+            dvPositionen.Clear();
+            foreach (ETeil et in dc.ListeETeile)
+            {
+                if (et.ProduktionsMengePer0 < 0)
+                {
+                    addDvPosition(et.Nummer, et.ProduktionsMengePer0 * -1, et.Wert, 0.0);
+                }
+            }
+        }
+        public void ladeDvPositioneninDc()
+        {
+            dc.DVerkauf = DvPositionen;
         }
         private int berechneMenge(double verwDiskont, int bestellMenge, int diskont)
         {
@@ -141,6 +252,31 @@ namespace ToolFahrrad_v1
             }
             // Return output
             return outputMenge;
+        }
+        private void optimiereBvPositionen()
+        {
+            // When found several "eil" orders for the same KTeil, delete orders and create only one with sum amount
+            foreach (KTeil kt in dc.ListeKTeile)
+            {
+                List<Bestellposition> eilPositionen = new List<Bestellposition>();
+                foreach (Bestellposition bp in bvPositionen)
+                {
+                    if (bp.Kaufteil.Nummer == kt.Nummer && bp.Eil == true)
+                    {
+                        eilPositionen.Add(bp);
+                    }
+                }
+                if (eilPositionen.Count() > 1)
+                {
+                    int bestellMenge = 0;
+                    foreach (Bestellposition bp2 in eilPositionen)
+                    {
+                        bestellMenge += bp2.Menge;
+                        bvPositionen.Remove(bp2);
+                    }
+                    bvPositionen.Add(new Bestellposition(kt, bestellMenge, true));
+                }
+            }
         }
     }
 }

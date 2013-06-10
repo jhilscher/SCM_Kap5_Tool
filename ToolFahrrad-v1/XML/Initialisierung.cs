@@ -98,6 +98,37 @@ namespace ToolFahrrad_v1
         // Initialization of each ETeil object
         public void InitEteil()
         {
+            (instance.GetTeil(1) as ETeil).Wert = 156.13;
+            (instance.GetTeil(2) as ETeil).Wert = 163.33;
+            (instance.GetTeil(3) as ETeil).Wert = 165.08;
+            (instance.GetTeil(4) as ETeil).Wert = 40.85;
+            (instance.GetTeil(5) as ETeil).Wert = 39.85;
+            (instance.GetTeil(6) as ETeil).Wert = 40.85;
+            (instance.GetTeil(7) as ETeil).Wert = 35.85;
+            (instance.GetTeil(8) as ETeil).Wert = 35.85;
+            (instance.GetTeil(9) as ETeil).Wert = 35.85;
+            (instance.GetTeil(10) as ETeil).Wert = 12.40;
+            (instance.GetTeil(11) as ETeil).Wert = 14.65;
+            (instance.GetTeil(12) as ETeil).Wert = 14.65;
+            (instance.GetTeil(13) as ETeil).Wert = 12.40;
+            (instance.GetTeil(14) as ETeil).Wert = 14.65;
+            (instance.GetTeil(15) as ETeil).Wert = 14.65;
+            (instance.GetTeil(16) as ETeil).Wert = 7.02;
+            (instance.GetTeil(17) as ETeil).Wert = 7.16;
+            (instance.GetTeil(18) as ETeil).Wert = 13.15;
+            (instance.GetTeil(19) as ETeil).Wert = 14.35;
+            (instance.GetTeil(20) as ETeil).Wert = 15.55;
+            (instance.GetTeil(26) as ETeil).Wert = 10.50;
+            (instance.GetTeil(29) as ETeil).Wert = 69.29;
+            (instance.GetTeil(30) as ETeil).Wert = 127.53;
+            (instance.GetTeil(31) as ETeil).Wert = 144.42;
+            (instance.GetTeil(49) as ETeil).Wert = 64.64;
+            (instance.GetTeil(50) as ETeil).Wert = 120.63;
+            (instance.GetTeil(51) as ETeil).Wert = 137.47;
+            (instance.GetTeil(54) as ETeil).Wert = 68.09;
+            (instance.GetTeil(55) as ETeil).Wert = 125.33;
+            (instance.GetTeil(56) as ETeil).Wert = 142.67;
+            // -------------------------------------------------
             (instance.GetTeil(1) as ETeil).IstEndProdukt = true;
             (instance.GetTeil(2) as ETeil).IstEndProdukt = true;
             (instance.GetTeil(3) as ETeil).IstEndProdukt = true;

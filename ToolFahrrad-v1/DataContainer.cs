@@ -13,8 +13,10 @@ namespace ToolFahrrad_v1
         private bool berechneKindTeil;
         private static DataContainer instance = new DataContainer();
         private List<Bestellposition> listeBestellungen;
+        private List<DvPosition> listeDVerkauf;
         private Dictionary<int, Teil> listeTeile;
         private Dictionary<int, Arbeitsplatz> listeArbeitsplaetze;
+        private List<int[]> apKapazitaet;
         private int[] listeReihenfolge;
         private bool sonderProduktion = false;
         private bool ueberstundenErlaubt = true;
@@ -25,9 +27,14 @@ namespace ToolFahrrad_v1
         private int zweiteSchicht = 6000;
         private double verwendeAbweichung = 0.5;
         private double verwendeDiskount = 0.5;
-
-        private double diskountGrenze = 5;        
+        private double diskountGrenze = 5;
         private double grenzeMenge = 10;
+        // Getter / Setter
+        public List<int[]> ApKapazitaet
+        {
+            get { return apKapazitaet; }
+            set { apKapazitaet = value; }
+        }
         public double DiskountGrenze {
             get { return diskountGrenze; }
             set { diskountGrenze = value; }
@@ -36,7 +43,6 @@ namespace ToolFahrrad_v1
             get { return grenzeMenge; }
             set { grenzeMenge = value; }
         }
-        // Getter / Setter
         public double VerwendeAbweichung
         {
             get { return verwendeAbweichung * 100; }
@@ -60,8 +66,10 @@ namespace ToolFahrrad_v1
         // Constructor
         private DataContainer()
         {
+            apKapazitaet = new List<int[]>();
             berechneKindTeil = true;
             listeBestellungen = new List<Bestellposition>();
+            listeDVerkauf = new List<DvPosition>();
             listeTeile = new Dictionary<int, Teil>();
             listeArbeitsplaetze = new Dictionary<int, Arbeitsplatz>();
             openFile = Application.StartupPath + "//output.xml";
@@ -119,6 +127,27 @@ namespace ToolFahrrad_v1
         public List<Bestellposition> Bestellungen
         {
             get { return listeBestellungen; }
+            set
+            {
+                listeBestellungen.Clear();
+                foreach (Bestellposition bp in value)
+                {
+                    listeBestellungen.Add(new Bestellposition(bp.Kaufteil, bp.Menge, bp.Eil));
+                }
+            }
+        }
+        // Getter of list direct distribution (Direktverkauf)
+        public List<DvPosition> DVerkauf
+        {
+            get { return listeDVerkauf; }
+            set
+            {
+                listeDVerkauf.Clear();
+                foreach (DvPosition dvp in value)
+                {
+                    listeDVerkauf.Add(new DvPosition(dvp.DvTeilNr, dvp.DvMenge, dvp.DvPreis, dvp.DvStrafe));
+                }
+            }
         }
         // Path of input file
         public string OpenFile
@@ -148,8 +177,7 @@ namespace ToolFahrrad_v1
             get { return ueberstundenErlaubt; }
             set { ueberstundenErlaubt = value; }
         }
-
-                // Getter for Teil with given number
+        // Getter for Teil with given number
         public Teil GetTeil(int nr)
         {
             if (listeTeile.ContainsKey(nr))
