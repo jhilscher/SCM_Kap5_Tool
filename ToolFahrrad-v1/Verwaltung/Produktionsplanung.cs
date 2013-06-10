@@ -9,7 +9,6 @@ namespace ToolFahrrad_v1
     {
         // Class members
         DataContainer dc;
-        bool aufgeloest = false;
         int aktPeriode;
         // Constructor
         public Produktionsplanung()
@@ -73,7 +72,6 @@ namespace ToolFahrrad_v1
             {
                 RekursAufloesenKTeile(index, null, dc.GetTeil(index) as ETeil);
             }
-            aufgeloest = true;
         }
         // Rekursive Prozedur zum Iterieren ueber die Zusammensetzung der Teile
         private void RekursAufloesenETeile(int index, ETeil vaterTeil, ETeil kindTeil)
@@ -276,8 +274,6 @@ namespace ToolFahrrad_v1
         private void AnpassungMengeAnZeit()
         {
             double diff = 0;
-            bool changed = false;
-            int count = 0;
             int sumProd = 0;
             double zwischenWert = 0;
             int val;
