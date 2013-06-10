@@ -6576,6 +6576,7 @@
             // 
             resources.ApplyResources(this.xMLexportToolStripMenuItem, "xMLexportToolStripMenuItem");
             this.xMLexportToolStripMenuItem.Name = "xMLexportToolStripMenuItem";
+            this.xMLexportToolStripMenuItem.Click += new System.EventHandler(this.xMLexportToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
             // 
@@ -6659,6 +6660,7 @@
             this.helpProvider1.SetShowHelp(this.xml_export, ((bool)(resources.GetObject("xml_export.ShowHelp"))));
             this.xml_export.TabStop = false;
             this.toolTip.SetToolTip(this.xml_export, resources.GetString("xml_export.ToolTip"));
+            this.xml_export.Click += new System.EventHandler(this.xml_export_Click);
             // 
             // imageListAmpel
             // 

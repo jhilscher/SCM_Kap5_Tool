@@ -55,6 +55,7 @@ namespace ToolFahrrad_v1
             this.panelXMLerstellen.Visible = true;
             this.bestellungUpdate = false;
             this.dvUpdate = false;
+            this.xMLexportToolStripMenuItem.Enabled = true;
             this.xml_export.Visible = true;
         }
         private void ausführen() {
@@ -809,7 +810,7 @@ namespace ToolFahrrad_v1
             xmlAP = new List<int[]>();
             foreach (var a in instance.ArbeitsplatzList) {
                 int[] apXML = new int[3];
-               
+
 
                 DataGridViewAP.Rows.Add();
                 DataGridViewAP.Rows[index].Cells[4].Value = imageListPlusMinus.Images[0];
@@ -951,7 +952,7 @@ namespace ToolFahrrad_v1
                 bv.generiereListeDV();
             List<DvPosition> dv = bv.DvPositionen;
             index = 0;
-            foreach(var a in dv){
+            foreach (var a in dv) {
                 dataGridViewDirektverkauf.Rows.Add();
                 dataGridViewDirektverkauf.Rows[index].Cells[0].Value = a.DvTeilNr;
                 dataGridViewDirektverkauf.Rows[index].Cells[1].Value = a.DvMenge;
@@ -1019,7 +1020,7 @@ namespace ToolFahrrad_v1
                 dataGridViewProduktAuftrag.Rows.Add(5); int i = 0;
                 foreach (DataGridViewRow dr in dataGridViewProduktAuftrag.Rows)
                     foreach (DataGridViewCell dc in dr.Cells) dc.Value = i++;
-                
+
             }
         }
 
@@ -1038,7 +1039,7 @@ namespace ToolFahrrad_v1
 
         private void dataGridViewAPlatz_CellContentClick(object sender, DataGridViewCellEventArgs e) {
             int zahl = Convert.ToInt32(DataGridViewAP.Rows[e.RowIndex].Cells[3].Value.ToString());
-            switch (e.ColumnIndex) { 
+            switch (e.ColumnIndex) {
                 case 0:
                     TeilInformation ti = new TeilInformation("arbeitsplatz", Convert.ToInt32(DataGridViewAP.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString()));
                     ti.GetZeitInformation();
@@ -1061,7 +1062,7 @@ namespace ToolFahrrad_v1
                 DataGridViewAP.Cursor = Cursors.Hand;
             else
                 DataGridViewAP.Cursor = Cursors.Default;
-            
+
         }
 
 
@@ -1332,7 +1333,7 @@ namespace ToolFahrrad_v1
             Information();
         }
 
-////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////
         /// <summary>
         /// 
         /// </summary>
@@ -1355,8 +1356,8 @@ namespace ToolFahrrad_v1
 
                 if (dragBoxSrc != Rectangle.Empty &&
                         !dragBoxSrc.Contains(e.X, e.Y)) {
-                            DragDropEffects dropEffect = dataGridViewProduktAuftrag.DoDragDrop(
-                        dataGridViewProduktAuftrag.Rows[rowIndexSrc], DragDropEffects.Move);
+                    DragDropEffects dropEffect = dataGridViewProduktAuftrag.DoDragDrop(
+                dataGridViewProduktAuftrag.Rows[rowIndexSrc], DragDropEffects.Move);
                 }
             }
         }
@@ -1414,6 +1415,18 @@ namespace ToolFahrrad_v1
             if (IsCellOrRowHeader(p.X, p.Y))
                 e.Effect = DragDropEffects.Move;
             else e.Effect = DragDropEffects.None;
+        }
+        ////////////////////////////////////////////////////////////////////////////////
+        private void xml_export_Click(object sender, EventArgs e) {
+            this.xmlExport();
+        }
+
+        private void xMLexportToolStripMenuItem_Click(object sender, EventArgs e) {
+            this.xmlExport();
+        }
+
+        private void xmlExport() { 
+            
         }
     }
 }
