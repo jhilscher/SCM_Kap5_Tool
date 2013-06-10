@@ -704,6 +704,7 @@
             this.pr = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.str = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewCheckBoxColumn2 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.tabs.SuspendLayout();
             this.tab_xml.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pufferP3)).BeginInit();
@@ -7499,6 +7500,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn22;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn23;
         private System.Windows.Forms.DataGridViewTextBoxColumn straf;
+        private System.Windows.Forms.SaveFileDialog saveFileDialog1;
     }
 }
 

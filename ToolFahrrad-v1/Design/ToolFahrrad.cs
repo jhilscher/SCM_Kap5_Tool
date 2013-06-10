@@ -1425,8 +1425,14 @@ namespace ToolFahrrad_v1
             this.xmlExport();
         }
 
-        private void xmlExport() { 
-            
+        private void xmlExport() {
+            saveFileDialog1.Filter = "xml-Datei öffnen (*.xml)|*.xml";
+            saveFileDialog1.Title = "xml-Datei erstellen";
+            saveFileDialog1.ShowDialog();
+
+            if (saveFileDialog1.FileName != "") {
+                xml.WriteDatei(saveFileDialog1.FileName);
+            }
         }
     }
 }
