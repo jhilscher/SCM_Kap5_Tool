@@ -22,7 +22,7 @@ namespace ToolFahrrad_v1
             dvPreis = preis_param;
             dvStrafe = strafe_param;
         }
-        // Getter / Setter
+        // Getter/Setter
         public int DvTeilNr
         {
             get { return dvTeilNr; }
