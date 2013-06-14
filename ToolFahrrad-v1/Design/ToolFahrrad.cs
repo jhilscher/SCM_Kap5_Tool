@@ -1,17 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Globalization;
 using System.Threading;
 using System.IO;
 
-namespace ToolFahrrad_v1
+namespace ToolFahrrad_v1.Design
 {
     public partial class Fahrrad : Form
     {
@@ -362,6 +358,8 @@ namespace ToolFahrrad_v1
                 ++index;
             }
             #endregion
+
+
         }
 
         /// <summary>
@@ -950,7 +948,7 @@ namespace ToolFahrrad_v1
         /// <param name="e"></param>
         private void handbuchToolStripMenuItem_Click(object sender, EventArgs e) {
             this.benutzerHandbuch();
-            
+
         }
         protected override bool ProcessCmdKey(ref Message msg, Keys keyData) {
             if (keyData == Keys.F1) {
@@ -958,7 +956,7 @@ namespace ToolFahrrad_v1
             }
             return base.ProcessCmdKey(ref msg, keyData);
         }
-        private void benutzerHandbuch() { 
+        private void benutzerHandbuch() {
             string path = Directory.GetCurrentDirectory() + @"\chm\Handbuch_SS2013_P004_V2.docx";
             Help.ShowHelp(this, path, HelpNavigator.TableOfContents, "");
         }
@@ -979,7 +977,7 @@ namespace ToolFahrrad_v1
             }
         }
         private void xmlVorbereitung(int p) {
-            int index = 0;
+            int index;
             if (p == 100 || p == 1) { //1 = Vertriebswunsch
                 this.DataGriedViewRemove(dataGridViewVertrieb);
                 dataGridViewVertrieb.Rows.Add();
@@ -995,7 +993,7 @@ namespace ToolFahrrad_v1
                     dataGridViewEinkauf.Rows.Add();
                     dataGridViewEinkauf.Rows[index].Cells[0].Value = b.Kaufteil.Nummer;
                     dataGridViewEinkauf.Rows[index].Cells[1].Value = b.Menge;
-                    if (b.Eil == true)
+                    if (b.Eil)
                         dataGridViewEinkauf.Rows[index].Cells[2].Value = "E";
                     else
                         dataGridViewEinkauf.Rows[index].Cells[2].Value = "N";
@@ -1018,7 +1016,7 @@ namespace ToolFahrrad_v1
             }
             if (p == 100 || p == 5) {
                 index = 0;
-                this.DataGriedViewRemove(dataGridViewProduktKapazit);
+                DataGriedViewRemove(dataGridViewProduktKapazit);
                 foreach (int[] i in xmlAP) {
                     dataGridViewProduktKapazit.Rows.Add();
                     dataGridViewProduktKapazit.Rows[index].Cells[0].Value = i[0];
@@ -1030,11 +1028,31 @@ namespace ToolFahrrad_v1
             }
             if (p == 100 || p == 4) {
                 index = 0;
-                this.DataGriedViewRemove(dataGridViewProduktAuftrag);
-                dataGridViewProduktAuftrag.Rows.Add(5); int i = 0;
-                foreach (DataGridViewRow dr in dataGridViewProduktAuftrag.Rows)
-                    foreach (DataGridViewCell dc in dr.Cells) dc.Value = i++;
+                DataGriedViewRemove(dataGridViewProduktAuftrag);
+                foreach (ETeil et in instance.ListeETeile.Where(et => et.InWartschlange > 0)) {
+                    ProduktAuftrag(et, index);
+                    ++index;
+                }
+                foreach (ETeil et in instance.ListeETeile.Where(et => et.InWartschlange == 0 && et.ProduktionsMengePer0 > 0 )) {
+                    ProduktAuftrag(et, index);
+                    ++index;
+                }
+                foreach (ETeil et in instance.ListeETeile.Where(et => et.InWartschlange == 0 && et.ProduktionsMengePer0 <= 0)) {
+                    ProduktAuftrag(et, index);
+                    ++index;
+                }
+            }
+        }
 
+        private void ProduktAuftrag(ETeil et, int index) {
+            dataGridViewProduktAuftrag.Rows.Add();
+            dataGridViewProduktAuftrag.Rows[index].DefaultCellStyle.BackColor = Color.LightCyan;
+            dataGridViewProduktAuftrag.Rows[index].Cells[0].Value = et.Nummer;
+            if (!et.Verwendung.Contains("KDH"))
+                dataGridViewProduktAuftrag.Rows[index].Cells[1].Value = et.ProduktionsMengePer0;
+            else {
+                var prodMenge = et.KdhProduktionsmenge.Sum(pair => pair.Value);
+                dataGridViewProduktAuftrag.Rows[index].Cells[1].Value = prodMenge;
             }
         }
 
@@ -1347,6 +1365,8 @@ namespace ToolFahrrad_v1
             return (dgt == DataGridViewHitTestType.Cell ||
                             dgt == DataGridViewHitTestType.RowHeader);
         }
+
+
         private void dataGridViewProduktAuftrag_MouseMove(object sender, MouseEventArgs e) {
             if ((e.Button & MouseButtons.Left) == MouseButtons.Left) {
                 if (!IsCellOrRowHeader(e.X, e.Y) && rowIndexSrc >= 0) {

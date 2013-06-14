@@ -1,4 +1,4 @@
-﻿namespace ToolFahrrad_v1
+﻿namespace ToolFahrrad_v1.Design
 {
     partial class Fahrrad
     {
