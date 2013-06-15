@@ -114,4 +114,43 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="Fahrrad_saveAenderungen2_Click_Eigenfertigte_Teil_N" xml:space="preserve">
+    <value>Eigenfertigte Teil N</value>
+  </data>
+  <data name="Fahrrad_Information_P" xml:space="preserve">
+    <value>P</value>
+  </data>
+  <data name="Fahrrad_Information_B" xml:space="preserve">
+    <value>B</value>
+  </data>
+  <data name="Fahrrad_XmlOeffnen_xml_Datei_öffnen____xml____xml" xml:space="preserve">
+    <value>xml-Datei öffnen (*.xml)|*.xml</value>
+  </data>
+  <data name="Fahrrad_XmlOeffnen_TEXT" xml:space="preserve">
+    <value>Es wurde zum Laden falsche Datei ausgewählt. 
+Das Programm kann nicht ausgeführt werden</value>
+  </data>
+  <data name="Fahrrad_XmlOeffnen_Fehlermeldung" xml:space="preserve">
+    <value>Fehlermeldung</value>
+  </data>
+  <data name="Fahrrad_XmlExport_xml_Datei_erstellen" xml:space="preserve">
+    <value>xml-Datei erstellen</value>
+  </data>
+  <data name="Fahrrad_pictureBox3_Click_Kaufteil_N" xml:space="preserve">
+    <value>Kaufteil N</value>
+  </data>
+  <data name="Fahrrad_pictureBox3_Click_" xml:space="preserve">
+    <value> kann nicht keine Menge haben. 
+Diese zeile wird ignoriert</value>
+  </data>
+  <data name="Fahrrad_pictureBox3_Click_1" xml:space="preserve">
+    <value> exsistiert nicht im System. 
+Diese zeile wird ignoriert</value>
+  </data>
+  <data name="Fahrrad_saveAenderungen2_Click_kein_Fehld_darf_null_sein" xml:space="preserve">
+    <value>kein Fehld darf null sein</value>
+  </data>
+  <data name="Fahrrad_saveAenderungen2_Click_Eigenfertigte_Teil_N1" xml:space="preserve">
+    <value>Eigenfertigte Teil N</value>
+  </data>
 </root>

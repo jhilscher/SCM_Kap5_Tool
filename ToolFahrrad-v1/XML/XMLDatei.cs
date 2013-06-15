@@ -155,6 +155,7 @@ namespace ToolFahrrad_v1
 
             //Produktionsaufträge
             sw.WriteLine("<productionlist>");
+            //<production article="9" quantity="140" />
             sw.WriteLine("NIX VERTIG");
             sw.WriteLine("</productionlist>");
 
