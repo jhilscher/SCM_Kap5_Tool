@@ -1,4 +1,6 @@
-﻿namespace ToolFahrrad_v1.XML
+﻿using ToolFahrrad_v1.Komponenten;
+
+namespace ToolFahrrad_v1.XML
 {
     class Initialisierung
     {
