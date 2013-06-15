@@ -1,34 +1,28 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace ToolFahrrad_v1
+﻿namespace ToolFahrrad_v1.XML
 {
     class Initialisierung
     {
         // Array of flags to identificate KTeil
-        protected static bool[] TKTeil =
+        private static bool[] _tkTeil =
             {false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,
              false,false,false,true,true,true,true,true,false,true,true,false,false,false,true,true,true,true,true,
              true,true,true,true,true,true,true,true,true,true,true,true,false,false,false,true,true,false,false,false,
              true,true,true};
         // Array with ordering costs of each KTeil
-        protected static double[] BKKTeil =
+        private static double[] _bkkTeil =
             {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,50,50,50,100,50,0,75,50,0,0,0,50,75,50,75,100,50,50,75,50,50,50,
              75,50,50,50,50,75,0,0,0,50,50,0,0,0,50,50,50};
         // Array with price of each KTeil
-        protected static double[] PKTeil =
+        private static double[] _pkTeil =
             {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5.00,6.50,6.50,0.06,0.06,0,0.1,1.2,0,0,0,0.75,22,0.1,1,8,1.5,1.5,
              1.5,2.5,0.06,0.1,5,0.5,0.06,0.1,3.5,1.5,0,0,0,22,0.1,0,0,0,22,0.1,0.15};
         // Array with usage indicator of each Teil (K=Kinderfahrrad, D=Damenfahrrad, H=Herrenfahrrad, KDH=all)
-        protected static string[] VwTeil =
+        private static string[] _vwTeil =
             {"K","D","H","K","D","H","K","D","H","K","D","H","K","D","H","KDH","KDH","K","D","H","K","D","H","KDH",
              "KDH","KDH","KDH","KDH","H","H","H","KDH","H","H","KDH","KDH","KDH","KDH","KDH","KDH","KDH","KDH","KDH",
              "KDH","KDH","KDH","KDH","KDH","K","K","K","K","K","D","D","D","D","D","KDH"};
         // Array with title of each Teil
-        protected static string[] TBez =
+        private static string[] _bez =
             {"Kinderfahrrad","Damenfahrrad","Herrenfahrrad","HinterradgruppeK","HinterradgruppeD","HinterradgruppeH",
              "VorderradgruppeK","VorderradgruppeD","VorderradgruppeH","SchutzblechK h","SchutzblechD h",
              "SchutzblechH h","SchutzblechK v","SchutzblechD v","SchutzblechH v","Lenker","Sattel","RahmenK","RahmenD",
@@ -38,48 +32,33 @@ namespace ToolFahrrad_v1
              "Rahmen u. RäderK","Fahrrad o. PedalK","FelgeK","SpeicheK","VorderradD","Rahmen u. RäderD",
              "Fahrrad o. PedalD","FelgeD","SpeicheD","Schweißdraht"};
         // Array with discount of each KTeil
-        protected static int[] DMKTeil =
+        private static int[] _dmkTeil =
             {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,300,300,300,6100,3600,0,1800,4500,0,0,0,2700,900,22000,3600,900,
              900,300,1800,900,900,1800,2700,900,900,900,900,1800,0,0,0,600,22000,0,0,0,600,22000,1800};
         // Array with order duration of each KTeil
-        protected static double[] BDKTeil =
+        private static double[] _bdkTeil =
             {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1.8,1.7,1.2,3.2,0.9,0,0.9,1.7,0,0,0,2.1,1.9,1.6,2.2,1.2,1.5,1.7,
              1.5,1.7,0.9,1.2,2,1,1.7,0.9,1.4,1,0,0,0,1.6,1.6,0,0,0,1.7,1.6,0.7};
         // Array with variance of the order duration of each KTeil
-        protected static double[] ABDKTeil =
+        private static double[] _abdkTeil =
             {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0.4,0.4,0.2,0.3,0.2,0,0.2,0.4,0,0,0,0.5,0.5,0.3,0.4,0.1,0.3,0.4,
              0.3,0.2,0.2,0.3,0.5,0.2,0.3,0.3,0.1,0.2,0,0,0,0.4,0.2,0,0,0,0.3,0.5,0.2};
-        // Array with key consumption of Teil P1
-        protected static int[] TVerbrauchP1 =
-            {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,7,4,0,2,5,0,0,0,3,0,0,4,1,1,1,2,1,1,2,1,3,1,1,1,2,0,0,0,2,
-             72,0,0,0,0,0,2};
-        // Array with key consumption of Teil P2
-        protected static int[] TVerbrauchP2 =
-            {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,7,4,0,2,6,0,0,0,3,2,72,4,1,1,1,2,1,1,2,1,3,1,1,1,2,0,0,0,0,
-             0,0,0,0,0,0,2};
-        // Array with key consumption of Teil P3
-        protected static int[] TVerbrauchP3 =
-            {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,7,4,0,2,7,0,0,0,3,0,0,4,1,1,1,2,1,1,2,1,3,1,1,1,2,0,0,0,0,0,
-             0,0,0,2,72,2};
         // Get instance of Class DataContainer
-        DataContainer instance = DataContainer.Instance;
-        // Public standard constructor
-        public Initialisierung()
-        {}
+        DataContainer _instance = DataContainer.Instance;
         // Public method to initialize each Teil
         public void Initialisieren()
         {
             // Create new object of class Teil
             for (int indexTeil = 0; indexTeil < 59; indexTeil++)
             {
-                if (TKTeil[indexTeil])
+                if (_tkTeil[indexTeil])
                 {
-                    instance.NewTeil(indexTeil + 1, TBez[indexTeil], PKTeil[indexTeil], BKKTeil[indexTeil],
-                                     BDKTeil[indexTeil], ABDKTeil[indexTeil], DMKTeil[indexTeil], 0, VwTeil[indexTeil]);
+                    _instance.NewTeil(indexTeil + 1, _bez[indexTeil], _pkTeil[indexTeil], _bkkTeil[indexTeil],
+                                     _bdkTeil[indexTeil], _abdkTeil[indexTeil], _dmkTeil[indexTeil], 0, _vwTeil[indexTeil]);
                 }
                 else
                 {
-                    instance.NewTeil(indexTeil + 1, TBez[indexTeil], 0, VwTeil[indexTeil]);
+                    _instance.NewTeil(indexTeil + 1, _bez[indexTeil], 0, _vwTeil[indexTeil]);
                 }
             }
             // Create new object of class Arbeitsplatz
@@ -87,7 +66,7 @@ namespace ToolFahrrad_v1
             {
                 if (indexAp != 5)
                 {
-                    instance.NeuArbeitsplatz(new Arbeitsplatz(indexAp));
+                    _instance.NeuArbeitsplatz(new Arbeitsplatz(indexAp));
                 }
             }
             // Initialization of ETeil objects
@@ -96,237 +75,237 @@ namespace ToolFahrrad_v1
             InitializeArbPl();
         }
         // Initialization of each ETeil object
-        public void InitEteil()
+        private void InitEteil()
         {
-            (instance.GetTeil(1) as ETeil).Wert = 156.13;
-            (instance.GetTeil(2) as ETeil).Wert = 163.33;
-            (instance.GetTeil(3) as ETeil).Wert = 165.08;
-            (instance.GetTeil(4) as ETeil).Wert = 40.85;
-            (instance.GetTeil(5) as ETeil).Wert = 39.85;
-            (instance.GetTeil(6) as ETeil).Wert = 40.85;
-            (instance.GetTeil(7) as ETeil).Wert = 35.85;
-            (instance.GetTeil(8) as ETeil).Wert = 35.85;
-            (instance.GetTeil(9) as ETeil).Wert = 35.85;
-            (instance.GetTeil(10) as ETeil).Wert = 12.40;
-            (instance.GetTeil(11) as ETeil).Wert = 14.65;
-            (instance.GetTeil(12) as ETeil).Wert = 14.65;
-            (instance.GetTeil(13) as ETeil).Wert = 12.40;
-            (instance.GetTeil(14) as ETeil).Wert = 14.65;
-            (instance.GetTeil(15) as ETeil).Wert = 14.65;
-            (instance.GetTeil(16) as ETeil).Wert = 7.02;
-            (instance.GetTeil(17) as ETeil).Wert = 7.16;
-            (instance.GetTeil(18) as ETeil).Wert = 13.15;
-            (instance.GetTeil(19) as ETeil).Wert = 14.35;
-            (instance.GetTeil(20) as ETeil).Wert = 15.55;
-            (instance.GetTeil(26) as ETeil).Wert = 10.50;
-            (instance.GetTeil(29) as ETeil).Wert = 69.29;
-            (instance.GetTeil(30) as ETeil).Wert = 127.53;
-            (instance.GetTeil(31) as ETeil).Wert = 144.42;
-            (instance.GetTeil(49) as ETeil).Wert = 64.64;
-            (instance.GetTeil(50) as ETeil).Wert = 120.63;
-            (instance.GetTeil(51) as ETeil).Wert = 137.47;
-            (instance.GetTeil(54) as ETeil).Wert = 68.09;
-            (instance.GetTeil(55) as ETeil).Wert = 125.33;
-            (instance.GetTeil(56) as ETeil).Wert = 142.67;
+            (_instance.GetTeil(1) as ETeil).Wert = 156.13;
+            (_instance.GetTeil(2) as ETeil).Wert = 163.33;
+            (_instance.GetTeil(3) as ETeil).Wert = 165.08;
+            (_instance.GetTeil(4) as ETeil).Wert = 40.85;
+            (_instance.GetTeil(5) as ETeil).Wert = 39.85;
+            (_instance.GetTeil(6) as ETeil).Wert = 40.85;
+            (_instance.GetTeil(7) as ETeil).Wert = 35.85;
+            (_instance.GetTeil(8) as ETeil).Wert = 35.85;
+            (_instance.GetTeil(9) as ETeil).Wert = 35.85;
+            (_instance.GetTeil(10) as ETeil).Wert = 12.40;
+            (_instance.GetTeil(11) as ETeil).Wert = 14.65;
+            (_instance.GetTeil(12) as ETeil).Wert = 14.65;
+            (_instance.GetTeil(13) as ETeil).Wert = 12.40;
+            (_instance.GetTeil(14) as ETeil).Wert = 14.65;
+            (_instance.GetTeil(15) as ETeil).Wert = 14.65;
+            (_instance.GetTeil(16) as ETeil).Wert = 7.02;
+            (_instance.GetTeil(17) as ETeil).Wert = 7.16;
+            (_instance.GetTeil(18) as ETeil).Wert = 13.15;
+            (_instance.GetTeil(19) as ETeil).Wert = 14.35;
+            (_instance.GetTeil(20) as ETeil).Wert = 15.55;
+            (_instance.GetTeil(26) as ETeil).Wert = 10.50;
+            (_instance.GetTeil(29) as ETeil).Wert = 69.29;
+            (_instance.GetTeil(30) as ETeil).Wert = 127.53;
+            (_instance.GetTeil(31) as ETeil).Wert = 144.42;
+            (_instance.GetTeil(49) as ETeil).Wert = 64.64;
+            (_instance.GetTeil(50) as ETeil).Wert = 120.63;
+            (_instance.GetTeil(51) as ETeil).Wert = 137.47;
+            (_instance.GetTeil(54) as ETeil).Wert = 68.09;
+            (_instance.GetTeil(55) as ETeil).Wert = 125.33;
+            (_instance.GetTeil(56) as ETeil).Wert = 142.67;
             // -------------------------------------------------
-            (instance.GetTeil(1) as ETeil).IstEndProdukt = true;
-            (instance.GetTeil(2) as ETeil).IstEndProdukt = true;
-            (instance.GetTeil(3) as ETeil).IstEndProdukt = true;
-            (instance.GetTeil(16) as ETeil).AddBestandteil(24, 1);
-            (instance.GetTeil(16) as ETeil).AddBestandteil(28, 2);
-            (instance.GetTeil(16) as ETeil).AddBestandteil(40, 1);
-            (instance.GetTeil(16) as ETeil).AddBestandteil(41, 1);
-            (instance.GetTeil(16) as ETeil).AddBestandteil(42, 2);
-            (instance.GetTeil(17) as ETeil).AddBestandteil(43, 1);
-            (instance.GetTeil(17) as ETeil).AddBestandteil(44, 1);
-            (instance.GetTeil(17) as ETeil).AddBestandteil(45, 1);
-            (instance.GetTeil(17) as ETeil).AddBestandteil(46, 1);
-            (instance.GetTeil(26) as ETeil).AddBestandteil(47, 1);
-            (instance.GetTeil(26) as ETeil).AddBestandteil(44, 2);
-            (instance.GetTeil(26) as ETeil).AddBestandteil(48, 2);
-            (instance.GetTeil(1) as ETeil).AddBestandteil(21, 1);
-            (instance.GetTeil(1) as ETeil).AddBestandteil(24, 1);
-            (instance.GetTeil(1) as ETeil).AddBestandteil(27, 1);
-            (instance.GetTeil(1) as ETeil).AddBestandteil(26, 1);
-            (instance.GetTeil(1) as ETeil).AddBestandteil(51, 1);
-            (instance.GetTeil(56) as ETeil).AddBestandteil(24, 1);
-            (instance.GetTeil(56) as ETeil).AddBestandteil(27, 1);
-            (instance.GetTeil(56) as ETeil).AddBestandteil(55, 1);
-            (instance.GetTeil(56) as ETeil).AddBestandteil(16, 1);
-            (instance.GetTeil(56) as ETeil).AddBestandteil(17, 1);
-            (instance.GetTeil(55) as ETeil).AddBestandteil(24, 2);
-            (instance.GetTeil(55) as ETeil).AddBestandteil(25, 2);
-            (instance.GetTeil(55) as ETeil).AddBestandteil(5, 1);
-            (instance.GetTeil(55) as ETeil).AddBestandteil(11, 1);
-            (instance.GetTeil(55) as ETeil).AddBestandteil(54, 1);
-            (instance.GetTeil(11) as ETeil).AddBestandteil(32, 1);
-            (instance.GetTeil(11) as ETeil).AddBestandteil(39, 1);
-            (instance.GetTeil(5) as ETeil).AddBestandteil(35, 2);
-            (instance.GetTeil(5) as ETeil).AddBestandteil(36, 1);
-            (instance.GetTeil(5) as ETeil).AddBestandteil(57, 1);
-            (instance.GetTeil(5) as ETeil).AddBestandteil(58, 36);
-            (instance.GetTeil(54) as ETeil).AddBestandteil(24, 2);
-            (instance.GetTeil(54) as ETeil).AddBestandteil(25, 2);
-            (instance.GetTeil(54) as ETeil).AddBestandteil(8, 1);
-            (instance.GetTeil(54) as ETeil).AddBestandteil(14, 1);
-            (instance.GetTeil(54) as ETeil).AddBestandteil(19, 1);
-            (instance.GetTeil(8) as ETeil).AddBestandteil(35, 2);
-            (instance.GetTeil(8) as ETeil).AddBestandteil(37, 1);
-            (instance.GetTeil(8) as ETeil).AddBestandteil(38, 1);
-            (instance.GetTeil(8) as ETeil).AddBestandteil(57, 1);
-            (instance.GetTeil(8) as ETeil).AddBestandteil(58, 36);
-            (instance.GetTeil(19) as ETeil).AddBestandteil(28, 4);
-            (instance.GetTeil(19) as ETeil).AddBestandteil(32, 1);
-            (instance.GetTeil(19) as ETeil).AddBestandteil(59, 2);
-            (instance.GetTeil(14) as ETeil).AddBestandteil(32, 1);
-            (instance.GetTeil(14) as ETeil).AddBestandteil(39, 1);
-            (instance.GetTeil(2) as ETeil).AddBestandteil(22, 1);
-            (instance.GetTeil(2) as ETeil).AddBestandteil(24, 1);
-            (instance.GetTeil(2) as ETeil).AddBestandteil(27, 1);
-            (instance.GetTeil(2) as ETeil).AddBestandteil(26, 1);
-            (instance.GetTeil(2) as ETeil).AddBestandteil(56, 1);
-            (instance.GetTeil(51) as ETeil).AddBestandteil(16, 1);
-            (instance.GetTeil(51) as ETeil).AddBestandteil(17, 1);
-            (instance.GetTeil(51) as ETeil).AddBestandteil(50, 1);
-            (instance.GetTeil(51) as ETeil).AddBestandteil(24, 1);
-            (instance.GetTeil(51) as ETeil).AddBestandteil(27, 1);
-            (instance.GetTeil(50) as ETeil).AddBestandteil(24, 2);
-            (instance.GetTeil(50) as ETeil).AddBestandteil(25, 2);
-            (instance.GetTeil(50) as ETeil).AddBestandteil(4, 1);
-            (instance.GetTeil(50) as ETeil).AddBestandteil(10, 1);
-            (instance.GetTeil(50) as ETeil).AddBestandteil(49, 1);
-            (instance.GetTeil(10) as ETeil).AddBestandteil(32, 1);
-            (instance.GetTeil(10) as ETeil).AddBestandteil(39, 1);
-            (instance.GetTeil(4) as ETeil).AddBestandteil(35, 2);
-            (instance.GetTeil(4) as ETeil).AddBestandteil(36, 1);
-            (instance.GetTeil(4) as ETeil).AddBestandteil(52, 1);
-            (instance.GetTeil(4) as ETeil).AddBestandteil(53, 36);
-            (instance.GetTeil(49) as ETeil).AddBestandteil(24, 2);
-            (instance.GetTeil(49) as ETeil).AddBestandteil(25, 2);
-            (instance.GetTeil(49) as ETeil).AddBestandteil(7, 1);
-            (instance.GetTeil(49) as ETeil).AddBestandteil(13, 1);
-            (instance.GetTeil(49) as ETeil).AddBestandteil(18, 1);
-            (instance.GetTeil(7) as ETeil).AddBestandteil(35, 2);
-            (instance.GetTeil(7) as ETeil).AddBestandteil(37, 1);
-            (instance.GetTeil(7) as ETeil).AddBestandteil(38, 1);
-            (instance.GetTeil(7) as ETeil).AddBestandteil(52, 1);
-            (instance.GetTeil(7) as ETeil).AddBestandteil(53, 36);
-            (instance.GetTeil(18) as ETeil).AddBestandteil(28, 3);
-            (instance.GetTeil(18) as ETeil).AddBestandteil(32, 1);
-            (instance.GetTeil(18) as ETeil).AddBestandteil(59, 2);
-            (instance.GetTeil(13) as ETeil).AddBestandteil(32, 1);
-            (instance.GetTeil(13) as ETeil).AddBestandteil(39, 1);
-            (instance.GetTeil(3) as ETeil).AddBestandteil(23, 1);
-            (instance.GetTeil(3) as ETeil).AddBestandteil(24, 1);
-            (instance.GetTeil(3) as ETeil).AddBestandteil(27, 1);
-            (instance.GetTeil(3) as ETeil).AddBestandteil(26, 1);
-            (instance.GetTeil(3) as ETeil).AddBestandteil(31, 1);
-            (instance.GetTeil(31) as ETeil).AddBestandteil(24, 1);
-            (instance.GetTeil(31) as ETeil).AddBestandteil(27, 1);
-            (instance.GetTeil(31) as ETeil).AddBestandteil(16, 1);
-            (instance.GetTeil(31) as ETeil).AddBestandteil(17, 1);
-            (instance.GetTeil(31) as ETeil).AddBestandteil(30, 1);
-            (instance.GetTeil(30) as ETeil).AddBestandteil(24, 2);
-            (instance.GetTeil(30) as ETeil).AddBestandteil(25, 2);
-            (instance.GetTeil(30) as ETeil).AddBestandteil(6, 1);
-            (instance.GetTeil(30) as ETeil).AddBestandteil(12, 1);
-            (instance.GetTeil(30) as ETeil).AddBestandteil(29, 1);
-            (instance.GetTeil(12) as ETeil).AddBestandteil(32, 1);
-            (instance.GetTeil(12) as ETeil).AddBestandteil(39, 1);
-            (instance.GetTeil(6) as ETeil).AddBestandteil(35, 2);
-            (instance.GetTeil(6) as ETeil).AddBestandteil(36, 1);
-            (instance.GetTeil(6) as ETeil).AddBestandteil(33, 1);
-            (instance.GetTeil(6) as ETeil).AddBestandteil(34, 36);
-            (instance.GetTeil(29) as ETeil).AddBestandteil(24, 2);
-            (instance.GetTeil(29) as ETeil).AddBestandteil(25, 2);
-            (instance.GetTeil(29) as ETeil).AddBestandteil(9, 1);
-            (instance.GetTeil(29) as ETeil).AddBestandteil(15, 1);
-            (instance.GetTeil(29) as ETeil).AddBestandteil(20, 1);
-            (instance.GetTeil(9) as ETeil).AddBestandteil(35, 2);
-            (instance.GetTeil(9) as ETeil).AddBestandteil(37, 1);
-            (instance.GetTeil(9) as ETeil).AddBestandteil(38, 1);
-            (instance.GetTeil(9) as ETeil).AddBestandteil(33, 1);
-            (instance.GetTeil(9) as ETeil).AddBestandteil(34, 36);
-            (instance.GetTeil(20) as ETeil).AddBestandteil(28, 5);
-            (instance.GetTeil(20) as ETeil).AddBestandteil(32, 1);
-            (instance.GetTeil(20) as ETeil).AddBestandteil(59, 2);
-            (instance.GetTeil(15) as ETeil).AddBestandteil(32, 1);
-            (instance.GetTeil(15) as ETeil).AddBestandteil(39, 1);
+            (_instance.GetTeil(1) as ETeil).IstEndProdukt = true;
+            (_instance.GetTeil(2) as ETeil).IstEndProdukt = true;
+            (_instance.GetTeil(3) as ETeil).IstEndProdukt = true;
+            (_instance.GetTeil(16) as ETeil).AddBestandteil(24, 1);
+            (_instance.GetTeil(16) as ETeil).AddBestandteil(28, 2);
+            (_instance.GetTeil(16) as ETeil).AddBestandteil(40, 1);
+            (_instance.GetTeil(16) as ETeil).AddBestandteil(41, 1);
+            (_instance.GetTeil(16) as ETeil).AddBestandteil(42, 2);
+            (_instance.GetTeil(17) as ETeil).AddBestandteil(43, 1);
+            (_instance.GetTeil(17) as ETeil).AddBestandteil(44, 1);
+            (_instance.GetTeil(17) as ETeil).AddBestandteil(45, 1);
+            (_instance.GetTeil(17) as ETeil).AddBestandteil(46, 1);
+            (_instance.GetTeil(26) as ETeil).AddBestandteil(47, 1);
+            (_instance.GetTeil(26) as ETeil).AddBestandteil(44, 2);
+            (_instance.GetTeil(26) as ETeil).AddBestandteil(48, 2);
+            (_instance.GetTeil(1) as ETeil).AddBestandteil(21, 1);
+            (_instance.GetTeil(1) as ETeil).AddBestandteil(24, 1);
+            (_instance.GetTeil(1) as ETeil).AddBestandteil(27, 1);
+            (_instance.GetTeil(1) as ETeil).AddBestandteil(26, 1);
+            (_instance.GetTeil(1) as ETeil).AddBestandteil(51, 1);
+            (_instance.GetTeil(56) as ETeil).AddBestandteil(24, 1);
+            (_instance.GetTeil(56) as ETeil).AddBestandteil(27, 1);
+            (_instance.GetTeil(56) as ETeil).AddBestandteil(55, 1);
+            (_instance.GetTeil(56) as ETeil).AddBestandteil(16, 1);
+            (_instance.GetTeil(56) as ETeil).AddBestandteil(17, 1);
+            (_instance.GetTeil(55) as ETeil).AddBestandteil(24, 2);
+            (_instance.GetTeil(55) as ETeil).AddBestandteil(25, 2);
+            (_instance.GetTeil(55) as ETeil).AddBestandteil(5, 1);
+            (_instance.GetTeil(55) as ETeil).AddBestandteil(11, 1);
+            (_instance.GetTeil(55) as ETeil).AddBestandteil(54, 1);
+            (_instance.GetTeil(11) as ETeil).AddBestandteil(32, 1);
+            (_instance.GetTeil(11) as ETeil).AddBestandteil(39, 1);
+            (_instance.GetTeil(5) as ETeil).AddBestandteil(35, 2);
+            (_instance.GetTeil(5) as ETeil).AddBestandteil(36, 1);
+            (_instance.GetTeil(5) as ETeil).AddBestandteil(57, 1);
+            (_instance.GetTeil(5) as ETeil).AddBestandteil(58, 36);
+            (_instance.GetTeil(54) as ETeil).AddBestandteil(24, 2);
+            (_instance.GetTeil(54) as ETeil).AddBestandteil(25, 2);
+            (_instance.GetTeil(54) as ETeil).AddBestandteil(8, 1);
+            (_instance.GetTeil(54) as ETeil).AddBestandteil(14, 1);
+            (_instance.GetTeil(54) as ETeil).AddBestandteil(19, 1);
+            (_instance.GetTeil(8) as ETeil).AddBestandteil(35, 2);
+            (_instance.GetTeil(8) as ETeil).AddBestandteil(37, 1);
+            (_instance.GetTeil(8) as ETeil).AddBestandteil(38, 1);
+            (_instance.GetTeil(8) as ETeil).AddBestandteil(57, 1);
+            (_instance.GetTeil(8) as ETeil).AddBestandteil(58, 36);
+            (_instance.GetTeil(19) as ETeil).AddBestandteil(28, 4);
+            (_instance.GetTeil(19) as ETeil).AddBestandteil(32, 1);
+            (_instance.GetTeil(19) as ETeil).AddBestandteil(59, 2);
+            (_instance.GetTeil(14) as ETeil).AddBestandteil(32, 1);
+            (_instance.GetTeil(14) as ETeil).AddBestandteil(39, 1);
+            (_instance.GetTeil(2) as ETeil).AddBestandteil(22, 1);
+            (_instance.GetTeil(2) as ETeil).AddBestandteil(24, 1);
+            (_instance.GetTeil(2) as ETeil).AddBestandteil(27, 1);
+            (_instance.GetTeil(2) as ETeil).AddBestandteil(26, 1);
+            (_instance.GetTeil(2) as ETeil).AddBestandteil(56, 1);
+            (_instance.GetTeil(51) as ETeil).AddBestandteil(16, 1);
+            (_instance.GetTeil(51) as ETeil).AddBestandteil(17, 1);
+            (_instance.GetTeil(51) as ETeil).AddBestandteil(50, 1);
+            (_instance.GetTeil(51) as ETeil).AddBestandteil(24, 1);
+            (_instance.GetTeil(51) as ETeil).AddBestandteil(27, 1);
+            (_instance.GetTeil(50) as ETeil).AddBestandteil(24, 2);
+            (_instance.GetTeil(50) as ETeil).AddBestandteil(25, 2);
+            (_instance.GetTeil(50) as ETeil).AddBestandteil(4, 1);
+            (_instance.GetTeil(50) as ETeil).AddBestandteil(10, 1);
+            (_instance.GetTeil(50) as ETeil).AddBestandteil(49, 1);
+            (_instance.GetTeil(10) as ETeil).AddBestandteil(32, 1);
+            (_instance.GetTeil(10) as ETeil).AddBestandteil(39, 1);
+            (_instance.GetTeil(4) as ETeil).AddBestandteil(35, 2);
+            (_instance.GetTeil(4) as ETeil).AddBestandteil(36, 1);
+            (_instance.GetTeil(4) as ETeil).AddBestandteil(52, 1);
+            (_instance.GetTeil(4) as ETeil).AddBestandteil(53, 36);
+            (_instance.GetTeil(49) as ETeil).AddBestandteil(24, 2);
+            (_instance.GetTeil(49) as ETeil).AddBestandteil(25, 2);
+            (_instance.GetTeil(49) as ETeil).AddBestandteil(7, 1);
+            (_instance.GetTeil(49) as ETeil).AddBestandteil(13, 1);
+            (_instance.GetTeil(49) as ETeil).AddBestandteil(18, 1);
+            (_instance.GetTeil(7) as ETeil).AddBestandteil(35, 2);
+            (_instance.GetTeil(7) as ETeil).AddBestandteil(37, 1);
+            (_instance.GetTeil(7) as ETeil).AddBestandteil(38, 1);
+            (_instance.GetTeil(7) as ETeil).AddBestandteil(52, 1);
+            (_instance.GetTeil(7) as ETeil).AddBestandteil(53, 36);
+            (_instance.GetTeil(18) as ETeil).AddBestandteil(28, 3);
+            (_instance.GetTeil(18) as ETeil).AddBestandteil(32, 1);
+            (_instance.GetTeil(18) as ETeil).AddBestandteil(59, 2);
+            (_instance.GetTeil(13) as ETeil).AddBestandteil(32, 1);
+            (_instance.GetTeil(13) as ETeil).AddBestandteil(39, 1);
+            (_instance.GetTeil(3) as ETeil).AddBestandteil(23, 1);
+            (_instance.GetTeil(3) as ETeil).AddBestandteil(24, 1);
+            (_instance.GetTeil(3) as ETeil).AddBestandteil(27, 1);
+            (_instance.GetTeil(3) as ETeil).AddBestandteil(26, 1);
+            (_instance.GetTeil(3) as ETeil).AddBestandteil(31, 1);
+            (_instance.GetTeil(31) as ETeil).AddBestandteil(24, 1);
+            (_instance.GetTeil(31) as ETeil).AddBestandteil(27, 1);
+            (_instance.GetTeil(31) as ETeil).AddBestandteil(16, 1);
+            (_instance.GetTeil(31) as ETeil).AddBestandteil(17, 1);
+            (_instance.GetTeil(31) as ETeil).AddBestandteil(30, 1);
+            (_instance.GetTeil(30) as ETeil).AddBestandteil(24, 2);
+            (_instance.GetTeil(30) as ETeil).AddBestandteil(25, 2);
+            (_instance.GetTeil(30) as ETeil).AddBestandteil(6, 1);
+            (_instance.GetTeil(30) as ETeil).AddBestandteil(12, 1);
+            (_instance.GetTeil(30) as ETeil).AddBestandteil(29, 1);
+            (_instance.GetTeil(12) as ETeil).AddBestandteil(32, 1);
+            (_instance.GetTeil(12) as ETeil).AddBestandteil(39, 1);
+            (_instance.GetTeil(6) as ETeil).AddBestandteil(35, 2);
+            (_instance.GetTeil(6) as ETeil).AddBestandteil(36, 1);
+            (_instance.GetTeil(6) as ETeil).AddBestandteil(33, 1);
+            (_instance.GetTeil(6) as ETeil).AddBestandteil(34, 36);
+            (_instance.GetTeil(29) as ETeil).AddBestandteil(24, 2);
+            (_instance.GetTeil(29) as ETeil).AddBestandteil(25, 2);
+            (_instance.GetTeil(29) as ETeil).AddBestandteil(9, 1);
+            (_instance.GetTeil(29) as ETeil).AddBestandteil(15, 1);
+            (_instance.GetTeil(29) as ETeil).AddBestandteil(20, 1);
+            (_instance.GetTeil(9) as ETeil).AddBestandteil(35, 2);
+            (_instance.GetTeil(9) as ETeil).AddBestandteil(37, 1);
+            (_instance.GetTeil(9) as ETeil).AddBestandteil(38, 1);
+            (_instance.GetTeil(9) as ETeil).AddBestandteil(33, 1);
+            (_instance.GetTeil(9) as ETeil).AddBestandteil(34, 36);
+            (_instance.GetTeil(20) as ETeil).AddBestandteil(28, 5);
+            (_instance.GetTeil(20) as ETeil).AddBestandteil(32, 1);
+            (_instance.GetTeil(20) as ETeil).AddBestandteil(59, 2);
+            (_instance.GetTeil(15) as ETeil).AddBestandteil(32, 1);
+            (_instance.GetTeil(15) as ETeil).AddBestandteil(39, 1);
             // -------------------------------------------------
-            (instance.GetTeil(26) as ETeil).AddArbeitsplatz(15);
-            (instance.GetTeil(26) as ETeil).AddArbeitsplatz(7);
-            (instance.GetTeil(16) as ETeil).AddArbeitsplatz(6);
-            (instance.GetTeil(16) as ETeil).AddArbeitsplatz(14);
-            (instance.GetTeil(17) as ETeil).AddArbeitsplatz(15);
-            (instance.GetTeil(1) as ETeil).AddArbeitsplatz(4);
-            (instance.GetTeil(56) as ETeil).AddArbeitsplatz(3);
-            (instance.GetTeil(55) as ETeil).AddArbeitsplatz(2);
-            (instance.GetTeil(11) as ETeil).AddArbeitsplatz(9);
-            (instance.GetTeil(11) as ETeil).AddArbeitsplatz(7);
-            (instance.GetTeil(11) as ETeil).AddArbeitsplatz(8);
-            (instance.GetTeil(11) as ETeil).AddArbeitsplatz(12);
-            (instance.GetTeil(11) as ETeil).AddArbeitsplatz(13);
-            (instance.GetTeil(5) as ETeil).AddArbeitsplatz(10);
-            (instance.GetTeil(5) as ETeil).AddArbeitsplatz(11);
-            (instance.GetTeil(54) as ETeil).AddArbeitsplatz(1);
-            (instance.GetTeil(8) as ETeil).AddArbeitsplatz(10);
-            (instance.GetTeil(8) as ETeil).AddArbeitsplatz(11);
-            (instance.GetTeil(19) as ETeil).AddArbeitsplatz(6);
-            (instance.GetTeil(19) as ETeil).AddArbeitsplatz(8);
-            (instance.GetTeil(19) as ETeil).AddArbeitsplatz(7);
-            (instance.GetTeil(19) as ETeil).AddArbeitsplatz(9);
-            (instance.GetTeil(14) as ETeil).AddArbeitsplatz(13);
-            (instance.GetTeil(14) as ETeil).AddArbeitsplatz(12);
-            (instance.GetTeil(14) as ETeil).AddArbeitsplatz(8);
-            (instance.GetTeil(14) as ETeil).AddArbeitsplatz(7);
-            (instance.GetTeil(14) as ETeil).AddArbeitsplatz(9);
-            (instance.GetTeil(2) as ETeil).AddArbeitsplatz(4);
-            (instance.GetTeil(51) as ETeil).AddArbeitsplatz(3);
-            (instance.GetTeil(50) as ETeil).AddArbeitsplatz(2);
-            (instance.GetTeil(10) as ETeil).AddArbeitsplatz(9);
-            (instance.GetTeil(10) as ETeil).AddArbeitsplatz(7);
-            (instance.GetTeil(10) as ETeil).AddArbeitsplatz(8);
-            (instance.GetTeil(10) as ETeil).AddArbeitsplatz(12);
-            (instance.GetTeil(10) as ETeil).AddArbeitsplatz(13);
-            (instance.GetTeil(4) as ETeil).AddArbeitsplatz(10);
-            (instance.GetTeil(4) as ETeil).AddArbeitsplatz(11);
-            (instance.GetTeil(49) as ETeil).AddArbeitsplatz(1);
-            (instance.GetTeil(7) as ETeil).AddArbeitsplatz(10);
-            (instance.GetTeil(7) as ETeil).AddArbeitsplatz(11);
-            (instance.GetTeil(18) as ETeil).AddArbeitsplatz(6);
-            (instance.GetTeil(18) as ETeil).AddArbeitsplatz(8);
-            (instance.GetTeil(18) as ETeil).AddArbeitsplatz(7);
-            (instance.GetTeil(18) as ETeil).AddArbeitsplatz(9);
-            (instance.GetTeil(13) as ETeil).AddArbeitsplatz(13);
-            (instance.GetTeil(13) as ETeil).AddArbeitsplatz(12);
-            (instance.GetTeil(13) as ETeil).AddArbeitsplatz(8);
-            (instance.GetTeil(13) as ETeil).AddArbeitsplatz(7);
-            (instance.GetTeil(13) as ETeil).AddArbeitsplatz(9);
-            (instance.GetTeil(3) as ETeil).AddArbeitsplatz(4);
-            (instance.GetTeil(31) as ETeil).AddArbeitsplatz(3);
-            (instance.GetTeil(30) as ETeil).AddArbeitsplatz(2);
-            (instance.GetTeil(12) as ETeil).AddArbeitsplatz(9);
-            (instance.GetTeil(12) as ETeil).AddArbeitsplatz(7);
-            (instance.GetTeil(12) as ETeil).AddArbeitsplatz(8);
-            (instance.GetTeil(12) as ETeil).AddArbeitsplatz(12);
-            (instance.GetTeil(12) as ETeil).AddArbeitsplatz(13);
-            (instance.GetTeil(6) as ETeil).AddArbeitsplatz(10);
-            (instance.GetTeil(6) as ETeil).AddArbeitsplatz(11);
-            (instance.GetTeil(29) as ETeil).AddArbeitsplatz(1);
-            (instance.GetTeil(9) as ETeil).AddArbeitsplatz(10);
-            (instance.GetTeil(9) as ETeil).AddArbeitsplatz(11);
-            (instance.GetTeil(20) as ETeil).AddArbeitsplatz(6);
-            (instance.GetTeil(20) as ETeil).AddArbeitsplatz(8);
-            (instance.GetTeil(20) as ETeil).AddArbeitsplatz(7);
-            (instance.GetTeil(20) as ETeil).AddArbeitsplatz(9);
-            (instance.GetTeil(15) as ETeil).AddArbeitsplatz(13);
-            (instance.GetTeil(15) as ETeil).AddArbeitsplatz(12);
-            (instance.GetTeil(15) as ETeil).AddArbeitsplatz(8);
-            (instance.GetTeil(15) as ETeil).AddArbeitsplatz(7);
-            (instance.GetTeil(15) as ETeil).AddArbeitsplatz(9);
+            (_instance.GetTeil(26) as ETeil).AddArbeitsplatz(15);
+            (_instance.GetTeil(26) as ETeil).AddArbeitsplatz(7);
+            (_instance.GetTeil(16) as ETeil).AddArbeitsplatz(6);
+            (_instance.GetTeil(16) as ETeil).AddArbeitsplatz(14);
+            (_instance.GetTeil(17) as ETeil).AddArbeitsplatz(15);
+            (_instance.GetTeil(1) as ETeil).AddArbeitsplatz(4);
+            (_instance.GetTeil(56) as ETeil).AddArbeitsplatz(3);
+            (_instance.GetTeil(55) as ETeil).AddArbeitsplatz(2);
+            (_instance.GetTeil(11) as ETeil).AddArbeitsplatz(9);
+            (_instance.GetTeil(11) as ETeil).AddArbeitsplatz(7);
+            (_instance.GetTeil(11) as ETeil).AddArbeitsplatz(8);
+            (_instance.GetTeil(11) as ETeil).AddArbeitsplatz(12);
+            (_instance.GetTeil(11) as ETeil).AddArbeitsplatz(13);
+            (_instance.GetTeil(5) as ETeil).AddArbeitsplatz(10);
+            (_instance.GetTeil(5) as ETeil).AddArbeitsplatz(11);
+            (_instance.GetTeil(54) as ETeil).AddArbeitsplatz(1);
+            (_instance.GetTeil(8) as ETeil).AddArbeitsplatz(10);
+            (_instance.GetTeil(8) as ETeil).AddArbeitsplatz(11);
+            (_instance.GetTeil(19) as ETeil).AddArbeitsplatz(6);
+            (_instance.GetTeil(19) as ETeil).AddArbeitsplatz(8);
+            (_instance.GetTeil(19) as ETeil).AddArbeitsplatz(7);
+            (_instance.GetTeil(19) as ETeil).AddArbeitsplatz(9);
+            (_instance.GetTeil(14) as ETeil).AddArbeitsplatz(13);
+            (_instance.GetTeil(14) as ETeil).AddArbeitsplatz(12);
+            (_instance.GetTeil(14) as ETeil).AddArbeitsplatz(8);
+            (_instance.GetTeil(14) as ETeil).AddArbeitsplatz(7);
+            (_instance.GetTeil(14) as ETeil).AddArbeitsplatz(9);
+            (_instance.GetTeil(2) as ETeil).AddArbeitsplatz(4);
+            (_instance.GetTeil(51) as ETeil).AddArbeitsplatz(3);
+            (_instance.GetTeil(50) as ETeil).AddArbeitsplatz(2);
+            (_instance.GetTeil(10) as ETeil).AddArbeitsplatz(9);
+            (_instance.GetTeil(10) as ETeil).AddArbeitsplatz(7);
+            (_instance.GetTeil(10) as ETeil).AddArbeitsplatz(8);
+            (_instance.GetTeil(10) as ETeil).AddArbeitsplatz(12);
+            (_instance.GetTeil(10) as ETeil).AddArbeitsplatz(13);
+            (_instance.GetTeil(4) as ETeil).AddArbeitsplatz(10);
+            (_instance.GetTeil(4) as ETeil).AddArbeitsplatz(11);
+            (_instance.GetTeil(49) as ETeil).AddArbeitsplatz(1);
+            (_instance.GetTeil(7) as ETeil).AddArbeitsplatz(10);
+            (_instance.GetTeil(7) as ETeil).AddArbeitsplatz(11);
+            (_instance.GetTeil(18) as ETeil).AddArbeitsplatz(6);
+            (_instance.GetTeil(18) as ETeil).AddArbeitsplatz(8);
+            (_instance.GetTeil(18) as ETeil).AddArbeitsplatz(7);
+            (_instance.GetTeil(18) as ETeil).AddArbeitsplatz(9);
+            (_instance.GetTeil(13) as ETeil).AddArbeitsplatz(13);
+            (_instance.GetTeil(13) as ETeil).AddArbeitsplatz(12);
+            (_instance.GetTeil(13) as ETeil).AddArbeitsplatz(8);
+            (_instance.GetTeil(13) as ETeil).AddArbeitsplatz(7);
+            (_instance.GetTeil(13) as ETeil).AddArbeitsplatz(9);
+            (_instance.GetTeil(3) as ETeil).AddArbeitsplatz(4);
+            (_instance.GetTeil(31) as ETeil).AddArbeitsplatz(3);
+            (_instance.GetTeil(30) as ETeil).AddArbeitsplatz(2);
+            (_instance.GetTeil(12) as ETeil).AddArbeitsplatz(9);
+            (_instance.GetTeil(12) as ETeil).AddArbeitsplatz(7);
+            (_instance.GetTeil(12) as ETeil).AddArbeitsplatz(8);
+            (_instance.GetTeil(12) as ETeil).AddArbeitsplatz(12);
+            (_instance.GetTeil(12) as ETeil).AddArbeitsplatz(13);
+            (_instance.GetTeil(6) as ETeil).AddArbeitsplatz(10);
+            (_instance.GetTeil(6) as ETeil).AddArbeitsplatz(11);
+            (_instance.GetTeil(29) as ETeil).AddArbeitsplatz(1);
+            (_instance.GetTeil(9) as ETeil).AddArbeitsplatz(10);
+            (_instance.GetTeil(9) as ETeil).AddArbeitsplatz(11);
+            (_instance.GetTeil(20) as ETeil).AddArbeitsplatz(6);
+            (_instance.GetTeil(20) as ETeil).AddArbeitsplatz(8);
+            (_instance.GetTeil(20) as ETeil).AddArbeitsplatz(7);
+            (_instance.GetTeil(20) as ETeil).AddArbeitsplatz(9);
+            (_instance.GetTeil(15) as ETeil).AddArbeitsplatz(13);
+            (_instance.GetTeil(15) as ETeil).AddArbeitsplatz(12);
+            (_instance.GetTeil(15) as ETeil).AddArbeitsplatz(8);
+            (_instance.GetTeil(15) as ETeil).AddArbeitsplatz(7);
+            (_instance.GetTeil(15) as ETeil).AddArbeitsplatz(9);
         }
         // Initialization of each Arbeitsplatz object
-        public void InitializeArbPl()
+        private void InitializeArbPl()
         {
             DataContainer dc = DataContainer.Instance;
             dc.GetArbeitsplatz(1).AddWerkzeit(49, 6);
