@@ -7,6 +7,7 @@ using System.Globalization;
 using System.Threading;
 using System.IO;
 using ToolFahrrad_v1.Properties;
+using ToolFahrrad_v1.Verwaltung;
 
 namespace ToolFahrrad_v1.Design
 {
@@ -53,7 +54,7 @@ namespace ToolFahrrad_v1.Design
             xml_export.Visible = true;
         }
         private void Ausführen() {
-            _bv.clearBvPositionen();
+            _bv.ClearBvPositionen();
             if ((_instance.GetTeil(4) as ETeil).Puffer != -1) {
                 foreach (ETeil t in _instance.ListeETeile) {
                     t.Aufgeloest = false;
@@ -309,7 +310,7 @@ namespace ToolFahrrad_v1.Design
             #region Bestellung
             DataGriedViewRemove(dataGridViewBestellung);
             if (_bestellungUpdate == false)
-                _bv.generiereBestellListe();
+                _bv.GeneriereBestellListe();
             var bp = _bv.BvPositionen;
             index = 0;
             foreach (var a in bp) {
@@ -331,7 +332,7 @@ namespace ToolFahrrad_v1.Design
             #region Direktverkauf
             DataGriedViewRemove(dataGridViewDirektverkauf);
             if (_dvUpdate == false)
-                _bv.generiereListeDV();
+                _bv.GeneriereListeDv();
             List<DvPosition> dv = _bv.DvPositionen;
             index = 0;
             foreach (var a in dv) {
@@ -426,7 +427,7 @@ namespace ToolFahrrad_v1.Design
         /// </summary>
         /// <param name="index"></param>
         private void DispositionDarstellung(int index) {
-            _bv.clearBvPositionen();
+            _bv.ClearBvPositionen();
             ETeil et;
             int n;
             if (index == 1) {
@@ -955,7 +956,7 @@ namespace ToolFahrrad_v1.Design
                 }
             }
             if (p == 100 || p == 3) {
-                _bv.ladeBvPositionenInDc();
+                _bv.LadeBvPositionenInDc();
                 index = 0;
                 DataGriedViewRemove(dataGridViewEinkauf);
                 foreach (Bestellposition b in _instance.Bestellungen) {
@@ -968,7 +969,7 @@ namespace ToolFahrrad_v1.Design
                 ////
                 DataGriedViewRemove(dataGridViewDirekt);
                 if (dvVerwenden.Checked) {
-                    _bv.ladeDvPositioneninDc();
+                    _bv.LadeDvPositioneninDc();
                     index = 0;
                     foreach (DvPosition d in _instance.DVerkauf) {
                         dataGridViewDirekt.Rows.Add();
@@ -1192,7 +1193,7 @@ namespace ToolFahrrad_v1.Design
             XmlVorbereitung(1); //1=vertriebswunsch
         }
         private void arbPlatzAusfueren_Click(object sender, EventArgs e) {
-            _bv.clearBvPositionen();
+            _bv.ClearBvPositionen();
             for (int index = 0; index < DataGridViewAP.Rows.Count; ++index) {
                 _instance.GetArbeitsplatz(Convert.ToInt32(DataGridViewAP.Rows[index].Cells[0].Value.ToString())).RuestungCustom =
                     (Convert.ToInt32(DataGridViewAP.Rows[index].Cells[3].Value.ToString()));
@@ -1244,7 +1245,7 @@ namespace ToolFahrrad_v1.Design
                 kNr.ReadOnly = true;
             }
             _bestellungUpdate = false;
-            _bv.clearBvPositionen();
+            _bv.ClearBvPositionen();
             Information();
         }
         private void uebernehmenXML_Click(object sender, EventArgs e) {
@@ -1307,7 +1308,7 @@ namespace ToolFahrrad_v1.Design
             }
             _dvUpdate = false;
             _bestellungUpdate = true;
-            _bv.clearDvPositionen();
+            _bv.ClearDvPositionen();
             Information();
         }
 

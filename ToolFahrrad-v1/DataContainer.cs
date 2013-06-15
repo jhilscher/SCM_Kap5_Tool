@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Data;
 using System.Windows.Forms;
+using ToolFahrrad_v1.Verwaltung;
 
 namespace ToolFahrrad_v1
 {
@@ -430,7 +431,7 @@ namespace ToolFahrrad_v1
             pp.Aufloesen();
             pp.Planen();
             Bestellverwaltung bv = new Bestellverwaltung();
-            bv.generiereBestellListe();
+            bv.GeneriereBestellListe();
         }
         // Reset of Arbeitsplatz
         public void Reset()
