@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading;
 using System.Windows.Forms;
 
@@ -35,12 +36,12 @@ namespace ToolFahrrad_v1.Windows
         private const String enInTeil = "In part ";
         // -----------------------------------------------------------------
         private int _nummer;
-        DataContainer dc = DataContainer.Instance;
+        DataContainer _dc = DataContainer.Instance;
         // Constructor
         public TeilInformation(string name, int nummer)
         {
             InitializeComponent();
-            this._nummer = nummer;
+            _nummer = nummer;
             // Set label to ordering part
             if (name.Equals("kteil"))
             {
@@ -55,16 +56,15 @@ namespace ToolFahrrad_v1.Windows
         internal void GetTeilvonETeilMitMenge()
         {
             ausgabe.Text =
-                (_culInfo.Contains(de) ? deLDauer : enLDauer) + (dc.GetTeil(_nummer) as KTeil).Lieferdauer
-                + " (" + (dc.GetTeil(_nummer) as KTeil).AbweichungLieferdauer + ")\n"
+                (_culInfo.Contains(de) ? deLDauer : enLDauer) + (_dc.GetTeil(_nummer) as KTeil).Lieferdauer
+                + " (" + (_dc.GetTeil(_nummer) as KTeil).AbweichungLieferdauer + ")\n"
                 + (_culInfo.Contains(de) ? deDMenge : enDMenge)
-                + (dc.GetTeil(_nummer) as KTeil).DiskontMenge + "\n" + (_culInfo.Contains(de) ? dePreis : enPreis)
-                + (dc.GetTeil(_nummer) as KTeil).Preis + "\n" + (_culInfo.Contains(de) ? deBKosten : enBKosten)
-                + (dc.GetTeil(_nummer) as KTeil).Bestellkosten + "\n\n";
-            List<ETeil> list = (dc.GetTeil(_nummer) as KTeil).IstTeilVon;
+                + (_dc.GetTeil(_nummer) as KTeil).DiskontMenge + "\n" + (_culInfo.Contains(de) ? dePreis : enPreis)
+                + (_dc.GetTeil(_nummer) as KTeil).Preis + "\n" + (_culInfo.Contains(de) ? deBKosten : enBKosten)
+                + (_dc.GetTeil(_nummer) as KTeil).Bestellkosten + "\n\n";
+            List<ETeil> list = (_dc.GetTeil(_nummer) as KTeil).IstTeilVon;
             int sum = 0;
             int val = 0;
-            int pm = 0;
             foreach (ETeil e in list)
             {
                 foreach (KeyValuePair<Teil, int> kvp in e.Zusammensetzung)
@@ -73,14 +73,8 @@ namespace ToolFahrrad_v1.Windows
                     {
                         if (!e.Verwendung.Contains("KDH"))
                         {
-                            if (e.ProduktionsMengePer0 < 0)
-                            {
-                                pm = 0;
-                            }
-                            else
-                            {
-                                pm = e.ProduktionsMengePer0;
-                            }
+                            int pm = 0;
+                            pm = e.ProduktionsMengePer0 < 0 ? 0 : e.ProduktionsMengePer0;
                             ausgabe.Text
                                 += (_culInfo.Contains(de) ? deInTeil : enInTeil) + e.Nummer + "   " + kvp.Value
                                 + " * " + pm + " = " + kvp.Value * pm + "\n";
@@ -88,10 +82,7 @@ namespace ToolFahrrad_v1.Windows
                         }
                         else
                         {
-                            foreach (KeyValuePair<string, int> pair in e.KdhProduktionsmenge)
-                            {
-                                val += pair.Value;
-                            }
+                            val += e.KdhProduktionsmenge.Sum(pair => pair.Value);
                             ausgabe.Text
                                 += (_culInfo.Contains(de) ? deInTeil : enInTeil) + e.Nummer + "  " + kvp.Value
                                 + " * " + val + " = " + kvp.Value * val + "\n";
@@ -109,32 +100,18 @@ namespace ToolFahrrad_v1.Windows
             int sum = 0;
             int val = 0;
             int prMenge = 0;
-            foreach (KeyValuePair<int, int> kvp in dc.GetArbeitsplatz(_nummer).Ruest_zeiten)
+            foreach (KeyValuePair<int, int> kvp in _dc.GetArbeitsplatz(_nummer).Ruest_zeiten)
             {
-                if (!(dc.GetTeil(kvp.Key) as ETeil).Verwendung.Contains("KDH"))
+                if (!(_dc.GetTeil(kvp.Key) as ETeil).Verwendung.Contains("KDH"))
                 {
-                    if ((dc.GetTeil(kvp.Key) as ETeil).ProduktionsMengePer0 >= 0)
-                    {
-                        val = kvp.Value;
-                    }
-                    else
-                    {
-                        val = 0;
-                    }
+                    val = (_dc.GetTeil(kvp.Key) as ETeil).ProduktionsMengePer0 >= 0 ? kvp.Value : 0;
                 }
                 else
                 {
-                    foreach (KeyValuePair<string, int> pair in (dc.GetTeil(kvp.Key) as ETeil).KdhProduktionsmenge)
+                    foreach (KeyValuePair<string, int> pair in (_dc.GetTeil(kvp.Key) as ETeil).KdhProduktionsmenge)
                     {
                         prMenge += pair.Value;
-                        if (prMenge >= 0)
-                        {
-                            val = kvp.Value;
-                        }
-                        else
-                        {
-                            val = 0;
-                        }
+                        val = prMenge >= 0 ? kvp.Value : 0;
                     }
                 }
                 ausgabe2.Text += (_culInfo.Contains(de) ? deTeil : enTeil) + kvp.Key + ": " + val + " min. \n";
@@ -144,19 +121,16 @@ namespace ToolFahrrad_v1.Windows
             ausgabe.Text += (_culInfo.Contains(de) ? deKBedarf : enKBedarf) + "\n";
             sum = 0;
             prMenge = 0;
-            foreach (KeyValuePair<int, int> kvp in dc.GetArbeitsplatz(_nummer).Werk_zeiten)
+            foreach (KeyValuePair<int, int> kvp in _dc.GetArbeitsplatz(_nummer).Werk_zeiten)
             {
                 {
-                    if (!(dc.GetTeil(kvp.Key) as ETeil).Verwendung.Contains("KDH"))
+                    if (!(_dc.GetTeil(kvp.Key) as ETeil).Verwendung.Contains("KDH"))
                     {
-                        prMenge = (dc.GetTeil(kvp.Key) as ETeil).ProduktionsMengePer0;
+                        prMenge = (_dc.GetTeil(kvp.Key) as ETeil).ProduktionsMengePer0;
                     }
                     else
                     {
-                        foreach (KeyValuePair<string, int> pair in (dc.GetTeil(kvp.Key) as ETeil).KdhProduktionsmenge)
-                        {
-                            prMenge += pair.Value;
-                        }
+                        prMenge += (_dc.GetTeil(kvp.Key) as ETeil).KdhProduktionsmenge.Sum(pair => pair.Value);
                     }
                     if (prMenge < 0)
                     {
