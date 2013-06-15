@@ -1,31 +1,24 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.IO;
 using System.Xml;
 
-namespace ToolFahrrad_v1
+namespace ToolFahrrad_v1.XML
 {
     public class XmlDatei
     {
-        public string period = "";
+        public string Period = "";
 
-        private static DataContainer dc = DataContainer.Instance;
-        public XmlDatei() {
-
-        }
+        private static DataContainer _dc = DataContainer.Instance;
 
         public bool ReadDatei(string pfad) {
             bool res = false;
-            XmlNodeList items;
             DataContainer dc = DataContainer.Instance;
             string zeile = string.Empty;
             string xmlText = string.Empty;
             int zahl = 1;
             //xml saubern und in xmlText speichern
-            using (StreamReader sr = new StreamReader(pfad, Encoding.UTF8)) {
+            using (var sr = new StreamReader(pfad, Encoding.UTF8)) {
                 while ((zeile = sr.ReadLine()) != null) {
                     zeile = zeile.Replace("- <", "<");
                     if (zeile.Contains("results"))
@@ -36,13 +29,13 @@ namespace ToolFahrrad_v1
                     return res;
             }
             // xmlLoad
-            XmlDocument doc = new XmlDocument();
+            var doc = new XmlDocument();
             doc.LoadXml(xmlText);
 
             //Period
-            items = doc.GetElementsByTagName("results");
+            XmlNodeList items = doc.GetElementsByTagName("results");
             foreach (XmlNode node in items) {
-                period = node.Attributes[2].Value;
+                Period = node.Attributes[2].Value;
             }
 
             //LagerBestand
@@ -111,9 +104,6 @@ namespace ToolFahrrad_v1
                     if (attr.Name == "workplace") {
                         dc.GetArbeitsplatz(Convert.ToInt32(attr.Attributes[0].Value)).RuestungVorPeriode = Convert.ToInt32(attr.Attributes[1].Value);
                         dc.GetArbeitsplatz(Convert.ToInt32(attr.Attributes[0].Value)).Leerzeit = Convert.ToInt32(attr.Attributes[2].Value);
-
-                        //dc.GetTeil(zahl).Lagerstand = Convert.ToInt32(attr.Attributes[1].Value);
-                        //dc.GetTeil(zahl).Verhaeltnis = Convert.ToDouble(attr.Attributes[3].Value);
                     }
                     ++zahl;
                 }
@@ -128,14 +118,14 @@ namespace ToolFahrrad_v1
             //Vertriebswunsch
             sw.WriteLine("<sellwish>");
             for (int i = 1; i < 4; ++i) {
-                sw.WriteLine("<item article=\"" + i + "\" quantity=\"" + dc.GetTeil(i).VerbrauchPer1 + "\"/>");
+                sw.WriteLine("<item article=\"" + i + "\" quantity=\"" + _dc.GetTeil(i).VerbrauchPer1 + "\"/>");
             }
             sw.WriteLine("</sellwish>");
 
             //Direktverkauf
             sw.WriteLine("<selldirect>");
-            if (dc.DVerkauf.Count > 0) {
-                foreach (DvPosition dv in dc.DVerkauf) {
+            if (_dc.DVerkauf.Count > 0) {
+                foreach (DvPosition dv in _dc.DVerkauf) {
                     sw.WriteLine("<item article=\"" + dv.DvTeilNr + "\" quantity=\"" + dv.DvMenge + "\" price=\"" +dv.DvPreis + "\" penalty=\"" + dv.DvStrafe + "\"/>");
                 }
             }
@@ -148,7 +138,7 @@ namespace ToolFahrrad_v1
 
             //Einkaufsaufträge
             sw.WriteLine("<orderlist>");
-            foreach (Bestellposition bp in dc.Bestellungen) {
+            foreach (Bestellposition bp in _dc.Bestellungen) {
                 sw.WriteLine("<order article=\"" + bp.Kaufteil.Nummer + "\" quantity=\"" + bp.Menge + "\" modus=\"" + bp.OutputEil + "\"/>");
             }
             sw.WriteLine("</orderlist>");
@@ -161,7 +151,7 @@ namespace ToolFahrrad_v1
 
             //Produktionskapaziläten
             sw.WriteLine("<workingtimelist>");
-            foreach (int[] a in dc.ApKapazitaet) {
+            foreach (int[] a in _dc.ApKapazitaet) {
                 sw.WriteLine("<workingtime station=\"" + a[0] + "\" shift=\"" + a[1] + "\" overtime=\"" + a[2] + "\"/>");  
             }
             sw.WriteLine("</workingtimelist>");

@@ -8,6 +8,7 @@ using System.Threading;
 using System.IO;
 using ToolFahrrad_v1.Properties;
 using ToolFahrrad_v1.Verwaltung;
+using ToolFahrrad_v1.XML;
 
 namespace ToolFahrrad_v1.Design
 {
@@ -68,7 +69,7 @@ namespace ToolFahrrad_v1.Design
                     }
                 }
             }
-            _pp.AktPeriode = Convert.ToInt32(_xml.period);
+            _pp.AktPeriode = Convert.ToInt32(_xml.Period);
             _pp.Aufloesen();
             foreach (Arbeitsplatz a in _instance.ArbeitsplatzList) {
                 a.Geaendert = false;
@@ -102,13 +103,13 @@ namespace ToolFahrrad_v1.Design
             DataGriedViewRemove(dataGridViewKTeil);
             int index = 0;
             for (int i = 4; i < 8; ++i) {
-                dataGridViewKTeil.Columns[i].HeaderText = Resources.Fahrrad_Information_P + (Convert.ToInt32(_xml.period) + (i - 4));
+                dataGridViewKTeil.Columns[i].HeaderText = Resources.Fahrrad_Information_P + (Convert.ToInt32(_xml.Period) + (i - 4));
             }
 
-            dataGridViewKTeil.Columns[8].HeaderText = Resources.Fahrrad_Information_B + ((Convert.ToInt32(_xml.period)) + 1);
-            dataGridViewKTeil.Columns[9].HeaderText = Resources.Fahrrad_Information_B + ((Convert.ToInt32(_xml.period)) + 2);
-            dataGridViewKTeil.Columns[10].HeaderText = Resources.Fahrrad_Information_B + (Convert.ToInt32(_xml.period) + 3);
-            dataGridViewKTeil.Columns[11].HeaderText = Resources.Fahrrad_Information_B + (Convert.ToInt32(_xml.period) + 4);
+            dataGridViewKTeil.Columns[8].HeaderText = Resources.Fahrrad_Information_B + ((Convert.ToInt32(_xml.Period)) + 1);
+            dataGridViewKTeil.Columns[9].HeaderText = Resources.Fahrrad_Information_B + ((Convert.ToInt32(_xml.Period)) + 2);
+            dataGridViewKTeil.Columns[10].HeaderText = Resources.Fahrrad_Information_B + (Convert.ToInt32(_xml.Period) + 3);
+            dataGridViewKTeil.Columns[11].HeaderText = Resources.Fahrrad_Information_B + (Convert.ToInt32(_xml.Period) + 4);
 
             foreach (var a in _instance.ListeKTeile) {
                 //Lagerzugang berechnen
