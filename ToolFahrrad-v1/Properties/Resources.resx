@@ -153,4 +153,10 @@ Diese zeile wird ignoriert</value>
   <data name="Fahrrad_saveAenderungen2_Click_Eigenfertigte_Teil_N1" xml:space="preserve">
     <value>Eigenfertigte Teil N</value>
   </data>
+  <data name="Fahrrad_toolAusfueren_Click_Periode_" xml:space="preserve">
+    <value>Periode </value>
+  </data>
+  <data name="Fahrrad_toolAusfueren_Click_Periode_en" xml:space="preserve">
+    <value>Forcast </value>
+  </data>
 </root>

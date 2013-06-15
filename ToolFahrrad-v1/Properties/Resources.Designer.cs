@@ -135,6 +135,24 @@ namespace ToolFahrrad_v1.Properties {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Periode  ähnelt.
+        /// </summary>
+        internal static string Fahrrad_toolAusfueren_Click_Periode_ {
+            get {
+                return ResourceManager.GetString("Fahrrad_toolAusfueren_Click_Periode_", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Forcast  ähnelt.
+        /// </summary>
+        internal static string Fahrrad_toolAusfueren_Click_Periode_en {
+            get {
+                return ResourceManager.GetString("Fahrrad_toolAusfueren_Click_Periode_en", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die xml-Datei erstellen ähnelt.
         /// </summary>
         internal static string Fahrrad_XmlExport_xml_Datei_erstellen {

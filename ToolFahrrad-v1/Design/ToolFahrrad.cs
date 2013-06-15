@@ -16,6 +16,7 @@ namespace ToolFahrrad_v1.Design
 {
     public partial class Fahrrad : Form
     {
+        private readonly String _culInfo = Thread.CurrentThread.CurrentUICulture.Name;
         readonly DataContainer _instance = DataContainer.Instance;
         readonly XmlDatei _xml = new XmlDatei();
         readonly Produktionsplanung _pp = new Produktionsplanung();
@@ -55,6 +56,20 @@ namespace ToolFahrrad_v1.Design
             _dvUpdate = false;
             xMLexportToolStripMenuItem.Enabled = true;
             xml_export.Visible = true;
+
+            //Periode
+            if (_culInfo.Contains("de")) {
+                aktulleWoche.Text = Resources.Fahrrad_toolAusfueren_Click_Periode_ + _xml.Period;
+                prognose1.Text = Resources.Fahrrad_toolAusfueren_Click_Periode_ + (Convert.ToInt32(_xml.Period) + 1);
+                prognose2.Text = Resources.Fahrrad_toolAusfueren_Click_Periode_ + (Convert.ToInt32(_xml.Period) + 2);
+                prognose3.Text = Resources.Fahrrad_toolAusfueren_Click_Periode_ + (Convert.ToInt32(_xml.Period) + 3);
+            }
+            else {
+                aktulleWoche.Text = Resources.Fahrrad_toolAusfueren_Click_Periode_en + _xml.Period;
+                prognose1.Text = Resources.Fahrrad_toolAusfueren_Click_Periode_en + (Convert.ToInt32(_xml.Period) + 1);
+                prognose2.Text = Resources.Fahrrad_toolAusfueren_Click_Periode_en + (Convert.ToInt32(_xml.Period) + 2);
+                prognose3.Text = Resources.Fahrrad_toolAusfueren_Click_Periode_en + (Convert.ToInt32(_xml.Period) + 3);
+            }
         }
         private void Ausführen() {
             _bv.ClearBvPositionen();
@@ -836,7 +851,7 @@ namespace ToolFahrrad_v1.Design
             XmlOeffnen();
         }
         private void XmlOeffnen() {
-            var fileDialog = new OpenFileDialog {Filter = Resources.Fahrrad_XmlOeffnen_xml_Datei_öffnen____xml____xml};
+            var fileDialog = new OpenFileDialog { Filter = Resources.Fahrrad_XmlOeffnen_xml_Datei_öffnen____xml____xml };
             if (fileDialog.ShowDialog() == DialogResult.OK) {
                 if (_xml.ReadDatei(fileDialog.FileName)) {
                     xmlTextBox.Text = fileDialog.FileName;
@@ -1077,8 +1092,7 @@ namespace ToolFahrrad_v1.Design
             }
             else {
                 var pufTemp = 0;
-                foreach (KeyValuePair<int, int[]> pair in et.KdhPuffer.Where(pair => pair.Key.Equals(nr)))
-                {
+                foreach (KeyValuePair<int, int[]> pair in et.KdhPuffer.Where(pair => pair.Key.Equals(nr))) {
                     pufTemp = pair.Value[index - 1];
                 }
                 int pmTemp;
@@ -1222,8 +1236,7 @@ namespace ToolFahrrad_v1.Design
 
                 if (teil != null) {
                     if (row.Cells[1].Value != null) {
-                        if (check.Value.ToString() != "true")
-                        {
+                        if (check.Value.ToString() != "true") {
                             var bbp = new Bestellposition(teil, Convert.ToInt32(row.Cells[1].Value.ToString()), c);
                             _bp.Add(bbp);
                         }
@@ -1279,8 +1292,7 @@ namespace ToolFahrrad_v1.Design
                         object p = row.Cells[2].Value; //preis
                         object s = row.Cells[3].Value; //straffe
 
-                        if (n != null && m != null && p != null && s != null)
-                        {
+                        if (n != null && m != null && p != null && s != null) {
                             var dv = new DvPosition(Convert.ToInt32(n.ToString()), Convert.ToInt32(m.ToString()), Convert.ToDouble(p.ToString()), Convert.ToDouble(s.ToString()));
                             _dirv.Add(dv);
                         }
@@ -1305,7 +1317,7 @@ namespace ToolFahrrad_v1.Design
             knr2.ReadOnly = false;
         }
         private void zurueck2_Click(object sender, EventArgs e) {
-            if (dataGridViewDirektverkauf.AllowUserToAddRows ) {
+            if (dataGridViewDirektverkauf.AllowUserToAddRows) {
                 dataGridViewDirektverkauf.AllowUserToAddRows = false;
                 knr2.ReadOnly = true;
             }
@@ -1332,7 +1344,7 @@ namespace ToolFahrrad_v1.Design
         private void dataGridViewProduktAuftrag_MouseMove(object sender, MouseEventArgs e) {
             if ((e.Button & MouseButtons.Left) == MouseButtons.Left) {
                 if (!IsCellOrRowHeader(e.X, e.Y) && _rowIndexSrc >= 0) {
-                    DragDropEffects dropEffect  = dataGridViewProduktAuftrag.DoDragDrop(
+                    DragDropEffects dropEffect = dataGridViewProduktAuftrag.DoDragDrop(
                         dataGridViewProduktAuftrag.Rows[_rowIndexSrc], DragDropEffects.None);
                     return;
                 }
