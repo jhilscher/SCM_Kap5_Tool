@@ -46,7 +46,6 @@ namespace ToolFahrrad_v1
         // Constructor
         private DataContainer()
         {
-            UeberstundenErlaubt = true;
             GrenzeMenge = 10;
             DiskountGrenze = 5;
             ApKapazitaet = new List<int[]>();
@@ -109,8 +108,6 @@ namespace ToolFahrrad_v1
                 }
             }
         }
-       // Getter / Setter bool flag ueberstunden
-        public bool UeberstundenErlaubt { get; private set; }
 
         // Getter for Teil with given number
         public Teil GetTeil(int nr)
