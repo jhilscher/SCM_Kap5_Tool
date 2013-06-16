@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
 using System.Windows.Forms;
+using ToolFahrrad_v1.Komponenten;
 
 namespace ToolFahrrad_v1.Windows
 {
@@ -100,7 +101,7 @@ namespace ToolFahrrad_v1.Windows
             int sum = 0;
             int val = 0;
             int prMenge = 0;
-            foreach (KeyValuePair<int, int> kvp in _dc.GetArbeitsplatz(_nummer).Ruest_zeiten)
+            foreach (KeyValuePair<int, int> kvp in _dc.GetArbeitsplatz(_nummer).RuestZeiten)
             {
                 if (!(_dc.GetTeil(kvp.Key) as ETeil).Verwendung.Contains("KDH"))
                 {
@@ -121,7 +122,7 @@ namespace ToolFahrrad_v1.Windows
             ausgabe.Text += (_culInfo.Contains(de) ? deKBedarf : enKBedarf) + "\n";
             sum = 0;
             prMenge = 0;
-            foreach (KeyValuePair<int, int> kvp in _dc.GetArbeitsplatz(_nummer).Werk_zeiten)
+            foreach (KeyValuePair<int, int> kvp in _dc.GetArbeitsplatz(_nummer).WerkZeiten)
             {
                 {
                     if (!(_dc.GetTeil(kvp.Key) as ETeil).Verwendung.Contains("KDH"))

@@ -226,7 +226,7 @@ namespace ToolFahrrad_v1.Design
                 DataGridViewAP.Rows[index].Cells[1].Value = a.Leerzeit + " (" + a.RuestungVorPeriode + ") ";
                 var prMenge = 0;
                 var sum = 0;
-                foreach (KeyValuePair<int, int> kvp in a.Werk_zeiten) {
+                foreach (KeyValuePair<int, int> kvp in a.WerkZeiten) {
                     {
                         if (!(_instance.GetTeil(kvp.Key) as ETeil).Verwendung.Contains("KDH")) {
                             prMenge += (_instance.GetTeil(kvp.Key) as ETeil).ProduktionsMengePer0;
@@ -246,7 +246,7 @@ namespace ToolFahrrad_v1.Design
                 int val = 0;
                 string key = "";
                 if (a.Geaendert == false) {
-                    foreach (KeyValuePair<int, int> kvp in a.Ruest_zeiten) {
+                    foreach (KeyValuePair<int, int> kvp in a.RuestZeiten) {
                         if (!(_instance.GetTeil(kvp.Key) as ETeil).Verwendung.Contains("KDH")) {
                             if ((_instance.GetTeil(kvp.Key) as ETeil).ProduktionsMengePer0 >= 0)
                                 val += kvp.Value;
@@ -271,7 +271,7 @@ namespace ToolFahrrad_v1.Design
                 int gesammt = a.RuestungCustom + sum;
                 DataGridViewAP.Rows[index].Cells[6].Value = gesammt + " min";
                 DataGridViewAP.Rows[index].Cells[10].Value = imageListAmpel.Images[2];
-                if (gesammt <= a.zeit) { // newTeim <= 2400 
+                if (gesammt <= a.Zeit) { // newTeim <= 2400 
                     DataGridViewAP.Rows[index].Cells[7].Value = imageListAmpel.Images[2];
                     apXml[1] = 1;
                     apXml[2] = 0;
@@ -302,10 +302,10 @@ namespace ToolFahrrad_v1.Design
                         DataGridViewAP.Rows[index].Cells[9].Value = true;
                     }
                 }
-                else if (gesammt > a.zeit && gesammt <= _instance.ErsteSchicht) { // 2400 < newTime < 3600 Überstunden
+                else if (gesammt > a.Zeit && gesammt <= _instance.ErsteSchicht) { // 2400 < newTime < 3600 Überstunden
                     DataGridViewAP.Rows[index].Cells[7].Value = imageListAmpel.Images[1];
                     apXml[1] = 1;
-                    apXml[2] = gesammt - a.zeit;
+                    apXml[2] = gesammt - a.Zeit;
                 }
                 else {
                     DataGridViewAP.Rows[index].Cells[7].Value = imageListAmpel.Images[2];

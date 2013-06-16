@@ -78,8 +78,8 @@ namespace ToolFahrrad_v1.Verwaltung
                 if (kvp.Key is KTeil)
                 {
                     var kt = kvp.Key as KTeil;
-                    kt.initBruttoBedarf(index, kindTeil, kvp.Value);
-                    kt.berechnungVerbrauchPrognose(_aktPeriode, _dc.VerwendeAbweichung);
+                    kt.InitBruttoBedarf(index, kindTeil, kvp.Value);
+                    kt.BerechnungVerbrauchPrognose(_aktPeriode, _dc.VerwendeAbweichung);
                 }
                 else
                 {

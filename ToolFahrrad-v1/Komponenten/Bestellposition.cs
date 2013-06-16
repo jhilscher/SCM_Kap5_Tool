@@ -1,52 +1,25 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-namespace ToolFahrrad_v1
+﻿namespace ToolFahrrad_v1.Komponenten
 {
     /** Class describes position of ordered KTeile */
     public class Bestellposition
     {
         // Class members
-        private KTeil kt;
-        private int menge;
-        private bool eil;
         // Constructor
-        public Bestellposition(KTeil kt_param, int menge_param, bool eil_param)
+        public Bestellposition(KTeil ktParam, int mengeParam, bool eilParam)
         {
-            kt = kt_param;
-            menge = menge_param;
-            eil = eil_param;
+            Kaufteil = ktParam;
+            Menge = mengeParam;
+            Eil = eilParam;
         }
         // Getter / Setter
-        public KTeil Kaufteil
-        {
-            get { return kt; }
-            set { kt = value; }
-        }
-        public int Menge
-        {
-            get { return menge; }
-            set { menge = value; }
-        }
-        public bool Eil
-        {
-            get { return eil; }
-            set { eil = value; }
-        }
+        public KTeil Kaufteil { get; set; }
+        public int Menge { get; set; }
+        public bool Eil { get; set; }
+
         public int OutputEil
         {
-            get
-            {
-                if (eil == true)
-                {
-                    return 4;
-                }
-                else
-                {
-                    return 5;
-                }
+            get {
+                return Eil ? 4 : 5;
             }
         }
     }
