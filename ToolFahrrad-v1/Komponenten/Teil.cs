@@ -1,62 +1,34 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-namespace ToolFahrrad_v1
+﻿namespace ToolFahrrad_v1.Komponenten
 {
     /*Abstract class Teil as basic class for inheritance */
     public abstract class Teil
     {
         // Class members
-        protected bool aufgeloest;
-        protected int nr;
-        protected string bezeichnung;
-        protected int lagerstand;
-        private double verhaeltnis;
         protected string verwendung;
-        protected int vertriebPer0;
-        protected int verbrauchPer1;
-        protected int verbrauchPer2;
-        protected int verbrauchPer3;
         // Constructor
-        public Teil(int nummer, string bez)
+        protected Teil(int nummer, string bez)
         {
-            aufgeloest = false;
-            nr = nummer;
-            bezeichnung = bez;
-            lagerstand = 0;
-            verhaeltnis = 0.0;
-            vertriebPer0 = 0;
-            verbrauchPer1 = 0;
-            verbrauchPer2 = 0;
-            verbrauchPer3 = 0;
+            Aufgeloest = false;
+            Nummer = nummer;
+            Bezeichnung = bez;
+            Lagerstand = 0;
+            Verhaeltnis = 0.0;
+            VertriebPer0 = 0;
+            VerbrauchPer1 = 0;
+            VerbrauchPer2 = 0;
+            VerbrauchPer3 = 0;
         }
         // Getter / Setter
-        public bool Aufgeloest
-        {
-            get { return aufgeloest; }
-            set { aufgeloest = value; }
-        }
-        public int Nummer
-        {
-            get { return nr; }
-        }
-        public string Bezeichnung
-        {
-            get { return bezeichnung; }
-            set { bezeichnung = value; }
-        }
-        public int Lagerstand
-        {
-            get{ return lagerstand; }
-            set{ lagerstand = value; }
-        }
-        public double Verhaeltnis
-        {
-            get { return verhaeltnis; }
-            set { verhaeltnis = value; }
-        }
+        public bool Aufgeloest { get; set; }
+        public int Nummer { get; protected set; }
+        public string Bezeichnung { get; set; }
+        public int Lagerstand { get; set; }
+        public double Verhaeltnis { get; set; }
+        public int VertriebPer0 { get; set; }
+        public int VerbrauchPer1 { get; set; }
+        public int VerbrauchPer2 { get; set; }
+        public int VerbrauchPer3 { get; set; }
+
         public string Verwendung
         {
             get { return verwendung; }
@@ -68,47 +40,23 @@ namespace ToolFahrrad_v1
                 }
                 else
                 {
-                    throw new InputException("Bei dem Teil " + this.nr +
+                    throw new InputException("Bei dem Teil " + Nummer +
                                              " ist eine nicht zulaessige Verwendung eingegeben (" + value + ")");
                 }
             }
         }
-        public int VertriebPer0
-        {
-            get{ return vertriebPer0; }
-            set{ vertriebPer0 = value; }
-        }
-        public int VerbrauchPer1
-        {
-            get{ return verbrauchPer1; }
-            set{ verbrauchPer1 = value; }
-        }
-        public int VerbrauchPer2
-        {
-            get{ return verbrauchPer2; }
-            set{ verbrauchPer2 = value; }
-        }
-        public int VerbrauchPer3
-        {
-            get { return verbrauchPer3; }
-            set { verbrauchPer3 = value; }
-        }
+
+        
+
         // Method generates hashcode of class member nr
         public int GetHashcode()
         {
-            return nr.GetHashCode();
+            return Nummer.GetHashCode();
         }
         // Method compares two objects from type Teil and returns bool value
         public bool Equals(Teil k)
         {
-            if (nr == k.nr)
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
+            return Nummer == k.Nummer;
         }
     }
 }

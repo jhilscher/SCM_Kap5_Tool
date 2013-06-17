@@ -1,74 +1,58 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 
-namespace ToolFahrrad_v1
+namespace ToolFahrrad_v1.Komponenten
 {
     public class Arbeitsplatz
     {
-        DataContainer dc;
+        DataContainer _dc;
         // Class members
-        protected int nr;
-        public int zeit = 2400;
+        public int Zeit = 2400;
         protected int anz_schichten = 1;
         protected int anz_uebermin = 0;
-        private int ruestungVorPeriode = 0;
-        private int ruestNew = 0;
-        public int RuestNew {
-            get { return ruestNew; }
-            set { ruestNew = value; }
-        }
-        private int ruestungCustom = 0; 
-        private bool geaendert;
+        public int RuestNew { get; set; }
 
-        public bool Geaendert {
-            get { return geaendert; }
-            set { geaendert = value; }
-        }
-        public int RuestungCustom {
-            get { return ruestungCustom; }
-            set { ruestungCustom = value; }
-        }
-        private int leerzeit = 0;
-        int warteschlangen_zeit = 0;
+        public bool Geaendert { get; set; }
 
-        public int Leerzeit {
-            get { return leerzeit; }
-            set { leerzeit = value; }
-        }
-        public Arbeitsplatz() {
+        public int RuestungCustom { get; set; }
 
+        int _warteschlangenZeit;
+
+        public int Leerzeit { get; set; }
+
+        public Arbeitsplatz()
+        {
+            Leerzeit = 0;
+            RuestungCustom = 0;
+            RuestNew = 0;
         }
 
         // Needed time to produce Teil with given number
-        private Dictionary<int, int> werk_zeiten;
-        public Dictionary<int, int> Werk_zeiten {
-            get { return werk_zeiten; }
-        }
-        private Dictionary<int, int> ruest_zeiten;
-        public Dictionary<int, int> Ruest_zeiten {
-            get { return ruest_zeiten; }
-        }
-        private Dictionary<int, int> naechster_schritt;
+        public Dictionary<int, int> WerkZeiten { get; private set; }
+
+        public Dictionary<int, int> RuestZeiten { get; private set; }
+
+        private Dictionary<int, int> _naechsterSchritt;
         // Constructor
-        public Arbeitsplatz(int nr_neu) {
-            this.geaendert = false;
-            this.nr = nr_neu;
-            this.ruest_zeiten = new Dictionary<int, int>();
-            this.werk_zeiten = new Dictionary<int, int>();
-            this.naechster_schritt = new Dictionary<int, int>();
+        public Arbeitsplatz(int nrNeu) {
+            Leerzeit = 0;
+            RuestungCustom = 0;
+            RuestNew = 0;
+            Geaendert = false;
+            GetNummerArbeitsplatz = nrNeu;
+            RuestZeiten = new Dictionary<int, int>();
+            WerkZeiten = new Dictionary<int, int>();
+            _naechsterSchritt = new Dictionary<int, int>();
         }
         // Getter / Setter
-        public int GetNummerArbeitsplatz {
-            get { return nr; }
-        }
-        public int RuestungVorPeriode {
-            get { return ruestungVorPeriode; }
-            set { ruestungVorPeriode = value; }
-        }
-        public Dictionary<int, int> WerkZeitJeStk {
-            get { return werk_zeiten; }
+        public int GetNummerArbeitsplatz { get; protected set; }
+
+        public int RuestungVorPeriode { get; set; }
+
+        public Dictionary<int, int> WerkZeitJeStk
+        {
+            get { return WerkZeiten; }
+            set { WerkZeiten = value; }
         }
 
         /// <summary>
@@ -76,13 +60,13 @@ namespace ToolFahrrad_v1
         /// </summary>
         public int GetRuestZeit {
             get {
-                this.ruestNew = 0;
-                dc = DataContainer.Instance;
-                int sum = 0;
-                foreach (KeyValuePair<int, int> kvp in Ruest_zeiten) {
+                RuestNew = 0;
+                _dc = DataContainer.Instance;
+                var sum = 0;
+                foreach (KeyValuePair<int, int> kvp in RuestZeiten) {
                     sum += kvp.Value;
-                    if ((dc.GetTeil(kvp.Key) as ETeil).ProduktionsMengePer0 > 0)
-                        ++this.ruestNew;
+                    if (((ETeil) _dc.GetTeil(kvp.Key)).ProduktionsMengePer0 > 0)
+                        ++RuestNew;
                 }
                 return sum;
 
@@ -95,14 +79,14 @@ namespace ToolFahrrad_v1
 
         //public void CustomRuestungGeaendert(int ruest) {
         //    if (geaendert == false) {
-        //        this.ruestungCustom = (ruestNew + ruestungVorPeriode) / 2;
+        //        ruestungCustom = (ruestNew + ruestungVorPeriode) / 2;
         //        if (ruestungCustom < ruestNew)
         //            ruestungCustom = ruestNew;
         //        geaendert = true;
         //    }
         //    else {
         //        if (ruest != -1)
-        //            this.ruestungCustom = ruest;
+        //            ruestungCustom = ruest;
         //    }
         //}
 
@@ -112,15 +96,15 @@ namespace ToolFahrrad_v1
         /// </summary>
         public int GetBenoetigteZeit {
             get {
-                dc = DataContainer.Instance;
+                _dc = DataContainer.Instance;
                 int result = 0;
-                foreach (KeyValuePair<int, int> kvp in werk_zeiten) {
-                    int prMenge = (dc.GetTeil(kvp.Key) as ETeil).ProduktionsMengePer0;
+                foreach (KeyValuePair<int, int> kvp in WerkZeiten) {
+                    int prMenge = ((ETeil) _dc.GetTeil(kvp.Key)).ProduktionsMengePer0;
                     if (prMenge < 0)
                         prMenge = 0;
                     result += kvp.Value * prMenge;
                 }
-                result += warteschlangen_zeit;
+                result += _warteschlangenZeit;
                 return result;
             }
         }
@@ -132,48 +116,48 @@ namespace ToolFahrrad_v1
         /// <param name="zeit">ZEIT</param>
         public void AddWerkzeit(int teil, int zeit) {
             if (zeit < 0) {
-                throw new InvalidValueException(zeit.ToString(), string.Format("Werkzeit am Arbeitsplatz {0}", nr));
+                throw new InvalidValueException(zeit.ToString(), string.Format("Werkzeit am Arbeitsplatz {0}", GetNummerArbeitsplatz));
             }
-            if (naechster_schritt.ContainsKey(teil) == false) {
-                naechster_schritt[teil] = -1;
+            if (_naechsterSchritt.ContainsKey(teil) == false) {
+                _naechsterSchritt[teil] = -1;
             }
-            if ((werk_zeiten.ContainsKey(teil) && werk_zeiten[teil] == 0) || werk_zeiten.ContainsKey(teil) == false) {
-                werk_zeiten[teil] = zeit;
-                if (werk_zeiten.ContainsKey(teil) == false) {
-                    Ruest_zeiten[teil] = 0;
+            if ((WerkZeiten.ContainsKey(teil) && WerkZeiten[teil] == 0) || WerkZeiten.ContainsKey(teil) == false) {
+                WerkZeiten[teil] = zeit;
+                if (WerkZeiten.ContainsKey(teil) == false) {
+                    RuestZeiten[teil] = 0;
                 }
-                if ((DataContainer.Instance.GetTeil(teil) as ETeil).BenutzteArbeitsplaetze.Contains(this) == false) {
-                    (DataContainer.Instance.GetTeil(teil) as ETeil).AddArbeitsplatz(nr);
+                if (((ETeil) DataContainer.Instance.GetTeil(teil)).BenutzteArbeitsplaetze.Contains(this) == false) {
+                    ((ETeil) DataContainer.Instance.GetTeil(teil)).AddArbeitsplatz(GetNummerArbeitsplatz);
                 }
             }
-            if (werk_zeiten.ContainsKey(teil) == false && werk_zeiten[teil] != 0 && werk_zeiten[teil] != zeit) {
-                throw new InvalidValueException(string.Format("Am Arbeitsplatz {0} ist bereits eine Werkzeit für das Teil {1} hinterlegt!", nr, teil));
+            if (WerkZeiten.ContainsKey(teil) == false && WerkZeiten[teil] != 0 && WerkZeiten[teil] != zeit) {
+                throw new InvalidValueException(string.Format("Am Arbeitsplatz {0} ist bereits eine Werkzeit für das Teil {1} hinterlegt!", GetNummerArbeitsplatz, teil));
             }
         }
 
 
         public void AddRuestzeit(int teil, int zeit) {
             if (zeit < 0) {
-                throw new InvalidValueException(zeit.ToString(), string.Format("Ruestzeit am Arbeitsplatz {0}", nr));
+                throw new InvalidValueException(zeit.ToString(), string.Format("Ruestzeit am Arbeitsplatz {0}", GetNummerArbeitsplatz));
             }
-            if ((Ruest_zeiten.ContainsKey(teil) && Ruest_zeiten[teil] == 0) || Ruest_zeiten.ContainsKey(teil) == false) {
-                Ruest_zeiten[teil] = zeit;
-                if (werk_zeiten.ContainsKey(teil) == false) {
-                    werk_zeiten[teil] = 0;
+            if ((RuestZeiten.ContainsKey(teil) && RuestZeiten[teil] == 0) || RuestZeiten.ContainsKey(teil) == false) {
+                RuestZeiten[teil] = zeit;
+                if (WerkZeiten.ContainsKey(teil) == false) {
+                    WerkZeiten[teil] = 0;
                 }
             }
-            if (Ruest_zeiten.ContainsKey(teil) == false && this.Ruest_zeiten[teil] != 0) {
-                throw new InvalidValueException(string.Format("Am Arbeitsplatz {0} ist bereits eine Rüstzeit für das Teil {1} hinterlegt!", nr, teil));
+            if (RuestZeiten.ContainsKey(teil) == false && RuestZeiten[teil] != 0) {
+                throw new InvalidValueException(string.Format("Am Arbeitsplatz {0} ist bereits eine Rüstzeit für das Teil {1} hinterlegt!", GetNummerArbeitsplatz, teil));
             }
         }
         // Add Teil in queue with given number of Teil, amount and current place
-        public void AddWarteschlange(int nr, int menge, bool akt_platz) {
-            if (akt_platz == true) {
-                (DataContainer.Instance.GetTeil(nr) as ETeil).InWartschlange += menge;
+        public void AddWarteschlange(int nr, int menge, bool aktPlatz) {
+            if (aktPlatz) {
+                ((ETeil) DataContainer.Instance.GetTeil(nr)).InWartschlange += menge;
             }
-            this.warteschlangen_zeit += menge * werk_zeiten[nr];
-            if (naechster_schritt[nr] != -1) {
-                DataContainer.Instance.GetArbeitsplatz(naechster_schritt[nr]).AddWarteschlange(nr, menge, false);
+            _warteschlangenZeit += menge * WerkZeiten[nr];
+            if (_naechsterSchritt[nr] != -1) {
+                DataContainer.Instance.GetArbeitsplatz(_naechsterSchritt[nr]).AddWarteschlange(nr, menge, false);
             }
         }
         public int UeberMin {
@@ -186,11 +170,9 @@ namespace ToolFahrrad_v1
                 anz_uebermin += min;
                 return true;
             }
-            else {
-                if (AddSchicht()) {
-                    anz_uebermin = 0;
-                    return true;
-                }
+            if (AddSchicht()) {
+                anz_uebermin = 0;
+                return true;
             }
             return false;
         }
@@ -210,17 +192,13 @@ namespace ToolFahrrad_v1
         }
         public List<ETeil> GetHergestellteTeile {
             get {
-                List<ETeil> list = new List<ETeil>();
                 DataContainer dc = DataContainer.Instance;
-                foreach (KeyValuePair<int, int> res in werk_zeiten) {
-                    list.Add(dc.GetTeil(res.Key) as ETeil);
-                }
-                return list;
+                return WerkZeiten.Select(res => dc.GetTeil(res.Key) as ETeil).ToList();
             }
         }
         public Dictionary<int, int> NaechsterArbeitsplatz {
-            get { return naechster_schritt; }
-            set { naechster_schritt = value; }
+            get { return _naechsterSchritt; }
+            set { _naechsterSchritt = value; }
         }
     }
 }

@@ -1,223 +1,168 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 
-namespace ToolFahrrad_v1
+namespace ToolFahrrad_v1.Komponenten
 {
     /** This class is sub class from Teil and describes a produced Teil */
     public class ETeil : Teil
     {
         // Class members
-        private double wert;
-        private int puffer;
-        private bool kdhUpdate = false;
-        private int produktionsMenge = 0;
-        private int vaterInWarteschlange = 0;
-        private int inWarteschlange = 0;
-        private int inBearbeitung = 0;
-        private bool istEndProdukt = false;
-        private Dictionary<int, int[]> kdhPuffer;
-        private Dictionary<string, int> kdhProduktionsmenge;
-        private Dictionary<int, int[]> kdhVaterInWarteschlange;
-        Dictionary<Teil, int> zusammensetzung;
-        Dictionary<int, int> position;
-        List<int> benutzteArbeitsplaetze;
-        List<ETeil> istTeil = null;
+        private int _produktionsMenge;
+        private int _inWarteschlange;
+        private int _inBearbeitung;
+        readonly Dictionary<Teil, int> _zusammensetzung;
+        readonly Dictionary<int, int> _position;
+        readonly List<int> _benutzteArbeitsplaetze;
+        List<ETeil> _istTeil;
         // Constructor
         public ETeil(int nummer, string bez)
             : base(nummer, bez)
         {
-            wert = 0.0;
-            puffer = -1;
-            zusammensetzung = new Dictionary<Teil, int>();
-            position = new Dictionary<int, int>();
-            benutzteArbeitsplaetze = new List<int>();
+            IstEndProdukt = false;
+            KdhUpdate = false;
+            Wert = 0.0;
+            Puffer = -1;
+            _zusammensetzung = new Dictionary<Teil, int>();
+            _position = new Dictionary<int, int>();
+            _benutzteArbeitsplaetze = new List<int>();
             KDHaufNULL();
-            kdhProduktionsmenge = new Dictionary<string, int>();
+            KdhProduktionsmenge = new Dictionary<string, int>();
         }
         public void KDHaufNULL(){
-        int[] array = new int[]{-1,-1,-1};
-        int[] array2 = new int[] { 0, 0, 0 };
-            kdhPuffer = new Dictionary<int,int[]>();
-            kdhVaterInWarteschlange = new Dictionary<int, int[]>();
-            kdhPuffer.Add(26, array);
-            kdhPuffer.Add(16, array);
-            kdhPuffer.Add(17, array);
-            kdhVaterInWarteschlange.Add(26, array2);
-            kdhVaterInWarteschlange.Add(16, array2);
-            kdhVaterInWarteschlange.Add(17, array2);
+        var array = new[]{-1,-1,-1};
+        var array2 = new[] { 0, 0, 0 };
+            KdhPuffer = new Dictionary<int,int[]>();
+            KdhVaterInWarteschlange = new Dictionary<int, int[]>();
+            KdhPuffer.Add(26, array);
+            KdhPuffer.Add(16, array);
+            KdhPuffer.Add(17, array);
+            KdhVaterInWarteschlange.Add(26, array2);
+            KdhVaterInWarteschlange.Add(16, array2);
+            KdhVaterInWarteschlange.Add(17, array2);
         }
         // Getter / Setter
-        public double Wert
-        {
-            get { return wert; }
-            set { wert = value; }
-        }
-        public bool KdhUpdate
-        {
-            get { return kdhUpdate; }
-            set { kdhUpdate = value; }
-        }
-        public int Puffer
-        {
-            get { return puffer; }
-            set { puffer = value; }
-        }
-        public int VaterInWarteschlange
-        {
-            get { return vaterInWarteschlange; }
-            set { vaterInWarteschlange = value; }
-        }
-        public bool IstEndProdukt
-        {
-            get { return istEndProdukt; }
-            set { istEndProdukt = value; }
-        }
-        public Dictionary<int, int[]> KdhPuffer
-        {
-            get { return kdhPuffer; }
-            set { kdhPuffer = value; }
-        }
-        public Dictionary<string, int> KdhProduktionsmenge
-        {
-            get { return kdhProduktionsmenge; }
-            set { kdhProduktionsmenge = value; }
-        }
-        public Dictionary<int, int[]> KdhVaterInWarteschlange
-        {
-            get { return kdhVaterInWarteschlange; }
-            set { kdhVaterInWarteschlange = value; }
-        }
+        public double Wert { get; set; }
+        public bool KdhUpdate { get; set; }
+        public int Puffer { get; set; }
+        public int VaterInWarteschlange { get; set; }
+        public bool IstEndProdukt { get; set; }
+        public Dictionary<int, int[]> KdhPuffer { get; set; }
+        public Dictionary<string, int> KdhProduktionsmenge { get; set; }
+        public Dictionary<int, int[]> KdhVaterInWarteschlange { get; set; }
+
         public int ProduktionsMengePer0
         {
-            get { return produktionsMenge; }
+            get { return _produktionsMenge; }
             set
             {
-                produktionsMenge = value;
-                foreach (KeyValuePair<Teil, int> kvp in zusammensetzung)
+                _produktionsMenge = value;
+                foreach (KeyValuePair<Teil, int> kvp in _zusammensetzung)
                 {
-                    kvp.Key.VertriebPer0 = kvp.Value * produktionsMenge;
+                    kvp.Key.VertriebPer0 = kvp.Value * _produktionsMenge;
                 }
             }
         }
         public int InWartschlange
         {
-            get { return inWarteschlange; }
+            get { return _inWarteschlange; }
             set
             {
-                if (inWarteschlange != 0)
+                if (_inWarteschlange != 0)
                 {
-                    inWarteschlange += value;
+                    _inWarteschlange += value;
                 }
                 else
                 {
-                    inWarteschlange = value;
+                    _inWarteschlange = value;
                 }
             }
         }
         public int InBearbeitung
         {
-            get { return inBearbeitung; }
+            get { return _inBearbeitung; }
             set
             {
-                if (inBearbeitung != 0)
+                if (_inBearbeitung != 0)
                 {
-                    inBearbeitung += value;
+                    _inBearbeitung += value;
                 }
                 else
                 {
-                    inBearbeitung = value;
+                    _inBearbeitung = value;
                 }
             }
         }
         public Dictionary<Teil, int> Zusammensetzung
         {
-            get { return zusammensetzung; }
+            get { return _zusammensetzung; }
         }
         // Position and Menge in Reihenfolgenplanung
         public Dictionary<int, int> Position
         {
-            get { return position; }
+            get { return _position; }
         }
         // Used stations
         public List<Arbeitsplatz> BenutzteArbeitsplaetze
         {
             get
             {
-                List<Arbeitsplatz> res = new List<Arbeitsplatz>();
-                foreach (int arpl in benutzteArbeitsplaetze)
-                {
-                    res.Add(DataContainer.Instance.GetArbeitsplatz(arpl));
-                }
-                return res;
+                return _benutzteArbeitsplaetze.Select(arpl => DataContainer.Instance.GetArbeitsplatz(arpl)).ToList();
             }
         }
         public List<ETeil> IstTeilVon
         {
             get
             {
-                if (this.istTeil == null)
+                if (_istTeil == null)
                 {
-                    List<ETeil> res = new List<ETeil>();
-                    foreach (ETeil et in DataContainer.Instance.ListeETeile)
-                    {
-                        if (et.Zusammensetzung.ContainsKey(et))
-                        {
-                            res.Add(et);
-                        }
-                    }
-                    istTeil = res;
+                    var res = DataContainer.Instance.ListeETeile.Where(et => et.Zusammensetzung.ContainsKey(et)).ToList();
+                    _istTeil = res;
                 }
-                return istTeil;
+                return _istTeil;
             }
         }
         public void SetProduktionsMenge(int index, ETeil vaterTeil)
         {
             if (Aufgeloest == false)
             {
-                if (istEndProdukt == true)
+                if (IstEndProdukt)
                 {
-                    produktionsMenge = vertriebPer0 + Puffer - lagerstand - inWarteschlange - inBearbeitung;
+                    _produktionsMenge = VertriebPer0 + Puffer - Lagerstand - _inWarteschlange - _inBearbeitung;
                 }
                 else
                 {
                     // Set members
-                    if (vaterTeil.ProduktionsMengePer0 > 0)
-                        vertriebPer0 = vaterTeil.ProduktionsMengePer0;
-                    else
-                        vertriebPer0 = 0;
+                    VertriebPer0 = vaterTeil.ProduktionsMengePer0 > 0 ? vaterTeil.ProduktionsMengePer0 : 0;
                     // Calculation
                     if (Verwendung.Contains("KDH") == false)
                     {
-                        vaterInWarteschlange = vaterTeil.InWartschlange;
-                        if (puffer == -1)
+                        VaterInWarteschlange = vaterTeil.InWartschlange;
+                        if (Puffer == -1)
                         {
-                            puffer = vaterTeil.Puffer;
+                            Puffer = vaterTeil.Puffer;
                         }
-                        produktionsMenge = vertriebPer0 + vaterInWarteschlange + Puffer - lagerstand - inWarteschlange - inBearbeitung;
+                        _produktionsMenge = VertriebPer0 + VaterInWarteschlange + Puffer - Lagerstand - _inWarteschlange - _inBearbeitung;
                         Aufgeloest = true;
                     }
                     else
                     {
-                        int pufTemp = 0;
-                        foreach (KeyValuePair<int, int[]> pair in kdhPuffer) {
-                            if (pair.Key.Equals(nr)) {
-                                if (pair.Value[index - 1] == -1) {
-                                    pair.Value[index - 1] = vaterTeil.Puffer;
-                                }
-                                pufTemp = pair.Value[index - 1];
-                                kdhVaterInWarteschlange[nr][index - 1] = vaterTeil.InWartschlange;
+                        var pufTemp = 0;
+                        foreach (KeyValuePair<int, int[]> pair in KdhPuffer.Where(pair => pair.Key.Equals(Nummer)))
+                        {
+                            if (pair.Value[index - 1] == -1) {
+                                pair.Value[index - 1] = vaterTeil.Puffer;
                             }
+                            pufTemp = pair.Value[index - 1];
+                            KdhVaterInWarteschlange[Nummer][index - 1] = vaterTeil.InWartschlange;
                         }
-                        int pmTemp = 0;
+                        int pmTemp;
                         if (index == 1) {
-                            pmTemp = vertriebPer0 + kdhVaterInWarteschlange[nr][index - 1] + pufTemp - lagerstand - inWarteschlange - inBearbeitung;
+                            pmTemp = VertriebPer0 + KdhVaterInWarteschlange[Nummer][index - 1] + pufTemp - Lagerstand - _inWarteschlange - _inBearbeitung;
                         }
                         else {
-                            pmTemp = vertriebPer0 + kdhVaterInWarteschlange[nr][index - 1] + pufTemp;
+                            pmTemp = VertriebPer0 + KdhVaterInWarteschlange[Nummer][index - 1] + pufTemp;
                         }
-                        kdhProduktionsmenge.Add(index.ToString() + "-" + nr.ToString(), pmTemp);
+                        KdhProduktionsmenge.Add(index + "-" + Nummer, pmTemp);
 
                         //if (index == 1 && puffer != -1) {
                         //    kdhUpdate = true;
@@ -246,51 +191,40 @@ namespace ToolFahrrad_v1
         // Public function to change members puffer (0)
         public void FeldGeandert(int member, int value, int p)
         {
-            aufgeloest = false;
+            Aufgeloest = false;
             // puffer
             if (member == 0)
             {
                 if (Verwendung.Contains("KDH") && p.Equals(0))
-                    puffer = value;
-                else if (zusammensetzung.Count() != 0 && DataContainer.Instance.BerechneKindTeil == true)
+                    Puffer = value;
+                else if (_zusammensetzung.Count() != 0 && DataContainer.Instance.BerechneKindTeil)
                 {
                     if (!Verwendung.Contains("KDH"))
-                        puffer = value;
-                    foreach (KeyValuePair<Teil, int> kvp in zusammensetzung)
+                        Puffer = value;
+                    foreach (var et in from kvp in _zusammensetzung where kvp.Key is ETeil select kvp.Key as ETeil)
                     {
-                        if (kvp.Key is ETeil)
-                        {
-                            ETeil et = kvp.Key as ETeil;
-                            et.FeldGeandert(member, value, 1);
-                        }
+                        et.FeldGeandert(member, value, 1);
                     }
                 }
             }
         }
-        public void AddArbeitsplatz(int nr)
+        public void AddArbeitsplatz(int nummerNr)
         {
-            benutzteArbeitsplaetze.Add(nr);
+            _benutzteArbeitsplaetze.Add(nummerNr);
         }
         public void AddBestandteil(Teil t, int menge)
         {
-            zusammensetzung[t] = menge;
+            _zusammensetzung[t] = menge;
         }
         public void AddBestandteil(int t, int menge)
         {
-            DataContainer dc = DataContainer.Instance;
-            zusammensetzung[dc.GetTeil(t)] = menge;
+            var dc = DataContainer.Instance;
+            _zusammensetzung[dc.GetTeil(t)] = menge;
         }
         // Equals function
         public bool Equals(ETeil et)
         {
-            if (nr == et.Nummer)
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
+            return Nummer == et.Nummer;
         }
     }
 }

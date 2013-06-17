@@ -1,8 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using ToolFahrrad_v1.Design;
+using ToolFahrrad_v1.XML;
 
 namespace ToolFahrrad_v1
 {
@@ -14,7 +13,7 @@ namespace ToolFahrrad_v1
         [STAThread]
         static void Main()
         {
-            Initialisierung init = new Initialisierung();
+            var init = new Initialisierung();
             init.Initialisieren();
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);

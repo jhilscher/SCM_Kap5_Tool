@@ -1,77 +1,68 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
+using ToolFahrrad_v1.Komponenten;
 
-namespace ToolFahrrad_v1
+namespace ToolFahrrad_v1.Verwaltung
 {
     public class Bestellverwaltung
     {
         // Instance of DataContainer class
-        DataContainer dc;
-        int aktPeriode;
-        List<Bestellposition> bvPositionen;
-        List<DvPosition> dvPositionen;
+        readonly DataContainer _dc;
+        List<Bestellposition> _bvPositionen;
+        List<DvPosition> _dvPositionen;
         // Constructor
         public Bestellverwaltung()
         {
-            dc = DataContainer.Instance;
-            bvPositionen = new List<Bestellposition>();
-            dvPositionen = new List<DvPosition>();
+            _dc = DataContainer.Instance;
+            _bvPositionen = new List<Bestellposition>();
+            _dvPositionen = new List<DvPosition>();
         }
         // Getter / Setter
-        public int AktPeriode
-        {
-            get { return aktPeriode; }
-            set { aktPeriode = value; }
-        }
         public List<Bestellposition> BvPositionen
         {
-            get { return bvPositionen; }
+            get { return _bvPositionen; }
         }
         // Set new list bvPositionen
         public void SetBvPositionen(List<Bestellposition> newBvPositionen)
         {
-            clearBvPositionen();
-            bvPositionen = newBvPositionen;
+            ClearBvPositionen();
+            _bvPositionen = newBvPositionen;
         }
         // Clear list bvPositionen
-        public void clearBvPositionen()
+        public void ClearBvPositionen()
         {
-            bvPositionen.Clear();
+            _bvPositionen.Clear();
         }
         public List<DvPosition> DvPositionen
         {
-            get { return dvPositionen; }
+            get { return _dvPositionen; }
         }
 
         public void SetDvPositionen(List<DvPosition> newDvPosition) {
-            clearDvPositionen();
-            dvPositionen = newDvPosition;
+            ClearDvPositionen();
+            _dvPositionen = newDvPosition;
         }
 
-        public void addDvPosition(int nr, int menge, double preis, double strafe)
+        private void AddDvPosition(int nr, int menge, double preis, double strafe)
         {
-            dvPositionen.Add(new DvPosition(nr, menge, preis, strafe));
+            _dvPositionen.Add(new DvPosition(nr, menge, preis, strafe));
         }
-        public void delDvPosition(int nr, int menge, double preis, double strafe)
+
+        public void ClearDvPositionen()
         {
-            dvPositionen.Remove(new DvPosition(nr, menge, preis, strafe));
-        }
-        public void clearDvPositionen()
-        {
-            dvPositionen.Clear();
+            _dvPositionen.Clear();
         }
         // Create list of orders
-        public void generiereBestellListe()
+        public void GeneriereBestellListe()
         {
             // Calculate Bestellposition for each KTeil and when necessary add new Bestellposition to DataContainer dc
-            foreach (KTeil kt in dc.ListeKTeile)
+            foreach (KTeil kt in _dc.ListeKTeile)
             {
-                double startPeriod = 0.0;
-                double endPeriod = 0.8;
+                const double startPeriod = 0.0;
+                const double endPeriod = 0.8;
                 int n = 0;
-                double lieferDauer = kt.Lieferdauer + kt.AbweichungLieferdauer * (dc.VerwendeAbweichung / 100);
+                double lieferDauer = kt.Lieferdauer + kt.AbweichungLieferdauer * (_dc.VerwendeAbweichung / 100);
                 int teilMengeSumme = kt.Lagerstand;
                 bool eil = false;
                 int menge = 0;
@@ -82,21 +73,21 @@ namespace ToolFahrrad_v1
                     {
                         eil = true;
                     }
-                    if(dc.DiskountGrenze >= kt.Preis && eil != true)
+                    if(_dc.DiskountGrenze >= kt.Preis && eil != true)
                     {
                         menge = kt.DiskontMenge;
                     }
-                    else if (dc.DiskountGrenze < kt.Preis && kt.Preis < dc.GrenzeMenge)
+                    else if (_dc.DiskountGrenze < kt.Preis && kt.Preis < _dc.GrenzeMenge)
                     {
-                        menge = berechneMenge(dc.VerwendeDiskount, kt.BruttoBedarfPer0 - kt.Lagerstand, kt.DiskontMenge);
+                        menge = berechneMenge(_dc.VerwendeDiskount, kt.BruttoBedarfPer0 - kt.Lagerstand, kt.DiskontMenge);
                     }
-                    else if (dc.GrenzeMenge <= kt.Preis || eil == true)
+                    else if (_dc.GrenzeMenge <= kt.Preis || eil)
                     {
                         menge = kt.BruttoBedarfPer0 - kt.Lagerstand;
                     }
                     if(menge != 0)
                     {
-                        bvPositionen.Add(new Bestellposition(kt, menge, eil));
+                        _bvPositionen.Add(new Bestellposition(kt, menge, eil));
                         teilMengeSumme = teilMengeSumme - kt.BruttoBedarfPer0 + menge;
                     }
                 }
@@ -109,15 +100,15 @@ namespace ToolFahrrad_v1
                     // Check if Lieferdauer of KTeil will be in time
                     if (lieferDauer >= (startPeriod + n) && lieferDauer < (endPeriod + n))
                     {
-                        if (dc.DiskountGrenze >= kt.Preis)
+                        if (_dc.DiskountGrenze >= kt.Preis)
                         {
                             menge = kt.DiskontMenge;
                         }
-                        else if (dc.DiskountGrenze < kt.Preis && kt.Preis < dc.GrenzeMenge)
+                        else if (_dc.DiskountGrenze < kt.Preis && kt.Preis < _dc.GrenzeMenge)
                         {
-                            menge = berechneMenge(dc.VerwendeDiskount, kt.BruttoBedarfPer1 - kt.BestandPer1, kt.DiskontMenge);
+                            menge = berechneMenge(_dc.VerwendeDiskount, kt.BruttoBedarfPer1 - kt.BestandPer1, kt.DiskontMenge);
                         }
-                        else if (dc.GrenzeMenge <= kt.Preis)
+                        else if (_dc.GrenzeMenge <= kt.Preis)
                         {
                             menge = kt.BruttoBedarfPer1 - kt.BestandPer1;
                         }
@@ -129,7 +120,7 @@ namespace ToolFahrrad_v1
                     }
                     if (menge != 0)
                     {
-                        bvPositionen.Add(new Bestellposition(kt, menge, eil));
+                        _bvPositionen.Add(new Bestellposition(kt, menge, eil));
                         teilMengeSumme = teilMengeSumme - kt.BruttoBedarfPer1 + menge;
                     }
                 }
@@ -142,15 +133,15 @@ namespace ToolFahrrad_v1
                     // Check if Lieferdauer of KTeil will be in time
                     if (lieferDauer >= (startPeriod + n) && lieferDauer < (endPeriod + n))
                     {
-                        if (dc.DiskountGrenze >= kt.Preis)
+                        if (_dc.DiskountGrenze >= kt.Preis)
                         {
                             menge = kt.DiskontMenge;
                         }
-                        else if (dc.DiskountGrenze < kt.Preis && kt.Preis < dc.GrenzeMenge)
+                        else if (_dc.DiskountGrenze < kt.Preis && kt.Preis < _dc.GrenzeMenge)
                         {
-                            menge = berechneMenge(dc.VerwendeDiskount, kt.BruttoBedarfPer2 - kt.BestandPer2, kt.DiskontMenge);
+                            menge = berechneMenge(_dc.VerwendeDiskount, kt.BruttoBedarfPer2 - kt.BestandPer2, kt.DiskontMenge);
                         }
-                        else if (dc.GrenzeMenge <= kt.Preis)
+                        else if (_dc.GrenzeMenge <= kt.Preis)
                         {
                             menge = kt.BruttoBedarfPer2 - kt.BestandPer2;
                         }
@@ -162,7 +153,7 @@ namespace ToolFahrrad_v1
                     }
                     if (menge != 0)
                     {
-                        bvPositionen.Add(new Bestellposition(kt, menge, eil));
+                        _bvPositionen.Add(new Bestellposition(kt, menge, eil));
                         teilMengeSumme = teilMengeSumme - kt.BruttoBedarfPer2 + menge;
                     }
                 }
@@ -175,15 +166,15 @@ namespace ToolFahrrad_v1
                     // Check if Lieferdauer of KTeil will be in time
                     if (lieferDauer >= (startPeriod + n) && lieferDauer < (endPeriod + n))
                     {
-                        if (dc.DiskountGrenze >= kt.Preis)
+                        if (_dc.DiskountGrenze >= kt.Preis)
                         {
                             menge = kt.DiskontMenge;
                         }
-                        else if (dc.DiskountGrenze < kt.Preis && kt.Preis < dc.GrenzeMenge)
+                        else if (_dc.DiskountGrenze < kt.Preis && kt.Preis < _dc.GrenzeMenge)
                         {
-                            menge = berechneMenge(dc.VerwendeDiskount, kt.BruttoBedarfPer3 - kt.BestandPer3, kt.DiskontMenge);
+                            menge = berechneMenge(_dc.VerwendeDiskount, kt.BruttoBedarfPer3 - kt.BestandPer3, kt.DiskontMenge);
                         }
-                        else if (dc.GrenzeMenge <= kt.Preis)
+                        else if (_dc.GrenzeMenge <= kt.Preis)
                         {
                             menge = kt.BruttoBedarfPer3 - kt.BestandPer3;
                         }
@@ -195,36 +186,36 @@ namespace ToolFahrrad_v1
                     }
                     if (menge != 0)
                     {
-                        bvPositionen.Add(new Bestellposition(kt, menge, eil));
+                        _bvPositionen.Add(new Bestellposition(kt, menge, eil));
                         teilMengeSumme = teilMengeSumme - kt.BruttoBedarfPer3 + menge;
                     }
                 }
             }
-            optimiereBvPositionen();
+            OptimiereBvPositionen();
         }
         // Transfer list bvPositionen into data container
-        public void ladeBvPositionenInDc()
+        public void LadeBvPositionenInDc()
         {
-            dc.Bestellungen = BvPositionen;
+            _dc.Bestellungen = BvPositionen;
         }
-        public void generiereListeDV()
+        public void GeneriereListeDv()
         {
-            dvPositionen.Clear();
-            foreach (ETeil et in dc.ListeETeile)
+            _dvPositionen.Clear();
+            foreach (ETeil et in _dc.ListeETeile)
             {
                 if (et.ProduktionsMengePer0 < 0)
                 {
-                    addDvPosition(et.Nummer, et.ProduktionsMengePer0 * -1, et.Wert, 0.0);
+                    AddDvPosition(et.Nummer, et.ProduktionsMengePer0 * -1, et.Wert, 0.0);
                 }
             }
         }
-        public void ladeDvPositioneninDc()
+        public void LadeDvPositioneninDc()
         {
-            dc.DVerkauf = DvPositionen;
+            _dc.DVerkauf = DvPositionen;
         }
         private int berechneMenge(double verwDiskont, int bestellMenge, int diskont)
         {
-            int outputMenge = 0;
+            int outputMenge;
             // Member verwDiskont need to be percent -> devide with 100
             // Check if param verwDiskont is either 0 or 100: 0 = take bestellMenge, 100 = take diskount
             if (bestellMenge > diskont || verwDiskont == 0)
@@ -241,40 +232,26 @@ namespace ToolFahrrad_v1
                 verwDiskont = 1 - verwDiskont;
                 // Example: 300 * 0,5
                 int vergleichDiskont = Convert.ToInt32(Math.Round(verwDiskont * diskont, 0));
-                if (vergleichDiskont < bestellMenge)
-                {
-                    outputMenge = diskont;
-                }
-                else
-                {
-                    outputMenge = bestellMenge;
-                }
+                outputMenge = vergleichDiskont < bestellMenge ? diskont : bestellMenge;
             }
             // Return output
             return outputMenge;
         }
-        private void optimiereBvPositionen()
+        private void OptimiereBvPositionen()
         {
             // When found several "eil" orders for the same KTeil, delete orders and create only one with sum amount
-            foreach (KTeil kt in dc.ListeKTeile)
+            foreach (KTeil kt in _dc.ListeKTeile)
             {
-                List<Bestellposition> eilPositionen = new List<Bestellposition>();
-                foreach (Bestellposition bp in bvPositionen)
-                {
-                    if (bp.Kaufteil.Nummer == kt.Nummer && bp.Eil == true)
-                    {
-                        eilPositionen.Add(bp);
-                    }
-                }
+                var eilPositionen = _bvPositionen.Where(bp => bp.Kaufteil.Nummer == kt.Nummer && bp.Eil).ToList();
                 if (eilPositionen.Count() > 1)
                 {
                     int bestellMenge = 0;
                     foreach (Bestellposition bp2 in eilPositionen)
                     {
                         bestellMenge += bp2.Menge;
-                        bvPositionen.Remove(bp2);
+                        _bvPositionen.Remove(bp2);
                     }
-                    bvPositionen.Add(new Bestellposition(kt, bestellMenge, true));
+                    _bvPositionen.Add(new Bestellposition(kt, bestellMenge, true));
                 }
             }
         }

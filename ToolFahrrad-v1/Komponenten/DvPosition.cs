@@ -1,47 +1,21 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace ToolFahrrad_v1
+﻿namespace ToolFahrrad_v1.Komponenten
 {
     /** Class decribes position of parts for direct distribution (Direktverkauf)*/
     public class DvPosition
     {
         // Class members
-        int dvTeilNr;
-        int dvMenge;
-        double dvPreis;
-        double dvStrafe;
         // Constructor
-        public DvPosition(int teilNr_param, int menge_param, double preis_param, double strafe_param)
+        public DvPosition(int teilNrParam, int mengeParam, double preisParam, double strafeParam)
         {
-            dvTeilNr = teilNr_param;
-            dvMenge = menge_param;
-            dvPreis = preis_param;
-            dvStrafe = strafe_param;
+            DvTeilNr = teilNrParam;
+            DvMenge = mengeParam;
+            DvPreis = preisParam;
+            DvStrafe = strafeParam;
         }
         // Getter/Setter
-        public int DvTeilNr
-        {
-            get { return dvTeilNr; }
-            set { dvTeilNr = value; }
-        }
-        public int DvMenge
-        {
-            get { return dvMenge; }
-            set { dvMenge = value; }
-        }
-        public double DvPreis
-        {
-            get { return dvPreis; }
-            set { dvPreis = value; }
-        }
-        public double DvStrafe
-        {
-            get { return dvStrafe; }
-            set { dvStrafe = value; }
-        }
+        public int DvTeilNr { get; set; }
+        public int DvMenge { get; set; }
+        public double DvPreis { get; set; }
+        public double DvStrafe { get; set; }
     }
 }
