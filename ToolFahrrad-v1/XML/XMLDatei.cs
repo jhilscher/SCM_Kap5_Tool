@@ -13,13 +13,13 @@ namespace ToolFahrrad_v1.XML
         private static DataContainer _dc = DataContainer.Instance;
 
         public bool ReadDatei(string pfad) {
-            bool res = false;
-            DataContainer dc = DataContainer.Instance;
-            string zeile = string.Empty;
-            string xmlText = string.Empty;
-            int zahl = 1;
+            var res = false;
+            var dc = DataContainer.Instance;
+            var xmlText = string.Empty;
+            var zahl = 1;
             //xml saubern und in xmlText speichern
             using (var sr = new StreamReader(pfad, Encoding.UTF8)) {
+                string zeile;
                 while ((zeile = sr.ReadLine()) != null) {
                     zeile = zeile.Replace("- <", "<");
                     if (zeile.Contains("results"))

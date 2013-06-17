@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
@@ -17,7 +16,7 @@ namespace ToolFahrrad_v1.Design
 {
     public partial class Fahrrad : Form
     {
-        private readonly String _culInfo = Thread.CurrentThread.CurrentUICulture.Name;
+        private String _culInfo = Thread.CurrentThread.CurrentUICulture.Name;
         readonly DataContainer _instance = DataContainer.Instance;
         readonly XmlDatei _xml = new XmlDatei();
         readonly Produktionsplanung _pp = new Produktionsplanung();
@@ -940,6 +939,7 @@ namespace ToolFahrrad_v1.Design
             switch (language) {
                 case "deutsch":
                     Thread.CurrentThread.CurrentUICulture = new CultureInfo("de");
+                    _culInfo = Thread.CurrentThread.CurrentUICulture.Name;
                     Controls.Clear();
                     Events.Dispose();
                     InitializeComponent();
@@ -947,6 +947,7 @@ namespace ToolFahrrad_v1.Design
                     break;
                 case "englisch":
                     Thread.CurrentThread.CurrentUICulture = new CultureInfo("en");
+                    _culInfo = Thread.CurrentThread.CurrentUICulture.Name;
                     Controls.Clear();
                     Events.Dispose();
                     InitializeComponent();
@@ -1049,7 +1050,7 @@ namespace ToolFahrrad_v1.Design
                     _pp.ProdListe = SaveNeueListe();
 
 
-                _pp.LoadProdListeInDC();
+                _pp.LoadProdListeInDc();
 
                 index = 0;
                 DataGriedViewRemove(dataGridViewPrAuftraege);
