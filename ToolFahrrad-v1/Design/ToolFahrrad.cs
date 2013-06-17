@@ -1255,8 +1255,8 @@ namespace ToolFahrrad_v1.Design
                 _instance.GetArbeitsplatz(Convert.ToInt32(DataGridViewAP.Rows[index].Cells[0].Value.ToString())).RuestungCustom =
                     (Convert.ToInt32(DataGridViewAP.Rows[index].Cells[3].Value.ToString()));
             }
-            XmlVorbereitung(5);
             Information();
+            XmlVorbereitung(5);
             GetInfo(_culInfo.Contains("de") ? "Daten wurde in XML übernommen" : "Take in XML data has been");
         }
 

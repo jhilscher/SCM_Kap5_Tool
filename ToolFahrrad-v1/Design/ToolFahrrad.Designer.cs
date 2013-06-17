@@ -608,6 +608,8 @@
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.dataGridViewProduktAuftrag = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn27 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn28 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tab_arbeitzeit = new System.Windows.Forms.TabPage();
             this.arbPlatzAusfueren = new System.Windows.Forms.PictureBox();
             this.DataGridViewAP = new System.Windows.Forms.DataGridView();
@@ -697,6 +699,7 @@
             this.einstellungenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.hilfeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.handbuchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.videoF2ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.spracheToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.deutschToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.englischToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
@@ -711,9 +714,6 @@
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.info = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.videoF2ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.dataGridViewTextBoxColumn27 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn28 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabs.SuspendLayout();
             this.tab_xml.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pufferP3)).BeginInit();
@@ -6244,6 +6244,17 @@
             this.dataGridViewProduktAuftrag.MouseDown += new System.Windows.Forms.MouseEventHandler(this.dataGridViewProduktAuftrag_MouseDown_1);
             this.dataGridViewProduktAuftrag.MouseMove += new System.Windows.Forms.MouseEventHandler(this.dataGridViewProduktAuftrag_MouseMove_1);
             // 
+            // dataGridViewTextBoxColumn27
+            // 
+            resources.ApplyResources(this.dataGridViewTextBoxColumn27, "dataGridViewTextBoxColumn27");
+            this.dataGridViewTextBoxColumn27.Name = "dataGridViewTextBoxColumn27";
+            this.dataGridViewTextBoxColumn27.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn28
+            // 
+            resources.ApplyResources(this.dataGridViewTextBoxColumn28, "dataGridViewTextBoxColumn28");
+            this.dataGridViewTextBoxColumn28.Name = "dataGridViewTextBoxColumn28";
+            // 
             // tab_arbeitzeit
             // 
             this.tab_arbeitzeit.BackColor = System.Drawing.Color.Transparent;
@@ -6983,6 +6994,12 @@
             resources.ApplyResources(this.handbuchToolStripMenuItem, "handbuchToolStripMenuItem");
             this.handbuchToolStripMenuItem.Click += new System.EventHandler(this.handbuchToolStripMenuItem_Click);
             // 
+            // videoF2ToolStripMenuItem
+            // 
+            this.videoF2ToolStripMenuItem.Name = "videoF2ToolStripMenuItem";
+            resources.ApplyResources(this.videoF2ToolStripMenuItem, "videoF2ToolStripMenuItem");
+            this.videoF2ToolStripMenuItem.Click += new System.EventHandler(this.videoF2ToolStripMenuItem_Click);
+            // 
             // spracheToolStripMenuItem1
             // 
             this.spracheToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -7064,23 +7081,6 @@
             this.timer1.Enabled = true;
             this.timer1.Interval = 5000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // videoF2ToolStripMenuItem
-            // 
-            this.videoF2ToolStripMenuItem.Name = "videoF2ToolStripMenuItem";
-            resources.ApplyResources(this.videoF2ToolStripMenuItem, "videoF2ToolStripMenuItem");
-            this.videoF2ToolStripMenuItem.Click += new System.EventHandler(this.videoF2ToolStripMenuItem_Click);
-            // 
-            // dataGridViewTextBoxColumn27
-            // 
-            resources.ApplyResources(this.dataGridViewTextBoxColumn27, "dataGridViewTextBoxColumn27");
-            this.dataGridViewTextBoxColumn27.Name = "dataGridViewTextBoxColumn27";
-            this.dataGridViewTextBoxColumn27.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn28
-            // 
-            resources.ApplyResources(this.dataGridViewTextBoxColumn28, "dataGridViewTextBoxColumn28");
-            this.dataGridViewTextBoxColumn28.Name = "dataGridViewTextBoxColumn28";
             // 
             // Fahrrad
             // 
