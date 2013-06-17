@@ -99,6 +99,15 @@ namespace ToolFahrrad_v1.Properties {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Kaufteil kann nicht NULL sein ähnelt.
+        /// </summary>
+        internal static string Fahrrad_pictureBox3_Click_Kaufteil_kann_nicht_NULL_sein {
+            get {
+                return ResourceManager.GetString("Fahrrad_pictureBox3_Click_Kaufteil_kann_nicht_NULL_sein", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Kaufteil N ähnelt.
         /// </summary>
         internal static string Fahrrad_pictureBox3_Click_Kaufteil_N {

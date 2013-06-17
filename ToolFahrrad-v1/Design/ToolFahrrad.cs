@@ -73,7 +73,7 @@ namespace ToolFahrrad_v1.Design
                 prognose2.Text = Resources.Fahrrad_toolAusfueren_Click_Periode_en + (Convert.ToInt32(_xml.Period) + 2);
                 prognose3.Text = Resources.Fahrrad_toolAusfueren_Click_Periode_en + (Convert.ToInt32(_xml.Period) + 3);
                 GetInfo("tool was successful");
-                
+
             }
         }
         private void Ausführen() {
@@ -967,16 +967,31 @@ namespace ToolFahrrad_v1.Design
             BenutzerHandbuch();
 
         }
+        private void videoF2ToolStripMenuItem_Click(object sender, EventArgs e) {
+            VideoTutorial();
+        }
         protected override bool ProcessCmdKey(ref Message msg, Keys keyData) {
-            if (keyData == Keys.F1) {
-                BenutzerHandbuch();
+            switch (keyData) {
+                case Keys.F1:
+                    BenutzerHandbuch();
+                    break;
+                case Keys.F2:
+                    VideoTutorial();
+                    break;
             }
             return base.ProcessCmdKey(ref msg, keyData);
         }
+
         private void BenutzerHandbuch() {
             string path = Directory.GetCurrentDirectory() + @"\chm\Handbuch_SS2013_P004_V2.docx";
             Help.ShowHelp(this, path, HelpNavigator.TableOfContents, "");
         }
+
+        private void VideoTutorial() {
+            string path = Directory.GetCurrentDirectory() + @"\chm\Handbuch_Manual PPT 2013.exe";
+            Help.ShowHelp(this, path, HelpNavigator.TableOfContents, "");
+        }
+
         ////////////////////////////////////////////////////////////////////////////
 
         private void TextVisibleFalse() {
@@ -1032,7 +1047,7 @@ namespace ToolFahrrad_v1.Design
                 //neue Liste erstellen und speichern
                 if (p == 4)
                     _pp.ProdListe = SaveNeueListe();
-              
+
 
                 _pp.LoadProdListeInDC();
 
@@ -1158,7 +1173,7 @@ namespace ToolFahrrad_v1.Design
             Information();
             XmlVorbereitung(1); //1=vertriebswunsch
 
-            GetInfo(_culInfo.Contains("de") ? "Daten wurde in XML übernehmen" : "Take in XML data has been");
+            GetInfo(_culInfo.Contains("de") ? "Daten wurde in XML übernommen" : "Take in XML data has been");
         }
         private void p2ETAusfueren_Click(object sender, EventArgs e) {
             (_instance.GetTeil(2) as ETeil).VertriebPer0 = Convert.ToInt32(p2vw_0.Text);
@@ -1190,7 +1205,7 @@ namespace ToolFahrrad_v1.Design
             DispositionDarstellung(2);
             Information();
             XmlVorbereitung(1); //1=vertriebswunsch
-            GetInfo(_culInfo.Contains("de") ? "Daten wurde in XML übernehmen" : "Take in XML data has been");
+            GetInfo(_culInfo.Contains("de") ? "Daten wurde in XML übernommen" : "Take in XML data has been");
         }
         private void p3ETAusfueren_Click(object sender, EventArgs e) {
             (_instance.GetTeil(3) as ETeil).VertriebPer0 = Convert.ToInt32(p3vw_0.Text);
@@ -1231,7 +1246,7 @@ namespace ToolFahrrad_v1.Design
             DispositionDarstellung(3);
             Information();
             XmlVorbereitung(1); //1=vertriebswunsch
-            GetInfo(_culInfo.Contains("de") ? "Daten wurde in XML übernehmen" : "Take in XML data has been");
+            GetInfo(_culInfo.Contains("de") ? "Daten wurde in XML übernommen" : "Take in XML data has been");
         }
         private void arbPlatzAusfueren_Click(object sender, EventArgs e) {
             _bv.ClearBvPositionen();
@@ -1241,7 +1256,7 @@ namespace ToolFahrrad_v1.Design
             }
             XmlVorbereitung(5);
             Information();
-            GetInfo(_culInfo.Contains("de") ? "Daten wurde in XML übernehmen" : "Take in XML data has been");
+            GetInfo(_culInfo.Contains("de") ? "Daten wurde in XML übernommen" : "Take in XML data has been");
         }
 
 
@@ -1262,10 +1277,8 @@ namespace ToolFahrrad_v1.Design
 
 
                 var value = row.Cells[0].Value;
-                if (value != null)
-                {
+                if (value != null) {
                     var teil = _instance.GetTeil(Convert.ToInt32(value.ToString())) as KTeil;
-
                     if (teil != null) {
                         if (row.Cells[1].Value != null) {
                             if (check.Value.ToString() != "true") {
@@ -1273,16 +1286,19 @@ namespace ToolFahrrad_v1.Design
                                 _bp.Add(bbp);
                             }
                         }
-                        else {
+                        else
                             MessageBox.Show(Resources.Fahrrad_pictureBox3_Click_Kaufteil_N + value + Resources.Fahrrad_pictureBox3_Click_, Resources.Fahrrad_XmlOeffnen_Fehlermeldung,
                                             MessageBoxButtons.OK, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button1);
-                        }
                     }
-                    else {
+                    else
                         MessageBox.Show(Resources.Fahrrad_pictureBox3_Click_Kaufteil_N + value + Resources.Fahrrad_pictureBox3_Click_1, Resources.Fahrrad_XmlOeffnen_Fehlermeldung,
                                         MessageBoxButtons.OK, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button1);
-                    }
                 }
+                else {
+                    MessageBox.Show(Resources.Fahrrad_pictureBox3_Click_Kaufteil_kann_nicht_NULL_sein, Resources.Fahrrad_XmlOeffnen_Fehlermeldung,
+                                           MessageBoxButtons.OK, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button1);
+                }
+
             }
             _bestellungUpdate = true;
             _bv.SetBvPositionen(_bp);
@@ -1299,12 +1315,12 @@ namespace ToolFahrrad_v1.Design
         }
         private void uebernehmenXML_Click(object sender, EventArgs e) {
             XmlVorbereitung(3);
-            GetInfo(_culInfo.Contains("de") ? "Daten wurde in XML übernehmen" : "Take in XML data has been");
+            GetInfo(_culInfo.Contains("de") ? "Daten wurde in XML übernommen" : "Take in XML data has been");
         }
 
         private void pictureBox3_Click_1(object sender, EventArgs e) {
             XmlVorbereitung(4);
-            GetInfo(_culInfo.Contains("de") ? "Daten wurde in XML übernehmen" : "Take in XML data has been");
+            GetInfo(_culInfo.Contains("de") ? "Daten wurde in XML übernommen" : "Take in XML data has been");
         }
 
         private void addNr_Click(object sender, EventArgs e) {
@@ -1462,8 +1478,7 @@ namespace ToolFahrrad_v1.Design
         }
 
 
-        private void GetInfo(string text)
-        {
+        private void GetInfo(string text) {
             timer1.Stop();
             info.Text = text;
             if (text != "")
@@ -1474,6 +1489,8 @@ namespace ToolFahrrad_v1.Design
             timer1.Stop();
             GetInfo("");
         }
+
+
         ////////////////////////////////////////////////////////////////////////////////
     }
 }

@@ -1,25 +1,22 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+using System.Windows.Forms;
+using ToolFahrrad_v1.Properties;
 
-namespace ToolFahrrad_v1
+namespace ToolFahrrad_v1.Exceptions
 {
     /** Exception is thrown when Teil could not be recognized */
     class UnknownTeilException : Exception
     {
         // Class member
-        int nr;
         // Constructor
         public UnknownTeilException(int nummer_param)
         {
-            this.nr = nummer_param;
+            Nummer = nummer_param;
+
+            MessageBox.Show("Kaufteil " + nummer_param + " wurde nicht gefunden", Resources.Fahrrad_XmlOeffnen_Fehlermeldung,
+                                           MessageBoxButtons.OK, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button1);
         }
         // Getter / Setter
-        public int Nummer
-        {
-            get { return nr; }
-            set { nr = value; }
-        }
+        public int Nummer { get; set; }
     }
 }

@@ -159,4 +159,7 @@ Diese zeile wird ignoriert</value>
   <data name="Fahrrad_toolAusfueren_Click_Periode_en" xml:space="preserve">
     <value>Forcast </value>
   </data>
+  <data name="Fahrrad_pictureBox3_Click_Kaufteil_kann_nicht_NULL_sein" xml:space="preserve">
+    <value>Kaufteil kann nicht NULL sein</value>
+  </data>
 </root>
