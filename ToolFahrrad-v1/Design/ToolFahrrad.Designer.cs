@@ -6230,6 +6230,7 @@
             this.helpProvider1.SetShowHelp(this.pictureBox3, ((bool)(resources.GetObject("pictureBox3.ShowHelp"))));
             this.pictureBox3.TabStop = false;
             this.toolTip.SetToolTip(this.pictureBox3, resources.GetString("pictureBox3.ToolTip"));
+            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click_1);
             // 
             // dataGridViewProduktAuftrag
             // 

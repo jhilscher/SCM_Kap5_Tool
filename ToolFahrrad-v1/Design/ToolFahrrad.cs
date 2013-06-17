@@ -1015,6 +1015,20 @@ namespace ToolFahrrad_v1.Design
                     }
                 }
             }
+            //TODO: Ändern
+            if (p == 100 || p == 4) {
+                _pp.LoadProdListeInDC();
+                index = 0;
+                DataGriedViewRemove(dataGridViewPrAuftraege);
+                foreach (var d in _instance.ListeProduktion)
+                {
+                    dataGridViewPrAuftraege.Rows.Add();
+                    dataGridViewPrAuftraege.Rows[index].Cells[0].Value = d.Key;
+                    dataGridViewPrAuftraege.Rows[index].Cells[1].Value = d.Value;
+                    ++index;
+                }
+            }
+
             if (p == 100 || p == 5) {
                 index = 0;
                 DataGriedViewRemove(dataGridViewProduktKapazit);
@@ -1027,36 +1041,8 @@ namespace ToolFahrrad_v1.Design
                 }
 
             }
-            //TODO: Ändern
-            if (p == 100 || p == 4) {
-                //index = 0;
-                //DataGriedViewRemove(dataGridViewProduktAuftrag);
-                //foreach (ETeil et in _instance.ListeETeile.Where(et => et.InWartschlange > 0)) {
-                //    ProduktAuftrag(et, index);
-                //    ++index;
-                //}
-                //foreach (ETeil et in _instance.ListeETeile.Where(et => et.InWartschlange == 0 && et.ProduktionsMengePer0 > 0)) {
-                //    ProduktAuftrag(et, index);
-                //    ++index;
-                //}
-                //foreach (ETeil et in _instance.ListeETeile.Where(et => et.InWartschlange == 0 && et.ProduktionsMengePer0 <= 0)) {
-                //    ProduktAuftrag(et, index);
-                //    ++index;
-                //}
-            }
+            
         }
-
-        //private void ProduktAuftrag(ETeil et, int index) {
-        //    dataGridViewProduktAuftrag.Rows.Add();
-        //    dataGridViewProduktAuftrag.Rows[index].DefaultCellStyle.BackColor = Color.LightCyan;
-        //    dataGridViewProduktAuftrag.Rows[index].Cells[0].Value = et.Nummer;
-        //    if (!et.Verwendung.Contains("KDH"))
-        //        dataGridViewProduktAuftrag.Rows[index].Cells[1].Value = et.ProduktionsMengePer0;
-        //    else {
-        //        var prodMenge = et.KdhProduktionsmenge.Sum(pair => pair.Value);
-        //        dataGridViewProduktAuftrag.Rows[index].Cells[1].Value = prodMenge;
-        //    }
-        //}
 
         /// <summary>
         /// 
@@ -1235,6 +1221,9 @@ namespace ToolFahrrad_v1.Design
             XmlVorbereitung(5);
             Information();
         }
+
+        
+
         private void pictureBox3_Click(object sender, EventArgs e) {
             if (dataGridViewBestellung.AllowUserToAddRows) {
                 dataGridViewBestellung.AllowUserToAddRows = false;
@@ -1284,6 +1273,11 @@ namespace ToolFahrrad_v1.Design
         private void uebernehmenXML_Click(object sender, EventArgs e) {
             XmlVorbereitung(3);
         }
+
+        private void pictureBox3_Click_1(object sender, EventArgs e) {
+            XmlVorbereitung(4);
+        }
+
         private void addNr_Click(object sender, EventArgs e) {
             dataGridViewBestellung.AllowUserToAddRows = true;
             kNr.ReadOnly = false;
@@ -1426,6 +1420,8 @@ namespace ToolFahrrad_v1.Design
             DataGridViewHitTestType dgt = dataGridViewProduktAuftrag.HitTest(p.X, p.Y).Type;
             e.Effect = IsCellOrRowHeader(p.X, p.Y) ? DragDropEffects.Move : DragDropEffects.None;
         }
+
+        
 
 
 
