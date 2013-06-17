@@ -606,7 +606,6 @@
             this.colPlanung = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.dataGridViewProduktAuftrag = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn27 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -700,6 +699,7 @@
             this.einstellungenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.hilfeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.handbuchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.videoF2ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.spracheToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.deutschToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.englischToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
@@ -712,6 +712,8 @@
             this.helpProvider1 = new System.Windows.Forms.HelpProvider();
             this.imageListPlusMinus = new System.Windows.Forms.ImageList(this.components);
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
+            this.info = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.tabs.SuspendLayout();
             this.tab_xml.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pufferP3)).BeginInit();
@@ -751,7 +753,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewETeil)).BeginInit();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewProduktAuftrag)).BeginInit();
             this.tab_arbeitzeit.SuspendLayout();
@@ -6198,7 +6199,6 @@
             // 
             this.tabPage1.BackColor = System.Drawing.Color.Transparent;
             this.tabPage1.Controls.Add(this.pictureBox4);
-            this.tabPage1.Controls.Add(this.pictureBox5);
             this.tabPage1.Controls.Add(this.pictureBox3);
             this.tabPage1.Controls.Add(this.dataGridViewProduktAuftrag);
             resources.ApplyResources(this.tabPage1, "tabPage1");
@@ -6212,15 +6212,7 @@
             this.helpProvider1.SetShowHelp(this.pictureBox4, ((bool)(resources.GetObject("pictureBox4.ShowHelp"))));
             this.pictureBox4.TabStop = false;
             this.toolTip.SetToolTip(this.pictureBox4, resources.GetString("pictureBox4.ToolTip"));
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.Cursor = System.Windows.Forms.Cursors.Hand;
-            resources.ApplyResources(this.pictureBox5, "pictureBox5");
-            this.pictureBox5.Name = "pictureBox5";
-            this.helpProvider1.SetShowHelp(this.pictureBox5, ((bool)(resources.GetObject("pictureBox5.ShowHelp"))));
-            this.pictureBox5.TabStop = false;
-            this.toolTip.SetToolTip(this.pictureBox5, resources.GetString("pictureBox5.ToolTip"));
+            this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
             // 
             // pictureBox3
             // 
@@ -6256,6 +6248,7 @@
             // 
             resources.ApplyResources(this.dataGridViewTextBoxColumn27, "dataGridViewTextBoxColumn27");
             this.dataGridViewTextBoxColumn27.Name = "dataGridViewTextBoxColumn27";
+            this.dataGridViewTextBoxColumn27.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn28
             // 
@@ -6990,7 +6983,8 @@
             // hilfeToolStripMenuItem
             // 
             this.hilfeToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.handbuchToolStripMenuItem});
+            this.handbuchToolStripMenuItem,
+            this.videoF2ToolStripMenuItem});
             resources.ApplyResources(this.hilfeToolStripMenuItem, "hilfeToolStripMenuItem");
             this.hilfeToolStripMenuItem.Name = "hilfeToolStripMenuItem";
             // 
@@ -6999,6 +6993,12 @@
             this.handbuchToolStripMenuItem.Name = "handbuchToolStripMenuItem";
             resources.ApplyResources(this.handbuchToolStripMenuItem, "handbuchToolStripMenuItem");
             this.handbuchToolStripMenuItem.Click += new System.EventHandler(this.handbuchToolStripMenuItem_Click);
+            // 
+            // videoF2ToolStripMenuItem
+            // 
+            this.videoF2ToolStripMenuItem.Name = "videoF2ToolStripMenuItem";
+            resources.ApplyResources(this.videoF2ToolStripMenuItem, "videoF2ToolStripMenuItem");
+            this.videoF2ToolStripMenuItem.Click += new System.EventHandler(this.videoF2ToolStripMenuItem_Click);
             // 
             // spracheToolStripMenuItem1
             // 
@@ -7070,10 +7070,23 @@
             this.imageListPlusMinus.Images.SetKeyName(0, "minus.png");
             this.imageListPlusMinus.Images.SetKeyName(1, "plus.png");
             // 
+            // info
+            // 
+            resources.ApplyResources(this.info, "info");
+            this.info.ForeColor = System.Drawing.Color.Green;
+            this.info.Name = "info";
+            // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Interval = 5000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // Fahrrad
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             resources.ApplyResources(this, "$this");
+            this.Controls.Add(this.info);
             this.Controls.Add(this.xml_export);
             this.Controls.Add(this.menu);
             this.Controls.Add(this.tabs);
@@ -7127,7 +7140,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewETeil)).EndInit();
             this.tabPage1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewProduktAuftrag)).EndInit();
             this.tab_arbeitzeit.ResumeLayout(false);
@@ -7839,15 +7851,17 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn colPlanung;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.DataGridView dataGridViewProduktAuftrag;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn27;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn28;
         private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.DataGridView dataGridViewPrAuftraege;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn31;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn33;
         private System.Windows.Forms.Label lb12;
+        private System.Windows.Forms.Label info;
+        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.ToolStripMenuItem videoF2ToolStripMenuItem;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn27;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn28;
     }
 }
 

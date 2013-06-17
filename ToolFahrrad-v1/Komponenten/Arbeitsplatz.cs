@@ -191,7 +191,7 @@ namespace ToolFahrrad_v1.Komponenten
             return false;
         }
         public int GetVerfuegbareZeit {
-            get { return anz_schichten * 2400 + anz_uebermin * 5; }
+            get { return anz_schichten * ZeitErsteSchicht + anz_uebermin * 5; }
         }
         public List<ETeil> GetHergestellteTeile {
             get {

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using ToolFahrrad_v1.Exceptions;
 using ToolFahrrad_v1.Komponenten;
 
 namespace ToolFahrrad_v1
@@ -13,7 +14,6 @@ namespace ToolFahrrad_v1
         private readonly List<DvPosition> _listeDVerkauf;
         private readonly Dictionary<int, Teil> _listeTeile;
         private readonly Dictionary<int, Arbeitsplatz> _listeArbeitsplaetze;
-        private Dictionary<int, int> _listeProduktion;
         private int _ersteSchichtMitUeberStunden = 3600;
         private int _zweiteSchichtMitUeberstunden = 6000;
         private double _verwendeAbweichung = 0.5;
@@ -53,7 +53,7 @@ namespace ToolFahrrad_v1
             _listeDVerkauf = new List<DvPosition>();
             _listeTeile = new Dictionary<int, Teil>();
             _listeArbeitsplaetze = new Dictionary<int, Arbeitsplatz>();
-            _listeProduktion = new Dictionary<int, int>();
+            ListeProduktion = new Dictionary<int, int>();
         }
         public bool BerechneKindTeil { get; private set; }
         // Getter for _instance of DataContainer
@@ -62,11 +62,8 @@ namespace ToolFahrrad_v1
             get { return _instance; }
         }
         // Getter / Setter for Reihenfolge of production
-        public Dictionary<int, int> ListeProduktion
-        {
-            get { return _listeProduktion; }
-            set { _listeProduktion = value; }
-        }
+        public Dictionary<int, int> ListeProduktion { get; set; }
+
         // Getter of list all KTeil
         public IEnumerable<KTeil> ListeKTeile
         {
