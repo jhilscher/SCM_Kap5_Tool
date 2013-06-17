@@ -604,6 +604,10 @@
             this.colWarteschlange = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colBearbeitung = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colPlanung = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.dataGridViewProduktAuftrag = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn27 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn28 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tab_arbeitzeit = new System.Windows.Forms.TabPage();
             this.arbPlatzAusfueren = new System.Windows.Forms.PictureBox();
             this.DataGridViewAP = new System.Windows.Forms.DataGridView();
@@ -663,10 +667,6 @@
             this.dataGridViewTextBoxColumn30 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ueberStunden = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label274 = new System.Windows.Forms.Label();
-            this.dataGridViewProduktAuftrag = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn27 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn28 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label273 = new System.Windows.Forms.Label();
             this.dataGridViewEinkauf = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn24 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn25 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -705,6 +705,13 @@
             this.helpProvider1 = new System.Windows.Forms.HelpProvider();
             this.imageListPlusMinus = new System.Windows.Forms.ImageList(this.components);
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.lb12 = new System.Windows.Forms.Label();
+            this.dataGridViewPrAuftraege = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn31 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn33 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabs.SuspendLayout();
             this.tab_xml.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pufferP3)).BeginInit();
@@ -742,6 +749,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.p3ETAusfueren)).BeginInit();
             this.tab_eTeil.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewETeil)).BeginInit();
+            this.tabPage1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewProduktAuftrag)).BeginInit();
             this.tab_arbeitzeit.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.arbPlatzAusfueren)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridViewAP)).BeginInit();
@@ -762,12 +771,15 @@
             this.xmlOutput.SuspendLayout();
             this.panelXMLerstellen.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewProduktKapazit)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewProduktAuftrag)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewEinkauf)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDirekt)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewVertrieb)).BeginInit();
             this.menu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.xml_export)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPrAuftraege)).BeginInit();
             this.SuspendLayout();
             // 
             // tabs
@@ -1311,6 +1323,7 @@
             this.tab1.Controls.Add(this.tab_P2);
             this.tab1.Controls.Add(this.tab_P3);
             this.tab1.Controls.Add(this.tab_eTeil);
+            this.tab1.Controls.Add(this.tabPage1);
             resources.ApplyResources(this.tab1, "tab1");
             this.tab1.Name = "tab1";
             this.tab1.SelectedIndex = 0;
@@ -5929,6 +5942,46 @@
             this.colPlanung.Name = "colPlanung";
             this.colPlanung.ReadOnly = true;
             // 
+            // tabPage1
+            // 
+            this.tabPage1.BackColor = System.Drawing.Color.Transparent;
+            this.tabPage1.Controls.Add(this.pictureBox4);
+            this.tabPage1.Controls.Add(this.pictureBox5);
+            this.tabPage1.Controls.Add(this.pictureBox3);
+            this.tabPage1.Controls.Add(this.dataGridViewProduktAuftrag);
+            resources.ApplyResources(this.tabPage1, "tabPage1");
+            this.tabPage1.Name = "tabPage1";
+            // 
+            // dataGridViewProduktAuftrag
+            // 
+            this.dataGridViewProduktAuftrag.AllowDrop = true;
+            this.dataGridViewProduktAuftrag.AllowUserToAddRows = false;
+            this.dataGridViewProduktAuftrag.AllowUserToDeleteRows = false;
+            this.dataGridViewProduktAuftrag.AllowUserToOrderColumns = true;
+            this.dataGridViewProduktAuftrag.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.dataGridViewProduktAuftrag.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridViewProduktAuftrag.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewProduktAuftrag.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn27,
+            this.dataGridViewTextBoxColumn28});
+            resources.ApplyResources(this.dataGridViewProduktAuftrag, "dataGridViewProduktAuftrag");
+            this.dataGridViewProduktAuftrag.Name = "dataGridViewProduktAuftrag";
+            this.helpProvider1.SetShowHelp(this.dataGridViewProduktAuftrag, ((bool)(resources.GetObject("dataGridViewProduktAuftrag.ShowHelp"))));
+            this.dataGridViewProduktAuftrag.DragDrop += new System.Windows.Forms.DragEventHandler(this.dataGridViewProduktAuftrag_DragDrop_1);
+            this.dataGridViewProduktAuftrag.DragOver += new System.Windows.Forms.DragEventHandler(this.dataGridViewProduktAuftrag_DragOver_1);
+            this.dataGridViewProduktAuftrag.MouseDown += new System.Windows.Forms.MouseEventHandler(this.dataGridViewProduktAuftrag_MouseDown_1);
+            this.dataGridViewProduktAuftrag.MouseMove += new System.Windows.Forms.MouseEventHandler(this.dataGridViewProduktAuftrag_MouseMove_1);
+            // 
+            // dataGridViewTextBoxColumn27
+            // 
+            resources.ApplyResources(this.dataGridViewTextBoxColumn27, "dataGridViewTextBoxColumn27");
+            this.dataGridViewTextBoxColumn27.Name = "dataGridViewTextBoxColumn27";
+            // 
+            // dataGridViewTextBoxColumn28
+            // 
+            resources.ApplyResources(this.dataGridViewTextBoxColumn28, "dataGridViewTextBoxColumn28");
+            this.dataGridViewTextBoxColumn28.Name = "dataGridViewTextBoxColumn28";
+            // 
             // tab_arbeitzeit
             // 
             this.tab_arbeitzeit.BackColor = System.Drawing.Color.Transparent;
@@ -6383,10 +6436,10 @@
             // 
             // panelXMLerstellen
             // 
+            this.panelXMLerstellen.Controls.Add(this.dataGridViewPrAuftraege);
+            this.panelXMLerstellen.Controls.Add(this.lb12);
             this.panelXMLerstellen.Controls.Add(this.dataGridViewProduktKapazit);
             this.panelXMLerstellen.Controls.Add(this.label274);
-            this.panelXMLerstellen.Controls.Add(this.dataGridViewProduktAuftrag);
-            this.panelXMLerstellen.Controls.Add(this.label273);
             this.panelXMLerstellen.Controls.Add(this.dataGridViewEinkauf);
             this.panelXMLerstellen.Controls.Add(this.label272);
             this.panelXMLerstellen.Controls.Add(this.dataGridViewDirekt);
@@ -6436,42 +6489,6 @@
             resources.ApplyResources(this.label274, "label274");
             this.label274.Name = "label274";
             this.helpProvider1.SetShowHelp(this.label274, ((bool)(resources.GetObject("label274.ShowHelp"))));
-            // 
-            // dataGridViewProduktAuftrag
-            // 
-            this.dataGridViewProduktAuftrag.AllowDrop = true;
-            this.dataGridViewProduktAuftrag.AllowUserToAddRows = false;
-            this.dataGridViewProduktAuftrag.AllowUserToDeleteRows = false;
-            this.dataGridViewProduktAuftrag.AllowUserToOrderColumns = true;
-            this.dataGridViewProduktAuftrag.BackgroundColor = System.Drawing.SystemColors.Control;
-            this.dataGridViewProduktAuftrag.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridViewProduktAuftrag.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewProduktAuftrag.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn27,
-            this.dataGridViewTextBoxColumn28});
-            resources.ApplyResources(this.dataGridViewProduktAuftrag, "dataGridViewProduktAuftrag");
-            this.dataGridViewProduktAuftrag.Name = "dataGridViewProduktAuftrag";
-            this.helpProvider1.SetShowHelp(this.dataGridViewProduktAuftrag, ((bool)(resources.GetObject("dataGridViewProduktAuftrag.ShowHelp"))));
-            this.dataGridViewProduktAuftrag.DragDrop += new System.Windows.Forms.DragEventHandler(this.dataGridViewProduktAuftrag_DragDrop);
-            this.dataGridViewProduktAuftrag.DragOver += new System.Windows.Forms.DragEventHandler(this.dataGridViewProduktAuftrag_DragOver);
-            this.dataGridViewProduktAuftrag.MouseDown += new System.Windows.Forms.MouseEventHandler(this.dataGridViewProduktAuftrag_MouseDown);
-            this.dataGridViewProduktAuftrag.MouseMove += new System.Windows.Forms.MouseEventHandler(this.dataGridViewProduktAuftrag_MouseMove);
-            // 
-            // dataGridViewTextBoxColumn27
-            // 
-            resources.ApplyResources(this.dataGridViewTextBoxColumn27, "dataGridViewTextBoxColumn27");
-            this.dataGridViewTextBoxColumn27.Name = "dataGridViewTextBoxColumn27";
-            // 
-            // dataGridViewTextBoxColumn28
-            // 
-            resources.ApplyResources(this.dataGridViewTextBoxColumn28, "dataGridViewTextBoxColumn28");
-            this.dataGridViewTextBoxColumn28.Name = "dataGridViewTextBoxColumn28";
-            // 
-            // label273
-            // 
-            resources.ApplyResources(this.label273, "label273");
-            this.label273.Name = "label273";
-            this.helpProvider1.SetShowHelp(this.label273, ((bool)(resources.GetObject("label273.ShowHelp"))));
             // 
             // dataGridViewEinkauf
             // 
@@ -6740,6 +6757,66 @@
             this.imageListPlusMinus.Images.SetKeyName(0, "minus.png");
             this.imageListPlusMinus.Images.SetKeyName(1, "plus.png");
             // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Cursor = System.Windows.Forms.Cursors.Hand;
+            resources.ApplyResources(this.pictureBox3, "pictureBox3");
+            this.pictureBox3.Name = "pictureBox3";
+            this.helpProvider1.SetShowHelp(this.pictureBox3, ((bool)(resources.GetObject("pictureBox3.ShowHelp"))));
+            this.pictureBox3.TabStop = false;
+            this.toolTip.SetToolTip(this.pictureBox3, resources.GetString("pictureBox3.ToolTip"));
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Cursor = System.Windows.Forms.Cursors.Hand;
+            resources.ApplyResources(this.pictureBox4, "pictureBox4");
+            this.pictureBox4.Name = "pictureBox4";
+            this.helpProvider1.SetShowHelp(this.pictureBox4, ((bool)(resources.GetObject("pictureBox4.ShowHelp"))));
+            this.pictureBox4.TabStop = false;
+            this.toolTip.SetToolTip(this.pictureBox4, resources.GetString("pictureBox4.ToolTip"));
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Cursor = System.Windows.Forms.Cursors.Hand;
+            resources.ApplyResources(this.pictureBox5, "pictureBox5");
+            this.pictureBox5.Name = "pictureBox5";
+            this.helpProvider1.SetShowHelp(this.pictureBox5, ((bool)(resources.GetObject("pictureBox5.ShowHelp"))));
+            this.pictureBox5.TabStop = false;
+            this.toolTip.SetToolTip(this.pictureBox5, resources.GetString("pictureBox5.ToolTip"));
+            // 
+            // lb12
+            // 
+            resources.ApplyResources(this.lb12, "lb12");
+            this.lb12.Name = "lb12";
+            this.helpProvider1.SetShowHelp(this.lb12, ((bool)(resources.GetObject("lb12.ShowHelp"))));
+            // 
+            // dataGridViewPrAuftraege
+            // 
+            this.dataGridViewPrAuftraege.AllowUserToAddRows = false;
+            this.dataGridViewPrAuftraege.AllowUserToDeleteRows = false;
+            this.dataGridViewPrAuftraege.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.dataGridViewPrAuftraege.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridViewPrAuftraege.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewPrAuftraege.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn31,
+            this.dataGridViewTextBoxColumn33});
+            resources.ApplyResources(this.dataGridViewPrAuftraege, "dataGridViewPrAuftraege");
+            this.dataGridViewPrAuftraege.Name = "dataGridViewPrAuftraege";
+            this.dataGridViewPrAuftraege.ReadOnly = true;
+            this.helpProvider1.SetShowHelp(this.dataGridViewPrAuftraege, ((bool)(resources.GetObject("dataGridViewPrAuftraege.ShowHelp"))));
+            // 
+            // dataGridViewTextBoxColumn31
+            // 
+            resources.ApplyResources(this.dataGridViewTextBoxColumn31, "dataGridViewTextBoxColumn31");
+            this.dataGridViewTextBoxColumn31.Name = "dataGridViewTextBoxColumn31";
+            this.dataGridViewTextBoxColumn31.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn33
+            // 
+            resources.ApplyResources(this.dataGridViewTextBoxColumn33, "dataGridViewTextBoxColumn33");
+            this.dataGridViewTextBoxColumn33.Name = "dataGridViewTextBoxColumn33";
+            this.dataGridViewTextBoxColumn33.ReadOnly = true;
+            // 
             // Fahrrad
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -6795,6 +6872,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.p3ETAusfueren)).EndInit();
             this.tab_eTeil.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewETeil)).EndInit();
+            this.tabPage1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewProduktAuftrag)).EndInit();
             this.tab_arbeitzeit.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.arbPlatzAusfueren)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridViewAP)).EndInit();
@@ -6817,13 +6896,16 @@
             this.panelXMLerstellen.ResumeLayout(false);
             this.panelXMLerstellen.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewProduktKapazit)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewProduktAuftrag)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewEinkauf)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDirekt)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewVertrieb)).EndInit();
             this.menu.ResumeLayout(false);
             this.menu.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.xml_export)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPrAuftraege)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -7423,14 +7505,6 @@
         private System.Windows.Forms.PictureBox p3ETAusfueren;
         private System.Windows.Forms.TabPage tab_arbeitzeit;
         private System.Windows.Forms.DataGridView DataGridViewAP;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colWarteschlange;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colBearbeitung;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colPlanung;
         private System.Windows.Forms.DataGridView dataGridViewBestellung;
         private System.Windows.Forms.PictureBox saveAenderungen;
         private System.Windows.Forms.PictureBox zurueck;
@@ -7440,8 +7514,6 @@
         private System.Windows.Forms.Panel panelXMLerstellen;
         private System.Windows.Forms.DataGridView dataGridViewProduktKapazit;
         private System.Windows.Forms.Label label274;
-        private System.Windows.Forms.DataGridView dataGridViewProduktAuftrag;
-        private System.Windows.Forms.Label label273;
         private System.Windows.Forms.DataGridView dataGridViewEinkauf;
         private System.Windows.Forms.Label label272;
         private System.Windows.Forms.DataGridView dataGridViewDirekt;
@@ -7478,8 +7550,6 @@
         private System.Windows.Forms.DataGridViewCheckBoxColumn s3;
         private System.Windows.Forms.DataGridViewImageColumn ueber;
         private System.Windows.Forms.ImageList imageListPlusMinus;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn27;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn28;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn24;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn25;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn26;
@@ -7506,6 +7576,25 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn29;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn30;
         private System.Windows.Forms.DataGridViewTextBoxColumn ueberStunden;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colWarteschlange;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colBearbeitung;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colPlanung;
+        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.DataGridView dataGridViewProduktAuftrag;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn27;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn28;
+        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.DataGridView dataGridViewPrAuftraege;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn31;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn33;
+        private System.Windows.Forms.Label lb12;
     }
 }
 
