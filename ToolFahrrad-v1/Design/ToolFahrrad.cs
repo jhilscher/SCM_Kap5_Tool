@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
@@ -31,6 +32,7 @@ namespace ToolFahrrad_v1.Design
         private Rectangle _dragBoxSrc;
         private int _rowIndexSrc;
         private int _rowIndexTar;
+
         /// <summary>
         /// Konstruktor
         /// </summary>
@@ -63,12 +65,15 @@ namespace ToolFahrrad_v1.Design
                 prognose1.Text = Resources.Fahrrad_toolAusfueren_Click_Periode_ + (Convert.ToInt32(_xml.Period) + 1);
                 prognose2.Text = Resources.Fahrrad_toolAusfueren_Click_Periode_ + (Convert.ToInt32(_xml.Period) + 2);
                 prognose3.Text = Resources.Fahrrad_toolAusfueren_Click_Periode_ + (Convert.ToInt32(_xml.Period) + 3);
+                GetInfo("Tool wurde erfolgreich ausgeführt");
             }
             else {
                 aktulleWoche.Text = Resources.Fahrrad_toolAusfueren_Click_Periode_en + _xml.Period;
                 prognose1.Text = Resources.Fahrrad_toolAusfueren_Click_Periode_en + (Convert.ToInt32(_xml.Period) + 1);
                 prognose2.Text = Resources.Fahrrad_toolAusfueren_Click_Periode_en + (Convert.ToInt32(_xml.Period) + 2);
                 prognose3.Text = Resources.Fahrrad_toolAusfueren_Click_Periode_en + (Convert.ToInt32(_xml.Period) + 3);
+                GetInfo("tool was successful");
+                
             }
         }
         private void Ausführen() {
@@ -370,15 +375,14 @@ namespace ToolFahrrad_v1.Design
                 ++index;
             }
             #endregion
-            
+
             //Produktionsaufträge
             #region Produktionsaufträge
             DataGriedViewRemove(dataGridViewProduktAuftrag);
             _pp.OptimiereProdListe();
             Dictionary<int, int> prList = _pp.ProdListe;
             index = 0;
-            foreach (var i in prList)
-            {
+            foreach (var i in prList) {
                 dataGridViewProduktAuftrag.Rows.Add();
                 dataGridViewProduktAuftrag.Rows[index].Cells[0].Value = i.Key;
                 dataGridViewProduktAuftrag.Rows[index].Cells[1].Value = i.Value;
@@ -460,6 +464,8 @@ namespace ToolFahrrad_v1.Design
             _okPrognose = true;
             if (_okXml)
                 toolAusfueren.Visible = true;
+
+            GetInfo(_culInfo.Contains("de") ? "Prognose wurde gespeichert" : "Forecast has been saved");
         }
 
         /// <summary>
@@ -881,6 +887,7 @@ namespace ToolFahrrad_v1.Design
                     _okXml = true;
                     if (_okPrognose)
                         toolAusfueren.Visible = true;
+                    GetInfo(_culInfo.Contains("de") ? "XML-Datei wurde importiert" : "XML-file is imported");
                 }
                 else {
                     xmlTextBox.Text = fileDialog.FileName;
@@ -1021,13 +1028,17 @@ namespace ToolFahrrad_v1.Design
                     }
                 }
             }
-            //TODO: Ändern
             if (p == 100 || p == 4) {
+                //neue Liste erstellen und speichern
+                if (p == 4)
+                    _pp.ProdListe = SaveNeueListe();
+              
+
                 _pp.LoadProdListeInDC();
+
                 index = 0;
                 DataGriedViewRemove(dataGridViewPrAuftraege);
-                foreach (var d in _instance.ListeProduktion)
-                {
+                foreach (var d in _instance.ListeProduktion) {
                     dataGridViewPrAuftraege.Rows.Add();
                     dataGridViewPrAuftraege.Rows[index].Cells[0].Value = d.Key;
                     dataGridViewPrAuftraege.Rows[index].Cells[1].Value = d.Value;
@@ -1045,10 +1056,10 @@ namespace ToolFahrrad_v1.Design
                     dataGridViewProduktKapazit.Rows[index].Cells[2].Value = i[2] / 5;
                     ++index;
                 }
-
             }
-            
         }
+
+
 
         /// <summary>
         /// 
@@ -1146,6 +1157,8 @@ namespace ToolFahrrad_v1.Design
             DispositionDarstellung(1);
             Information();
             XmlVorbereitung(1); //1=vertriebswunsch
+
+            GetInfo(_culInfo.Contains("de") ? "Daten wurde in XML übernehmen" : "Take in XML data has been");
         }
         private void p2ETAusfueren_Click(object sender, EventArgs e) {
             (_instance.GetTeil(2) as ETeil).VertriebPer0 = Convert.ToInt32(p2vw_0.Text);
@@ -1177,6 +1190,7 @@ namespace ToolFahrrad_v1.Design
             DispositionDarstellung(2);
             Information();
             XmlVorbereitung(1); //1=vertriebswunsch
+            GetInfo(_culInfo.Contains("de") ? "Daten wurde in XML übernehmen" : "Take in XML data has been");
         }
         private void p3ETAusfueren_Click(object sender, EventArgs e) {
             (_instance.GetTeil(3) as ETeil).VertriebPer0 = Convert.ToInt32(p3vw_0.Text);
@@ -1217,6 +1231,7 @@ namespace ToolFahrrad_v1.Design
             DispositionDarstellung(3);
             Information();
             XmlVorbereitung(1); //1=vertriebswunsch
+            GetInfo(_culInfo.Contains("de") ? "Daten wurde in XML übernehmen" : "Take in XML data has been");
         }
         private void arbPlatzAusfueren_Click(object sender, EventArgs e) {
             _bv.ClearBvPositionen();
@@ -1226,9 +1241,10 @@ namespace ToolFahrrad_v1.Design
             }
             XmlVorbereitung(5);
             Information();
+            GetInfo(_culInfo.Contains("de") ? "Daten wurde in XML übernehmen" : "Take in XML data has been");
         }
 
-        
+
 
         private void pictureBox3_Click(object sender, EventArgs e) {
             if (dataGridViewBestellung.AllowUserToAddRows) {
@@ -1244,23 +1260,28 @@ namespace ToolFahrrad_v1.Design
                 if (check.Value == null)
                     check.Value = false;
 
-                var teil = _instance.GetTeil(Convert.ToInt32(row.Cells[0].Value.ToString())) as KTeil;
 
-                if (teil != null) {
-                    if (row.Cells[1].Value != null) {
-                        if (check.Value.ToString() != "true") {
-                            var bbp = new Bestellposition(teil, Convert.ToInt32(row.Cells[1].Value.ToString()), c);
-                            _bp.Add(bbp);
+                var value = row.Cells[0].Value;
+                if (value != null)
+                {
+                    var teil = _instance.GetTeil(Convert.ToInt32(value.ToString())) as KTeil;
+
+                    if (teil != null) {
+                        if (row.Cells[1].Value != null) {
+                            if (check.Value.ToString() != "true") {
+                                var bbp = new Bestellposition(teil, Convert.ToInt32(row.Cells[1].Value.ToString()), c);
+                                _bp.Add(bbp);
+                            }
+                        }
+                        else {
+                            MessageBox.Show(Resources.Fahrrad_pictureBox3_Click_Kaufteil_N + value + Resources.Fahrrad_pictureBox3_Click_, Resources.Fahrrad_XmlOeffnen_Fehlermeldung,
+                                            MessageBoxButtons.OK, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button1);
                         }
                     }
                     else {
-                        MessageBox.Show(Resources.Fahrrad_pictureBox3_Click_Kaufteil_N + row.Cells[0].Value + Resources.Fahrrad_pictureBox3_Click_, Resources.Fahrrad_XmlOeffnen_Fehlermeldung,
-                       MessageBoxButtons.OK, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button1);
+                        MessageBox.Show(Resources.Fahrrad_pictureBox3_Click_Kaufteil_N + value + Resources.Fahrrad_pictureBox3_Click_1, Resources.Fahrrad_XmlOeffnen_Fehlermeldung,
+                                        MessageBoxButtons.OK, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button1);
                     }
-                }
-                else {
-                    MessageBox.Show(Resources.Fahrrad_pictureBox3_Click_Kaufteil_N + row.Cells[0].Value + Resources.Fahrrad_pictureBox3_Click_1, Resources.Fahrrad_XmlOeffnen_Fehlermeldung,
-                        MessageBoxButtons.OK, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button1);
                 }
             }
             _bestellungUpdate = true;
@@ -1278,16 +1299,24 @@ namespace ToolFahrrad_v1.Design
         }
         private void uebernehmenXML_Click(object sender, EventArgs e) {
             XmlVorbereitung(3);
+            GetInfo(_culInfo.Contains("de") ? "Daten wurde in XML übernehmen" : "Take in XML data has been");
         }
 
         private void pictureBox3_Click_1(object sender, EventArgs e) {
             XmlVorbereitung(4);
+            GetInfo(_culInfo.Contains("de") ? "Daten wurde in XML übernehmen" : "Take in XML data has been");
         }
 
         private void addNr_Click(object sender, EventArgs e) {
             dataGridViewBestellung.AllowUserToAddRows = true;
             kNr.ReadOnly = false;
         }
+
+        private Dictionary<int, int> SaveNeueListe() {
+            var prodListeNeu = dataGridViewProduktAuftrag.Rows.Cast<DataGridViewRow>().ToDictionary(row => Convert.ToInt32(row.Cells[0].Value.ToString()), row => Convert.ToInt32(row.Cells[1].Value.ToString()));
+            return prodListeNeu;
+        }
+
         private void saveAenderungen2_Click(object sender, EventArgs e) {
             if (dataGridViewDirektverkauf.AllowUserToAddRows) {
                 dataGridViewDirektverkauf.AllowUserToAddRows = false;
@@ -1341,6 +1370,11 @@ namespace ToolFahrrad_v1.Design
             _dvUpdate = false;
             _bestellungUpdate = true;
             _bv.ClearDvPositionen();
+            Information();
+        }
+
+        private void pictureBox4_Click(object sender, EventArgs e) {
+            _pp.OptimiereProdListe();
             Information();
         }
 
@@ -1427,13 +1461,19 @@ namespace ToolFahrrad_v1.Design
             e.Effect = IsCellOrRowHeader(p.X, p.Y) ? DragDropEffects.Move : DragDropEffects.None;
         }
 
-        
 
+        private void GetInfo(string text)
+        {
+            timer1.Stop();
+            info.Text = text;
+            if (text != "")
+                timer1.Start();
+        }
 
-
-
-
-
+        private void timer1_Tick(object sender, EventArgs e) {
+            timer1.Stop();
+            GetInfo("");
+        }
         ////////////////////////////////////////////////////////////////////////////////
     }
 }
