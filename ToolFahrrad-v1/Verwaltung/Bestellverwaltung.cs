@@ -59,136 +59,74 @@ namespace ToolFahrrad_v1.Verwaltung
             // Calculate Bestellposition for each KTeil and when necessary add new Bestellposition to DataContainer dc
             foreach (KTeil kt in _dc.ListeKTeile)
             {
-                const double startPeriod = 0.0;
-                const double endPeriod = 0.8;
-                int n = 0;
-                double lieferDauer = kt.Lieferdauer + kt.AbweichungLieferdauer * (_dc.VerwendeAbweichung / 100);
-                int teilMengeSumme = kt.Lagerstand;
-                bool eil = false;
-                int menge = 0;
-                // Actual period ---------------------------------------------------------------------------------------
-                if (kt.BestandPer1 < 0)
+                // Initialization of members
+                double perBeginn = 0.0;
+                double perEnde = 0.8;
+                double perBeginnNachfolger = 1.0;
+                double lieferungNorm = kt.Lieferdauer + kt.AbweichungLieferdauer * (_dc.VerwendeAbweichung / 100);
+                double lieferungEil = kt.Lieferdauer / 2;
+                int mengeNorm = 0;
+                int mengeEil = 0;
+                List<int> bestaendeKTeil = new List<int>();
+                bestaendeKTeil.Add(kt.BestandPer1);
+                bestaendeKTeil.Add(kt.BestandPer2);
+                bestaendeKTeil.Add(kt.BestandPer3);
+                bestaendeKTeil.Add(kt.BestandPer4);
+                List<int> verbrauchKTeil = new List<int>();
+                verbrauchKTeil.Add(kt.BruttoBedarfPer0);
+                verbrauchKTeil.Add(kt.BruttoBedarfPer1);
+                verbrauchKTeil.Add(kt.BruttoBedarfPer2);
+                verbrauchKTeil.Add(kt.BruttoBedarfPer3);
+                int index = 0;
+                // Check if quantity is low and create order
+                while (lieferungNorm >= perBeginn)
                 {
-                    if(lieferDauer > endPeriod)
+                    if (bestaendeKTeil[index] <= 0)
                     {
-                        eil = true;
+                        if (perBeginn <= lieferungNorm && perEnde > lieferungNorm)
+                        {
+                            if (bestaendeKTeil[index] != 0)
+                            {
+                                if (perBeginn == 0.0)
+                                {
+                                    mengeNorm += berechneMenge(verbrauchKTeil[index] - kt.Lagerstand, kt.DiskontMenge);
+                                }
+                                else
+                                {
+                                    mengeNorm +=
+                                        berechneMenge(
+                                            verbrauchKTeil[index] - bestaendeKTeil[index], kt.DiskontMenge);
+                                }
+                            }
+                            else
+                            {
+                                mengeNorm +=
+                                    berechneMenge(
+                                        verbrauchKTeil[index + 1] - bestaendeKTeil[index + 1], kt.DiskontMenge);
+                            }
+                        }
+                        else
+                        {
+                            if (bestaendeKTeil[index] != 0)
+                            {
+                                mengeEil += bestaendeKTeil[index] * (-1);
+                            }
+                        }
                     }
-                    if(_dc.DiskountGrenze >= kt.Preis && eil != true)
-                    {
-                        menge = kt.DiskontMenge;
-                    }
-                    else if (_dc.DiskountGrenze < kt.Preis && kt.Preis < _dc.GrenzeMenge)
-                    {
-                        menge = berechneMenge(_dc.VerwendeDiskount, kt.BruttoBedarfPer0 - kt.Lagerstand, kt.DiskontMenge);
-                    }
-                    else if (_dc.GrenzeMenge <= kt.Preis || eil)
-                    {
-                        menge = kt.BruttoBedarfPer0 - kt.Lagerstand;
-                    }
-                    if(menge != 0)
-                    {
-                        _bvPositionen.Add(new Bestellposition(kt, menge, eil));
-                        teilMengeSumme = teilMengeSumme - kt.BruttoBedarfPer0 + menge;
-                    }
+                    // Increment period members
+                    ++perBeginn;
+                    ++perEnde;
+                    ++perBeginnNachfolger;
+                    ++index;
                 }
-                // Actual + 1 period -----------------------------------------------------------------------------------
-                n++;
-                eil = false;
-                menge = 0;
-                if (kt.BestandPer2 < 0)
+                // Create one or more orders
+                if (mengeNorm > 0)
                 {
-                    // Check if Lieferdauer of KTeil will be in time
-                    if (lieferDauer >= (startPeriod + n) && lieferDauer < (endPeriod + n))
-                    {
-                        if (_dc.DiskountGrenze >= kt.Preis)
-                        {
-                            menge = kt.DiskontMenge;
-                        }
-                        else if (_dc.DiskountGrenze < kt.Preis && kt.Preis < _dc.GrenzeMenge)
-                        {
-                            menge = berechneMenge(_dc.VerwendeDiskount, kt.BruttoBedarfPer1 - kt.BestandPer1, kt.DiskontMenge);
-                        }
-                        else if (_dc.GrenzeMenge <= kt.Preis)
-                        {
-                            menge = kt.BruttoBedarfPer1 - kt.BestandPer1;
-                        }
-                    }
-                    else if (lieferDauer >= (endPeriod + n))
-                    {
-                        eil = true;
-                        menge = kt.BruttoBedarfPer1 - kt.BestandPer1;
-                    }
-                    if (menge != 0)
-                    {
-                        _bvPositionen.Add(new Bestellposition(kt, menge, eil));
-                        teilMengeSumme = teilMengeSumme - kt.BruttoBedarfPer1 + menge;
-                    }
+                    _bvPositionen.Add(new Bestellposition(kt, mengeNorm, false));
                 }
-                // Actual + 2 period -----------------------------------------------------------------------------------
-                n++;
-                eil = false;
-                menge = 0;
-                if (kt.BestandPer3 < 0)
+                if (mengeEil > 0)
                 {
-                    // Check if Lieferdauer of KTeil will be in time
-                    if (lieferDauer >= (startPeriod + n) && lieferDauer < (endPeriod + n))
-                    {
-                        if (_dc.DiskountGrenze >= kt.Preis)
-                        {
-                            menge = kt.DiskontMenge;
-                        }
-                        else if (_dc.DiskountGrenze < kt.Preis && kt.Preis < _dc.GrenzeMenge)
-                        {
-                            menge = berechneMenge(_dc.VerwendeDiskount, kt.BruttoBedarfPer2 - kt.BestandPer2, kt.DiskontMenge);
-                        }
-                        else if (_dc.GrenzeMenge <= kt.Preis)
-                        {
-                            menge = kt.BruttoBedarfPer2 - kt.BestandPer2;
-                        }
-                    }
-                    else if (lieferDauer >= (endPeriod + n))
-                    {
-                        eil = true;
-                        menge = kt.BruttoBedarfPer2 - kt.BestandPer2;
-                    }
-                    if (menge != 0)
-                    {
-                        _bvPositionen.Add(new Bestellposition(kt, menge, eil));
-                        teilMengeSumme = teilMengeSumme - kt.BruttoBedarfPer2 + menge;
-                    }
-                }
-                // Actual + 3 period -----------------------------------------------------------------------------------
-                n++;
-                eil = false;
-                menge = 0;
-                if (kt.BestandPer4 < 0)
-                {
-                    // Check if Lieferdauer of KTeil will be in time
-                    if (lieferDauer >= (startPeriod + n) && lieferDauer < (endPeriod + n))
-                    {
-                        if (_dc.DiskountGrenze >= kt.Preis)
-                        {
-                            menge = kt.DiskontMenge;
-                        }
-                        else if (_dc.DiskountGrenze < kt.Preis && kt.Preis < _dc.GrenzeMenge)
-                        {
-                            menge = berechneMenge(_dc.VerwendeDiskount, kt.BruttoBedarfPer3 - kt.BestandPer3, kt.DiskontMenge);
-                        }
-                        else if (_dc.GrenzeMenge <= kt.Preis)
-                        {
-                            menge = kt.BruttoBedarfPer3 - kt.BestandPer3;
-                        }
-                    }
-                    else if (lieferDauer >= (endPeriod + n))
-                    {
-                        eil = true;
-                        menge = kt.BruttoBedarfPer3 - kt.BestandPer3;
-                    }
-                    if (menge != 0)
-                    {
-                        _bvPositionen.Add(new Bestellposition(kt, menge, eil));
-                        teilMengeSumme = teilMengeSumme - kt.BruttoBedarfPer3 + menge;
-                    }
+                    _bvPositionen.Add(new Bestellposition(kt, mengeEil, true));
                 }
             }
             OptimiereBvPositionen();
@@ -213,8 +151,9 @@ namespace ToolFahrrad_v1.Verwaltung
         {
             _dc.DVerkauf = DvPositionen;
         }
-        private int berechneMenge(double verwDiskont, int bestellMenge, int diskont)
+        private int berechneMenge(int bestellMenge, int diskont)
         {
+            double verwDiskont = _dc.VerwendeDiskount;
             int outputMenge;
             // Member verwDiskont need to be percent -> devide with 100
             // Check if param verwDiskont is either 0 or 100: 0 = take bestellMenge, 100 = take diskount
