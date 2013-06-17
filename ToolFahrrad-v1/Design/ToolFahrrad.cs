@@ -989,7 +989,7 @@ namespace ToolFahrrad_v1.Design
         }
 
         private void VideoTutorial() {
-            string path = Directory.GetCurrentDirectory() + @"\chm\Handbuch_Manual PPT 2013.exe";
+            string path = Directory.GetCurrentDirectory() + @"\chm\Schulung.exe";
             Help.ShowHelp(this, path, HelpNavigator.TableOfContents, "");
         }
 
@@ -1407,9 +1407,6 @@ namespace ToolFahrrad_v1.Design
             return (dgt == DataGridViewHitTestType.Cell ||
                             dgt == DataGridViewHitTestType.RowHeader);
         }
-
-
-
         private void dataGridViewProduktAuftrag_MouseMove_1(object sender, MouseEventArgs e) {
             if ((e.Button & MouseButtons.Left) == MouseButtons.Left) {
                 if (!IsCellOrRowHeader(e.X, e.Y) && _rowIndexSrc >= 0) {
@@ -1425,7 +1422,6 @@ namespace ToolFahrrad_v1.Design
                 }
             }
         }
-
         private void dataGridViewProduktAuftrag_MouseDown_1(object sender, MouseEventArgs e) {
             _rowIndexSrc = dataGridViewProduktAuftrag.HitTest(e.X, e.Y).RowIndex;
             if (_rowIndexSrc != -1) {
@@ -1435,7 +1431,6 @@ namespace ToolFahrrad_v1.Design
             else
                 _dragBoxSrc = Rectangle.Empty;
         }
-
         private void dataGridViewProduktAuftrag_DragDrop_1(object sender, DragEventArgs e) {
             Point clientPoint = dataGridViewProduktAuftrag.PointToClient(new Point(e.X, e.Y));
             _rowIndexTar = dataGridViewProduktAuftrag.HitTest(clientPoint.X, clientPoint.Y).RowIndex;
@@ -1445,8 +1440,6 @@ namespace ToolFahrrad_v1.Design
                 MoveRow(_rowIndexSrc, _rowIndexTar);
             }
         }
-
-
         void SwapCell(int c, int srcRow, int tarRow, out object tmp0, out object tmp1) {
             DataGridViewCell srcCell = dataGridViewProduktAuftrag.Rows[srcRow].Cells[c];
             DataGridViewCell tarCell = dataGridViewProduktAuftrag.Rows[tarRow].Cells[c];
@@ -1471,7 +1464,6 @@ namespace ToolFahrrad_v1.Design
             dataGridViewProduktAuftrag.Rows[tarRow].Selected = true;
             dataGridViewProduktAuftrag.CurrentCell = dataGridViewProduktAuftrag.Rows[tarRow].Cells[0];
         }
-
         private void dataGridViewProduktAuftrag_DragOver_1(object sender, DragEventArgs e) {
             Point p = dataGridViewProduktAuftrag.PointToClient(new Point(e.X, e.Y));
             DataGridViewHitTestType dgt = dataGridViewProduktAuftrag.HitTest(p.X, p.Y).Type;
@@ -1485,13 +1477,10 @@ namespace ToolFahrrad_v1.Design
             if (text != "")
                 timer1.Start();
         }
-
         private void timer1_Tick(object sender, EventArgs e) {
             timer1.Stop();
             GetInfo("");
         }
-
-
         ////////////////////////////////////////////////////////////////////////////////
     }
 }
