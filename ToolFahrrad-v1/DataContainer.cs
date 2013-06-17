@@ -13,17 +13,15 @@ namespace ToolFahrrad_v1
         private readonly List<DvPosition> _listeDVerkauf;
         private readonly Dictionary<int, Teil> _listeTeile;
         private readonly Dictionary<int, Arbeitsplatz> _listeArbeitsplaetze;
+        private Dictionary<int, int> _listeProduktion;
         private int _ersteSchicht = 3600;
         private int _zweiteSchicht = 6000;
         private double _verwendeAbweichung = 0.5;
         private double _verwendeDiskount = 0.5;
         // Getter / Setter
         public List<int[]> ApKapazitaet { get; set; }
-
         public double DiskountGrenze { get; set; }
-
         public double GrenzeMenge { get; set; }
-
         public double VerwendeAbweichung
         {
             get { return _verwendeAbweichung * 100; }
@@ -55,18 +53,20 @@ namespace ToolFahrrad_v1
             _listeDVerkauf = new List<DvPosition>();
             _listeTeile = new Dictionary<int, Teil>();
             _listeArbeitsplaetze = new Dictionary<int, Arbeitsplatz>();
+            _listeProduktion = new Dictionary<int, int>();
         }
-
         public bool BerechneKindTeil { get; private set; }
-
         // Getter for _instance of DataContainer
         public static DataContainer Instance
         {
             get { return _instance; }
         }
         // Getter / Setter for Reihenfolge of production
-        public int[] Reihenfolge { get; set; }
-
+        public Dictionary<int, int> ListeProduktion
+        {
+            get { return _listeProduktion; }
+            set { _listeProduktion = value; }
+        }
         // Getter of list all KTeil
         public IEnumerable<KTeil> ListeKTeile
         {
@@ -109,7 +109,6 @@ namespace ToolFahrrad_v1
                 }
             }
         }
-
         // Getter for Teil with given number
         public Teil GetTeil(int nr)
         {
@@ -119,7 +118,6 @@ namespace ToolFahrrad_v1
             }
             throw new UnknownTeilException(nr);
         }
-
         public void NewTeil(int nr, string bez, double p, double bk, double ld, double abw, int dm, int bs, string vw)
         {
             if (_listeTeile.ContainsKey(nr) == false)
