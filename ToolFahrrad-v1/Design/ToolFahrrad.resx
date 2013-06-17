@@ -20545,7 +20545,7 @@
     <value>Datei</value>
   </data>
   <data name="handbuchToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>130, 22</value>
+    <value>152, 22</value>
   </data>
   <data name="handbuchToolStripMenuItem.Text" xml:space="preserve">
     <value>Handbuch</value>
@@ -20562,7 +20562,7 @@
 </value>
   </data>
   <data name="hilfeToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>145, 22</value>
+    <value>152, 22</value>
   </data>
   <data name="hilfeToolStripMenuItem.Text" xml:space="preserve">
     <value>Support</value>
@@ -20580,7 +20580,7 @@
     <value>Englisch</value>
   </data>
   <data name="spracheToolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>145, 22</value>
+    <value>152, 22</value>
   </data>
   <data name="spracheToolStripMenuItem1.Text" xml:space="preserve">
     <value>Sprache</value>
@@ -20595,7 +20595,7 @@
 </value>
   </data>
   <data name="gewichtungToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>145, 22</value>
+    <value>152, 22</value>
   </data>
   <data name="gewichtungToolStripMenuItem.Text" xml:space="preserve">
     <value>Einstellungen</value>

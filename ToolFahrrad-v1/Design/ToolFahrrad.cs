@@ -102,7 +102,8 @@ namespace ToolFahrrad_v1.Design
 
         /// <summary>
         /// Informationsdarstellung
-        /// </summary>
+        /// </summary> 
+        //TODO: Information()
         private void Information() {
             // KTeile
             #region KTEILE
@@ -363,7 +364,22 @@ namespace ToolFahrrad_v1.Design
                 ++index;
             }
             #endregion
+            
+            //Produktionsaufträge
+            #region Produktionsaufträge
+            DataGriedViewRemove(dataGridViewProduktAuftrag);
+            _pp.OptimiereProdListe();
+            Dictionary<int, int> prList = _pp.ProdListe;
+            index = 0;
+            foreach (var i in prList)
+            {
+                dataGridViewProduktAuftrag.Rows.Add();
+                dataGridViewProduktAuftrag.Rows[index].Cells[0].Value = i.Key;
+                dataGridViewProduktAuftrag.Rows[index].Cells[1].Value = i.Value;
+                ++index;
+            }
 
+            #endregion
 
         }
 
@@ -1011,35 +1027,36 @@ namespace ToolFahrrad_v1.Design
                 }
 
             }
+            //TODO: Ändern
             if (p == 100 || p == 4) {
-                index = 0;
-                DataGriedViewRemove(dataGridViewProduktAuftrag);
-                foreach (ETeil et in _instance.ListeETeile.Where(et => et.InWartschlange > 0)) {
-                    ProduktAuftrag(et, index);
-                    ++index;
-                }
-                foreach (ETeil et in _instance.ListeETeile.Where(et => et.InWartschlange == 0 && et.ProduktionsMengePer0 > 0)) {
-                    ProduktAuftrag(et, index);
-                    ++index;
-                }
-                foreach (ETeil et in _instance.ListeETeile.Where(et => et.InWartschlange == 0 && et.ProduktionsMengePer0 <= 0)) {
-                    ProduktAuftrag(et, index);
-                    ++index;
-                }
+                //index = 0;
+                //DataGriedViewRemove(dataGridViewProduktAuftrag);
+                //foreach (ETeil et in _instance.ListeETeile.Where(et => et.InWartschlange > 0)) {
+                //    ProduktAuftrag(et, index);
+                //    ++index;
+                //}
+                //foreach (ETeil et in _instance.ListeETeile.Where(et => et.InWartschlange == 0 && et.ProduktionsMengePer0 > 0)) {
+                //    ProduktAuftrag(et, index);
+                //    ++index;
+                //}
+                //foreach (ETeil et in _instance.ListeETeile.Where(et => et.InWartschlange == 0 && et.ProduktionsMengePer0 <= 0)) {
+                //    ProduktAuftrag(et, index);
+                //    ++index;
+                //}
             }
         }
 
-        private void ProduktAuftrag(ETeil et, int index) {
-            dataGridViewProduktAuftrag.Rows.Add();
-            dataGridViewProduktAuftrag.Rows[index].DefaultCellStyle.BackColor = Color.LightCyan;
-            dataGridViewProduktAuftrag.Rows[index].Cells[0].Value = et.Nummer;
-            if (!et.Verwendung.Contains("KDH"))
-                dataGridViewProduktAuftrag.Rows[index].Cells[1].Value = et.ProduktionsMengePer0;
-            else {
-                var prodMenge = et.KdhProduktionsmenge.Sum(pair => pair.Value);
-                dataGridViewProduktAuftrag.Rows[index].Cells[1].Value = prodMenge;
-            }
-        }
+        //private void ProduktAuftrag(ETeil et, int index) {
+        //    dataGridViewProduktAuftrag.Rows.Add();
+        //    dataGridViewProduktAuftrag.Rows[index].DefaultCellStyle.BackColor = Color.LightCyan;
+        //    dataGridViewProduktAuftrag.Rows[index].Cells[0].Value = et.Nummer;
+        //    if (!et.Verwendung.Contains("KDH"))
+        //        dataGridViewProduktAuftrag.Rows[index].Cells[1].Value = et.ProduktionsMengePer0;
+        //    else {
+        //        var prodMenge = et.KdhProduktionsmenge.Sum(pair => pair.Value);
+        //        dataGridViewProduktAuftrag.Rows[index].Cells[1].Value = prodMenge;
+        //    }
+        //}
 
         /// <summary>
         /// 
@@ -1410,11 +1427,11 @@ namespace ToolFahrrad_v1.Design
             e.Effect = IsCellOrRowHeader(p.X, p.Y) ? DragDropEffects.Move : DragDropEffects.None;
         }
 
-        
 
-        
 
-        
+
+
+
         ////////////////////////////////////////////////////////////////////////////////
     }
 }

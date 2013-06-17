@@ -1512,7 +1512,7 @@
             this.panel1.Controls.Add(this.p1pm_0);
             this.panel1.Controls.Add(this.p1vw_0);
             this.panel1.Controls.Add(this.p1ETAusfueren);
-            this.panel1.Cursor = System.Windows.Forms.Cursors.No;
+            this.panel1.Cursor = System.Windows.Forms.Cursors.Default;
             resources.ApplyResources(this.panel1, "panel1");
             this.panel1.Name = "panel1";
             this.helpProvider1.SetShowHelp(this.panel1, ((bool)(resources.GetObject("panel1.ShowHelp"))));
@@ -2935,7 +2935,6 @@
             // 
             // panel2
             // 
-            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel2.Controls.Add(this.p2ETAusfueren);
             this.panel2.Controls.Add(this.label92);
             this.panel2.Controls.Add(this.label93);
@@ -3109,7 +3108,7 @@
             this.panel2.Controls.Add(this.p2ib_0);
             this.panel2.Controls.Add(this.p2pm_0);
             this.panel2.Controls.Add(this.p2vw_0);
-            this.panel2.Cursor = System.Windows.Forms.Cursors.No;
+            this.panel2.Cursor = System.Windows.Forms.Cursors.Default;
             resources.ApplyResources(this.panel2, "panel2");
             this.panel2.Name = "panel2";
             this.helpProvider1.SetShowHelp(this.panel2, ((bool)(resources.GetObject("panel2.ShowHelp"))));
@@ -4532,7 +4531,6 @@
             // 
             // panel3
             // 
-            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel3.Controls.Add(this.p3ETAusfueren);
             this.panel3.Controls.Add(this.label181);
             this.panel3.Controls.Add(this.label182);

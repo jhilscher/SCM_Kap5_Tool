@@ -104,18 +104,35 @@ namespace ToolFahrrad_v1.Verwaltung
         {
             _prodListe.Clear();
             // Optimierung der Reihenfolge
+
             foreach (ETeil et1 in _dc.ListeETeile)
             {
-                if (et1.ProduktionsMengePer0 > 0 && et1.InWartschlange > 0 && et1.IstEndProdukt == false)
+                if (et1.InWartschlange > 0 && et1.IstEndProdukt == false)
                 {
-                    _prodListe.Add(et1.Nummer, et1.ProduktionsMengePer0);
+                    if (et1.ProduktionsMengePer0 > 0 && !et1.Verwendung.Equals("KDH"))
+                    {
+                        _prodListe.Add(et1.Nummer, et1.ProduktionsMengePer0);
+                    }
+                    else if (et1.Verwendung.Equals("KDH"))
+                    {
+                        int pr = et1.KdhProduktionsmenge.Sum(pair => pair.Value);
+                        if(pr > 0)
+                            _prodListe.Add(et1.Nummer, et1.KdhProduktionsmenge.Sum(pair => pair.Value));
+                    }
                 }
             }
             foreach (ETeil et2 in _dc.ListeETeile)
             {
-                if (et2.ProduktionsMengePer0 > 0 && et2.InWartschlange == 0 && et2.IstEndProdukt == false)
+                if (et2.InWartschlange == 0 && et2.IstEndProdukt == false)
                 {
-                    _prodListe.Add(et2.Nummer, et2.ProduktionsMengePer0);
+                    if (et2.ProduktionsMengePer0 > 0 && !et2.Verwendung.Equals("KDH")) {
+                        _prodListe.Add(et2.Nummer, et2.ProduktionsMengePer0);
+                    }
+                    else if (et2.Verwendung.Equals("KDH")) {
+                        int pr = et2.KdhProduktionsmenge.Sum(pair => pair.Value);
+                        if (pr > 0)
+                            _prodListe.Add(et2.Nummer, et2.KdhProduktionsmenge.Sum(pair => pair.Value));
+                    }
                 }
             }
             foreach (ETeil et3 in _dc.ListeETeile)
