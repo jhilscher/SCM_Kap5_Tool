@@ -272,41 +272,47 @@ namespace ToolFahrrad_v1.Design
                 int gesammt = a.RuestungCustom + sum;
                 DataGridViewAP.Rows[index].Cells[6].Value = gesammt + " min";
                 DataGridViewAP.Rows[index].Cells[10].Value = imageListAmpel.Images[2];
-                if (gesammt <= a.Zeit) { // newTeim <= 2400 
+
+                if (gesammt <= a.ZeitErsteSchicht) { // newTeim <= 2400 
                     DataGridViewAP.Rows[index].Cells[7].Value = imageListAmpel.Images[2];
                     apXml[1] = 1;
                     apXml[2] = 0;
                 }
-                else if (gesammt > _instance.ErsteSchicht) // gesammt > 3600
+                else if (gesammt > _instance.ErsteSchichtMitUeberStunden) // gesammt > 3600
                 {
-                    if (gesammt > _instance.ZweiteSchicht) {
+                    if (gesammt > _instance.ZweiteSchichtMitUeberstunden) {   // gesammt > 6000
                         if (gesammt > 7200)
-                            DataGridViewAP.Rows[index].Cells[10].Value = imageListAmpel.Images[0];
+                            DataGridViewAP.Rows[index].Cells[10].Value = imageListAmpel.Images[0]; //gesammt > 7200
                         else if (gesammt < 7200)
-                            DataGridViewAP.Rows[index].Cells[10].Value = imageListAmpel.Images[1];
+                            DataGridViewAP.Rows[index].Cells[10].Value = imageListAmpel.Images[1]; //gesammt < 7200
                         else
-                            DataGridViewAP.Rows[index].Cells[10].Value = imageListAmpel.Images[2];
-                        apXml[1] = 3;
+                            DataGridViewAP.Rows[index].Cells[10].Value = imageListAmpel.Images[2]; //gesammt = 7200
+                        apXml[1] = 3; // 3 SCHICHT
                         if (gesammt < 7200)
-                            apXml[2] = gesammt - _instance.ZweiteSchicht;
+                            apXml[2] = gesammt - a.ZeitZweiteSchicht;
                         else
-                            apXml[2] = 7200 - _instance.ZweiteSchicht;
+                            apXml[2] = 7200 - a.ZeitZweiteSchicht;
                     }
-                    if (gesammt < _instance.ZweiteSchicht) {
+                    if (gesammt < _instance.ZweiteSchichtMitUeberstunden) {
                         DataGridViewAP.Rows[index].Cells[7].Value = imageListAmpel.Images[0];
                         DataGridViewAP.Rows[index].Cells[8].Value = true;
+                        if (gesammt > a.ZeitZweiteSchicht)
+                            apXml[2] = gesammt - a.ZeitZweiteSchicht;
+                        else
+                            apXml[2] = 0;
                         apXml[1] = 2;
-                        apXml[2] = gesammt - _instance.ErsteSchicht;
                     }
-                    else if (gesammt > _instance.ZweiteSchicht) {
+                    else if (gesammt > _instance.ZweiteSchichtMitUeberstunden) {
                         DataGridViewAP.Rows[index].Cells[7].Value = imageListAmpel.Images[0];
                         DataGridViewAP.Rows[index].Cells[9].Value = true;
+                        apXml[1] = 3;
+                        apXml[2] = gesammt - _instance.ZweiteSchichtMitUeberstunden;
                     }
                 }
-                else if (gesammt > a.Zeit && gesammt <= _instance.ErsteSchicht) { // 2400 < newTime < 3600 Überstunden
+                else if (gesammt > a.ZeitErsteSchicht && gesammt <= _instance.ErsteSchichtMitUeberStunden) { // 2400 < newTime < 3600 Überstunden
                     DataGridViewAP.Rows[index].Cells[7].Value = imageListAmpel.Images[1];
                     apXml[1] = 1;
-                    apXml[2] = gesammt - a.Zeit;
+                    apXml[2] = gesammt - a.ZeitErsteSchicht;
                 }
                 else {
                     DataGridViewAP.Rows[index].Cells[7].Value = imageListAmpel.Images[2];

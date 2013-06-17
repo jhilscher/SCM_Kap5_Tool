@@ -14,8 +14,8 @@ namespace ToolFahrrad_v1
         private readonly Dictionary<int, Teil> _listeTeile;
         private readonly Dictionary<int, Arbeitsplatz> _listeArbeitsplaetze;
         private Dictionary<int, int> _listeProduktion;
-        private int _ersteSchicht = 3600;
-        private int _zweiteSchicht = 6000;
+        private int _ersteSchichtMitUeberStunden = 3600;
+        private int _zweiteSchichtMitUeberstunden = 6000;
         private double _verwendeAbweichung = 0.5;
         private double _verwendeDiskount = 0.5;
         // Getter / Setter
@@ -32,15 +32,15 @@ namespace ToolFahrrad_v1
             get { return _verwendeDiskount * 100; }
             set { _verwendeDiskount = value / 100; }
         }
-        public int ZweiteSchicht
+        public int ZweiteSchichtMitUeberstunden
         {
-            get { return _zweiteSchicht; }
-            set { _zweiteSchicht = value; }
+            get { return _zweiteSchichtMitUeberstunden; }
+            set { _zweiteSchichtMitUeberstunden = value; }
         }
-        public int ErsteSchicht
+        public int ErsteSchichtMitUeberStunden
         {
-            get { return _ersteSchicht; }
-            set { _ersteSchicht = value; }
+            get { return _ersteSchichtMitUeberStunden; }
+            set { _ersteSchichtMitUeberStunden = value; }
         }
         // Constructor
         private DataContainer()

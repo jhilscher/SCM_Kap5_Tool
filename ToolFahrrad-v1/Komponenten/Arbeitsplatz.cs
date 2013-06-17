@@ -7,7 +7,10 @@ namespace ToolFahrrad_v1.Komponenten
     {
         DataContainer _dc;
         // Class members
-        public int Zeit = 2400;
+        public int ZeitErsteSchicht = 2400;
+        public int ZeitZweiteSchicht = 4800;
+        public int Limit = 7200;
+
         protected int anz_schichten = 1;
         protected int anz_uebermin = 0;
         public int RuestNew { get; set; }
