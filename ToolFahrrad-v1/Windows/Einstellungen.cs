@@ -10,8 +10,8 @@ namespace ToolFahrrad_v1.Windows
         public Einstellungen()
         {
             InitializeComponent();
-            numericUpDown1.Value = _instance.ErsteSchicht;
-            numericUpDown2.Value = _instance.ZweiteSchicht;
+            numericUpDown1.Value = _instance.ErsteSchichtMitUeberStunden;
+            numericUpDown2.Value = _instance.ZweiteSchichtMitUeberstunden;
             diskGrenze.Value = Convert.ToDecimal(_instance.DiskountGrenze);
             mengeGrenze.Value = Convert.ToDecimal(_instance.GrenzeMenge);
             trackBar1.Value = (int)_instance.VerwendeDiskount / 10;
@@ -31,8 +31,8 @@ namespace ToolFahrrad_v1.Windows
 
         private void btn_schicht_save_Click(object sender, EventArgs e)
         {
-            _instance.ErsteSchicht = (int)numericUpDown1.Value;
-            _instance.ZweiteSchicht = (int)numericUpDown2.Value;
+            _instance.ErsteSchichtMitUeberStunden = (int)numericUpDown1.Value;
+            _instance.ZweiteSchichtMitUeberstunden = (int)numericUpDown2.Value;
 
             panel2.Visible = true;
         }

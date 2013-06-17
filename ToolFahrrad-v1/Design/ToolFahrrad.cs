@@ -102,7 +102,8 @@ namespace ToolFahrrad_v1.Design
 
         /// <summary>
         /// Informationsdarstellung
-        /// </summary>
+        /// </summary> 
+        //TODO: Information()
         private void Information() {
             // KTeile
             #region KTEILE
@@ -271,41 +272,47 @@ namespace ToolFahrrad_v1.Design
                 int gesammt = a.RuestungCustom + sum;
                 DataGridViewAP.Rows[index].Cells[6].Value = gesammt + " min";
                 DataGridViewAP.Rows[index].Cells[10].Value = imageListAmpel.Images[2];
-                if (gesammt <= a.Zeit) { // newTeim <= 2400 
+
+                if (gesammt <= a.ZeitErsteSchicht) { // newTeim <= 2400 
                     DataGridViewAP.Rows[index].Cells[7].Value = imageListAmpel.Images[2];
                     apXml[1] = 1;
                     apXml[2] = 0;
                 }
-                else if (gesammt > _instance.ErsteSchicht) // gesammt > 3600
+                else if (gesammt > _instance.ErsteSchichtMitUeberStunden) // gesammt > 3600
                 {
-                    if (gesammt > _instance.ZweiteSchicht) {
+                    if (gesammt > _instance.ZweiteSchichtMitUeberstunden) {   // gesammt > 6000
                         if (gesammt > 7200)
-                            DataGridViewAP.Rows[index].Cells[10].Value = imageListAmpel.Images[0];
+                            DataGridViewAP.Rows[index].Cells[10].Value = imageListAmpel.Images[0]; //gesammt > 7200
                         else if (gesammt < 7200)
-                            DataGridViewAP.Rows[index].Cells[10].Value = imageListAmpel.Images[1];
+                            DataGridViewAP.Rows[index].Cells[10].Value = imageListAmpel.Images[1]; //gesammt < 7200
                         else
-                            DataGridViewAP.Rows[index].Cells[10].Value = imageListAmpel.Images[2];
-                        apXml[1] = 3;
+                            DataGridViewAP.Rows[index].Cells[10].Value = imageListAmpel.Images[2]; //gesammt = 7200
+                        apXml[1] = 3; // 3 SCHICHT
                         if (gesammt < 7200)
-                            apXml[2] = gesammt - _instance.ZweiteSchicht;
+                            apXml[2] = gesammt - a.ZeitZweiteSchicht;
                         else
-                            apXml[2] = 7200 - _instance.ZweiteSchicht;
+                            apXml[2] = 7200 - a.ZeitZweiteSchicht;
                     }
-                    if (gesammt < _instance.ZweiteSchicht) {
+                    if (gesammt < _instance.ZweiteSchichtMitUeberstunden) {
                         DataGridViewAP.Rows[index].Cells[7].Value = imageListAmpel.Images[0];
                         DataGridViewAP.Rows[index].Cells[8].Value = true;
+                        if (gesammt > a.ZeitZweiteSchicht)
+                            apXml[2] = gesammt - a.ZeitZweiteSchicht;
+                        else
+                            apXml[2] = 0;
                         apXml[1] = 2;
-                        apXml[2] = gesammt - _instance.ErsteSchicht;
                     }
-                    else if (gesammt > _instance.ZweiteSchicht) {
+                    else if (gesammt > _instance.ZweiteSchichtMitUeberstunden) {
                         DataGridViewAP.Rows[index].Cells[7].Value = imageListAmpel.Images[0];
                         DataGridViewAP.Rows[index].Cells[9].Value = true;
+                        apXml[1] = 3;
+                        apXml[2] = gesammt - _instance.ZweiteSchichtMitUeberstunden;
                     }
                 }
-                else if (gesammt > a.Zeit && gesammt <= _instance.ErsteSchicht) { // 2400 < newTime < 3600 Überstunden
+                else if (gesammt > a.ZeitErsteSchicht && gesammt <= _instance.ErsteSchichtMitUeberStunden) { // 2400 < newTime < 3600 Überstunden
                     DataGridViewAP.Rows[index].Cells[7].Value = imageListAmpel.Images[1];
                     apXml[1] = 1;
-                    apXml[2] = gesammt - a.Zeit;
+                    apXml[2] = gesammt - a.ZeitErsteSchicht;
                 }
                 else {
                     DataGridViewAP.Rows[index].Cells[7].Value = imageListAmpel.Images[2];
@@ -363,7 +370,22 @@ namespace ToolFahrrad_v1.Design
                 ++index;
             }
             #endregion
+            
+            //Produktionsaufträge
+            #region Produktionsaufträge
+            DataGriedViewRemove(dataGridViewProduktAuftrag);
+            _pp.OptimiereProdListe();
+            Dictionary<int, int> prList = _pp.ProdListe;
+            index = 0;
+            foreach (var i in prList)
+            {
+                dataGridViewProduktAuftrag.Rows.Add();
+                dataGridViewProduktAuftrag.Rows[index].Cells[0].Value = i.Key;
+                dataGridViewProduktAuftrag.Rows[index].Cells[1].Value = i.Value;
+                ++index;
+            }
 
+            #endregion
 
         }
 
@@ -999,6 +1021,20 @@ namespace ToolFahrrad_v1.Design
                     }
                 }
             }
+            //TODO: Ändern
+            if (p == 100 || p == 4) {
+                _pp.LoadProdListeInDC();
+                index = 0;
+                DataGriedViewRemove(dataGridViewPrAuftraege);
+                foreach (var d in _instance.ListeProduktion)
+                {
+                    dataGridViewPrAuftraege.Rows.Add();
+                    dataGridViewPrAuftraege.Rows[index].Cells[0].Value = d.Key;
+                    dataGridViewPrAuftraege.Rows[index].Cells[1].Value = d.Value;
+                    ++index;
+                }
+            }
+
             if (p == 100 || p == 5) {
                 index = 0;
                 DataGriedViewRemove(dataGridViewProduktKapazit);
@@ -1011,34 +1047,7 @@ namespace ToolFahrrad_v1.Design
                 }
 
             }
-            if (p == 100 || p == 4) {
-                index = 0;
-                DataGriedViewRemove(dataGridViewProduktAuftrag);
-                foreach (ETeil et in _instance.ListeETeile.Where(et => et.InWartschlange > 0)) {
-                    ProduktAuftrag(et, index);
-                    ++index;
-                }
-                foreach (ETeil et in _instance.ListeETeile.Where(et => et.InWartschlange == 0 && et.ProduktionsMengePer0 > 0)) {
-                    ProduktAuftrag(et, index);
-                    ++index;
-                }
-                foreach (ETeil et in _instance.ListeETeile.Where(et => et.InWartschlange == 0 && et.ProduktionsMengePer0 <= 0)) {
-                    ProduktAuftrag(et, index);
-                    ++index;
-                }
-            }
-        }
-
-        private void ProduktAuftrag(ETeil et, int index) {
-            dataGridViewProduktAuftrag.Rows.Add();
-            dataGridViewProduktAuftrag.Rows[index].DefaultCellStyle.BackColor = Color.LightCyan;
-            dataGridViewProduktAuftrag.Rows[index].Cells[0].Value = et.Nummer;
-            if (!et.Verwendung.Contains("KDH"))
-                dataGridViewProduktAuftrag.Rows[index].Cells[1].Value = et.ProduktionsMengePer0;
-            else {
-                var prodMenge = et.KdhProduktionsmenge.Sum(pair => pair.Value);
-                dataGridViewProduktAuftrag.Rows[index].Cells[1].Value = prodMenge;
-            }
+            
         }
 
         /// <summary>
@@ -1218,6 +1227,9 @@ namespace ToolFahrrad_v1.Design
             XmlVorbereitung(5);
             Information();
         }
+
+        
+
         private void pictureBox3_Click(object sender, EventArgs e) {
             if (dataGridViewBestellung.AllowUserToAddRows) {
                 dataGridViewBestellung.AllowUserToAddRows = false;
@@ -1267,6 +1279,11 @@ namespace ToolFahrrad_v1.Design
         private void uebernehmenXML_Click(object sender, EventArgs e) {
             XmlVorbereitung(3);
         }
+
+        private void pictureBox3_Click_1(object sender, EventArgs e) {
+            XmlVorbereitung(4);
+        }
+
         private void addNr_Click(object sender, EventArgs e) {
             dataGridViewBestellung.AllowUserToAddRows = true;
             kNr.ReadOnly = false;
@@ -1412,9 +1429,11 @@ namespace ToolFahrrad_v1.Design
 
         
 
-        
 
-        
+
+
+
+
         ////////////////////////////////////////////////////////////////////////////////
     }
 }

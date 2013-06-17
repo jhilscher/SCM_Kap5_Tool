@@ -147,7 +147,10 @@ namespace ToolFahrrad_v1.XML
             //Produktionsaufträge
             sw.WriteLine("<productionlist>");
             //<production article="9" quantity="140" />
-            sw.WriteLine("NIX VERTIG");
+            foreach (var pl in _dc.ListeProduktion)
+            {
+                sw.WriteLine("<production article=\"" + pl.Key + "\" quantity=\"" + pl.Value + "\"/>");
+            }
             sw.WriteLine("</productionlist>");
 
             //Produktionskapaziläten
