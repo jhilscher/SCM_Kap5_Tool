@@ -143,5 +143,9 @@ namespace ToolFahrrad_v1.Verwaltung
                 }
             }
         }
+        public void LoadProdListeInDC()
+        {
+            _dc.ListeProduktion = _prodListe;
+        }
     }
 }
