@@ -1172,8 +1172,7 @@ namespace ToolFahrrad_v1.Design
 
             DispositionDarstellung(1);
             Information();
-            XmlVorbereitung(1); //1=vertriebswunsch
-            XmlVorbereitung(4);
+            XmlVorbereitung(100);
 
             GetInfo(_culInfo.Contains("de") ? "Daten wurde in XML übernommen" : "Take in XML data has been");
         }
@@ -1206,8 +1205,7 @@ namespace ToolFahrrad_v1.Design
 
             DispositionDarstellung(2);
             Information();
-            XmlVorbereitung(1); //1=vertriebswunsch
-            XmlVorbereitung(4);
+            XmlVorbereitung(100);
             GetInfo(_culInfo.Contains("de") ? "Daten wurde in XML übernommen" : "Take in XML data has been");
         }
         private void p3ETAusfueren_Click(object sender, EventArgs e) {
@@ -1239,8 +1237,7 @@ namespace ToolFahrrad_v1.Design
 
             DispositionDarstellung(3);
             Information();
-            XmlVorbereitung(1); //1=vertriebswunsch
-            XmlVorbereitung(4);
+            XmlVorbereitung(100);
             GetInfo(_culInfo.Contains("de") ? "Daten wurde in XML übernommen" : "Take in XML data has been");
         }
         private void arbPlatzAusfueren_Click(object sender, EventArgs e) {
@@ -1253,7 +1250,7 @@ namespace ToolFahrrad_v1.Design
             XmlVorbereitung(5);
             GetInfo(_culInfo.Contains("de") ? "Daten wurde in XML übernommen" : "Take in XML data has been");
         }
-        
+
         private void pictureBox3_Click(object sender, EventArgs e) {
             if (dataGridViewBestellung.AllowUserToAddRows) {
                 dataGridViewBestellung.AllowUserToAddRows = false;
