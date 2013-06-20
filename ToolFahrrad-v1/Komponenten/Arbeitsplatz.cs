@@ -72,26 +72,8 @@ namespace ToolFahrrad_v1.Komponenten
                         ++RuestNew;
                 }
                 return sum;
-
-                //ruestungCustom = (newRuest + ruestungVorPeriode) / 2;
-                //if (ruestungCustom < newRuest)
-                //    ruestungCustom = newRuest;
-
             }
         }
-
-        //public void CustomRuestungGeaendert(int ruest) {
-        //    if (geaendert == false) {
-        //        ruestungCustom = (ruestNew + ruestungVorPeriode) / 2;
-        //        if (ruestungCustom < ruestNew)
-        //            ruestungCustom = ruestNew;
-        //        geaendert = true;
-        //    }
-        //    else {
-        //        if (ruest != -1)
-        //            ruestungCustom = ruest;
-        //    }
-        //}
 
         /// <summary>
         /// Kapazitätsplan:
