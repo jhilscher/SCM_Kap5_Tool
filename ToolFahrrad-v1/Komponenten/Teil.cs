@@ -4,7 +4,7 @@
     public abstract class Teil
     {
         // Class members
-        protected string verwendung;
+        private string _verwendung;
         // Constructor
         protected Teil(int nummer, string bez)
         {
@@ -31,12 +31,12 @@
 
         public string Verwendung
         {
-            get { return verwendung; }
+            get { return _verwendung; }
             set
             {
                 if (value == "K" || value == "D" || value == "H" || value == "KDH")
                 {
-                    verwendung = value;
+                    _verwendung = value;
                 }
                 else
                 {
