@@ -1252,47 +1252,60 @@ namespace ToolFahrrad_v1.Design
         }
 
         private void pictureBox3_Click(object sender, EventArgs e) {
-            if (dataGridViewBestellung.AllowUserToAddRows) {
-                dataGridViewBestellung.AllowUserToAddRows = false;
-                kNr.ReadOnly = true;
-            }
-            _bp = new List<Bestellposition>();
+            try {
+                if (dataGridViewBestellung.AllowUserToAddRows) {
+                    dataGridViewBestellung.AllowUserToAddRows = false;
+                    kNr.ReadOnly = true;
+                }
+                _bp = new List<Bestellposition>();
 
-            foreach (DataGridViewRow row in dataGridViewBestellung.Rows) {
-                var check = (DataGridViewCheckBoxCell)row.Cells[3];
-                var check2 = (DataGridViewCheckBoxCell)row.Cells[2];
-                bool c = check2.Value != null;
-                if (check.Value == null)
-                    check.Value = false;
+                foreach (DataGridViewRow row in dataGridViewBestellung.Rows) {
+                    var check = (DataGridViewCheckBoxCell)row.Cells[3];
+                    var check2 = (DataGridViewCheckBoxCell)row.Cells[2];
+                    bool c = check2.Value != null;
+                    if (check.Value == null)
+                        check.Value = false;
 
 
-                var value = row.Cells[0].Value;
-                if (value != null) {
-                    var teil = _instance.GetTeil(Convert.ToInt32(value.ToString())) as KTeil;
-                    if (teil != null) {
-                        if (row.Cells[1].Value != null) {
-                            if (check.Value.ToString() != "true") {
-                                var bbp = new Bestellposition(teil, Convert.ToInt32(row.Cells[1].Value.ToString()), c);
-                                _bp.Add(bbp);
+                    var value = row.Cells[0].Value;
+                    if (value != null) {
+                        var teil = _instance.GetTeil(Convert.ToInt32(value.ToString())) as KTeil;
+                        if (teil != null) {
+                            if (row.Cells[1].Value != null) {
+                                if (check.Value.ToString() != "true") {
+                                    var bbp = new Bestellposition(teil, Convert.ToInt32(row.Cells[1].Value.ToString()),
+                                                                  c);
+                                    _bp.Add(bbp);
+                                }
                             }
+                            else
+                                MessageBox.Show(
+                                    Resources.Fahrrad_pictureBox3_Click_Kaufteil_N + value +
+                                    Resources.Fahrrad_pictureBox3_Click_, Resources.Fahrrad_XmlOeffnen_Fehlermeldung,
+                                    MessageBoxButtons.OK, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button1);
                         }
                         else
-                            MessageBox.Show(Resources.Fahrrad_pictureBox3_Click_Kaufteil_N + value + Resources.Fahrrad_pictureBox3_Click_, Resources.Fahrrad_XmlOeffnen_Fehlermeldung,
-                                            MessageBoxButtons.OK, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button1);
+                            MessageBox.Show(
+                                Resources.Fahrrad_pictureBox3_Click_Kaufteil_N + value +
+                                Resources.Fahrrad_pictureBox3_Click_1, Resources.Fahrrad_XmlOeffnen_Fehlermeldung,
+                                MessageBoxButtons.OK, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button1);
                     }
-                    else
-                        MessageBox.Show(Resources.Fahrrad_pictureBox3_Click_Kaufteil_N + value + Resources.Fahrrad_pictureBox3_Click_1, Resources.Fahrrad_XmlOeffnen_Fehlermeldung,
-                                        MessageBoxButtons.OK, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button1);
-                }
-                else {
-                    MessageBox.Show(Resources.Fahrrad_pictureBox3_Click_Kaufteil_kann_nicht_NULL_sein, Resources.Fahrrad_XmlOeffnen_Fehlermeldung,
-                                           MessageBoxButtons.OK, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button1);
+                    else {
+                        MessageBox.Show(Resources.Fahrrad_pictureBox3_Click_Kaufteil_kann_nicht_NULL_sein,
+                                        Resources.Fahrrad_XmlOeffnen_Fehlermeldung,
+                                        MessageBoxButtons.OK, MessageBoxIcon.Exclamation,
+                                        MessageBoxDefaultButton.Button1);
+                    }
+
                 }
 
+                _bestellungUpdate = true;
+                _bv.SetBvPositionen(_bp);
+                Information();
             }
-            _bestellungUpdate = true;
-            _bv.SetBvPositionen(_bp);
-            Information();
+            catch (Exception ex){
+                MessageBox.Show(ex.Message);
+            }
         }
         private void zurueck_Click(object sender, EventArgs e) {
             if (dataGridViewBestellung.AllowUserToAddRows) {

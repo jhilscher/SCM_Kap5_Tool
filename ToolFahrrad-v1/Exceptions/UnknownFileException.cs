@@ -1,25 +1,21 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace ToolFahrrad_v1
+namespace ToolFahrrad_v1.Exceptions
 {
     class UnknownFileException : Exception
     {
-        private string message;
+        private readonly string message;
 
         public UnknownFileException(string msg)
         {
-            this.message = msg;
+            message = msg;
         }
 
         public override string Message
         {
             get
             {
-                return this.message;
+                return message;
             }
         }
 
