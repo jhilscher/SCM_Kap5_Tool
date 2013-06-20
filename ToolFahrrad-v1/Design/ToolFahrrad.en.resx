@@ -467,6 +467,45 @@
   <data name="tab_eTeil.Text" xml:space="preserve">
     <value>Production parts</value>
   </data>
+  <data name="pictureBox4.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29m
+        dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAADOSURBVDhPzZIxCsJAEEVTWQmClWDlbWwFwRtYCZ4w
+        IAiCIAiC4AG8gZVVfC9kQ0wGFbTww4PdP3+XyWyyoii+4ufqwQo2cK9wrWftpcZwBPuKsGYmlLefwOAV
+        FmBYXOtZMxN2YosGLjDUaEnvDGbMdrQFi/NyF2sGZsx25LAsDspdrD6YMdvRuwtysN5Er9YONG0zUqo3
+        2UOtNWg6qGiII3DA6bBrvVrtZ3SYBmQCyvWh4ulwkm+eLmnifKbwkezEz/H39fANfLYl/KWy7AFhXnQd
+        DEtoLQAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="pictureBox4.ToolTip" xml:space="preserve">
+    <value>Reset changes</value>
+  </data>
+  <data name="pictureBox3.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29m
+        dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAF0SURBVFhH1ZZNSgQxFIR75RkE7+HWrSC48hiCx3Mr
+        CIKrAVeuBEHwAK4EQauaaclUKu91pHsGP/hg6FeZ/HTSZFiBM/gIvxOZYXZx3qHr0MlskyN4De/gJ9TG
+        rRloLtNyAjfQNSh1M3C5yArO/Am6sPoGFc0oWX1cdg05OftzqGhOyerDPSwD3AOncC5lW6pk9WrDHcMe
+        yrZUqepcxufiQUtm3JIrrm3kuJFcwRme2y2uXeTwKg8i3a5XeiY0/t8F/No+iGSG2Qy+pjlfw51TdAWj
+        QbDGzKq0BsFTsXrnEzqIvXY+cQn5fih//3sOOqGDvlLtfK+DaHU+ydrvIJa+w3V/2Lg5XMDJbEb3p9gV
+        IjO6J+QKkRlc1hfo2pYyM74CLShZPYKX27LtB6woA1TJ6i14k7qFZdsHWFEGqJLV554iegMrNKRk9bmb
+        jld9XvkrXDhSmXPs2Dn3g8U1iFSiGxCv+Fx2O/OJ7g/H0vzpDrcMw/ADL27aGfjYuXUAAAAASUVORK5C
+        YII=
+</value>
+  </data>
+  <data name="dataGridViewTextBoxColumn27.HeaderText" xml:space="preserve">
+    <value>No.</value>
+  </data>
+  <data name="dataGridViewTextBoxColumn28.HeaderText" xml:space="preserve">
+    <value>Amount</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="tabPage1.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="tabPage1.Text" xml:space="preserve">
+    <value>Production list</value>
+  </data>
   <data name="tab_produktion.Text" xml:space="preserve">
     <value>Production planning</value>
   </data>
@@ -555,6 +594,78 @@
   <data name="tabPage2.Text" xml:space="preserve">
     <value>Purchase parts</value>
   </data>
+  <data name="dvVerwenden.Location" type="System.Drawing.Point, System.Drawing">
+    <value>565, 33</value>
+  </data>
+  <data name="dvVerwenden.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="dvVerwenden.Size" type="System.Drawing.Size, System.Drawing">
+    <value>131, 20</value>
+  </data>
+  <data name="dvVerwenden.Text" xml:space="preserve">
+    <value>Use sell direct list</value>
+  </data>
+  <data name="addNr2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29m
+        dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAD7SURBVDhPnZNBCgIxEAT35Ml/CILgVRD8k/8QBB/j
+        yR8IngTBqw8QBEEQtCukl+y42YMNDZmezuxkkm16MBE34lF8Z7JGIzeItfgUPxWSw/ODkbgXMb3EnbgS
+        0SFrNHJ48KK32IokbuIcoQJyePBypISZyDmpzrrEIbMEHrzsmSL467QYgQ4j8LZdXHKwJAioFcCLfibw
+        YDwUWvbGSB8HL/GdIBbwbfSRHBiLxA+Caw4WBAHeGIEXPR3BA2GYEbUCHnzaM3SNtOy2jfIaW7+74JHE
+        IiXI+SF1OmaAHh7VSfJ8Da4NzQPH23nKxt8/Uwn/zifRG1n3/M5N8wW4eG/fCAGusgAAAABJRU5ErkJg
+        gg==
+</value>
+  </data>
+  <data name="addNr2.ToolTip" xml:space="preserve">
+    <value>Add new row</value>
+  </data>
+  <data name="zurueck2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29m
+        dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAADOSURBVDhPzZIxCsJAEEVTWQmClWDlbWwFwRtYCZ4w
+        IAiCIAiC4AG8gZVVfC9kQ0wGFbTww4PdP3+XyWyyoii+4ufqwQo2cK9wrWftpcZwBPuKsGYmlLefwOAV
+        FmBYXOtZMxN2YosGLjDUaEnvDGbMdrQFi/NyF2sGZsx25LAsDspdrD6YMdvRuwtysN5Er9YONG0zUqo3
+        2UOtNWg6qGiII3DA6bBrvVrtZ3SYBmQCyvWh4ulwkm+eLmnifKbwkezEz/H39fANfLYl/KWy7AFhXnQd
+        DEtoLQAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="zurueck2.ToolTip" xml:space="preserve">
+    <value>Reset changes</value>
+  </data>
+  <data name="saveAenderungen2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29m
+        dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAACsSURBVDhPnZNRCsIwEAUDvZlfvVlB8Dx+9UiCN9Ad
+        ydu+prWNDgx52XSD4KYEQzgRjDl8fZEzoIfecg05cNomvFTJwHojPOvGUZMrlFnp3XwAqrlCOevtB6Ca
+        O1bJoPoSjHuoeitnoH0Gbu9Fv2R1wb/uFn8xA/9xL5qH1QVwNIFSk6j9EuraI2TeK54JmX2UVTwTWB8E
+        HoQXewTWz2PiSfIi4WgCpSYxesrwBjTZs3EhGb7+AAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="saveAenderungen2.ToolTip" xml:space="preserve">
+    <value>Save changes</value>
+  </data>
+  <data name="label275.Size" type="System.Drawing.Size, System.Drawing">
+    <value>92, 24</value>
+  </data>
+  <data name="label275.Text" xml:space="preserve">
+    <value>Sell direct</value>
+  </data>
+  <data name="knr2.HeaderText" xml:space="preserve">
+    <value>No.</value>
+  </data>
+  <data name="dataGridViewTextBoxColumn32.HeaderText" xml:space="preserve">
+    <value>Amount</value>
+  </data>
+  <data name="pr.HeaderText" xml:space="preserve">
+    <value>Price</value>
+  </data>
+  <data name="str.HeaderText" xml:space="preserve">
+    <value>Penalty</value>
+  </data>
+  <data name="dataGridViewCheckBoxColumn2.HeaderText" xml:space="preserve">
+    <value>Delete</value>
+  </data>
   <data name="addNr.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29m
@@ -568,10 +679,6 @@
   </data>
   <data name="addNr.ToolTip" xml:space="preserve">
     <value>Add new row</value>
-  </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="label3.ShowHelp" type="System.Boolean, mscorlib">
-    <value>True</value>
   </data>
   <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
     <value>137, 24</value>
@@ -629,14 +736,23 @@
   <data name="del.HeaderText" xml:space="preserve">
     <value>Delete</value>
   </data>
-  <data name="dataGridViewBestellung.ShowHelp" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
   <data name="tab_bestellung.Text" xml:space="preserve">
     <value>Orders</value>
   </data>
   <data name="tab_bestellverwaltung.Text" xml:space="preserve">
     <value>Order planning</value>
+  </data>
+  <data name="dataGridViewTextBoxColumn31.HeaderText" xml:space="preserve">
+    <value>No.</value>
+  </data>
+  <data name="dataGridViewTextBoxColumn33.HeaderText" xml:space="preserve">
+    <value>Amount</value>
+  </data>
+  <data name="lb12.Size" type="System.Drawing.Size, System.Drawing">
+    <value>108, 20</value>
+  </data>
+  <data name="lb12.Text" xml:space="preserve">
+    <value>Production list</value>
   </data>
   <data name="dataGridViewTextBoxColumn29.HeaderText" xml:space="preserve">
     <value>WS</value>
@@ -657,22 +773,10 @@
     <value>min/day</value>
   </data>
   <data name="label274.Size" type="System.Drawing.Size, System.Drawing">
-    <value>164, 25</value>
+    <value>120, 20</value>
   </data>
   <data name="label274.Text" xml:space="preserve">
     <value>Workingtime list</value>
-  </data>
-  <data name="dataGridViewTextBoxColumn27.HeaderText" xml:space="preserve">
-    <value>No.</value>
-  </data>
-  <data name="dataGridViewTextBoxColumn28.HeaderText" xml:space="preserve">
-    <value>Amount</value>
-  </data>
-  <data name="label273.Size" type="System.Drawing.Size, System.Drawing">
-    <value>148, 25</value>
-  </data>
-  <data name="label273.Text" xml:space="preserve">
-    <value>Production list</value>
   </data>
   <data name="dataGridViewTextBoxColumn24.HeaderText" xml:space="preserve">
     <value>No.</value>
@@ -684,7 +788,7 @@
     <value>Ordertype (N=normal, E=express)</value>
   </data>
   <data name="label272.Size" type="System.Drawing.Size, System.Drawing">
-    <value>99, 25</value>
+    <value>72, 20</value>
   </data>
   <data name="label272.Text" xml:space="preserve">
     <value>Order list</value>
@@ -698,23 +802,20 @@
   <data name="dataGridViewTextBoxColumn23.HeaderText" xml:space="preserve">
     <value>Price</value>
   </data>
+  <data name="straf.HeaderText" xml:space="preserve">
+    <value>Penalty</value>
+  </data>
   <data name="label271.Size" type="System.Drawing.Size, System.Drawing">
-    <value>176, 25</value>
+    <value>78, 20</value>
   </data>
   <data name="label271.Text" xml:space="preserve">
-    <value>Marketplace sale</value>
+    <value>Direct sell</value>
   </data>
   <data name="label270.Size" type="System.Drawing.Size, System.Drawing">
-    <value>198, 25</value>
+    <value>147, 20</value>
   </data>
   <data name="label270.Text" xml:space="preserve">
     <value>Distribution request</value>
-  </data>
-  <data name="panelXMLerstellen.ShowHelp" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="xmlOutput.ShowHelp" type="System.Boolean, mscorlib">
-    <value>True</value>
   </data>
   <data name="xmlOutput.Text" xml:space="preserve">
     <value>XML export</value>
@@ -730,7 +831,7 @@
 </value>
   </data>
   <data name="dateiÖffnenToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>165, 22</value>
+    <value>139, 22</value>
   </data>
   <data name="xMLexportToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -743,10 +844,10 @@
 </value>
   </data>
   <data name="xMLexportToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>165, 22</value>
+    <value>139, 22</value>
   </data>
   <data name="toolStripSeparator1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>162, 6</value>
+    <value>136, 6</value>
   </data>
   <data name="schließenToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -760,22 +861,25 @@
 </value>
   </data>
   <data name="schließenToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>165, 22</value>
+    <value>139, 22</value>
   </data>
   <data name="schließenToolStripMenuItem.Text" xml:space="preserve">
     <value>Close application</value>
   </data>
   <data name="dateiToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>37, 20</value>
+    <value>32, 20</value>
   </data>
   <data name="dateiToolStripMenuItem.Text" xml:space="preserve">
     <value>File</value>
   </data>
   <data name="handbuchToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>114, 22</value>
+    <value>121, 22</value>
   </data>
   <data name="handbuchToolStripMenuItem.Text" xml:space="preserve">
     <value>Manual</value>
+  </data>
+  <data name="videoF2ToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>121, 22</value>
   </data>
   <data name="hilfeToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -789,25 +893,25 @@
 </value>
   </data>
   <data name="hilfeToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>126, 22</value>
+    <value>109, 22</value>
   </data>
   <data name="hilfeToolStripMenuItem.Text" xml:space="preserve">
     <value>Help</value>
   </data>
   <data name="deutschToolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>122, 22</value>
+    <value>109, 22</value>
   </data>
   <data name="deutschToolStripMenuItem1.Text" xml:space="preserve">
     <value>Germany</value>
   </data>
   <data name="englischToolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>122, 22</value>
+    <value>109, 22</value>
   </data>
   <data name="englischToolStripMenuItem1.Text" xml:space="preserve">
     <value>English</value>
   </data>
   <data name="spracheToolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>126, 22</value>
+    <value>109, 22</value>
   </data>
   <data name="spracheToolStripMenuItem1.Text" xml:space="preserve">
     <value>Language</value>
@@ -822,28 +926,22 @@
 </value>
   </data>
   <data name="gewichtungToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>126, 22</value>
+    <value>109, 22</value>
   </data>
   <data name="gewichtungToolStripMenuItem.Text" xml:space="preserve">
     <value>Settings</value>
   </data>
   <data name="einstellungenToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>48, 20</value>
+    <value>39, 20</value>
   </data>
   <data name="einstellungenToolStripMenuItem.Text" xml:space="preserve">
     <value>Tools</value>
   </data>
   <data name="startSeiteToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>133, 22</value>
+    <value>115, 22</value>
   </data>
   <data name="startSeiteToolStripMenuItem.Text" xml:space="preserve">
     <value>Homepage</value>
-  </data>
-  <data name="scimToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>50, 20</value>
-  </data>
-  <data name="menu.Size" type="System.Drawing.Size, System.Drawing">
-    <value>884, 24</value>
   </data>
   <data name="xml_export.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -858,7 +956,7 @@
         kT1cJ2PXkD35aTY3y08zxNnschFk2X+N1bAl+vnUEz7FyBh/+TD8AuSGIQLcNRHpAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="xml_export.ShowHelp" type="System.Boolean, mscorlib">
+  <data name="info.ShowHelp" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="imageListAmpel.ImageStream" mimetype="application/x-microsoft.net.object.binary.base64">
@@ -866,7 +964,7 @@
         AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
         LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
         ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAABS
-        CwAAAk1TRnQBSQFMAgEBAwEAAWgBAgFoAQIBEAEAARABAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
+        CwAAAk1TRnQBSQFMAgEBAwEAAXgBAgF4AQIBEAEAARABAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
         AwABQAMAARADAAEBAQABCAYAAQQYAAGAAgABgAMAAoABAAGAAwABgAEAAYABAAKAAgADwAEAAcAB3AHA
         AQAB8AHKAaYBAAEzBQABMwEAATMBAAEzAQACMwIAAxYBAAMcAQADIgEAAykBAANVAQADTQEAA0IBAAM5
         AQABgAF8Af8BAAJQAf8BAAGTAQAB1gEAAf8B7AHMAQABxgHWAe8BAAHWAucBAAGQAakBrQIAAf8BMwMA
@@ -922,7 +1020,7 @@
         AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
         LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
         ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAAAM
-        CAAAAk1TRnQBSQFMAgEBAgEAASgBAAEoAQABEAEAARABAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
+        CAAAAk1TRnQBSQFMAgEBAgEAATgBAAE4AQABEAEAARABAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
         AwABQAMAARADAAEBAQABCAYAAQQYAAGAAgABgAMAAoABAAGAAwABgAEAAYABAAKAAgADwAEAAcAB3AHA
         AQAB8AHKAaYBAAEzBQABMwEAATMBAAEzAQACMwIAAxYBAAMcAQADIgEAAykBAANVAQADTQEAA0IBAAM5
         AQABgAF8Af8BAAJQAf8BAAGTAQAB1gEAAf8B7AHMAQABxgHWAe8BAAHWAucBAAGQAakBrQIAAf8BMwMA
@@ -958,9 +1056,6 @@
         AXwEAAE/AfwBPgF8BAABMAEMATABDAQAATABDAEwAQwEAAE/AfwBPgF8BAABPwH8AT4BfAQAAT8B/AE+
         AXwEAAE/AfwBPwH8BAABHwH4AR8B+BQACw==
 </value>
-  </data>
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>884, 426</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
