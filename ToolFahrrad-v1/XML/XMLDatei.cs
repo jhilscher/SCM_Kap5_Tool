@@ -156,7 +156,7 @@ namespace ToolFahrrad_v1.XML
             //Produktionskapaziläten
             sw.WriteLine("<workingtimelist>");
             foreach (int[] a in _dc.ApKapazitaet) {
-                sw.WriteLine("<workingtime station=\"" + a[0] + "\" shift=\"" + a[1] + "\" overtime=\"" + a[2] + "\"/>");  
+                sw.WriteLine("<workingtime station=\"" + a[0] + "\" shift=\"" + a[1] + "\" overtime=\"" + (a[2] / 5) + "\"/>");  
             }
             sw.WriteLine("</workingtimelist>");
 
