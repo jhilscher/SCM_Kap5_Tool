@@ -61,9 +61,9 @@ namespace ToolFahrrad_v1.Verwaltung
             {
                 // Initialization of members
                 double perBeginn = 0.0;
-                double perEnde = 0.8;
-                double perBeginnNachfolger = 1.0;
-                double lieferungNorm = kt.Lieferdauer + kt.AbweichungLieferdauer * (_dc.VerwendeAbweichung / 100);
+                double perEnde = perBeginn + 0.8;
+                double perBeginnNachfolger = perEnde + 0.2;
+                double lieferungNorm = kt.Lieferdauer + (kt.AbweichungLieferdauer * (_dc.VerwendeAbweichung / 100));
                 double lieferungEil = kt.Lieferdauer / 2;
                 int mengeNorm = 0;
                 int mengeEil = 0;
@@ -72,11 +72,6 @@ namespace ToolFahrrad_v1.Verwaltung
                 bestaendeKTeil.Add(kt.BestandPer2);
                 bestaendeKTeil.Add(kt.BestandPer3);
                 bestaendeKTeil.Add(kt.BestandPer4);
-                List<int> verbrauchKTeil = new List<int>();
-                verbrauchKTeil.Add(kt.BruttoBedarfPer0);
-                verbrauchKTeil.Add(kt.BruttoBedarfPer1);
-                verbrauchKTeil.Add(kt.BruttoBedarfPer2);
-                verbrauchKTeil.Add(kt.BruttoBedarfPer3);
                 int index = 0;
                 // Check if quantity is low and create order
                 while (lieferungNorm >= perBeginn)
@@ -85,29 +80,21 @@ namespace ToolFahrrad_v1.Verwaltung
                     {
                         if (perBeginn <= lieferungNorm && perEnde > lieferungNorm)
                         {
-                            if (bestaendeKTeil[index] != 0)
+                            if (bestaendeKTeil[index] < 0)
                             {
-                                if (perBeginn == 0.0)
-                                {
-                                    mengeNorm += berechneMenge(verbrauchKTeil[index] - kt.Lagerstand, kt.DiskontMenge);
-                                }
-                                else
-                                {
-                                    mengeNorm +=
-                                        berechneMenge(
-                                            verbrauchKTeil[index] - bestaendeKTeil[index], kt.DiskontMenge);
-                                }
+                                mengeNorm += berechneMenge(bestaendeKTeil[index] * (-1), kt.DiskontMenge);
                             }
                             else
                             {
-                                mengeNorm +=
-                                    berechneMenge(
-                                        verbrauchKTeil[index + 1] - bestaendeKTeil[index + 1], kt.DiskontMenge);
+                                if (bestaendeKTeil[index + 1] < 0)
+                                {
+                                    mengeNorm += berechneMenge(bestaendeKTeil[index + 1] * (-1), kt.DiskontMenge);
+                                }
                             }
                         }
                         else
                         {
-                            if (bestaendeKTeil[index] != 0)
+                            if (bestaendeKTeil[index] < 0)
                             {
                                 mengeEil += bestaendeKTeil[index] * (-1);
                             }
