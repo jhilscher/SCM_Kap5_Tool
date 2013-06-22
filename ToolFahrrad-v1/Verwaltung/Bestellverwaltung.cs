@@ -80,13 +80,13 @@ namespace ToolFahrrad_v1.Verwaltung
                         {
                             if (bestaendeKTeil[index] < 0)
                             {
-                                mengeNorm += berechneMenge(bestaendeKTeil[index] * (-1), kt.DiskontMenge);
+                                mengeNorm += berechneMenge(bestaendeKTeil[index] * (-1), kt.DiskontMenge, kt.Preis);
                             }
                             else
                             {
                                 if (bestaendeKTeil[index + 1] < 0)
                                 {
-                                    mengeNorm += berechneMenge(bestaendeKTeil[index + 1] * (-1), kt.DiskontMenge);
+                                    mengeNorm += berechneMenge(bestaendeKTeil[index + 1] * (-1), kt.DiskontMenge, kt.Preis);
                                 }
                             }
                         }
@@ -134,27 +134,44 @@ namespace ToolFahrrad_v1.Verwaltung
         {
             _dc.DVerkauf = DvPositionen;
         }
-        private int berechneMenge(int bestellMenge, int diskont)
+        private int berechneMenge(int bestellMenge, int diskont, double preis)
         {
             double verwDiskont = _dc.VerwendeDiskount;
             int outputMenge;
             // Member verwDiskont need to be percent -> devide with 100
             // Check if param verwDiskont is either 0 or 100: 0 = take bestellMenge, 100 = take diskount
-            if (bestellMenge > diskont || verwDiskont == 0)
+            if (preis < _dc.DiskountGrenze)
+            {
+                if(bestellMenge > diskont)
+                {
+                    outputMenge = bestellMenge;
+                }
+                else
+                {
+                    outputMenge = diskont;
+                }
+            }
+            else if (preis >= _dc.GrenzeMenge)
             {
                 outputMenge = bestellMenge;
             }
-            else if (verwDiskont == 100)
-            {
-                outputMenge = diskont;
-            }
             else
             {
-                verwDiskont = verwDiskont / 100;
-                verwDiskont = 1 - verwDiskont;
-                // Example: 300 * 0,5
-                int vergleichDiskont = Convert.ToInt32(Math.Round(verwDiskont * diskont, 0));
-                outputMenge = vergleichDiskont < bestellMenge ? diskont : bestellMenge;
+                if (bestellMenge > diskont || verwDiskont == 0)
+                {
+                    outputMenge = bestellMenge;
+                }
+                else if (verwDiskont == 100 || bestellMenge == diskont)
+                {
+                    outputMenge = diskont;
+                }
+                else
+                {
+                    verwDiskont = 1 - (verwDiskont / 100);
+                    // Example: 300 * 0,5
+                    int vergleichDiskont = Convert.ToInt32(Math.Round(verwDiskont * diskont, 0));
+                    outputMenge = vergleichDiskont <= bestellMenge ? diskont : bestellMenge;
+                }
             }
             // Return output
             return outputMenge;
