@@ -979,7 +979,25 @@ namespace ToolFahrrad_v1.Design
                 case Keys.F2:
                     VideoTutorial();
                     break;
+                case (Keys.Alt | Keys.E):
+                    ChangeLanguage("englisch");
+                    englischToolStripMenuItem1.Checked = true;
+                    deutschToolStripMenuItem1.Checked = false;
+                    break;
+                case (Keys.Alt | Keys.D):
+                    ChangeLanguage("deutsch");
+                    englischToolStripMenuItem1.Checked = false;
+                    deutschToolStripMenuItem1.Checked = true;
+                    break;
+                case (Keys.Control | Keys.E):
+                    var einstellungen = new Einstellungen();
+                    einstellungen.Show();
+                    break;
+                case (Keys.Alt | Keys.F4):
+                    Close();
+                    break;
             }
+
             return base.ProcessCmdKey(ref msg, keyData);
         }
 
@@ -1172,7 +1190,7 @@ namespace ToolFahrrad_v1.Design
 
             DispositionDarstellung(1);
             Information();
-            XmlVorbereitung(1); //1=vertriebswunsch
+            XmlVorbereitung(100);
 
             GetInfo(_culInfo.Contains("de") ? "Daten wurde in XML übernommen" : "Take in XML data has been");
         }
@@ -1205,38 +1223,29 @@ namespace ToolFahrrad_v1.Design
 
             DispositionDarstellung(2);
             Information();
-            XmlVorbereitung(1); //1=vertriebswunsch
+            XmlVorbereitung(100);
             GetInfo(_culInfo.Contains("de") ? "Daten wurde in XML übernommen" : "Take in XML data has been");
         }
         private void p3ETAusfueren_Click(object sender, EventArgs e) {
             (_instance.GetTeil(3) as ETeil).VertriebPer0 = Convert.ToInt32(p3vw_0.Text);
             (_instance.GetTeil(3) as ETeil).Puffer = Convert.ToInt32(p3r_0.Text);
             ProdMenge(3, 3, Convert.ToInt32(p3r_0.Text));
-
             (_instance.GetTeil(31) as ETeil).Puffer = Convert.ToInt32(p3r_31.Text);
             ProdMenge(3, 31, Convert.ToInt32(p3r_31.Text));
-
             (_instance.GetTeil(30) as ETeil).Puffer = Convert.ToInt32(p3r_30.Text);
             ProdMenge(3, 30, Convert.ToInt32(p3r_30.Text));
-
             (_instance.GetTeil(6) as ETeil).Puffer = Convert.ToInt32(p3r_6.Text);
             ProdMenge(3, 6, Convert.ToInt32(p3r_6.Text));
-
             (_instance.GetTeil(12) as ETeil).Puffer = Convert.ToInt32(p3r_12.Text);
             ProdMenge(3, 12, Convert.ToInt32(p3r_12.Text));
-
             (_instance.GetTeil(29) as ETeil).Puffer = Convert.ToInt32(p3r_29.Text);
             ProdMenge(3, 29, Convert.ToInt32(p3r_29.Text));
-
             (_instance.GetTeil(9) as ETeil).Puffer = Convert.ToInt32(p3r_9.Text);
             ProdMenge(3, 9, Convert.ToInt32(p3r_9.Text));
-
             (_instance.GetTeil(15) as ETeil).Puffer = Convert.ToInt32(p3r_15.Text);
             ProdMenge(3, 15, Convert.ToInt32(p3r_15.Text));
-
             (_instance.GetTeil(20) as ETeil).Puffer = Convert.ToInt32(p3r_20.Text);
             ProdMenge(3, 20, Convert.ToInt32(p3r_20.Text));
-
             (_instance.GetTeil(26) as ETeil).KdhPuffer[(_instance.GetTeil(26) as ETeil).KdhPuffer.Keys.ToList()[0]][2] = Convert.ToInt32(p3r_26.Text);
             ProdMenge(3, 26, Convert.ToInt32(p3r_26.Text));
             (_instance.GetTeil(16) as ETeil).KdhPuffer[(_instance.GetTeil(16) as ETeil).KdhPuffer.Keys.ToList()[1]][2] = Convert.ToInt32(p3r_16.Text);
@@ -1246,7 +1255,7 @@ namespace ToolFahrrad_v1.Design
 
             DispositionDarstellung(3);
             Information();
-            XmlVorbereitung(1); //1=vertriebswunsch
+            XmlVorbereitung(100);
             GetInfo(_culInfo.Contains("de") ? "Daten wurde in XML übernommen" : "Take in XML data has been");
         }
         private void arbPlatzAusfueren_Click(object sender, EventArgs e) {
@@ -1260,50 +1269,61 @@ namespace ToolFahrrad_v1.Design
             GetInfo(_culInfo.Contains("de") ? "Daten wurde in XML übernommen" : "Take in XML data has been");
         }
 
-
-
         private void pictureBox3_Click(object sender, EventArgs e) {
-            if (dataGridViewBestellung.AllowUserToAddRows) {
-                dataGridViewBestellung.AllowUserToAddRows = false;
-                kNr.ReadOnly = true;
-            }
-            _bp = new List<Bestellposition>();
+            try {
+                if (dataGridViewBestellung.AllowUserToAddRows) {
+                    dataGridViewBestellung.AllowUserToAddRows = false;
+                    kNr.ReadOnly = true;
+                }
+                _bp = new List<Bestellposition>();
 
-            foreach (DataGridViewRow row in dataGridViewBestellung.Rows) {
-                var check = (DataGridViewCheckBoxCell)row.Cells[3];
-                var check2 = (DataGridViewCheckBoxCell)row.Cells[2];
-                bool c = check2.Value != null;
-                if (check.Value == null)
-                    check.Value = false;
+                foreach (DataGridViewRow row in dataGridViewBestellung.Rows) {
+                    var check = (DataGridViewCheckBoxCell)row.Cells[3];
+                    var check2 = (DataGridViewCheckBoxCell)row.Cells[2];
+                    bool c = check2.Value != null;
+                    if (check.Value == null)
+                        check.Value = false;
 
 
-                var value = row.Cells[0].Value;
-                if (value != null) {
-                    var teil = _instance.GetTeil(Convert.ToInt32(value.ToString())) as KTeil;
-                    if (teil != null) {
-                        if (row.Cells[1].Value != null) {
-                            if (check.Value.ToString() != "true") {
-                                var bbp = new Bestellposition(teil, Convert.ToInt32(row.Cells[1].Value.ToString()), c);
-                                _bp.Add(bbp);
+                    var value = row.Cells[0].Value;
+                    if (value != null) {
+                        var teil = _instance.GetTeil(Convert.ToInt32(value.ToString())) as KTeil;
+                        if (teil != null) {
+                            if (row.Cells[1].Value != null) {
+                                if (check.Value.ToString() != "true") {
+                                    var bbp = new Bestellposition(teil, Convert.ToInt32(row.Cells[1].Value.ToString()),
+                                                                  c);
+                                    _bp.Add(bbp);
+                                }
                             }
+                            else
+                                MessageBox.Show(
+                                    Resources.Fahrrad_pictureBox3_Click_Kaufteil_N + value +
+                                    Resources.Fahrrad_pictureBox3_Click_, Resources.Fahrrad_XmlOeffnen_Fehlermeldung,
+                                    MessageBoxButtons.OK, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button1);
                         }
                         else
-                            MessageBox.Show(Resources.Fahrrad_pictureBox3_Click_Kaufteil_N + value + Resources.Fahrrad_pictureBox3_Click_, Resources.Fahrrad_XmlOeffnen_Fehlermeldung,
-                                            MessageBoxButtons.OK, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button1);
+                            MessageBox.Show(
+                                Resources.Fahrrad_pictureBox3_Click_Kaufteil_N + value +
+                                Resources.Fahrrad_pictureBox3_Click_1, Resources.Fahrrad_XmlOeffnen_Fehlermeldung,
+                                MessageBoxButtons.OK, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button1);
                     }
-                    else
-                        MessageBox.Show(Resources.Fahrrad_pictureBox3_Click_Kaufteil_N + value + Resources.Fahrrad_pictureBox3_Click_1, Resources.Fahrrad_XmlOeffnen_Fehlermeldung,
-                                        MessageBoxButtons.OK, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button1);
-                }
-                else {
-                    MessageBox.Show(Resources.Fahrrad_pictureBox3_Click_Kaufteil_kann_nicht_NULL_sein, Resources.Fahrrad_XmlOeffnen_Fehlermeldung,
-                                           MessageBoxButtons.OK, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button1);
+                    else {
+                        MessageBox.Show(Resources.Fahrrad_pictureBox3_Click_Kaufteil_kann_nicht_NULL_sein,
+                                        Resources.Fahrrad_XmlOeffnen_Fehlermeldung,
+                                        MessageBoxButtons.OK, MessageBoxIcon.Exclamation,
+                                        MessageBoxDefaultButton.Button1);
+                    }
+
                 }
 
+                _bestellungUpdate = true;
+                _bv.SetBvPositionen(_bp);
+                Information();
             }
-            _bestellungUpdate = true;
-            _bv.SetBvPositionen(_bp);
-            Information();
+            catch (Exception ex) {
+                MessageBox.Show(ex.Message);
+            }
         }
         private void zurueck_Click(object sender, EventArgs e) {
             if (dataGridViewBestellung.AllowUserToAddRows) {
@@ -1481,7 +1501,6 @@ namespace ToolFahrrad_v1.Design
             timer1.Stop();
             GetInfo("");
         }
-        ////////////////////////////////////////////////////////////////////////////////
     }
 }
 

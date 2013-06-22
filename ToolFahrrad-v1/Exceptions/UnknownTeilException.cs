@@ -7,16 +7,17 @@ namespace ToolFahrrad_v1.Exceptions
     /** Exception is thrown when Teil could not be recognized */
     class UnknownTeilException : Exception
     {
-        // Class member
-        // Constructor
-        public UnknownTeilException(int nummer_param)
-        {
-            Nummer = nummer_param;
+        private string message;
+        public UnknownTeilException(int nummerParam){
 
-            MessageBox.Show("Kaufteil " + nummer_param + " wurde nicht gefunden", Resources.Fahrrad_XmlOeffnen_Fehlermeldung,
-                                           MessageBoxButtons.OK, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button1);
+            message = string.Format("{0} wurde im System nicht gefunden", nummerParam);
+
         }
-        // Getter / Setter
-        public int Nummer { get; set; }
+
+        public override string Message {
+            get {
+                return message;
+            }
+        }
     }
 }

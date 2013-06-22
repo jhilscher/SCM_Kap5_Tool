@@ -1,10 +1,12 @@
-﻿namespace ToolFahrrad_v1.Komponenten
+﻿using ToolFahrrad_v1.Exceptions;
+
+namespace ToolFahrrad_v1.Komponenten
 {
     /*Abstract class Teil as basic class for inheritance */
     public abstract class Teil
     {
         // Class members
-        protected string verwendung;
+        private string _verwendung;
         // Constructor
         protected Teil(int nummer, string bez)
         {
@@ -31,12 +33,12 @@
 
         public string Verwendung
         {
-            get { return verwendung; }
+            get { return _verwendung; }
             set
             {
                 if (value == "K" || value == "D" || value == "H" || value == "KDH")
                 {
-                    verwendung = value;
+                    _verwendung = value;
                 }
                 else
                 {

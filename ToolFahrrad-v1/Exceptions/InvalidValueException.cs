@@ -1,13 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
-namespace ToolFahrrad_v1
+namespace ToolFahrrad_v1.Exceptions
 {
     class InvalidValueException : Exception
     {
-        string message;
+        readonly string message;
 
         public InvalidValueException(string val, string wf)
         {

@@ -708,11 +708,11 @@
             this.startSeiteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
             this.xml_export = new System.Windows.Forms.PictureBox();
+            this.info = new System.Windows.Forms.Label();
             this.imageListAmpel = new System.Windows.Forms.ImageList(this.components);
             this.helpProvider1 = new System.Windows.Forms.HelpProvider();
             this.imageListPlusMinus = new System.Windows.Forms.ImageList(this.components);
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
-            this.info = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.tabs.SuspendLayout();
             this.tab_xml.SuspendLayout();
@@ -6203,6 +6203,7 @@
             this.tabPage1.Controls.Add(this.dataGridViewProduktAuftrag);
             resources.ApplyResources(this.tabPage1, "tabPage1");
             this.tabPage1.Name = "tabPage1";
+            this.helpProvider1.SetShowHelp(this.tabPage1, ((bool)(resources.GetObject("tabPage1.ShowHelp"))));
             // 
             // pictureBox4
             // 
@@ -6524,6 +6525,7 @@
             resources.ApplyResources(this.dvVerwenden, "dvVerwenden");
             this.dvVerwenden.BackColor = System.Drawing.SystemColors.Control;
             this.dvVerwenden.Name = "dvVerwenden";
+            this.helpProvider1.SetShowHelp(this.dvVerwenden, ((bool)(resources.GetObject("dvVerwenden.ShowHelp"))));
             this.toolTip.SetToolTip(this.dvVerwenden, resources.GetString("dvVerwenden.ToolTip"));
             this.dvVerwenden.UseVisualStyleBackColor = false;
             // 
@@ -6743,12 +6745,14 @@
             resources.ApplyResources(this.dataGridViewTextBoxColumn31, "dataGridViewTextBoxColumn31");
             this.dataGridViewTextBoxColumn31.Name = "dataGridViewTextBoxColumn31";
             this.dataGridViewTextBoxColumn31.ReadOnly = true;
+            this.dataGridViewTextBoxColumn31.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // dataGridViewTextBoxColumn33
             // 
             resources.ApplyResources(this.dataGridViewTextBoxColumn33, "dataGridViewTextBoxColumn33");
             this.dataGridViewTextBoxColumn33.Name = "dataGridViewTextBoxColumn33";
             this.dataGridViewTextBoxColumn33.ReadOnly = true;
+            this.dataGridViewTextBoxColumn33.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // lb12
             // 
@@ -6777,18 +6781,21 @@
             resources.ApplyResources(this.dataGridViewTextBoxColumn29, "dataGridViewTextBoxColumn29");
             this.dataGridViewTextBoxColumn29.Name = "dataGridViewTextBoxColumn29";
             this.dataGridViewTextBoxColumn29.ReadOnly = true;
+            this.dataGridViewTextBoxColumn29.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // dataGridViewTextBoxColumn30
             // 
             resources.ApplyResources(this.dataGridViewTextBoxColumn30, "dataGridViewTextBoxColumn30");
             this.dataGridViewTextBoxColumn30.Name = "dataGridViewTextBoxColumn30";
             this.dataGridViewTextBoxColumn30.ReadOnly = true;
+            this.dataGridViewTextBoxColumn30.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // ueberStunden
             // 
             resources.ApplyResources(this.ueberStunden, "ueberStunden");
             this.ueberStunden.Name = "ueberStunden";
             this.ueberStunden.ReadOnly = true;
+            this.ueberStunden.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // label274
             // 
@@ -7051,6 +7058,13 @@
             this.toolTip.SetToolTip(this.xml_export, resources.GetString("xml_export.ToolTip"));
             this.xml_export.Click += new System.EventHandler(this.xml_export_Click);
             // 
+            // info
+            // 
+            resources.ApplyResources(this.info, "info");
+            this.info.ForeColor = System.Drawing.Color.Green;
+            this.info.Name = "info";
+            this.helpProvider1.SetShowHelp(this.info, ((bool)(resources.GetObject("info.ShowHelp"))));
+            // 
             // imageListAmpel
             // 
             this.imageListAmpel.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageListAmpel.ImageStream")));
@@ -7069,12 +7083,6 @@
             this.imageListPlusMinus.TransparentColor = System.Drawing.Color.Transparent;
             this.imageListPlusMinus.Images.SetKeyName(0, "minus.png");
             this.imageListPlusMinus.Images.SetKeyName(1, "plus.png");
-            // 
-            // info
-            // 
-            resources.ApplyResources(this.info, "info");
-            this.info.ForeColor = System.Drawing.Color.Green;
-            this.info.Name = "info";
             // 
             // timer1
             // 
@@ -7828,19 +7836,7 @@
         private System.Windows.Forms.DataGridViewCheckBoxColumn eil;
         private System.Windows.Forms.DataGridViewCheckBoxColumn del;
         private System.Windows.Forms.CheckBox dvVerwenden;
-        private System.Windows.Forms.DataGridViewTextBoxColumn knr2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn32;
-        private System.Windows.Forms.DataGridViewTextBoxColumn pr;
-        private System.Windows.Forms.DataGridViewTextBoxColumn str;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn dataGridViewCheckBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn12;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn22;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn23;
-        private System.Windows.Forms.DataGridViewTextBoxColumn straf;
         private System.Windows.Forms.SaveFileDialog saveFileDialog1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn29;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn30;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ueberStunden;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
@@ -7854,14 +7850,26 @@
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.DataGridView dataGridViewPrAuftraege;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn31;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn33;
         private System.Windows.Forms.Label lb12;
         private System.Windows.Forms.Label info;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.ToolStripMenuItem videoF2ToolStripMenuItem;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn27;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn28;
+        private System.Windows.Forms.DataGridViewTextBoxColumn knr2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn32;
+        private System.Windows.Forms.DataGridViewTextBoxColumn pr;
+        private System.Windows.Forms.DataGridViewTextBoxColumn str;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn dataGridViewCheckBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn12;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn22;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn23;
+        private System.Windows.Forms.DataGridViewTextBoxColumn straf;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn31;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn33;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn29;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn30;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ueberStunden;
     }
 }
 
