@@ -45,8 +45,8 @@ namespace ToolFahrrad_v1
         // Constructor
         private DataContainer()
         {
-            GrenzeMenge = 10;
-            DiskountGrenze = 5;
+            GrenzeMenge = 15;
+            DiskountGrenze = 8;
             ApKapazitaet = new List<int[]>();
             BerechneKindTeil = true;
             _listeBestellungen = new List<Bestellposition>();
