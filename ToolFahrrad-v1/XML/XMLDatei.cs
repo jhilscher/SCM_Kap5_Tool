@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Text;
 using System.IO;
+using System.Text.RegularExpressions;
 using System.Xml;
 using ToolFahrrad_v1.Komponenten;
 
@@ -21,6 +22,9 @@ namespace ToolFahrrad_v1.XML
             using (var sr = new StreamReader(pfad, Encoding.UTF8)) {
                 string zeile;
                 while ((zeile = sr.ReadLine()) != null) {
+                    var r = new Regex(@"^\s+");
+                    zeile = r.Replace(zeile, @"");
+                    zeile = zeile.Replace("\r\n", string.Empty);
                     zeile = zeile.Replace("- <", "<");
                     if (zeile.Contains("results"))
                         res = true;
