@@ -979,7 +979,25 @@ namespace ToolFahrrad_v1.Design
                 case Keys.F2:
                     VideoTutorial();
                     break;
+                case (Keys.Alt | Keys.E):
+                    ChangeLanguage("englisch");
+                    englischToolStripMenuItem1.Checked = true;
+                    deutschToolStripMenuItem1.Checked = false;
+                    break;
+                case (Keys.Alt | Keys.D):
+                    ChangeLanguage("deutsch");
+                    englischToolStripMenuItem1.Checked = false;
+                    deutschToolStripMenuItem1.Checked = true;
+                    break;
+                case (Keys.Control | Keys.E):
+                    var einstellungen = new Einstellungen();
+                    einstellungen.Show();
+                    break;
+                case (Keys.Alt | Keys.F4):
+                    Close();
+                    break;
             }
+
             return base.ProcessCmdKey(ref msg, keyData);
         }
 
@@ -1303,7 +1321,7 @@ namespace ToolFahrrad_v1.Design
                 _bv.SetBvPositionen(_bp);
                 Information();
             }
-            catch (Exception ex){
+            catch (Exception ex) {
                 MessageBox.Show(ex.Message);
             }
         }
