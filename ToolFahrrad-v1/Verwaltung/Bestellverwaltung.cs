@@ -60,10 +60,8 @@ namespace ToolFahrrad_v1.Verwaltung
             foreach (KTeil kt in _dc.ListeKTeile)
             {
                 // Initialization of members
-                double perBeginn = 0.0;
-                double perEnde = perBeginn + 0.8;
-                double perBeginnNachfolger = perEnde + 0.2;
-                double lieferungNorm = kt.Lieferdauer + (kt.AbweichungLieferdauer * (_dc.VerwendeAbweichung / 100));
+                double perBeginn = 1.0;
+                double lieferungNorm = Math.Ceiling(kt.Lieferdauer + (kt.AbweichungLieferdauer * (_dc.VerwendeAbweichung / 100)));
                 double lieferungEil = kt.Lieferdauer / 2;
                 int mengeNorm = 0;
                 int mengeEil = 0;
@@ -78,7 +76,7 @@ namespace ToolFahrrad_v1.Verwaltung
                 {
                     if (bestaendeKTeil[index] <= 0)
                     {
-                        if (perBeginn <= lieferungNorm && perEnde > lieferungNorm)
+                        if (perBeginn == lieferungNorm)
                         {
                             if (bestaendeKTeil[index] < 0)
                             {
@@ -102,8 +100,6 @@ namespace ToolFahrrad_v1.Verwaltung
                     }
                     // Increment period members
                     ++perBeginn;
-                    ++perEnde;
-                    ++perBeginnNachfolger;
                     ++index;
                 }
                 // Create one or more orders
