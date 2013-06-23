@@ -1002,12 +1002,12 @@ namespace ToolFahrrad_v1.Design
         }
 
         private void BenutzerHandbuch() {
-            string path = Directory.GetCurrentDirectory() + @"\chm\Handbuch_SS2013_P004_V2.docx";
+            string path = Directory.GetCurrentDirectory() + @"\docu\Handbuch.pdf";
             Help.ShowHelp(this, path, HelpNavigator.TableOfContents, "");
         }
 
         private void VideoTutorial() {
-            string path = Directory.GetCurrentDirectory() + @"\chm\Schulung.exe";
+            string path = Directory.GetCurrentDirectory() + @"\docu\Schulung.exe";
             Help.ShowHelp(this, path, HelpNavigator.TableOfContents, "");
         }
 
