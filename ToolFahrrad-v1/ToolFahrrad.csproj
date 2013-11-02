@@ -63,6 +63,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DataContainer.cs" />
+    <Compile Include="Design\Partial\Fahrrad.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Design\ToolFahrrad.cs">
       <SubType>Form</SubType>
     </Compile>
