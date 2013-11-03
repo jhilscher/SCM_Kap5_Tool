@@ -715,7 +715,7 @@
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.NavPanel = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
+            this.nav_button_1 = new System.Windows.Forms.Button();
             this.tabs.SuspendLayout();
             this.tab_xml.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pufferP3)).BeginInit();
@@ -7096,16 +7096,17 @@
             // NavPanel
             // 
             this.NavPanel.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.NavPanel.Controls.Add(this.button1);
+            this.NavPanel.Controls.Add(this.nav_button_1);
             resources.ApplyResources(this.NavPanel, "NavPanel");
             this.NavPanel.Name = "NavPanel";
             // 
-            // button1
+            // nav_button_1
             // 
-            this.button1.BackColor = System.Drawing.SystemColors.ButtonFace;
-            resources.ApplyResources(this.button1, "button1");
-            this.button1.Name = "button1";
-            this.button1.UseVisualStyleBackColor = false;
+            this.nav_button_1.BackColor = System.Drawing.SystemColors.ButtonFace;
+            resources.ApplyResources(this.nav_button_1, "nav_button_1");
+            this.nav_button_1.Name = "nav_button_1";
+            this.nav_button_1.UseVisualStyleBackColor = false;
+            this.nav_button_1.Click += new System.EventHandler(this.nav_button_1_Click);
             // 
             // Fahrrad
             // 
@@ -7890,7 +7891,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn30;
         private System.Windows.Forms.DataGridViewTextBoxColumn ueberStunden;
         private System.Windows.Forms.Panel NavPanel;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button nav_button_1;
     }
 }
 
