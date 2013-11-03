@@ -20699,7 +20699,7 @@
         AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
         LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
         ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAABS
-        CwAAAk1TRnQBSQFMAgEBAwEAAUgBAwFIAQMBEAEAARABAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
+        CwAAAk1TRnQBSQFMAgEBAwEAAYABAwGAAQMBEAEAARABAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
         AwABQAMAARADAAEBAQABCAYAAQQYAAGAAgABgAMAAoABAAGAAwABgAEAAYABAAKAAgADwAEAAcAB3AHA
         AQAB8AHKAaYBAAEzBQABMwEAATMBAAEzAQACMwIAAxYBAAMcAQADIgEAAykBAANVAQADTQEAA0IBAAM5
         AQABgAF8Af8BAAJQAf8BAAGTAQAB1gEAAf8B7AHMAQABxgHWAe8BAAHWAucBAAGQAakBrQIAAf8BMwMA
@@ -20750,6 +20750,186 @@
         AQEBAAEBAgAB4AEPAeABDwHgAQ8CAAs=
 </value>
   </data>
+  <data name="button_nav_2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="button_nav_2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 48</value>
+  </data>
+  <data name="button_nav_2.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="button_nav_2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>111, 50</value>
+  </data>
+  <data name="button_nav_2.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="button_nav_2.Text" xml:space="preserve">
+    <value>XML</value>
+  </data>
+  <data name="&gt;&gt;button_nav_2.Name" xml:space="preserve">
+    <value>button_nav_2</value>
+  </data>
+  <data name="&gt;&gt;button_nav_2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;button_nav_2.Parent" xml:space="preserve">
+    <value>NavPanel</value>
+  </data>
+  <data name="&gt;&gt;button_nav_2.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="button_nav_3.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="button_nav_3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 96</value>
+  </data>
+  <data name="button_nav_3.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="button_nav_3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>111, 50</value>
+  </data>
+  <data name="button_nav_3.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="button_nav_3.Text" xml:space="preserve">
+    <value>Produktionsplanung</value>
+  </data>
+  <data name="&gt;&gt;button_nav_3.Name" xml:space="preserve">
+    <value>button_nav_3</value>
+  </data>
+  <data name="&gt;&gt;button_nav_3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;button_nav_3.Parent" xml:space="preserve">
+    <value>NavPanel</value>
+  </data>
+  <data name="&gt;&gt;button_nav_3.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="button_nav_4.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="button_nav_4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 144</value>
+  </data>
+  <data name="button_nav_4.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="button_nav_4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>111, 50</value>
+  </data>
+  <data name="button_nav_4.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="button_nav_4.Text" xml:space="preserve">
+    <value>Kapazitätsplanung</value>
+  </data>
+  <data name="&gt;&gt;button_nav_4.Name" xml:space="preserve">
+    <value>button_nav_4</value>
+  </data>
+  <data name="&gt;&gt;button_nav_4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;button_nav_4.Parent" xml:space="preserve">
+    <value>NavPanel</value>
+  </data>
+  <data name="&gt;&gt;button_nav_4.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="button_nav_5.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="button_nav_5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 192</value>
+  </data>
+  <data name="button_nav_5.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="button_nav_5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>111, 50</value>
+  </data>
+  <data name="button_nav_5.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="button_nav_5.Text" xml:space="preserve">
+    <value>Bestellverwaltung</value>
+  </data>
+  <data name="&gt;&gt;button_nav_5.Name" xml:space="preserve">
+    <value>button_nav_5</value>
+  </data>
+  <data name="&gt;&gt;button_nav_5.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;button_nav_5.Parent" xml:space="preserve">
+    <value>NavPanel</value>
+  </data>
+  <data name="&gt;&gt;button_nav_5.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="button_nav_6.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="button_nav_6.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 240</value>
+  </data>
+  <data name="button_nav_6.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="button_nav_6.Size" type="System.Drawing.Size, System.Drawing">
+    <value>111, 50</value>
+  </data>
+  <data name="button_nav_6.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="button_nav_6.Text" xml:space="preserve">
+    <value>Marktplatz</value>
+  </data>
+  <data name="&gt;&gt;button_nav_6.Name" xml:space="preserve">
+    <value>button_nav_6</value>
+  </data>
+  <data name="&gt;&gt;button_nav_6.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;button_nav_6.Parent" xml:space="preserve">
+    <value>NavPanel</value>
+  </data>
+  <data name="&gt;&gt;button_nav_6.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="button_nav_7.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="button_nav_7.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 288</value>
+  </data>
+  <data name="button_nav_7.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="button_nav_7.Size" type="System.Drawing.Size, System.Drawing">
+    <value>111, 50</value>
+  </data>
+  <data name="button_nav_7.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="button_nav_7.Text" xml:space="preserve">
+    <value>Übersicht</value>
+  </data>
+  <data name="&gt;&gt;button_nav_7.Name" xml:space="preserve">
+    <value>button_nav_7</value>
+  </data>
+  <data name="&gt;&gt;button_nav_7.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;button_nav_7.Parent" xml:space="preserve">
+    <value>NavPanel</value>
+  </data>
+  <data name="&gt;&gt;button_nav_7.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <metadata name="imageListPlusMinus.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>231, 19</value>
   </metadata>
@@ -20758,7 +20938,7 @@
         AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
         LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
         ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAAAM
-        CAAAAk1TRnQBSQFMAgEBAgEAAQgBAQEIAQEBEAEAARABAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
+        CAAAAk1TRnQBSQFMAgEBAgEAAUABAQFAAQEBEAEAARABAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
         AwABQAMAARADAAEBAQABCAYAAQQYAAGAAgABgAMAAoABAAGAAwABgAEAAYABAAKAAgADwAEAAcAB3AHA
         AQAB8AHKAaYBAAEzBQABMwEAATMBAAEzAQACMwIAAxYBAAMcAQADIgEAAykBAANVAQADTQEAA0IBAAM5
         AQABgAF8Af8BAAJQAf8BAAGTAQAB1gEAAf8B7AHMAQABxgHWAe8BAAHWAucBAAGQAakBrQIAAf8BMwMA
@@ -20805,13 +20985,13 @@
     <value>0, 0</value>
   </data>
   <data name="nav_button_1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>111, 76</value>
+    <value>111, 50</value>
   </data>
   <data name="nav_button_1.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
   <data name="nav_button_1.Text" xml:space="preserve">
-    <value>Nav1</value>
+    <value>Home</value>
   </data>
   <data name="&gt;&gt;nav_button_1.Name" xml:space="preserve">
     <value>nav_button_1</value>
@@ -20823,7 +21003,7 @@
     <value>NavPanel</value>
   </data>
   <data name="&gt;&gt;nav_button_1.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>6</value>
   </data>
   <data name="NavPanel.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 27</value>

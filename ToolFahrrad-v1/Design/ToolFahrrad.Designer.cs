@@ -711,6 +711,12 @@
             this.info = new System.Windows.Forms.Label();
             this.imageListAmpel = new System.Windows.Forms.ImageList(this.components);
             this.helpProvider1 = new System.Windows.Forms.HelpProvider();
+            this.button_nav_2 = new System.Windows.Forms.Button();
+            this.button_nav_3 = new System.Windows.Forms.Button();
+            this.button_nav_4 = new System.Windows.Forms.Button();
+            this.button_nav_5 = new System.Windows.Forms.Button();
+            this.button_nav_6 = new System.Windows.Forms.Button();
+            this.button_nav_7 = new System.Windows.Forms.Button();
             this.imageListPlusMinus = new System.Windows.Forms.ImageList(this.components);
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
@@ -7080,6 +7086,60 @@
             // 
             resources.ApplyResources(this.helpProvider1, "helpProvider1");
             // 
+            // button_nav_2
+            // 
+            this.button_nav_2.BackColor = System.Drawing.SystemColors.ButtonFace;
+            resources.ApplyResources(this.button_nav_2, "button_nav_2");
+            this.button_nav_2.Name = "button_nav_2";
+            this.helpProvider1.SetShowHelp(this.button_nav_2, ((bool)(resources.GetObject("button_nav_2.ShowHelp"))));
+            this.button_nav_2.UseVisualStyleBackColor = false;
+            this.button_nav_2.Click += new System.EventHandler(this.button_nav_2_Click);
+            // 
+            // button_nav_3
+            // 
+            this.button_nav_3.BackColor = System.Drawing.SystemColors.ButtonFace;
+            resources.ApplyResources(this.button_nav_3, "button_nav_3");
+            this.button_nav_3.Name = "button_nav_3";
+            this.helpProvider1.SetShowHelp(this.button_nav_3, ((bool)(resources.GetObject("button_nav_3.ShowHelp"))));
+            this.button_nav_3.UseVisualStyleBackColor = false;
+            this.button_nav_3.Click += new System.EventHandler(this.button_nav_3_Click);
+            // 
+            // button_nav_4
+            // 
+            this.button_nav_4.BackColor = System.Drawing.SystemColors.ButtonFace;
+            resources.ApplyResources(this.button_nav_4, "button_nav_4");
+            this.button_nav_4.Name = "button_nav_4";
+            this.helpProvider1.SetShowHelp(this.button_nav_4, ((bool)(resources.GetObject("button_nav_4.ShowHelp"))));
+            this.button_nav_4.UseVisualStyleBackColor = false;
+            this.button_nav_4.Click += new System.EventHandler(this.button_nav_4_Click);
+            // 
+            // button_nav_5
+            // 
+            this.button_nav_5.BackColor = System.Drawing.SystemColors.ButtonFace;
+            resources.ApplyResources(this.button_nav_5, "button_nav_5");
+            this.button_nav_5.Name = "button_nav_5";
+            this.helpProvider1.SetShowHelp(this.button_nav_5, ((bool)(resources.GetObject("button_nav_5.ShowHelp"))));
+            this.button_nav_5.UseVisualStyleBackColor = false;
+            this.button_nav_5.Click += new System.EventHandler(this.button_nav_5_Click);
+            // 
+            // button_nav_6
+            // 
+            this.button_nav_6.BackColor = System.Drawing.SystemColors.ButtonFace;
+            resources.ApplyResources(this.button_nav_6, "button_nav_6");
+            this.button_nav_6.Name = "button_nav_6";
+            this.helpProvider1.SetShowHelp(this.button_nav_6, ((bool)(resources.GetObject("button_nav_6.ShowHelp"))));
+            this.button_nav_6.UseVisualStyleBackColor = false;
+            this.button_nav_6.Click += new System.EventHandler(this.button_nav_6_Click);
+            // 
+            // button_nav_7
+            // 
+            this.button_nav_7.BackColor = System.Drawing.SystemColors.ButtonFace;
+            resources.ApplyResources(this.button_nav_7, "button_nav_7");
+            this.button_nav_7.Name = "button_nav_7";
+            this.helpProvider1.SetShowHelp(this.button_nav_7, ((bool)(resources.GetObject("button_nav_7.ShowHelp"))));
+            this.button_nav_7.UseVisualStyleBackColor = false;
+            this.button_nav_7.Click += new System.EventHandler(this.button_nav_7_Click);
+            // 
             // imageListPlusMinus
             // 
             this.imageListPlusMinus.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageListPlusMinus.ImageStream")));
@@ -7096,6 +7156,12 @@
             // NavPanel
             // 
             this.NavPanel.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.NavPanel.Controls.Add(this.button_nav_7);
+            this.NavPanel.Controls.Add(this.button_nav_6);
+            this.NavPanel.Controls.Add(this.button_nav_5);
+            this.NavPanel.Controls.Add(this.button_nav_4);
+            this.NavPanel.Controls.Add(this.button_nav_3);
+            this.NavPanel.Controls.Add(this.button_nav_2);
             this.NavPanel.Controls.Add(this.nav_button_1);
             resources.ApplyResources(this.NavPanel, "NavPanel");
             this.NavPanel.Name = "NavPanel";
@@ -7892,6 +7958,12 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ueberStunden;
         private System.Windows.Forms.Panel NavPanel;
         private System.Windows.Forms.Button nav_button_1;
+        private System.Windows.Forms.Button button_nav_7;
+        private System.Windows.Forms.Button button_nav_6;
+        private System.Windows.Forms.Button button_nav_5;
+        private System.Windows.Forms.Button button_nav_4;
+        private System.Windows.Forms.Button button_nav_3;
+        private System.Windows.Forms.Button button_nav_2;
     }
 }
 
