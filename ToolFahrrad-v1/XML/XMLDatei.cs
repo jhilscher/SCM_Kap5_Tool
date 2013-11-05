@@ -170,5 +170,83 @@ namespace ToolFahrrad_v1.XML
             sw.Close();
 
         }
+
+        /// <summary>
+        /// To Display the content in the app.
+        /// </summary>
+        /// <returns>String mit schoenem xml</returns>
+        internal string ToString()
+        {
+            // einrueken
+            string tab = "     ";
+
+            StringBuilder sw = new StringBuilder();
+            sw.Append("<input>").AppendLine();
+            sw.Append("<qualitycontrol type=\"no\" losequantity=\"0\" delay=\"0\"/>").AppendLine();
+            //Vertriebswunsch
+            sw.Append("<sellwish>").AppendLine();
+            for (int i = 1; i < 4; ++i)
+            {
+                sw.Append(tab);
+                sw.Append("<item article=\"" + i + "\" quantity=\"" + _dc.GetTeil(i).VerbrauchPer1 + "\"/>").AppendLine();
+            }
+            sw.Append("</sellwish>").AppendLine();
+
+            //Direktverkauf
+            sw.Append("<selldirect>").AppendLine();
+            if (_dc.DVerkauf.Count > 0)
+            {
+                foreach (DvPosition dv in _dc.DVerkauf)
+                {
+                    sw.Append(tab);
+                    sw.Append("<item article=\"" + dv.DvTeilNr + "\" quantity=\"" + dv.DvMenge + "\" price=\"" + dv.DvPreis + "\" penalty=\"" + dv.DvStrafe + "\"/>");
+                    sw.AppendLine();
+                }
+            }
+            else
+            {
+                for (int i = 1; i < 4; ++i)
+                {
+                    sw.Append(tab);
+                    sw.Append("<item article=\"" + i + "\" quantity=\"0\" price=\"0.0\" penalty=\"0.0\"/>");
+                    sw.AppendLine();
+                }
+            }
+            sw.Append("</selldirect>").AppendLine();
+
+            //Einkaufsaufträge
+            sw.Append("<orderlist>").AppendLine();
+            foreach (Bestellposition bp in _dc.Bestellungen)
+            {
+                sw.Append(tab);
+                sw.Append("<order article=\"" + bp.Kaufteil.Nummer + "\" quantity=\"" + bp.Menge + "\" modus=\"" + bp.OutputEil + "\"/>");
+                sw.AppendLine();
+            }
+            sw.Append("</orderlist>").AppendLine();
+
+            //Produktionsaufträge
+            sw.Append("<productionlist>").AppendLine();
+            //<production article="9" quantity="140" />
+            foreach (var pl in _dc.ListeProduktion)
+            {
+                sw.Append(tab);
+                sw.Append("<production article=\"" + pl.Key + "\" quantity=\"" + pl.Value + "\"/>").AppendLine();
+            }
+            sw.Append("</productionlist>").AppendLine();
+
+            //Produktionskapaziläten
+            sw.Append("<workingtimelist>").AppendLine();
+            foreach (int[] a in _dc.ApKapazitaet)
+            {
+                sw.Append(tab);
+                sw.Append("<workingtime station=\"" + a[0] + "\" shift=\"" + a[1] + "\" overtime=\"" + (a[2] / 5) + "\"/>").AppendLine();
+            }
+            sw.Append("</workingtimelist>").AppendLine();
+
+            sw.Append("</input>").AppendLine();
+
+            return sw.ToString();
+        }
+
     }
 }

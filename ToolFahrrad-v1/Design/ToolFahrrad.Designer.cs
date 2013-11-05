@@ -689,6 +689,10 @@
             this.dg_p2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dg_p3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label270 = new System.Windows.Forms.Label();
+            this.tab_beenden = new System.Windows.Forms.TabPage();
+            this.header_xmlExport = new System.Windows.Forms.Label();
+            this.button_exportXml = new System.Windows.Forms.Button();
+            this.TextBox_xmlOutput = new System.Windows.Forms.RichTextBox();
             this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
             this.menu = new System.Windows.Forms.MenuStrip();
             this.dateiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -787,6 +791,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewEinkauf)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDirekt)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewVertrieb)).BeginInit();
+            this.tab_beenden.SuspendLayout();
             this.menu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.xml_export)).BeginInit();
             this.NavPanel.SuspendLayout();
@@ -799,6 +804,7 @@
             this.tabs.Controls.Add(this.tab_arbeitzeit);
             this.tabs.Controls.Add(this.tab_bestellverwaltung);
             this.tabs.Controls.Add(this.xmlOutput);
+            this.tabs.Controls.Add(this.tab_beenden);
             resources.ApplyResources(this.tabs, "tabs");
             this.tabs.Name = "tabs";
             this.tabs.SelectedIndex = 0;
@@ -6939,6 +6945,35 @@
             this.label270.Name = "label270";
             this.helpProvider1.SetShowHelp(this.label270, ((bool)(resources.GetObject("label270.ShowHelp"))));
             // 
+            // tab_beenden
+            // 
+            this.tab_beenden.Controls.Add(this.header_xmlExport);
+            this.tab_beenden.Controls.Add(this.button_exportXml);
+            this.tab_beenden.Controls.Add(this.TextBox_xmlOutput);
+            resources.ApplyResources(this.tab_beenden, "tab_beenden");
+            this.tab_beenden.Name = "tab_beenden";
+            this.helpProvider1.SetShowHelp(this.tab_beenden, ((bool)(resources.GetObject("tab_beenden.ShowHelp"))));
+            this.tab_beenden.UseVisualStyleBackColor = true;
+            // 
+            // header_xmlExport
+            // 
+            resources.ApplyResources(this.header_xmlExport, "header_xmlExport");
+            this.header_xmlExport.Name = "header_xmlExport";
+            this.helpProvider1.SetShowHelp(this.header_xmlExport, ((bool)(resources.GetObject("header_xmlExport.ShowHelp"))));
+            // 
+            // button_exportXml
+            // 
+            resources.ApplyResources(this.button_exportXml, "button_exportXml");
+            this.button_exportXml.Name = "button_exportXml";
+            this.button_exportXml.UseVisualStyleBackColor = true;
+            this.button_exportXml.Click += new System.EventHandler(this.button_exportXml_Click);
+            // 
+            // TextBox_xmlOutput
+            // 
+            resources.ApplyResources(this.TextBox_xmlOutput, "TextBox_xmlOutput");
+            this.TextBox_xmlOutput.Name = "TextBox_xmlOutput";
+            this.TextBox_xmlOutput.ReadOnly = true;
+            // 
             // openFileDialog
             // 
             this.openFileDialog.FileName = "openFileDialog";
@@ -7261,6 +7296,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewEinkauf)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDirekt)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewVertrieb)).EndInit();
+            this.tab_beenden.ResumeLayout(false);
+            this.tab_beenden.PerformLayout();
             this.menu.ResumeLayout(false);
             this.menu.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.xml_export)).EndInit();
@@ -7964,6 +8001,10 @@
         private System.Windows.Forms.Button button_nav_4;
         private System.Windows.Forms.Button button_nav_3;
         private System.Windows.Forms.Button button_nav_2;
+        private System.Windows.Forms.TabPage tab_beenden;
+        private System.Windows.Forms.Button button_exportXml;
+        private System.Windows.Forms.RichTextBox TextBox_xmlOutput;
+        private System.Windows.Forms.Label header_xmlExport;
     }
 }
 
