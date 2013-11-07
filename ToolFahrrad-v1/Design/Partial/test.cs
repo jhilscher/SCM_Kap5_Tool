@@ -1,6 +1,7 @@
 using System;
 using System.Net;
 using System.IO;
+using System.Xml;
 
 public class WebsiteChecker 
 {
@@ -11,10 +12,11 @@ public class WebsiteChecker
 		{
 
 			CookieContainer container = new CookieContainer();
-			container = GetUrl(false, url, "start", container);
-			container = GetUrl(false, url, "market/market_set.html", container);
-			container = Authenticate(url + "market/", container);
-			GetUrl(true, url, "market/marketinfo.jsp", container);
+			GetUrl(false, url, "start", container);
+			GetUrl(false, url, "market/market_set.html", container);
+			Authenticate(url + "market/", container);
+			String html = GetUrl(true, url, "market/marketinfo.jsp", container);
+			html = RemoveUnusedCrap(html);
 			
 		}
 		catch (Exception e) 
@@ -23,7 +25,7 @@ public class WebsiteChecker
 		}
 	}
 
-	public static CookieContainer GetUrl(Boolean ok, String url, String path, CookieContainer container) {
+	public static String GetUrl(Boolean ok, String url, String path, CookieContainer container) {
 		url += path;
 		HttpWebRequest request = (HttpWebRequest)WebRequest.Create(url);
 		request.CookieContainer = container;
@@ -32,10 +34,8 @@ public class WebsiteChecker
 		var response = request.GetResponse();
 		StreamReader reader = new StreamReader(response.GetResponseStream());
 		String body = reader.ReadToEnd();
-		if (ok) 
-			Console.WriteLine(body);
-		return container;
-//		Console.WriteLine(body);
+		
+		return body;
 	}
 
 	public static CookieContainer Authenticate(String url, CookieContainer container) {
@@ -50,9 +50,12 @@ public class WebsiteChecker
 		authRequest.ContentType = "application/x-www-form-urlencoded";
 		authRequest.Timeout = 360000;
 
-		var response = (HttpWebResponse)authRequest.GetResponse();
-		StreamReader reader = new StreamReader(response.GetResponseStream());
-//		String body = reader.ReadToEnd();
+		authRequest.GetResponse();
 		return container;//.Add(response.Cookies);
+	}
+
+	public static String RemoveUnusedCrap(String html) {
+		Console.WriteLine(html);
+		return "";
 	}
 }
