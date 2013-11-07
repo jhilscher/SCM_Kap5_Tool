@@ -52,7 +52,7 @@ public class WebsiteChecker
 
 		var response = (HttpWebResponse)authRequest.GetResponse();
 		StreamReader reader = new StreamReader(response.GetResponseStream());
-		String body = reader.ReadToEnd();
+//		String body = reader.ReadToEnd();
 		return container;//.Add(response.Cookies);
 	}
 }
