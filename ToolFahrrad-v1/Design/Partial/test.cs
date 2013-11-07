@@ -12,17 +12,28 @@ public class WebsiteChecker
 		String url = "http://www.iwi.hs-karlsruhe.de/scs/";
 		try 
 		{
-
+			///
+			/// ist ein bisschen kompliziert, die Marketplace-Seite anzeigen zu
+			/// lassen ohne 500 zu bekommen. Der Weg der funktioniert ist:
+			/// start -> market/market_set.html -> authenticate:market/ -> market/marketinfo.jsp
+			///
 			CookieContainer container = new CookieContainer();
 			GetUrl(false, url, "start", container);
 			GetUrl(false, url, "market/market_set.html", container);
-			Authenticate(url + "market/", container);
+
+			///
+			/// 
+			///
+			Authenticate("kap5", "sperling", url + "market/", container);
 			String html = GetUrl(true, url, "market/marketinfo.jsp", container);
 			String[] parsed = RemoveUnusedCrap(html);
 			
+			///
+			/// parsing 
+			///
 			List<Gebot> offers = ParseOffer(parsed[1]);	
 			List<Gesuch> requests = ParseRequest(parsed[2]);
-			List<Gebot> ownOffers = ParseOffer(parsed[2]);
+			List<Gebot> ownOffers = ParseOffer(parsed[3]);
 			List<Gesuch> ownRequests = ParseRequest(parsed[4]);
 
 		}
@@ -32,6 +43,13 @@ public class WebsiteChecker
 		}
 	}
 
+	///
+	/// <param>Boolean ok</param>not needed anymore... 
+	/// <param>String url</param>url to connect to
+	/// <param>String path</param>path to file
+	/// <param>CookieContainer container</param>to place sessioncookies
+	/// <summary>Gets html code of web-page</summary>
+	///
 	public static String GetUrl(Boolean ok, String url, String path, CookieContainer container) 
 	{
 		url += path;
@@ -46,10 +64,15 @@ public class WebsiteChecker
 		return body;
 	}
 
-	public static CookieContainer Authenticate(String url, CookieContainer container) 
+	///
+	/// <param>String username</param> username for login
+	/// <param>String password</param> password for login
+	/// <param>String url</param> url to connect to
+	/// <param>CookieContainer container</param> to place sessioncookies
+	/// <summary>authenticates the j_security_check and keeps session</summary>
+	///
+	public static CookieContainer Authenticate(String username, String password, String url, CookieContainer container) 
 	{
-		String username = "kap5";
-		String password = "sperling";
 		url += String.Format("j_security_check?j_username={0}&j_password={1}",
 				username, password);
 
@@ -63,31 +86,73 @@ public class WebsiteChecker
 		return container;
 	}
 
+	///
+	/// <param>String html</param>
+	/// <summary>removes unuseful crap html code and keeps the important data</summary>
+	///
 	public static String[] RemoveUnusedCrap(String html) 
 	{
 		List<String> plain = new List<String>();
+
+		///
+		/// html zeilenweise splitten
+		///
 		String[] splitted = html.Split(new Char[] { '\n' });
+		
+		///
+		/// true, if code is between <table>... </table>
+		///
 		Boolean inTable = false;
+		///
+		/// für jede zeile tue..
+		///
 		for ( int i = 0; i < splitted.Length; i++) 
 		{
+			///
+			/// falls Zeile ohne whitespaces nicht mit mit < oder \<table width > beginnt
+			/// und überspringe Schleifendurchgang
+			///
 			if (!splitted[i].Trim().StartsWith("<") || splitted[i].Trim().StartsWith("<table width"))
 			{
 				continue;
 			}
+
+			///
+			/// falls Zeile nur mit <table > beginnt, setze inTable auf true
+			///
 			if (splitted[i].Trim().StartsWith("<table")) 
 			{
 				inTable = true;
 			}
+
+			///
+			/// falls inTable dann
+			///
 			if (inTable) 
 			{
+				///
+				/// prüfe, ob Ende der Tabelle erreicht ist, falls ja setze inTable auf false
+				///
 				if (splitted[i].Trim().StartsWith("</table")) 
 				{
 					inTable = false;
 				}
-				plain.Add(splitted[i].Trim().Replace("<tr>", "").Replace("</tr>", "\n").Replace("</td>", "|").Replace("<td align=\"center\">", "").Replace("</th>", ""));
+
+				///
+				/// füge Zeile zu plain hinzu, und entferne crappy fucking unnötigen html-code
+				///
+				plain.Add(splitted[i].Trim().Replace("<tr>", "")
+						.Replace("</tr>", "\n")
+						.Replace("</td>", "|")
+						.Replace("<td align=\"center\">", "")
+						.Replace("</th>", ""));
 			}
 			
 		}
+
+		///
+		/// gehe plain durch, und füge jede zeile, die nicht nur aus \n oder "" besteht
+		///
 		String xml = "";
 		for(int i = 0; i < plain.Count; i++) 
 		{
@@ -100,6 +165,9 @@ public class WebsiteChecker
 			}
 		}
 
+		/// 
+		/// ersetzt den restlichen html-code mit nichts
+		///
 		Regex reg = new Regex("(\\<)(.*?)(\\>)\\s*");
 		xml = reg.Replace(xml, "");
 		
@@ -107,9 +175,17 @@ public class WebsiteChecker
 		return data;
 	}
 
+	///
+	/// <param>String str</param> dieses format: seller|article|quantity|price|andererscheiß\n
+	/// 					     seller|....
+	/// <summary>parst Gebote</summary>
+	///
 	public static List<Gebot> ParseOffer(String str)
 	{
 		List<Gebot> ret = new List<Gebot>();
+		///
+		/// zeilenweise splitten
+		///
 		String[] splitted = str.Split(new Char[] { '\n' });
 		
 		foreach(String line in splitted)
@@ -150,6 +226,9 @@ public class WebsiteChecker
 	}
 }
 
+///
+/// Oberklasse für Angebote auf dem Marktplatz
+///
 public class Angebot
 {
 	public String article;
@@ -169,6 +248,9 @@ public class Angebot
 	}
 }
 
+///
+/// Abgeleitete Klasse von Angebot: Gebot
+///
 public class Gebot : Angebot
 {
 	public String seller;	
@@ -184,6 +266,9 @@ public class Gebot : Angebot
 	}
 }
 
+///
+/// Abgeleitete Klasse von Angebot: Gesuch
+///
 public class Gesuch : Angebot
 {
 	public String requestor;	
