@@ -662,6 +662,32 @@
             this.menge = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.eil = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.del = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.tab_marketplace = new System.Windows.Forms.TabPage();
+            this.label278 = new System.Windows.Forms.Label();
+            this.label277 = new System.Windows.Forms.Label();
+            this.label276 = new System.Windows.Forms.Label();
+            this.label273 = new System.Windows.Forms.Label();
+            this.dta_e_Angebote = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn42 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn43 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn44 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn45 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dta_e_Gesuche = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn38 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn39 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn40 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn41 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dta_Gesuche = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn34 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn35 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn36 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn37 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btn_marketplace = new System.Windows.Forms.Button();
+            this.MarketPlaceGrid = new System.Windows.Forms.DataGridView();
+            this.order_Verkäufer = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.order_Artikel = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.order_Menge = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.order_Preis = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.xmlOutput = new System.Windows.Forms.TabPage();
             this.panelXMLerstellen = new System.Windows.Forms.Panel();
             this.dataGridViewPrAuftraege = new System.Windows.Forms.DataGridView();
@@ -772,6 +798,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.zurueck)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.saveAenderungen)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewBestellung)).BeginInit();
+            this.tab_marketplace.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dta_e_Angebote)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dta_e_Gesuche)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dta_Gesuche)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MarketPlaceGrid)).BeginInit();
             this.xmlOutput.SuspendLayout();
             this.panelXMLerstellen.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPrAuftraege)).BeginInit();
@@ -789,6 +820,7 @@
             this.tabs.Controls.Add(this.tab_produktion);
             this.tabs.Controls.Add(this.tab_arbeitzeit);
             this.tabs.Controls.Add(this.tab_bestellverwaltung);
+            this.tabs.Controls.Add(this.tab_marketplace);
             this.tabs.Controls.Add(this.xmlOutput);
             resources.ApplyResources(this.tabs, "tabs");
             this.tabs.Name = "tabs";
@@ -6701,6 +6733,179 @@
             this.del.Name = "del";
             this.del.TrueValue = "true";
             // 
+            // tab_marketplace
+            // 
+            this.tab_marketplace.BackColor = System.Drawing.Color.Transparent;
+            this.tab_marketplace.Controls.Add(this.label278);
+            this.tab_marketplace.Controls.Add(this.label277);
+            this.tab_marketplace.Controls.Add(this.label276);
+            this.tab_marketplace.Controls.Add(this.label273);
+            this.tab_marketplace.Controls.Add(this.dta_e_Angebote);
+            this.tab_marketplace.Controls.Add(this.dta_e_Gesuche);
+            this.tab_marketplace.Controls.Add(this.dta_Gesuche);
+            this.tab_marketplace.Controls.Add(this.btn_marketplace);
+            this.tab_marketplace.Controls.Add(this.MarketPlaceGrid);
+            resources.ApplyResources(this.tab_marketplace, "tab_marketplace");
+            this.tab_marketplace.Name = "tab_marketplace";
+            // 
+            // label278
+            // 
+            resources.ApplyResources(this.label278, "label278");
+            this.label278.Name = "label278";
+            this.helpProvider1.SetShowHelp(this.label278, ((bool)(resources.GetObject("label278.ShowHelp"))));
+            // 
+            // label277
+            // 
+            resources.ApplyResources(this.label277, "label277");
+            this.label277.Name = "label277";
+            this.helpProvider1.SetShowHelp(this.label277, ((bool)(resources.GetObject("label277.ShowHelp"))));
+            // 
+            // label276
+            // 
+            resources.ApplyResources(this.label276, "label276");
+            this.label276.Name = "label276";
+            this.helpProvider1.SetShowHelp(this.label276, ((bool)(resources.GetObject("label276.ShowHelp"))));
+            // 
+            // label273
+            // 
+            resources.ApplyResources(this.label273, "label273");
+            this.label273.Name = "label273";
+            // 
+            // dta_e_Angebote
+            // 
+            this.dta_e_Angebote.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dta_e_Angebote.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn42,
+            this.dataGridViewTextBoxColumn43,
+            this.dataGridViewTextBoxColumn44,
+            this.dataGridViewTextBoxColumn45});
+            resources.ApplyResources(this.dta_e_Angebote, "dta_e_Angebote");
+            this.dta_e_Angebote.Name = "dta_e_Angebote";
+            this.helpProvider1.SetShowHelp(this.dta_e_Angebote, ((bool)(resources.GetObject("dta_e_Angebote.ShowHelp"))));
+            // 
+            // dataGridViewTextBoxColumn42
+            // 
+            resources.ApplyResources(this.dataGridViewTextBoxColumn42, "dataGridViewTextBoxColumn42");
+            this.dataGridViewTextBoxColumn42.Name = "dataGridViewTextBoxColumn42";
+            // 
+            // dataGridViewTextBoxColumn43
+            // 
+            resources.ApplyResources(this.dataGridViewTextBoxColumn43, "dataGridViewTextBoxColumn43");
+            this.dataGridViewTextBoxColumn43.Name = "dataGridViewTextBoxColumn43";
+            // 
+            // dataGridViewTextBoxColumn44
+            // 
+            resources.ApplyResources(this.dataGridViewTextBoxColumn44, "dataGridViewTextBoxColumn44");
+            this.dataGridViewTextBoxColumn44.Name = "dataGridViewTextBoxColumn44";
+            // 
+            // dataGridViewTextBoxColumn45
+            // 
+            resources.ApplyResources(this.dataGridViewTextBoxColumn45, "dataGridViewTextBoxColumn45");
+            this.dataGridViewTextBoxColumn45.Name = "dataGridViewTextBoxColumn45";
+            // 
+            // dta_e_Gesuche
+            // 
+            this.dta_e_Gesuche.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dta_e_Gesuche.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn38,
+            this.dataGridViewTextBoxColumn39,
+            this.dataGridViewTextBoxColumn40,
+            this.dataGridViewTextBoxColumn41});
+            resources.ApplyResources(this.dta_e_Gesuche, "dta_e_Gesuche");
+            this.dta_e_Gesuche.Name = "dta_e_Gesuche";
+            this.helpProvider1.SetShowHelp(this.dta_e_Gesuche, ((bool)(resources.GetObject("dta_e_Gesuche.ShowHelp"))));
+            // 
+            // dataGridViewTextBoxColumn38
+            // 
+            resources.ApplyResources(this.dataGridViewTextBoxColumn38, "dataGridViewTextBoxColumn38");
+            this.dataGridViewTextBoxColumn38.Name = "dataGridViewTextBoxColumn38";
+            // 
+            // dataGridViewTextBoxColumn39
+            // 
+            resources.ApplyResources(this.dataGridViewTextBoxColumn39, "dataGridViewTextBoxColumn39");
+            this.dataGridViewTextBoxColumn39.Name = "dataGridViewTextBoxColumn39";
+            // 
+            // dataGridViewTextBoxColumn40
+            // 
+            resources.ApplyResources(this.dataGridViewTextBoxColumn40, "dataGridViewTextBoxColumn40");
+            this.dataGridViewTextBoxColumn40.Name = "dataGridViewTextBoxColumn40";
+            // 
+            // dataGridViewTextBoxColumn41
+            // 
+            resources.ApplyResources(this.dataGridViewTextBoxColumn41, "dataGridViewTextBoxColumn41");
+            this.dataGridViewTextBoxColumn41.Name = "dataGridViewTextBoxColumn41";
+            // 
+            // dta_Gesuche
+            // 
+            this.dta_Gesuche.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dta_Gesuche.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn34,
+            this.dataGridViewTextBoxColumn35,
+            this.dataGridViewTextBoxColumn36,
+            this.dataGridViewTextBoxColumn37});
+            resources.ApplyResources(this.dta_Gesuche, "dta_Gesuche");
+            this.dta_Gesuche.Name = "dta_Gesuche";
+            this.helpProvider1.SetShowHelp(this.dta_Gesuche, ((bool)(resources.GetObject("dta_Gesuche.ShowHelp"))));
+            // 
+            // dataGridViewTextBoxColumn34
+            // 
+            resources.ApplyResources(this.dataGridViewTextBoxColumn34, "dataGridViewTextBoxColumn34");
+            this.dataGridViewTextBoxColumn34.Name = "dataGridViewTextBoxColumn34";
+            // 
+            // dataGridViewTextBoxColumn35
+            // 
+            resources.ApplyResources(this.dataGridViewTextBoxColumn35, "dataGridViewTextBoxColumn35");
+            this.dataGridViewTextBoxColumn35.Name = "dataGridViewTextBoxColumn35";
+            // 
+            // dataGridViewTextBoxColumn36
+            // 
+            resources.ApplyResources(this.dataGridViewTextBoxColumn36, "dataGridViewTextBoxColumn36");
+            this.dataGridViewTextBoxColumn36.Name = "dataGridViewTextBoxColumn36";
+            // 
+            // dataGridViewTextBoxColumn37
+            // 
+            resources.ApplyResources(this.dataGridViewTextBoxColumn37, "dataGridViewTextBoxColumn37");
+            this.dataGridViewTextBoxColumn37.Name = "dataGridViewTextBoxColumn37";
+            // 
+            // btn_marketplace
+            // 
+            resources.ApplyResources(this.btn_marketplace, "btn_marketplace");
+            this.btn_marketplace.Name = "btn_marketplace";
+            this.btn_marketplace.UseVisualStyleBackColor = true;
+            this.btn_marketplace.Click += new System.EventHandler(this.btn_marketplace_Click);
+            // 
+            // MarketPlaceGrid
+            // 
+            this.MarketPlaceGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.MarketPlaceGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.order_Verkäufer,
+            this.order_Artikel,
+            this.order_Menge,
+            this.order_Preis});
+            resources.ApplyResources(this.MarketPlaceGrid, "MarketPlaceGrid");
+            this.MarketPlaceGrid.Name = "MarketPlaceGrid";
+            this.MarketPlaceGrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.MarketPlaceGrid_CellContentClick);
+            // 
+            // order_Verkäufer
+            // 
+            resources.ApplyResources(this.order_Verkäufer, "order_Verkäufer");
+            this.order_Verkäufer.Name = "order_Verkäufer";
+            // 
+            // order_Artikel
+            // 
+            resources.ApplyResources(this.order_Artikel, "order_Artikel");
+            this.order_Artikel.Name = "order_Artikel";
+            // 
+            // order_Menge
+            // 
+            resources.ApplyResources(this.order_Menge, "order_Menge");
+            this.order_Menge.Name = "order_Menge";
+            // 
+            // order_Preis
+            // 
+            resources.ApplyResources(this.order_Preis, "order_Preis");
+            this.order_Preis.Name = "order_Preis";
+            // 
             // xmlOutput
             // 
             this.xmlOutput.BackColor = System.Drawing.Color.Transparent;
@@ -7168,6 +7373,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.zurueck)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.saveAenderungen)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewBestellung)).EndInit();
+            this.tab_marketplace.ResumeLayout(false);
+            this.tab_marketplace.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dta_e_Angebote)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dta_e_Gesuche)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dta_Gesuche)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MarketPlaceGrid)).EndInit();
             this.xmlOutput.ResumeLayout(false);
             this.panelXMLerstellen.ResumeLayout(false);
             this.panelXMLerstellen.PerformLayout();
@@ -7246,6 +7457,7 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.HelpProvider helpProvider1;
         private System.Windows.Forms.TabPage tab_bestellverwaltung;
+        private System.Windows.Forms.TabPage tab_marketplace;
         private System.Windows.Forms.TabControl tab2;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.DataGridView dataGridViewKTeil;
@@ -7870,6 +8082,32 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn29;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn30;
         private System.Windows.Forms.DataGridViewTextBoxColumn ueberStunden;
+        private System.Windows.Forms.DataGridView MarketPlaceGrid;
+        private System.Windows.Forms.Button btn_marketplace;
+        private System.Windows.Forms.Label label273;
+        private System.Windows.Forms.DataGridView dta_e_Angebote;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn42;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn43;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn44;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn45;
+        private System.Windows.Forms.DataGridView dta_e_Gesuche;
+        private System.Windows.Forms.DataGridView dta_Gesuche;
+        private System.Windows.Forms.DataGridViewTextBoxColumn order_Verkäufer;
+        private System.Windows.Forms.DataGridViewTextBoxColumn order_Artikel;
+        private System.Windows.Forms.DataGridViewTextBoxColumn order_Menge;
+        private System.Windows.Forms.DataGridViewTextBoxColumn order_Preis;
+        private System.Windows.Forms.Label label278;
+        private System.Windows.Forms.Label label277;
+        private System.Windows.Forms.Label label276;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn38;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn39;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn40;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn41;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn34;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn35;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn36;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn37;
+        
     }
 }
 

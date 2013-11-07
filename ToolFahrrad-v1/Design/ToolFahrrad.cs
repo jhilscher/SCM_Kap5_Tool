@@ -1501,6 +1501,19 @@ namespace ToolFahrrad_v1.Design
             timer1.Stop();
             GetInfo("");
         }
+
+        private void btn_marketplace_Click(object sender, EventArgs e)
+        {
+            this.Get_Market_Place();
+        }
+
+        private void MarketPlaceGrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+       
+
     }
 }
 

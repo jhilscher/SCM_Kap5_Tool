@@ -16,7 +16,10 @@ namespace ToolFahrrad_v1.Design
     /// </summary>
     partial class Fahrrad
     {
-        public static void Get_Market_Place()
+
+        
+
+        public void Get_Market_Place()
         {
             String url = "http://www.iwi.hs-karlsruhe.de/scs/";
             try
@@ -44,6 +47,50 @@ namespace ToolFahrrad_v1.Design
                 List<Gesuch> requests = ParseRequest(parsed[2]);
                 List<Gebot> ownOffers = ParseOffer(parsed[3]);
                 List<Gesuch> ownRequests = ParseRequest(parsed[4]);
+
+                foreach (Gebot offer in offers)
+                    this.MarketPlaceGrid.Rows.Add();
+
+                foreach (Gesuch req in requests)
+                    this.dta_Gesuche.Rows.Add();
+
+                foreach (Gebot o_req in ownOffers)
+                    this.dta_e_Angebote.Rows.Add();
+
+                foreach (Gesuch o_ges in ownRequests)
+                    this.dta_e_Gesuche.Rows.Add();
+
+                for (int i = 0; i < offers.Count; i++)
+                {
+                    this.MarketPlaceGrid.Rows[i].Cells[0].Value = offers[i].seller;
+                    this.MarketPlaceGrid.Rows[i].Cells[1].Value = offers[i].article;
+                    this.MarketPlaceGrid.Rows[i].Cells[2].Value = offers[i].quantity;
+                    this.MarketPlaceGrid.Rows[i].Cells[3].Value = offers[i].price;
+                }
+
+                for (int i = 0; i < requests.Count; i++)
+                {
+                    this.dta_Gesuche.Rows[i].Cells[0].Value = requests[i].requestor;
+                    this.dta_Gesuche.Rows[i].Cells[1].Value = requests[i].article;
+                    this.dta_Gesuche.Rows[i].Cells[2].Value = requests[i].quantity;
+                    this.dta_Gesuche.Rows[i].Cells[3].Value = requests[i].price;
+                }
+
+                for (int i = 0; i < ownOffers.Count; i++)
+                {
+                    this.dta_e_Angebote.Rows[i].Cells[0].Value = ownOffers[i].seller;
+                    this.dta_e_Angebote.Rows[i].Cells[1].Value = ownOffers[i].article;
+                    this.dta_e_Angebote.Rows[i].Cells[2].Value = ownOffers[i].quantity;
+                    this.dta_e_Angebote.Rows[i].Cells[3].Value = ownOffers[i].price;
+                }
+
+                for (int i = 0; i < ownRequests.Count; i++)
+                {
+                    this.dta_e_Gesuche.Rows[i].Cells[0].Value = ownRequests[i].requestor;
+                    this.dta_e_Gesuche.Rows[i].Cells[1].Value = ownRequests[i].article;
+                    this.dta_e_Gesuche.Rows[i].Cells[2].Value = ownRequests[i].quantity;
+                    this.dta_e_Gesuche.Rows[i].Cells[3].Value = ownRequests[i].price;
+                }
 
             }
             catch (Exception e)
