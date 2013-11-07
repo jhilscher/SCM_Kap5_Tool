@@ -20,8 +20,11 @@ public class WebsiteChecker
 			String html = GetUrl(true, url, "market/marketinfo.jsp", container);
 			String[] parsed = RemoveUnusedCrap(html);
 			
-			List<Gebot> offers = ParseTable(parsed[1]);	
-			
+			List<Gebot> offers = ParseOffer(parsed[1]);	
+			List<Gesuch> requests = ParseRequest(parsed[2]);
+			List<Gebot> ownOffers = ParseOffer(parsed[2]);
+			List<Gesuch> ownRequests = ParseRequest(parsed[4]);
+
 		}
 		catch (Exception e) 
 		{
@@ -104,7 +107,7 @@ public class WebsiteChecker
 		return data;
 	}
 
-	public static List<Gebot> ParseTable(String str)
+	public static List<Gebot> ParseOffer(String str)
 	{
 		List<Gebot> ret = new List<Gebot>();
 		String[] splitted = str.Split(new Char[] { '\n' });
@@ -119,6 +122,27 @@ public class WebsiteChecker
 		}
 
 		foreach(Gebot ges in ret)
+		{
+			Console.WriteLine(ges);
+		}
+		return ret;
+	}
+	
+	public static List<Gesuch> ParseRequest(String str)
+	{
+		List<Gesuch> ret = new List<Gesuch>();
+		String[] splitted = str.Split(new Char[] { '\n' });
+		
+		foreach(String line in splitted)
+		{
+			String[] singleLine = line.Split(new Char[] { '|' });
+			if (singleLine.Length > 1)
+			{
+				ret.Add(new Gesuch(singleLine[1], singleLine[2], singleLine[3], singleLine[0]));
+			}
+		}
+
+		foreach(Gesuch ges in ret)
 		{
 			Console.WriteLine(ges);
 		}
