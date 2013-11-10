@@ -14,6 +14,10 @@ namespace ToolFahrrad_v1.Design
     /// </summary>
     partial class Fahrrad
     {
+
+
+
+
         /// <summary>
         /// 1. Button links
         /// </summary>
@@ -31,7 +35,7 @@ namespace ToolFahrrad_v1.Design
         /// <param name="e"></param>
         private void button_nav_2_Click(object sender, EventArgs e)
         {
-
+            tabs.SelectedTab = tab_xml;
         }
 
         /// <summary>
@@ -41,7 +45,7 @@ namespace ToolFahrrad_v1.Design
         /// <param name="e"></param>
         private void button_nav_3_Click(object sender, EventArgs e)
         {
-
+            tabs.SelectedTab = tab_produktion;
         }
 
         /// <summary>
@@ -51,7 +55,7 @@ namespace ToolFahrrad_v1.Design
         /// <param name="e"></param>
         private void button_nav_4_Click(object sender, EventArgs e)
         {
-
+            tabs.SelectedTab = tab_arbeitzeit;
         }
 
         /// <summary>
@@ -61,7 +65,7 @@ namespace ToolFahrrad_v1.Design
         /// <param name="e"></param>
         private void button_nav_5_Click(object sender, EventArgs e)
         {
-
+            tabs.SelectedTab = tab_bestellverwaltung;
         }
         
         /// <summary>
@@ -88,7 +92,8 @@ namespace ToolFahrrad_v1.Design
             /// 
             /// Bestellungen Anzahl
             /// 
-            Series series1 = this.chart_statistik.Series.First();
+            Series series1 = this.chart_statistik.Series.FirstOrDefault(x => x.Name == "Bestellungen");
+
             var bestellSumme = 0.00;
 
             // baue datapoints zusammen
@@ -103,13 +108,12 @@ namespace ToolFahrrad_v1.Design
             // hinzu zur serie!
             listBv.ForEach(x => series1.Points.Add(x));
 
+
             ///
             /// Produktion Anzahl
             /// 
 
-            Series series2 = new Series();
-            series2.Name = "Produktion";
-            series2.Tag = "Produktion";
+            Series series2 = this.chart_statistik.Series.FirstOrDefault(x => x.Name == "Produktion");
 
             // baue datapoints zusammen
             var listPv = _pp.ProdListe.Select(x =>
@@ -122,10 +126,6 @@ namespace ToolFahrrad_v1.Design
             // hinzu zur serie!
             listPv.ForEach(x => series2.Points.Add(x));
 
-
-            chart_statistik.Series.Add(series2);
-
-            
             
         }
                 

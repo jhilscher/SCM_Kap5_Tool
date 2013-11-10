@@ -35,7 +35,8 @@ namespace ToolFahrrad_v1.Design
         /// <summary>
         /// Konstruktor
         /// </summary>
-        public Fahrrad() {
+        public Fahrrad()
+        {
             InitializeComponent();
         }
 
@@ -44,7 +45,8 @@ namespace ToolFahrrad_v1.Design
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void toolAusfueren_Click(object sender, EventArgs e) {
+        private void toolAusfueren_Click(object sender, EventArgs e)
+        {
             Ausführen();
             toolAusfueren.Visible = false;
             save.Visible = true;
@@ -59,14 +61,16 @@ namespace ToolFahrrad_v1.Design
             xml_export.Visible = true;
 
             //Periode
-            if (_culInfo.Contains("de")) {
+            if (_culInfo.Contains("de"))
+            {
                 aktulleWoche.Text = Resources.Fahrrad_toolAusfueren_Click_Periode_ + _xml.Period;
                 prognose1.Text = Resources.Fahrrad_toolAusfueren_Click_Periode_ + (Convert.ToInt32(_xml.Period) + 1);
                 prognose2.Text = Resources.Fahrrad_toolAusfueren_Click_Periode_ + (Convert.ToInt32(_xml.Period) + 2);
                 prognose3.Text = Resources.Fahrrad_toolAusfueren_Click_Periode_ + (Convert.ToInt32(_xml.Period) + 3);
                 GetInfo("Tool wurde erfolgreich ausgeführt");
             }
-            else {
+            else
+            {
                 aktulleWoche.Text = Resources.Fahrrad_toolAusfueren_Click_Periode_en + _xml.Period;
                 prognose1.Text = Resources.Fahrrad_toolAusfueren_Click_Periode_en + (Convert.ToInt32(_xml.Period) + 1);
                 prognose2.Text = Resources.Fahrrad_toolAusfueren_Click_Periode_en + (Convert.ToInt32(_xml.Period) + 2);
@@ -75,16 +79,20 @@ namespace ToolFahrrad_v1.Design
 
             }
         }
-        private void Ausführen() {
+        private void Ausführen()
+        {
             _bv.ClearBvPositionen();
-            if ((_instance.GetTeil(4) as ETeil).Puffer != -1) {
-                foreach (ETeil t in _instance.ListeETeile) {
+            if ((_instance.GetTeil(4) as ETeil).Puffer != -1)
+            {
+                foreach (ETeil t in _instance.ListeETeile)
+                {
                     t.Aufgeloest = false;
                     t.KdhUpdate = false;
                     t.InBearbeitung = 0;
                     t.InWartschlange = 0;
                     t.KdhProduktionsmenge = new Dictionary<string, int>();
-                    if ((_instance.GetTeil(t.Nummer) as ETeil).IstEndProdukt == false) {
+                    if ((_instance.GetTeil(t.Nummer) as ETeil).IstEndProdukt == false)
+                    {
                         (_instance.GetTeil(t.Nummer) as ETeil).Puffer = -1;
                         (_instance.GetTeil(t.Nummer) as ETeil).KDHaufNULL();
                     }
@@ -92,12 +100,14 @@ namespace ToolFahrrad_v1.Design
             }
             _pp.AktPeriode = Convert.ToInt32(_xml.Period);
             _pp.Aufloesen();
-            foreach (Arbeitsplatz a in _instance.ArbeitsplatzList) {
+            foreach (Arbeitsplatz a in _instance.ArbeitsplatzList)
+            {
                 a.Geaendert = false;
                 a.RuestNew = 0;
                 a.RuestungCustom = 0;
             }
-            for (int index = 1; index < 4; ++index) {
+            for (int index = 1; index < 4; ++index)
+            {
                 DispositionDarstellung(index);
             }
             Information();
@@ -108,23 +118,27 @@ namespace ToolFahrrad_v1.Design
         /// Informationsdarstellung
         /// </summary> 
         //TODO: Information()
-        private void Information() {
+        private void Information()
+        {
             // KTeile
             #region KTEILE
             //Bruttobedarf
-            foreach (KTeil k in _instance.ListeKTeile) {
+            foreach (KTeil k in _instance.ListeKTeile)
+            {
                 k.BruttoBedarfPer0 = 0;
                 k.BruttoBedarfPer1 = 0;
                 k.BruttoBedarfPer2 = 0;
                 k.BruttoBedarfPer3 = 0;
             }
-            for (int i = 1; i < 4; ++i) {
+            for (int i = 1; i < 4; ++i)
+            {
                 _pp.RekursAufloesenKTeile(i, null, _instance.GetTeil(i) as ETeil);
             }
 
             DataGriedViewRemove(dataGridViewKTeil);
             int index = 0;
-            for (int i = 4; i < 8; ++i) {
+            for (int i = 4; i < 8; ++i)
+            {
                 dataGridViewKTeil.Columns[i].HeaderText = Resources.Fahrrad_Information_P + (Convert.ToInt32(_xml.Period) + (i - 4));
             }
 
@@ -133,7 +147,8 @@ namespace ToolFahrrad_v1.Design
             dataGridViewKTeil.Columns[10].HeaderText = Resources.Fahrrad_Information_B + (Convert.ToInt32(_xml.Period) + 3);
             dataGridViewKTeil.Columns[11].HeaderText = Resources.Fahrrad_Information_B + (Convert.ToInt32(_xml.Period) + 4);
 
-            foreach (var a in _instance.ListeKTeile) {
+            foreach (var a in _instance.ListeKTeile)
+            {
                 //Lagerzugang berechnen
                 List<List<int>> list = a.OffeneBestellungen;
                 int lagerZugang = list.Sum(l => l[2]);
@@ -149,27 +164,32 @@ namespace ToolFahrrad_v1.Design
                 dataGridViewKTeil.Rows[index].Cells[7].Value = a.BruttoBedarfPer3;
 
                 dataGridViewKTeil.Rows[index].Cells[8].Value = a.BestandPer1;
-                if (a.BestandPer1 < 0) {
+                if (a.BestandPer1 < 0)
+                {
                     dataGridViewKTeil.Rows[index].Cells[8].Style.ForeColor = Color.Red;
                     dataGridViewKTeil.Rows[index].Cells[8].Style.Font = new Font(dataGridViewKTeil.Rows[index].Cells[8].InheritedStyle.Font, FontStyle.Bold);
                 }
                 dataGridViewKTeil.Rows[index].Cells[9].Value = a.BestandPer2;
-                if (a.BestandPer2 < 0) {
+                if (a.BestandPer2 < 0)
+                {
                     dataGridViewKTeil.Rows[index].Cells[9].Style.ForeColor = Color.Red;
                     dataGridViewKTeil.Rows[index].Cells[9].Style.Font = new Font(dataGridViewKTeil.Rows[index].Cells[9].InheritedStyle.Font, FontStyle.Bold);
                 }
                 dataGridViewKTeil.Rows[index].Cells[10].Value = a.BestandPer3;
-                if (a.BestandPer3 < 0) {
+                if (a.BestandPer3 < 0)
+                {
                     dataGridViewKTeil.Rows[index].Cells[10].Style.ForeColor = Color.Red;
                     dataGridViewKTeil.Rows[index].Cells[10].Style.Font = new Font(dataGridViewKTeil.Rows[index].Cells[10].InheritedStyle.Font, FontStyle.Bold);
                 }
                 dataGridViewKTeil.Rows[index].Cells[11].Value = a.BestandPer4;
-                if (a.BestandPer4 < 0) {
+                if (a.BestandPer4 < 0)
+                {
                     dataGridViewKTeil.Rows[index].Cells[11].Style.ForeColor = Color.Red;
                     dataGridViewKTeil.Rows[index].Cells[11].Style.Font = new Font(dataGridViewKTeil.Rows[index].Cells[11].InheritedStyle.Font, FontStyle.Bold);
                 }
                 //Farbe
-                for (int i = 0; i < 12; ++i) {
+                for (int i = 0; i < 12; ++i)
+                {
                     if (i >= 0 && i < 4)
                         dataGridViewKTeil.Columns[i].DefaultCellStyle.BackColor = Color.FloralWhite;
                     else if (i > 3 && i < 8)
@@ -182,7 +202,8 @@ namespace ToolFahrrad_v1.Design
             #region ETeile
             DataGriedViewRemove(dataGridViewETeil);
             index = 0;
-            foreach (var a in _instance.ListeETeile) {
+            foreach (var a in _instance.ListeETeile)
+            {
                 dataGridViewETeil.Rows.Add();
                 dataGridViewETeil.Rows[index].Cells[0].Value = a.Nummer;
                 dataGridViewETeil.Rows[index].Cells[1].Value = a.Verwendung + " - " + a.Bezeichnung;
@@ -198,16 +219,19 @@ namespace ToolFahrrad_v1.Design
                 dataGridViewETeil.Rows[index].Cells[6].Value = a.InBearbeitung;
                 if (!a.Verwendung.Equals("KDH"))
                     dataGridViewETeil.Rows[index].Cells[7].Value = a.ProduktionsMengePer0;
-                else {
+                else
+                {
                     int prodMenge = a.KdhProduktionsmenge.Sum(pair => pair.Value);
                     dataGridViewETeil.Rows[index].Cells[7].Value = prodMenge;
                 }
 
                 //Farbe
-                for (int i = 0; i < 8; ++i) {
+                for (int i = 0; i < 8; ++i)
+                {
                     dataGridViewETeil.Columns[i].DefaultCellStyle.BackColor = i == 7 ? Color.Honeydew : Color.FloralWhite;
                 }
-                if (a.Verwendung.Equals("KDH")) {
+                if (a.Verwendung.Equals("KDH"))
+                {
                     dataGridViewETeil.Rows[index].DefaultCellStyle.BackColor = Color.LemonChiffon;
                 }
 
@@ -219,7 +243,8 @@ namespace ToolFahrrad_v1.Design
             DataGriedViewRemove(DataGridViewAP);
             index = 0;
             _xmlAp = new List<int[]>();
-            foreach (var a in _instance.ArbeitsplatzList) {
+            foreach (var a in _instance.ArbeitsplatzList)
+            {
                 var apXml = new int[3];
 
 
@@ -231,12 +256,15 @@ namespace ToolFahrrad_v1.Design
                 DataGridViewAP.Rows[index].Cells[1].Value = a.Leerzeit + " (" + a.RuestungVorPeriode + ") ";
                 var prMenge = 0;
                 var sum = 0;
-                foreach (KeyValuePair<int, int> kvp in a.WerkZeiten) {
+                foreach (KeyValuePair<int, int> kvp in a.WerkZeiten)
+                {
                     {
-                        if (!(_instance.GetTeil(kvp.Key) as ETeil).Verwendung.Contains("KDH")) {
+                        if (!(_instance.GetTeil(kvp.Key) as ETeil).Verwendung.Contains("KDH"))
+                        {
                             prMenge += (_instance.GetTeil(kvp.Key) as ETeil).ProduktionsMengePer0;
                         }
-                        else {
+                        else
+                        {
                             prMenge += (_instance.GetTeil(kvp.Key) as ETeil).KdhProduktionsmenge.Sum(pair => pair.Value);
                         }
                         if (prMenge < 0)
@@ -250,17 +278,23 @@ namespace ToolFahrrad_v1.Design
                 prMenge = 0;
                 int val = 0;
                 string key = "";
-                if (a.Geaendert == false) {
-                    foreach (KeyValuePair<int, int> kvp in a.RuestZeiten) {
-                        if (!(_instance.GetTeil(kvp.Key) as ETeil).Verwendung.Contains("KDH")) {
+                if (a.Geaendert == false)
+                {
+                    foreach (KeyValuePair<int, int> kvp in a.RuestZeiten)
+                    {
+                        if (!(_instance.GetTeil(kvp.Key) as ETeil).Verwendung.Contains("KDH"))
+                        {
                             if ((_instance.GetTeil(kvp.Key) as ETeil).ProduktionsMengePer0 >= 0)
                                 val += kvp.Value;
                         }
-                        else {
-                            foreach (KeyValuePair<string, int> pair in (_instance.GetTeil(kvp.Key) as ETeil).KdhProduktionsmenge) {
+                        else
+                        {
+                            foreach (KeyValuePair<string, int> pair in (_instance.GetTeil(kvp.Key) as ETeil).KdhProduktionsmenge)
+                            {
                                 prMenge += pair.Value;
                                 string[] split = pair.Key.Split('-');
-                                if (prMenge >= 0) {
+                                if (prMenge >= 0)
+                                {
                                     if (key != split[1] || val == 0)
                                         val += kvp.Value;
                                 }
@@ -277,14 +311,16 @@ namespace ToolFahrrad_v1.Design
                 DataGridViewAP.Rows[index].Cells[6].Value = gesammt + " min";
                 DataGridViewAP.Rows[index].Cells[10].Value = imageListAmpel.Images[2];
 
-                if (gesammt <= a.ZeitErsteSchicht) { // newTeim <= 2400 
+                if (gesammt <= a.ZeitErsteSchicht)
+                { // newTeim <= 2400 
                     DataGridViewAP.Rows[index].Cells[7].Value = imageListAmpel.Images[2];
                     apXml[1] = 1;
                     apXml[2] = 0;
                 }
                 else if (gesammt > _instance.ErsteSchichtMitUeberStunden) // gesammt > 3600
                 {
-                    if (gesammt > _instance.ZweiteSchichtMitUeberstunden) {   // gesammt > 6000
+                    if (gesammt > _instance.ZweiteSchichtMitUeberstunden)
+                    {   // gesammt > 6000
                         if (gesammt > 7200)
                             DataGridViewAP.Rows[index].Cells[10].Value = imageListAmpel.Images[0]; //gesammt > 7200
                         else if (gesammt < 7200)
@@ -297,7 +333,8 @@ namespace ToolFahrrad_v1.Design
                         else
                             apXml[2] = 7200 - a.ZeitZweiteSchicht;
                     }
-                    if (gesammt < _instance.ZweiteSchichtMitUeberstunden) {
+                    if (gesammt < _instance.ZweiteSchichtMitUeberstunden)
+                    {
                         DataGridViewAP.Rows[index].Cells[7].Value = imageListAmpel.Images[0];
                         DataGridViewAP.Rows[index].Cells[8].Value = true;
                         if (gesammt > a.ZeitZweiteSchicht)
@@ -306,25 +343,29 @@ namespace ToolFahrrad_v1.Design
                             apXml[2] = 0;
                         apXml[1] = 2;
                     }
-                    else if (gesammt > _instance.ZweiteSchichtMitUeberstunden) {
+                    else if (gesammt > _instance.ZweiteSchichtMitUeberstunden)
+                    {
                         DataGridViewAP.Rows[index].Cells[7].Value = imageListAmpel.Images[0];
                         DataGridViewAP.Rows[index].Cells[9].Value = true;
                         apXml[1] = 3;
                         apXml[2] = gesammt - _instance.ZweiteSchichtMitUeberstunden;
                     }
                 }
-                else if (gesammt > a.ZeitErsteSchicht && gesammt <= _instance.ErsteSchichtMitUeberStunden) { // 2400 < newTime < 3600 Überstunden
+                else if (gesammt > a.ZeitErsteSchicht && gesammt <= _instance.ErsteSchichtMitUeberStunden)
+                { // 2400 < newTime < 3600 Überstunden
                     DataGridViewAP.Rows[index].Cells[7].Value = imageListAmpel.Images[1];
                     apXml[1] = 1;
                     apXml[2] = gesammt - a.ZeitErsteSchicht;
                 }
-                else {
+                else
+                {
                     DataGridViewAP.Rows[index].Cells[7].Value = imageListAmpel.Images[2];
                 }
 
                 _xmlAp.Add(apXml);
                 //Farbe
-                for (int i = 0; i < 11; ++i) {
+                for (int i = 0; i < 11; ++i)
+                {
                     if (i < 2)
                         DataGridViewAP.Columns[i].DefaultCellStyle.BackColor = Color.FloralWhite;
                     else if (i == 2 || i > 3)
@@ -342,16 +383,19 @@ namespace ToolFahrrad_v1.Design
                 _bv.GeneriereBestellListe();
             var bp = _bv.BvPositionen;
             index = 0;
-            foreach (var a in bp) {
+            foreach (var a in bp)
+            {
                 dataGridViewBestellung.Rows.Add();
                 dataGridViewBestellung.Rows[index].Cells[0].Value = a.Kaufteil.Nummer;
                 dataGridViewBestellung.Rows[index].Cells[1].Value = a.Menge;
-                if (a.Eil) {
+                if (a.Eil)
+                {
                     dataGridViewBestellung.Rows[index].Cells[2].Value = true;
                 }
 
                 //Farbe
-                for (int i = 0; i < 4; ++i) {
+                for (int i = 0; i < 4; ++i)
+                {
                     dataGridViewBestellung.Columns[i].DefaultCellStyle.BackColor = i == 0 ? Color.FloralWhite : Color.LightYellow;
                 }
                 ++index;
@@ -364,7 +408,8 @@ namespace ToolFahrrad_v1.Design
                 _bv.GeneriereListeDv();
             List<DvPosition> dv = _bv.DvPositionen;
             index = 0;
-            foreach (var a in dv) {
+            foreach (var a in dv)
+            {
                 dataGridViewDirektverkauf.Rows.Add();
                 dataGridViewDirektverkauf.Rows[index].Cells[0].Value = a.DvTeilNr;
                 dataGridViewDirektverkauf.Rows[index].Cells[1].Value = a.DvMenge;
@@ -381,7 +426,8 @@ namespace ToolFahrrad_v1.Design
             _pp.OptimiereProdListe();
             Dictionary<int, int> prList = _pp.ProdListe;
             index = 0;
-            foreach (var i in prList) {
+            foreach (var i in prList)
+            {
                 dataGridViewProduktAuftrag.Rows.Add();
                 dataGridViewProduktAuftrag.Rows[index].Cells[0].Value = i.Key;
                 dataGridViewProduktAuftrag.Rows[index].Cells[1].Value = i.Value;
@@ -397,47 +443,61 @@ namespace ToolFahrrad_v1.Design
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void upDownAW1_ValueChanged(object sender, EventArgs e) {
+        private void upDownAW1_ValueChanged(object sender, EventArgs e)
+        {
             TextVisibleFalse();
         }
-        private void upDownAW2_ValueChanged(object sender, EventArgs e) {
+        private void upDownAW2_ValueChanged(object sender, EventArgs e)
+        {
             TextVisibleFalse();
         }
-        private void upDownAW3_ValueChanged(object sender, EventArgs e) {
+        private void upDownAW3_ValueChanged(object sender, EventArgs e)
+        {
             TextVisibleFalse();
         }
-        private void upDownP13_ValueChanged(object sender, EventArgs e) {
+        private void upDownP13_ValueChanged(object sender, EventArgs e)
+        {
             TextVisibleFalse();
         }
-        private void upDownP12_ValueChanged(object sender, EventArgs e) {
+        private void upDownP12_ValueChanged(object sender, EventArgs e)
+        {
             TextVisibleFalse();
         }
-        private void upDownP11_ValueChanged(object sender, EventArgs e) {
+        private void upDownP11_ValueChanged(object sender, EventArgs e)
+        {
             TextVisibleFalse();
         }
-        private void upDownP21_ValueChanged(object sender, EventArgs e) {
+        private void upDownP21_ValueChanged(object sender, EventArgs e)
+        {
             TextVisibleFalse();
         }
-        private void upDownP22_ValueChanged(object sender, EventArgs e) {
+        private void upDownP22_ValueChanged(object sender, EventArgs e)
+        {
             TextVisibleFalse();
         }
-        private void upDownP23_ValueChanged(object sender, EventArgs e) {
+        private void upDownP23_ValueChanged(object sender, EventArgs e)
+        {
             TextVisibleFalse();
         }
-        private void upDownP33_ValueChanged(object sender, EventArgs e) {
+        private void upDownP33_ValueChanged(object sender, EventArgs e)
+        {
             TextVisibleFalse();
         }
-        private void upDownP32_ValueChanged(object sender, EventArgs e) {
+        private void upDownP32_ValueChanged(object sender, EventArgs e)
+        {
             TextVisibleFalse();
         }
-        private void upDownP31_ValueChanged(object sender, EventArgs e) {
+        private void upDownP31_ValueChanged(object sender, EventArgs e)
+        {
             TextVisibleFalse();
         }
-        private void pufferP1_ValueChanged(object sender, EventArgs e) {
+        private void pufferP1_ValueChanged(object sender, EventArgs e)
+        {
             TextVisibleFalse();
         }
 
-        private void prognoseSpeichern_Click(object sender, EventArgs e) {
+        private void prognoseSpeichern_Click(object sender, EventArgs e)
+        {
             _instance.GetTeil(1).VertriebPer0 = Convert.ToInt32(upDownAW1.Value);
             _instance.GetTeil(2).VertriebPer0 = Convert.ToInt32(upDownAW2.Value);
             _instance.GetTeil(3).VertriebPer0 = Convert.ToInt32(upDownAW3.Value);
@@ -471,11 +531,13 @@ namespace ToolFahrrad_v1.Design
         /// Dispositionsdarstellung
         /// </summary>
         /// <param name="index"></param>
-        private void DispositionDarstellung(int index) {
+        private void DispositionDarstellung(int index)
+        {
             _bv.ClearBvPositionen();
             ETeil et;
             int n;
-            if (index == 1) {
+            if (index == 1)
+            {
                 #region P1
                 //P1
                 n = 1;
@@ -491,10 +553,12 @@ namespace ToolFahrrad_v1.Design
                 et = _instance.GetTeil(n) as ETeil;
                 p1vw_26.Text = p1pm_0.Text;
                 p1plus_26.Text = p1iws_0.Text;
-                if (et.KdhPuffer.ContainsKey(n)) {
+                if (et.KdhPuffer.ContainsKey(n))
+                {
                     p1r_26.Text = et.KdhPuffer[n][index - 1].ToString();
                 }
-                if (et.KdhProduktionsmenge.ContainsKey(index.ToString() + "-" + Convert.ToString(n))) {
+                if (et.KdhProduktionsmenge.ContainsKey(index.ToString() + "-" + Convert.ToString(n)))
+                {
                     p1pm_26.Text = et.KdhProduktionsmenge[index.ToString() + "-" + Convert.ToString(n)].ToString();
                 }
                 p1ls_26.Text = et.Lagerstand.ToString();
@@ -515,10 +579,12 @@ namespace ToolFahrrad_v1.Design
                 et = _instance.GetTeil(n) as ETeil;
                 p1vw_16.Text = p1pm_51.Text;
                 p1plus_16.Text = p1iws_51.Text;
-                if (et.KdhPuffer.ContainsKey(n)) {
+                if (et.KdhPuffer.ContainsKey(n))
+                {
                     p1r_16.Text = et.KdhPuffer[n][index - 1].ToString();
                 }
-                if (et.KdhProduktionsmenge.ContainsKey(index.ToString() + "-" + Convert.ToString(n))) {
+                if (et.KdhProduktionsmenge.ContainsKey(index.ToString() + "-" + Convert.ToString(n)))
+                {
                     p1pm_16.Text = et.KdhProduktionsmenge[index.ToString() + "-" + Convert.ToString(n)].ToString();
                 }
                 p1ls_16.Text = et.Lagerstand.ToString();
@@ -529,10 +595,12 @@ namespace ToolFahrrad_v1.Design
                 et = _instance.GetTeil(n) as ETeil;
                 p1vw_17.Text = p1pm_51.Text;
                 p1plus_17.Text = p1iws_51.Text;
-                if (et.KdhPuffer.ContainsKey(n)) {
+                if (et.KdhPuffer.ContainsKey(n))
+                {
                     p1r_17.Text = et.KdhPuffer[n][index - 1].ToString();
                 }
-                if (et.KdhProduktionsmenge.ContainsKey(index.ToString() + "-" + Convert.ToString(n))) {
+                if (et.KdhProduktionsmenge.ContainsKey(index.ToString() + "-" + Convert.ToString(n)))
+                {
                     p1pm_17.Text = et.KdhProduktionsmenge[index.ToString() + "-" + Convert.ToString(n)].ToString();
                 }
                 p1ls_17.Text = et.Lagerstand.ToString();
@@ -611,7 +679,8 @@ namespace ToolFahrrad_v1.Design
 
                 #endregion
             }
-            if (index == 2) {
+            if (index == 2)
+            {
                 #region P2
                 //P2
                 n = 2;
@@ -627,10 +696,12 @@ namespace ToolFahrrad_v1.Design
                 et = _instance.GetTeil(n) as ETeil;
                 p2vw_26.Text = p2pm_0.Text;
                 p2plus_26.Text = p2iws_0.Text;
-                if (et.KdhPuffer.ContainsKey(n)) {
+                if (et.KdhPuffer.ContainsKey(n))
+                {
                     p2r_26.Text = et.KdhPuffer[n][index - 1].ToString();
                 }
-                if (et.KdhProduktionsmenge.ContainsKey(index.ToString() + "-" + Convert.ToString(n))) {
+                if (et.KdhProduktionsmenge.ContainsKey(index.ToString() + "-" + Convert.ToString(n)))
+                {
                     p2pm_26.Text = et.KdhProduktionsmenge[index.ToString() + "-" + Convert.ToString(n)].ToString();
                 }
                 //56
@@ -648,10 +719,12 @@ namespace ToolFahrrad_v1.Design
                 et = _instance.GetTeil(n) as ETeil;
                 p2vw_16.Text = p2pm_56.Text;
                 p2plus_16.Text = p2iws_56.Text;
-                if (et.KdhPuffer.ContainsKey(n)) {
+                if (et.KdhPuffer.ContainsKey(n))
+                {
                     p2r_16.Text = et.KdhPuffer[n][index - 1].ToString();
                 }
-                if (et.KdhProduktionsmenge.ContainsKey(index.ToString() + "-" + Convert.ToString(n))) {
+                if (et.KdhProduktionsmenge.ContainsKey(index.ToString() + "-" + Convert.ToString(n)))
+                {
                     p2pm_16.Text = et.KdhProduktionsmenge[index.ToString() + "-" + Convert.ToString(n)].ToString();
                 }
                 //17
@@ -659,10 +732,12 @@ namespace ToolFahrrad_v1.Design
                 et = _instance.GetTeil(n) as ETeil;
                 p2vw_17.Text = p2pm_56.Text;
                 p2plus_17.Text = p2iws_56.Text;
-                if (et.KdhPuffer.ContainsKey(n)) {
+                if (et.KdhPuffer.ContainsKey(n))
+                {
                     p2r_17.Text = et.KdhPuffer[n][index - 1].ToString();
                 }
-                if (et.KdhProduktionsmenge.ContainsKey(index.ToString() + "-" + Convert.ToString(n))) {
+                if (et.KdhProduktionsmenge.ContainsKey(index.ToString() + "-" + Convert.ToString(n)))
+                {
                     p2pm_17.Text = et.KdhProduktionsmenge[index.ToString() + "-" + Convert.ToString(n)].ToString();
                 }
                 //55
@@ -738,7 +813,8 @@ namespace ToolFahrrad_v1.Design
                 #endregion
             }
 
-            if (index == 3) {
+            if (index == 3)
+            {
                 #region P3
                 //p3
                 n = 3;
@@ -754,10 +830,12 @@ namespace ToolFahrrad_v1.Design
                 et = _instance.GetTeil(n) as ETeil;
                 p3vw_26.Text = p3pm_0.Text;
                 p3plus_26.Text = p3iws_0.Text;
-                if (et.KdhPuffer.ContainsKey(n)) {
+                if (et.KdhPuffer.ContainsKey(n))
+                {
                     p3r_26.Text = et.KdhPuffer[n][index - 1].ToString();
                 }
-                if (et.KdhProduktionsmenge.ContainsKey(index.ToString() + "-" + Convert.ToString(n))) {
+                if (et.KdhProduktionsmenge.ContainsKey(index.ToString() + "-" + Convert.ToString(n)))
+                {
                     p3pm_26.Text = et.KdhProduktionsmenge[index.ToString() + "-" + Convert.ToString(n)].ToString();
                 }
                 //31
@@ -775,10 +853,12 @@ namespace ToolFahrrad_v1.Design
                 et = _instance.GetTeil(n) as ETeil;
                 p3vw_16.Text = p3pm_31.Text;
                 p3plus_16.Text = p3iws_31.Text;
-                if (et.KdhPuffer.ContainsKey(n)) {
+                if (et.KdhPuffer.ContainsKey(n))
+                {
                     p3r_16.Text = et.KdhPuffer[n][index - 1].ToString();
                 }
-                if (et.KdhProduktionsmenge.ContainsKey(index.ToString() + "-" + Convert.ToString(n))) {
+                if (et.KdhProduktionsmenge.ContainsKey(index.ToString() + "-" + Convert.ToString(n)))
+                {
                     p3pm_16.Text = et.KdhProduktionsmenge[index.ToString() + "-" + Convert.ToString(n)].ToString();
                 }
                 //17
@@ -786,10 +866,12 @@ namespace ToolFahrrad_v1.Design
                 et = _instance.GetTeil(n) as ETeil;
                 p3vw_17.Text = p3pm_0.Text;
                 p3plus_17.Text = p3iws_0.Text;
-                if (et.KdhPuffer.ContainsKey(n)) {
+                if (et.KdhPuffer.ContainsKey(n))
+                {
                     p3r_17.Text = et.KdhPuffer[n][index - 1].ToString();
                 }
-                if (et.KdhProduktionsmenge.ContainsKey(index.ToString() + "-" + Convert.ToString(n))) {
+                if (et.KdhProduktionsmenge.ContainsKey(index.ToString() + "-" + Convert.ToString(n)))
+                {
                     p3pm_17.Text = et.KdhProduktionsmenge[index.ToString() + "-" + Convert.ToString(n)].ToString();
                 }
                 //30
@@ -871,16 +953,21 @@ namespace ToolFahrrad_v1.Design
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void xml_suchen_Click(object sender, EventArgs e) {
+        private void xml_suchen_Click(object sender, EventArgs e)
+        {
             XmlOeffnen();
         }
-        private void dateiÖffnenToolStripMenuItem_Click(object sender, EventArgs e) {
+        private void dateiÖffnenToolStripMenuItem_Click(object sender, EventArgs e)
+        {
             XmlOeffnen();
         }
-        private void XmlOeffnen() {
+        private void XmlOeffnen()
+        {
             var fileDialog = new OpenFileDialog { Filter = Resources.Fahrrad_XmlOeffnen_xml_Datei_öffnen____xml____xml };
-            if (fileDialog.ShowDialog() == DialogResult.OK) {
-                if (_xml.ReadDatei(fileDialog.FileName)) {
+            if (fileDialog.ShowDialog() == DialogResult.OK)
+            {
+                if (_xml.ReadDatei(fileDialog.FileName))
+                {
                     xmlTextBox.Text = fileDialog.FileName;
                     xmlOffenOK.Visible = true;
                     _okXml = true;
@@ -888,7 +975,8 @@ namespace ToolFahrrad_v1.Design
                         toolAusfueren.Visible = true;
                     GetInfo(_culInfo.Contains("de") ? "XML-Datei wurde importiert" : "XML-file is imported");
                 }
-                else {
+                else
+                {
                     xmlTextBox.Text = fileDialog.FileName;
                     toolAusfueren.Visible = false;
                     xmlOffenOK.Visible = false;
@@ -902,41 +990,51 @@ namespace ToolFahrrad_v1.Design
             }
             panelXML.Visible = true;
         }
-        private void xml_export_Click(object sender, EventArgs e) {
+        private void xml_export_Click(object sender, EventArgs e)
+        {
             XmlExport();
         }
-        private void xMLexportToolStripMenuItem_Click(object sender, EventArgs e) {
+        private void xMLexportToolStripMenuItem_Click(object sender, EventArgs e)
+        {
             XmlExport();
         }
-        private void XmlExport() {
+        private void XmlExport()
+        {
             saveFileDialog1.Filter = Resources.Fahrrad_XmlOeffnen_xml_Datei_öffnen____xml____xml;
             saveFileDialog1.Title = Resources.Fahrrad_XmlExport_xml_Datei_erstellen;
             saveFileDialog1.ShowDialog();
 
-            if (saveFileDialog1.FileName != "") {
+            if (saveFileDialog1.FileName != "")
+            {
                 _xml.WriteDatei(saveFileDialog1.FileName);
             }
         }
 
-        private void gewichtungToolStripMenuItem_Click(object sender, EventArgs e) {
+        private void gewichtungToolStripMenuItem_Click(object sender, EventArgs e)
+        {
             var einstellungen = new Einstellungen();
             einstellungen.Show();
         }
-        private void startSeiteToolStripMenuItem_Click(object sender, EventArgs e) {
+        private void startSeiteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
             System.Diagnostics.Process.Start("http://scsim.de/");
         }
-        private void englischToolStripMenuItem1_Click(object sender, EventArgs e) {
+        private void englischToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
             ChangeLanguage("englisch");
             englischToolStripMenuItem1.Checked = true;
             deutschToolStripMenuItem1.Checked = false;
         }
-        private void deutschToolStripMenuItem1_Click(object sender, EventArgs e) {
+        private void deutschToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
             ChangeLanguage("deutsch");
             englischToolStripMenuItem1.Checked = false;
             deutschToolStripMenuItem1.Checked = true;
         }
-        private void ChangeLanguage(string language) {
-            switch (language) {
+        private void ChangeLanguage(string language)
+        {
+            switch (language)
+            {
                 case "deutsch":
                     Thread.CurrentThread.CurrentUICulture = new CultureInfo("de");
                     _culInfo = Thread.CurrentThread.CurrentUICulture.Name;
@@ -955,7 +1053,8 @@ namespace ToolFahrrad_v1.Design
                     break;
             }
         }
-        private void schließenToolStripMenuItem_Click_1(object sender, EventArgs e) {
+        private void schließenToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
             Close();
         }
 
@@ -964,15 +1063,19 @@ namespace ToolFahrrad_v1.Design
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void handbuchToolStripMenuItem_Click(object sender, EventArgs e) {
+        private void handbuchToolStripMenuItem_Click(object sender, EventArgs e)
+        {
             BenutzerHandbuch();
 
         }
-        private void videoF2ToolStripMenuItem_Click(object sender, EventArgs e) {
+        private void videoF2ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
             VideoTutorial();
         }
-        protected override bool ProcessCmdKey(ref Message msg, Keys keyData) {
-            switch (keyData) {
+        protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
+        {
+            switch (keyData)
+            {
                 case Keys.F1:
                     BenutzerHandbuch();
                     break;
@@ -1001,46 +1104,57 @@ namespace ToolFahrrad_v1.Design
             return base.ProcessCmdKey(ref msg, keyData);
         }
 
-        private void BenutzerHandbuch() {
+        private void BenutzerHandbuch()
+        {
             string path = Directory.GetCurrentDirectory() + @"\docu\Handbuch.pdf";
             Help.ShowHelp(this, path, HelpNavigator.TableOfContents, "");
         }
 
-        private void VideoTutorial() {
+        private void VideoTutorial()
+        {
             string path = Directory.GetCurrentDirectory() + @"\docu\Schulung.exe";
             Help.ShowHelp(this, path, HelpNavigator.TableOfContents, "");
         }
 
         ////////////////////////////////////////////////////////////////////////////
 
-        private void TextVisibleFalse() {
+        private void TextVisibleFalse()
+        {
             bildSpeichOk.Visible = false;
             _okPrognose = false;
             toolAusfueren.Visible = false;
             save.Visible = false;
         }
-        private void DataGriedViewRemove(DataGridView dgv) {
-            if (dgv.DataSource != null) {
+        private void DataGriedViewRemove(DataGridView dgv)
+        {
+            if (dgv.DataSource != null)
+            {
                 dgv.DataSource = null;
             }
-            else {
+            else
+            {
                 dgv.Rows.Clear();
             }
         }
-        private void XmlVorbereitung(int p) {
+        private void XmlVorbereitung(int p)
+        {
             int index;
-            if (p == 100 || p == 1) { //1 = Vertriebswunsch
+            if (p == 100 || p == 1)
+            { //1 = Vertriebswunsch
                 DataGriedViewRemove(dataGridViewVertrieb);
                 dataGridViewVertrieb.Rows.Add();
-                for (int i = 0; i < 3; ++i) {
+                for (int i = 0; i < 3; ++i)
+                {
                     dataGridViewVertrieb.Rows[0].Cells[i].Value = _instance.GetTeil(i + 1).VertriebPer0;
                 }
             }
-            if (p == 100 || p == 3) {
+            if (p == 100 || p == 3)
+            {
                 _bv.LadeBvPositionenInDc();
                 index = 0;
                 DataGriedViewRemove(dataGridViewEinkauf);
-                foreach (Bestellposition b in _instance.Bestellungen) {
+                foreach (Bestellposition b in _instance.Bestellungen)
+                {
                     dataGridViewEinkauf.Rows.Add();
                     dataGridViewEinkauf.Rows[index].Cells[0].Value = b.Kaufteil.Nummer;
                     dataGridViewEinkauf.Rows[index].Cells[1].Value = b.Menge;
@@ -1049,10 +1163,12 @@ namespace ToolFahrrad_v1.Design
                 }
                 ////
                 DataGriedViewRemove(dataGridViewDirekt);
-                if (dvVerwenden.Checked) {
+                if (dvVerwenden.Checked)
+                {
                     _bv.LadeDvPositioneninDc();
                     index = 0;
-                    foreach (DvPosition d in _instance.DVerkauf) {
+                    foreach (DvPosition d in _instance.DVerkauf)
+                    {
                         dataGridViewDirekt.Rows.Add();
                         dataGridViewDirekt.Rows[index].Cells[0].Value = d.DvTeilNr;
                         dataGridViewDirekt.Rows[index].Cells[1].Value = d.DvMenge;
@@ -1062,7 +1178,8 @@ namespace ToolFahrrad_v1.Design
                     }
                 }
             }
-            if (p == 100 || p == 4) {
+            if (p == 100 || p == 4)
+            {
                 //neue Liste erstellen und speichern
                 if (p == 4)
                     _pp.ProdListe = SaveNeueListe();
@@ -1072,7 +1189,8 @@ namespace ToolFahrrad_v1.Design
 
                 index = 0;
                 DataGriedViewRemove(dataGridViewPrAuftraege);
-                foreach (var d in _instance.ListeProduktion) {
+                foreach (var d in _instance.ListeProduktion)
+                {
                     dataGridViewPrAuftraege.Rows.Add();
                     dataGridViewPrAuftraege.Rows[index].Cells[0].Value = d.Key;
                     dataGridViewPrAuftraege.Rows[index].Cells[1].Value = d.Value;
@@ -1080,10 +1198,12 @@ namespace ToolFahrrad_v1.Design
                 }
             }
 
-            if (p == 100 || p == 5) {
+            if (p == 100 || p == 5)
+            {
                 index = 0;
                 DataGriedViewRemove(dataGridViewProduktKapazit);
-                foreach (int[] i in _xmlAp) {
+                foreach (int[] i in _xmlAp)
+                {
                     dataGridViewProduktKapazit.Rows.Add();
                     dataGridViewProduktKapazit.Rows[index].Cells[0].Value = i[0];
                     dataGridViewProduktKapazit.Rows[index].Cells[1].Value = i[1];
@@ -1100,16 +1220,20 @@ namespace ToolFahrrad_v1.Design
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void dataGridViewKTeil_CellContentClick_1(object sender, DataGridViewCellEventArgs e) {
-            if (e.ColumnIndex == 0) {
+        private void dataGridViewKTeil_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex == 0)
+            {
                 var ti = new TeilInformation("kteil", Convert.ToInt32(dataGridViewKTeil.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString()));
                 ti.GetTeilvonETeilMitMenge();
                 ti.Show();
             }
         }
-        private void dataGridViewAPlatz_CellContentClick(object sender, DataGridViewCellEventArgs e) {
+        private void dataGridViewAPlatz_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
             int zahl = Convert.ToInt32(DataGridViewAP.Rows[e.RowIndex].Cells[3].Value.ToString());
-            switch (e.ColumnIndex) {
+            switch (e.ColumnIndex)
+            {
                 case 0:
                     var ti = new TeilInformation("arbeitsplatz", Convert.ToInt32(DataGridViewAP.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString()));
                     ti.GetZeitInformation();
@@ -1126,7 +1250,8 @@ namespace ToolFahrrad_v1.Design
                     break;
             }
         }
-        private void DataGridViewAP_CellMouseEnter(object sender, DataGridViewCellEventArgs e) {
+        private void DataGridViewAP_CellMouseEnter(object sender, DataGridViewCellEventArgs e)
+        {
 
             if (e.ColumnIndex == 4 || e.ColumnIndex == 5)
                 DataGridViewAP.Cursor = Cursors.Hand;
@@ -1134,34 +1259,43 @@ namespace ToolFahrrad_v1.Design
                 DataGridViewAP.Cursor = Cursors.Default;
 
         }
-        private void ProdMenge(int index, int nr, int reserve) {
+        private void ProdMenge(int index, int nr, int reserve)
+        {
             var et = _instance.GetTeil(nr) as ETeil;
             if (et.IstEndProdukt)
                 et.ProduktionsMengePer0 = et.VertriebPer0 + reserve - et.Lagerstand - et.InWartschlange - et.InBearbeitung;
-            else if (et.IstEndProdukt != true && et.Verwendung.Contains("KDH") == false) {
-                if (et.VertriebPer0 < 0) {
+            else if (et.IstEndProdukt != true && et.Verwendung.Contains("KDH") == false)
+            {
+                if (et.VertriebPer0 < 0)
+                {
                     et.VertriebPer0 = 0;
                 }
                 et.ProduktionsMengePer0 = et.VertriebPer0 + et.VaterInWarteschlange + reserve - et.Lagerstand - et.InWartschlange - et.InBearbeitung;
             }
-            else {
+            else
+            {
                 var pufTemp = 0;
-                foreach (KeyValuePair<int, int[]> pair in et.KdhPuffer.Where(pair => pair.Key.Equals(nr))) {
+                foreach (KeyValuePair<int, int[]> pair in et.KdhPuffer.Where(pair => pair.Key.Equals(nr)))
+                {
                     pufTemp = pair.Value[index - 1];
                 }
                 int pmTemp;
-                if (index == 1) {
+                if (index == 1)
+                {
                     pmTemp = et.VertriebPer0 + et.KdhVaterInWarteschlange[nr][index - 1] + pufTemp - et.Lagerstand - et.InWartschlange - et.InBearbeitung;
                 }
-                else {
+                else
+                {
                     pmTemp = et.VertriebPer0 + et.KdhVaterInWarteschlange[nr][index - 1] + pufTemp;
                 }
-                if (et.KdhProduktionsmenge.ContainsKey(index.ToString() + "-" + Convert.ToString(nr))) {
+                if (et.KdhProduktionsmenge.ContainsKey(index.ToString() + "-" + Convert.ToString(nr)))
+                {
                     et.KdhProduktionsmenge[index.ToString() + "-" + Convert.ToString(nr)] = pmTemp;
                 }
             }
         }
-        private void p1ETAusfueren_Click(object sender, EventArgs e) {
+        private void p1ETAusfueren_Click(object sender, EventArgs e)
+        {
             (_instance.GetTeil(1) as ETeil).VertriebPer0 = Convert.ToInt32(p1vw_0.Text);
             (_instance.GetTeil(1) as ETeil).Puffer = Convert.ToInt32(p1r_0.Text);
             ProdMenge(1, 1, Convert.ToInt32(p1r_0.Text));
@@ -1194,7 +1328,8 @@ namespace ToolFahrrad_v1.Design
 
             GetInfo(_culInfo.Contains("de") ? "Daten wurde in XML übernommen" : "Take in XML data has been");
         }
-        private void p2ETAusfueren_Click(object sender, EventArgs e) {
+        private void p2ETAusfueren_Click(object sender, EventArgs e)
+        {
             (_instance.GetTeil(2) as ETeil).VertriebPer0 = Convert.ToInt32(p2vw_0.Text);
             (_instance.GetTeil(2) as ETeil).Puffer = Convert.ToInt32(p2r_0.Text);
             ProdMenge(2, 2, Convert.ToInt32(p2r_0.Text));
@@ -1226,7 +1361,8 @@ namespace ToolFahrrad_v1.Design
             XmlVorbereitung(100);
             GetInfo(_culInfo.Contains("de") ? "Daten wurde in XML übernommen" : "Take in XML data has been");
         }
-        private void p3ETAusfueren_Click(object sender, EventArgs e) {
+        private void p3ETAusfueren_Click(object sender, EventArgs e)
+        {
             (_instance.GetTeil(3) as ETeil).VertriebPer0 = Convert.ToInt32(p3vw_0.Text);
             (_instance.GetTeil(3) as ETeil).Puffer = Convert.ToInt32(p3r_0.Text);
             ProdMenge(3, 3, Convert.ToInt32(p3r_0.Text));
@@ -1258,9 +1394,11 @@ namespace ToolFahrrad_v1.Design
             XmlVorbereitung(100);
             GetInfo(_culInfo.Contains("de") ? "Daten wurde in XML übernommen" : "Take in XML data has been");
         }
-        private void arbPlatzAusfueren_Click(object sender, EventArgs e) {
+        private void arbPlatzAusfueren_Click(object sender, EventArgs e)
+        {
             _bv.ClearBvPositionen();
-            for (int index = 0; index < DataGridViewAP.Rows.Count; ++index) {
+            for (int index = 0; index < DataGridViewAP.Rows.Count; ++index)
+            {
                 _instance.GetArbeitsplatz(Convert.ToInt32(DataGridViewAP.Rows[index].Cells[0].Value.ToString())).RuestungCustom =
                     (Convert.ToInt32(DataGridViewAP.Rows[index].Cells[3].Value.ToString()));
             }
@@ -1269,15 +1407,19 @@ namespace ToolFahrrad_v1.Design
             GetInfo(_culInfo.Contains("de") ? "Daten wurde in XML übernommen" : "Take in XML data has been");
         }
 
-        private void pictureBox3_Click(object sender, EventArgs e) {
-            try {
-                if (dataGridViewBestellung.AllowUserToAddRows) {
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (dataGridViewBestellung.AllowUserToAddRows)
+                {
                     dataGridViewBestellung.AllowUserToAddRows = false;
                     kNr.ReadOnly = true;
                 }
                 _bp = new List<Bestellposition>();
 
-                foreach (DataGridViewRow row in dataGridViewBestellung.Rows) {
+                foreach (DataGridViewRow row in dataGridViewBestellung.Rows)
+                {
                     var check = (DataGridViewCheckBoxCell)row.Cells[3];
                     var check2 = (DataGridViewCheckBoxCell)row.Cells[2];
                     bool c = check2.Value != null;
@@ -1286,11 +1428,15 @@ namespace ToolFahrrad_v1.Design
 
 
                     var value = row.Cells[0].Value;
-                    if (value != null) {
+                    if (value != null)
+                    {
                         var teil = _instance.GetTeil(Convert.ToInt32(value.ToString())) as KTeil;
-                        if (teil != null) {
-                            if (row.Cells[1].Value != null) {
-                                if (check.Value.ToString() != "true") {
+                        if (teil != null)
+                        {
+                            if (row.Cells[1].Value != null)
+                            {
+                                if (check.Value.ToString() != "true")
+                                {
                                     var bbp = new Bestellposition(teil, Convert.ToInt32(row.Cells[1].Value.ToString()),
                                                                   c);
                                     _bp.Add(bbp);
@@ -1308,7 +1454,8 @@ namespace ToolFahrrad_v1.Design
                                 Resources.Fahrrad_pictureBox3_Click_1, Resources.Fahrrad_XmlOeffnen_Fehlermeldung,
                                 MessageBoxButtons.OK, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button1);
                     }
-                    else {
+                    else
+                    {
                         MessageBox.Show(Resources.Fahrrad_pictureBox3_Click_Kaufteil_kann_nicht_NULL_sein,
                                         Resources.Fahrrad_XmlOeffnen_Fehlermeldung,
                                         MessageBoxButtons.OK, MessageBoxIcon.Exclamation,
@@ -1321,12 +1468,15 @@ namespace ToolFahrrad_v1.Design
                 _bv.SetBvPositionen(_bp);
                 Information();
             }
-            catch (Exception ex) {
+            catch (Exception ex)
+            {
                 MessageBox.Show(ex.Message);
             }
         }
-        private void zurueck_Click(object sender, EventArgs e) {
-            if (dataGridViewBestellung.AllowUserToAddRows) {
+        private void zurueck_Click(object sender, EventArgs e)
+        {
+            if (dataGridViewBestellung.AllowUserToAddRows)
+            {
                 dataGridViewBestellung.AllowUserToAddRows = false;
                 kNr.ReadOnly = true;
             }
@@ -1334,57 +1484,69 @@ namespace ToolFahrrad_v1.Design
             _bv.ClearBvPositionen();
             Information();
         }
-        private void uebernehmenXML_Click(object sender, EventArgs e) {
+        private void uebernehmenXML_Click(object sender, EventArgs e)
+        {
             XmlVorbereitung(3);
             GetInfo(_culInfo.Contains("de") ? "Daten wurde in XML übernommen" : "Take in XML data has been");
         }
 
-        private void pictureBox3_Click_1(object sender, EventArgs e) {
+        private void pictureBox3_Click_1(object sender, EventArgs e)
+        {
             XmlVorbereitung(4);
             GetInfo(_culInfo.Contains("de") ? "Daten wurde in XML übernommen" : "Take in XML data has been");
         }
 
-        private void addNr_Click(object sender, EventArgs e) {
+        private void addNr_Click(object sender, EventArgs e)
+        {
             dataGridViewBestellung.AllowUserToAddRows = true;
             kNr.ReadOnly = false;
         }
 
-        private Dictionary<int, int> SaveNeueListe() {
+        private Dictionary<int, int> SaveNeueListe()
+        {
             var prodListeNeu = dataGridViewProduktAuftrag.Rows.Cast<DataGridViewRow>().ToDictionary(row => Convert.ToInt32(row.Cells[0].Value.ToString()), row => Convert.ToInt32(row.Cells[1].Value.ToString()));
             return prodListeNeu;
         }
 
-        private void saveAenderungen2_Click(object sender, EventArgs e) {
-            if (dataGridViewDirektverkauf.AllowUserToAddRows) {
+        private void saveAenderungen2_Click(object sender, EventArgs e)
+        {
+            if (dataGridViewDirektverkauf.AllowUserToAddRows)
+            {
                 dataGridViewDirektverkauf.AllowUserToAddRows = false;
                 knr2.ReadOnly = true;
             }
 
             _dirv = new List<DvPosition>();
 
-            foreach (DataGridViewRow row in dataGridViewDirektverkauf.Rows) {
+            foreach (DataGridViewRow row in dataGridViewDirektverkauf.Rows)
+            {
                 var ch = (DataGridViewCheckBoxCell)row.Cells[4];
                 if (ch.Value == null)
                     ch.Value = false;
-                if (ch.Value.ToString() != "true") {
+                if (ch.Value.ToString() != "true")
+                {
 
                     var teil = _instance.GetTeil(Convert.ToInt32(row.Cells[0].Value.ToString())) as ETeil;
-                    if (teil != null) {
+                    if (teil != null)
+                    {
                         object n = row.Cells[0].Value; //nr
                         object m = row.Cells[1].Value; //menge
                         object p = row.Cells[2].Value; //preis
                         object s = row.Cells[3].Value; //straffe
 
-                        if (n != null && m != null && p != null && s != null) {
+                        if (n != null && m != null && p != null && s != null)
+                        {
                             var dv = new DvPosition(Convert.ToInt32(n.ToString()), Convert.ToInt32(m.ToString()), Convert.ToDouble(p.ToString()), Convert.ToDouble(s.ToString()));
                             _dirv.Add(dv);
                         }
-                        else {
+                        else
+                        {
                             MessageBox.Show(Resources.Fahrrad_saveAenderungen2_Click_kein_Fehld_darf_null_sein, Resources.Fahrrad_XmlOeffnen_Fehlermeldung,
                        MessageBoxButtons.OK, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button1);
                         }
                     }
-                    else {
+                    else
+                    {
                         MessageBox.Show(Resources.Fahrrad_saveAenderungen2_Click_Eigenfertigte_Teil_N1 + row.Cells[0].Value + Resources.Fahrrad_pictureBox3_Click_1, Resources.Fahrrad_XmlOeffnen_Fehlermeldung,
                        MessageBoxButtons.OK, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button1);
                     }
@@ -1395,12 +1557,15 @@ namespace ToolFahrrad_v1.Design
             _bv.SetDvPositionen(_dirv);
             Information();
         }
-        private void addNr2_Click(object sender, EventArgs e) {
+        private void addNr2_Click(object sender, EventArgs e)
+        {
             dataGridViewDirektverkauf.AllowUserToAddRows = true;
             knr2.ReadOnly = false;
         }
-        private void zurueck2_Click(object sender, EventArgs e) {
-            if (dataGridViewDirektverkauf.AllowUserToAddRows) {
+        private void zurueck2_Click(object sender, EventArgs e)
+        {
+            if (dataGridViewDirektverkauf.AllowUserToAddRows)
+            {
                 dataGridViewDirektverkauf.AllowUserToAddRows = false;
                 knr2.ReadOnly = true;
             }
@@ -1410,7 +1575,8 @@ namespace ToolFahrrad_v1.Design
             Information();
         }
 
-        private void pictureBox4_Click(object sender, EventArgs e) {
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
             _pp.OptimiereProdListe();
             Information();
         }
@@ -1422,61 +1588,74 @@ namespace ToolFahrrad_v1.Design
         /// <param name="x"></param>
         /// <param name="y"></param>
         /// <returns></returns>
-        private bool IsCellOrRowHeader(int x, int y) {
+        private bool IsCellOrRowHeader(int x, int y)
+        {
             DataGridViewHitTestType dgt = dataGridViewProduktAuftrag.HitTest(x, y).Type;
             return (dgt == DataGridViewHitTestType.Cell ||
                             dgt == DataGridViewHitTestType.RowHeader);
         }
-        private void dataGridViewProduktAuftrag_MouseMove_1(object sender, MouseEventArgs e) {
-            if ((e.Button & MouseButtons.Left) == MouseButtons.Left) {
-                if (!IsCellOrRowHeader(e.X, e.Y) && _rowIndexSrc >= 0) {
+        private void dataGridViewProduktAuftrag_MouseMove_1(object sender, MouseEventArgs e)
+        {
+            if ((e.Button & MouseButtons.Left) == MouseButtons.Left)
+            {
+                if (!IsCellOrRowHeader(e.X, e.Y) && _rowIndexSrc >= 0)
+                {
                     DragDropEffects dropEffect = dataGridViewProduktAuftrag.DoDragDrop(
                         dataGridViewProduktAuftrag.Rows[_rowIndexSrc], DragDropEffects.None);
                     return;
                 }
 
                 if (_dragBoxSrc != Rectangle.Empty &&
-                        !_dragBoxSrc.Contains(e.X, e.Y)) {
+                        !_dragBoxSrc.Contains(e.X, e.Y))
+                {
                     DragDropEffects dropEffect = dataGridViewProduktAuftrag.DoDragDrop(
                 dataGridViewProduktAuftrag.Rows[_rowIndexSrc], DragDropEffects.Move);
                 }
             }
         }
-        private void dataGridViewProduktAuftrag_MouseDown_1(object sender, MouseEventArgs e) {
+        private void dataGridViewProduktAuftrag_MouseDown_1(object sender, MouseEventArgs e)
+        {
             _rowIndexSrc = dataGridViewProduktAuftrag.HitTest(e.X, e.Y).RowIndex;
-            if (_rowIndexSrc != -1) {
+            if (_rowIndexSrc != -1)
+            {
                 Size dragSize = SystemInformation.DragSize;
                 _dragBoxSrc = new Rectangle(new Point(e.X, e.Y), dragSize);
             }
             else
                 _dragBoxSrc = Rectangle.Empty;
         }
-        private void dataGridViewProduktAuftrag_DragDrop_1(object sender, DragEventArgs e) {
+        private void dataGridViewProduktAuftrag_DragDrop_1(object sender, DragEventArgs e)
+        {
             Point clientPoint = dataGridViewProduktAuftrag.PointToClient(new Point(e.X, e.Y));
             _rowIndexTar = dataGridViewProduktAuftrag.HitTest(clientPoint.X, clientPoint.Y).RowIndex;
-            if (e.Effect == DragDropEffects.Move) {
+            if (e.Effect == DragDropEffects.Move)
+            {
                 var rowToMove = e.Data.GetData(
                     typeof(DataGridViewRow)) as DataGridViewRow;
                 MoveRow(_rowIndexSrc, _rowIndexTar);
             }
         }
-        void SwapCell(int c, int srcRow, int tarRow, out object tmp0, out object tmp1) {
+        void SwapCell(int c, int srcRow, int tarRow, out object tmp0, out object tmp1)
+        {
             DataGridViewCell srcCell = dataGridViewProduktAuftrag.Rows[srcRow].Cells[c];
             DataGridViewCell tarCell = dataGridViewProduktAuftrag.Rows[tarRow].Cells[c];
             tmp0 = tarCell.Value;
             tmp1 = srcCell.Value;
             tarCell.Value = tmp1;
         }
-        void MoveRow(int srcRow, int tarRow) {
+        void MoveRow(int srcRow, int tarRow)
+        {
             int cellCount = dataGridViewProduktAuftrag.Rows[srcRow].Cells.Count;
             for (int c = 0; c < cellCount; c++)
                 ShiftRows(srcRow, tarRow, c);
         }
-        private void ShiftRows(int srcRow, int tarRow, int c) {
+        private void ShiftRows(int srcRow, int tarRow, int c)
+        {
             object tmp0, tmp1;
             SwapCell(c, srcRow, tarRow, out tmp0, out tmp1);
             int delta = tarRow < srcRow ? 1 : -1;
-            for (int r = tarRow + delta; r != srcRow + delta; r += delta) {
+            for (int r = tarRow + delta; r != srcRow + delta; r += delta)
+            {
                 tmp1 = dataGridViewProduktAuftrag.Rows[r].Cells[c].Value;
                 dataGridViewProduktAuftrag.Rows[r].Cells[c].Value = tmp0;
                 tmp0 = tmp1;
@@ -1484,42 +1663,127 @@ namespace ToolFahrrad_v1.Design
             dataGridViewProduktAuftrag.Rows[tarRow].Selected = true;
             dataGridViewProduktAuftrag.CurrentCell = dataGridViewProduktAuftrag.Rows[tarRow].Cells[0];
         }
-        private void dataGridViewProduktAuftrag_DragOver_1(object sender, DragEventArgs e) {
+        private void dataGridViewProduktAuftrag_DragOver_1(object sender, DragEventArgs e)
+        {
             Point p = dataGridViewProduktAuftrag.PointToClient(new Point(e.X, e.Y));
             DataGridViewHitTestType dgt = dataGridViewProduktAuftrag.HitTest(p.X, p.Y).Type;
             e.Effect = IsCellOrRowHeader(p.X, p.Y) ? DragDropEffects.Move : DragDropEffects.None;
         }
 
 
-        private void GetInfo(string text) {
+        private void GetInfo(string text)
+        {
             timer1.Stop();
             info.Text = text;
             if (text != "")
                 timer1.Start();
         }
-        private void timer1_Tick(object sender, EventArgs e) {
+        private void timer1_Tick(object sender, EventArgs e)
+        {
             timer1.Stop();
             GetInfo("");
         }
 
+        private void Fahrrad_Load(object sender, EventArgs e)
+        {
+            this.AllowDrop = true;
+            this.DragEnter += xml_DragEnter;
+            this.DragDrop += xml_DragDrop;
+        }
+
+        private void xml_DragEnter(object sender, DragEventArgs e)
+        {
+            if (e.Data.GetDataPresent(DataFormats.FileDrop))
+            {
+                e.Effect = DragDropEffects.Copy;
+            }
+            else
+            {
+                e.Effect = DragDropEffects.None;
+            }
+        }
+        private void xml_DragDrop(object sender, DragEventArgs e)
+        {
+            if (e.Data.GetDataPresent(DataFormats.FileDrop))
+            {
+                string[] filePaths = (string[])(e.Data.GetData(DataFormats.FileDrop));
+                foreach (string fileLoc in filePaths)
+                {
+                    // Code to read the contents of the text file
+                    if (e.Data.GetDataPresent(DataFormats.FileDrop))
+                    {
+                        string[] files = (string[])e.Data.GetData(DataFormats.FileDrop);
+                        foreach (string filePath in files)
+                        {
+                            //Console.WriteLine(filePath);
+                            MessageBox.Show(filePath);
+
+                            if (_xml.ReadDatei(filePath))
+                            {
+                                xmlTextBox.Text = filePath;
+                                xmlOffenOK.Visible = true;
+                                _okXml = true;
+                                if (_okPrognose)
+                                    toolAusfueren.Visible = true;
+                                GetInfo(_culInfo.Contains("de") ? "XML-Datei wurde importiert" : "XML-file is imported");
+                            }
+                            else
+                            {
+                                xmlTextBox.Text = filePath;
+                                toolAusfueren.Visible = false;
+                                xmlOffenOK.Visible = false;
+                                save.Visible = false;
+                                _okXml = false;
+
+                                MessageBox.Show(Resources.Fahrrad_XmlOeffnen_TEXT, Resources.Fahrrad_XmlOeffnen_Fehlermeldung,
+                                   MessageBoxButtons.OK, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button1);
+
+                            }
+                        }
+                        panelXML.Visible = true;
+                        _okXml = true;
+                        Ausführen();
+                        toolAusfueren.Visible = false;
+                        save.Visible = true;
+                        tab1.Visible = true;
+                        tab2.Visible = true;
+                        panelXMLerstellen.Visible = true;
+                        arbPlatzAusfueren.Visible = true;
+                        DataGridViewAP.Visible = true;
+                        _bestellungUpdate = false;
+                        _dvUpdate = false;
+                        xMLexportToolStripMenuItem.Enabled = true;
+                        xml_export.Visible = true;
+
+                        //Periode
+                        if (_culInfo.Contains("de"))
+                        {
+                            aktulleWoche.Text = Resources.Fahrrad_toolAusfueren_Click_Periode_ + _xml.Period;
+                            prognose1.Text = Resources.Fahrrad_toolAusfueren_Click_Periode_ + (Convert.ToInt32(_xml.Period) + 1);
+                            prognose2.Text = Resources.Fahrrad_toolAusfueren_Click_Periode_ + (Convert.ToInt32(_xml.Period) + 2);
+                            prognose3.Text = Resources.Fahrrad_toolAusfueren_Click_Periode_ + (Convert.ToInt32(_xml.Period) + 3);
+                            GetInfo("Tool wurde erfolgreich ausgeführt");
+                        }
+                        else
+                        {
+                            aktulleWoche.Text = Resources.Fahrrad_toolAusfueren_Click_Periode_en + _xml.Period;
+                            prognose1.Text = Resources.Fahrrad_toolAusfueren_Click_Periode_en + (Convert.ToInt32(_xml.Period) + 1);
+                            prognose2.Text = Resources.Fahrrad_toolAusfueren_Click_Periode_en + (Convert.ToInt32(_xml.Period) + 2);
+                            prognose3.Text = Resources.Fahrrad_toolAusfueren_Click_Periode_en + (Convert.ToInt32(_xml.Period) + 3);
+                            GetInfo("tool was successful");
+
+                        }
+                    }
+                }
+            }
+        }
 
 
+        private void save_Click(object sender, EventArgs e)
+        {
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        }
     }
 }
 

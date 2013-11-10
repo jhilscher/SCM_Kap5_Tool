@@ -29,13 +29,12 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Fahrrad));
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Fahrrad));
+            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.tabs = new System.Windows.Forms.TabControl();
             this.tab_xml = new System.Windows.Forms.TabPage();
             this.prognose1 = new System.Windows.Forms.Label();
@@ -700,8 +699,8 @@
             this.button_exportXml = new System.Windows.Forms.Button();
             this.TextBox_xmlOutput = new System.Windows.Forms.RichTextBox();
             this.tab_statistik = new System.Windows.Forms.TabPage();
+            this.header_statistik = new System.Windows.Forms.Label();
             this.chart_statistik = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.label273 = new System.Windows.Forms.Label();
             this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
             this.menu = new System.Windows.Forms.MenuStrip();
             this.dateiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -736,6 +735,7 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.NavPanel = new System.Windows.Forms.Panel();
             this.nav_button_1 = new System.Windows.Forms.Button();
+            this.labelDragDrop = new System.Windows.Forms.Label();
             this.tabs.SuspendLayout();
             this.tab_xml.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pufferP3)).BeginInit();
@@ -826,6 +826,7 @@
             // tab_xml
             // 
             this.tab_xml.BackColor = System.Drawing.Color.Transparent;
+            this.tab_xml.Controls.Add(this.labelDragDrop);
             this.tab_xml.Controls.Add(this.prognose1);
             this.tab_xml.Controls.Add(this.pufferP3);
             this.tab_xml.Controls.Add(this.pufferP2);
@@ -958,6 +959,7 @@
             this.helpProvider1.SetShowHelp(this.save, ((bool)(resources.GetObject("save.ShowHelp"))));
             this.save.TabStop = false;
             this.toolTip.SetToolTip(this.save, resources.GetString("save.ToolTip"));
+            this.save.Click += new System.EventHandler(this.save_Click);
             // 
             // xmlOffenOK
             // 
@@ -6989,46 +6991,39 @@
             // 
             // tab_statistik
             // 
+            this.tab_statistik.Controls.Add(this.header_statistik);
             this.tab_statistik.Controls.Add(this.chart_statistik);
-            this.tab_statistik.Controls.Add(this.label273);
             resources.ApplyResources(this.tab_statistik, "tab_statistik");
             this.tab_statistik.Name = "tab_statistik";
             this.tab_statistik.UseVisualStyleBackColor = true;
             // 
+            // header_statistik
+            // 
+            resources.ApplyResources(this.header_statistik, "header_statistik");
+            this.header_statistik.Name = "header_statistik";
+            this.helpProvider1.SetShowHelp(this.header_statistik, ((bool)(resources.GetObject("header_statistik.ShowHelp"))));
+            // 
             // chart_statistik
             // 
-            chartArea1.AxisX.LabelStyle.Angle = 45;
-            chartArea1.AxisX.Title = "Nr.";
-            chartArea1.AxisX2.Title = "Menge";
-            chartArea1.BorderColor = System.Drawing.Color.DimGray;
-            chartArea1.Name = "ChartArea1";
             chartArea2.Name = "ChartArea2";
-            this.chart_statistik.ChartAreas.Add(chartArea1);
             this.chart_statistik.ChartAreas.Add(chartArea2);
-            legend1.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Top;
-            legend1.Name = "Legend1";
-            legend2.DockedToChartArea = "ChartArea1";
-            legend2.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Top;
-            legend2.IsDockedInsideChartArea = false;
-            legend2.Name = "Legend2";
-            legend3.DockedToChartArea = "ChartArea2";
             legend3.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Top;
-            legend3.Name = "Legend3";
-            this.chart_statistik.Legends.Add(legend1);
-            this.chart_statistik.Legends.Add(legend2);
+            legend3.Name = "Legend1";
+            legend4.DockedToChartArea = "ChartArea2";
+            legend4.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Top;
+            legend4.Name = "Legend3";
             this.chart_statistik.Legends.Add(legend3);
+            this.chart_statistik.Legends.Add(legend4);
             resources.ApplyResources(this.chart_statistik, "chart_statistik");
             this.chart_statistik.Name = "chart_statistik";
-            series1.ChartArea = "ChartArea1";
-            series1.Legend = "Legend1";
-            series1.Name = "Bestellungen";
-            this.chart_statistik.Series.Add(series1);
-            // 
-            // label273
-            // 
-            resources.ApplyResources(this.label273, "label273");
-            this.label273.Name = "label273";
-            this.helpProvider1.SetShowHelp(this.label273, ((bool)(resources.GetObject("label273.ShowHelp"))));
+            series3.ChartArea = "ChartArea2";
+            series3.Legend = "Legend1";
+            series3.Name = "Bestellungen";
+            series4.ChartArea = "ChartArea2";
+            series4.Legend = "Legend1";
+            series4.Name = "Produktion";
+            this.chart_statistik.Series.Add(series3);
+            this.chart_statistik.Series.Add(series4);
             // 
             // openFileDialog
             // 
@@ -7275,6 +7270,12 @@
             this.nav_button_1.UseVisualStyleBackColor = false;
             this.nav_button_1.Click += new System.EventHandler(this.nav_button_1_Click);
             // 
+            // labelDragDrop
+            // 
+            resources.ApplyResources(this.labelDragDrop, "labelDragDrop");
+            this.labelDragDrop.Name = "labelDragDrop";
+            this.helpProvider1.SetShowHelp(this.labelDragDrop, ((bool)(resources.GetObject("labelDragDrop.ShowHelp"))));
+            // 
             // Fahrrad
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -7290,6 +7291,7 @@
             this.helpProvider1.SetHelpString(this, resources.GetString("$this.HelpString"));
             this.Name = "Fahrrad";
             this.helpProvider1.SetShowHelp(this, ((bool)(resources.GetObject("$this.ShowHelp"))));
+            this.Load += new System.EventHandler(this.Fahrrad_Load);
             this.tabs.ResumeLayout(false);
             this.tab_xml.ResumeLayout(false);
             this.tab_xml.PerformLayout();
@@ -8070,14 +8072,19 @@
         private System.Windows.Forms.Button button_nav_4;
         private System.Windows.Forms.Button button_nav_3;
         private System.Windows.Forms.Button button_nav_2;
+
         private System.Windows.Forms.TabPage tab_beenden;
         private System.Windows.Forms.Button button_exportXml;
         private System.Windows.Forms.RichTextBox TextBox_xmlOutput;
         private System.Windows.Forms.Label header_xmlExport;
         private System.Windows.Forms.TabPage tab_statistik;
         private System.Windows.Forms.DataVisualization.Charting.Chart chart_statistik;
-        private System.Windows.Forms.Label label273;
         private System.Windows.Forms.Button button_nav_8;
+
+
+        private System.Windows.Forms.Label header_statistik;
+        private System.Windows.Forms.Label labelDragDrop;
+
     }
 }
 
