@@ -60,5 +60,10 @@ namespace ToolFahrrad_v1.Komponenten
         {
             return Nummer == k.Nummer;
         }
+
+        public override string ToString()
+        {
+            return Nummer.ToString();
+        }
     }
 }

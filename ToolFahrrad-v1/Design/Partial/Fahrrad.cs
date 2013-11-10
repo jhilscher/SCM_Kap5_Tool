@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms.DataVisualization.Charting;
 using System.Xml;
+using ToolFahrrad_v1.Komponenten;
 
 namespace ToolFahrrad_v1.Design
 {
@@ -73,6 +75,33 @@ namespace ToolFahrrad_v1.Design
         }
 
         /// <summary>
+        /// 8. Button links: Statistik
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void button_nav_8_Click(object sender, EventArgs e)
+        {
+            tabs.SelectedTab = tab_statistik;
+
+            // Bestellungen Anzahl
+            var i = 0;
+            Series series1 = this.chart_statistik.Series.First();
+           
+            // baue datapoints zusammen
+            var listBv = _bv.BvPositionen.Select<Bestellposition, DataPoint>(x =>
+            {
+                var dp = new DataPoint(i++, x.Menge);
+                dp.AxisLabel = x.Kaufteil.ToString();
+                return dp;
+            }).ToList();
+
+            // hinzu zur serie!
+            listBv.ForEach(x => series1.Points.Add(x));
+
+        }
+                
+
+        /// <summary>
         /// 7. Button links
         /// </summary>
         /// <param name="sender"></param>
@@ -125,7 +154,15 @@ namespace ToolFahrrad_v1.Design
             //TextBox_xmlOutput.Refresh();
         }
 
-        
+        /// <summary>
+        /// NEU: export ueber button auf xml-preview seite
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void button_exportXml_Click(object sender, EventArgs e)
+        {
+            XmlExport();
+        }
 
     }
 }

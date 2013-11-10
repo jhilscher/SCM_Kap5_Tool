@@ -175,7 +175,7 @@ namespace ToolFahrrad_v1.XML
         /// To Display the content in the app.
         /// </summary>
         /// <returns>String mit schoenem xml</returns>
-        internal string ToString()
+        public override string ToString()
         {
             // einrueken
             string tab = "     ";

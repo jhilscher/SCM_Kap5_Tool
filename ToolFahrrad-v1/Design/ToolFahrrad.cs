@@ -1502,15 +1502,9 @@ namespace ToolFahrrad_v1.Design
             GetInfo("");
         }
 
-        /// <summary>
-        /// NEU: export ueber button auf xml-preview seite
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void button_exportXml_Click(object sender, EventArgs e)
-        {
-            XmlExport();
-        }
+
+
+
 
 
 
