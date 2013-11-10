@@ -32,6 +32,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Fahrrad));
             this.tabs = new System.Windows.Forms.TabControl();
             this.tab_xml = new System.Windows.Forms.TabPage();
+            this.label273 = new System.Windows.Forms.Label();
             this.prognose1 = new System.Windows.Forms.Label();
             this.pufferP3 = new System.Windows.Forms.NumericUpDown();
             this.pufferP2 = new System.Windows.Forms.NumericUpDown();
@@ -807,6 +808,7 @@
             // tab_xml
             // 
             this.tab_xml.BackColor = System.Drawing.Color.Transparent;
+            this.tab_xml.Controls.Add(this.label273);
             this.tab_xml.Controls.Add(this.prognose1);
             this.tab_xml.Controls.Add(this.pufferP3);
             this.tab_xml.Controls.Add(this.pufferP2);
@@ -838,6 +840,12 @@
             resources.ApplyResources(this.tab_xml, "tab_xml");
             this.tab_xml.Name = "tab_xml";
             this.helpProvider1.SetShowHelp(this.tab_xml, ((bool)(resources.GetObject("tab_xml.ShowHelp"))));
+            // 
+            // label273
+            // 
+            resources.ApplyResources(this.label273, "label273");
+            this.label273.Cursor = System.Windows.Forms.Cursors.Default;
+            this.label273.Name = "label273";
             // 
             // prognose1
             // 
@@ -939,6 +947,7 @@
             this.helpProvider1.SetShowHelp(this.save, ((bool)(resources.GetObject("save.ShowHelp"))));
             this.save.TabStop = false;
             this.toolTip.SetToolTip(this.save, resources.GetString("save.ToolTip"));
+            this.save.Click += new System.EventHandler(this.save_Click);
             // 
             // xmlOffenOK
             // 
@@ -7189,6 +7198,7 @@
             this.helpProvider1.SetHelpString(this, resources.GetString("$this.HelpString"));
             this.Name = "Fahrrad";
             this.helpProvider1.SetShowHelp(this, ((bool)(resources.GetObject("$this.ShowHelp"))));
+            this.Load += new System.EventHandler(this.Fahrrad_Load);
             this.tabs.ResumeLayout(false);
             this.tab_xml.ResumeLayout(false);
             this.tab_xml.PerformLayout();
@@ -7964,6 +7974,7 @@
         private System.Windows.Forms.Button button_nav_4;
         private System.Windows.Forms.Button button_nav_3;
         private System.Windows.Forms.Button button_nav_2;
+        private System.Windows.Forms.Label label273;
     }
 }
 
