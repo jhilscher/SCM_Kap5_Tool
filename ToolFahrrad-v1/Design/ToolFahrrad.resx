@@ -117,116 +117,6 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="&gt;&gt;tab_xml.Name" xml:space="preserve">
-    <value>tab_xml</value>
-  </data>
-  <data name="&gt;&gt;tab_xml.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tab_xml.Parent" xml:space="preserve">
-    <value>tabs</value>
-  </data>
-  <data name="&gt;&gt;tab_xml.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;tab_produktion.Name" xml:space="preserve">
-    <value>tab_produktion</value>
-  </data>
-  <data name="&gt;&gt;tab_produktion.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tab_produktion.Parent" xml:space="preserve">
-    <value>tabs</value>
-  </data>
-  <data name="&gt;&gt;tab_produktion.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;tab_arbeitzeit.Name" xml:space="preserve">
-    <value>tab_arbeitzeit</value>
-  </data>
-  <data name="&gt;&gt;tab_arbeitzeit.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tab_arbeitzeit.Parent" xml:space="preserve">
-    <value>tabs</value>
-  </data>
-  <data name="&gt;&gt;tab_arbeitzeit.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;tab_bestellverwaltung.Name" xml:space="preserve">
-    <value>tab_bestellverwaltung</value>
-  </data>
-  <data name="&gt;&gt;tab_bestellverwaltung.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tab_bestellverwaltung.Parent" xml:space="preserve">
-    <value>tabs</value>
-  </data>
-  <data name="&gt;&gt;tab_bestellverwaltung.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;xmlOutput.Name" xml:space="preserve">
-    <value>xmlOutput</value>
-  </data>
-  <data name="&gt;&gt;xmlOutput.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;xmlOutput.Parent" xml:space="preserve">
-    <value>tabs</value>
-  </data>
-  <data name="&gt;&gt;xmlOutput.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;tab_beenden.Name" xml:space="preserve">
-    <value>tab_beenden</value>
-  </data>
-  <data name="&gt;&gt;tab_beenden.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tab_beenden.Parent" xml:space="preserve">
-    <value>tabs</value>
-  </data>
-  <data name="&gt;&gt;tab_beenden.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="&gt;&gt;tab_statistik.Name" xml:space="preserve">
-    <value>tab_statistik</value>
-  </data>
-  <data name="&gt;&gt;tab_statistik.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tab_statistik.Parent" xml:space="preserve">
-    <value>tabs</value>
-  </data>
-  <data name="&gt;&gt;tab_statistik.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="tabs.Location" type="System.Drawing.Point, System.Drawing">
-    <value>117, 27</value>
-  </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="tabs.ShowHelp" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="tabs.Size" type="System.Drawing.Size, System.Drawing">
-    <value>891, 402</value>
-  </data>
-  <data name="tabs.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;tabs.Name" xml:space="preserve">
-    <value>tabs</value>
-  </data>
-  <data name="&gt;&gt;tabs.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabControl, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tabs.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;tabs.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
   <data name="&gt;&gt;labelDragDrop.Name" xml:space="preserve">
     <value>labelDragDrop</value>
   </data>
@@ -575,6 +465,7 @@
   <data name="&gt;&gt;titlePrognose.ZOrder" xml:space="preserve">
     <value>28</value>
   </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="tab_xml.Location" type="System.Drawing.Point, System.Drawing">
     <value>4, 22</value>
   </data>
@@ -582,6 +473,7 @@
   <data name="tab_xml.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 3, 3, 3</value>
   </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="tab_xml.ShowHelp" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -604,6 +496,768 @@
     <value>tabs</value>
   </data>
   <data name="&gt;&gt;tab_xml.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;tab1.Name" xml:space="preserve">
+    <value>tab1</value>
+  </data>
+  <data name="&gt;&gt;tab1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabControl, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tab1.Parent" xml:space="preserve">
+    <value>tab_produktion</value>
+  </data>
+  <data name="&gt;&gt;tab1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="tab_produktion.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 22</value>
+  </data>
+  <data name="tab_produktion.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
+  </data>
+  <data name="tab_produktion.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="tab_produktion.Size" type="System.Drawing.Size, System.Drawing">
+    <value>883, 376</value>
+  </data>
+  <data name="tab_produktion.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="tab_produktion.Text" xml:space="preserve">
+    <value>Disposition Eigenfertigung</value>
+  </data>
+  <data name="&gt;&gt;tab_produktion.Name" xml:space="preserve">
+    <value>tab_produktion</value>
+  </data>
+  <data name="&gt;&gt;tab_produktion.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tab_produktion.Parent" xml:space="preserve">
+    <value>tabs</value>
+  </data>
+  <data name="&gt;&gt;tab_produktion.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;arbPlatzAusfueren.Name" xml:space="preserve">
+    <value>arbPlatzAusfueren</value>
+  </data>
+  <data name="&gt;&gt;arbPlatzAusfueren.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;arbPlatzAusfueren.Parent" xml:space="preserve">
+    <value>tab_arbeitzeit</value>
+  </data>
+  <data name="&gt;&gt;arbPlatzAusfueren.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;DataGridViewAP.Name" xml:space="preserve">
+    <value>DataGridViewAP</value>
+  </data>
+  <data name="&gt;&gt;DataGridViewAP.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;DataGridViewAP.Parent" xml:space="preserve">
+    <value>tab_arbeitzeit</value>
+  </data>
+  <data name="&gt;&gt;DataGridViewAP.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="tab_arbeitzeit.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 22</value>
+  </data>
+  <data name="tab_arbeitzeit.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
+  </data>
+  <data name="tab_arbeitzeit.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="tab_arbeitzeit.Size" type="System.Drawing.Size, System.Drawing">
+    <value>883, 376</value>
+  </data>
+  <data name="tab_arbeitzeit.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="tab_arbeitzeit.Text" xml:space="preserve">
+    <value>Kapazitätsplan</value>
+  </data>
+  <data name="&gt;&gt;tab_arbeitzeit.Name" xml:space="preserve">
+    <value>tab_arbeitzeit</value>
+  </data>
+  <data name="&gt;&gt;tab_arbeitzeit.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tab_arbeitzeit.Parent" xml:space="preserve">
+    <value>tabs</value>
+  </data>
+  <data name="&gt;&gt;tab_arbeitzeit.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;tab2.Name" xml:space="preserve">
+    <value>tab2</value>
+  </data>
+  <data name="&gt;&gt;tab2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabControl, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tab2.Parent" xml:space="preserve">
+    <value>tab_bestellverwaltung</value>
+  </data>
+  <data name="&gt;&gt;tab2.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="tab_bestellverwaltung.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 22</value>
+  </data>
+  <data name="tab_bestellverwaltung.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
+  </data>
+  <data name="tab_bestellverwaltung.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="tab_bestellverwaltung.Size" type="System.Drawing.Size, System.Drawing">
+    <value>883, 376</value>
+  </data>
+  <data name="tab_bestellverwaltung.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="tab_bestellverwaltung.Text" xml:space="preserve">
+    <value>Bestellverwaltung</value>
+  </data>
+  <data name="&gt;&gt;tab_bestellverwaltung.Name" xml:space="preserve">
+    <value>tab_bestellverwaltung</value>
+  </data>
+  <data name="&gt;&gt;tab_bestellverwaltung.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tab_bestellverwaltung.Parent" xml:space="preserve">
+    <value>tabs</value>
+  </data>
+  <data name="&gt;&gt;tab_bestellverwaltung.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="lbl_eigene_Angebote.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lbl_eigene_Angebote.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lbl_eigene_Angebote.Location" type="System.Drawing.Point, System.Drawing">
+    <value>504, 6</value>
+  </data>
+  <metadata name="helpProvider1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>619, 19</value>
+  </metadata>
+  <data name="helpProvider1.HelpNamespace" xml:space="preserve">
+    <value>E:\Server\Projecte C#\GIT\tool2\ToolFahrrad-v1\bin\Debug\chm\Benutzerhandbuch.chm</value>
+  </data>
+  <data name="lbl_eigene_Angebote.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lbl_eigene_Angebote.Size" type="System.Drawing.Size, System.Drawing">
+    <value>88, 13</value>
+  </data>
+  <data name="lbl_eigene_Angebote.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="lbl_eigene_Angebote.Text" xml:space="preserve">
+    <value>eigene Angebote</value>
+  </data>
+  <data name="&gt;&gt;lbl_eigene_Angebote.Name" xml:space="preserve">
+    <value>lbl_eigene_Angebote</value>
+  </data>
+  <data name="&gt;&gt;lbl_eigene_Angebote.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lbl_eigene_Angebote.Parent" xml:space="preserve">
+    <value>tab_marktplatz</value>
+  </data>
+  <data name="&gt;&gt;lbl_eigene_Angebote.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="lbl_eigene_Gesuche.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lbl_eigene_Gesuche.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lbl_eigene_Gesuche.Location" type="System.Drawing.Point, System.Drawing">
+    <value>504, 196</value>
+  </data>
+  <data name="lbl_eigene_Gesuche.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lbl_eigene_Gesuche.Size" type="System.Drawing.Size, System.Drawing">
+    <value>85, 13</value>
+  </data>
+  <data name="lbl_eigene_Gesuche.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="lbl_eigene_Gesuche.Text" xml:space="preserve">
+    <value>eigene Gesuche</value>
+  </data>
+  <data name="&gt;&gt;lbl_eigene_Gesuche.Name" xml:space="preserve">
+    <value>lbl_eigene_Gesuche</value>
+  </data>
+  <data name="&gt;&gt;lbl_eigene_Gesuche.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lbl_eigene_Gesuche.Parent" xml:space="preserve">
+    <value>tab_marktplatz</value>
+  </data>
+  <data name="&gt;&gt;lbl_eigene_Gesuche.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="lbl_Gesuche.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lbl_Gesuche.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lbl_Gesuche.Location" type="System.Drawing.Point, System.Drawing">
+    <value>251, 6</value>
+  </data>
+  <data name="lbl_Gesuche.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lbl_Gesuche.Size" type="System.Drawing.Size, System.Drawing">
+    <value>50, 13</value>
+  </data>
+  <data name="lbl_Gesuche.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="lbl_Gesuche.Text" xml:space="preserve">
+    <value>Gesuche</value>
+  </data>
+  <data name="&gt;&gt;lbl_Gesuche.Name" xml:space="preserve">
+    <value>lbl_Gesuche</value>
+  </data>
+  <data name="&gt;&gt;lbl_Gesuche.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lbl_Gesuche.Parent" xml:space="preserve">
+    <value>tab_marktplatz</value>
+  </data>
+  <data name="&gt;&gt;lbl_Gesuche.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="lbl_Angebote.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lbl_Angebote.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 6</value>
+  </data>
+  <data name="lbl_Angebote.Size" type="System.Drawing.Size, System.Drawing">
+    <value>53, 13</value>
+  </data>
+  <data name="lbl_Angebote.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="lbl_Angebote.Text" xml:space="preserve">
+    <value>Angebote</value>
+  </data>
+  <data name="&gt;&gt;lbl_Angebote.Name" xml:space="preserve">
+    <value>lbl_Angebote</value>
+  </data>
+  <data name="&gt;&gt;lbl_Angebote.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lbl_Angebote.Parent" xml:space="preserve">
+    <value>tab_marktplatz</value>
+  </data>
+  <data name="&gt;&gt;lbl_Angebote.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <metadata name="dataGridViewTextBoxColumn42.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="dataGridViewTextBoxColumn42.HeaderText" xml:space="preserve">
+    <value>Kunde</value>
+  </data>
+  <data name="dataGridViewTextBoxColumn42.Width" type="System.Int32, mscorlib">
+    <value>75</value>
+  </data>
+  <metadata name="dataGridViewTextBoxColumn43.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="dataGridViewTextBoxColumn43.HeaderText" xml:space="preserve">
+    <value>Artikel</value>
+  </data>
+  <data name="dataGridViewTextBoxColumn43.Width" type="System.Int32, mscorlib">
+    <value>50</value>
+  </data>
+  <metadata name="dataGridViewTextBoxColumn44.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="dataGridViewTextBoxColumn44.HeaderText" xml:space="preserve">
+    <value>Menge</value>
+  </data>
+  <data name="dataGridViewTextBoxColumn44.Width" type="System.Int32, mscorlib">
+    <value>50</value>
+  </data>
+  <metadata name="dataGridViewTextBoxColumn45.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="dataGridViewTextBoxColumn45.HeaderText" xml:space="preserve">
+    <value>Preis</value>
+  </data>
+  <data name="dataGridViewTextBoxColumn45.Width" type="System.Int32, mscorlib">
+    <value>65</value>
+  </data>
+  <data name="dta_e_Gesuche.Location" type="System.Drawing.Point, System.Drawing">
+    <value>507, 212</value>
+  </data>
+  <data name="dta_e_Gesuche.ScrollBars" type="System.Windows.Forms.ScrollBars, System.Windows.Forms">
+    <value>Vertical</value>
+  </data>
+  <data name="dta_e_Gesuche.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="dta_e_Gesuche.Size" type="System.Drawing.Size, System.Drawing">
+    <value>245, 161</value>
+  </data>
+  <data name="dta_e_Gesuche.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;dta_e_Gesuche.Name" xml:space="preserve">
+    <value>dta_e_Gesuche</value>
+  </data>
+  <data name="&gt;&gt;dta_e_Gesuche.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dta_e_Gesuche.Parent" xml:space="preserve">
+    <value>tab_marktplatz</value>
+  </data>
+  <data name="&gt;&gt;dta_e_Gesuche.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <metadata name="dataGridViewTextBoxColumn38.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="dataGridViewTextBoxColumn38.HeaderText" xml:space="preserve">
+    <value>Verkäufer</value>
+  </data>
+  <data name="dataGridViewTextBoxColumn38.Width" type="System.Int32, mscorlib">
+    <value>75</value>
+  </data>
+  <metadata name="dataGridViewTextBoxColumn39.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="dataGridViewTextBoxColumn39.HeaderText" xml:space="preserve">
+    <value>Artikel</value>
+  </data>
+  <data name="dataGridViewTextBoxColumn39.Width" type="System.Int32, mscorlib">
+    <value>50</value>
+  </data>
+  <metadata name="dataGridViewTextBoxColumn40.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="dataGridViewTextBoxColumn40.HeaderText" xml:space="preserve">
+    <value>Menge</value>
+  </data>
+  <data name="dataGridViewTextBoxColumn40.Width" type="System.Int32, mscorlib">
+    <value>50</value>
+  </data>
+  <metadata name="dataGridViewTextBoxColumn41.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="dataGridViewTextBoxColumn41.HeaderText" xml:space="preserve">
+    <value>Preis</value>
+  </data>
+  <data name="dataGridViewTextBoxColumn41.Width" type="System.Int32, mscorlib">
+    <value>65</value>
+  </data>
+  <data name="dta_e_Angebote.Location" type="System.Drawing.Point, System.Drawing">
+    <value>507, 22</value>
+  </data>
+  <data name="dta_e_Angebote.ScrollBars" type="System.Windows.Forms.ScrollBars, System.Windows.Forms">
+    <value>Vertical</value>
+  </data>
+  <data name="dta_e_Angebote.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="dta_e_Angebote.Size" type="System.Drawing.Size, System.Drawing">
+    <value>245, 161</value>
+  </data>
+  <data name="dta_e_Angebote.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;dta_e_Angebote.Name" xml:space="preserve">
+    <value>dta_e_Angebote</value>
+  </data>
+  <data name="&gt;&gt;dta_e_Angebote.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dta_e_Angebote.Parent" xml:space="preserve">
+    <value>tab_marktplatz</value>
+  </data>
+  <data name="&gt;&gt;dta_e_Angebote.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <metadata name="dataGridViewTextBoxColumn34.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="dataGridViewTextBoxColumn34.HeaderText" xml:space="preserve">
+    <value>Kunde</value>
+  </data>
+  <data name="dataGridViewTextBoxColumn34.Width" type="System.Int32, mscorlib">
+    <value>75</value>
+  </data>
+  <metadata name="dataGridViewTextBoxColumn35.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="dataGridViewTextBoxColumn35.HeaderText" xml:space="preserve">
+    <value>Artikel</value>
+  </data>
+  <data name="dataGridViewTextBoxColumn35.Width" type="System.Int32, mscorlib">
+    <value>50</value>
+  </data>
+  <metadata name="dataGridViewTextBoxColumn36.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="dataGridViewTextBoxColumn36.HeaderText" xml:space="preserve">
+    <value>Menge</value>
+  </data>
+  <data name="dataGridViewTextBoxColumn36.Width" type="System.Int32, mscorlib">
+    <value>50</value>
+  </data>
+  <metadata name="dataGridViewTextBoxColumn37.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="dataGridViewTextBoxColumn37.HeaderText" xml:space="preserve">
+    <value>Preis</value>
+  </data>
+  <data name="dataGridViewTextBoxColumn37.Width" type="System.Int32, mscorlib">
+    <value>65</value>
+  </data>
+  <data name="dta_Gesuche.Location" type="System.Drawing.Point, System.Drawing">
+    <value>254, 22</value>
+  </data>
+  <data name="dta_Gesuche.ScrollBars" type="System.Windows.Forms.ScrollBars, System.Windows.Forms">
+    <value>Vertical</value>
+  </data>
+  <data name="dta_Gesuche.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="dta_Gesuche.Size" type="System.Drawing.Size, System.Drawing">
+    <value>247, 351</value>
+  </data>
+  <data name="dta_Gesuche.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;dta_Gesuche.Name" xml:space="preserve">
+    <value>dta_Gesuche</value>
+  </data>
+  <data name="&gt;&gt;dta_Gesuche.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dta_Gesuche.Parent" xml:space="preserve">
+    <value>tab_marktplatz</value>
+  </data>
+  <data name="&gt;&gt;dta_Gesuche.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <metadata name="verkäufer.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="verkäufer.HeaderText" xml:space="preserve">
+    <value>Verkäufer</value>
+  </data>
+  <data name="verkäufer.Width" type="System.Int32, mscorlib">
+    <value>75</value>
+  </data>
+  <metadata name="artikel.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="artikel.HeaderText" xml:space="preserve">
+    <value>Artikel</value>
+  </data>
+  <data name="artikel.Width" type="System.Int32, mscorlib">
+    <value>50</value>
+  </data>
+  <metadata name="angebot_menge.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="angebot_menge.HeaderText" xml:space="preserve">
+    <value>Menge</value>
+  </data>
+  <data name="angebot_menge.Width" type="System.Int32, mscorlib">
+    <value>50</value>
+  </data>
+  <metadata name="preis.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="preis.HeaderText" xml:space="preserve">
+    <value>Preis</value>
+  </data>
+  <data name="preis.Width" type="System.Int32, mscorlib">
+    <value>65</value>
+  </data>
+  <data name="MarketPlaceGrid.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 22</value>
+  </data>
+  <data name="MarketPlaceGrid.ScrollBars" type="System.Windows.Forms.ScrollBars, System.Windows.Forms">
+    <value>Vertical</value>
+  </data>
+  <data name="MarketPlaceGrid.Size" type="System.Drawing.Size, System.Drawing">
+    <value>245, 351</value>
+  </data>
+  <data name="MarketPlaceGrid.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;MarketPlaceGrid.Name" xml:space="preserve">
+    <value>MarketPlaceGrid</value>
+  </data>
+  <data name="&gt;&gt;MarketPlaceGrid.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;MarketPlaceGrid.Parent" xml:space="preserve">
+    <value>tab_marktplatz</value>
+  </data>
+  <data name="&gt;&gt;MarketPlaceGrid.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="tab_marktplatz.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 22</value>
+  </data>
+  <data name="tab_marktplatz.Size" type="System.Drawing.Size, System.Drawing">
+    <value>883, 376</value>
+  </data>
+  <data name="tab_marktplatz.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="tab_marktplatz.Text" xml:space="preserve">
+    <value>Marktplatz</value>
+  </data>
+  <data name="&gt;&gt;tab_marktplatz.Name" xml:space="preserve">
+    <value>tab_marktplatz</value>
+  </data>
+  <data name="&gt;&gt;tab_marktplatz.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tab_marktplatz.Parent" xml:space="preserve">
+    <value>tabs</value>
+  </data>
+  <data name="&gt;&gt;tab_marktplatz.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;panelXMLerstellen.Name" xml:space="preserve">
+    <value>panelXMLerstellen</value>
+  </data>
+  <data name="&gt;&gt;panelXMLerstellen.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panelXMLerstellen.Parent" xml:space="preserve">
+    <value>xmlOutput</value>
+  </data>
+  <data name="&gt;&gt;panelXMLerstellen.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="xmlOutput.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 22</value>
+  </data>
+  <data name="xmlOutput.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
+  </data>
+  <data name="xmlOutput.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="xmlOutput.Size" type="System.Drawing.Size, System.Drawing">
+    <value>883, 376</value>
+  </data>
+  <data name="xmlOutput.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="xmlOutput.Text" xml:space="preserve">
+    <value>XML erstellen</value>
+  </data>
+  <data name="&gt;&gt;xmlOutput.Name" xml:space="preserve">
+    <value>xmlOutput</value>
+  </data>
+  <data name="&gt;&gt;xmlOutput.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;xmlOutput.Parent" xml:space="preserve">
+    <value>tabs</value>
+  </data>
+  <data name="&gt;&gt;xmlOutput.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;header_xmlExport.Name" xml:space="preserve">
+    <value>header_xmlExport</value>
+  </data>
+  <data name="&gt;&gt;header_xmlExport.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;header_xmlExport.Parent" xml:space="preserve">
+    <value>tab_beenden</value>
+  </data>
+  <data name="&gt;&gt;header_xmlExport.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;button_exportXml.Name" xml:space="preserve">
+    <value>button_exportXml</value>
+  </data>
+  <data name="&gt;&gt;button_exportXml.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;button_exportXml.Parent" xml:space="preserve">
+    <value>tab_beenden</value>
+  </data>
+  <data name="&gt;&gt;button_exportXml.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;TextBox_xmlOutput.Name" xml:space="preserve">
+    <value>TextBox_xmlOutput</value>
+  </data>
+  <data name="&gt;&gt;TextBox_xmlOutput.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RichTextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;TextBox_xmlOutput.Parent" xml:space="preserve">
+    <value>tab_beenden</value>
+  </data>
+  <data name="&gt;&gt;TextBox_xmlOutput.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="tab_beenden.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 22</value>
+  </data>
+  <data name="tab_beenden.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
+  </data>
+  <data name="tab_beenden.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="tab_beenden.Size" type="System.Drawing.Size, System.Drawing">
+    <value>883, 376</value>
+  </data>
+  <data name="tab_beenden.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="tab_beenden.Text" xml:space="preserve">
+    <value>Bestellung beenden</value>
+  </data>
+  <data name="&gt;&gt;tab_beenden.Name" xml:space="preserve">
+    <value>tab_beenden</value>
+  </data>
+  <data name="&gt;&gt;tab_beenden.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tab_beenden.Parent" xml:space="preserve">
+    <value>tabs</value>
+  </data>
+  <data name="&gt;&gt;tab_beenden.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;header_statistik.Name" xml:space="preserve">
+    <value>header_statistik</value>
+  </data>
+  <data name="&gt;&gt;header_statistik.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;header_statistik.Parent" xml:space="preserve">
+    <value>tab_statistik</value>
+  </data>
+  <data name="&gt;&gt;header_statistik.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;chart_statistik.Name" xml:space="preserve">
+    <value>chart_statistik</value>
+  </data>
+  <data name="&gt;&gt;chart_statistik.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataVisualization.Charting.Chart, System.Windows.Forms.DataVisualization, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35</value>
+  </data>
+  <data name="&gt;&gt;chart_statistik.Parent" xml:space="preserve">
+    <value>tab_statistik</value>
+  </data>
+  <data name="&gt;&gt;chart_statistik.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="tab_statistik.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 22</value>
+  </data>
+  <data name="tab_statistik.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
+  </data>
+  <data name="tab_statistik.Size" type="System.Drawing.Size, System.Drawing">
+    <value>883, 376</value>
+  </data>
+  <data name="tab_statistik.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="tab_statistik.Text" xml:space="preserve">
+    <value>Statistik</value>
+  </data>
+  <data name="&gt;&gt;tab_statistik.Name" xml:space="preserve">
+    <value>tab_statistik</value>
+  </data>
+  <data name="&gt;&gt;tab_statistik.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tab_statistik.Parent" xml:space="preserve">
+    <value>tabs</value>
+  </data>
+  <data name="&gt;&gt;tab_statistik.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="tabs.Location" type="System.Drawing.Point, System.Drawing">
+    <value>117, 27</value>
+  </data>
+  <data name="tabs.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="tabs.Size" type="System.Drawing.Size, System.Drawing">
+    <value>891, 402</value>
+  </data>
+  <data name="tabs.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;tabs.Name" xml:space="preserve">
+    <value>tabs</value>
+  </data>
+  <data name="&gt;&gt;tabs.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabControl, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tabs.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;tabs.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="labelDragDrop.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labelDragDrop.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 24pt</value>
+  </data>
+  <data name="labelDragDrop.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="labelDragDrop.Location" type="System.Drawing.Point, System.Drawing">
+    <value>590, 257</value>
+  </data>
+  <data name="labelDragDrop.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labelDragDrop.Size" type="System.Drawing.Size, System.Drawing">
+    <value>229, 37</value>
+  </data>
+  <data name="labelDragDrop.TabIndex" type="System.Int32, mscorlib">
+    <value>57</value>
+  </data>
+  <data name="labelDragDrop.Text" xml:space="preserve">
+    <value>Drag and Drop</value>
+  </data>
+  <data name="&gt;&gt;labelDragDrop.Name" xml:space="preserve">
+    <value>labelDragDrop</value>
+  </data>
+  <data name="&gt;&gt;labelDragDrop.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelDragDrop.Parent" xml:space="preserve">
+    <value>tab_xml</value>
+  </data>
+  <data name="&gt;&gt;labelDragDrop.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <data name="prognose1.AutoSize" type="System.Boolean, mscorlib">
@@ -1752,48 +2406,6 @@
   </data>
   <data name="&gt;&gt;titlePrognose.ZOrder" xml:space="preserve">
     <value>28</value>
-  </data>
-  <data name="&gt;&gt;tab1.Name" xml:space="preserve">
-    <value>tab1</value>
-  </data>
-  <data name="&gt;&gt;tab1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabControl, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tab1.Parent" xml:space="preserve">
-    <value>tab_produktion</value>
-  </data>
-  <data name="&gt;&gt;tab1.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="tab_produktion.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 22</value>
-  </data>
-  <data name="tab_produktion.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 3, 3, 3</value>
-  </data>
-  <data name="tab_produktion.ShowHelp" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="tab_produktion.Size" type="System.Drawing.Size, System.Drawing">
-    <value>883, 376</value>
-  </data>
-  <data name="tab_produktion.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="tab_produktion.Text" xml:space="preserve">
-    <value>Disposition Eigenfertigung</value>
-  </data>
-  <data name="&gt;&gt;tab_produktion.Name" xml:space="preserve">
-    <value>tab_produktion</value>
-  </data>
-  <data name="&gt;&gt;tab_produktion.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tab_produktion.Parent" xml:space="preserve">
-    <value>tabs</value>
-  </data>
-  <data name="&gt;&gt;tab_produktion.ZOrder" xml:space="preserve">
-    <value>1</value>
   </data>
   <data name="&gt;&gt;tab_P1.Name" xml:space="preserve">
     <value>tab_P1</value>
@@ -25839,60 +26451,6 @@
   <data name="dataGridViewTextBoxColumn28.Width" type="System.Int32, mscorlib">
     <value>50</value>
   </data>
-  <data name="&gt;&gt;arbPlatzAusfueren.Name" xml:space="preserve">
-    <value>arbPlatzAusfueren</value>
-  </data>
-  <data name="&gt;&gt;arbPlatzAusfueren.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;arbPlatzAusfueren.Parent" xml:space="preserve">
-    <value>tab_arbeitzeit</value>
-  </data>
-  <data name="&gt;&gt;arbPlatzAusfueren.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;DataGridViewAP.Name" xml:space="preserve">
-    <value>DataGridViewAP</value>
-  </data>
-  <data name="&gt;&gt;DataGridViewAP.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;DataGridViewAP.Parent" xml:space="preserve">
-    <value>tab_arbeitzeit</value>
-  </data>
-  <data name="&gt;&gt;DataGridViewAP.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="tab_arbeitzeit.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 22</value>
-  </data>
-  <data name="tab_arbeitzeit.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 3, 3, 3</value>
-  </data>
-  <data name="tab_arbeitzeit.ShowHelp" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="tab_arbeitzeit.Size" type="System.Drawing.Size, System.Drawing">
-    <value>883, 376</value>
-  </data>
-  <data name="tab_arbeitzeit.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="tab_arbeitzeit.Text" xml:space="preserve">
-    <value>Kapazitätsplan</value>
-  </data>
-  <data name="&gt;&gt;tab_arbeitzeit.Name" xml:space="preserve">
-    <value>tab_arbeitzeit</value>
-  </data>
-  <data name="&gt;&gt;tab_arbeitzeit.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tab_arbeitzeit.Parent" xml:space="preserve">
-    <value>tabs</value>
-  </data>
-  <data name="&gt;&gt;tab_arbeitzeit.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
   <data name="arbPlatzAusfueren.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29m
@@ -26109,48 +26667,6 @@
   </data>
   <data name="ueber.Width" type="System.Int32, mscorlib">
     <value>19</value>
-  </data>
-  <data name="&gt;&gt;tab2.Name" xml:space="preserve">
-    <value>tab2</value>
-  </data>
-  <data name="&gt;&gt;tab2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabControl, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tab2.Parent" xml:space="preserve">
-    <value>tab_bestellverwaltung</value>
-  </data>
-  <data name="&gt;&gt;tab2.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="tab_bestellverwaltung.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 22</value>
-  </data>
-  <data name="tab_bestellverwaltung.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 3, 3, 3</value>
-  </data>
-  <data name="tab_bestellverwaltung.ShowHelp" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="tab_bestellverwaltung.Size" type="System.Drawing.Size, System.Drawing">
-    <value>883, 376</value>
-  </data>
-  <data name="tab_bestellverwaltung.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="tab_bestellverwaltung.Text" xml:space="preserve">
-    <value>Bestellverwaltung</value>
-  </data>
-  <data name="&gt;&gt;tab_bestellverwaltung.Name" xml:space="preserve">
-    <value>tab_bestellverwaltung</value>
-  </data>
-  <data name="&gt;&gt;tab_bestellverwaltung.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tab_bestellverwaltung.Parent" xml:space="preserve">
-    <value>tabs</value>
-  </data>
-  <data name="&gt;&gt;tab_bestellverwaltung.ZOrder" xml:space="preserve">
-    <value>3</value>
   </data>
   <data name="&gt;&gt;tabPage2.Name" xml:space="preserve">
     <value>tabPage2</value>
@@ -27164,48 +27680,6 @@
   <data name="del.Width" type="System.Int32, mscorlib">
     <value>60</value>
   </data>
-  <data name="&gt;&gt;panelXMLerstellen.Name" xml:space="preserve">
-    <value>panelXMLerstellen</value>
-  </data>
-  <data name="&gt;&gt;panelXMLerstellen.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;panelXMLerstellen.Parent" xml:space="preserve">
-    <value>xmlOutput</value>
-  </data>
-  <data name="&gt;&gt;panelXMLerstellen.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="xmlOutput.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 22</value>
-  </data>
-  <data name="xmlOutput.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 3, 3, 3</value>
-  </data>
-  <data name="xmlOutput.ShowHelp" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="xmlOutput.Size" type="System.Drawing.Size, System.Drawing">
-    <value>883, 376</value>
-  </data>
-  <data name="xmlOutput.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
-  <data name="xmlOutput.Text" xml:space="preserve">
-    <value>XML erstellen</value>
-  </data>
-  <data name="&gt;&gt;xmlOutput.Name" xml:space="preserve">
-    <value>xmlOutput</value>
-  </data>
-  <data name="&gt;&gt;xmlOutput.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;xmlOutput.Parent" xml:space="preserve">
-    <value>tabs</value>
-  </data>
-  <data name="&gt;&gt;xmlOutput.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
   <data name="&gt;&gt;dataGridViewPrAuftraege.Name" xml:space="preserve">
     <value>dataGridViewPrAuftraege</value>
   </data>
@@ -27854,72 +28328,6 @@
   <data name="&gt;&gt;label270.ZOrder" xml:space="preserve">
     <value>9</value>
   </data>
-  <data name="&gt;&gt;header_xmlExport.Name" xml:space="preserve">
-    <value>header_xmlExport</value>
-  </data>
-  <data name="&gt;&gt;header_xmlExport.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;header_xmlExport.Parent" xml:space="preserve">
-    <value>tab_beenden</value>
-  </data>
-  <data name="&gt;&gt;header_xmlExport.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;button_exportXml.Name" xml:space="preserve">
-    <value>button_exportXml</value>
-  </data>
-  <data name="&gt;&gt;button_exportXml.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;button_exportXml.Parent" xml:space="preserve">
-    <value>tab_beenden</value>
-  </data>
-  <data name="&gt;&gt;button_exportXml.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;TextBox_xmlOutput.Name" xml:space="preserve">
-    <value>TextBox_xmlOutput</value>
-  </data>
-  <data name="&gt;&gt;TextBox_xmlOutput.Type" xml:space="preserve">
-    <value>System.Windows.Forms.RichTextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;TextBox_xmlOutput.Parent" xml:space="preserve">
-    <value>tab_beenden</value>
-  </data>
-  <data name="&gt;&gt;TextBox_xmlOutput.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="tab_beenden.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 22</value>
-  </data>
-  <data name="tab_beenden.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 3, 3, 3</value>
-  </data>
-  <data name="tab_beenden.ShowHelp" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="tab_beenden.Size" type="System.Drawing.Size, System.Drawing">
-    <value>883, 376</value>
-  </data>
-  <data name="tab_beenden.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
-  <data name="tab_beenden.Text" xml:space="preserve">
-    <value>Bestellung beenden</value>
-  </data>
-  <data name="&gt;&gt;tab_beenden.Name" xml:space="preserve">
-    <value>tab_beenden</value>
-  </data>
-  <data name="&gt;&gt;tab_beenden.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tab_beenden.Parent" xml:space="preserve">
-    <value>tabs</value>
-  </data>
-  <data name="&gt;&gt;tab_beenden.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
   <data name="header_xmlExport.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -28006,57 +28414,6 @@
   </data>
   <data name="&gt;&gt;TextBox_xmlOutput.ZOrder" xml:space="preserve">
     <value>2</value>
-  </data>
-  <data name="&gt;&gt;header_statistik.Name" xml:space="preserve">
-    <value>header_statistik</value>
-  </data>
-  <data name="&gt;&gt;header_statistik.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;header_statistik.Parent" xml:space="preserve">
-    <value>tab_statistik</value>
-  </data>
-  <data name="&gt;&gt;header_statistik.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;chart_statistik.Name" xml:space="preserve">
-    <value>chart_statistik</value>
-  </data>
-  <data name="&gt;&gt;chart_statistik.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataVisualization.Charting.Chart, System.Windows.Forms.DataVisualization, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35</value>
-  </data>
-  <data name="&gt;&gt;chart_statistik.Parent" xml:space="preserve">
-    <value>tab_statistik</value>
-  </data>
-  <data name="&gt;&gt;chart_statistik.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="tab_statistik.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 22</value>
-  </data>
-  <data name="tab_statistik.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 3, 3, 3</value>
-  </data>
-  <data name="tab_statistik.Size" type="System.Drawing.Size, System.Drawing">
-    <value>883, 376</value>
-  </data>
-  <data name="tab_statistik.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
-  </data>
-  <data name="tab_statistik.Text" xml:space="preserve">
-    <value>Statistik</value>
-  </data>
-  <data name="&gt;&gt;tab_statistik.Name" xml:space="preserve">
-    <value>tab_statistik</value>
-  </data>
-  <data name="&gt;&gt;tab_statistik.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tab_statistik.Parent" xml:space="preserve">
-    <value>tabs</value>
-  </data>
-  <data name="&gt;&gt;tab_statistik.ZOrder" xml:space="preserve">
-    <value>6</value>
   </data>
   <data name="header_statistik.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -28379,7 +28736,7 @@
         AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
         LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
         ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAABS
-        CwAAAk1TRnQBSQFMAgEBAwEAAcgBAwHIAQMBEAEAARABAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
+        CwAAAk1TRnQBSQFMAgEBAwEAAdgBAwHYAQMBEAEAARABAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
         AwABQAMAARADAAEBAQABCAYAAQQYAAGAAgABgAMAAoABAAGAAwABgAEAAYABAAKAAgADwAEAAcAB3AHA
         AQAB8AHKAaYBAAEzBQABMwEAATMBAAEzAQACMwIAAxYBAAMcAQADIgEAAykBAANVAQADTQEAA0IBAAM5
         AQABgAF8Af8BAAJQAf8BAAGTAQAB1gEAAf8B7AHMAQABxgHWAe8BAAHWAucBAAGQAakBrQIAAf8BMwMA
@@ -28429,12 +28786,6 @@
         AQMCAAGAAQMBgAEDAYABAwIAAYABAwGAAQMBgAEDAwABAQEAAQEBAAEBAwABAQEAAQEBAAEBAwABAQEA
         AQEBAAEBAgAB4AEPAeABDwHgAQ8CAAs=
 </value>
-  </data>
-  <metadata name="helpProvider1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>619, 19</value>
-  </metadata>
-  <data name="helpProvider1.HelpNamespace" xml:space="preserve">
-    <value>E:\Server\Projecte C#\GIT\tool2\ToolFahrrad-v1\bin\Debug\chm\Benutzerhandbuch.chm</value>
   </data>
   <data name="button_nav_2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -28556,34 +28907,34 @@
   <data name="&gt;&gt;button_nav_5.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
-  <data name="button_nav_6.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="button__nav_6.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="button_nav_6.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="button__nav_6.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 240</value>
   </data>
-  <data name="button_nav_6.ShowHelp" type="System.Boolean, mscorlib">
+  <data name="button__nav_6.ShowHelp" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="button_nav_6.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="button__nav_6.Size" type="System.Drawing.Size, System.Drawing">
     <value>111, 50</value>
   </data>
-  <data name="button_nav_6.TabIndex" type="System.Int32, mscorlib">
+  <data name="button__nav_6.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
   </data>
-  <data name="button_nav_6.Text" xml:space="preserve">
+  <data name="button__nav_6.Text" xml:space="preserve">
     <value>Marktplatz</value>
   </data>
-  <data name="&gt;&gt;button_nav_6.Name" xml:space="preserve">
-    <value>button_nav_6</value>
+  <data name="&gt;&gt;button__nav_6.Name" xml:space="preserve">
+    <value>button__nav_6</value>
   </data>
-  <data name="&gt;&gt;button_nav_6.Type" xml:space="preserve">
+  <data name="&gt;&gt;button__nav_6.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;button_nav_6.Parent" xml:space="preserve">
+  <data name="&gt;&gt;button__nav_6.Parent" xml:space="preserve">
     <value>NavPanel</value>
   </data>
-  <data name="&gt;&gt;button_nav_6.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;button__nav_6.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
   <data name="button_nav_7.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
@@ -28654,7 +29005,7 @@
         AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
         LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
         ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAAAM
-        CAAAAk1TRnQBSQFMAgEBAgEAAYgBAQGIAQEBEAEAARABAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
+        CAAAAk1TRnQBSQFMAgEBAgEAAZgBAQGYAQEBEAEAARABAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
         AwABQAMAARADAAEBAQABCAYAAQQYAAGAAgABgAMAAoABAAGAAwABgAEAAYABAAKAAgADwAEAAcAB3AHA
         AQAB8AHKAaYBAAEzBQABMwEAATMBAAEzAQACMwIAAxYBAAMcAQADIgEAAykBAANVAQADTQEAA0IBAAM5
         AQABgAF8Af8BAAJQAf8BAAGTAQAB1gEAAf8B7AHMAQABxgHWAe8BAAHWAucBAAGQAakBrQIAAf8BMwMA
@@ -28697,18 +29048,6 @@
   <metadata name="timer1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>882, 19</value>
   </metadata>
-  <data name="nav_button_1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="nav_button_1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>111, 50</value>
-  </data>
-  <data name="nav_button_1.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="nav_button_1.Text" xml:space="preserve">
-    <value>Home</value>
-  </data>
   <data name="&gt;&gt;nav_button_1.Name" xml:space="preserve">
     <value>nav_button_1</value>
   </data>
@@ -28742,41 +29081,29 @@
   <data name="&gt;&gt;NavPanel.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="labelDragDrop.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="nav_button_1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
   </data>
-  <data name="labelDragDrop.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 24pt</value>
+  <data name="nav_button_1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>111, 50</value>
   </data>
-  <data name="labelDragDrop.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="labelDragDrop.Location" type="System.Drawing.Point, System.Drawing">
-    <value>590, 257</value>
-  </data>
-  <data name="labelDragDrop.ShowHelp" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="labelDragDrop.Size" type="System.Drawing.Size, System.Drawing">
-    <value>229, 37</value>
-  </data>
-  <data name="labelDragDrop.TabIndex" type="System.Int32, mscorlib">
-    <value>57</value>
-  </data>
-  <data name="labelDragDrop.Text" xml:space="preserve">
-    <value>Drag and Drop</value>
-  </data>
-  <data name="&gt;&gt;labelDragDrop.Name" xml:space="preserve">
-    <value>labelDragDrop</value>
-  </data>
-  <data name="&gt;&gt;labelDragDrop.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;labelDragDrop.Parent" xml:space="preserve">
-    <value>tab_xml</value>
-  </data>
-  <data name="&gt;&gt;labelDragDrop.ZOrder" xml:space="preserve">
+  <data name="nav_button_1.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
+  </data>
+  <data name="nav_button_1.Text" xml:space="preserve">
+    <value>Home</value>
+  </data>
+  <data name="&gt;&gt;nav_button_1.Name" xml:space="preserve">
+    <value>nav_button_1</value>
+  </data>
+  <data name="&gt;&gt;nav_button_1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;nav_button_1.Parent" xml:space="preserve">
+    <value>NavPanel</value>
+  </data>
+  <data name="&gt;&gt;nav_button_1.ZOrder" xml:space="preserve">
+    <value>7</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -31149,6 +31476,102 @@
   </data>
   <data name="&gt;&gt;timer1.Type" xml:space="preserve">
     <value>System.Windows.Forms.Timer, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;verkäufer.Name" xml:space="preserve">
+    <value>verkäufer</value>
+  </data>
+  <data name="&gt;&gt;verkäufer.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;artikel.Name" xml:space="preserve">
+    <value>artikel</value>
+  </data>
+  <data name="&gt;&gt;artikel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;angebot_menge.Name" xml:space="preserve">
+    <value>angebot_menge</value>
+  </data>
+  <data name="&gt;&gt;angebot_menge.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;preis.Name" xml:space="preserve">
+    <value>preis</value>
+  </data>
+  <data name="&gt;&gt;preis.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewTextBoxColumn38.Name" xml:space="preserve">
+    <value>dataGridViewTextBoxColumn38</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewTextBoxColumn38.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewTextBoxColumn39.Name" xml:space="preserve">
+    <value>dataGridViewTextBoxColumn39</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewTextBoxColumn39.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewTextBoxColumn40.Name" xml:space="preserve">
+    <value>dataGridViewTextBoxColumn40</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewTextBoxColumn40.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewTextBoxColumn41.Name" xml:space="preserve">
+    <value>dataGridViewTextBoxColumn41</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewTextBoxColumn41.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewTextBoxColumn42.Name" xml:space="preserve">
+    <value>dataGridViewTextBoxColumn42</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewTextBoxColumn42.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewTextBoxColumn43.Name" xml:space="preserve">
+    <value>dataGridViewTextBoxColumn43</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewTextBoxColumn43.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewTextBoxColumn44.Name" xml:space="preserve">
+    <value>dataGridViewTextBoxColumn44</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewTextBoxColumn44.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewTextBoxColumn45.Name" xml:space="preserve">
+    <value>dataGridViewTextBoxColumn45</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewTextBoxColumn45.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewTextBoxColumn34.Name" xml:space="preserve">
+    <value>dataGridViewTextBoxColumn34</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewTextBoxColumn34.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewTextBoxColumn35.Name" xml:space="preserve">
+    <value>dataGridViewTextBoxColumn35</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewTextBoxColumn35.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewTextBoxColumn36.Name" xml:space="preserve">
+    <value>dataGridViewTextBoxColumn36</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewTextBoxColumn36.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewTextBoxColumn37.Name" xml:space="preserve">
+    <value>dataGridViewTextBoxColumn37</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewTextBoxColumn37.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>Fahrrad</value>
