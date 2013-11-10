@@ -6997,15 +6997,22 @@
             // 
             // chart_statistik
             // 
+            chartArea1.AxisX.LabelStyle.Angle = 45;
+            chartArea1.AxisX.Title = "Nr.";
+            chartArea1.AxisX2.Title = "Menge";
+            chartArea1.BorderColor = System.Drawing.Color.DimGray;
             chartArea1.Name = "ChartArea1";
             chartArea2.Name = "ChartArea2";
             this.chart_statistik.ChartAreas.Add(chartArea1);
             this.chart_statistik.ChartAreas.Add(chartArea2);
+            legend1.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Top;
             legend1.Name = "Legend1";
             legend2.DockedToChartArea = "ChartArea1";
+            legend2.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Top;
             legend2.IsDockedInsideChartArea = false;
             legend2.Name = "Legend2";
             legend3.DockedToChartArea = "ChartArea2";
+            legend3.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Top;
             legend3.Name = "Legend3";
             this.chart_statistik.Legends.Add(legend1);
             this.chart_statistik.Legends.Add(legend2);

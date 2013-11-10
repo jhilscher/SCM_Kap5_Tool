@@ -83,21 +83,50 @@ namespace ToolFahrrad_v1.Design
         {
             tabs.SelectedTab = tab_statistik;
 
-            // Bestellungen Anzahl
-            var i = 0;
+            this.chart_statistik.ChartAreas.First().AxisX.Interval = 1;
+
+            /// 
+            /// Bestellungen Anzahl
+            /// 
             Series series1 = this.chart_statistik.Series.First();
-           
+            var bestellSumme = 0.00;
+
             // baue datapoints zusammen
             var listBv = _bv.BvPositionen.Select<Bestellposition, DataPoint>(x =>
             {
-                var dp = new DataPoint(i++, x.Menge);
+                var dp = new DataPoint(x.Kaufteil.Nummer/2, x.Menge);
                 dp.AxisLabel = x.Kaufteil.ToString();
+                bestellSumme += x.Kaufteil.Preis;
                 return dp;
             }).ToList();
 
             // hinzu zur serie!
             listBv.ForEach(x => series1.Points.Add(x));
 
+            ///
+            /// Produktion Anzahl
+            /// 
+
+            Series series2 = new Series();
+            series2.Name = "Produktion";
+            series2.Tag = "Produktion";
+
+            // baue datapoints zusammen
+            var listPv = _pp.ProdListe.Select(x =>
+            {
+                var dp = new DataPoint(x.Key/2, x.Value);
+                dp.AxisLabel = x.Key.ToString();
+                return dp;
+            }).ToList();
+
+            // hinzu zur serie!
+            listPv.ForEach(x => series2.Points.Add(x));
+
+
+            chart_statistik.Series.Add(series2);
+
+            
+            
         }
                 
 
