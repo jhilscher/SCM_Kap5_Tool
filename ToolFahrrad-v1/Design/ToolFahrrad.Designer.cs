@@ -30,11 +30,11 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Fahrrad));
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.tabs = new System.Windows.Forms.TabControl();
             this.tab_xml = new System.Windows.Forms.TabPage();
             this.labelDragDrop = new System.Windows.Forms.Label();
@@ -674,9 +674,25 @@
             this.lbl_Gesuche = new System.Windows.Forms.Label();
             this.lbl_Angebote = new System.Windows.Forms.Label();
             this.dta_e_Gesuche = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn42 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn43 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn44 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn45 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dta_e_Angebote = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn38 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn39 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn40 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn41 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dta_Gesuche = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn34 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn35 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn36 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn37 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MarketPlaceGrid = new System.Windows.Forms.DataGridView();
+            this.verkäufer = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.artikel = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.angebot_menge = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.preis = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.xmlOutput = new System.Windows.Forms.TabPage();
             this.panelXMLerstellen = new System.Windows.Forms.Panel();
             this.dataGridViewPrAuftraege = new System.Windows.Forms.DataGridView();
@@ -745,22 +761,6 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.NavPanel = new System.Windows.Forms.Panel();
             this.nav_button_1 = new System.Windows.Forms.Button();
-            this.verkäufer = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.artikel = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.angebot_menge = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.preis = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn38 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn39 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn40 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn41 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn42 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn43 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn44 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn45 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn34 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn35 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn36 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn37 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabs.SuspendLayout();
             this.tab_xml.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pufferP3)).BeginInit();
@@ -6817,6 +6817,26 @@
             this.dta_e_Gesuche.RowHeadersVisible = false;
             this.helpProvider1.SetShowHelp(this.dta_e_Gesuche, ((bool)(resources.GetObject("dta_e_Gesuche.ShowHelp"))));
             // 
+            // dataGridViewTextBoxColumn42
+            // 
+            resources.ApplyResources(this.dataGridViewTextBoxColumn42, "dataGridViewTextBoxColumn42");
+            this.dataGridViewTextBoxColumn42.Name = "dataGridViewTextBoxColumn42";
+            // 
+            // dataGridViewTextBoxColumn43
+            // 
+            resources.ApplyResources(this.dataGridViewTextBoxColumn43, "dataGridViewTextBoxColumn43");
+            this.dataGridViewTextBoxColumn43.Name = "dataGridViewTextBoxColumn43";
+            // 
+            // dataGridViewTextBoxColumn44
+            // 
+            resources.ApplyResources(this.dataGridViewTextBoxColumn44, "dataGridViewTextBoxColumn44");
+            this.dataGridViewTextBoxColumn44.Name = "dataGridViewTextBoxColumn44";
+            // 
+            // dataGridViewTextBoxColumn45
+            // 
+            resources.ApplyResources(this.dataGridViewTextBoxColumn45, "dataGridViewTextBoxColumn45");
+            this.dataGridViewTextBoxColumn45.Name = "dataGridViewTextBoxColumn45";
+            // 
             // dta_e_Angebote
             // 
             this.dta_e_Angebote.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -6828,6 +6848,26 @@
             this.dta_e_Angebote.Name = "dta_e_Angebote";
             this.dta_e_Angebote.RowHeadersVisible = false;
             this.helpProvider1.SetShowHelp(this.dta_e_Angebote, ((bool)(resources.GetObject("dta_e_Angebote.ShowHelp"))));
+            // 
+            // dataGridViewTextBoxColumn38
+            // 
+            resources.ApplyResources(this.dataGridViewTextBoxColumn38, "dataGridViewTextBoxColumn38");
+            this.dataGridViewTextBoxColumn38.Name = "dataGridViewTextBoxColumn38";
+            // 
+            // dataGridViewTextBoxColumn39
+            // 
+            resources.ApplyResources(this.dataGridViewTextBoxColumn39, "dataGridViewTextBoxColumn39");
+            this.dataGridViewTextBoxColumn39.Name = "dataGridViewTextBoxColumn39";
+            // 
+            // dataGridViewTextBoxColumn40
+            // 
+            resources.ApplyResources(this.dataGridViewTextBoxColumn40, "dataGridViewTextBoxColumn40");
+            this.dataGridViewTextBoxColumn40.Name = "dataGridViewTextBoxColumn40";
+            // 
+            // dataGridViewTextBoxColumn41
+            // 
+            resources.ApplyResources(this.dataGridViewTextBoxColumn41, "dataGridViewTextBoxColumn41");
+            this.dataGridViewTextBoxColumn41.Name = "dataGridViewTextBoxColumn41";
             // 
             // dta_Gesuche
             // 
@@ -6841,6 +6881,26 @@
             this.dta_Gesuche.RowHeadersVisible = false;
             this.helpProvider1.SetShowHelp(this.dta_Gesuche, ((bool)(resources.GetObject("dta_Gesuche.ShowHelp"))));
             // 
+            // dataGridViewTextBoxColumn34
+            // 
+            resources.ApplyResources(this.dataGridViewTextBoxColumn34, "dataGridViewTextBoxColumn34");
+            this.dataGridViewTextBoxColumn34.Name = "dataGridViewTextBoxColumn34";
+            // 
+            // dataGridViewTextBoxColumn35
+            // 
+            resources.ApplyResources(this.dataGridViewTextBoxColumn35, "dataGridViewTextBoxColumn35");
+            this.dataGridViewTextBoxColumn35.Name = "dataGridViewTextBoxColumn35";
+            // 
+            // dataGridViewTextBoxColumn36
+            // 
+            resources.ApplyResources(this.dataGridViewTextBoxColumn36, "dataGridViewTextBoxColumn36");
+            this.dataGridViewTextBoxColumn36.Name = "dataGridViewTextBoxColumn36";
+            // 
+            // dataGridViewTextBoxColumn37
+            // 
+            resources.ApplyResources(this.dataGridViewTextBoxColumn37, "dataGridViewTextBoxColumn37");
+            this.dataGridViewTextBoxColumn37.Name = "dataGridViewTextBoxColumn37";
+            // 
             // MarketPlaceGrid
             // 
             this.MarketPlaceGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -6851,6 +6911,26 @@
             resources.ApplyResources(this.MarketPlaceGrid, "MarketPlaceGrid");
             this.MarketPlaceGrid.Name = "MarketPlaceGrid";
             this.MarketPlaceGrid.RowHeadersVisible = false;
+            // 
+            // verkäufer
+            // 
+            resources.ApplyResources(this.verkäufer, "verkäufer");
+            this.verkäufer.Name = "verkäufer";
+            // 
+            // artikel
+            // 
+            resources.ApplyResources(this.artikel, "artikel");
+            this.artikel.Name = "artikel";
+            // 
+            // angebot_menge
+            // 
+            resources.ApplyResources(this.angebot_menge, "angebot_menge");
+            this.angebot_menge.Name = "angebot_menge";
+            // 
+            // preis
+            // 
+            resources.ApplyResources(this.preis, "preis");
+            this.preis.Name = "preis";
             // 
             // xmlOutput
             // 
@@ -7126,25 +7206,25 @@
             // 
             // chart_statistik
             // 
-            chartArea2.Name = "ChartArea2";
-            this.chart_statistik.ChartAreas.Add(chartArea2);
-            legend3.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Top;
-            legend3.Name = "Legend1";
-            legend4.DockedToChartArea = "ChartArea2";
-            legend4.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Top;
-            legend4.Name = "Legend3";
-            this.chart_statistik.Legends.Add(legend3);
-            this.chart_statistik.Legends.Add(legend4);
+            chartArea1.Name = "ChartArea2";
+            this.chart_statistik.ChartAreas.Add(chartArea1);
+            legend1.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Top;
+            legend1.Name = "Legend1";
+            legend2.DockedToChartArea = "ChartArea2";
+            legend2.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Top;
+            legend2.Name = "Legend3";
+            this.chart_statistik.Legends.Add(legend1);
+            this.chart_statistik.Legends.Add(legend2);
             resources.ApplyResources(this.chart_statistik, "chart_statistik");
             this.chart_statistik.Name = "chart_statistik";
-            series3.ChartArea = "ChartArea2";
-            series3.Legend = "Legend1";
-            series3.Name = "Bestellungen";
-            series4.ChartArea = "ChartArea2";
-            series4.Legend = "Legend1";
-            series4.Name = "Produktion";
-            this.chart_statistik.Series.Add(series3);
-            this.chart_statistik.Series.Add(series4);
+            series1.ChartArea = "ChartArea2";
+            series1.Legend = "Legend1";
+            series1.Name = "Bestellungen";
+            series2.ChartArea = "ChartArea2";
+            series2.Legend = "Legend1";
+            series2.Name = "Produktion";
+            this.chart_statistik.Series.Add(series1);
+            this.chart_statistik.Series.Add(series2);
             // 
             // openFileDialog
             // 
@@ -7390,86 +7470,6 @@
             this.nav_button_1.Name = "nav_button_1";
             this.nav_button_1.UseVisualStyleBackColor = false;
             this.nav_button_1.Click += new System.EventHandler(this.nav_button_1_Click);
-            // 
-            // verkäufer
-            // 
-            resources.ApplyResources(this.verkäufer, "verkäufer");
-            this.verkäufer.Name = "verkäufer";
-            // 
-            // artikel
-            // 
-            resources.ApplyResources(this.artikel, "artikel");
-            this.artikel.Name = "artikel";
-            // 
-            // angebot_menge
-            // 
-            resources.ApplyResources(this.angebot_menge, "angebot_menge");
-            this.angebot_menge.Name = "angebot_menge";
-            // 
-            // preis
-            // 
-            resources.ApplyResources(this.preis, "preis");
-            this.preis.Name = "preis";
-            // 
-            // dataGridViewTextBoxColumn38
-            // 
-            resources.ApplyResources(this.dataGridViewTextBoxColumn38, "dataGridViewTextBoxColumn38");
-            this.dataGridViewTextBoxColumn38.Name = "dataGridViewTextBoxColumn38";
-            // 
-            // dataGridViewTextBoxColumn39
-            // 
-            resources.ApplyResources(this.dataGridViewTextBoxColumn39, "dataGridViewTextBoxColumn39");
-            this.dataGridViewTextBoxColumn39.Name = "dataGridViewTextBoxColumn39";
-            // 
-            // dataGridViewTextBoxColumn40
-            // 
-            resources.ApplyResources(this.dataGridViewTextBoxColumn40, "dataGridViewTextBoxColumn40");
-            this.dataGridViewTextBoxColumn40.Name = "dataGridViewTextBoxColumn40";
-            // 
-            // dataGridViewTextBoxColumn41
-            // 
-            resources.ApplyResources(this.dataGridViewTextBoxColumn41, "dataGridViewTextBoxColumn41");
-            this.dataGridViewTextBoxColumn41.Name = "dataGridViewTextBoxColumn41";
-            // 
-            // dataGridViewTextBoxColumn42
-            // 
-            resources.ApplyResources(this.dataGridViewTextBoxColumn42, "dataGridViewTextBoxColumn42");
-            this.dataGridViewTextBoxColumn42.Name = "dataGridViewTextBoxColumn42";
-            // 
-            // dataGridViewTextBoxColumn43
-            // 
-            resources.ApplyResources(this.dataGridViewTextBoxColumn43, "dataGridViewTextBoxColumn43");
-            this.dataGridViewTextBoxColumn43.Name = "dataGridViewTextBoxColumn43";
-            // 
-            // dataGridViewTextBoxColumn44
-            // 
-            resources.ApplyResources(this.dataGridViewTextBoxColumn44, "dataGridViewTextBoxColumn44");
-            this.dataGridViewTextBoxColumn44.Name = "dataGridViewTextBoxColumn44";
-            // 
-            // dataGridViewTextBoxColumn45
-            // 
-            resources.ApplyResources(this.dataGridViewTextBoxColumn45, "dataGridViewTextBoxColumn45");
-            this.dataGridViewTextBoxColumn45.Name = "dataGridViewTextBoxColumn45";
-            // 
-            // dataGridViewTextBoxColumn34
-            // 
-            resources.ApplyResources(this.dataGridViewTextBoxColumn34, "dataGridViewTextBoxColumn34");
-            this.dataGridViewTextBoxColumn34.Name = "dataGridViewTextBoxColumn34";
-            // 
-            // dataGridViewTextBoxColumn35
-            // 
-            resources.ApplyResources(this.dataGridViewTextBoxColumn35, "dataGridViewTextBoxColumn35");
-            this.dataGridViewTextBoxColumn35.Name = "dataGridViewTextBoxColumn35";
-            // 
-            // dataGridViewTextBoxColumn36
-            // 
-            resources.ApplyResources(this.dataGridViewTextBoxColumn36, "dataGridViewTextBoxColumn36");
-            this.dataGridViewTextBoxColumn36.Name = "dataGridViewTextBoxColumn36";
-            // 
-            // dataGridViewTextBoxColumn37
-            // 
-            resources.ApplyResources(this.dataGridViewTextBoxColumn37, "dataGridViewTextBoxColumn37");
-            this.dataGridViewTextBoxColumn37.Name = "dataGridViewTextBoxColumn37";
             // 
             // Fahrrad
             // 
