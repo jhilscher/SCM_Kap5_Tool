@@ -17,13 +17,20 @@ namespace ToolFahrrad_v1.Design
     partial class Fahrrad
     {
 
-        
+        public static Boolean authenticated = false;
 
         public void Get_Market_Place()
         {
             String url = "http://www.iwi.hs-karlsruhe.de/scs/";
             try
             {
+                ///
+                /// dirty hack um zu vermeiden, dass die Methode 2mal aufgerufen wird.
+                ///
+                if (this.MarketPlaceGrid.Rows.Count > 1)
+                {
+                    return;
+                }
                 ///
                 /// ist ein bisschen kompliziert, die Marketplace-Seite anzeigen zu
                 /// lassen ohne 500 zu bekommen. Der Weg der funktioniert ist:
@@ -92,10 +99,12 @@ namespace ToolFahrrad_v1.Design
                     this.dta_e_Gesuche.Rows[i].Cells[3].Value = ownRequests[i].price;
                 }
 
+                GetUrl(false, url, "logout", container);
+
             }
             catch (Exception e)
             {
-                Console.WriteLine(e);
+                System.Windows.Forms.MessageBox.Show("oops, da ging wohl was schief: " + e.Message);
             }
 
 
@@ -115,11 +124,20 @@ namespace ToolFahrrad_v1.Design
             request.CookieContainer = container;
             request.Method = WebRequestMethods.Http.Get;
 
-            var response = request.GetResponse();
-            StreamReader reader = new StreamReader(response.GetResponseStream());
-            String body = reader.ReadToEnd();
+            try
+            {
+                var response = request.GetResponse();
+                StreamReader reader = new StreamReader(response.GetResponseStream());
+                String body = reader.ReadToEnd();
 
-            return body;
+                return body;
+            }
+            catch (Exception e)
+            {
+                System.Windows.Forms.MessageBox.Show(e.Message);
+                return "";
+            }
+
         }
 
         ///
