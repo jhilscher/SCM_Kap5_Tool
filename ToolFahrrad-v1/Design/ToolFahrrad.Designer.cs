@@ -30,8 +30,14 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Fahrrad));
-            this.tabs = new System.Windows.Forms.TabControl();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            this.tab = new System.Windows.Forms.TabControl();
             this.tab_xml = new System.Windows.Forms.TabPage();
+            this.labelDragDrop = new System.Windows.Forms.Label();
             this.prognose1 = new System.Windows.Forms.Label();
             this.pufferP3 = new System.Windows.Forms.NumericUpDown();
             this.pufferP2 = new System.Windows.Forms.NumericUpDown();
@@ -662,6 +668,31 @@
             this.menge = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.eil = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.del = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.tab_marktplatz = new System.Windows.Forms.TabPage();
+            this.lbl_eigene_Angebote = new System.Windows.Forms.Label();
+            this.lbl_eigene_Gesuche = new System.Windows.Forms.Label();
+            this.lbl_Gesuche = new System.Windows.Forms.Label();
+            this.lbl_Angebote = new System.Windows.Forms.Label();
+            this.dta_e_Gesuche = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn42 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn43 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn44 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn45 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dta_e_Angebote = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn38 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn39 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn40 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn41 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dta_Gesuche = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn34 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn35 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn36 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn37 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MarketPlaceGrid = new System.Windows.Forms.DataGridView();
+            this.verkäufer = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.artikel = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.angebot_menge = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.preis = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.xmlOutput = new System.Windows.Forms.TabPage();
             this.panelXMLerstellen = new System.Windows.Forms.Panel();
             this.dataGridViewPrAuftraege = new System.Windows.Forms.DataGridView();
@@ -689,6 +720,59 @@
             this.dg_p2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dg_p3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label270 = new System.Windows.Forms.Label();
+            this.tab_beenden = new System.Windows.Forms.TabPage();
+            this.header_xmlExport = new System.Windows.Forms.Label();
+            this.button_exportXml = new System.Windows.Forms.Button();
+            this.TextBox_xmlOutput = new System.Windows.Forms.RichTextBox();
+            this.tab_statistik = new System.Windows.Forms.TabPage();
+            this.header_statistik = new System.Windows.Forms.Label();
+            this.chart_statistik = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.tab_einstellungen = new System.Windows.Forms.TabPage();
+            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tab_abweichung = new System.Windows.Forms.TabPage();
+            this.LabelAbweichung = new System.Windows.Forms.Label();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.lbl_info = new System.Windows.Forms.Label();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.lbl_100 = new System.Windows.Forms.Label();
+            this.lbl_50 = new System.Windows.Forms.Label();
+            this.btn_ok = new System.Windows.Forms.Button();
+            this.lbl_10 = new System.Windows.Forms.Label();
+            this.trackBarAbweichung = new System.Windows.Forms.TrackBar();
+            this.tab_diskount = new System.Windows.Forms.TabPage();
+            this.LabelDiskont = new System.Windows.Forms.Label();
+            this.label273 = new System.Windows.Forms.Label();
+            this.mengeGrenze = new System.Windows.Forms.NumericUpDown();
+            this.diskGrenze = new System.Windows.Forms.NumericUpDown();
+            this.label276 = new System.Windows.Forms.Label();
+            this.label277 = new System.Windows.Forms.Label();
+            this.label278 = new System.Windows.Forms.Label();
+            this.label279 = new System.Windows.Forms.Label();
+            this.label280 = new System.Windows.Forms.Label();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.label281 = new System.Windows.Forms.Label();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.diskSpeichern = new System.Windows.Forms.Button();
+            this.trackBar1 = new System.Windows.Forms.TrackBar();
+            this.tab_schicht = new System.Windows.Forms.TabPage();
+            this.LabelSchichten = new System.Windows.Forms.Label();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.label282 = new System.Windows.Forms.Label();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.btn_schicht_save = new System.Windows.Forms.Button();
+            this.lbl_3schicht = new System.Windows.Forms.Label();
+            this.lbl_2schicht = new System.Windows.Forms.Label();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.button3 = new System.Windows.Forms.Button();
             this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
             this.menu = new System.Windows.Forms.MenuStrip();
             this.dateiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -711,10 +795,20 @@
             this.info = new System.Windows.Forms.Label();
             this.imageListAmpel = new System.Windows.Forms.ImageList(this.components);
             this.helpProvider1 = new System.Windows.Forms.HelpProvider();
+            this.button_nav_2 = new System.Windows.Forms.Button();
+            this.button_nav_3 = new System.Windows.Forms.Button();
+            this.button_nav_4 = new System.Windows.Forms.Button();
+            this.button_nav_5 = new System.Windows.Forms.Button();
+            this.button__nav_6 = new System.Windows.Forms.Button();
+            this.button_nav_7 = new System.Windows.Forms.Button();
+            this.button_nav_8 = new System.Windows.Forms.Button();
+            this.button_nav_einstellungen = new System.Windows.Forms.Button();
             this.imageListPlusMinus = new System.Windows.Forms.ImageList(this.components);
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.tabs.SuspendLayout();
+            this.NavPanel = new System.Windows.Forms.Panel();
+            this.nav_button_1 = new System.Windows.Forms.Button();
+            this.tab.SuspendLayout();
             this.tab_xml.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pufferP3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pufferP2)).BeginInit();
@@ -772,6 +866,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.zurueck)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.saveAenderungen)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewBestellung)).BeginInit();
+            this.tab_marktplatz.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dta_e_Gesuche)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dta_e_Angebote)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dta_Gesuche)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MarketPlaceGrid)).BeginInit();
             this.xmlOutput.SuspendLayout();
             this.panelXMLerstellen.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPrAuftraege)).BeginInit();
@@ -779,25 +878,54 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewEinkauf)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDirekt)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewVertrieb)).BeginInit();
+            this.tab_beenden.SuspendLayout();
+            this.tab_statistik.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chart_statistik)).BeginInit();
+            this.tab_einstellungen.SuspendLayout();
+            this.tabControl1.SuspendLayout();
+            this.tab_abweichung.SuspendLayout();
+            this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBarAbweichung)).BeginInit();
+            this.tab_diskount.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.mengeGrenze)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.diskGrenze)).BeginInit();
+            this.panel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
+            this.tab_schicht.SuspendLayout();
+            this.panel6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            this.tabPage3.SuspendLayout();
+            this.tabPage4.SuspendLayout();
+            this.tabPage5.SuspendLayout();
             this.menu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.xml_export)).BeginInit();
+            this.NavPanel.SuspendLayout();
             this.SuspendLayout();
             // 
-            // tabs
+            // tab
             // 
-            this.tabs.Controls.Add(this.tab_xml);
-            this.tabs.Controls.Add(this.tab_produktion);
-            this.tabs.Controls.Add(this.tab_arbeitzeit);
-            this.tabs.Controls.Add(this.tab_bestellverwaltung);
-            this.tabs.Controls.Add(this.xmlOutput);
-            resources.ApplyResources(this.tabs, "tabs");
-            this.tabs.Name = "tabs";
-            this.tabs.SelectedIndex = 0;
-            this.helpProvider1.SetShowHelp(this.tabs, ((bool)(resources.GetObject("tabs.ShowHelp"))));
+            this.tab.Controls.Add(this.tab_xml);
+            this.tab.Controls.Add(this.tab_produktion);
+            this.tab.Controls.Add(this.tab_arbeitzeit);
+            this.tab.Controls.Add(this.tab_bestellverwaltung);
+            this.tab.Controls.Add(this.tab_marktplatz);
+            this.tab.Controls.Add(this.xmlOutput);
+            this.tab.Controls.Add(this.tab_beenden);
+            this.tab.Controls.Add(this.tab_statistik);
+            this.tab.Controls.Add(this.tab_einstellungen);
+            resources.ApplyResources(this.tab, "tab");
+            this.tab.Name = "tab";
+            this.tab.SelectedIndex = 0;
+            this.helpProvider1.SetShowHelp(this.tab, ((bool)(resources.GetObject("tab.ShowHelp"))));
             // 
             // tab_xml
             // 
             this.tab_xml.BackColor = System.Drawing.Color.Transparent;
+            this.tab_xml.Controls.Add(this.labelDragDrop);
             this.tab_xml.Controls.Add(this.prognose1);
             this.tab_xml.Controls.Add(this.pufferP3);
             this.tab_xml.Controls.Add(this.pufferP2);
@@ -829,6 +957,12 @@
             resources.ApplyResources(this.tab_xml, "tab_xml");
             this.tab_xml.Name = "tab_xml";
             this.helpProvider1.SetShowHelp(this.tab_xml, ((bool)(resources.GetObject("tab_xml.ShowHelp"))));
+            // 
+            // labelDragDrop
+            // 
+            resources.ApplyResources(this.labelDragDrop, "labelDragDrop");
+            this.labelDragDrop.Name = "labelDragDrop";
+            this.helpProvider1.SetShowHelp(this.labelDragDrop, ((bool)(resources.GetObject("labelDragDrop.ShowHelp"))));
             // 
             // prognose1
             // 
@@ -930,6 +1064,7 @@
             this.helpProvider1.SetShowHelp(this.save, ((bool)(resources.GetObject("save.ShowHelp"))));
             this.save.TabStop = false;
             this.toolTip.SetToolTip(this.save, resources.GetString("save.ToolTip"));
+            this.save.Click += new System.EventHandler(this.save_Click);
             // 
             // xmlOffenOK
             // 
@@ -6701,6 +6836,170 @@
             this.del.Name = "del";
             this.del.TrueValue = "true";
             // 
+            // tab_marktplatz
+            // 
+            this.tab_marktplatz.BackColor = System.Drawing.Color.Transparent;
+            this.tab_marktplatz.Controls.Add(this.lbl_eigene_Angebote);
+            this.tab_marktplatz.Controls.Add(this.lbl_eigene_Gesuche);
+            this.tab_marktplatz.Controls.Add(this.lbl_Gesuche);
+            this.tab_marktplatz.Controls.Add(this.lbl_Angebote);
+            this.tab_marktplatz.Controls.Add(this.dta_e_Gesuche);
+            this.tab_marktplatz.Controls.Add(this.dta_e_Angebote);
+            this.tab_marktplatz.Controls.Add(this.dta_Gesuche);
+            this.tab_marktplatz.Controls.Add(this.MarketPlaceGrid);
+            resources.ApplyResources(this.tab_marktplatz, "tab_marktplatz");
+            this.tab_marktplatz.Name = "tab_marktplatz";
+            // 
+            // lbl_eigene_Angebote
+            // 
+            resources.ApplyResources(this.lbl_eigene_Angebote, "lbl_eigene_Angebote");
+            this.lbl_eigene_Angebote.Name = "lbl_eigene_Angebote";
+            this.helpProvider1.SetShowHelp(this.lbl_eigene_Angebote, ((bool)(resources.GetObject("lbl_eigene_Angebote.ShowHelp"))));
+            // 
+            // lbl_eigene_Gesuche
+            // 
+            resources.ApplyResources(this.lbl_eigene_Gesuche, "lbl_eigene_Gesuche");
+            this.lbl_eigene_Gesuche.Name = "lbl_eigene_Gesuche";
+            this.helpProvider1.SetShowHelp(this.lbl_eigene_Gesuche, ((bool)(resources.GetObject("lbl_eigene_Gesuche.ShowHelp"))));
+            // 
+            // lbl_Gesuche
+            // 
+            resources.ApplyResources(this.lbl_Gesuche, "lbl_Gesuche");
+            this.lbl_Gesuche.Name = "lbl_Gesuche";
+            this.helpProvider1.SetShowHelp(this.lbl_Gesuche, ((bool)(resources.GetObject("lbl_Gesuche.ShowHelp"))));
+            // 
+            // lbl_Angebote
+            // 
+            resources.ApplyResources(this.lbl_Angebote, "lbl_Angebote");
+            this.lbl_Angebote.Name = "lbl_Angebote";
+            // 
+            // dta_e_Gesuche
+            // 
+            this.dta_e_Gesuche.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn42,
+            this.dataGridViewTextBoxColumn43,
+            this.dataGridViewTextBoxColumn44,
+            this.dataGridViewTextBoxColumn45});
+            resources.ApplyResources(this.dta_e_Gesuche, "dta_e_Gesuche");
+            this.dta_e_Gesuche.Name = "dta_e_Gesuche";
+            this.dta_e_Gesuche.RowHeadersVisible = false;
+            this.helpProvider1.SetShowHelp(this.dta_e_Gesuche, ((bool)(resources.GetObject("dta_e_Gesuche.ShowHelp"))));
+            // 
+            // dataGridViewTextBoxColumn42
+            // 
+            resources.ApplyResources(this.dataGridViewTextBoxColumn42, "dataGridViewTextBoxColumn42");
+            this.dataGridViewTextBoxColumn42.Name = "dataGridViewTextBoxColumn42";
+            // 
+            // dataGridViewTextBoxColumn43
+            // 
+            resources.ApplyResources(this.dataGridViewTextBoxColumn43, "dataGridViewTextBoxColumn43");
+            this.dataGridViewTextBoxColumn43.Name = "dataGridViewTextBoxColumn43";
+            // 
+            // dataGridViewTextBoxColumn44
+            // 
+            resources.ApplyResources(this.dataGridViewTextBoxColumn44, "dataGridViewTextBoxColumn44");
+            this.dataGridViewTextBoxColumn44.Name = "dataGridViewTextBoxColumn44";
+            // 
+            // dataGridViewTextBoxColumn45
+            // 
+            resources.ApplyResources(this.dataGridViewTextBoxColumn45, "dataGridViewTextBoxColumn45");
+            this.dataGridViewTextBoxColumn45.Name = "dataGridViewTextBoxColumn45";
+            // 
+            // dta_e_Angebote
+            // 
+            this.dta_e_Angebote.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn38,
+            this.dataGridViewTextBoxColumn39,
+            this.dataGridViewTextBoxColumn40,
+            this.dataGridViewTextBoxColumn41});
+            resources.ApplyResources(this.dta_e_Angebote, "dta_e_Angebote");
+            this.dta_e_Angebote.Name = "dta_e_Angebote";
+            this.dta_e_Angebote.RowHeadersVisible = false;
+            this.helpProvider1.SetShowHelp(this.dta_e_Angebote, ((bool)(resources.GetObject("dta_e_Angebote.ShowHelp"))));
+            // 
+            // dataGridViewTextBoxColumn38
+            // 
+            resources.ApplyResources(this.dataGridViewTextBoxColumn38, "dataGridViewTextBoxColumn38");
+            this.dataGridViewTextBoxColumn38.Name = "dataGridViewTextBoxColumn38";
+            // 
+            // dataGridViewTextBoxColumn39
+            // 
+            resources.ApplyResources(this.dataGridViewTextBoxColumn39, "dataGridViewTextBoxColumn39");
+            this.dataGridViewTextBoxColumn39.Name = "dataGridViewTextBoxColumn39";
+            // 
+            // dataGridViewTextBoxColumn40
+            // 
+            resources.ApplyResources(this.dataGridViewTextBoxColumn40, "dataGridViewTextBoxColumn40");
+            this.dataGridViewTextBoxColumn40.Name = "dataGridViewTextBoxColumn40";
+            // 
+            // dataGridViewTextBoxColumn41
+            // 
+            resources.ApplyResources(this.dataGridViewTextBoxColumn41, "dataGridViewTextBoxColumn41");
+            this.dataGridViewTextBoxColumn41.Name = "dataGridViewTextBoxColumn41";
+            // 
+            // dta_Gesuche
+            // 
+            this.dta_Gesuche.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn34,
+            this.dataGridViewTextBoxColumn35,
+            this.dataGridViewTextBoxColumn36,
+            this.dataGridViewTextBoxColumn37});
+            resources.ApplyResources(this.dta_Gesuche, "dta_Gesuche");
+            this.dta_Gesuche.Name = "dta_Gesuche";
+            this.dta_Gesuche.RowHeadersVisible = false;
+            this.helpProvider1.SetShowHelp(this.dta_Gesuche, ((bool)(resources.GetObject("dta_Gesuche.ShowHelp"))));
+            // 
+            // dataGridViewTextBoxColumn34
+            // 
+            resources.ApplyResources(this.dataGridViewTextBoxColumn34, "dataGridViewTextBoxColumn34");
+            this.dataGridViewTextBoxColumn34.Name = "dataGridViewTextBoxColumn34";
+            // 
+            // dataGridViewTextBoxColumn35
+            // 
+            resources.ApplyResources(this.dataGridViewTextBoxColumn35, "dataGridViewTextBoxColumn35");
+            this.dataGridViewTextBoxColumn35.Name = "dataGridViewTextBoxColumn35";
+            // 
+            // dataGridViewTextBoxColumn36
+            // 
+            resources.ApplyResources(this.dataGridViewTextBoxColumn36, "dataGridViewTextBoxColumn36");
+            this.dataGridViewTextBoxColumn36.Name = "dataGridViewTextBoxColumn36";
+            // 
+            // dataGridViewTextBoxColumn37
+            // 
+            resources.ApplyResources(this.dataGridViewTextBoxColumn37, "dataGridViewTextBoxColumn37");
+            this.dataGridViewTextBoxColumn37.Name = "dataGridViewTextBoxColumn37";
+            // 
+            // MarketPlaceGrid
+            // 
+            this.MarketPlaceGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.verkäufer,
+            this.artikel,
+            this.angebot_menge,
+            this.preis});
+            resources.ApplyResources(this.MarketPlaceGrid, "MarketPlaceGrid");
+            this.MarketPlaceGrid.Name = "MarketPlaceGrid";
+            this.MarketPlaceGrid.RowHeadersVisible = false;
+            // 
+            // verkäufer
+            // 
+            resources.ApplyResources(this.verkäufer, "verkäufer");
+            this.verkäufer.Name = "verkäufer";
+            // 
+            // artikel
+            // 
+            resources.ApplyResources(this.artikel, "artikel");
+            this.artikel.Name = "artikel";
+            // 
+            // angebot_menge
+            // 
+            resources.ApplyResources(this.angebot_menge, "angebot_menge");
+            this.angebot_menge.Name = "angebot_menge";
+            // 
+            // preis
+            // 
+            resources.ApplyResources(this.preis, "preis");
+            this.preis.Name = "preis";
+            // 
             // xmlOutput
             // 
             this.xmlOutput.BackColor = System.Drawing.Color.Transparent;
@@ -6930,6 +7229,455 @@
             this.label270.Name = "label270";
             this.helpProvider1.SetShowHelp(this.label270, ((bool)(resources.GetObject("label270.ShowHelp"))));
             // 
+            // tab_beenden
+            // 
+            this.tab_beenden.Controls.Add(this.header_xmlExport);
+            this.tab_beenden.Controls.Add(this.button_exportXml);
+            this.tab_beenden.Controls.Add(this.TextBox_xmlOutput);
+            resources.ApplyResources(this.tab_beenden, "tab_beenden");
+            this.tab_beenden.Name = "tab_beenden";
+            this.helpProvider1.SetShowHelp(this.tab_beenden, ((bool)(resources.GetObject("tab_beenden.ShowHelp"))));
+            this.tab_beenden.UseVisualStyleBackColor = true;
+            // 
+            // header_xmlExport
+            // 
+            resources.ApplyResources(this.header_xmlExport, "header_xmlExport");
+            this.header_xmlExport.Name = "header_xmlExport";
+            this.helpProvider1.SetShowHelp(this.header_xmlExport, ((bool)(resources.GetObject("header_xmlExport.ShowHelp"))));
+            // 
+            // button_exportXml
+            // 
+            resources.ApplyResources(this.button_exportXml, "button_exportXml");
+            this.button_exportXml.Name = "button_exportXml";
+            this.button_exportXml.UseVisualStyleBackColor = true;
+            this.button_exportXml.Click += new System.EventHandler(this.button_exportXml_Click);
+            // 
+            // TextBox_xmlOutput
+            // 
+            resources.ApplyResources(this.TextBox_xmlOutput, "TextBox_xmlOutput");
+            this.TextBox_xmlOutput.Name = "TextBox_xmlOutput";
+            this.TextBox_xmlOutput.ReadOnly = true;
+            // 
+            // tab_statistik
+            // 
+            this.tab_statistik.Controls.Add(this.header_statistik);
+            this.tab_statistik.Controls.Add(this.chart_statistik);
+            resources.ApplyResources(this.tab_statistik, "tab_statistik");
+            this.tab_statistik.Name = "tab_statistik";
+            this.tab_statistik.UseVisualStyleBackColor = true;
+            // 
+            // header_statistik
+            // 
+            resources.ApplyResources(this.header_statistik, "header_statistik");
+            this.header_statistik.Name = "header_statistik";
+            this.helpProvider1.SetShowHelp(this.header_statistik, ((bool)(resources.GetObject("header_statistik.ShowHelp"))));
+            // 
+            // chart_statistik
+            // 
+            chartArea1.Name = "ChartArea2";
+            this.chart_statistik.ChartAreas.Add(chartArea1);
+            legend1.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Top;
+            legend1.Name = "Legend1";
+            legend2.DockedToChartArea = "ChartArea2";
+            legend2.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Top;
+            legend2.Name = "Legend3";
+            this.chart_statistik.Legends.Add(legend1);
+            this.chart_statistik.Legends.Add(legend2);
+            resources.ApplyResources(this.chart_statistik, "chart_statistik");
+            this.chart_statistik.Name = "chart_statistik";
+            series1.ChartArea = "ChartArea2";
+            series1.Legend = "Legend1";
+            series1.Name = "Bestellungen";
+            series2.ChartArea = "ChartArea2";
+            series2.Legend = "Legend1";
+            series2.Name = "Produktion";
+            this.chart_statistik.Series.Add(series1);
+            this.chart_statistik.Series.Add(series2);
+            // 
+            // tab_einstellungen
+            // 
+            this.tab_einstellungen.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.tab_einstellungen.Controls.Add(this.tabControl1);
+            resources.ApplyResources(this.tab_einstellungen, "tab_einstellungen");
+            this.tab_einstellungen.Name = "tab_einstellungen";
+            this.tab_einstellungen.Click += new System.EventHandler(this.button_nav_einstellungen_Click);
+            // 
+            // tabControl1
+            // 
+            this.tabControl1.Controls.Add(this.tab_abweichung);
+            this.tabControl1.Controls.Add(this.tab_diskount);
+            this.tabControl1.Controls.Add(this.tab_schicht);
+            this.tabControl1.Controls.Add(this.tabPage3);
+            this.tabControl1.Controls.Add(this.tabPage4);
+            this.tabControl1.Controls.Add(this.tabPage5);
+            resources.ApplyResources(this.tabControl1, "tabControl1");
+            this.tabControl1.Name = "tabControl1";
+            this.tabControl1.SelectedIndex = 0;
+            // 
+            // tab_abweichung
+            // 
+            this.tab_abweichung.BackColor = System.Drawing.Color.Transparent;
+            this.tab_abweichung.Controls.Add(this.LabelAbweichung);
+            this.tab_abweichung.Controls.Add(this.panel4);
+            this.tab_abweichung.Controls.Add(this.lbl_100);
+            this.tab_abweichung.Controls.Add(this.lbl_50);
+            this.tab_abweichung.Controls.Add(this.btn_ok);
+            this.tab_abweichung.Controls.Add(this.lbl_10);
+            this.tab_abweichung.Controls.Add(this.trackBarAbweichung);
+            resources.ApplyResources(this.tab_abweichung, "tab_abweichung");
+            this.tab_abweichung.Name = "tab_abweichung";
+            // 
+            // LabelAbweichung
+            // 
+            resources.ApplyResources(this.LabelAbweichung, "LabelAbweichung");
+            this.LabelAbweichung.Name = "LabelAbweichung";
+            // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.lbl_info);
+            this.panel4.Controls.Add(this.pictureBox5);
+            resources.ApplyResources(this.panel4, "panel4");
+            this.panel4.Name = "panel4";
+            // 
+            // lbl_info
+            // 
+            resources.ApplyResources(this.lbl_info, "lbl_info");
+            this.lbl_info.Name = "lbl_info";
+            // 
+            // pictureBox5
+            // 
+            resources.ApplyResources(this.pictureBox5, "pictureBox5");
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.TabStop = false;
+            // 
+            // lbl_100
+            // 
+            resources.ApplyResources(this.lbl_100, "lbl_100");
+            this.lbl_100.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_100.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.lbl_100.Name = "lbl_100";
+            // 
+            // lbl_50
+            // 
+            resources.ApplyResources(this.lbl_50, "lbl_50");
+            this.lbl_50.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_50.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.lbl_50.Name = "lbl_50";
+            // 
+            // btn_ok
+            // 
+            resources.ApplyResources(this.btn_ok, "btn_ok");
+            this.btn_ok.Name = "btn_ok";
+            this.btn_ok.UseVisualStyleBackColor = true;
+            // 
+            // lbl_10
+            // 
+            resources.ApplyResources(this.lbl_10, "lbl_10");
+            this.lbl_10.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_10.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.lbl_10.Name = "lbl_10";
+            // 
+            // trackBarAbweichung
+            // 
+            this.trackBarAbweichung.BackColor = System.Drawing.SystemColors.Control;
+            resources.ApplyResources(this.trackBarAbweichung, "trackBarAbweichung");
+            this.trackBarAbweichung.Name = "trackBarAbweichung";
+            this.trackBarAbweichung.Value = 5;
+            // 
+            // tab_diskount
+            // 
+            this.tab_diskount.BackColor = System.Drawing.Color.Transparent;
+            this.tab_diskount.Controls.Add(this.LabelDiskont);
+            this.tab_diskount.Controls.Add(this.label273);
+            this.tab_diskount.Controls.Add(this.mengeGrenze);
+            this.tab_diskount.Controls.Add(this.diskGrenze);
+            this.tab_diskount.Controls.Add(this.label276);
+            this.tab_diskount.Controls.Add(this.label277);
+            this.tab_diskount.Controls.Add(this.label278);
+            this.tab_diskount.Controls.Add(this.label279);
+            this.tab_diskount.Controls.Add(this.label280);
+            this.tab_diskount.Controls.Add(this.panel5);
+            this.tab_diskount.Controls.Add(this.diskSpeichern);
+            this.tab_diskount.Controls.Add(this.trackBar1);
+            resources.ApplyResources(this.tab_diskount, "tab_diskount");
+            this.tab_diskount.Name = "tab_diskount";
+            // 
+            // LabelDiskont
+            // 
+            resources.ApplyResources(this.LabelDiskont, "LabelDiskont");
+            this.LabelDiskont.Name = "LabelDiskont";
+            // 
+            // label273
+            // 
+            resources.ApplyResources(this.label273, "label273");
+            this.label273.Name = "label273";
+            // 
+            // mengeGrenze
+            // 
+            resources.ApplyResources(this.mengeGrenze, "mengeGrenze");
+            this.mengeGrenze.Minimum = new decimal(new int[] {
+            2,
+            0,
+            0,
+            0});
+            this.mengeGrenze.Name = "mengeGrenze";
+            this.mengeGrenze.Value = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            // 
+            // diskGrenze
+            // 
+            resources.ApplyResources(this.diskGrenze, "diskGrenze");
+            this.diskGrenze.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.diskGrenze.Name = "diskGrenze";
+            this.diskGrenze.Value = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
+            // 
+            // label276
+            // 
+            resources.ApplyResources(this.label276, "label276");
+            this.label276.Name = "label276";
+            // 
+            // label277
+            // 
+            resources.ApplyResources(this.label277, "label277");
+            this.label277.Name = "label277";
+            // 
+            // label278
+            // 
+            resources.ApplyResources(this.label278, "label278");
+            this.label278.BackColor = System.Drawing.Color.Transparent;
+            this.label278.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.label278.Name = "label278";
+            // 
+            // label279
+            // 
+            resources.ApplyResources(this.label279, "label279");
+            this.label279.BackColor = System.Drawing.Color.Transparent;
+            this.label279.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.label279.Name = "label279";
+            // 
+            // label280
+            // 
+            resources.ApplyResources(this.label280, "label280");
+            this.label280.BackColor = System.Drawing.Color.Transparent;
+            this.label280.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.label280.Name = "label280";
+            // 
+            // panel5
+            // 
+            this.panel5.Controls.Add(this.label281);
+            this.panel5.Controls.Add(this.pictureBox6);
+            resources.ApplyResources(this.panel5, "panel5");
+            this.panel5.Name = "panel5";
+            // 
+            // label281
+            // 
+            resources.ApplyResources(this.label281, "label281");
+            this.label281.Name = "label281";
+            // 
+            // pictureBox6
+            // 
+            resources.ApplyResources(this.pictureBox6, "pictureBox6");
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.TabStop = false;
+            // 
+            // diskSpeichern
+            // 
+            resources.ApplyResources(this.diskSpeichern, "diskSpeichern");
+            this.diskSpeichern.Name = "diskSpeichern";
+            this.diskSpeichern.UseVisualStyleBackColor = true;
+            // 
+            // trackBar1
+            // 
+            this.trackBar1.BackColor = System.Drawing.SystemColors.Control;
+            resources.ApplyResources(this.trackBar1, "trackBar1");
+            this.trackBar1.Name = "trackBar1";
+            this.trackBar1.Value = 5;
+            // 
+            // tab_schicht
+            // 
+            this.tab_schicht.BackColor = System.Drawing.Color.Transparent;
+            this.tab_schicht.Controls.Add(this.LabelSchichten);
+            this.tab_schicht.Controls.Add(this.panel6);
+            this.tab_schicht.Controls.Add(this.numericUpDown2);
+            this.tab_schicht.Controls.Add(this.numericUpDown1);
+            this.tab_schicht.Controls.Add(this.btn_schicht_save);
+            this.tab_schicht.Controls.Add(this.lbl_3schicht);
+            this.tab_schicht.Controls.Add(this.lbl_2schicht);
+            resources.ApplyResources(this.tab_schicht, "tab_schicht");
+            this.tab_schicht.Name = "tab_schicht";
+            // 
+            // LabelSchichten
+            // 
+            resources.ApplyResources(this.LabelSchichten, "LabelSchichten");
+            this.LabelSchichten.Name = "LabelSchichten";
+            // 
+            // panel6
+            // 
+            this.panel6.Controls.Add(this.label282);
+            this.panel6.Controls.Add(this.pictureBox7);
+            resources.ApplyResources(this.panel6, "panel6");
+            this.panel6.Name = "panel6";
+            // 
+            // label282
+            // 
+            resources.ApplyResources(this.label282, "label282");
+            this.label282.Name = "label282";
+            // 
+            // pictureBox7
+            // 
+            resources.ApplyResources(this.pictureBox7, "pictureBox7");
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.TabStop = false;
+            // 
+            // numericUpDown2
+            // 
+            this.numericUpDown2.Increment = new decimal(new int[] {
+            50,
+            0,
+            0,
+            0});
+            resources.ApplyResources(this.numericUpDown2, "numericUpDown2");
+            this.numericUpDown2.Maximum = new decimal(new int[] {
+            6000,
+            0,
+            0,
+            0});
+            this.numericUpDown2.Minimum = new decimal(new int[] {
+            4800,
+            0,
+            0,
+            0});
+            this.numericUpDown2.Name = "numericUpDown2";
+            this.numericUpDown2.TabStop = false;
+            this.numericUpDown2.Value = new decimal(new int[] {
+            6000,
+            0,
+            0,
+            0});
+            // 
+            // numericUpDown1
+            // 
+            this.numericUpDown1.Increment = new decimal(new int[] {
+            50,
+            0,
+            0,
+            0});
+            resources.ApplyResources(this.numericUpDown1, "numericUpDown1");
+            this.numericUpDown1.Maximum = new decimal(new int[] {
+            3600,
+            0,
+            0,
+            0});
+            this.numericUpDown1.Minimum = new decimal(new int[] {
+            2400,
+            0,
+            0,
+            0});
+            this.numericUpDown1.Name = "numericUpDown1";
+            this.numericUpDown1.TabStop = false;
+            this.numericUpDown1.Value = new decimal(new int[] {
+            3600,
+            0,
+            0,
+            0});
+            // 
+            // btn_schicht_save
+            // 
+            resources.ApplyResources(this.btn_schicht_save, "btn_schicht_save");
+            this.btn_schicht_save.Name = "btn_schicht_save";
+            this.btn_schicht_save.UseVisualStyleBackColor = true;
+            // 
+            // lbl_3schicht
+            // 
+            resources.ApplyResources(this.lbl_3schicht, "lbl_3schicht");
+            this.lbl_3schicht.Name = "lbl_3schicht";
+            // 
+            // lbl_2schicht
+            // 
+            resources.ApplyResources(this.lbl_2schicht, "lbl_2schicht");
+            this.lbl_2schicht.Name = "lbl_2schicht";
+            // 
+            // tabPage3
+            // 
+            this.tabPage3.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.tabPage3.Controls.Add(this.radioButton2);
+            this.tabPage3.Controls.Add(this.radioButton1);
+            this.tabPage3.Controls.Add(this.textBox1);
+            resources.ApplyResources(this.tabPage3, "tabPage3");
+            this.tabPage3.Name = "tabPage3";
+            // 
+            // radioButton2
+            // 
+            resources.ApplyResources(this.radioButton2, "radioButton2");
+            this.radioButton2.Name = "radioButton2";
+            this.helpProvider1.SetShowHelp(this.radioButton2, ((bool)(resources.GetObject("radioButton2.ShowHelp"))));
+            this.radioButton2.UseVisualStyleBackColor = true;
+            this.radioButton2.Click += new System.EventHandler(this.einstellungen_radioButton2_CheckedChanged_Click);
+            // 
+            // radioButton1
+            // 
+            resources.ApplyResources(this.radioButton1, "radioButton1");
+            this.radioButton1.Checked = true;
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.TabStop = true;
+            this.radioButton1.UseVisualStyleBackColor = true;
+            this.radioButton1.Click += new System.EventHandler(this.einstellungen_radioButton1_CheckedChanged_Click);
+            // 
+            // textBox1
+            // 
+            this.textBox1.BackColor = System.Drawing.Color.WhiteSmoke;
+            resources.ApplyResources(this.textBox1, "textBox1");
+            this.textBox1.Name = "textBox1";
+            this.textBox1.TextChanged += new System.EventHandler(this.einstellungen_textBox1_TextChanged);
+            // 
+            // tabPage4
+            // 
+            this.tabPage4.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.tabPage4.Controls.Add(this.button2);
+            this.tabPage4.Controls.Add(this.button1);
+            resources.ApplyResources(this.tabPage4, "tabPage4");
+            this.tabPage4.Name = "tabPage4";
+            // 
+            // button2
+            // 
+            resources.ApplyResources(this.button2, "button2");
+            this.button2.Name = "button2";
+            this.helpProvider1.SetShowHelp(this.button2, ((bool)(resources.GetObject("button2.ShowHelp"))));
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.einstellungen_button2_Click);
+            // 
+            // button1
+            // 
+            resources.ApplyResources(this.button1, "button1");
+            this.button1.Name = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.einstellungen_button1_Click);
+            // 
+            // tabPage5
+            // 
+            this.tabPage5.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.tabPage5.Controls.Add(this.button3);
+            resources.ApplyResources(this.tabPage5, "tabPage5");
+            this.tabPage5.Name = "tabPage5";
+            // 
+            // button3
+            // 
+            resources.ApplyResources(this.button3, "button3");
+            this.button3.Name = "button3";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.einstellungen_button3_Click);
+            // 
             // openFileDialog
             // 
             this.openFileDialog.FileName = "openFileDialog";
@@ -7077,6 +7825,78 @@
             // 
             resources.ApplyResources(this.helpProvider1, "helpProvider1");
             // 
+            // button_nav_2
+            // 
+            this.button_nav_2.BackColor = System.Drawing.SystemColors.ButtonFace;
+            resources.ApplyResources(this.button_nav_2, "button_nav_2");
+            this.button_nav_2.Name = "button_nav_2";
+            this.helpProvider1.SetShowHelp(this.button_nav_2, ((bool)(resources.GetObject("button_nav_2.ShowHelp"))));
+            this.button_nav_2.UseVisualStyleBackColor = false;
+            this.button_nav_2.Click += new System.EventHandler(this.button_nav_2_Click);
+            // 
+            // button_nav_3
+            // 
+            this.button_nav_3.BackColor = System.Drawing.SystemColors.ButtonFace;
+            resources.ApplyResources(this.button_nav_3, "button_nav_3");
+            this.button_nav_3.Name = "button_nav_3";
+            this.helpProvider1.SetShowHelp(this.button_nav_3, ((bool)(resources.GetObject("button_nav_3.ShowHelp"))));
+            this.button_nav_3.UseVisualStyleBackColor = false;
+            this.button_nav_3.Click += new System.EventHandler(this.button_nav_3_Click);
+            // 
+            // button_nav_4
+            // 
+            this.button_nav_4.BackColor = System.Drawing.SystemColors.ButtonFace;
+            resources.ApplyResources(this.button_nav_4, "button_nav_4");
+            this.button_nav_4.Name = "button_nav_4";
+            this.helpProvider1.SetShowHelp(this.button_nav_4, ((bool)(resources.GetObject("button_nav_4.ShowHelp"))));
+            this.button_nav_4.UseVisualStyleBackColor = false;
+            this.button_nav_4.Click += new System.EventHandler(this.button_nav_4_Click);
+            // 
+            // button_nav_5
+            // 
+            this.button_nav_5.BackColor = System.Drawing.SystemColors.ButtonFace;
+            resources.ApplyResources(this.button_nav_5, "button_nav_5");
+            this.button_nav_5.Name = "button_nav_5";
+            this.helpProvider1.SetShowHelp(this.button_nav_5, ((bool)(resources.GetObject("button_nav_5.ShowHelp"))));
+            this.button_nav_5.UseVisualStyleBackColor = false;
+            this.button_nav_5.Click += new System.EventHandler(this.button_nav_5_Click);
+            // 
+            // button__nav_6
+            // 
+            this.button__nav_6.BackColor = System.Drawing.SystemColors.ButtonFace;
+            resources.ApplyResources(this.button__nav_6, "button__nav_6");
+            this.button__nav_6.Name = "button__nav_6";
+            this.helpProvider1.SetShowHelp(this.button__nav_6, ((bool)(resources.GetObject("button__nav_6.ShowHelp"))));
+            this.button__nav_6.UseVisualStyleBackColor = false;
+            this.button__nav_6.Click += new System.EventHandler(this.button_nav_6_Click);
+            // 
+            // button_nav_7
+            // 
+            this.button_nav_7.BackColor = System.Drawing.SystemColors.ButtonFace;
+            resources.ApplyResources(this.button_nav_7, "button_nav_7");
+            this.button_nav_7.Name = "button_nav_7";
+            this.helpProvider1.SetShowHelp(this.button_nav_7, ((bool)(resources.GetObject("button_nav_7.ShowHelp"))));
+            this.button_nav_7.UseVisualStyleBackColor = false;
+            this.button_nav_7.Click += new System.EventHandler(this.button_nav_7_Click);
+            // 
+            // button_nav_8
+            // 
+            this.button_nav_8.BackColor = System.Drawing.SystemColors.ButtonFace;
+            resources.ApplyResources(this.button_nav_8, "button_nav_8");
+            this.button_nav_8.Name = "button_nav_8";
+            this.helpProvider1.SetShowHelp(this.button_nav_8, ((bool)(resources.GetObject("button_nav_8.ShowHelp"))));
+            this.button_nav_8.UseVisualStyleBackColor = false;
+            this.button_nav_8.Click += new System.EventHandler(this.button_nav_8_Click);
+            // 
+            // button_nav_einstellungen
+            // 
+            this.button_nav_einstellungen.BackColor = System.Drawing.SystemColors.ButtonFace;
+            resources.ApplyResources(this.button_nav_einstellungen, "button_nav_einstellungen");
+            this.button_nav_einstellungen.Name = "button_nav_einstellungen";
+            this.helpProvider1.SetShowHelp(this.button_nav_einstellungen, ((bool)(resources.GetObject("button_nav_einstellungen.ShowHelp"))));
+            this.button_nav_einstellungen.UseVisualStyleBackColor = false;
+            this.button_nav_einstellungen.Click += new System.EventHandler(this.button_nav_einstellungen_Click);
+            // 
             // imageListPlusMinus
             // 
             this.imageListPlusMinus.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageListPlusMinus.ImageStream")));
@@ -7090,21 +7910,46 @@
             this.timer1.Interval = 5000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // NavPanel
+            // 
+            this.NavPanel.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.NavPanel.Controls.Add(this.button_nav_einstellungen);
+            this.NavPanel.Controls.Add(this.button_nav_8);
+            this.NavPanel.Controls.Add(this.button_nav_7);
+            this.NavPanel.Controls.Add(this.button__nav_6);
+            this.NavPanel.Controls.Add(this.button_nav_5);
+            this.NavPanel.Controls.Add(this.button_nav_4);
+            this.NavPanel.Controls.Add(this.button_nav_3);
+            this.NavPanel.Controls.Add(this.button_nav_2);
+            this.NavPanel.Controls.Add(this.nav_button_1);
+            resources.ApplyResources(this.NavPanel, "NavPanel");
+            this.NavPanel.Name = "NavPanel";
+            // 
+            // nav_button_1
+            // 
+            this.nav_button_1.BackColor = System.Drawing.SystemColors.ButtonFace;
+            resources.ApplyResources(this.nav_button_1, "nav_button_1");
+            this.nav_button_1.Name = "nav_button_1";
+            this.nav_button_1.UseVisualStyleBackColor = false;
+            this.nav_button_1.Click += new System.EventHandler(this.nav_button_1_Click);
+            // 
             // Fahrrad
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             resources.ApplyResources(this, "$this");
+            this.Controls.Add(this.NavPanel);
             this.Controls.Add(this.info);
             this.Controls.Add(this.xml_export);
             this.Controls.Add(this.menu);
-            this.Controls.Add(this.tabs);
+            this.Controls.Add(this.tab);
             this.HelpButton = true;
             this.helpProvider1.SetHelpKeyword(this, resources.GetString("$this.HelpKeyword"));
             this.helpProvider1.SetHelpNavigator(this, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("$this.HelpNavigator"))));
             this.helpProvider1.SetHelpString(this, resources.GetString("$this.HelpString"));
             this.Name = "Fahrrad";
             this.helpProvider1.SetShowHelp(this, ((bool)(resources.GetObject("$this.ShowHelp"))));
-            this.tabs.ResumeLayout(false);
+            this.Load += new System.EventHandler(this.Fahrrad_Load);
+            this.tab.ResumeLayout(false);
             this.tab_xml.ResumeLayout(false);
             this.tab_xml.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pufferP3)).EndInit();
@@ -7168,6 +8013,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.zurueck)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.saveAenderungen)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewBestellung)).EndInit();
+            this.tab_marktplatz.ResumeLayout(false);
+            this.tab_marktplatz.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dta_e_Gesuche)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dta_e_Angebote)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dta_Gesuche)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MarketPlaceGrid)).EndInit();
             this.xmlOutput.ResumeLayout(false);
             this.panelXMLerstellen.ResumeLayout(false);
             this.panelXMLerstellen.PerformLayout();
@@ -7176,9 +8027,41 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewEinkauf)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDirekt)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewVertrieb)).EndInit();
+            this.tab_beenden.ResumeLayout(false);
+            this.tab_beenden.PerformLayout();
+            this.tab_statistik.ResumeLayout(false);
+            this.tab_statistik.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chart_statistik)).EndInit();
+            this.tab_einstellungen.ResumeLayout(false);
+            this.tabControl1.ResumeLayout(false);
+            this.tab_abweichung.ResumeLayout(false);
+            this.tab_abweichung.PerformLayout();
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBarAbweichung)).EndInit();
+            this.tab_diskount.ResumeLayout(false);
+            this.tab_diskount.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.mengeGrenze)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.diskGrenze)).EndInit();
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).EndInit();
+            this.tab_schicht.ResumeLayout(false);
+            this.panel6.ResumeLayout(false);
+            this.panel6.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            this.tabPage3.ResumeLayout(false);
+            this.tabPage3.PerformLayout();
+            this.tabPage4.ResumeLayout(false);
+            this.tabPage5.ResumeLayout(false);
             this.menu.ResumeLayout(false);
             this.menu.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.xml_export)).EndInit();
+            this.NavPanel.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -7186,7 +8069,7 @@
 
         #endregion
 
-        private System.Windows.Forms.TabControl tabs;
+        private System.Windows.Forms.TabControl tab;
         private System.Windows.Forms.TabPage tab_xml;
         private System.Windows.Forms.Button xml_suchen;
         private System.Windows.Forms.OpenFileDialog openFileDialog;
@@ -7870,6 +8753,100 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn29;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn30;
         private System.Windows.Forms.DataGridViewTextBoxColumn ueberStunden;
+        private System.Windows.Forms.Panel NavPanel;
+        private System.Windows.Forms.Button nav_button_1;
+        private System.Windows.Forms.Button button_nav_7;
+        private System.Windows.Forms.Button button__nav_6;
+        private System.Windows.Forms.Button button_nav_5;
+        private System.Windows.Forms.Button button_nav_4;
+        private System.Windows.Forms.Button button_nav_3;
+        private System.Windows.Forms.Button button_nav_2;
+        private System.Windows.Forms.Button button_nav_einstellungen;
+
+        private System.Windows.Forms.TabPage tab_beenden;
+        private System.Windows.Forms.Button button_exportXml;
+        private System.Windows.Forms.RichTextBox TextBox_xmlOutput;
+        private System.Windows.Forms.Label header_xmlExport;
+        private System.Windows.Forms.TabPage tab_statistik;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chart_statistik;
+        private System.Windows.Forms.Button button_nav_8;
+
+
+        private System.Windows.Forms.Label header_statistik;
+        private System.Windows.Forms.Label labelDragDrop;
+        private System.Windows.Forms.TabPage tab_marktplatz;
+        private System.Windows.Forms.Label lbl_eigene_Angebote;
+        private System.Windows.Forms.Label lbl_eigene_Gesuche;
+        private System.Windows.Forms.Label lbl_Gesuche;
+        private System.Windows.Forms.Label lbl_Angebote;
+        private System.Windows.Forms.DataGridView dta_e_Gesuche;
+        private System.Windows.Forms.DataGridView dta_e_Angebote;
+        private System.Windows.Forms.DataGridView dta_Gesuche;
+        private System.Windows.Forms.DataGridView MarketPlaceGrid;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn42;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn43;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn44;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn45;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn38;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn39;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn40;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn41;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn34;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn35;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn36;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn37;
+        private System.Windows.Forms.DataGridViewTextBoxColumn verkäufer;
+        private System.Windows.Forms.DataGridViewTextBoxColumn artikel;
+        private System.Windows.Forms.DataGridViewTextBoxColumn angebot_menge;
+        private System.Windows.Forms.DataGridViewTextBoxColumn preis;
+        private System.Windows.Forms.TabPage tab_einstellungen;
+        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TabPage tab_abweichung;
+        private System.Windows.Forms.Label LabelAbweichung;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Label lbl_info;
+        private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.Label lbl_100;
+        private System.Windows.Forms.Label lbl_50;
+        private System.Windows.Forms.Button btn_ok;
+        private System.Windows.Forms.Label lbl_10;
+        private System.Windows.Forms.TrackBar trackBarAbweichung;
+        private System.Windows.Forms.TabPage tab_diskount;
+        private System.Windows.Forms.Label LabelDiskont;
+        private System.Windows.Forms.Label label273;
+        private System.Windows.Forms.NumericUpDown mengeGrenze;
+        private System.Windows.Forms.NumericUpDown diskGrenze;
+        private System.Windows.Forms.Label label276;
+        private System.Windows.Forms.Label label277;
+        private System.Windows.Forms.Label label278;
+        private System.Windows.Forms.Label label279;
+        private System.Windows.Forms.Label label280;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Label label281;
+        private System.Windows.Forms.PictureBox pictureBox6;
+        private System.Windows.Forms.Button diskSpeichern;
+        private System.Windows.Forms.TrackBar trackBar1;
+        private System.Windows.Forms.TabPage tab_schicht;
+        private System.Windows.Forms.Label LabelSchichten;
+        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Label label282;
+        private System.Windows.Forms.PictureBox pictureBox7;
+        private System.Windows.Forms.NumericUpDown numericUpDown2;
+        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.Button btn_schicht_save;
+        private System.Windows.Forms.Label lbl_3schicht;
+        private System.Windows.Forms.Label lbl_2schicht;
+        private System.Windows.Forms.TabPage tabPage3;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TabPage tabPage4;
+        private System.Windows.Forms.TabPage tabPage5;
+        private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button3;
+
+
     }
 }
 
