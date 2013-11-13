@@ -194,5 +194,11 @@ namespace ToolFahrrad_v1.Design
             XmlExport();
         }
 
+
+        private void button_nav_9_Click(object sender, EventArgs e)
+        {
+            tabs.SelectedTab = einstellungen;
+        }
+
     }
 }

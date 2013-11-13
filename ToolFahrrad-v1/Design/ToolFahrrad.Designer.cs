@@ -29,13 +29,16 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.GroupBox dragdropbox;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Fahrrad));
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.GroupBox dragdropbox;
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Fahrrad));
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.labeldragdropinfo = new System.Windows.Forms.Label();
+            this.prognoseSpeichern = new System.Windows.Forms.Button();
             this.tabs = new System.Windows.Forms.TabControl();
             this.tab_xml = new System.Windows.Forms.TabPage();
             this.prognose1 = new System.Windows.Forms.Label();
@@ -53,7 +56,6 @@
             this.xml_suchen = new System.Windows.Forms.Button();
             this.bildSpeichOk = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.prognoseSpeichern = new System.Windows.Forms.Button();
             this.upDownP33 = new System.Windows.Forms.NumericUpDown();
             this.upDownP23 = new System.Windows.Forms.NumericUpDown();
             this.upDownP13 = new System.Windows.Forms.NumericUpDown();
@@ -727,6 +729,51 @@
             this.tab_statistik = new System.Windows.Forms.TabPage();
             this.header_statistik = new System.Windows.Forms.Label();
             this.chart_statistik = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.einstellungen = new System.Windows.Forms.TabPage();
+            this.einstellungen_tabControl1 = new System.Windows.Forms.TabControl();
+            this.tab_abweichung = new System.Windows.Forms.TabPage();
+            this.LabelAbweichung = new System.Windows.Forms.Label();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.lbl_info = new System.Windows.Forms.Label();
+            this.pictureBox8 = new System.Windows.Forms.PictureBox();
+            this.lbl_100 = new System.Windows.Forms.Label();
+            this.lbl_50 = new System.Windows.Forms.Label();
+            this.btn_ok = new System.Windows.Forms.Button();
+            this.lbl_10 = new System.Windows.Forms.Label();
+            this.trackBarAbweichung = new System.Windows.Forms.TrackBar();
+            this.tab_diskount = new System.Windows.Forms.TabPage();
+            this.LabelDiskont = new System.Windows.Forms.Label();
+            this.label273 = new System.Windows.Forms.Label();
+            this.mengeGrenze = new System.Windows.Forms.NumericUpDown();
+            this.diskGrenze = new System.Windows.Forms.NumericUpDown();
+            this.label276 = new System.Windows.Forms.Label();
+            this.label279 = new System.Windows.Forms.Label();
+            this.label280 = new System.Windows.Forms.Label();
+            this.label281 = new System.Windows.Forms.Label();
+            this.label282 = new System.Windows.Forms.Label();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.label277 = new System.Windows.Forms.Label();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.diskSpeichern = new System.Windows.Forms.Button();
+            this.trackBar1 = new System.Windows.Forms.TrackBar();
+            this.tab_schicht = new System.Windows.Forms.TabPage();
+            this.LabelSchichten = new System.Windows.Forms.Label();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.label278 = new System.Windows.Forms.Label();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.btn_schicht_save = new System.Windows.Forms.Button();
+            this.lbl_3schicht = new System.Windows.Forms.Label();
+            this.lbl_2schicht = new System.Windows.Forms.Label();
+            this.einstellungen_tabPage4 = new System.Windows.Forms.TabPage();
+            this.einstellungen_radioButton2 = new System.Windows.Forms.RadioButton();
+            this.einstellungen_radioButton1 = new System.Windows.Forms.RadioButton();
+            this.einstellungen_textBox1 = new System.Windows.Forms.TextBox();
+            this.einstellungen_tabPage5 = new System.Windows.Forms.TabPage();
+            this.einstellungen_button3 = new System.Windows.Forms.Button();
+            this.einstellungen_button2 = new System.Windows.Forms.Button();
+            this.einstellungen_button1 = new System.Windows.Forms.Button();
             this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
             this.menu = new System.Windows.Forms.MenuStrip();
             this.dateiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -756,14 +803,16 @@
             this.button__nav_6 = new System.Windows.Forms.Button();
             this.button_nav_7 = new System.Windows.Forms.Button();
             this.button_nav_8 = new System.Windows.Forms.Button();
+            this.button_nav_9 = new System.Windows.Forms.Button();
             this.imageListPlusMinus = new System.Windows.Forms.ImageList(this.components);
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.NavPanel = new System.Windows.Forms.Panel();
             this.nav_button_1 = new System.Windows.Forms.Button();
-            this.labeldragdropinfo = new System.Windows.Forms.Label();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             dragdropbox = new System.Windows.Forms.GroupBox();
+            dragdropbox.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.tabs.SuspendLayout();
             this.tab_xml.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pufferP3)).BeginInit();
@@ -837,12 +886,62 @@
             this.tab_beenden.SuspendLayout();
             this.tab_statistik.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart_statistik)).BeginInit();
+            this.einstellungen.SuspendLayout();
+            this.einstellungen_tabControl1.SuspendLayout();
+            this.tab_abweichung.SuspendLayout();
+            this.panel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBarAbweichung)).BeginInit();
+            this.tab_diskount.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.mengeGrenze)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.diskGrenze)).BeginInit();
+            this.panel6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
+            this.tab_schicht.SuspendLayout();
+            this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            this.einstellungen_tabPage4.SuspendLayout();
+            this.einstellungen_tabPage5.SuspendLayout();
             this.menu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.xml_export)).BeginInit();
             this.NavPanel.SuspendLayout();
-            dragdropbox.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.SuspendLayout();
+            // 
+            // dragdropbox
+            // 
+            dragdropbox.Controls.Add(this.pictureBox5);
+            dragdropbox.Controls.Add(this.labeldragdropinfo);
+            dragdropbox.Controls.Add(this.prognoseSpeichern);
+            dragdropbox.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            resources.ApplyResources(dragdropbox, "dragdropbox");
+            dragdropbox.Name = "dragdropbox";
+            dragdropbox.TabStop = false;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Image = global::ToolFahrrad_v1.Properties.Resources.Down_Arrow_Icon1;
+            resources.ApplyResources(this.pictureBox5, "pictureBox5");
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.TabStop = false;
+            this.pictureBox5.Click += new System.EventHandler(this.pictureBox5_Click_1);
+            // 
+            // labeldragdropinfo
+            // 
+            resources.ApplyResources(this.labeldragdropinfo, "labeldragdropinfo");
+            this.labeldragdropinfo.Name = "labeldragdropinfo";
+            this.labeldragdropinfo.Click += new System.EventHandler(this.labeldragdropinfo_Click);
+            // 
+            // prognoseSpeichern
+            // 
+            resources.ApplyResources(this.prognoseSpeichern, "prognoseSpeichern");
+            this.prognoseSpeichern.Name = "prognoseSpeichern";
+            this.helpProvider1.SetShowHelp(this.prognoseSpeichern, ((bool)(resources.GetObject("prognoseSpeichern.ShowHelp"))));
+            this.toolTip.SetToolTip(this.prognoseSpeichern, resources.GetString("prognoseSpeichern.ToolTip"));
+            this.prognoseSpeichern.UseVisualStyleBackColor = true;
+            this.prognoseSpeichern.Click += new System.EventHandler(this.prognoseSpeichern_Click);
             // 
             // tabs
             // 
@@ -854,6 +953,7 @@
             this.tabs.Controls.Add(this.xmlOutput);
             this.tabs.Controls.Add(this.tab_beenden);
             this.tabs.Controls.Add(this.tab_statistik);
+            this.tabs.Controls.Add(this.einstellungen);
             resources.ApplyResources(this.tabs, "tabs");
             this.tabs.Name = "tabs";
             this.tabs.SelectedIndex = 0;
@@ -1056,15 +1156,6 @@
             this.pictureBox1.Name = "pictureBox1";
             this.helpProvider1.SetShowHelp(this.pictureBox1, ((bool)(resources.GetObject("pictureBox1.ShowHelp"))));
             this.pictureBox1.TabStop = false;
-            // 
-            // prognoseSpeichern
-            // 
-            resources.ApplyResources(this.prognoseSpeichern, "prognoseSpeichern");
-            this.prognoseSpeichern.Name = "prognoseSpeichern";
-            this.helpProvider1.SetShowHelp(this.prognoseSpeichern, ((bool)(resources.GetObject("prognoseSpeichern.ShowHelp"))));
-            this.toolTip.SetToolTip(this.prognoseSpeichern, resources.GetString("prognoseSpeichern.ToolTip"));
-            this.prognoseSpeichern.UseVisualStyleBackColor = true;
-            this.prognoseSpeichern.Click += new System.EventHandler(this.prognoseSpeichern_Click);
             // 
             // upDownP33
             // 
@@ -7224,6 +7315,418 @@
             this.chart_statistik.Series.Add(series1);
             this.chart_statistik.Series.Add(series2);
             // 
+            // einstellungen
+            // 
+            this.einstellungen.BackColor = System.Drawing.SystemColors.Control;
+            this.einstellungen.Controls.Add(this.einstellungen_tabControl1);
+            resources.ApplyResources(this.einstellungen, "einstellungen");
+            this.einstellungen.Name = "einstellungen";
+            // 
+            // einstellungen_tabControl1
+            // 
+            this.einstellungen_tabControl1.Controls.Add(this.tab_abweichung);
+            this.einstellungen_tabControl1.Controls.Add(this.tab_diskount);
+            this.einstellungen_tabControl1.Controls.Add(this.tab_schicht);
+            this.einstellungen_tabControl1.Controls.Add(this.einstellungen_tabPage4);
+            this.einstellungen_tabControl1.Controls.Add(this.einstellungen_tabPage5);
+            resources.ApplyResources(this.einstellungen_tabControl1, "einstellungen_tabControl1");
+            this.einstellungen_tabControl1.Name = "einstellungen_tabControl1";
+            this.einstellungen_tabControl1.SelectedIndex = 0;
+            this.helpProvider1.SetShowHelp(this.einstellungen_tabControl1, ((bool)(resources.GetObject("einstellungen_tabControl1.ShowHelp"))));
+            // 
+            // tab_abweichung
+            // 
+            this.tab_abweichung.BackColor = System.Drawing.Color.Transparent;
+            this.tab_abweichung.Controls.Add(this.LabelAbweichung);
+            this.tab_abweichung.Controls.Add(this.panel5);
+            this.tab_abweichung.Controls.Add(this.lbl_100);
+            this.tab_abweichung.Controls.Add(this.lbl_50);
+            this.tab_abweichung.Controls.Add(this.btn_ok);
+            this.tab_abweichung.Controls.Add(this.lbl_10);
+            this.tab_abweichung.Controls.Add(this.trackBarAbweichung);
+            resources.ApplyResources(this.tab_abweichung, "tab_abweichung");
+            this.tab_abweichung.Name = "tab_abweichung";
+            this.helpProvider1.SetShowHelp(this.tab_abweichung, ((bool)(resources.GetObject("tab_abweichung.ShowHelp"))));
+            // 
+            // LabelAbweichung
+            // 
+            resources.ApplyResources(this.LabelAbweichung, "LabelAbweichung");
+            this.LabelAbweichung.Name = "LabelAbweichung";
+            this.helpProvider1.SetShowHelp(this.LabelAbweichung, ((bool)(resources.GetObject("LabelAbweichung.ShowHelp"))));
+            // 
+            // panel5
+            // 
+            this.panel5.Controls.Add(this.lbl_info);
+            this.panel5.Controls.Add(this.pictureBox8);
+            resources.ApplyResources(this.panel5, "panel5");
+            this.panel5.Name = "panel5";
+            this.helpProvider1.SetShowHelp(this.panel5, ((bool)(resources.GetObject("panel5.ShowHelp"))));
+            // 
+            // lbl_info
+            // 
+            resources.ApplyResources(this.lbl_info, "lbl_info");
+            this.lbl_info.Name = "lbl_info";
+            this.helpProvider1.SetShowHelp(this.lbl_info, ((bool)(resources.GetObject("lbl_info.ShowHelp"))));
+            // 
+            // pictureBox8
+            // 
+            resources.ApplyResources(this.pictureBox8, "pictureBox8");
+            this.pictureBox8.Name = "pictureBox8";
+            this.helpProvider1.SetShowHelp(this.pictureBox8, ((bool)(resources.GetObject("pictureBox8.ShowHelp"))));
+            this.pictureBox8.TabStop = false;
+            // 
+            // lbl_100
+            // 
+            resources.ApplyResources(this.lbl_100, "lbl_100");
+            this.lbl_100.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_100.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.lbl_100.Name = "lbl_100";
+            this.helpProvider1.SetShowHelp(this.lbl_100, ((bool)(resources.GetObject("lbl_100.ShowHelp"))));
+            // 
+            // lbl_50
+            // 
+            resources.ApplyResources(this.lbl_50, "lbl_50");
+            this.lbl_50.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_50.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.lbl_50.Name = "lbl_50";
+            this.helpProvider1.SetShowHelp(this.lbl_50, ((bool)(resources.GetObject("lbl_50.ShowHelp"))));
+            // 
+            // btn_ok
+            // 
+            resources.ApplyResources(this.btn_ok, "btn_ok");
+            this.btn_ok.Name = "btn_ok";
+            this.helpProvider1.SetShowHelp(this.btn_ok, ((bool)(resources.GetObject("btn_ok.ShowHelp"))));
+            this.btn_ok.UseVisualStyleBackColor = true;
+            // 
+            // lbl_10
+            // 
+            resources.ApplyResources(this.lbl_10, "lbl_10");
+            this.lbl_10.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_10.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.lbl_10.Name = "lbl_10";
+            this.helpProvider1.SetShowHelp(this.lbl_10, ((bool)(resources.GetObject("lbl_10.ShowHelp"))));
+            // 
+            // trackBarAbweichung
+            // 
+            this.trackBarAbweichung.BackColor = System.Drawing.SystemColors.Control;
+            resources.ApplyResources(this.trackBarAbweichung, "trackBarAbweichung");
+            this.trackBarAbweichung.Name = "trackBarAbweichung";
+            this.helpProvider1.SetShowHelp(this.trackBarAbweichung, ((bool)(resources.GetObject("trackBarAbweichung.ShowHelp"))));
+            this.trackBarAbweichung.Value = 5;
+            // 
+            // tab_diskount
+            // 
+            this.tab_diskount.BackColor = System.Drawing.Color.Transparent;
+            this.tab_diskount.Controls.Add(this.LabelDiskont);
+            this.tab_diskount.Controls.Add(this.label273);
+            this.tab_diskount.Controls.Add(this.mengeGrenze);
+            this.tab_diskount.Controls.Add(this.diskGrenze);
+            this.tab_diskount.Controls.Add(this.label276);
+            this.tab_diskount.Controls.Add(this.label279);
+            this.tab_diskount.Controls.Add(this.label280);
+            this.tab_diskount.Controls.Add(this.label281);
+            this.tab_diskount.Controls.Add(this.label282);
+            this.tab_diskount.Controls.Add(this.panel6);
+            this.tab_diskount.Controls.Add(this.diskSpeichern);
+            this.tab_diskount.Controls.Add(this.trackBar1);
+            resources.ApplyResources(this.tab_diskount, "tab_diskount");
+            this.tab_diskount.Name = "tab_diskount";
+            this.helpProvider1.SetShowHelp(this.tab_diskount, ((bool)(resources.GetObject("tab_diskount.ShowHelp"))));
+            // 
+            // LabelDiskont
+            // 
+            resources.ApplyResources(this.LabelDiskont, "LabelDiskont");
+            this.LabelDiskont.Name = "LabelDiskont";
+            this.helpProvider1.SetShowHelp(this.LabelDiskont, ((bool)(resources.GetObject("LabelDiskont.ShowHelp"))));
+            // 
+            // label273
+            // 
+            resources.ApplyResources(this.label273, "label273");
+            this.label273.Name = "label273";
+            this.helpProvider1.SetShowHelp(this.label273, ((bool)(resources.GetObject("label273.ShowHelp"))));
+            // 
+            // mengeGrenze
+            // 
+            resources.ApplyResources(this.mengeGrenze, "mengeGrenze");
+            this.mengeGrenze.Minimum = new decimal(new int[] {
+            2,
+            0,
+            0,
+            0});
+            this.mengeGrenze.Name = "mengeGrenze";
+            this.helpProvider1.SetShowHelp(this.mengeGrenze, ((bool)(resources.GetObject("mengeGrenze.ShowHelp"))));
+            this.mengeGrenze.Value = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            // 
+            // diskGrenze
+            // 
+            resources.ApplyResources(this.diskGrenze, "diskGrenze");
+            this.diskGrenze.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.diskGrenze.Name = "diskGrenze";
+            this.helpProvider1.SetShowHelp(this.diskGrenze, ((bool)(resources.GetObject("diskGrenze.ShowHelp"))));
+            this.diskGrenze.Value = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
+            // 
+            // label276
+            // 
+            resources.ApplyResources(this.label276, "label276");
+            this.label276.Name = "label276";
+            this.helpProvider1.SetShowHelp(this.label276, ((bool)(resources.GetObject("label276.ShowHelp"))));
+            // 
+            // label279
+            // 
+            resources.ApplyResources(this.label279, "label279");
+            this.label279.Name = "label279";
+            this.helpProvider1.SetShowHelp(this.label279, ((bool)(resources.GetObject("label279.ShowHelp"))));
+            // 
+            // label280
+            // 
+            resources.ApplyResources(this.label280, "label280");
+            this.label280.BackColor = System.Drawing.Color.Transparent;
+            this.label280.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.label280.Name = "label280";
+            this.helpProvider1.SetShowHelp(this.label280, ((bool)(resources.GetObject("label280.ShowHelp"))));
+            // 
+            // label281
+            // 
+            resources.ApplyResources(this.label281, "label281");
+            this.label281.BackColor = System.Drawing.Color.Transparent;
+            this.label281.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.label281.Name = "label281";
+            this.helpProvider1.SetShowHelp(this.label281, ((bool)(resources.GetObject("label281.ShowHelp"))));
+            // 
+            // label282
+            // 
+            resources.ApplyResources(this.label282, "label282");
+            this.label282.BackColor = System.Drawing.Color.Transparent;
+            this.label282.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.label282.Name = "label282";
+            this.helpProvider1.SetShowHelp(this.label282, ((bool)(resources.GetObject("label282.ShowHelp"))));
+            // 
+            // panel6
+            // 
+            this.panel6.Controls.Add(this.label277);
+            this.panel6.Controls.Add(this.pictureBox6);
+            resources.ApplyResources(this.panel6, "panel6");
+            this.panel6.Name = "panel6";
+            this.helpProvider1.SetShowHelp(this.panel6, ((bool)(resources.GetObject("panel6.ShowHelp"))));
+            // 
+            // label277
+            // 
+            resources.ApplyResources(this.label277, "label277");
+            this.label277.Name = "label277";
+            this.helpProvider1.SetShowHelp(this.label277, ((bool)(resources.GetObject("label277.ShowHelp"))));
+            // 
+            // pictureBox6
+            // 
+            resources.ApplyResources(this.pictureBox6, "pictureBox6");
+            this.pictureBox6.Name = "pictureBox6";
+            this.helpProvider1.SetShowHelp(this.pictureBox6, ((bool)(resources.GetObject("pictureBox6.ShowHelp"))));
+            this.pictureBox6.TabStop = false;
+            // 
+            // diskSpeichern
+            // 
+            resources.ApplyResources(this.diskSpeichern, "diskSpeichern");
+            this.diskSpeichern.Name = "diskSpeichern";
+            this.helpProvider1.SetShowHelp(this.diskSpeichern, ((bool)(resources.GetObject("diskSpeichern.ShowHelp"))));
+            this.diskSpeichern.UseVisualStyleBackColor = true;
+            // 
+            // trackBar1
+            // 
+            this.trackBar1.BackColor = System.Drawing.SystemColors.Control;
+            resources.ApplyResources(this.trackBar1, "trackBar1");
+            this.trackBar1.Name = "trackBar1";
+            this.helpProvider1.SetShowHelp(this.trackBar1, ((bool)(resources.GetObject("trackBar1.ShowHelp"))));
+            this.trackBar1.Value = 5;
+            // 
+            // tab_schicht
+            // 
+            this.tab_schicht.BackColor = System.Drawing.Color.Transparent;
+            this.tab_schicht.Controls.Add(this.LabelSchichten);
+            this.tab_schicht.Controls.Add(this.panel4);
+            this.tab_schicht.Controls.Add(this.numericUpDown2);
+            this.tab_schicht.Controls.Add(this.numericUpDown1);
+            this.tab_schicht.Controls.Add(this.btn_schicht_save);
+            this.tab_schicht.Controls.Add(this.lbl_3schicht);
+            this.tab_schicht.Controls.Add(this.lbl_2schicht);
+            resources.ApplyResources(this.tab_schicht, "tab_schicht");
+            this.tab_schicht.Name = "tab_schicht";
+            this.helpProvider1.SetShowHelp(this.tab_schicht, ((bool)(resources.GetObject("tab_schicht.ShowHelp"))));
+            // 
+            // LabelSchichten
+            // 
+            resources.ApplyResources(this.LabelSchichten, "LabelSchichten");
+            this.LabelSchichten.Name = "LabelSchichten";
+            this.helpProvider1.SetShowHelp(this.LabelSchichten, ((bool)(resources.GetObject("LabelSchichten.ShowHelp"))));
+            // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.label278);
+            this.panel4.Controls.Add(this.pictureBox7);
+            resources.ApplyResources(this.panel4, "panel4");
+            this.panel4.Name = "panel4";
+            this.helpProvider1.SetShowHelp(this.panel4, ((bool)(resources.GetObject("panel4.ShowHelp"))));
+            // 
+            // label278
+            // 
+            resources.ApplyResources(this.label278, "label278");
+            this.label278.Name = "label278";
+            this.helpProvider1.SetShowHelp(this.label278, ((bool)(resources.GetObject("label278.ShowHelp"))));
+            // 
+            // pictureBox7
+            // 
+            resources.ApplyResources(this.pictureBox7, "pictureBox7");
+            this.pictureBox7.Name = "pictureBox7";
+            this.helpProvider1.SetShowHelp(this.pictureBox7, ((bool)(resources.GetObject("pictureBox7.ShowHelp"))));
+            this.pictureBox7.TabStop = false;
+            // 
+            // numericUpDown2
+            // 
+            this.numericUpDown2.Increment = new decimal(new int[] {
+            50,
+            0,
+            0,
+            0});
+            resources.ApplyResources(this.numericUpDown2, "numericUpDown2");
+            this.numericUpDown2.Maximum = new decimal(new int[] {
+            6000,
+            0,
+            0,
+            0});
+            this.numericUpDown2.Minimum = new decimal(new int[] {
+            4800,
+            0,
+            0,
+            0});
+            this.numericUpDown2.Name = "numericUpDown2";
+            this.helpProvider1.SetShowHelp(this.numericUpDown2, ((bool)(resources.GetObject("numericUpDown2.ShowHelp"))));
+            this.numericUpDown2.TabStop = false;
+            this.numericUpDown2.Value = new decimal(new int[] {
+            6000,
+            0,
+            0,
+            0});
+            // 
+            // numericUpDown1
+            // 
+            this.numericUpDown1.Increment = new decimal(new int[] {
+            50,
+            0,
+            0,
+            0});
+            resources.ApplyResources(this.numericUpDown1, "numericUpDown1");
+            this.numericUpDown1.Maximum = new decimal(new int[] {
+            3600,
+            0,
+            0,
+            0});
+            this.numericUpDown1.Minimum = new decimal(new int[] {
+            2400,
+            0,
+            0,
+            0});
+            this.numericUpDown1.Name = "numericUpDown1";
+            this.helpProvider1.SetShowHelp(this.numericUpDown1, ((bool)(resources.GetObject("numericUpDown1.ShowHelp"))));
+            this.numericUpDown1.TabStop = false;
+            this.numericUpDown1.Value = new decimal(new int[] {
+            3600,
+            0,
+            0,
+            0});
+            // 
+            // btn_schicht_save
+            // 
+            resources.ApplyResources(this.btn_schicht_save, "btn_schicht_save");
+            this.btn_schicht_save.Name = "btn_schicht_save";
+            this.helpProvider1.SetShowHelp(this.btn_schicht_save, ((bool)(resources.GetObject("btn_schicht_save.ShowHelp"))));
+            this.btn_schicht_save.UseVisualStyleBackColor = true;
+            // 
+            // lbl_3schicht
+            // 
+            resources.ApplyResources(this.lbl_3schicht, "lbl_3schicht");
+            this.lbl_3schicht.Name = "lbl_3schicht";
+            this.helpProvider1.SetShowHelp(this.lbl_3schicht, ((bool)(resources.GetObject("lbl_3schicht.ShowHelp"))));
+            // 
+            // lbl_2schicht
+            // 
+            resources.ApplyResources(this.lbl_2schicht, "lbl_2schicht");
+            this.lbl_2schicht.Name = "lbl_2schicht";
+            this.helpProvider1.SetShowHelp(this.lbl_2schicht, ((bool)(resources.GetObject("lbl_2schicht.ShowHelp"))));
+            // 
+            // einstellungen_tabPage4
+            // 
+            this.einstellungen_tabPage4.BackColor = System.Drawing.SystemColors.Control;
+            this.einstellungen_tabPage4.Controls.Add(this.einstellungen_radioButton2);
+            this.einstellungen_tabPage4.Controls.Add(this.einstellungen_radioButton1);
+            this.einstellungen_tabPage4.Controls.Add(this.einstellungen_textBox1);
+            resources.ApplyResources(this.einstellungen_tabPage4, "einstellungen_tabPage4");
+            this.einstellungen_tabPage4.Name = "einstellungen_tabPage4";
+            this.helpProvider1.SetShowHelp(this.einstellungen_tabPage4, ((bool)(resources.GetObject("einstellungen_tabPage4.ShowHelp"))));
+            // 
+            // einstellungen_radioButton2
+            // 
+            resources.ApplyResources(this.einstellungen_radioButton2, "einstellungen_radioButton2");
+            this.einstellungen_radioButton2.Name = "einstellungen_radioButton2";
+            this.helpProvider1.SetShowHelp(this.einstellungen_radioButton2, ((bool)(resources.GetObject("einstellungen_radioButton2.ShowHelp"))));
+            this.einstellungen_radioButton2.UseVisualStyleBackColor = true;
+            // 
+            // einstellungen_radioButton1
+            // 
+            resources.ApplyResources(this.einstellungen_radioButton1, "einstellungen_radioButton1");
+            this.einstellungen_radioButton1.Checked = true;
+            this.einstellungen_radioButton1.Name = "einstellungen_radioButton1";
+            this.helpProvider1.SetShowHelp(this.einstellungen_radioButton1, ((bool)(resources.GetObject("einstellungen_radioButton1.ShowHelp"))));
+            this.einstellungen_radioButton1.TabStop = true;
+            this.einstellungen_radioButton1.UseVisualStyleBackColor = true;
+            // 
+            // einstellungen_textBox1
+            // 
+            this.einstellungen_textBox1.BackColor = System.Drawing.SystemColors.Control;
+            resources.ApplyResources(this.einstellungen_textBox1, "einstellungen_textBox1");
+            this.einstellungen_textBox1.Name = "einstellungen_textBox1";
+            this.helpProvider1.SetShowHelp(this.einstellungen_textBox1, ((bool)(resources.GetObject("einstellungen_textBox1.ShowHelp"))));
+            // 
+            // einstellungen_tabPage5
+            // 
+            this.einstellungen_tabPage5.BackColor = System.Drawing.SystemColors.Control;
+            this.einstellungen_tabPage5.Controls.Add(this.einstellungen_button3);
+            this.einstellungen_tabPage5.Controls.Add(this.einstellungen_button2);
+            this.einstellungen_tabPage5.Controls.Add(this.einstellungen_button1);
+            resources.ApplyResources(this.einstellungen_tabPage5, "einstellungen_tabPage5");
+            this.einstellungen_tabPage5.Name = "einstellungen_tabPage5";
+            this.helpProvider1.SetShowHelp(this.einstellungen_tabPage5, ((bool)(resources.GetObject("einstellungen_tabPage5.ShowHelp"))));
+            // 
+            // einstellungen_button3
+            // 
+            resources.ApplyResources(this.einstellungen_button3, "einstellungen_button3");
+            this.einstellungen_button3.Name = "einstellungen_button3";
+            this.helpProvider1.SetShowHelp(this.einstellungen_button3, ((bool)(resources.GetObject("einstellungen_button3.ShowHelp"))));
+            this.einstellungen_button3.UseVisualStyleBackColor = true;
+            // 
+            // einstellungen_button2
+            // 
+            resources.ApplyResources(this.einstellungen_button2, "einstellungen_button2");
+            this.einstellungen_button2.Name = "einstellungen_button2";
+            this.helpProvider1.SetShowHelp(this.einstellungen_button2, ((bool)(resources.GetObject("einstellungen_button2.ShowHelp"))));
+            this.einstellungen_button2.UseVisualStyleBackColor = true;
+            // 
+            // einstellungen_button1
+            // 
+            resources.ApplyResources(this.einstellungen_button1, "einstellungen_button1");
+            this.einstellungen_button1.Name = "einstellungen_button1";
+            this.helpProvider1.SetShowHelp(this.einstellungen_button1, ((bool)(resources.GetObject("einstellungen_button1.ShowHelp"))));
+            this.einstellungen_button1.UseVisualStyleBackColor = true;
+            // 
             // openFileDialog
             // 
             this.openFileDialog.FileName = "openFileDialog";
@@ -7434,6 +7937,15 @@
             this.button_nav_8.UseVisualStyleBackColor = false;
             this.button_nav_8.Click += new System.EventHandler(this.button_nav_8_Click);
             // 
+            // button_nav_9
+            // 
+            this.button_nav_9.BackColor = System.Drawing.SystemColors.ButtonFace;
+            resources.ApplyResources(this.button_nav_9, "button_nav_9");
+            this.button_nav_9.Name = "button_nav_9";
+            this.helpProvider1.SetShowHelp(this.button_nav_9, ((bool)(resources.GetObject("button_nav_9.ShowHelp"))));
+            this.button_nav_9.UseVisualStyleBackColor = false;
+            this.button_nav_9.Click += new System.EventHandler(this.button_nav_9_Click);
+            // 
             // imageListPlusMinus
             // 
             this.imageListPlusMinus.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageListPlusMinus.ImageStream")));
@@ -7450,6 +7962,7 @@
             // NavPanel
             // 
             this.NavPanel.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.NavPanel.Controls.Add(this.button_nav_9);
             this.NavPanel.Controls.Add(this.button_nav_8);
             this.NavPanel.Controls.Add(this.button_nav_7);
             this.NavPanel.Controls.Add(this.button__nav_6);
@@ -7469,30 +7982,6 @@
             this.nav_button_1.UseVisualStyleBackColor = false;
             this.nav_button_1.Click += new System.EventHandler(this.nav_button_1_Click);
             // 
-            // dragdropbox
-            // 
-            dragdropbox.Controls.Add(this.pictureBox5);
-            dragdropbox.Controls.Add(this.labeldragdropinfo);
-            dragdropbox.Controls.Add(this.prognoseSpeichern);
-            dragdropbox.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            resources.ApplyResources(dragdropbox, "dragdropbox");
-            dragdropbox.Name = "dragdropbox";
-            dragdropbox.TabStop = false;
-            // 
-            // labeldragdropinfo
-            // 
-            resources.ApplyResources(this.labeldragdropinfo, "labeldragdropinfo");
-            this.labeldragdropinfo.Name = "labeldragdropinfo";
-            this.labeldragdropinfo.Click += new System.EventHandler(this.labeldragdropinfo_Click);
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.Image = global::ToolFahrrad_v1.Properties.Resources.Down_Arrow_Icon1;
-            resources.ApplyResources(this.pictureBox5, "pictureBox5");
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.TabStop = false;
-            this.pictureBox5.Click += new System.EventHandler(this.pictureBox5_Click_1);
-            // 
             // Fahrrad
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -7509,6 +7998,9 @@
             this.Name = "Fahrrad";
             this.helpProvider1.SetShowHelp(this, ((bool)(resources.GetObject("$this.ShowHelp"))));
             this.Load += new System.EventHandler(this.Fahrrad_Load);
+            dragdropbox.ResumeLayout(false);
+            dragdropbox.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.tabs.ResumeLayout(false);
             this.tab_xml.ResumeLayout(false);
             this.tab_xml.PerformLayout();
@@ -7592,13 +8084,35 @@
             this.tab_statistik.ResumeLayout(false);
             this.tab_statistik.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart_statistik)).EndInit();
+            this.einstellungen.ResumeLayout(false);
+            this.einstellungen_tabControl1.ResumeLayout(false);
+            this.tab_abweichung.ResumeLayout(false);
+            this.tab_abweichung.PerformLayout();
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBarAbweichung)).EndInit();
+            this.tab_diskount.ResumeLayout(false);
+            this.tab_diskount.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.mengeGrenze)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.diskGrenze)).EndInit();
+            this.panel6.ResumeLayout(false);
+            this.panel6.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).EndInit();
+            this.tab_schicht.ResumeLayout(false);
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            this.einstellungen_tabPage4.ResumeLayout(false);
+            this.einstellungen_tabPage4.PerformLayout();
+            this.einstellungen_tabPage5.ResumeLayout(false);
             this.menu.ResumeLayout(false);
             this.menu.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.xml_export)).EndInit();
             this.NavPanel.ResumeLayout(false);
-            dragdropbox.ResumeLayout(false);
-            dragdropbox.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -8336,6 +8850,53 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn preis;
         private System.Windows.Forms.Label labeldragdropinfo;
         private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.TabPage einstellungen;
+        private System.Windows.Forms.TabControl einstellungen_tabControl1;
+        private System.Windows.Forms.TabPage tab_abweichung;
+        private System.Windows.Forms.Label LabelAbweichung;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Label lbl_info;
+        private System.Windows.Forms.PictureBox pictureBox8;
+        private System.Windows.Forms.Label lbl_100;
+        private System.Windows.Forms.Label lbl_50;
+        private System.Windows.Forms.Button btn_ok;
+        private System.Windows.Forms.Label lbl_10;
+        private System.Windows.Forms.TrackBar trackBarAbweichung;
+        private System.Windows.Forms.TabPage tab_diskount;
+        private System.Windows.Forms.Label LabelDiskont;
+        private System.Windows.Forms.Label label273;
+        private System.Windows.Forms.NumericUpDown mengeGrenze;
+        private System.Windows.Forms.NumericUpDown diskGrenze;
+        private System.Windows.Forms.Label label276;
+        private System.Windows.Forms.Label label279;
+        private System.Windows.Forms.Label label280;
+        private System.Windows.Forms.Label label281;
+        private System.Windows.Forms.Label label282;
+        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Label label277;
+        private System.Windows.Forms.PictureBox pictureBox6;
+        private System.Windows.Forms.Button diskSpeichern;
+        private System.Windows.Forms.TrackBar trackBar1;
+        private System.Windows.Forms.TabPage tab_schicht;
+        private System.Windows.Forms.Label LabelSchichten;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Label label278;
+        private System.Windows.Forms.PictureBox pictureBox7;
+        private System.Windows.Forms.NumericUpDown numericUpDown2;
+        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.Button btn_schicht_save;
+        private System.Windows.Forms.Label lbl_3schicht;
+        private System.Windows.Forms.Label lbl_2schicht;
+        private System.Windows.Forms.TabPage einstellungen_tabPage4;
+        private System.Windows.Forms.RadioButton einstellungen_radioButton2;
+        private System.Windows.Forms.RadioButton einstellungen_radioButton1;
+        private System.Windows.Forms.TextBox einstellungen_textBox1;
+        private System.Windows.Forms.TabPage einstellungen_tabPage5;
+        private System.Windows.Forms.Button einstellungen_button3;
+        private System.Windows.Forms.Button einstellungen_button2;
+        private System.Windows.Forms.Button einstellungen_button1;
+        private System.Windows.Forms.Button button_nav_9;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
 
     }
 }
