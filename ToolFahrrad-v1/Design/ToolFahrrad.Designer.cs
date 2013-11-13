@@ -29,15 +29,15 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Fahrrad));
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.GroupBox dragdropbox;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Fahrrad));
             this.tabs = new System.Windows.Forms.TabControl();
             this.tab_xml = new System.Windows.Forms.TabPage();
-            this.labelDragDrop = new System.Windows.Forms.Label();
             this.prognose1 = new System.Windows.Forms.Label();
             this.pufferP3 = new System.Windows.Forms.NumericUpDown();
             this.pufferP2 = new System.Windows.Forms.NumericUpDown();
@@ -761,6 +761,9 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.NavPanel = new System.Windows.Forms.Panel();
             this.nav_button_1 = new System.Windows.Forms.Button();
+            this.labeldragdropinfo = new System.Windows.Forms.Label();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            dragdropbox = new System.Windows.Forms.GroupBox();
             this.tabs.SuspendLayout();
             this.tab_xml.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pufferP3)).BeginInit();
@@ -837,6 +840,8 @@
             this.menu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.xml_export)).BeginInit();
             this.NavPanel.SuspendLayout();
+            dragdropbox.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.SuspendLayout();
             // 
             // tabs
@@ -857,7 +862,7 @@
             // tab_xml
             // 
             this.tab_xml.BackColor = System.Drawing.Color.Transparent;
-            this.tab_xml.Controls.Add(this.labelDragDrop);
+            this.tab_xml.Controls.Add(dragdropbox);
             this.tab_xml.Controls.Add(this.prognose1);
             this.tab_xml.Controls.Add(this.pufferP3);
             this.tab_xml.Controls.Add(this.pufferP2);
@@ -866,7 +871,6 @@
             this.tab_xml.Controls.Add(this.panelXML);
             this.tab_xml.Controls.Add(this.bildSpeichOk);
             this.tab_xml.Controls.Add(this.pictureBox1);
-            this.tab_xml.Controls.Add(this.prognoseSpeichern);
             this.tab_xml.Controls.Add(this.upDownP33);
             this.tab_xml.Controls.Add(this.upDownP23);
             this.tab_xml.Controls.Add(this.upDownP13);
@@ -889,12 +893,6 @@
             resources.ApplyResources(this.tab_xml, "tab_xml");
             this.tab_xml.Name = "tab_xml";
             this.helpProvider1.SetShowHelp(this.tab_xml, ((bool)(resources.GetObject("tab_xml.ShowHelp"))));
-            // 
-            // labelDragDrop
-            // 
-            resources.ApplyResources(this.labelDragDrop, "labelDragDrop");
-            this.labelDragDrop.Name = "labelDragDrop";
-            this.helpProvider1.SetShowHelp(this.labelDragDrop, ((bool)(resources.GetObject("labelDragDrop.ShowHelp"))));
             // 
             // prognose1
             // 
@@ -7471,6 +7469,30 @@
             this.nav_button_1.UseVisualStyleBackColor = false;
             this.nav_button_1.Click += new System.EventHandler(this.nav_button_1_Click);
             // 
+            // dragdropbox
+            // 
+            dragdropbox.Controls.Add(this.pictureBox5);
+            dragdropbox.Controls.Add(this.labeldragdropinfo);
+            dragdropbox.Controls.Add(this.prognoseSpeichern);
+            dragdropbox.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            resources.ApplyResources(dragdropbox, "dragdropbox");
+            dragdropbox.Name = "dragdropbox";
+            dragdropbox.TabStop = false;
+            // 
+            // labeldragdropinfo
+            // 
+            resources.ApplyResources(this.labeldragdropinfo, "labeldragdropinfo");
+            this.labeldragdropinfo.Name = "labeldragdropinfo";
+            this.labeldragdropinfo.Click += new System.EventHandler(this.labeldragdropinfo_Click);
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Image = global::ToolFahrrad_v1.Properties.Resources.Down_Arrow_Icon1;
+            resources.ApplyResources(this.pictureBox5, "pictureBox5");
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.TabStop = false;
+            this.pictureBox5.Click += new System.EventHandler(this.pictureBox5_Click_1);
+            // 
             // Fahrrad
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -7574,6 +7596,9 @@
             this.menu.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.xml_export)).EndInit();
             this.NavPanel.ResumeLayout(false);
+            dragdropbox.ResumeLayout(false);
+            dragdropbox.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -8284,7 +8309,6 @@
 
 
         private System.Windows.Forms.Label header_statistik;
-        private System.Windows.Forms.Label labelDragDrop;
         private System.Windows.Forms.TabPage tab_marktplatz;
         private System.Windows.Forms.Label lbl_eigene_Angebote;
         private System.Windows.Forms.Label lbl_eigene_Gesuche;
@@ -8310,6 +8334,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn artikel;
         private System.Windows.Forms.DataGridViewTextBoxColumn angebot_menge;
         private System.Windows.Forms.DataGridViewTextBoxColumn preis;
+        private System.Windows.Forms.Label labeldragdropinfo;
+        private System.Windows.Forms.PictureBox pictureBox5;
 
     }
 }

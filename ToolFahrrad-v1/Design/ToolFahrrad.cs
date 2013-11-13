@@ -518,8 +518,8 @@ namespace ToolFahrrad_v1.Design
             _instance.GetTeil(3).VerbrauchPer2 = Convert.ToInt32(upDownP23.Value);
             _instance.GetTeil(3).VerbrauchPer3 = Convert.ToInt32(upDownP33.Value);
 
-            bildSpeichOk.Visible = true;
-            panelXML.Visible = true;
+            //bildSpeichOk.Visible = true;
+            //panelXML.Visible = true;
             _okPrognose = true;
             if (_okXml)
                 toolAusfueren.Visible = true;
@@ -1716,7 +1716,7 @@ namespace ToolFahrrad_v1.Design
                         foreach (string filePath in files)
                         {
                             //Console.WriteLine(filePath);
-                            MessageBox.Show(filePath);
+                            //MessageBox.Show(filePath);
 
                             if (_xml.ReadDatei(filePath))
                             {
@@ -1724,7 +1724,7 @@ namespace ToolFahrrad_v1.Design
                                 xmlOffenOK.Visible = true;
                                 _okXml = true;
                                 if (_okPrognose)
-                                    toolAusfueren.Visible = true;
+                                    //toolAusfueren.Visible = true;
                                 GetInfo(_culInfo.Contains("de") ? "XML-Datei wurde importiert" : "XML-file is imported");
                             }
                             else
@@ -1740,11 +1740,12 @@ namespace ToolFahrrad_v1.Design
 
                             }
                         }
-                        panelXML.Visible = true;
+                        //panelXML.Visible = true;
+
                         _okXml = true;
                         Ausführen();
                         toolAusfueren.Visible = false;
-                        save.Visible = true;
+                        //save.Visible = true;
                         tab1.Visible = true;
                         tab2.Visible = true;
                         panelXMLerstellen.Visible = true;
@@ -1782,6 +1783,21 @@ namespace ToolFahrrad_v1.Design
         private void save_Click(object sender, EventArgs e)
         {
 
+
+        }
+
+        private void labeldragdropinfo_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox5_Click_1(object sender, EventArgs e)
+        {
 
         }
     }
