@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms.DataVisualization.Charting;
 using System.Xml;
 using ToolFahrrad_v1.Komponenten;
+using ToolFahrrad_v1.Windows;
 
 namespace ToolFahrrad_v1.Design
 {
@@ -197,7 +198,8 @@ namespace ToolFahrrad_v1.Design
 
         private void button_nav_9_Click(object sender, EventArgs e)
         {
-            tabs.SelectedTab = einstellungen;
+            var einstellungen = new Einstellungen();
+            tabs.SelectedTab = tab_einstellungen;
         }
 
     }

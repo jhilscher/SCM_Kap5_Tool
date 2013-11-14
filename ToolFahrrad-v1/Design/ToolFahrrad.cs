@@ -1013,7 +1013,7 @@ namespace ToolFahrrad_v1.Design
         private void gewichtungToolStripMenuItem_Click(object sender, EventArgs e)
         {
             var einstellungen = new Einstellungen();
-            einstellungen.Show();
+            tabs.SelectedTab = tab_einstellungen;
         }
         private void startSeiteToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -1076,7 +1076,7 @@ namespace ToolFahrrad_v1.Design
         {
             switch (keyData)
             {
-                case Keys.F1:
+       /*         case Keys.F1:
                     BenutzerHandbuch();
                     break;
                 case Keys.F2:
@@ -1098,6 +1098,14 @@ namespace ToolFahrrad_v1.Design
                     break;
                 case (Keys.Alt | Keys.F4):
                     Close();
+                    break;*/
+                case (Keys.Control | Keys.E):
+                    var einstellungen = new Einstellungen();
+                    tabs.SelectedTab = tab_einstellungen;
+                    break;
+                case (Keys.Control | Keys.M):
+                    this.Get_Market_Place();
+                    tabs.SelectedTab = tab_marktplatz;
                     break;
             }
 
@@ -1804,6 +1812,62 @@ namespace ToolFahrrad_v1.Design
         private void einstellungen_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void einstellungen_button3_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("http://www.iwi.hs-karlsruhe.de/scs/start");
+        }
+
+        private void btn_ok_Click(object sender, EventArgs e)
+        {
+            if (radio_risk_afin.Checked) 
+            {
+                _instance.VerwendeAbweichung = 100;
+            }
+            else if (radio_risk_neutral.Checked)
+            {
+                _instance.VerwendeAbweichung = 50;
+            }
+            else 
+            {
+                _instance.VerwendeAbweichung = 0;
+            }
+            panel_change_risk_success.Visible = true;
+        }
+
+        private void btn_change_language_Click(object sender, EventArgs e)
+        {
+            if (einstellungen_sprache_deutsch.Checked == true)
+            {
+                ChangeLanguage("deutsch");
+            }
+            else 
+            {
+                ChangeLanguage("englisch");
+            }
+        }
+
+        private void diskSpeichern_Click(object sender, EventArgs e)
+        {
+            _instance.DiskountGrenze = Convert.ToDouble(diskGrenze.Value);
+            _instance.GrenzeMenge = Convert.ToDouble(mengeGrenze.Value);
+            _instance.VerwendeDiskount = trackBar1.Value * 10;
+
+            panel6.Visible = true;
+        }
+
+        private void btn_schicht_save_Click(object sender, EventArgs e)
+        {
+            _instance.ErsteSchichtMitUeberStunden = (int)numericUpDown1.Value;
+            _instance.ZweiteSchichtMitUeberstunden = (int)numericUpDown2.Value;
+
+            panel4.Visible = true;
+        }
+
+        private void hilfeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            tabs.SelectedTab = tab_einstellungen;
         }
 
     }
