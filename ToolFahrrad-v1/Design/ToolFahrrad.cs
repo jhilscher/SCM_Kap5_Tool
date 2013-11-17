@@ -1763,6 +1763,12 @@ namespace ToolFahrrad_v1.Design
                             prognose1.Text = Resources.Fahrrad_toolAusfueren_Click_Periode_ + (Convert.ToInt32(_xml.Period) + 1);
                             prognose2.Text = Resources.Fahrrad_toolAusfueren_Click_Periode_ + (Convert.ToInt32(_xml.Period) + 2);
                             prognose3.Text = Resources.Fahrrad_toolAusfueren_Click_Periode_ + (Convert.ToInt32(_xml.Period) + 3);
+
+                            start_rectangleShape_xmlImport.BorderColor = System.Drawing.Color.LimeGreen;
+                            labeldragdropinfo.Text = "Sie haben das XML erfolgreich eingeladen.";
+                            labeldragdropinfo.ForeColor = System.Drawing.Color.LimeGreen;
+                            labeldragdropinfo.Font = new Font(labeldragdropinfo.Font, FontStyle.Bold);
+
                             GetInfo("Tool wurde erfolgreich ausgeführt");
                         }
                         else
@@ -1805,7 +1811,6 @@ namespace ToolFahrrad_v1.Design
         {
 
         }
-
     }
 }
 

@@ -29,52 +29,14 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.GroupBox dragdropbox;
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Fahrrad));
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.labeldragdropinfo = new System.Windows.Forms.Label();
-            this.prognoseSpeichern = new System.Windows.Forms.Button();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Fahrrad));
             this.tabs = new System.Windows.Forms.TabControl();
             this.tab_xml = new System.Windows.Forms.TabPage();
-            this.prognose1 = new System.Windows.Forms.Label();
-            this.pufferP3 = new System.Windows.Forms.NumericUpDown();
-            this.pufferP2 = new System.Windows.Forms.NumericUpDown();
-            this.pufferP1 = new System.Windows.Forms.NumericUpDown();
-            this.label1 = new System.Windows.Forms.Label();
-            this.panelXML = new System.Windows.Forms.Panel();
-            this.save = new System.Windows.Forms.PictureBox();
-            this.xmlOffenOK = new System.Windows.Forms.PictureBox();
-            this.toolAusfueren = new System.Windows.Forms.PictureBox();
-            this.xmlTextBox = new System.Windows.Forms.TextBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.titleXmlLaden = new System.Windows.Forms.Label();
-            this.xml_suchen = new System.Windows.Forms.Button();
-            this.bildSpeichOk = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.upDownP33 = new System.Windows.Forms.NumericUpDown();
-            this.upDownP23 = new System.Windows.Forms.NumericUpDown();
-            this.upDownP13 = new System.Windows.Forms.NumericUpDown();
-            this.upDownAW3 = new System.Windows.Forms.NumericUpDown();
-            this.upDownP32 = new System.Windows.Forms.NumericUpDown();
-            this.upDownP22 = new System.Windows.Forms.NumericUpDown();
-            this.upDownP12 = new System.Windows.Forms.NumericUpDown();
-            this.upDownAW2 = new System.Windows.Forms.NumericUpDown();
-            this.upDownP31 = new System.Windows.Forms.NumericUpDown();
-            this.upDownP21 = new System.Windows.Forms.NumericUpDown();
-            this.upDownP11 = new System.Windows.Forms.NumericUpDown();
-            this.upDownAW1 = new System.Windows.Forms.NumericUpDown();
-            this.prognose2 = new System.Windows.Forms.Label();
-            this.prognose3 = new System.Windows.Forms.Label();
-            this.aktulleWoche = new System.Windows.Forms.Label();
-            this.p3 = new System.Windows.Forms.Label();
-            this.p2 = new System.Windows.Forms.Label();
-            this.p1 = new System.Windows.Forms.Label();
-            this.titlePrognose = new System.Windows.Forms.Label();
             this.tab_produktion = new System.Windows.Forms.TabPage();
             this.tab1 = new System.Windows.Forms.TabControl();
             this.tab_P1 = new System.Windows.Forms.TabPage();
@@ -810,33 +772,46 @@
             this.NavPanel = new System.Windows.Forms.Panel();
             this.nav_button_1 = new System.Windows.Forms.Button();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            dragdropbox = new System.Windows.Forms.GroupBox();
-            dragdropbox.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            this.start_rectangleShape_xmlImport = new Microsoft.VisualBasic.PowerPacks.RectangleShape();
+            this.home_prognose_table_main = new System.Windows.Forms.TableLayoutPanel();
+            this.start_prognose_label_titel = new System.Windows.Forms.Label();
+            this.start_prognose_numeric_periodeN3_P3 = new System.Windows.Forms.NumericUpDown();
+            this.start_prognose_numeric_periodeN2_P3 = new System.Windows.Forms.NumericUpDown();
+            this.start_prognose_numeric_periodeN1_P3 = new System.Windows.Forms.NumericUpDown();
+            this.start_prognose_numeric_periodeN_P3 = new System.Windows.Forms.NumericUpDown();
+            this.start_prognose_label_p3_title = new System.Windows.Forms.Label();
+            this.start_prognose_label_p2_title = new System.Windows.Forms.Label();
+            this.start_prognose_label_p1_title = new System.Windows.Forms.Label();
+            this.start_prognose_numeric_periodeN_P2 = new System.Windows.Forms.NumericUpDown();
+            this.start_prognose_numeric_periodeN_P1 = new System.Windows.Forms.NumericUpDown();
+            this.start_prognose_numeric_periodeN1_P2 = new System.Windows.Forms.NumericUpDown();
+            this.start_prognose_numeric_periodeN1_P1 = new System.Windows.Forms.NumericUpDown();
+            this.start_prognose_numeric_periodeN2_P2 = new System.Windows.Forms.NumericUpDown();
+            this.start_prognose_numeric_periodeN2_P1 = new System.Windows.Forms.NumericUpDown();
+            this.start_prognose_numeric_periodeN3_P2 = new System.Windows.Forms.NumericUpDown();
+            this.start_prognose_numeric_periodeN3_P1 = new System.Windows.Forms.NumericUpDown();
+            this.start_prognose_label_periodeN3_title = new System.Windows.Forms.Label();
+            this.start_prognose_label_periodeN2_title = new System.Windows.Forms.Label();
+            this.start_prognose_label_periodeN1_title = new System.Windows.Forms.Label();
+            this.start_prognose_label_periodeN_title = new System.Windows.Forms.Label();
+            this.start_prognose_label_produkte_title = new System.Windows.Forms.Label();
+            this.start_prognose_label_reserve_title = new System.Windows.Forms.Label();
+            this.start_prognose_numeric_puffer_P1 = new System.Windows.Forms.NumericUpDown();
+            this.start_prognose_numeric_puffer_P2 = new System.Windows.Forms.NumericUpDown();
+            this.start_prognose_numeric_puffer_P3 = new System.Windows.Forms.NumericUpDown();
+            this.start_prognose_textbox_periodeN = new System.Windows.Forms.TextBox();
+            this.start_prognose_textbox_periodeN1 = new System.Windows.Forms.TextBox();
+            this.start_prognose_textbox_periodeN2 = new System.Windows.Forms.TextBox();
+            this.start_prognose_textbox_periodeN3 = new System.Windows.Forms.TextBox();
+            this.start_prognose_textbox_puffer = new System.Windows.Forms.TextBox();
+            this.start_prognose_button_save = new System.Windows.Forms.Button();
+            this.home_prognose_picture_saveIndicator = new System.Windows.Forms.PictureBox();
+            this.start_prognose_label_successInfo = new System.Windows.Forms.Label();
+            this.labeldragdropinfo = new System.Windows.Forms.Label();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.shapeContainer2 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
             this.tabs.SuspendLayout();
             this.tab_xml.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pufferP3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pufferP2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pufferP1)).BeginInit();
-            this.panelXML.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.save)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.xmlOffenOK)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.toolAusfueren)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bildSpeichOk)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.upDownP33)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.upDownP23)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.upDownP13)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.upDownAW3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.upDownP32)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.upDownP22)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.upDownP12)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.upDownAW2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.upDownP31)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.upDownP21)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.upDownP11)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.upDownAW1)).BeginInit();
             this.tab_produktion.SuspendLayout();
             this.tab1.SuspendLayout();
             this.tab_P1.SuspendLayout();
@@ -908,40 +883,25 @@
             this.menu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.xml_export)).BeginInit();
             this.NavPanel.SuspendLayout();
+            this.home_prognose_table_main.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.start_prognose_numeric_periodeN3_P3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.start_prognose_numeric_periodeN2_P3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.start_prognose_numeric_periodeN1_P3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.start_prognose_numeric_periodeN_P3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.start_prognose_numeric_periodeN_P2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.start_prognose_numeric_periodeN_P1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.start_prognose_numeric_periodeN1_P2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.start_prognose_numeric_periodeN1_P1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.start_prognose_numeric_periodeN2_P2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.start_prognose_numeric_periodeN2_P1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.start_prognose_numeric_periodeN3_P2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.start_prognose_numeric_periodeN3_P1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.start_prognose_numeric_puffer_P1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.start_prognose_numeric_puffer_P2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.start_prognose_numeric_puffer_P3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.home_prognose_picture_saveIndicator)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.SuspendLayout();
-            // 
-            // dragdropbox
-            // 
-            dragdropbox.Controls.Add(this.pictureBox5);
-            dragdropbox.Controls.Add(this.labeldragdropinfo);
-            dragdropbox.Controls.Add(this.prognoseSpeichern);
-            dragdropbox.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            resources.ApplyResources(dragdropbox, "dragdropbox");
-            dragdropbox.Name = "dragdropbox";
-            dragdropbox.TabStop = false;
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.Image = global::ToolFahrrad_v1.Properties.Resources.Down_Arrow_Icon1;
-            resources.ApplyResources(this.pictureBox5, "pictureBox5");
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.TabStop = false;
-            this.pictureBox5.Click += new System.EventHandler(this.pictureBox5_Click_1);
-            // 
-            // labeldragdropinfo
-            // 
-            resources.ApplyResources(this.labeldragdropinfo, "labeldragdropinfo");
-            this.labeldragdropinfo.Name = "labeldragdropinfo";
-            this.labeldragdropinfo.Click += new System.EventHandler(this.labeldragdropinfo_Click);
-            // 
-            // prognoseSpeichern
-            // 
-            resources.ApplyResources(this.prognoseSpeichern, "prognoseSpeichern");
-            this.prognoseSpeichern.Name = "prognoseSpeichern";
-            this.helpProvider1.SetShowHelp(this.prognoseSpeichern, ((bool)(resources.GetObject("prognoseSpeichern.ShowHelp"))));
-            this.toolTip.SetToolTip(this.prognoseSpeichern, resources.GetString("prognoseSpeichern.ToolTip"));
-            this.prognoseSpeichern.UseVisualStyleBackColor = true;
-            this.prognoseSpeichern.Click += new System.EventHandler(this.prognoseSpeichern_Click);
             // 
             // tabs
             // 
@@ -962,509 +922,13 @@
             // tab_xml
             // 
             this.tab_xml.BackColor = System.Drawing.Color.Transparent;
-            this.tab_xml.Controls.Add(dragdropbox);
-            this.tab_xml.Controls.Add(this.prognose1);
-            this.tab_xml.Controls.Add(this.pufferP3);
-            this.tab_xml.Controls.Add(this.pufferP2);
-            this.tab_xml.Controls.Add(this.pufferP1);
-            this.tab_xml.Controls.Add(this.label1);
-            this.tab_xml.Controls.Add(this.panelXML);
-            this.tab_xml.Controls.Add(this.bildSpeichOk);
-            this.tab_xml.Controls.Add(this.pictureBox1);
-            this.tab_xml.Controls.Add(this.upDownP33);
-            this.tab_xml.Controls.Add(this.upDownP23);
-            this.tab_xml.Controls.Add(this.upDownP13);
-            this.tab_xml.Controls.Add(this.upDownAW3);
-            this.tab_xml.Controls.Add(this.upDownP32);
-            this.tab_xml.Controls.Add(this.upDownP22);
-            this.tab_xml.Controls.Add(this.upDownP12);
-            this.tab_xml.Controls.Add(this.upDownAW2);
-            this.tab_xml.Controls.Add(this.upDownP31);
-            this.tab_xml.Controls.Add(this.upDownP21);
-            this.tab_xml.Controls.Add(this.upDownP11);
-            this.tab_xml.Controls.Add(this.upDownAW1);
-            this.tab_xml.Controls.Add(this.prognose2);
-            this.tab_xml.Controls.Add(this.prognose3);
-            this.tab_xml.Controls.Add(this.aktulleWoche);
-            this.tab_xml.Controls.Add(this.p3);
-            this.tab_xml.Controls.Add(this.p2);
-            this.tab_xml.Controls.Add(this.p1);
-            this.tab_xml.Controls.Add(this.titlePrognose);
+            this.tab_xml.Controls.Add(this.pictureBox5);
+            this.tab_xml.Controls.Add(this.labeldragdropinfo);
+            this.tab_xml.Controls.Add(this.home_prognose_table_main);
+            this.tab_xml.Controls.Add(this.shapeContainer2);
             resources.ApplyResources(this.tab_xml, "tab_xml");
             this.tab_xml.Name = "tab_xml";
             this.helpProvider1.SetShowHelp(this.tab_xml, ((bool)(resources.GetObject("tab_xml.ShowHelp"))));
-            // 
-            // prognose1
-            // 
-            resources.ApplyResources(this.prognose1, "prognose1");
-            this.prognose1.Name = "prognose1";
-            this.helpProvider1.SetShowHelp(this.prognose1, ((bool)(resources.GetObject("prognose1.ShowHelp"))));
-            // 
-            // pufferP3
-            // 
-            this.pufferP3.BackColor = System.Drawing.Color.MistyRose;
-            resources.ApplyResources(this.pufferP3, "pufferP3");
-            this.pufferP3.Increment = new decimal(new int[] {
-            10,
-            0,
-            0,
-            0});
-            this.pufferP3.Maximum = new decimal(new int[] {
-            10000,
-            0,
-            0,
-            0});
-            this.pufferP3.Name = "pufferP3";
-            this.helpProvider1.SetShowHelp(this.pufferP3, ((bool)(resources.GetObject("pufferP3.ShowHelp"))));
-            this.pufferP3.Value = new decimal(new int[] {
-            50,
-            0,
-            0,
-            0});
-            // 
-            // pufferP2
-            // 
-            this.pufferP2.BackColor = System.Drawing.Color.MistyRose;
-            resources.ApplyResources(this.pufferP2, "pufferP2");
-            this.pufferP2.Increment = new decimal(new int[] {
-            10,
-            0,
-            0,
-            0});
-            this.pufferP2.Maximum = new decimal(new int[] {
-            10000,
-            0,
-            0,
-            0});
-            this.pufferP2.Name = "pufferP2";
-            this.helpProvider1.SetShowHelp(this.pufferP2, ((bool)(resources.GetObject("pufferP2.ShowHelp"))));
-            this.pufferP2.Value = new decimal(new int[] {
-            50,
-            0,
-            0,
-            0});
-            // 
-            // pufferP1
-            // 
-            this.pufferP1.BackColor = System.Drawing.Color.MistyRose;
-            resources.ApplyResources(this.pufferP1, "pufferP1");
-            this.pufferP1.Increment = new decimal(new int[] {
-            10,
-            0,
-            0,
-            0});
-            this.pufferP1.Maximum = new decimal(new int[] {
-            10000,
-            0,
-            0,
-            0});
-            this.pufferP1.Name = "pufferP1";
-            this.helpProvider1.SetShowHelp(this.pufferP1, ((bool)(resources.GetObject("pufferP1.ShowHelp"))));
-            this.pufferP1.Value = new decimal(new int[] {
-            50,
-            0,
-            0,
-            0});
-            this.pufferP1.ValueChanged += new System.EventHandler(this.pufferP1_ValueChanged);
-            // 
-            // label1
-            // 
-            resources.ApplyResources(this.label1, "label1");
-            this.label1.Name = "label1";
-            this.helpProvider1.SetShowHelp(this.label1, ((bool)(resources.GetObject("label1.ShowHelp"))));
-            // 
-            // panelXML
-            // 
-            this.panelXML.Controls.Add(this.save);
-            this.panelXML.Controls.Add(this.xmlOffenOK);
-            this.panelXML.Controls.Add(this.toolAusfueren);
-            this.panelXML.Controls.Add(this.xmlTextBox);
-            this.panelXML.Controls.Add(this.pictureBox2);
-            this.panelXML.Controls.Add(this.titleXmlLaden);
-            this.panelXML.Controls.Add(this.xml_suchen);
-            resources.ApplyResources(this.panelXML, "panelXML");
-            this.panelXML.Name = "panelXML";
-            this.helpProvider1.SetShowHelp(this.panelXML, ((bool)(resources.GetObject("panelXML.ShowHelp"))));
-            // 
-            // save
-            // 
-            this.save.Cursor = System.Windows.Forms.Cursors.Default;
-            resources.ApplyResources(this.save, "save");
-            this.save.Name = "save";
-            this.helpProvider1.SetShowHelp(this.save, ((bool)(resources.GetObject("save.ShowHelp"))));
-            this.save.TabStop = false;
-            this.toolTip.SetToolTip(this.save, resources.GetString("save.ToolTip"));
-            this.save.Click += new System.EventHandler(this.save_Click);
-            // 
-            // xmlOffenOK
-            // 
-            resources.ApplyResources(this.xmlOffenOK, "xmlOffenOK");
-            this.xmlOffenOK.Name = "xmlOffenOK";
-            this.helpProvider1.SetShowHelp(this.xmlOffenOK, ((bool)(resources.GetObject("xmlOffenOK.ShowHelp"))));
-            this.xmlOffenOK.TabStop = false;
-            this.toolTip.SetToolTip(this.xmlOffenOK, resources.GetString("xmlOffenOK.ToolTip"));
-            // 
-            // toolAusfueren
-            // 
-            this.toolAusfueren.Cursor = System.Windows.Forms.Cursors.Hand;
-            resources.ApplyResources(this.toolAusfueren, "toolAusfueren");
-            this.toolAusfueren.Name = "toolAusfueren";
-            this.helpProvider1.SetShowHelp(this.toolAusfueren, ((bool)(resources.GetObject("toolAusfueren.ShowHelp"))));
-            this.toolAusfueren.TabStop = false;
-            this.toolTip.SetToolTip(this.toolAusfueren, resources.GetString("toolAusfueren.ToolTip"));
-            this.toolAusfueren.Click += new System.EventHandler(this.toolAusfueren_Click);
-            // 
-            // xmlTextBox
-            // 
-            resources.ApplyResources(this.xmlTextBox, "xmlTextBox");
-            this.xmlTextBox.Name = "xmlTextBox";
-            this.helpProvider1.SetShowHelp(this.xmlTextBox, ((bool)(resources.GetObject("xmlTextBox.ShowHelp"))));
-            // 
-            // pictureBox2
-            // 
-            resources.ApplyResources(this.pictureBox2, "pictureBox2");
-            this.pictureBox2.Name = "pictureBox2";
-            this.helpProvider1.SetShowHelp(this.pictureBox2, ((bool)(resources.GetObject("pictureBox2.ShowHelp"))));
-            this.pictureBox2.TabStop = false;
-            // 
-            // titleXmlLaden
-            // 
-            resources.ApplyResources(this.titleXmlLaden, "titleXmlLaden");
-            this.titleXmlLaden.Name = "titleXmlLaden";
-            this.helpProvider1.SetShowHelp(this.titleXmlLaden, ((bool)(resources.GetObject("titleXmlLaden.ShowHelp"))));
-            // 
-            // xml_suchen
-            // 
-            resources.ApplyResources(this.xml_suchen, "xml_suchen");
-            this.xml_suchen.Name = "xml_suchen";
-            this.helpProvider1.SetShowHelp(this.xml_suchen, ((bool)(resources.GetObject("xml_suchen.ShowHelp"))));
-            this.toolTip.SetToolTip(this.xml_suchen, resources.GetString("xml_suchen.ToolTip"));
-            this.xml_suchen.UseVisualStyleBackColor = true;
-            this.xml_suchen.Click += new System.EventHandler(this.xml_suchen_Click);
-            // 
-            // bildSpeichOk
-            // 
-            resources.ApplyResources(this.bildSpeichOk, "bildSpeichOk");
-            this.bildSpeichOk.Name = "bildSpeichOk";
-            this.helpProvider1.SetShowHelp(this.bildSpeichOk, ((bool)(resources.GetObject("bildSpeichOk.ShowHelp"))));
-            this.bildSpeichOk.TabStop = false;
-            this.toolTip.SetToolTip(this.bildSpeichOk, resources.GetString("bildSpeichOk.ToolTip"));
-            // 
-            // pictureBox1
-            // 
-            resources.ApplyResources(this.pictureBox1, "pictureBox1");
-            this.pictureBox1.Name = "pictureBox1";
-            this.helpProvider1.SetShowHelp(this.pictureBox1, ((bool)(resources.GetObject("pictureBox1.ShowHelp"))));
-            this.pictureBox1.TabStop = false;
-            // 
-            // upDownP33
-            // 
-            this.upDownP33.Increment = new decimal(new int[] {
-            10,
-            0,
-            0,
-            0});
-            resources.ApplyResources(this.upDownP33, "upDownP33");
-            this.upDownP33.Maximum = new decimal(new int[] {
-            10000,
-            0,
-            0,
-            0});
-            this.upDownP33.Name = "upDownP33";
-            this.helpProvider1.SetShowHelp(this.upDownP33, ((bool)(resources.GetObject("upDownP33.ShowHelp"))));
-            this.upDownP33.Value = new decimal(new int[] {
-            100,
-            0,
-            0,
-            0});
-            this.upDownP33.ValueChanged += new System.EventHandler(this.upDownP33_ValueChanged);
-            // 
-            // upDownP23
-            // 
-            this.upDownP23.Increment = new decimal(new int[] {
-            10,
-            0,
-            0,
-            0});
-            resources.ApplyResources(this.upDownP23, "upDownP23");
-            this.upDownP23.Maximum = new decimal(new int[] {
-            10000,
-            0,
-            0,
-            0});
-            this.upDownP23.Name = "upDownP23";
-            this.helpProvider1.SetShowHelp(this.upDownP23, ((bool)(resources.GetObject("upDownP23.ShowHelp"))));
-            this.upDownP23.Value = new decimal(new int[] {
-            100,
-            0,
-            0,
-            0});
-            this.upDownP23.ValueChanged += new System.EventHandler(this.upDownP23_ValueChanged);
-            // 
-            // upDownP13
-            // 
-            this.upDownP13.Increment = new decimal(new int[] {
-            10,
-            0,
-            0,
-            0});
-            resources.ApplyResources(this.upDownP13, "upDownP13");
-            this.upDownP13.Maximum = new decimal(new int[] {
-            10000,
-            0,
-            0,
-            0});
-            this.upDownP13.Name = "upDownP13";
-            this.helpProvider1.SetShowHelp(this.upDownP13, ((bool)(resources.GetObject("upDownP13.ShowHelp"))));
-            this.upDownP13.Value = new decimal(new int[] {
-            100,
-            0,
-            0,
-            0});
-            this.upDownP13.ValueChanged += new System.EventHandler(this.upDownP13_ValueChanged);
-            // 
-            // upDownAW3
-            // 
-            this.upDownAW3.BackColor = System.Drawing.Color.Honeydew;
-            this.upDownAW3.Increment = new decimal(new int[] {
-            10,
-            0,
-            0,
-            0});
-            resources.ApplyResources(this.upDownAW3, "upDownAW3");
-            this.upDownAW3.Maximum = new decimal(new int[] {
-            10000,
-            0,
-            0,
-            0});
-            this.upDownAW3.Name = "upDownAW3";
-            this.helpProvider1.SetShowHelp(this.upDownAW3, ((bool)(resources.GetObject("upDownAW3.ShowHelp"))));
-            this.upDownAW3.Value = new decimal(new int[] {
-            100,
-            0,
-            0,
-            0});
-            this.upDownAW3.ValueChanged += new System.EventHandler(this.upDownAW3_ValueChanged);
-            // 
-            // upDownP32
-            // 
-            this.upDownP32.Increment = new decimal(new int[] {
-            10,
-            0,
-            0,
-            0});
-            resources.ApplyResources(this.upDownP32, "upDownP32");
-            this.upDownP32.Maximum = new decimal(new int[] {
-            10000,
-            0,
-            0,
-            0});
-            this.upDownP32.Name = "upDownP32";
-            this.helpProvider1.SetShowHelp(this.upDownP32, ((bool)(resources.GetObject("upDownP32.ShowHelp"))));
-            this.upDownP32.Value = new decimal(new int[] {
-            100,
-            0,
-            0,
-            0});
-            this.upDownP32.ValueChanged += new System.EventHandler(this.upDownP32_ValueChanged);
-            // 
-            // upDownP22
-            // 
-            this.upDownP22.Increment = new decimal(new int[] {
-            10,
-            0,
-            0,
-            0});
-            resources.ApplyResources(this.upDownP22, "upDownP22");
-            this.upDownP22.Maximum = new decimal(new int[] {
-            10000,
-            0,
-            0,
-            0});
-            this.upDownP22.Name = "upDownP22";
-            this.helpProvider1.SetShowHelp(this.upDownP22, ((bool)(resources.GetObject("upDownP22.ShowHelp"))));
-            this.upDownP22.Value = new decimal(new int[] {
-            100,
-            0,
-            0,
-            0});
-            this.upDownP22.ValueChanged += new System.EventHandler(this.upDownP22_ValueChanged);
-            // 
-            // upDownP12
-            // 
-            this.upDownP12.Increment = new decimal(new int[] {
-            10,
-            0,
-            0,
-            0});
-            resources.ApplyResources(this.upDownP12, "upDownP12");
-            this.upDownP12.Maximum = new decimal(new int[] {
-            10000,
-            0,
-            0,
-            0});
-            this.upDownP12.Name = "upDownP12";
-            this.helpProvider1.SetShowHelp(this.upDownP12, ((bool)(resources.GetObject("upDownP12.ShowHelp"))));
-            this.upDownP12.Value = new decimal(new int[] {
-            100,
-            0,
-            0,
-            0});
-            this.upDownP12.ValueChanged += new System.EventHandler(this.upDownP12_ValueChanged);
-            // 
-            // upDownAW2
-            // 
-            this.upDownAW2.BackColor = System.Drawing.Color.Honeydew;
-            this.upDownAW2.Increment = new decimal(new int[] {
-            10,
-            0,
-            0,
-            0});
-            resources.ApplyResources(this.upDownAW2, "upDownAW2");
-            this.upDownAW2.Maximum = new decimal(new int[] {
-            10000,
-            0,
-            0,
-            0});
-            this.upDownAW2.Name = "upDownAW2";
-            this.helpProvider1.SetShowHelp(this.upDownAW2, ((bool)(resources.GetObject("upDownAW2.ShowHelp"))));
-            this.upDownAW2.Value = new decimal(new int[] {
-            100,
-            0,
-            0,
-            0});
-            this.upDownAW2.ValueChanged += new System.EventHandler(this.upDownAW2_ValueChanged);
-            // 
-            // upDownP31
-            // 
-            this.upDownP31.Increment = new decimal(new int[] {
-            10,
-            0,
-            0,
-            0});
-            resources.ApplyResources(this.upDownP31, "upDownP31");
-            this.upDownP31.Maximum = new decimal(new int[] {
-            10000,
-            0,
-            0,
-            0});
-            this.upDownP31.Name = "upDownP31";
-            this.helpProvider1.SetShowHelp(this.upDownP31, ((bool)(resources.GetObject("upDownP31.ShowHelp"))));
-            this.upDownP31.Value = new decimal(new int[] {
-            100,
-            0,
-            0,
-            0});
-            this.upDownP31.ValueChanged += new System.EventHandler(this.upDownP31_ValueChanged);
-            // 
-            // upDownP21
-            // 
-            this.upDownP21.Increment = new decimal(new int[] {
-            10,
-            0,
-            0,
-            0});
-            resources.ApplyResources(this.upDownP21, "upDownP21");
-            this.upDownP21.Maximum = new decimal(new int[] {
-            10000,
-            0,
-            0,
-            0});
-            this.upDownP21.Name = "upDownP21";
-            this.helpProvider1.SetShowHelp(this.upDownP21, ((bool)(resources.GetObject("upDownP21.ShowHelp"))));
-            this.upDownP21.Value = new decimal(new int[] {
-            100,
-            0,
-            0,
-            0});
-            this.upDownP21.ValueChanged += new System.EventHandler(this.upDownP21_ValueChanged);
-            // 
-            // upDownP11
-            // 
-            this.upDownP11.Increment = new decimal(new int[] {
-            10,
-            0,
-            0,
-            0});
-            resources.ApplyResources(this.upDownP11, "upDownP11");
-            this.upDownP11.Maximum = new decimal(new int[] {
-            10000,
-            0,
-            0,
-            0});
-            this.upDownP11.Name = "upDownP11";
-            this.helpProvider1.SetShowHelp(this.upDownP11, ((bool)(resources.GetObject("upDownP11.ShowHelp"))));
-            this.upDownP11.Value = new decimal(new int[] {
-            100,
-            0,
-            0,
-            0});
-            this.upDownP11.ValueChanged += new System.EventHandler(this.upDownP11_ValueChanged);
-            // 
-            // upDownAW1
-            // 
-            this.upDownAW1.BackColor = System.Drawing.Color.Honeydew;
-            this.upDownAW1.Increment = new decimal(new int[] {
-            10,
-            0,
-            0,
-            0});
-            resources.ApplyResources(this.upDownAW1, "upDownAW1");
-            this.upDownAW1.Maximum = new decimal(new int[] {
-            10000,
-            0,
-            0,
-            0});
-            this.upDownAW1.Name = "upDownAW1";
-            this.helpProvider1.SetShowHelp(this.upDownAW1, ((bool)(resources.GetObject("upDownAW1.ShowHelp"))));
-            this.upDownAW1.Value = new decimal(new int[] {
-            100,
-            0,
-            0,
-            0});
-            this.upDownAW1.ValueChanged += new System.EventHandler(this.upDownAW1_ValueChanged);
-            // 
-            // prognose2
-            // 
-            resources.ApplyResources(this.prognose2, "prognose2");
-            this.prognose2.Name = "prognose2";
-            this.helpProvider1.SetShowHelp(this.prognose2, ((bool)(resources.GetObject("prognose2.ShowHelp"))));
-            // 
-            // prognose3
-            // 
-            resources.ApplyResources(this.prognose3, "prognose3");
-            this.prognose3.Name = "prognose3";
-            this.helpProvider1.SetShowHelp(this.prognose3, ((bool)(resources.GetObject("prognose3.ShowHelp"))));
-            // 
-            // aktulleWoche
-            // 
-            resources.ApplyResources(this.aktulleWoche, "aktulleWoche");
-            this.aktulleWoche.Name = "aktulleWoche";
-            this.helpProvider1.SetShowHelp(this.aktulleWoche, ((bool)(resources.GetObject("aktulleWoche.ShowHelp"))));
-            // 
-            // p3
-            // 
-            resources.ApplyResources(this.p3, "p3");
-            this.p3.Name = "p3";
-            this.helpProvider1.SetShowHelp(this.p3, ((bool)(resources.GetObject("p3.ShowHelp"))));
-            // 
-            // p2
-            // 
-            resources.ApplyResources(this.p2, "p2");
-            this.p2.Name = "p2";
-            this.helpProvider1.SetShowHelp(this.p2, ((bool)(resources.GetObject("p2.ShowHelp"))));
-            // 
-            // p1
-            // 
-            resources.ApplyResources(this.p1, "p1");
-            this.p1.Name = "p1";
-            this.helpProvider1.SetShowHelp(this.p1, ((bool)(resources.GetObject("p1.ShowHelp"))));
-            // 
-            // titlePrognose
-            // 
-            resources.ApplyResources(this.titlePrognose, "titlePrognose");
-            this.titlePrognose.Name = "titlePrognose";
-            this.helpProvider1.SetShowHelp(this.titlePrognose, ((bool)(resources.GetObject("titlePrognose.ShowHelp"))));
             // 
             // tab_produktion
             // 
@@ -7982,6 +7446,460 @@
             this.nav_button_1.UseVisualStyleBackColor = false;
             this.nav_button_1.Click += new System.EventHandler(this.nav_button_1_Click);
             // 
+            // start_rectangleShape_xmlImport
+            // 
+            resources.ApplyResources(this.start_rectangleShape_xmlImport, "start_rectangleShape_xmlImport");
+            this.start_rectangleShape_xmlImport.Name = "start_rectangleShape_xmlImport";
+            // 
+            // home_prognose_table_main
+            // 
+            this.home_prognose_table_main.BackColor = System.Drawing.Color.LightGray;
+            resources.ApplyResources(this.home_prognose_table_main, "home_prognose_table_main");
+            this.home_prognose_table_main.Controls.Add(this.start_prognose_label_titel, 0, 0);
+            this.home_prognose_table_main.Controls.Add(this.start_prognose_numeric_periodeN3_P3, 5, 4);
+            this.home_prognose_table_main.Controls.Add(this.start_prognose_numeric_periodeN2_P3, 4, 4);
+            this.home_prognose_table_main.Controls.Add(this.start_prognose_numeric_periodeN1_P3, 3, 4);
+            this.home_prognose_table_main.Controls.Add(this.start_prognose_numeric_periodeN_P3, 1, 4);
+            this.home_prognose_table_main.Controls.Add(this.start_prognose_label_p3_title, 0, 4);
+            this.home_prognose_table_main.Controls.Add(this.start_prognose_label_p2_title, 0, 3);
+            this.home_prognose_table_main.Controls.Add(this.start_prognose_label_p1_title, 0, 2);
+            this.home_prognose_table_main.Controls.Add(this.start_prognose_numeric_periodeN_P2, 1, 3);
+            this.home_prognose_table_main.Controls.Add(this.start_prognose_numeric_periodeN_P1, 1, 2);
+            this.home_prognose_table_main.Controls.Add(this.start_prognose_numeric_periodeN1_P2, 3, 3);
+            this.home_prognose_table_main.Controls.Add(this.start_prognose_numeric_periodeN1_P1, 3, 2);
+            this.home_prognose_table_main.Controls.Add(this.start_prognose_numeric_periodeN2_P2, 4, 3);
+            this.home_prognose_table_main.Controls.Add(this.start_prognose_numeric_periodeN2_P1, 4, 2);
+            this.home_prognose_table_main.Controls.Add(this.start_prognose_numeric_periodeN3_P2, 5, 3);
+            this.home_prognose_table_main.Controls.Add(this.start_prognose_numeric_periodeN3_P1, 5, 2);
+            this.home_prognose_table_main.Controls.Add(this.start_prognose_label_periodeN3_title, 5, 1);
+            this.home_prognose_table_main.Controls.Add(this.start_prognose_label_periodeN2_title, 4, 1);
+            this.home_prognose_table_main.Controls.Add(this.start_prognose_label_periodeN1_title, 3, 1);
+            this.home_prognose_table_main.Controls.Add(this.start_prognose_label_periodeN_title, 1, 1);
+            this.home_prognose_table_main.Controls.Add(this.start_prognose_label_produkte_title, 0, 1);
+            this.home_prognose_table_main.Controls.Add(this.start_prognose_label_reserve_title, 7, 1);
+            this.home_prognose_table_main.Controls.Add(this.start_prognose_numeric_puffer_P1, 7, 2);
+            this.home_prognose_table_main.Controls.Add(this.start_prognose_numeric_puffer_P2, 7, 3);
+            this.home_prognose_table_main.Controls.Add(this.start_prognose_numeric_puffer_P3, 7, 4);
+            this.home_prognose_table_main.Controls.Add(this.start_prognose_textbox_periodeN, 1, 5);
+            this.home_prognose_table_main.Controls.Add(this.start_prognose_textbox_periodeN1, 3, 5);
+            this.home_prognose_table_main.Controls.Add(this.start_prognose_textbox_periodeN2, 4, 5);
+            this.home_prognose_table_main.Controls.Add(this.start_prognose_textbox_periodeN3, 5, 5);
+            this.home_prognose_table_main.Controls.Add(this.start_prognose_textbox_puffer, 7, 5);
+            this.home_prognose_table_main.Controls.Add(this.start_prognose_button_save, 5, 7);
+            this.home_prognose_table_main.Controls.Add(this.home_prognose_picture_saveIndicator, 7, 0);
+            this.home_prognose_table_main.Controls.Add(this.start_prognose_label_successInfo, 1, 7);
+            this.home_prognose_table_main.Name = "home_prognose_table_main";
+            this.helpProvider1.SetShowHelp(this.home_prognose_table_main, ((bool)(resources.GetObject("home_prognose_table_main.ShowHelp"))));
+            // 
+            // start_prognose_label_titel
+            // 
+            this.home_prognose_table_main.SetColumnSpan(this.start_prognose_label_titel, 6);
+            resources.ApplyResources(this.start_prognose_label_titel, "start_prognose_label_titel");
+            this.start_prognose_label_titel.Name = "start_prognose_label_titel";
+            this.helpProvider1.SetShowHelp(this.start_prognose_label_titel, ((bool)(resources.GetObject("start_prognose_label_titel.ShowHelp"))));
+            // 
+            // start_prognose_numeric_periodeN3_P3
+            // 
+            this.start_prognose_numeric_periodeN3_P3.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.start_prognose_numeric_periodeN3_P3.Increment = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            resources.ApplyResources(this.start_prognose_numeric_periodeN3_P3, "start_prognose_numeric_periodeN3_P3");
+            this.start_prognose_numeric_periodeN3_P3.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.start_prognose_numeric_periodeN3_P3.Name = "start_prognose_numeric_periodeN3_P3";
+            this.helpProvider1.SetShowHelp(this.start_prognose_numeric_periodeN3_P3, ((bool)(resources.GetObject("start_prognose_numeric_periodeN3_P3.ShowHelp"))));
+            // 
+            // start_prognose_numeric_periodeN2_P3
+            // 
+            this.start_prognose_numeric_periodeN2_P3.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.start_prognose_numeric_periodeN2_P3.Increment = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            resources.ApplyResources(this.start_prognose_numeric_periodeN2_P3, "start_prognose_numeric_periodeN2_P3");
+            this.start_prognose_numeric_periodeN2_P3.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.start_prognose_numeric_periodeN2_P3.Name = "start_prognose_numeric_periodeN2_P3";
+            this.helpProvider1.SetShowHelp(this.start_prognose_numeric_periodeN2_P3, ((bool)(resources.GetObject("start_prognose_numeric_periodeN2_P3.ShowHelp"))));
+            // 
+            // start_prognose_numeric_periodeN1_P3
+            // 
+            this.start_prognose_numeric_periodeN1_P3.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.start_prognose_numeric_periodeN1_P3.Increment = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            resources.ApplyResources(this.start_prognose_numeric_periodeN1_P3, "start_prognose_numeric_periodeN1_P3");
+            this.start_prognose_numeric_periodeN1_P3.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.start_prognose_numeric_periodeN1_P3.Name = "start_prognose_numeric_periodeN1_P3";
+            this.helpProvider1.SetShowHelp(this.start_prognose_numeric_periodeN1_P3, ((bool)(resources.GetObject("start_prognose_numeric_periodeN1_P3.ShowHelp"))));
+            // 
+            // start_prognose_numeric_periodeN_P3
+            // 
+            this.start_prognose_numeric_periodeN_P3.BackColor = System.Drawing.Color.White;
+            this.start_prognose_numeric_periodeN_P3.Increment = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            resources.ApplyResources(this.start_prognose_numeric_periodeN_P3, "start_prognose_numeric_periodeN_P3");
+            this.start_prognose_numeric_periodeN_P3.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.start_prognose_numeric_periodeN_P3.Name = "start_prognose_numeric_periodeN_P3";
+            this.helpProvider1.SetShowHelp(this.start_prognose_numeric_periodeN_P3, ((bool)(resources.GetObject("start_prognose_numeric_periodeN_P3.ShowHelp"))));
+            // 
+            // start_prognose_label_p3_title
+            // 
+            resources.ApplyResources(this.start_prognose_label_p3_title, "start_prognose_label_p3_title");
+            this.start_prognose_label_p3_title.Name = "start_prognose_label_p3_title";
+            this.helpProvider1.SetShowHelp(this.start_prognose_label_p3_title, ((bool)(resources.GetObject("start_prognose_label_p3_title.ShowHelp"))));
+            // 
+            // start_prognose_label_p2_title
+            // 
+            resources.ApplyResources(this.start_prognose_label_p2_title, "start_prognose_label_p2_title");
+            this.start_prognose_label_p2_title.Name = "start_prognose_label_p2_title";
+            this.helpProvider1.SetShowHelp(this.start_prognose_label_p2_title, ((bool)(resources.GetObject("start_prognose_label_p2_title.ShowHelp"))));
+            // 
+            // start_prognose_label_p1_title
+            // 
+            resources.ApplyResources(this.start_prognose_label_p1_title, "start_prognose_label_p1_title");
+            this.start_prognose_label_p1_title.Name = "start_prognose_label_p1_title";
+            this.helpProvider1.SetShowHelp(this.start_prognose_label_p1_title, ((bool)(resources.GetObject("start_prognose_label_p1_title.ShowHelp"))));
+            // 
+            // start_prognose_numeric_periodeN_P2
+            // 
+            this.start_prognose_numeric_periodeN_P2.BackColor = System.Drawing.Color.White;
+            this.start_prognose_numeric_periodeN_P2.Increment = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            resources.ApplyResources(this.start_prognose_numeric_periodeN_P2, "start_prognose_numeric_periodeN_P2");
+            this.start_prognose_numeric_periodeN_P2.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.start_prognose_numeric_periodeN_P2.Name = "start_prognose_numeric_periodeN_P2";
+            this.helpProvider1.SetShowHelp(this.start_prognose_numeric_periodeN_P2, ((bool)(resources.GetObject("start_prognose_numeric_periodeN_P2.ShowHelp"))));
+            // 
+            // start_prognose_numeric_periodeN_P1
+            // 
+            this.start_prognose_numeric_periodeN_P1.BackColor = System.Drawing.Color.White;
+            this.start_prognose_numeric_periodeN_P1.Increment = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            resources.ApplyResources(this.start_prognose_numeric_periodeN_P1, "start_prognose_numeric_periodeN_P1");
+            this.start_prognose_numeric_periodeN_P1.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.start_prognose_numeric_periodeN_P1.Name = "start_prognose_numeric_periodeN_P1";
+            this.helpProvider1.SetShowHelp(this.start_prognose_numeric_periodeN_P1, ((bool)(resources.GetObject("start_prognose_numeric_periodeN_P1.ShowHelp"))));
+            // 
+            // start_prognose_numeric_periodeN1_P2
+            // 
+            this.start_prognose_numeric_periodeN1_P2.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.start_prognose_numeric_periodeN1_P2.Increment = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            resources.ApplyResources(this.start_prognose_numeric_periodeN1_P2, "start_prognose_numeric_periodeN1_P2");
+            this.start_prognose_numeric_periodeN1_P2.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.start_prognose_numeric_periodeN1_P2.Name = "start_prognose_numeric_periodeN1_P2";
+            this.helpProvider1.SetShowHelp(this.start_prognose_numeric_periodeN1_P2, ((bool)(resources.GetObject("start_prognose_numeric_periodeN1_P2.ShowHelp"))));
+            // 
+            // start_prognose_numeric_periodeN1_P1
+            // 
+            this.start_prognose_numeric_periodeN1_P1.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.start_prognose_numeric_periodeN1_P1.Increment = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            resources.ApplyResources(this.start_prognose_numeric_periodeN1_P1, "start_prognose_numeric_periodeN1_P1");
+            this.start_prognose_numeric_periodeN1_P1.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.start_prognose_numeric_periodeN1_P1.Name = "start_prognose_numeric_periodeN1_P1";
+            this.helpProvider1.SetShowHelp(this.start_prognose_numeric_periodeN1_P1, ((bool)(resources.GetObject("start_prognose_numeric_periodeN1_P1.ShowHelp"))));
+            // 
+            // start_prognose_numeric_periodeN2_P2
+            // 
+            this.start_prognose_numeric_periodeN2_P2.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.start_prognose_numeric_periodeN2_P2.Increment = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            resources.ApplyResources(this.start_prognose_numeric_periodeN2_P2, "start_prognose_numeric_periodeN2_P2");
+            this.start_prognose_numeric_periodeN2_P2.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.start_prognose_numeric_periodeN2_P2.Name = "start_prognose_numeric_periodeN2_P2";
+            this.helpProvider1.SetShowHelp(this.start_prognose_numeric_periodeN2_P2, ((bool)(resources.GetObject("start_prognose_numeric_periodeN2_P2.ShowHelp"))));
+            // 
+            // start_prognose_numeric_periodeN2_P1
+            // 
+            this.start_prognose_numeric_periodeN2_P1.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.start_prognose_numeric_periodeN2_P1.Increment = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            resources.ApplyResources(this.start_prognose_numeric_periodeN2_P1, "start_prognose_numeric_periodeN2_P1");
+            this.start_prognose_numeric_periodeN2_P1.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.start_prognose_numeric_periodeN2_P1.Name = "start_prognose_numeric_periodeN2_P1";
+            this.helpProvider1.SetShowHelp(this.start_prognose_numeric_periodeN2_P1, ((bool)(resources.GetObject("start_prognose_numeric_periodeN2_P1.ShowHelp"))));
+            // 
+            // start_prognose_numeric_periodeN3_P2
+            // 
+            this.start_prognose_numeric_periodeN3_P2.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.start_prognose_numeric_periodeN3_P2.Increment = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            resources.ApplyResources(this.start_prognose_numeric_periodeN3_P2, "start_prognose_numeric_periodeN3_P2");
+            this.start_prognose_numeric_periodeN3_P2.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.start_prognose_numeric_periodeN3_P2.Name = "start_prognose_numeric_periodeN3_P2";
+            this.helpProvider1.SetShowHelp(this.start_prognose_numeric_periodeN3_P2, ((bool)(resources.GetObject("start_prognose_numeric_periodeN3_P2.ShowHelp"))));
+            // 
+            // start_prognose_numeric_periodeN3_P1
+            // 
+            this.start_prognose_numeric_periodeN3_P1.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.start_prognose_numeric_periodeN3_P1.Increment = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            resources.ApplyResources(this.start_prognose_numeric_periodeN3_P1, "start_prognose_numeric_periodeN3_P1");
+            this.start_prognose_numeric_periodeN3_P1.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.start_prognose_numeric_periodeN3_P1.Name = "start_prognose_numeric_periodeN3_P1";
+            this.helpProvider1.SetShowHelp(this.start_prognose_numeric_periodeN3_P1, ((bool)(resources.GetObject("start_prognose_numeric_periodeN3_P1.ShowHelp"))));
+            // 
+            // start_prognose_label_periodeN3_title
+            // 
+            resources.ApplyResources(this.start_prognose_label_periodeN3_title, "start_prognose_label_periodeN3_title");
+            this.start_prognose_label_periodeN3_title.Name = "start_prognose_label_periodeN3_title";
+            this.helpProvider1.SetShowHelp(this.start_prognose_label_periodeN3_title, ((bool)(resources.GetObject("start_prognose_label_periodeN3_title.ShowHelp"))));
+            // 
+            // start_prognose_label_periodeN2_title
+            // 
+            resources.ApplyResources(this.start_prognose_label_periodeN2_title, "start_prognose_label_periodeN2_title");
+            this.start_prognose_label_periodeN2_title.Name = "start_prognose_label_periodeN2_title";
+            this.helpProvider1.SetShowHelp(this.start_prognose_label_periodeN2_title, ((bool)(resources.GetObject("start_prognose_label_periodeN2_title.ShowHelp"))));
+            // 
+            // start_prognose_label_periodeN1_title
+            // 
+            resources.ApplyResources(this.start_prognose_label_periodeN1_title, "start_prognose_label_periodeN1_title");
+            this.start_prognose_label_periodeN1_title.Name = "start_prognose_label_periodeN1_title";
+            this.helpProvider1.SetShowHelp(this.start_prognose_label_periodeN1_title, ((bool)(resources.GetObject("start_prognose_label_periodeN1_title.ShowHelp"))));
+            // 
+            // start_prognose_label_periodeN_title
+            // 
+            resources.ApplyResources(this.start_prognose_label_periodeN_title, "start_prognose_label_periodeN_title");
+            this.start_prognose_label_periodeN_title.Name = "start_prognose_label_periodeN_title";
+            this.helpProvider1.SetShowHelp(this.start_prognose_label_periodeN_title, ((bool)(resources.GetObject("start_prognose_label_periodeN_title.ShowHelp"))));
+            // 
+            // start_prognose_label_produkte_title
+            // 
+            resources.ApplyResources(this.start_prognose_label_produkte_title, "start_prognose_label_produkte_title");
+            this.start_prognose_label_produkte_title.Name = "start_prognose_label_produkte_title";
+            this.helpProvider1.SetShowHelp(this.start_prognose_label_produkte_title, ((bool)(resources.GetObject("start_prognose_label_produkte_title.ShowHelp"))));
+            // 
+            // start_prognose_label_reserve_title
+            // 
+            resources.ApplyResources(this.start_prognose_label_reserve_title, "start_prognose_label_reserve_title");
+            this.start_prognose_label_reserve_title.Name = "start_prognose_label_reserve_title";
+            this.helpProvider1.SetShowHelp(this.start_prognose_label_reserve_title, ((bool)(resources.GetObject("start_prognose_label_reserve_title.ShowHelp"))));
+            // 
+            // start_prognose_numeric_puffer_P1
+            // 
+            this.start_prognose_numeric_puffer_P1.BackColor = System.Drawing.Color.Silver;
+            this.start_prognose_numeric_puffer_P1.Increment = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            resources.ApplyResources(this.start_prognose_numeric_puffer_P1, "start_prognose_numeric_puffer_P1");
+            this.start_prognose_numeric_puffer_P1.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.start_prognose_numeric_puffer_P1.Name = "start_prognose_numeric_puffer_P1";
+            this.helpProvider1.SetShowHelp(this.start_prognose_numeric_puffer_P1, ((bool)(resources.GetObject("start_prognose_numeric_puffer_P1.ShowHelp"))));
+            // 
+            // start_prognose_numeric_puffer_P2
+            // 
+            this.start_prognose_numeric_puffer_P2.BackColor = System.Drawing.Color.Silver;
+            this.start_prognose_numeric_puffer_P2.Increment = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            resources.ApplyResources(this.start_prognose_numeric_puffer_P2, "start_prognose_numeric_puffer_P2");
+            this.start_prognose_numeric_puffer_P2.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.start_prognose_numeric_puffer_P2.Name = "start_prognose_numeric_puffer_P2";
+            this.helpProvider1.SetShowHelp(this.start_prognose_numeric_puffer_P2, ((bool)(resources.GetObject("start_prognose_numeric_puffer_P2.ShowHelp"))));
+            // 
+            // start_prognose_numeric_puffer_P3
+            // 
+            this.start_prognose_numeric_puffer_P3.BackColor = System.Drawing.Color.Silver;
+            this.start_prognose_numeric_puffer_P3.Increment = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            resources.ApplyResources(this.start_prognose_numeric_puffer_P3, "start_prognose_numeric_puffer_P3");
+            this.start_prognose_numeric_puffer_P3.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.start_prognose_numeric_puffer_P3.Name = "start_prognose_numeric_puffer_P3";
+            this.helpProvider1.SetShowHelp(this.start_prognose_numeric_puffer_P3, ((bool)(resources.GetObject("start_prognose_numeric_puffer_P3.ShowHelp"))));
+            // 
+            // start_prognose_textbox_periodeN
+            // 
+            this.start_prognose_textbox_periodeN.BackColor = System.Drawing.Color.LightGray;
+            this.start_prognose_textbox_periodeN.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            resources.ApplyResources(this.start_prognose_textbox_periodeN, "start_prognose_textbox_periodeN");
+            this.start_prognose_textbox_periodeN.ForeColor = System.Drawing.Color.Gray;
+            this.start_prognose_textbox_periodeN.Name = "start_prognose_textbox_periodeN";
+            this.helpProvider1.SetShowHelp(this.start_prognose_textbox_periodeN, ((bool)(resources.GetObject("start_prognose_textbox_periodeN.ShowHelp"))));
+            // 
+            // start_prognose_textbox_periodeN1
+            // 
+            this.start_prognose_textbox_periodeN1.BackColor = System.Drawing.Color.LightGray;
+            this.start_prognose_textbox_periodeN1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            resources.ApplyResources(this.start_prognose_textbox_periodeN1, "start_prognose_textbox_periodeN1");
+            this.start_prognose_textbox_periodeN1.ForeColor = System.Drawing.Color.Gray;
+            this.start_prognose_textbox_periodeN1.Name = "start_prognose_textbox_periodeN1";
+            this.helpProvider1.SetShowHelp(this.start_prognose_textbox_periodeN1, ((bool)(resources.GetObject("start_prognose_textbox_periodeN1.ShowHelp"))));
+            // 
+            // start_prognose_textbox_periodeN2
+            // 
+            this.start_prognose_textbox_periodeN2.BackColor = System.Drawing.Color.LightGray;
+            this.start_prognose_textbox_periodeN2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            resources.ApplyResources(this.start_prognose_textbox_periodeN2, "start_prognose_textbox_periodeN2");
+            this.start_prognose_textbox_periodeN2.ForeColor = System.Drawing.Color.Gray;
+            this.start_prognose_textbox_periodeN2.Name = "start_prognose_textbox_periodeN2";
+            this.helpProvider1.SetShowHelp(this.start_prognose_textbox_periodeN2, ((bool)(resources.GetObject("start_prognose_textbox_periodeN2.ShowHelp"))));
+            // 
+            // start_prognose_textbox_periodeN3
+            // 
+            this.start_prognose_textbox_periodeN3.BackColor = System.Drawing.Color.LightGray;
+            this.start_prognose_textbox_periodeN3.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            resources.ApplyResources(this.start_prognose_textbox_periodeN3, "start_prognose_textbox_periodeN3");
+            this.start_prognose_textbox_periodeN3.ForeColor = System.Drawing.Color.Gray;
+            this.start_prognose_textbox_periodeN3.Name = "start_prognose_textbox_periodeN3";
+            this.helpProvider1.SetShowHelp(this.start_prognose_textbox_periodeN3, ((bool)(resources.GetObject("start_prognose_textbox_periodeN3.ShowHelp"))));
+            // 
+            // start_prognose_textbox_puffer
+            // 
+            this.start_prognose_textbox_puffer.BackColor = System.Drawing.Color.LightGray;
+            this.start_prognose_textbox_puffer.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            resources.ApplyResources(this.start_prognose_textbox_puffer, "start_prognose_textbox_puffer");
+            this.start_prognose_textbox_puffer.ForeColor = System.Drawing.Color.Gray;
+            this.start_prognose_textbox_puffer.Name = "start_prognose_textbox_puffer";
+            this.helpProvider1.SetShowHelp(this.start_prognose_textbox_puffer, ((bool)(resources.GetObject("start_prognose_textbox_puffer.ShowHelp"))));
+            // 
+            // start_prognose_button_save
+            // 
+            this.home_prognose_table_main.SetColumnSpan(this.start_prognose_button_save, 3);
+            resources.ApplyResources(this.start_prognose_button_save, "start_prognose_button_save");
+            this.start_prognose_button_save.Name = "start_prognose_button_save";
+            this.helpProvider1.SetShowHelp(this.start_prognose_button_save, ((bool)(resources.GetObject("start_prognose_button_save.ShowHelp"))));
+            this.start_prognose_button_save.UseVisualStyleBackColor = true;
+            // 
+            // home_prognose_picture_saveIndicator
+            // 
+            resources.ApplyResources(this.home_prognose_picture_saveIndicator, "home_prognose_picture_saveIndicator");
+            this.home_prognose_picture_saveIndicator.Name = "home_prognose_picture_saveIndicator";
+            this.helpProvider1.SetShowHelp(this.home_prognose_picture_saveIndicator, ((bool)(resources.GetObject("home_prognose_picture_saveIndicator.ShowHelp"))));
+            this.home_prognose_picture_saveIndicator.TabStop = false;
+            this.toolTip.SetToolTip(this.home_prognose_picture_saveIndicator, resources.GetString("home_prognose_picture_saveIndicator.ToolTip"));
+            // 
+            // start_prognose_label_successInfo
+            // 
+            this.home_prognose_table_main.SetColumnSpan(this.start_prognose_label_successInfo, 4);
+            resources.ApplyResources(this.start_prognose_label_successInfo, "start_prognose_label_successInfo");
+            this.start_prognose_label_successInfo.ForeColor = System.Drawing.Color.LightGray;
+            this.start_prognose_label_successInfo.Name = "start_prognose_label_successInfo";
+            this.helpProvider1.SetShowHelp(this.start_prognose_label_successInfo, ((bool)(resources.GetObject("start_prognose_label_successInfo.ShowHelp"))));
+            // 
+            // labeldragdropinfo
+            // 
+            resources.ApplyResources(this.labeldragdropinfo, "labeldragdropinfo");
+            this.labeldragdropinfo.Name = "labeldragdropinfo";
+            this.helpProvider1.SetShowHelp(this.labeldragdropinfo, ((bool)(resources.GetObject("labeldragdropinfo.ShowHelp"))));
+            this.labeldragdropinfo.Click += new System.EventHandler(this.labeldragdropinfo_Click);
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Image = global::ToolFahrrad_v1.Properties.Resources.Down_Arrow_Icon1;
+            resources.ApplyResources(this.pictureBox5, "pictureBox5");
+            this.pictureBox5.Name = "pictureBox5";
+            this.helpProvider1.SetShowHelp(this.pictureBox5, ((bool)(resources.GetObject("pictureBox5.ShowHelp"))));
+            this.pictureBox5.TabStop = false;
+            this.pictureBox5.Click += new System.EventHandler(this.pictureBox5_Click_1);
+            // 
+            // shapeContainer2
+            // 
+            resources.ApplyResources(this.shapeContainer2, "shapeContainer2");
+            this.shapeContainer2.Name = "shapeContainer2";
+            this.shapeContainer2.Shapes.AddRange(new Microsoft.VisualBasic.PowerPacks.Shape[] {
+            this.start_rectangleShape_xmlImport});
+            this.shapeContainer2.TabStop = false;
+            // 
             // Fahrrad
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -7998,35 +7916,9 @@
             this.Name = "Fahrrad";
             this.helpProvider1.SetShowHelp(this, ((bool)(resources.GetObject("$this.ShowHelp"))));
             this.Load += new System.EventHandler(this.Fahrrad_Load);
-            dragdropbox.ResumeLayout(false);
-            dragdropbox.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.tabs.ResumeLayout(false);
             this.tab_xml.ResumeLayout(false);
             this.tab_xml.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pufferP3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pufferP2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pufferP1)).EndInit();
-            this.panelXML.ResumeLayout(false);
-            this.panelXML.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.save)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.xmlOffenOK)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.toolAusfueren)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bildSpeichOk)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.upDownP33)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.upDownP23)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.upDownP13)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.upDownAW3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.upDownP32)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.upDownP22)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.upDownP12)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.upDownAW2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.upDownP31)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.upDownP21)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.upDownP11)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.upDownAW1)).EndInit();
             this.tab_produktion.ResumeLayout(false);
             this.tab1.ResumeLayout(false);
             this.tab_P1.ResumeLayout(false);
@@ -8113,6 +8005,25 @@
             this.menu.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.xml_export)).EndInit();
             this.NavPanel.ResumeLayout(false);
+            this.home_prognose_table_main.ResumeLayout(false);
+            this.home_prognose_table_main.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.start_prognose_numeric_periodeN3_P3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.start_prognose_numeric_periodeN2_P3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.start_prognose_numeric_periodeN1_P3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.start_prognose_numeric_periodeN_P3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.start_prognose_numeric_periodeN_P2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.start_prognose_numeric_periodeN_P1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.start_prognose_numeric_periodeN1_P2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.start_prognose_numeric_periodeN1_P1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.start_prognose_numeric_periodeN2_P2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.start_prognose_numeric_periodeN2_P1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.start_prognose_numeric_periodeN3_P2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.start_prognose_numeric_periodeN3_P1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.start_prognose_numeric_puffer_P1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.start_prognose_numeric_puffer_P2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.start_prognose_numeric_puffer_P3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.home_prognose_picture_saveIndicator)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -8122,46 +8033,11 @@
 
         private System.Windows.Forms.TabControl tabs;
         private System.Windows.Forms.TabPage tab_xml;
-        private System.Windows.Forms.Button xml_suchen;
         private System.Windows.Forms.OpenFileDialog openFileDialog;
-        private System.Windows.Forms.Label titlePrognose;
-        private System.Windows.Forms.Label titleXmlLaden;
-        private System.Windows.Forms.Label aktulleWoche;
-        private System.Windows.Forms.Label p3;
-        private System.Windows.Forms.Label p2;
-        private System.Windows.Forms.Label p1;
-        private System.Windows.Forms.NumericUpDown upDownAW3;
-        private System.Windows.Forms.NumericUpDown upDownAW2;
-        private System.Windows.Forms.NumericUpDown upDownAW1;
         private System.Windows.Forms.MenuStrip menu;
-        private System.Windows.Forms.NumericUpDown upDownP33;
-        private System.Windows.Forms.NumericUpDown upDownP23;
-        private System.Windows.Forms.NumericUpDown upDownP13;
-        private System.Windows.Forms.NumericUpDown upDownP32;
-        private System.Windows.Forms.NumericUpDown upDownP22;
-        private System.Windows.Forms.NumericUpDown upDownP12;
-        private System.Windows.Forms.NumericUpDown upDownP31;
-        private System.Windows.Forms.NumericUpDown upDownP21;
-        private System.Windows.Forms.NumericUpDown upDownP11;
-        private System.Windows.Forms.Label prognose1;
-        private System.Windows.Forms.Label prognose2;
-        private System.Windows.Forms.Label prognose3;
-        private System.Windows.Forms.Button prognoseSpeichern;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.TextBox xmlTextBox;
-        private System.Windows.Forms.PictureBox toolAusfueren;
-        private System.Windows.Forms.PictureBox bildSpeichOk;
         private System.Windows.Forms.ToolTip toolTip;
-        private System.Windows.Forms.PictureBox xmlOffenOK;
-        private System.Windows.Forms.Panel panelXML;
         private System.Windows.Forms.ToolStripMenuItem einstellungenToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem hilfeToolStripMenuItem;
-        private System.Windows.Forms.NumericUpDown pufferP3;
-        private System.Windows.Forms.NumericUpDown pufferP2;
-        private System.Windows.Forms.NumericUpDown pufferP1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.PictureBox save;
         private System.Windows.Forms.TabPage tab_produktion;
         private System.Windows.Forms.TabControl tab1;
         private System.Windows.Forms.TabPage tab_eTeil;
@@ -8848,8 +8724,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn artikel;
         private System.Windows.Forms.DataGridViewTextBoxColumn angebot_menge;
         private System.Windows.Forms.DataGridViewTextBoxColumn preis;
-        private System.Windows.Forms.Label labeldragdropinfo;
-        private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.TabPage einstellungen;
         private System.Windows.Forms.TabControl einstellungen_tabControl1;
         private System.Windows.Forms.TabPage tab_abweichung;
@@ -8897,6 +8771,44 @@
         private System.Windows.Forms.Button einstellungen_button1;
         private System.Windows.Forms.Button button_nav_9;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.Label labeldragdropinfo;
+        private System.Windows.Forms.TableLayoutPanel home_prognose_table_main;
+        private System.Windows.Forms.Label start_prognose_label_titel;
+        private System.Windows.Forms.NumericUpDown start_prognose_numeric_periodeN3_P3;
+        private System.Windows.Forms.NumericUpDown start_prognose_numeric_periodeN2_P3;
+        private System.Windows.Forms.NumericUpDown start_prognose_numeric_periodeN1_P3;
+        private System.Windows.Forms.NumericUpDown start_prognose_numeric_periodeN_P3;
+        private System.Windows.Forms.Label start_prognose_label_p3_title;
+        private System.Windows.Forms.Label start_prognose_label_p2_title;
+        private System.Windows.Forms.Label start_prognose_label_p1_title;
+        private System.Windows.Forms.NumericUpDown start_prognose_numeric_periodeN_P2;
+        private System.Windows.Forms.NumericUpDown start_prognose_numeric_periodeN_P1;
+        private System.Windows.Forms.NumericUpDown start_prognose_numeric_periodeN1_P2;
+        private System.Windows.Forms.NumericUpDown start_prognose_numeric_periodeN1_P1;
+        private System.Windows.Forms.NumericUpDown start_prognose_numeric_periodeN2_P2;
+        private System.Windows.Forms.NumericUpDown start_prognose_numeric_periodeN2_P1;
+        private System.Windows.Forms.NumericUpDown start_prognose_numeric_periodeN3_P2;
+        private System.Windows.Forms.NumericUpDown start_prognose_numeric_periodeN3_P1;
+        private System.Windows.Forms.Label start_prognose_label_periodeN3_title;
+        private System.Windows.Forms.Label start_prognose_label_periodeN2_title;
+        private System.Windows.Forms.Label start_prognose_label_periodeN1_title;
+        private System.Windows.Forms.Label start_prognose_label_periodeN_title;
+        private System.Windows.Forms.Label start_prognose_label_produkte_title;
+        private System.Windows.Forms.Label start_prognose_label_reserve_title;
+        private System.Windows.Forms.NumericUpDown start_prognose_numeric_puffer_P1;
+        private System.Windows.Forms.NumericUpDown start_prognose_numeric_puffer_P2;
+        private System.Windows.Forms.NumericUpDown start_prognose_numeric_puffer_P3;
+        private System.Windows.Forms.TextBox start_prognose_textbox_periodeN;
+        private System.Windows.Forms.TextBox start_prognose_textbox_periodeN1;
+        private System.Windows.Forms.TextBox start_prognose_textbox_periodeN2;
+        private System.Windows.Forms.TextBox start_prognose_textbox_periodeN3;
+        private System.Windows.Forms.TextBox start_prognose_textbox_puffer;
+        private System.Windows.Forms.Button start_prognose_button_save;
+        private System.Windows.Forms.PictureBox home_prognose_picture_saveIndicator;
+        private System.Windows.Forms.Label start_prognose_label_successInfo;
+        private Microsoft.VisualBasic.PowerPacks.ShapeContainer shapeContainer2;
+        private Microsoft.VisualBasic.PowerPacks.RectangleShape start_rectangleShape_xmlImport;
 
     }
 }
