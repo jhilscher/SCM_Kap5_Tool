@@ -19982,6 +19982,252 @@
   <data name="&gt;&gt;tab_bestellverwaltung.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
+  <data name="txt_passwort.Location" type="System.Drawing.Point, System.Drawing">
+    <value>97, 33</value>
+  </data>
+  <data name="txt_passwort.PasswordChar" type="System.Char, mscorlib" xml:space="preserve">
+    <value>*</value>
+  </data>
+  <data name="txt_passwort.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 20</value>
+  </data>
+  <data name="txt_passwort.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;txt_passwort.Name" xml:space="preserve">
+    <value>txt_passwort</value>
+  </data>
+  <data name="&gt;&gt;txt_passwort.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txt_passwort.Parent" xml:space="preserve">
+    <value>panel10</value>
+  </data>
+  <data name="&gt;&gt;txt_passwort.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="chk_save.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="chk_save.Location" type="System.Drawing.Point, System.Drawing">
+    <value>73, 88</value>
+  </data>
+  <data name="chk_save.Size" type="System.Drawing.Size, System.Drawing">
+    <value>124, 17</value>
+  </data>
+  <data name="chk_save.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="chk_save.Text" xml:space="preserve">
+    <value>Passwort speichern?</value>
+  </data>
+  <data name="&gt;&gt;chk_save.Name" xml:space="preserve">
+    <value>chk_save</value>
+  </data>
+  <data name="&gt;&gt;chk_save.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;chk_save.Parent" xml:space="preserve">
+    <value>panel10</value>
+  </data>
+  <data name="&gt;&gt;chk_save.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="lbl_passwort.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lbl_passwort.Location" type="System.Drawing.Point, System.Drawing">
+    <value>16, 33</value>
+  </data>
+  <data name="lbl_passwort.Size" type="System.Drawing.Size, System.Drawing">
+    <value>50, 13</value>
+  </data>
+  <data name="lbl_passwort.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="lbl_passwort.Text" xml:space="preserve">
+    <value>Passwort</value>
+  </data>
+  <data name="&gt;&gt;lbl_passwort.Name" xml:space="preserve">
+    <value>lbl_passwort</value>
+  </data>
+  <data name="&gt;&gt;lbl_passwort.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lbl_passwort.Parent" xml:space="preserve">
+    <value>panel10</value>
+  </data>
+  <data name="&gt;&gt;lbl_passwort.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="btn_anmelden.Location" type="System.Drawing.Point, System.Drawing">
+    <value>97, 59</value>
+  </data>
+  <data name="btn_anmelden.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 23</value>
+  </data>
+  <data name="btn_anmelden.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="btn_anmelden.Text" xml:space="preserve">
+    <value>anmelden</value>
+  </data>
+  <data name="&gt;&gt;btn_anmelden.Name" xml:space="preserve">
+    <value>btn_anmelden</value>
+  </data>
+  <data name="&gt;&gt;btn_anmelden.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btn_anmelden.Parent" xml:space="preserve">
+    <value>panel10</value>
+  </data>
+  <data name="&gt;&gt;btn_anmelden.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="lbl_benutzername.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lbl_benutzername.Location" type="System.Drawing.Point, System.Drawing">
+    <value>16, 7</value>
+  </data>
+  <data name="lbl_benutzername.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 13</value>
+  </data>
+  <data name="lbl_benutzername.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="lbl_benutzername.Text" xml:space="preserve">
+    <value>Benutzername</value>
+  </data>
+  <data name="&gt;&gt;lbl_benutzername.Name" xml:space="preserve">
+    <value>lbl_benutzername</value>
+  </data>
+  <data name="&gt;&gt;lbl_benutzername.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lbl_benutzername.Parent" xml:space="preserve">
+    <value>panel10</value>
+  </data>
+  <data name="&gt;&gt;lbl_benutzername.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="txt_benutzername.Location" type="System.Drawing.Point, System.Drawing">
+    <value>97, 7</value>
+  </data>
+  <data name="txt_benutzername.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 20</value>
+  </data>
+  <data name="txt_benutzername.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;txt_benutzername.Name" xml:space="preserve">
+    <value>txt_benutzername</value>
+  </data>
+  <data name="&gt;&gt;txt_benutzername.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txt_benutzername.Parent" xml:space="preserve">
+    <value>panel10</value>
+  </data>
+  <data name="&gt;&gt;txt_benutzername.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="panel10.Location" type="System.Drawing.Point, System.Drawing">
+    <value>330, 218</value>
+  </data>
+  <data name="panel10.Size" type="System.Drawing.Size, System.Drawing">
+    <value>200, 114</value>
+  </data>
+  <data name="panel10.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;panel10.Name" xml:space="preserve">
+    <value>panel10</value>
+  </data>
+  <data name="&gt;&gt;panel10.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panel10.Parent" xml:space="preserve">
+    <value>panel_password</value>
+  </data>
+  <data name="&gt;&gt;panel10.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="panel_password.Location" type="System.Drawing.Point, System.Drawing">
+    <value>43, 362</value>
+  </data>
+  <data name="panel_password.Size" type="System.Drawing.Size, System.Drawing">
+    <value>879, 498</value>
+  </data>
+  <data name="panel_password.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;panel_password.Name" xml:space="preserve">
+    <value>panel_password</value>
+  </data>
+  <data name="&gt;&gt;panel_password.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panel_password.Parent" xml:space="preserve">
+    <value>tab_marktplatz</value>
+  </data>
+  <data name="&gt;&gt;panel_password.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="lbl_Gesuche.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lbl_Gesuche.Location" type="System.Drawing.Point, System.Drawing">
+    <value>300, 6</value>
+  </data>
+  <data name="lbl_Gesuche.Size" type="System.Drawing.Size, System.Drawing">
+    <value>50, 13</value>
+  </data>
+  <data name="lbl_Gesuche.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="lbl_Gesuche.Text" xml:space="preserve">
+    <value>Gesuche</value>
+  </data>
+  <data name="&gt;&gt;lbl_Gesuche.Name" xml:space="preserve">
+    <value>lbl_Gesuche</value>
+  </data>
+  <data name="&gt;&gt;lbl_Gesuche.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lbl_Gesuche.Parent" xml:space="preserve">
+    <value>tab_marktplatz</value>
+  </data>
+  <data name="&gt;&gt;lbl_Gesuche.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="lbl_Angebote.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lbl_Angebote.Location" type="System.Drawing.Point, System.Drawing">
+    <value>7, 6</value>
+  </data>
+  <data name="lbl_Angebote.Size" type="System.Drawing.Size, System.Drawing">
+    <value>53, 13</value>
+  </data>
+  <data name="lbl_Angebote.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="lbl_Angebote.Text" xml:space="preserve">
+    <value>Angebote</value>
+  </data>
+  <data name="&gt;&gt;lbl_Angebote.Name" xml:space="preserve">
+    <value>lbl_Angebote</value>
+  </data>
+  <data name="&gt;&gt;lbl_Angebote.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lbl_Angebote.Parent" xml:space="preserve">
+    <value>tab_marktplatz</value>
+  </data>
+  <data name="&gt;&gt;lbl_Angebote.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
   <data name="lbl_eigene_Angebote.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -19989,7 +20235,7 @@
     <value>NoControl</value>
   </data>
   <data name="lbl_eigene_Angebote.Location" type="System.Drawing.Point, System.Drawing">
-    <value>542, 6</value>
+    <value>579, 6</value>
   </data>
   <data name="lbl_eigene_Angebote.ShowHelp" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -20013,7 +20259,7 @@
     <value>tab_marktplatz</value>
   </data>
   <data name="&gt;&gt;lbl_eigene_Angebote.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>3</value>
   </data>
   <data name="lbl_eigene_Gesuche.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -20022,7 +20268,7 @@
     <value>NoControl</value>
   </data>
   <data name="lbl_eigene_Gesuche.Location" type="System.Drawing.Point, System.Drawing">
-    <value>542, 240</value>
+    <value>579, 240</value>
   </data>
   <data name="lbl_eigene_Gesuche.ShowHelp" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -20046,67 +20292,7 @@
     <value>tab_marktplatz</value>
   </data>
   <data name="&gt;&gt;lbl_eigene_Gesuche.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="lbl_Gesuche.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="lbl_Gesuche.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="lbl_Gesuche.Location" type="System.Drawing.Point, System.Drawing">
-    <value>271, 6</value>
-  </data>
-  <data name="lbl_Gesuche.ShowHelp" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="lbl_Gesuche.Size" type="System.Drawing.Size, System.Drawing">
-    <value>50, 13</value>
-  </data>
-  <data name="lbl_Gesuche.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
-  <data name="lbl_Gesuche.Text" xml:space="preserve">
-    <value>Gesuche</value>
-  </data>
-  <data name="&gt;&gt;lbl_Gesuche.Name" xml:space="preserve">
-    <value>lbl_Gesuche</value>
-  </data>
-  <data name="&gt;&gt;lbl_Gesuche.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lbl_Gesuche.Parent" xml:space="preserve">
-    <value>tab_marktplatz</value>
-  </data>
-  <data name="&gt;&gt;lbl_Gesuche.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="lbl_Angebote.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="lbl_Angebote.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 6</value>
-  </data>
-  <data name="lbl_Angebote.Size" type="System.Drawing.Size, System.Drawing">
-    <value>53, 13</value>
-  </data>
-  <data name="lbl_Angebote.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
-  </data>
-  <data name="lbl_Angebote.Text" xml:space="preserve">
-    <value>Angebote</value>
-  </data>
-  <data name="&gt;&gt;lbl_Angebote.Name" xml:space="preserve">
-    <value>lbl_Angebote</value>
-  </data>
-  <data name="&gt;&gt;lbl_Angebote.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lbl_Angebote.Parent" xml:space="preserve">
-    <value>tab_marktplatz</value>
-  </data>
-  <data name="&gt;&gt;lbl_Angebote.ZOrder" xml:space="preserve">
-    <value>3</value>
   </data>
   <metadata name="dataGridViewTextBoxColumn42.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -20115,7 +20301,7 @@
     <value>Kunde</value>
   </data>
   <data name="dataGridViewTextBoxColumn42.Width" type="System.Int32, mscorlib">
-    <value>75</value>
+    <value>65</value>
   </data>
   <metadata name="dataGridViewTextBoxColumn43.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -20144,8 +20330,26 @@
   <data name="dataGridViewTextBoxColumn45.Width" type="System.Int32, mscorlib">
     <value>65</value>
   </data>
+  <metadata name="action_egesuche.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="action_egesuche.HeaderText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="action_egesuche.Width" type="System.Int32, mscorlib">
+    <value>60</value>
+  </data>
+  <metadata name="hidden_egesuche.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="hidden_egesuche.HeaderText" xml:space="preserve">
+    <value>Column1</value>
+  </data>
+  <data name="hidden_egesuche.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="dta_e_Gesuche.Location" type="System.Drawing.Point, System.Drawing">
-    <value>545, 256</value>
+    <value>582, 256</value>
   </data>
   <data name="dta_e_Gesuche.ScrollBars" type="System.Windows.Forms.ScrollBars, System.Windows.Forms">
     <value>Vertical</value>
@@ -20154,7 +20358,7 @@
     <value>True</value>
   </data>
   <data name="dta_e_Gesuche.Size" type="System.Drawing.Size, System.Drawing">
-    <value>258, 217</value>
+    <value>293, 217</value>
   </data>
   <data name="dta_e_Gesuche.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -20169,7 +20373,7 @@
     <value>tab_marktplatz</value>
   </data>
   <data name="&gt;&gt;dta_e_Gesuche.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <metadata name="dataGridViewTextBoxColumn38.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -20178,7 +20382,7 @@
     <value>Verkäufer</value>
   </data>
   <data name="dataGridViewTextBoxColumn38.Width" type="System.Int32, mscorlib">
-    <value>75</value>
+    <value>65</value>
   </data>
   <metadata name="dataGridViewTextBoxColumn39.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -20207,8 +20411,26 @@
   <data name="dataGridViewTextBoxColumn41.Width" type="System.Int32, mscorlib">
     <value>65</value>
   </data>
+  <metadata name="action_eangebote.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="action_eangebote.HeaderText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="action_eangebote.Width" type="System.Int32, mscorlib">
+    <value>60</value>
+  </data>
+  <metadata name="hidden_eangebote.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="hidden_eangebote.HeaderText" xml:space="preserve">
+    <value>Column1</value>
+  </data>
+  <data name="hidden_eangebote.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="dta_e_Angebote.Location" type="System.Drawing.Point, System.Drawing">
-    <value>545, 22</value>
+    <value>582, 22</value>
   </data>
   <data name="dta_e_Angebote.ScrollBars" type="System.Windows.Forms.ScrollBars, System.Windows.Forms">
     <value>Vertical</value>
@@ -20217,7 +20439,7 @@
     <value>True</value>
   </data>
   <data name="dta_e_Angebote.Size" type="System.Drawing.Size, System.Drawing">
-    <value>258, 198</value>
+    <value>294, 198</value>
   </data>
   <data name="dta_e_Angebote.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -20232,7 +20454,7 @@
     <value>tab_marktplatz</value>
   </data>
   <data name="&gt;&gt;dta_e_Angebote.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>6</value>
   </data>
   <metadata name="dataGridViewTextBoxColumn34.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -20241,7 +20463,7 @@
     <value>Kunde</value>
   </data>
   <data name="dataGridViewTextBoxColumn34.Width" type="System.Int32, mscorlib">
-    <value>75</value>
+    <value>65</value>
   </data>
   <metadata name="dataGridViewTextBoxColumn35.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -20270,8 +20492,26 @@
   <data name="dataGridViewTextBoxColumn37.Width" type="System.Int32, mscorlib">
     <value>65</value>
   </data>
+  <metadata name="action_gesuche.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="action_gesuche.HeaderText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="action_gesuche.Width" type="System.Int32, mscorlib">
+    <value>40</value>
+  </data>
+  <metadata name="hidden_gesuche.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="hidden_gesuche.HeaderText" xml:space="preserve">
+    <value>Column1</value>
+  </data>
+  <data name="hidden_gesuche.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="dta_Gesuche.Location" type="System.Drawing.Point, System.Drawing">
-    <value>274, 22</value>
+    <value>303, 22</value>
   </data>
   <data name="dta_Gesuche.ScrollBars" type="System.Windows.Forms.ScrollBars, System.Windows.Forms">
     <value>Vertical</value>
@@ -20280,7 +20520,7 @@
     <value>True</value>
   </data>
   <data name="dta_Gesuche.Size" type="System.Drawing.Size, System.Drawing">
-    <value>257, 451</value>
+    <value>273, 451</value>
   </data>
   <data name="dta_Gesuche.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -20295,7 +20535,7 @@
     <value>tab_marktplatz</value>
   </data>
   <data name="&gt;&gt;dta_Gesuche.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>7</value>
   </data>
   <metadata name="verkäufer.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -20304,7 +20544,7 @@
     <value>Verkäufer</value>
   </data>
   <data name="verkäufer.Width" type="System.Int32, mscorlib">
-    <value>75</value>
+    <value>65</value>
   </data>
   <metadata name="artikel.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -20333,14 +20573,32 @@
   <data name="preis.Width" type="System.Int32, mscorlib">
     <value>65</value>
   </data>
+  <metadata name="action_Angebote.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="action_Angebote.HeaderText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="action_Angebote.Width" type="System.Int32, mscorlib">
+    <value>40</value>
+  </data>
+  <metadata name="hidden_angebote.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="hidden_angebote.HeaderText" xml:space="preserve">
+    <value>Column1</value>
+  </data>
+  <data name="hidden_angebote.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="MarketPlaceGrid.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 22</value>
+    <value>7, 22</value>
   </data>
   <data name="MarketPlaceGrid.ScrollBars" type="System.Windows.Forms.ScrollBars, System.Windows.Forms">
     <value>Vertical</value>
   </data>
   <data name="MarketPlaceGrid.Size" type="System.Drawing.Size, System.Drawing">
-    <value>253, 451</value>
+    <value>290, 451</value>
   </data>
   <data name="MarketPlaceGrid.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -20355,7 +20613,7 @@
     <value>tab_marktplatz</value>
   </data>
   <data name="&gt;&gt;MarketPlaceGrid.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>8</value>
   </data>
   <data name="tab_marktplatz.Location" type="System.Drawing.Point, System.Drawing">
     <value>4, 22</value>
@@ -22775,7 +23033,7 @@
         AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
         LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
         ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAABS
-        CwAAAk1TRnQBSQFMAgEBAwEAAXgBBAF4AQQBEAEAARABAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
+        CwAAAk1TRnQBSQFMAgEBAwEAAdgBBAHYAQQBEAEAARABAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
         AwABQAMAARADAAEBAQABCAYAAQQYAAGAAgABgAMAAoABAAGAAwABgAEAAYABAAKAAgADwAEAAcAB3AHA
         AQAB8AHKAaYBAAEzBQABMwEAATMBAAEzAQACMwIAAxYBAAMcAQADIgEAAykBAANVAQADTQEAA0IBAAM5
         AQABgAF8Af8BAAJQAf8BAAGTAQAB1gEAAf8B7AHMAQABxgHWAe8BAAHWAucBAAGQAakBrQIAAf8BMwMA
@@ -22950,7 +23208,7 @@
     <value>NoControl</value>
   </data>
   <data name="button__nav_6.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 240</value>
+    <value>-1, 240</value>
   </data>
   <data name="button__nav_6.ShowHelp" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -23074,7 +23332,7 @@
         AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
         LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
         ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAAAM
-        CAAAAk1TRnQBSQFMAgEBAgEAATgBAgE4AQIBEAEAARABAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
+        CAAAAk1TRnQBSQFMAgEBAgEAAZgBAgGYAQIBEAEAARABAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
         AwABQAMAARADAAEBAQABCAYAAQQYAAGAAgABgAMAAoABAAGAAwABgAEAAYABAAKAAgADwAEAAcAB3AHA
         AQAB8AHKAaYBAAEzBQABMwEAATMBAAEzAQACMwIAAxYBAAMcAQADIgEAAykBAANVAQADTQEAA0IBAAM5
         AQABgAF8Af8BAAJQAf8BAAGTAQAB1gEAAf8B7AHMAQABxgHWAe8BAAHWAucBAAGQAakBrQIAAf8BMwMA
@@ -25339,6 +25597,18 @@
   <data name="&gt;&gt;dataGridViewTextBoxColumn45.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="&gt;&gt;action_egesuche.Name" xml:space="preserve">
+    <value>action_egesuche</value>
+  </data>
+  <data name="&gt;&gt;action_egesuche.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewButtonColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;hidden_egesuche.Name" xml:space="preserve">
+    <value>hidden_egesuche</value>
+  </data>
+  <data name="&gt;&gt;hidden_egesuche.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="&gt;&gt;dataGridViewTextBoxColumn38.Name" xml:space="preserve">
     <value>dataGridViewTextBoxColumn38</value>
   </data>
@@ -25361,6 +25631,18 @@
     <value>dataGridViewTextBoxColumn41</value>
   </data>
   <data name="&gt;&gt;dataGridViewTextBoxColumn41.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;action_eangebote.Name" xml:space="preserve">
+    <value>action_eangebote</value>
+  </data>
+  <data name="&gt;&gt;action_eangebote.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewButtonColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;hidden_eangebote.Name" xml:space="preserve">
+    <value>hidden_eangebote</value>
+  </data>
+  <data name="&gt;&gt;hidden_eangebote.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;dataGridViewTextBoxColumn34.Name" xml:space="preserve">
@@ -25387,6 +25669,18 @@
   <data name="&gt;&gt;dataGridViewTextBoxColumn37.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="&gt;&gt;action_gesuche.Name" xml:space="preserve">
+    <value>action_gesuche</value>
+  </data>
+  <data name="&gt;&gt;action_gesuche.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewButtonColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;hidden_gesuche.Name" xml:space="preserve">
+    <value>hidden_gesuche</value>
+  </data>
+  <data name="&gt;&gt;hidden_gesuche.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="&gt;&gt;verkäufer.Name" xml:space="preserve">
     <value>verkäufer</value>
   </data>
@@ -25409,6 +25703,18 @@
     <value>preis</value>
   </data>
   <data name="&gt;&gt;preis.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;action_Angebote.Name" xml:space="preserve">
+    <value>action_Angebote</value>
+  </data>
+  <data name="&gt;&gt;action_Angebote.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewButtonColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;hidden_angebote.Name" xml:space="preserve">
+    <value>hidden_angebote</value>
+  </data>
+  <data name="&gt;&gt;hidden_angebote.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;dataGridViewTextBoxColumn31.Name" xml:space="preserve">

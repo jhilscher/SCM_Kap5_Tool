@@ -671,30 +671,46 @@
             this.eil = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.del = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.tab_marktplatz = new System.Windows.Forms.TabPage();
-            this.lbl_eigene_Angebote = new System.Windows.Forms.Label();
-            this.lbl_eigene_Gesuche = new System.Windows.Forms.Label();
+            this.panel_password = new System.Windows.Forms.Panel();
+            this.panel10 = new System.Windows.Forms.Panel();
+            this.txt_passwort = new System.Windows.Forms.TextBox();
+            this.chk_save = new System.Windows.Forms.CheckBox();
+            this.lbl_passwort = new System.Windows.Forms.Label();
+            this.btn_anmelden = new System.Windows.Forms.Button();
+            this.lbl_benutzername = new System.Windows.Forms.Label();
+            this.txt_benutzername = new System.Windows.Forms.TextBox();
             this.lbl_Gesuche = new System.Windows.Forms.Label();
             this.lbl_Angebote = new System.Windows.Forms.Label();
+            this.lbl_eigene_Angebote = new System.Windows.Forms.Label();
+            this.lbl_eigene_Gesuche = new System.Windows.Forms.Label();
             this.dta_e_Gesuche = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn42 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn43 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn44 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn45 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.action_egesuche = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.hidden_egesuche = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dta_e_Angebote = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn38 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn39 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn40 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn41 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.action_eangebote = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.hidden_eangebote = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dta_Gesuche = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn34 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn35 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn36 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn37 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.action_gesuche = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.hidden_gesuche = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MarketPlaceGrid = new System.Windows.Forms.DataGridView();
             this.verkäufer = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.artikel = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.angebot_menge = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.preis = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.action_Angebote = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.hidden_angebote = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.xmlOutput = new System.Windows.Forms.TabPage();
             this.panelXMLerstellen = new System.Windows.Forms.Panel();
             this.dataGridViewPrAuftraege = new System.Windows.Forms.DataGridView();
@@ -875,6 +891,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.saveAenderungen)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewBestellung)).BeginInit();
             this.tab_marktplatz.SuspendLayout();
+            this.panel_password.SuspendLayout();
+            this.panel10.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dta_e_Gesuche)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dta_e_Angebote)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dta_Gesuche)).BeginInit();
@@ -6861,16 +6879,77 @@
             // tab_marktplatz
             // 
             this.tab_marktplatz.BackColor = System.Drawing.Color.Transparent;
-            this.tab_marktplatz.Controls.Add(this.lbl_eigene_Angebote);
-            this.tab_marktplatz.Controls.Add(this.lbl_eigene_Gesuche);
+            this.tab_marktplatz.Controls.Add(this.panel_password);
             this.tab_marktplatz.Controls.Add(this.lbl_Gesuche);
             this.tab_marktplatz.Controls.Add(this.lbl_Angebote);
+            this.tab_marktplatz.Controls.Add(this.lbl_eigene_Angebote);
+            this.tab_marktplatz.Controls.Add(this.lbl_eigene_Gesuche);
             this.tab_marktplatz.Controls.Add(this.dta_e_Gesuche);
             this.tab_marktplatz.Controls.Add(this.dta_e_Angebote);
             this.tab_marktplatz.Controls.Add(this.dta_Gesuche);
             this.tab_marktplatz.Controls.Add(this.MarketPlaceGrid);
             resources.ApplyResources(this.tab_marktplatz, "tab_marktplatz");
             this.tab_marktplatz.Name = "tab_marktplatz";
+            // 
+            // panel_password
+            // 
+            this.panel_password.Controls.Add(this.panel10);
+            resources.ApplyResources(this.panel_password, "panel_password");
+            this.panel_password.Name = "panel_password";
+            // 
+            // panel10
+            // 
+            this.panel10.Controls.Add(this.txt_passwort);
+            this.panel10.Controls.Add(this.chk_save);
+            this.panel10.Controls.Add(this.lbl_passwort);
+            this.panel10.Controls.Add(this.btn_anmelden);
+            this.panel10.Controls.Add(this.lbl_benutzername);
+            this.panel10.Controls.Add(this.txt_benutzername);
+            resources.ApplyResources(this.panel10, "panel10");
+            this.panel10.Name = "panel10";
+            // 
+            // txt_passwort
+            // 
+            resources.ApplyResources(this.txt_passwort, "txt_passwort");
+            this.txt_passwort.Name = "txt_passwort";
+            // 
+            // chk_save
+            // 
+            resources.ApplyResources(this.chk_save, "chk_save");
+            this.chk_save.Name = "chk_save";
+            this.chk_save.UseVisualStyleBackColor = true;
+            // 
+            // lbl_passwort
+            // 
+            resources.ApplyResources(this.lbl_passwort, "lbl_passwort");
+            this.lbl_passwort.Name = "lbl_passwort";
+            // 
+            // btn_anmelden
+            // 
+            resources.ApplyResources(this.btn_anmelden, "btn_anmelden");
+            this.btn_anmelden.Name = "btn_anmelden";
+            this.btn_anmelden.UseVisualStyleBackColor = true;
+            this.btn_anmelden.Click += new System.EventHandler(this.btn_anmelden_Click);
+            // 
+            // lbl_benutzername
+            // 
+            resources.ApplyResources(this.lbl_benutzername, "lbl_benutzername");
+            this.lbl_benutzername.Name = "lbl_benutzername";
+            // 
+            // txt_benutzername
+            // 
+            resources.ApplyResources(this.txt_benutzername, "txt_benutzername");
+            this.txt_benutzername.Name = "txt_benutzername";
+            // 
+            // lbl_Gesuche
+            // 
+            resources.ApplyResources(this.lbl_Gesuche, "lbl_Gesuche");
+            this.lbl_Gesuche.Name = "lbl_Gesuche";
+            // 
+            // lbl_Angebote
+            // 
+            resources.ApplyResources(this.lbl_Angebote, "lbl_Angebote");
+            this.lbl_Angebote.Name = "lbl_Angebote";
             // 
             // lbl_eigene_Angebote
             // 
@@ -6884,28 +6963,20 @@
             this.lbl_eigene_Gesuche.Name = "lbl_eigene_Gesuche";
             this.helpProvider1.SetShowHelp(this.lbl_eigene_Gesuche, ((bool)(resources.GetObject("lbl_eigene_Gesuche.ShowHelp"))));
             // 
-            // lbl_Gesuche
-            // 
-            resources.ApplyResources(this.lbl_Gesuche, "lbl_Gesuche");
-            this.lbl_Gesuche.Name = "lbl_Gesuche";
-            this.helpProvider1.SetShowHelp(this.lbl_Gesuche, ((bool)(resources.GetObject("lbl_Gesuche.ShowHelp"))));
-            // 
-            // lbl_Angebote
-            // 
-            resources.ApplyResources(this.lbl_Angebote, "lbl_Angebote");
-            this.lbl_Angebote.Name = "lbl_Angebote";
-            // 
             // dta_e_Gesuche
             // 
             this.dta_e_Gesuche.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn42,
             this.dataGridViewTextBoxColumn43,
             this.dataGridViewTextBoxColumn44,
-            this.dataGridViewTextBoxColumn45});
+            this.dataGridViewTextBoxColumn45,
+            this.action_egesuche,
+            this.hidden_egesuche});
             resources.ApplyResources(this.dta_e_Gesuche, "dta_e_Gesuche");
             this.dta_e_Gesuche.Name = "dta_e_Gesuche";
             this.dta_e_Gesuche.RowHeadersVisible = false;
             this.helpProvider1.SetShowHelp(this.dta_e_Gesuche, ((bool)(resources.GetObject("dta_e_Gesuche.ShowHelp"))));
+            this.dta_e_Gesuche.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dta_e_Gesuche_CellContentClick);
             // 
             // dataGridViewTextBoxColumn42
             // 
@@ -6927,17 +6998,32 @@
             resources.ApplyResources(this.dataGridViewTextBoxColumn45, "dataGridViewTextBoxColumn45");
             this.dataGridViewTextBoxColumn45.Name = "dataGridViewTextBoxColumn45";
             // 
+            // action_egesuche
+            // 
+            resources.ApplyResources(this.action_egesuche, "action_egesuche");
+            this.action_egesuche.Name = "action_egesuche";
+            this.action_egesuche.Text = "Löschen";
+            this.action_egesuche.UseColumnTextForButtonValue = true;
+            // 
+            // hidden_egesuche
+            // 
+            resources.ApplyResources(this.hidden_egesuche, "hidden_egesuche");
+            this.hidden_egesuche.Name = "hidden_egesuche";
+            // 
             // dta_e_Angebote
             // 
             this.dta_e_Angebote.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn38,
             this.dataGridViewTextBoxColumn39,
             this.dataGridViewTextBoxColumn40,
-            this.dataGridViewTextBoxColumn41});
+            this.dataGridViewTextBoxColumn41,
+            this.action_eangebote,
+            this.hidden_eangebote});
             resources.ApplyResources(this.dta_e_Angebote, "dta_e_Angebote");
             this.dta_e_Angebote.Name = "dta_e_Angebote";
             this.dta_e_Angebote.RowHeadersVisible = false;
             this.helpProvider1.SetShowHelp(this.dta_e_Angebote, ((bool)(resources.GetObject("dta_e_Angebote.ShowHelp"))));
+            this.dta_e_Angebote.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dta_e_Angebote_CellContentClick);
             // 
             // dataGridViewTextBoxColumn38
             // 
@@ -6959,17 +7045,32 @@
             resources.ApplyResources(this.dataGridViewTextBoxColumn41, "dataGridViewTextBoxColumn41");
             this.dataGridViewTextBoxColumn41.Name = "dataGridViewTextBoxColumn41";
             // 
+            // action_eangebote
+            // 
+            resources.ApplyResources(this.action_eangebote, "action_eangebote");
+            this.action_eangebote.Name = "action_eangebote";
+            this.action_eangebote.Text = "Löschen";
+            this.action_eangebote.UseColumnTextForButtonValue = true;
+            // 
+            // hidden_eangebote
+            // 
+            resources.ApplyResources(this.hidden_eangebote, "hidden_eangebote");
+            this.hidden_eangebote.Name = "hidden_eangebote";
+            // 
             // dta_Gesuche
             // 
             this.dta_Gesuche.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn34,
             this.dataGridViewTextBoxColumn35,
             this.dataGridViewTextBoxColumn36,
-            this.dataGridViewTextBoxColumn37});
+            this.dataGridViewTextBoxColumn37,
+            this.action_gesuche,
+            this.hidden_gesuche});
             resources.ApplyResources(this.dta_Gesuche, "dta_Gesuche");
             this.dta_Gesuche.Name = "dta_Gesuche";
             this.dta_Gesuche.RowHeadersVisible = false;
             this.helpProvider1.SetShowHelp(this.dta_Gesuche, ((bool)(resources.GetObject("dta_Gesuche.ShowHelp"))));
+            this.dta_Gesuche.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dta_Gesuche_CellContentClick);
             // 
             // dataGridViewTextBoxColumn34
             // 
@@ -6991,16 +7092,31 @@
             resources.ApplyResources(this.dataGridViewTextBoxColumn37, "dataGridViewTextBoxColumn37");
             this.dataGridViewTextBoxColumn37.Name = "dataGridViewTextBoxColumn37";
             // 
+            // action_gesuche
+            // 
+            resources.ApplyResources(this.action_gesuche, "action_gesuche");
+            this.action_gesuche.Name = "action_gesuche";
+            this.action_gesuche.Text = "ok";
+            this.action_gesuche.UseColumnTextForButtonValue = true;
+            // 
+            // hidden_gesuche
+            // 
+            resources.ApplyResources(this.hidden_gesuche, "hidden_gesuche");
+            this.hidden_gesuche.Name = "hidden_gesuche";
+            // 
             // MarketPlaceGrid
             // 
             this.MarketPlaceGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.verkäufer,
             this.artikel,
             this.angebot_menge,
-            this.preis});
+            this.preis,
+            this.action_Angebote,
+            this.hidden_angebote});
             resources.ApplyResources(this.MarketPlaceGrid, "MarketPlaceGrid");
             this.MarketPlaceGrid.Name = "MarketPlaceGrid";
             this.MarketPlaceGrid.RowHeadersVisible = false;
+            this.MarketPlaceGrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.MarketPlaceGrid_CellContentClick);
             // 
             // verkäufer
             // 
@@ -7021,6 +7137,18 @@
             // 
             resources.ApplyResources(this.preis, "preis");
             this.preis.Name = "preis";
+            // 
+            // action_Angebote
+            // 
+            resources.ApplyResources(this.action_Angebote, "action_Angebote");
+            this.action_Angebote.Name = "action_Angebote";
+            this.action_Angebote.Text = "ok";
+            this.action_Angebote.UseColumnTextForButtonValue = true;
+            // 
+            // hidden_angebote
+            // 
+            resources.ApplyResources(this.hidden_angebote, "hidden_angebote");
+            this.hidden_angebote.Name = "hidden_angebote";
             // 
             // xmlOutput
             // 
@@ -8077,6 +8205,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewBestellung)).EndInit();
             this.tab_marktplatz.ResumeLayout(false);
             this.tab_marktplatz.PerformLayout();
+            this.panel_password.ResumeLayout(false);
+            this.panel10.ResumeLayout(false);
+            this.panel10.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dta_e_Gesuche)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dta_e_Angebote)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dta_Gesuche)).EndInit();
@@ -8836,28 +8967,11 @@
         private System.Windows.Forms.TabPage tab_marktplatz;
         private System.Windows.Forms.Label lbl_eigene_Angebote;
         private System.Windows.Forms.Label lbl_eigene_Gesuche;
-        private System.Windows.Forms.Label lbl_Gesuche;
         private System.Windows.Forms.Label lbl_Angebote;
         private System.Windows.Forms.DataGridView dta_e_Gesuche;
         private System.Windows.Forms.DataGridView dta_e_Angebote;
         private System.Windows.Forms.DataGridView dta_Gesuche;
         private System.Windows.Forms.DataGridView MarketPlaceGrid;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn42;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn43;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn44;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn45;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn38;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn39;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn40;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn41;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn34;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn35;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn36;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn37;
-        private System.Windows.Forms.DataGridViewTextBoxColumn verkäufer;
-        private System.Windows.Forms.DataGridViewTextBoxColumn artikel;
-        private System.Windows.Forms.DataGridViewTextBoxColumn angebot_menge;
-        private System.Windows.Forms.DataGridViewTextBoxColumn preis;
         private System.Windows.Forms.Label labeldragdropinfo;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.TabPage tab_einstellungen;
@@ -8910,7 +9024,41 @@
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Label lbl_schichten;
         private System.Windows.Forms.Label lbl_diskont;
+        private System.Windows.Forms.Label lbl_Gesuche;
 
+        private System.Windows.Forms.Panel panel_password;
+        private System.Windows.Forms.Panel panel10;
+        private System.Windows.Forms.TextBox txt_passwort;
+        private System.Windows.Forms.CheckBox chk_save;
+        private System.Windows.Forms.Label lbl_passwort;
+        private System.Windows.Forms.Button btn_anmelden;
+        private System.Windows.Forms.Label lbl_benutzername;
+        private System.Windows.Forms.TextBox txt_benutzername;
+        private System.Windows.Forms.DataGridViewTextBoxColumn verkäufer;
+        private System.Windows.Forms.DataGridViewTextBoxColumn artikel;
+        private System.Windows.Forms.DataGridViewTextBoxColumn angebot_menge;
+        private System.Windows.Forms.DataGridViewTextBoxColumn preis;
+        private System.Windows.Forms.DataGridViewButtonColumn action_Angebote;
+        private System.Windows.Forms.DataGridViewTextBoxColumn hidden_angebote;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn42;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn43;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn44;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn45;
+        private System.Windows.Forms.DataGridViewButtonColumn action_egesuche;
+        private System.Windows.Forms.DataGridViewTextBoxColumn hidden_egesuche;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn38;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn39;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn40;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn41;
+        private System.Windows.Forms.DataGridViewButtonColumn action_eangebote;
+        private System.Windows.Forms.DataGridViewTextBoxColumn hidden_eangebote;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn34;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn35;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn36;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn37;
+        private System.Windows.Forms.DataGridViewButtonColumn action_gesuche;
+        private System.Windows.Forms.DataGridViewTextBoxColumn hidden_gesuche;
+        
     }
 }
 

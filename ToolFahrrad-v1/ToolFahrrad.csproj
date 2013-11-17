@@ -64,12 +64,14 @@
   <ItemGroup>
     <Compile Include="DataContainer.cs" />
     <Compile Include="Design\Partial\Angebot.cs" />
+    <Compile Include="Design\Partial\Credentials.cs" />
     <Compile Include="Design\Partial\Fahrrad.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Design\Partial\Fahrrad_marktplatz.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Design\Partial\FormField.cs" />
     <Compile Include="Design\Partial\Gebot.cs" />
     <Compile Include="Design\Partial\Gesuch.cs" />
     <Compile Include="Design\ToolFahrrad.cs">

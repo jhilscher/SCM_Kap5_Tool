@@ -11,6 +11,9 @@ using ToolFahrrad_v1.Properties;
 using ToolFahrrad_v1.Verwaltung;
 using ToolFahrrad_v1.Windows;
 using ToolFahrrad_v1.XML;
+using ToolFahrrad_v1.Design.Partial;
+
+using System.Runtime.Serialization.Formatters.Binary;
 
 namespace ToolFahrrad_v1.Design
 {
@@ -31,6 +34,7 @@ namespace ToolFahrrad_v1.Design
         private Rectangle _dragBoxSrc;
         private int _rowIndexSrc;
         private int _rowIndexTar;
+        public String path = System.Environment.GetEnvironmentVariable("LOCALAPPDATA") + @"\scm";
 
         /// <summary>
         /// Konstruktor
@@ -1104,7 +1108,7 @@ namespace ToolFahrrad_v1.Design
                     tabs.SelectedTab = tab_einstellungen;
                     break;
                 case (Keys.Control | Keys.M):
-                    this.Get_Market_Place();
+                    this.Select_Marketplace();
                     tabs.SelectedTab = tab_marktplatz;
                     break;
             }
@@ -1869,6 +1873,70 @@ namespace ToolFahrrad_v1.Design
         {
             tabs.SelectedTab = tab_einstellungen;
         }
+
+        private void btn_anmelden_Click(object sender, EventArgs e)
+        {
+            this.path = System.Environment.GetEnvironmentVariable("LOCALAPPDATA") + @"\scm";
+            BinaryFormatter format = new BinaryFormatter();
+            
+
+            if (Directory.Exists(path))
+            {
+            }
+            else
+            {
+                Directory.CreateDirectory(path);
+            }
+            Credentials credentials = new Credentials(txt_benutzername.Text, txt_passwort.Text);
+            if (this.chk_save.Checked)
+            {
+                FileStream ausg = new FileStream(path + @"\userdata", FileMode.Create);
+                format.Serialize(ausg, credentials);
+                ausg.Close();
+            }
+            this.Get_Market_Place(credentials);
+            panel_password.Visible = false; 
+        }
+
+        private void MarketPlaceGrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex == MarketPlaceGrid.Columns["action_Angebote"].Index && e.RowIndex >= 0 && e.RowIndex != MarketPlaceGrid.RowCount - 1)
+            {
+                List<FormField> fields = MarketPlaceGrid.Rows[e.RowIndex].Cells[5].Value as List<FormField>;
+                System.Windows.Forms.MessageBox.Show(fields[0].value);
+            }
+            
+        }
+
+        private void dta_Gesuche_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex == dta_Gesuche.Columns["action_gesuche"].Index && e.RowIndex >= 0 && e.RowIndex != dta_Gesuche.RowCount - 1)
+            {
+                List<FormField> fields = dta_Gesuche.Rows[e.RowIndex].Cells[5].Value as List<FormField>;
+                System.Windows.Forms.MessageBox.Show(fields[0].value);
+            }
+        }
+
+        private void dta_e_Angebote_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex == dta_e_Angebote.Columns["action_eangebote"].Index && e.RowIndex >= 0 && e.RowIndex != dta_e_Angebote.RowCount - 1)
+            {
+                List<FormField> fields = dta_e_Angebote.Rows[e.RowIndex].Cells[5].Value as List<FormField>;
+                System.Windows.Forms.MessageBox.Show(fields[0].value);
+            }
+        }
+
+        private void dta_e_Gesuche_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex == dta_e_Gesuche.Columns["action_egesuche"].Index && e.RowIndex >= 0 && e.RowIndex != dta_e_Gesuche.RowCount - 1)
+            {
+                List<FormField> fields = dta_e_Gesuche.Rows[e.RowIndex].Cells[5].Value as List<FormField>;
+                System.Windows.Forms.MessageBox.Show(fields[0].value);
+            }
+        }
+
+
+      
 
     }
 }

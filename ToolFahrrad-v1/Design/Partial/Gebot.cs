@@ -13,8 +13,8 @@ namespace ToolFahrrad_v1.Design.Partial
     {
         public String seller;
 
-        public Gebot(String nArticle, String nQuantity, String nPrice, String nSeller)
-            : base(nArticle, nQuantity, nPrice)
+        public Gebot(String nArticle, String nQuantity, String nPrice, String nSeller, List<FormField> formfields)
+            : base(nArticle, nQuantity, nPrice, formfields)
         {
             this.seller = nSeller;
         }

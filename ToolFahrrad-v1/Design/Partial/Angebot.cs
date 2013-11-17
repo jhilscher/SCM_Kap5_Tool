@@ -14,12 +14,14 @@ namespace ToolFahrrad_v1.Design.Partial
         public String article;
         public String quantity;
         public String price;
+        public List<FormField> formfields;
 
-        public Angebot(String nArticle, String nQuantity, String nPrice)
+        public Angebot(String nArticle, String nQuantity, String nPrice, List<FormField> formfields)
         {
             this.article = nArticle;
             this.quantity = nQuantity;
             this.price = nPrice;
+            this.formfields = formfields;
         }
 
         public override String ToString()

@@ -18,8 +18,9 @@ namespace ToolFahrrad_v1.Design
     {
 
         public static Boolean authenticated = false;
+        public static MatchCollection formdata;
 
-        public void Get_Market_Place()
+        public void Get_Market_Place(Credentials credentials)
         {
             String url = "http://www.iwi.hs-karlsruhe.de/scs/";
             try
@@ -29,7 +30,7 @@ namespace ToolFahrrad_v1.Design
                 ///
                 if (this.MarketPlaceGrid.Rows.Count > 1)
                 {
-                    return;
+                    //return;
                 }
                 ///
                 /// ist ein bisschen kompliziert, die Marketplace-Seite anzeigen zu
@@ -43,7 +44,7 @@ namespace ToolFahrrad_v1.Design
                 ///
                 /// 
                 ///
-                Authenticate("kap5", "sperling", url + "market/", container);
+                Authenticate(credentials.username, credentials.password, url + "market/", container);
                 String html = GetUrl(true, url, "market/marketinfo.jsp", container);
                 String[] parsed = RemoveUnusedCrap(html);
 
@@ -54,7 +55,27 @@ namespace ToolFahrrad_v1.Design
                 List<Gesuch> requests = ParseRequest(parsed[2]);
                 List<Gebot> ownOffers = ParseOffer(parsed[3]);
                 List<Gesuch> ownRequests = ParseRequest(parsed[4]);
-
+                int lengthMarket = this.MarketPlaceGrid.Rows.Count - 1;
+                for (int i = 0; i < lengthMarket; i++)
+                {
+                    this.MarketPlaceGrid.Rows.RemoveAt(0);
+                }
+                int lengthGesuche = this.dta_Gesuche.Rows.Count - 1;
+                for (int i = 0; i < lengthGesuche; i++)
+                {
+                    this.dta_Gesuche.Rows.RemoveAt(0);
+                }
+                int lengthEAngebote = this.dta_e_Angebote.Rows.Count - 1;
+                for (int i = 0; i < lengthEAngebote; i++)
+                {
+                    this.dta_e_Angebote.Rows.RemoveAt(0);
+                }
+                int lengthEGesuche = this.dta_e_Gesuche.Rows.Count - 1;
+                for (int i = 0; i < lengthEGesuche; i++)
+                {
+                    this.dta_e_Gesuche.Rows.RemoveAt(0);
+                }
+                
                 foreach (Gebot offer in offers)
                     this.MarketPlaceGrid.Rows.Add();
 
@@ -73,6 +94,7 @@ namespace ToolFahrrad_v1.Design
                     this.MarketPlaceGrid.Rows[i].Cells[1].Value = offers[i].article;
                     this.MarketPlaceGrid.Rows[i].Cells[2].Value = offers[i].quantity;
                     this.MarketPlaceGrid.Rows[i].Cells[3].Value = offers[i].price;
+                    this.MarketPlaceGrid.Rows[i].Cells[5].Value = offers[i].formfields;
                 }
 
                 for (int i = 0; i < requests.Count; i++)
@@ -81,6 +103,7 @@ namespace ToolFahrrad_v1.Design
                     this.dta_Gesuche.Rows[i].Cells[1].Value = requests[i].article;
                     this.dta_Gesuche.Rows[i].Cells[2].Value = requests[i].quantity;
                     this.dta_Gesuche.Rows[i].Cells[3].Value = requests[i].price;
+                    this.dta_Gesuche.Rows[i].Cells[5].Value = requests[i].formfields;
                 }
 
                 for (int i = 0; i < ownOffers.Count; i++)
@@ -89,6 +112,7 @@ namespace ToolFahrrad_v1.Design
                     this.dta_e_Angebote.Rows[i].Cells[1].Value = ownOffers[i].article;
                     this.dta_e_Angebote.Rows[i].Cells[2].Value = ownOffers[i].quantity;
                     this.dta_e_Angebote.Rows[i].Cells[3].Value = ownOffers[i].price;
+                    this.dta_e_Angebote.Rows[i].Cells[5].Value = ownOffers[i].formfields;
                 }
 
                 for (int i = 0; i < ownRequests.Count; i++)
@@ -97,6 +121,7 @@ namespace ToolFahrrad_v1.Design
                     this.dta_e_Gesuche.Rows[i].Cells[1].Value = ownRequests[i].article;
                     this.dta_e_Gesuche.Rows[i].Cells[2].Value = ownRequests[i].quantity;
                     this.dta_e_Gesuche.Rows[i].Cells[3].Value = ownRequests[i].price;
+                    this.dta_e_Gesuche.Rows[i].Cells[5].Value = ownRequests[i].formfields;
                 }
 
                 GetUrl(false, url, "logout", container);
@@ -129,7 +154,7 @@ namespace ToolFahrrad_v1.Design
                 var response = request.GetResponse();
                 StreamReader reader = new StreamReader(response.GetResponseStream());
                 String body = reader.ReadToEnd();
-
+                response.Close();
                 return body;
             }
             catch (Exception e)
@@ -151,14 +176,14 @@ namespace ToolFahrrad_v1.Design
         {
             url += String.Format("j_security_check?j_username={0}&j_password={1}",
                     username, password);
-
             HttpWebRequest authRequest = (HttpWebRequest)WebRequest.Create(url);
             authRequest.CookieContainer = container;
             authRequest.Method = WebRequestMethods.Http.Post;
             authRequest.ContentType = "application/x-www-form-urlencoded";
             authRequest.Timeout = 360000;
 
-            authRequest.GetResponse();
+            WebResponse response = authRequest.GetResponse();
+            response.Close();
             return container;
         }
 
@@ -241,11 +266,15 @@ namespace ToolFahrrad_v1.Design
                 }
             }
 
+            //Regex reg_form = new Regex(@"value=""(\w*)"" name=""(\w*)""");
+            //formdata = reg_form.Matches(xml);
+
+
             /// 
             /// ersetzt den restlichen html-code mit nichts
             ///
-            Regex reg = new Regex("(\\<)(.*?)(\\>)\\s*");
-            xml = reg.Replace(xml, "");
+            //Regex reg = new Regex("(\\<)(.*?)(\\>)\\s*");
+            //xml = reg.Replace(xml, "");
 
             String[] data = xml.Split(new Char[] { ';' });
             return data;
@@ -266,10 +295,20 @@ namespace ToolFahrrad_v1.Design
 
             foreach (String line in splitted)
             {
-                String[] singleLine = line.Split(new Char[] { '|' });
+                Regex reg_form = new Regex(@"value=""(\w*)"" name=""(\w*)""");
+                formdata = reg_form.Matches(line);
+                List<FormField> fields = new List<FormField>();
+                for (int i = 0; i < formdata.Count; i++)
+                {
+                    fields.Add(new FormField(formdata[i].Groups[1].ToString(), formdata[i].Groups[2].ToString()));
+                }
+                //System.Windows.Forms.MessageBox.Show(formdata[0].Groups[0].ToString() + " " + /* value */formdata[0].Groups[1].ToString() + " " + /*name*/formdata[0].Groups[2].ToString());;
+                Regex reg = new Regex("(\\<)(.*?)(\\>)\\s*");
+                String nline = reg.Replace(line, "");
+                String[] singleLine = nline.Split(new Char[] { '|' });
                 if (singleLine.Length > 1)
                 {
-                    ret.Add(new Gebot(singleLine[1], singleLine[2], singleLine[3], singleLine[0]));
+                    ret.Add(new Gebot(singleLine[1], singleLine[2], singleLine[3], singleLine[0], fields));
                 }
             }
 
@@ -287,10 +326,19 @@ namespace ToolFahrrad_v1.Design
 
             foreach (String line in splitted)
             {
-                String[] singleLine = line.Split(new Char[] { '|' });
+                Regex reg_form = new Regex(@"value=""(\w*)"" name=""(\w*)""");
+                formdata = reg_form.Matches(line);
+                List<FormField> fields = new List<FormField>();
+                for (int i = 0; i < formdata.Count; i++)
+                {
+                    fields.Add(new FormField(formdata[i].Groups[1].ToString(), formdata[i].Groups[2].ToString()));
+                }
+                Regex reg = new Regex("(\\<)(.*?)(\\>)\\s*");
+                String nline = reg.Replace(line, "");
+                String[] singleLine = nline.Split(new Char[] { '|' });
                 if (singleLine.Length > 1)
                 {
-                    ret.Add(new Gesuch(singleLine[1], singleLine[2], singleLine[3], singleLine[0]));
+                    ret.Add(new Gesuch(singleLine[1], singleLine[2], singleLine[3], singleLine[0], fields));
                 }
             }
 

@@ -7,6 +7,10 @@ using System.Windows.Forms.DataVisualization.Charting;
 using System.Xml;
 using ToolFahrrad_v1.Komponenten;
 using ToolFahrrad_v1.Windows;
+using ToolFahrrad_v1.Design;
+using ToolFahrrad_v1.Design.Partial;
+using System.IO;
+using System.Runtime.Serialization.Formatters.Binary;
 
 namespace ToolFahrrad_v1.Design
 {
@@ -15,8 +19,6 @@ namespace ToolFahrrad_v1.Design
     /// </summary>
     partial class Fahrrad
     {
-
-
 
 
         /// <summary>
@@ -76,9 +78,28 @@ namespace ToolFahrrad_v1.Design
         /// <param name="e"></param>
         private void button_nav_6_Click(object sender, EventArgs e)
         {
-            this.Get_Market_Place();
+            this.Select_Marketplace();
+        }
+
+        public void Select_Marketplace()
+        {
+            Credentials credentials = new Credentials();
+            Boolean exists = File.Exists(this.path + @"\userdata");
+            if (File.Exists(this.path + @"\userdata"))
+            {
+                FileStream eing = new FileStream(this.path + @"\userdata", FileMode.Open);
+                BinaryFormatter format = new BinaryFormatter();
+                
+                credentials = format.Deserialize(eing) as Credentials;
+                eing.Close();
+                this.Get_Market_Place(credentials);
+                panel_password.Visible = false;
+                
+            }
+            
             tabs.SelectedTab = tab_marktplatz;
         }
+
 
         /// <summary>
         /// 8. Button links: Statistik

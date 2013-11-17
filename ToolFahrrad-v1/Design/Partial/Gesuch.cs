@@ -13,8 +13,8 @@ namespace ToolFahrrad_v1.Design.Partial
     {
         public String requestor;
 
-        public Gesuch(String nArticle, String nQuantity, String nPrice, String nRequestor)
-            : base(nArticle, nQuantity, nPrice)
+        public Gesuch(String nArticle, String nQuantity, String nPrice, String nRequestor, List<FormField> formfields)
+            : base(nArticle, nQuantity, nPrice, formfields)
         {
             this.requestor = nRequestor;
         }
