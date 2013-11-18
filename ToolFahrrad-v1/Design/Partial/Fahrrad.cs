@@ -109,6 +109,7 @@ namespace ToolFahrrad_v1.Design
             // hinzu zur serie!
             listBv.ForEach(x => series1.Points.Add(x));
 
+            series1.Enabled = true;
 
             ///
             /// Produktion Anzahl
@@ -127,20 +128,19 @@ namespace ToolFahrrad_v1.Design
             // hinzu zur serie!
             listPv.ForEach(x => series2.Points.Add(x));
 
-
-
-             //this.chart_statistik.ChartAreas.First().
+            series2.Enabled = true;
+            //series2.
 
             ///
             /// Kapazitat Arbeitsplatz Anzahl
             /// 
 
-            Series series3 = this.chart_statistik.Series.FirstOrDefault(x => x.Name == "Kapazitaet");
+            Series series3 = this.chart_statistik.Series.First(x => x.Name == "Kapazitaet");
 
             // baue datapoints zusammen
             var listKap = DataContainer.Instance.ArbeitsplatzList.OrderBy(x => x.GetNummerArbeitsplatz).Select(x =>
             {
-                var dp = new DataPoint(x.GetNummerArbeitsplatz/2, x.GetVerfuegbareZeit);
+                var dp = new DataPoint(x.GetNummerArbeitsplatz/2, (x.GetVerfuegbareZeit * x.AnzSchichten) + x.UeberMin);
                 dp.AxisLabel = x.GetNummerArbeitsplatz.ToString();
                 return dp;
             }).ToList();
@@ -152,18 +152,19 @@ namespace ToolFahrrad_v1.Design
             /// Kapazitat Arbeitsplatz Anzahl
             /// 
 
-            Series series4 = this.chart_statistik.Series.FirstOrDefault(x => x.Name == "KapazitaetNeed");
+            Series series4 = this.chart_statistik.Series.First(x => x.Name == "KapazitaetNeed");
 
             // baue datapoints zusammen
             var listKap2 = DataContainer.Instance.ArbeitsplatzList.OrderBy(x => x.GetNummerArbeitsplatz).Select(x =>
             {
-                var dp = new DataPoint(x.GetNummerArbeitsplatz / 2, x.GetVerfuegbareZeit - x.Leerzeit);
+                var dp = new DataPoint(x.GetNummerArbeitsplatz / 2, x.GetBenoetigteZeit);
                 dp.AxisLabel = x.GetNummerArbeitsplatz.ToString();
                 return dp;
             }).ToList();
 
             // hinzu zur serie!
             listKap2.ForEach(x => series4.Points.Add(x));
+
 
         }
                 
