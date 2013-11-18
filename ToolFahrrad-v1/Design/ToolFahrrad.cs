@@ -526,8 +526,10 @@ namespace ToolFahrrad_v1.Design
             //bildSpeichOk.Visible = true;
             //panelXML.Visible = true;
             _okPrognose = true;
-            if (_okXml)
-//                toolAusfueren.Visible = true;
+            if (_okXml) {
+                //toolAusfueren.Visible = true;
+            }
+             start_prognose_label_successInfo.Visible = true;
 
             GetInfo(_culInfo.Contains("de") ? "Prognose wurde gespeichert" : "Forecast has been saved");
         }
@@ -1736,8 +1738,13 @@ namespace ToolFahrrad_v1.Design
 //                                xmlTextBox.Text = filePath;
 //                                xmlOffenOK.Visible = true;
                                 _okXml = true;
-                                if (_okPrognose)
+                                if (_okPrognose) {
                                     //toolAusfueren.Visible = true;
+                                }
+                                    panelXML.BorderColor = Color.LimeGreen;
+                                    labeldragdropinfo.Font = new Font(labeldragdropinfo.Font, FontStyle.Bold);
+                                    labeldragdropinfo.ForeColor = Color.Green;                                
+
                                 GetInfo(_culInfo.Contains("de") ? "XML-Datei wurde importiert" : "XML-file is imported");
                             }
                             else
@@ -1953,8 +1960,7 @@ namespace ToolFahrrad_v1.Design
         {
             Credentials credentials = LoadCredentials();
             Get_Market_Place(credentials);
-        }     
-
+        }
     }
 }
 

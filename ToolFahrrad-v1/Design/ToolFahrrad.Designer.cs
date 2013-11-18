@@ -952,6 +952,7 @@
             // 
             // pictureBox5
             // 
+            this.pictureBox5.Image = global::ToolFahrrad_v1.Properties.Resources.Down_Arrow_Icon1;
             resources.ApplyResources(this.pictureBox5, "pictureBox5");
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.TabStop = false;
@@ -1021,6 +1022,7 @@
             0,
             0});
             this.upDownP33.Name = "upDownP33";
+            this.upDownP33.ValueChanged += new System.EventHandler(this.start_prognose_numeric_periodeN3_ValueChanged);
             // 
             // upDownP23
             // 
@@ -1037,6 +1039,7 @@
             0,
             0});
             this.upDownP23.Name = "upDownP23";
+            this.upDownP23.ValueChanged += new System.EventHandler(this.start_prognose_numeric_periodeN2_ValueChanged);
             // 
             // upDownP13
             // 
@@ -1053,6 +1056,7 @@
             0,
             0});
             this.upDownP13.Name = "upDownP13";
+            this.upDownP13.ValueChanged += new System.EventHandler(this.start_prognose_numeric_periodeN1_ValueChanged);
             // 
             // upDownAW3
             // 
@@ -1069,6 +1073,7 @@
             0,
             0});
             this.upDownAW3.Name = "upDownAW3";
+            this.upDownAW3.ValueChanged += new System.EventHandler(this.start_prognose_numeric_periodeN_ValueChanged);
             // 
             // p1
             // 
@@ -1100,6 +1105,7 @@
             0,
             0});
             this.upDownAW2.Name = "upDownAW2";
+            this.upDownAW2.ValueChanged += new System.EventHandler(this.start_prognose_numeric_periodeN_ValueChanged);
             // 
             // upDownAW1
             // 
@@ -1116,6 +1122,7 @@
             0,
             0});
             this.upDownAW1.Name = "upDownAW1";
+            this.upDownAW1.ValueChanged += new System.EventHandler(this.start_prognose_numeric_periodeN_ValueChanged);
             // 
             // upDownP12
             // 
@@ -1132,6 +1139,7 @@
             0,
             0});
             this.upDownP12.Name = "upDownP12";
+            this.upDownP12.ValueChanged += new System.EventHandler(this.start_prognose_numeric_periodeN1_ValueChanged);
             // 
             // upDownP11
             // 
@@ -1148,6 +1156,7 @@
             0,
             0});
             this.upDownP11.Name = "upDownP11";
+            this.upDownP11.ValueChanged += new System.EventHandler(this.start_prognose_numeric_periodeN1_ValueChanged);
             // 
             // upDownP22
             // 
@@ -1164,6 +1173,7 @@
             0,
             0});
             this.upDownP22.Name = "upDownP22";
+            this.upDownP22.ValueChanged += new System.EventHandler(this.start_prognose_numeric_periodeN2_ValueChanged);
             // 
             // upDownP21
             // 
@@ -1180,6 +1190,7 @@
             0,
             0});
             this.upDownP21.Name = "upDownP21";
+            this.upDownP21.ValueChanged += new System.EventHandler(this.start_prognose_numeric_periodeN2_ValueChanged);
             // 
             // upDownP32
             // 
@@ -1196,6 +1207,7 @@
             0,
             0});
             this.upDownP32.Name = "upDownP32";
+            this.upDownP32.ValueChanged += new System.EventHandler(this.start_prognose_numeric_periodeN3_ValueChanged);
             // 
             // upDownP31
             // 
@@ -1212,6 +1224,7 @@
             0,
             0});
             this.upDownP31.Name = "upDownP31";
+            this.upDownP31.ValueChanged += new System.EventHandler(this.start_prognose_numeric_periodeN3_ValueChanged);
             // 
             // prognose3
             // 
@@ -1258,6 +1271,7 @@
             0,
             0});
             this.pufferP1.Name = "pufferP1";
+            this.pufferP1.ValueChanged += new System.EventHandler(this.start_prognose_numeric_puffer_ValueChanged);
             // 
             // pufferP2
             // 
@@ -1274,6 +1288,7 @@
             0,
             0});
             this.pufferP2.Name = "pufferP2";
+            this.pufferP2.ValueChanged += new System.EventHandler(this.start_prognose_numeric_puffer_ValueChanged);
             // 
             // pufferP3
             // 
@@ -1290,6 +1305,7 @@
             0,
             0});
             this.pufferP3.Name = "pufferP3";
+            this.pufferP3.ValueChanged += new System.EventHandler(this.start_prognose_numeric_puffer_ValueChanged);
             // 
             // start_prognose_textbox_periodeN
             // 
@@ -1350,7 +1366,7 @@
             this.start_prognose_label_successInfo.BackColor = System.Drawing.Color.Transparent;
             this.home_prognose_table_main.SetColumnSpan(this.start_prognose_label_successInfo, 4);
             resources.ApplyResources(this.start_prognose_label_successInfo, "start_prognose_label_successInfo");
-            this.start_prognose_label_successInfo.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.start_prognose_label_successInfo.ForeColor = System.Drawing.Color.Green;
             this.start_prognose_label_successInfo.Name = "start_prognose_label_successInfo";
             // 
             // shapeContainer1
