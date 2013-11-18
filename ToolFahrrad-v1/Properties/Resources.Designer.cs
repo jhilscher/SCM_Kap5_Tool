@@ -71,7 +71,7 @@ namespace ToolFahrrad_v1.Properties {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die B ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die Bestand ähnelt.
         /// </summary>
         internal static string Fahrrad_Information_B {
             get {
@@ -80,11 +80,20 @@ namespace ToolFahrrad_v1.Properties {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die P ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die Periode ähnelt.
         /// </summary>
         internal static string Fahrrad_Information_P {
             get {
                 return ResourceManager.GetString("Fahrrad_Information_P", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Trend ähnelt.
+        /// </summary>
+        internal static string Fahrrad_Information_Trend {
+            get {
+                return ResourceManager.GetString("Fahrrad_Information_Trend", resourceCulture);
             }
         }
         
