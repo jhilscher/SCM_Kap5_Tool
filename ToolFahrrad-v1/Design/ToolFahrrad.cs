@@ -12,6 +12,7 @@ using ToolFahrrad_v1.Verwaltung;
 using ToolFahrrad_v1.Windows;
 using ToolFahrrad_v1.XML;
 using ToolFahrrad_v1.Design.Partial;
+using ToolFahrrad_v1.Design;
 
 using System.Runtime.Serialization.Formatters.Binary;
 
@@ -1903,7 +1904,9 @@ namespace ToolFahrrad_v1.Design
             if (e.ColumnIndex == MarketPlaceGrid.Columns["action_Angebote"].Index && e.RowIndex >= 0 && e.RowIndex != MarketPlaceGrid.RowCount - 1)
             {
                 List<FormField> fields = MarketPlaceGrid.Rows[e.RowIndex].Cells[5].Value as List<FormField>;
-                System.Windows.Forms.MessageBox.Show(fields[0].value);
+                Credentials credentials = LoadCredentials();
+                DoPost(fields, credentials);
+                Get_Market_Place(credentials);
             }
             
         }
@@ -1913,7 +1916,9 @@ namespace ToolFahrrad_v1.Design
             if (e.ColumnIndex == dta_Gesuche.Columns["action_gesuche"].Index && e.RowIndex >= 0 && e.RowIndex != dta_Gesuche.RowCount - 1)
             {
                 List<FormField> fields = dta_Gesuche.Rows[e.RowIndex].Cells[5].Value as List<FormField>;
-                System.Windows.Forms.MessageBox.Show(fields[0].value);
+                Credentials credentials = LoadCredentials();
+                DoPost(fields, credentials);
+                Get_Market_Place(credentials);
             }
         }
 
@@ -1922,7 +1927,9 @@ namespace ToolFahrrad_v1.Design
             if (e.ColumnIndex == dta_e_Angebote.Columns["action_eangebote"].Index && e.RowIndex >= 0 && e.RowIndex != dta_e_Angebote.RowCount - 1)
             {
                 List<FormField> fields = dta_e_Angebote.Rows[e.RowIndex].Cells[5].Value as List<FormField>;
-                System.Windows.Forms.MessageBox.Show(fields[0].value);
+                Credentials credentials = LoadCredentials();
+                DoPost(fields, credentials);
+                Get_Market_Place(credentials);
             }
         }
 
@@ -1931,8 +1938,21 @@ namespace ToolFahrrad_v1.Design
             if (e.ColumnIndex == dta_e_Gesuche.Columns["action_egesuche"].Index && e.RowIndex >= 0 && e.RowIndex != dta_e_Gesuche.RowCount - 1)
             {
                 List<FormField> fields = dta_e_Gesuche.Rows[e.RowIndex].Cells[5].Value as List<FormField>;
-                System.Windows.Forms.MessageBox.Show(fields[0].value);
+                Credentials credentials = LoadCredentials();
+                DoPost(fields, credentials);
+                Get_Market_Place(credentials);
             }
+        }
+
+        private void lbl_Angebote_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_reload_market_Click(object sender, EventArgs e)
+        {
+            Credentials credentials = LoadCredentials();
+            Get_Market_Place(credentials);
         }
 
 

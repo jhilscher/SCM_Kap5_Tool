@@ -100,6 +100,25 @@ namespace ToolFahrrad_v1.Design
             tabs.SelectedTab = tab_marktplatz;
         }
 
+        public Credentials LoadCredentials()
+        {
+            Credentials credentials = new Credentials();
+            Boolean exists = File.Exists(this.path + @"\userdata");
+            if (File.Exists(this.path + @"\userdata"))
+            {
+                FileStream eing = new FileStream(this.path + @"\userdata", FileMode.Open);
+                BinaryFormatter format = new BinaryFormatter();
+
+                credentials = format.Deserialize(eing) as Credentials;
+                eing.Close();
+            }
+            if (credentials.username.Equals(""))
+            {
+                credentials = new Credentials(txt_benutzername.Text, txt_passwort.Text);
+            }
+            return credentials;
+        }
+
 
         /// <summary>
         /// 8. Button links: Statistik

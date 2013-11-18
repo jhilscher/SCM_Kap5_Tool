@@ -31,11 +31,11 @@
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.GroupBox dragdropbox;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Fahrrad));
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.labeldragdropinfo = new System.Windows.Forms.Label();
             this.prognoseSpeichern = new System.Windows.Forms.Button();
@@ -671,6 +671,8 @@
             this.eil = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.del = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.tab_marktplatz = new System.Windows.Forms.TabPage();
+            this.btn_reload_market = new System.Windows.Forms.Button();
+            
             this.panel_password = new System.Windows.Forms.Panel();
             this.panel10 = new System.Windows.Forms.Panel();
             this.txt_passwort = new System.Windows.Forms.TextBox();
@@ -6881,6 +6883,7 @@
             this.tab_marktplatz.BackColor = System.Drawing.Color.Transparent;
             this.tab_marktplatz.Controls.Add(this.panel_password);
             this.tab_marktplatz.Controls.Add(this.lbl_Gesuche);
+            this.tab_marktplatz.Controls.Add(this.btn_reload_market);
             this.tab_marktplatz.Controls.Add(this.lbl_Angebote);
             this.tab_marktplatz.Controls.Add(this.lbl_eigene_Angebote);
             this.tab_marktplatz.Controls.Add(this.lbl_eigene_Gesuche);
@@ -6950,6 +6953,7 @@
             // 
             resources.ApplyResources(this.lbl_Angebote, "lbl_Angebote");
             this.lbl_Angebote.Name = "lbl_Angebote";
+            this.lbl_Angebote.Click += new System.EventHandler(this.lbl_Angebote_Click);
             // 
             // lbl_eigene_Angebote
             // 
@@ -7424,25 +7428,25 @@
             // 
             // chart_statistik
             // 
-            chartArea1.Name = "ChartArea2";
-            this.chart_statistik.ChartAreas.Add(chartArea1);
-            legend1.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Top;
-            legend1.Name = "Legend1";
-            legend2.DockedToChartArea = "ChartArea2";
-            legend2.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Top;
-            legend2.Name = "Legend3";
-            this.chart_statistik.Legends.Add(legend1);
-            this.chart_statistik.Legends.Add(legend2);
+            chartArea2.Name = "ChartArea2";
+            this.chart_statistik.ChartAreas.Add(chartArea2);
+            legend3.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Top;
+            legend3.Name = "Legend1";
+            legend4.DockedToChartArea = "ChartArea2";
+            legend4.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Top;
+            legend4.Name = "Legend3";
+            this.chart_statistik.Legends.Add(legend3);
+            this.chart_statistik.Legends.Add(legend4);
             resources.ApplyResources(this.chart_statistik, "chart_statistik");
             this.chart_statistik.Name = "chart_statistik";
-            series1.ChartArea = "ChartArea2";
-            series1.Legend = "Legend1";
-            series1.Name = "Bestellungen";
-            series2.ChartArea = "ChartArea2";
-            series2.Legend = "Legend1";
-            series2.Name = "Produktion";
-            this.chart_statistik.Series.Add(series1);
-            this.chart_statistik.Series.Add(series2);
+            series3.ChartArea = "ChartArea2";
+            series3.Legend = "Legend1";
+            series3.Name = "Bestellungen";
+            series4.ChartArea = "ChartArea2";
+            series4.Legend = "Legend1";
+            series4.Name = "Produktion";
+            this.chart_statistik.Series.Add(series3);
+            this.chart_statistik.Series.Add(series4);
             // 
             // tab_einstellungen
             // 
@@ -8119,6 +8123,13 @@
             this.nav_button_1.Name = "nav_button_1";
             this.nav_button_1.UseVisualStyleBackColor = false;
             this.nav_button_1.Click += new System.EventHandler(this.nav_button_1_Click);
+            // 
+            // btn_reload_market
+            // 
+            resources.ApplyResources(this.btn_reload_market, "btn_reload_market");
+            this.btn_reload_market.Name = "btn_reload_market";
+            this.btn_reload_market.UseVisualStyleBackColor = true;
+            this.btn_reload_market.Click += new System.EventHandler(this.btn_reload_market_Click);
             // 
             // Fahrrad
             // 
@@ -9058,6 +9069,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn37;
         private System.Windows.Forms.DataGridViewButtonColumn action_gesuche;
         private System.Windows.Forms.DataGridViewTextBoxColumn hidden_gesuche;
+        private System.Windows.Forms.Button btn_reload_market;
         
     }
 }

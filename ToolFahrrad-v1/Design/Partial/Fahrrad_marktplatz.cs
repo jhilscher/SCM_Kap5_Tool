@@ -187,6 +187,50 @@ namespace ToolFahrrad_v1.Design
             return container;
         }
 
+        /// <summary>
+        /// sends post to /scs/market
+        /// </summary>
+        /// <param name="formfields">List with all params for the post data</param>
+        /// <returns></returns>
+        public static CookieContainer DoPost(List<FormField> formfields, Credentials credentials)
+        {
+            String url = "http://www.iwi.hs-karlsruhe.de/scs/";
+            String postPath = "market";
+            String param = "?";
+            foreach (FormField field in formfields)
+            {
+                param += String.Format("{0}={1}&", field.name, field.value);
+            }
+            param = param.Remove(param.Length - 1);
+
+            ///
+            /// ist ein bisschen kompliziert, die Marketplace-Seite anzeigen zu
+            /// lassen ohne 500 zu bekommen. Der Weg der funktioniert ist:
+            /// start -> market/market_set.html -> authenticate:market/ -> market/marketinfo.jsp
+            ///
+            CookieContainer container = new CookieContainer();
+            GetUrl(false, url, "start", container);
+            GetUrl(false, url, "market/market_set.html", container);
+
+            ///
+            /// 
+            ///
+            Authenticate(credentials.username, credentials.password, url + "market/", container);
+
+            String postUrl = url + postPath + param;
+
+            HttpWebRequest authRequest = (HttpWebRequest)WebRequest.Create(postUrl);
+            authRequest.CookieContainer = container;
+            authRequest.Method = WebRequestMethods.Http.Post;
+            authRequest.ContentType = "application/x-www-form-urlencoded";
+            authRequest.Timeout = 360000;
+
+            WebResponse response = authRequest.GetResponse();
+            response.Close();
+            
+            return new CookieContainer();
+        }
+
         ///
         /// <param>String html</param>
         /// <summary>removes unuseful crap html code and keeps the important data</summary>
