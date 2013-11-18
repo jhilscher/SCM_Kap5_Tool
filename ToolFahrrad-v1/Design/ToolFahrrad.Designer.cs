@@ -29,52 +29,52 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.GroupBox dragdropbox;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Fahrrad));
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.labeldragdropinfo = new System.Windows.Forms.Label();
-            this.prognoseSpeichern = new System.Windows.Forms.Button();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.tabs = new System.Windows.Forms.TabControl();
             this.tab_xml = new System.Windows.Forms.TabPage();
-            this.prognose1 = new System.Windows.Forms.Label();
-            this.pufferP3 = new System.Windows.Forms.NumericUpDown();
-            this.pufferP2 = new System.Windows.Forms.NumericUpDown();
-            this.pufferP1 = new System.Windows.Forms.NumericUpDown();
-            this.label1 = new System.Windows.Forms.Label();
-            this.panelXML = new System.Windows.Forms.Panel();
-            this.save = new System.Windows.Forms.PictureBox();
-            this.xmlOffenOK = new System.Windows.Forms.PictureBox();
-            this.toolAusfueren = new System.Windows.Forms.PictureBox();
-            this.xmlTextBox = new System.Windows.Forms.TextBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.titleXmlLaden = new System.Windows.Forms.Label();
-            this.xml_suchen = new System.Windows.Forms.Button();
-            this.bildSpeichOk = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.labeldragdropinfo = new System.Windows.Forms.Label();
+            this.home_prognose_table_main = new System.Windows.Forms.TableLayoutPanel();
+            this.start_prognose_label_titel = new System.Windows.Forms.Label();
             this.upDownP33 = new System.Windows.Forms.NumericUpDown();
             this.upDownP23 = new System.Windows.Forms.NumericUpDown();
             this.upDownP13 = new System.Windows.Forms.NumericUpDown();
             this.upDownAW3 = new System.Windows.Forms.NumericUpDown();
-            this.upDownP32 = new System.Windows.Forms.NumericUpDown();
-            this.upDownP22 = new System.Windows.Forms.NumericUpDown();
-            this.upDownP12 = new System.Windows.Forms.NumericUpDown();
-            this.upDownAW2 = new System.Windows.Forms.NumericUpDown();
-            this.upDownP31 = new System.Windows.Forms.NumericUpDown();
-            this.upDownP21 = new System.Windows.Forms.NumericUpDown();
-            this.upDownP11 = new System.Windows.Forms.NumericUpDown();
-            this.upDownAW1 = new System.Windows.Forms.NumericUpDown();
-            this.prognose2 = new System.Windows.Forms.Label();
-            this.prognose3 = new System.Windows.Forms.Label();
-            this.aktulleWoche = new System.Windows.Forms.Label();
-            this.p3 = new System.Windows.Forms.Label();
-            this.p2 = new System.Windows.Forms.Label();
             this.p1 = new System.Windows.Forms.Label();
-            this.titlePrognose = new System.Windows.Forms.Label();
+            this.p2 = new System.Windows.Forms.Label();
+            this.p3 = new System.Windows.Forms.Label();
+            this.upDownAW2 = new System.Windows.Forms.NumericUpDown();
+            this.upDownAW1 = new System.Windows.Forms.NumericUpDown();
+            this.upDownP12 = new System.Windows.Forms.NumericUpDown();
+            this.upDownP11 = new System.Windows.Forms.NumericUpDown();
+            this.upDownP22 = new System.Windows.Forms.NumericUpDown();
+            this.upDownP21 = new System.Windows.Forms.NumericUpDown();
+            this.upDownP32 = new System.Windows.Forms.NumericUpDown();
+            this.upDownP31 = new System.Windows.Forms.NumericUpDown();
+            this.prognose3 = new System.Windows.Forms.Label();
+            this.prognose2 = new System.Windows.Forms.Label();
+            this.prognose1 = new System.Windows.Forms.Label();
+            this.aktuelleWoche = new System.Windows.Forms.Label();
+            this.start_prognose_label_produkte_title = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.pufferP1 = new System.Windows.Forms.NumericUpDown();
+            this.pufferP2 = new System.Windows.Forms.NumericUpDown();
+            this.pufferP3 = new System.Windows.Forms.NumericUpDown();
+            this.start_prognose_textbox_periodeN = new System.Windows.Forms.TextBox();
+            this.start_prognose_textbox_periodeN1 = new System.Windows.Forms.TextBox();
+            this.start_prognose_textbox_periodeN2 = new System.Windows.Forms.TextBox();
+            this.start_prognose_textbox_periodeN3 = new System.Windows.Forms.TextBox();
+            this.start_prognose_textbox_puffer = new System.Windows.Forms.TextBox();
+            this.prognoseSpeichern = new System.Windows.Forms.Button();
+            this.bildSpeichOk = new System.Windows.Forms.PictureBox();
+            this.start_prognose_label_successInfo = new System.Windows.Forms.Label();
+            this.shapeContainer1 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
+            this.panelXML = new Microsoft.VisualBasic.PowerPacks.RectangleShape();
             this.tab_produktion = new System.Windows.Forms.TabPage();
             this.tab1 = new System.Windows.Forms.TabControl();
             this.tab_P1 = new System.Windows.Forms.TabPage();
@@ -671,8 +671,6 @@
             this.eil = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.del = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.tab_marktplatz = new System.Windows.Forms.TabPage();
-            this.btn_reload_market = new System.Windows.Forms.Button();
-            
             this.panel_password = new System.Windows.Forms.Panel();
             this.panel10 = new System.Windows.Forms.Panel();
             this.txt_passwort = new System.Windows.Forms.TextBox();
@@ -682,6 +680,7 @@
             this.lbl_benutzername = new System.Windows.Forms.Label();
             this.txt_benutzername = new System.Windows.Forms.TextBox();
             this.lbl_Gesuche = new System.Windows.Forms.Label();
+            this.btn_reload_market = new System.Windows.Forms.Button();
             this.lbl_Angebote = new System.Windows.Forms.Label();
             this.lbl_eigene_Angebote = new System.Windows.Forms.Label();
             this.lbl_eigene_Gesuche = new System.Windows.Forms.Label();
@@ -831,33 +830,26 @@
             this.NavPanel = new System.Windows.Forms.Panel();
             this.nav_button_1 = new System.Windows.Forms.Button();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            dragdropbox = new System.Windows.Forms.GroupBox();
-            dragdropbox.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.tabs.SuspendLayout();
             this.tab_xml.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pufferP3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pufferP2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pufferP1)).BeginInit();
-            this.panelXML.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.save)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.xmlOffenOK)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.toolAusfueren)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bildSpeichOk)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            this.home_prognose_table_main.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.upDownP33)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.upDownP23)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.upDownP13)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.upDownAW3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.upDownP32)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.upDownP22)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.upDownP12)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.upDownAW2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.upDownP31)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.upDownP21)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.upDownP11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.upDownAW1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.upDownP12)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.upDownP11)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.upDownP22)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.upDownP21)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.upDownP32)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.upDownP31)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pufferP1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pufferP2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pufferP3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bildSpeichOk)).BeginInit();
             this.tab_produktion.SuspendLayout();
             this.tab1.SuspendLayout();
             this.tab_P1.SuspendLayout();
@@ -931,39 +923,6 @@
             this.NavPanel.SuspendLayout();
             this.SuspendLayout();
             // 
-            // dragdropbox
-            // 
-            dragdropbox.Controls.Add(this.pictureBox5);
-            dragdropbox.Controls.Add(this.labeldragdropinfo);
-            dragdropbox.Controls.Add(this.prognoseSpeichern);
-            dragdropbox.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            resources.ApplyResources(dragdropbox, "dragdropbox");
-            dragdropbox.Name = "dragdropbox";
-            dragdropbox.TabStop = false;
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.Image = global::ToolFahrrad_v1.Properties.Resources.Down_Arrow_Icon1;
-            resources.ApplyResources(this.pictureBox5, "pictureBox5");
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.TabStop = false;
-            this.pictureBox5.Click += new System.EventHandler(this.pictureBox5_Click_1);
-            // 
-            // labeldragdropinfo
-            // 
-            resources.ApplyResources(this.labeldragdropinfo, "labeldragdropinfo");
-            this.labeldragdropinfo.Name = "labeldragdropinfo";
-            this.labeldragdropinfo.Click += new System.EventHandler(this.labeldragdropinfo_Click);
-            // 
-            // prognoseSpeichern
-            // 
-            resources.ApplyResources(this.prognoseSpeichern, "prognoseSpeichern");
-            this.prognoseSpeichern.Name = "prognoseSpeichern";
-            this.helpProvider1.SetShowHelp(this.prognoseSpeichern, ((bool)(resources.GetObject("prognoseSpeichern.ShowHelp"))));
-            this.toolTip.SetToolTip(this.prognoseSpeichern, resources.GetString("prognoseSpeichern.ToolTip"));
-            this.prognoseSpeichern.UseVisualStyleBackColor = true;
-            this.prognoseSpeichern.Click += new System.EventHandler(this.prognoseSpeichern_Click);
-            // 
             // tabs
             // 
             this.tabs.Controls.Add(this.tab_xml);
@@ -983,203 +942,73 @@
             // tab_xml
             // 
             this.tab_xml.BackColor = System.Drawing.Color.Transparent;
-            this.tab_xml.Controls.Add(dragdropbox);
-            this.tab_xml.Controls.Add(this.prognose1);
-            this.tab_xml.Controls.Add(this.pufferP3);
-            this.tab_xml.Controls.Add(this.pufferP2);
-            this.tab_xml.Controls.Add(this.pufferP1);
-            this.tab_xml.Controls.Add(this.label1);
-            this.tab_xml.Controls.Add(this.panelXML);
-            this.tab_xml.Controls.Add(this.bildSpeichOk);
-            this.tab_xml.Controls.Add(this.pictureBox1);
-            this.tab_xml.Controls.Add(this.upDownP33);
-            this.tab_xml.Controls.Add(this.upDownP23);
-            this.tab_xml.Controls.Add(this.upDownP13);
-            this.tab_xml.Controls.Add(this.upDownAW3);
-            this.tab_xml.Controls.Add(this.upDownP32);
-            this.tab_xml.Controls.Add(this.upDownP22);
-            this.tab_xml.Controls.Add(this.upDownP12);
-            this.tab_xml.Controls.Add(this.upDownAW2);
-            this.tab_xml.Controls.Add(this.upDownP31);
-            this.tab_xml.Controls.Add(this.upDownP21);
-            this.tab_xml.Controls.Add(this.upDownP11);
-            this.tab_xml.Controls.Add(this.upDownAW1);
-            this.tab_xml.Controls.Add(this.prognose2);
-            this.tab_xml.Controls.Add(this.prognose3);
-            this.tab_xml.Controls.Add(this.aktulleWoche);
-            this.tab_xml.Controls.Add(this.p3);
-            this.tab_xml.Controls.Add(this.p2);
-            this.tab_xml.Controls.Add(this.p1);
-            this.tab_xml.Controls.Add(this.titlePrognose);
+            this.tab_xml.Controls.Add(this.pictureBox5);
+            this.tab_xml.Controls.Add(this.labeldragdropinfo);
+            this.tab_xml.Controls.Add(this.home_prognose_table_main);
+            this.tab_xml.Controls.Add(this.shapeContainer1);
             resources.ApplyResources(this.tab_xml, "tab_xml");
             this.tab_xml.Name = "tab_xml";
             this.helpProvider1.SetShowHelp(this.tab_xml, ((bool)(resources.GetObject("tab_xml.ShowHelp"))));
             // 
-            // prognose1
+            // pictureBox5
             // 
-            resources.ApplyResources(this.prognose1, "prognose1");
-            this.prognose1.Name = "prognose1";
-            this.helpProvider1.SetShowHelp(this.prognose1, ((bool)(resources.GetObject("prognose1.ShowHelp"))));
+            resources.ApplyResources(this.pictureBox5, "pictureBox5");
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.TabStop = false;
             // 
-            // pufferP3
+            // labeldragdropinfo
             // 
-            this.pufferP3.BackColor = System.Drawing.Color.MistyRose;
-            resources.ApplyResources(this.pufferP3, "pufferP3");
-            this.pufferP3.Increment = new decimal(new int[] {
-            10,
-            0,
-            0,
-            0});
-            this.pufferP3.Maximum = new decimal(new int[] {
-            10000,
-            0,
-            0,
-            0});
-            this.pufferP3.Name = "pufferP3";
-            this.helpProvider1.SetShowHelp(this.pufferP3, ((bool)(resources.GetObject("pufferP3.ShowHelp"))));
-            this.pufferP3.Value = new decimal(new int[] {
-            50,
-            0,
-            0,
-            0});
+            resources.ApplyResources(this.labeldragdropinfo, "labeldragdropinfo");
+            this.labeldragdropinfo.Name = "labeldragdropinfo";
             // 
-            // pufferP2
+            // home_prognose_table_main
             // 
-            this.pufferP2.BackColor = System.Drawing.Color.MistyRose;
-            resources.ApplyResources(this.pufferP2, "pufferP2");
-            this.pufferP2.Increment = new decimal(new int[] {
-            10,
-            0,
-            0,
-            0});
-            this.pufferP2.Maximum = new decimal(new int[] {
-            10000,
-            0,
-            0,
-            0});
-            this.pufferP2.Name = "pufferP2";
-            this.helpProvider1.SetShowHelp(this.pufferP2, ((bool)(resources.GetObject("pufferP2.ShowHelp"))));
-            this.pufferP2.Value = new decimal(new int[] {
-            50,
-            0,
-            0,
-            0});
+            this.home_prognose_table_main.BackColor = System.Drawing.Color.LightGray;
+            resources.ApplyResources(this.home_prognose_table_main, "home_prognose_table_main");
+            this.home_prognose_table_main.Controls.Add(this.start_prognose_label_titel, 0, 0);
+            this.home_prognose_table_main.Controls.Add(this.upDownP33, 5, 4);
+            this.home_prognose_table_main.Controls.Add(this.upDownP23, 4, 4);
+            this.home_prognose_table_main.Controls.Add(this.upDownP13, 3, 4);
+            this.home_prognose_table_main.Controls.Add(this.upDownAW3, 1, 4);
+            this.home_prognose_table_main.Controls.Add(this.p1, 0, 4);
+            this.home_prognose_table_main.Controls.Add(this.p2, 0, 3);
+            this.home_prognose_table_main.Controls.Add(this.p3, 0, 2);
+            this.home_prognose_table_main.Controls.Add(this.upDownAW2, 1, 3);
+            this.home_prognose_table_main.Controls.Add(this.upDownAW1, 1, 2);
+            this.home_prognose_table_main.Controls.Add(this.upDownP12, 3, 3);
+            this.home_prognose_table_main.Controls.Add(this.upDownP11, 3, 2);
+            this.home_prognose_table_main.Controls.Add(this.upDownP22, 4, 3);
+            this.home_prognose_table_main.Controls.Add(this.upDownP21, 4, 2);
+            this.home_prognose_table_main.Controls.Add(this.upDownP32, 5, 3);
+            this.home_prognose_table_main.Controls.Add(this.upDownP31, 5, 2);
+            this.home_prognose_table_main.Controls.Add(this.prognose3, 5, 1);
+            this.home_prognose_table_main.Controls.Add(this.prognose2, 4, 1);
+            this.home_prognose_table_main.Controls.Add(this.prognose1, 3, 1);
+            this.home_prognose_table_main.Controls.Add(this.aktuelleWoche, 1, 1);
+            this.home_prognose_table_main.Controls.Add(this.start_prognose_label_produkte_title, 0, 1);
+            this.home_prognose_table_main.Controls.Add(this.label1, 7, 1);
+            this.home_prognose_table_main.Controls.Add(this.pufferP1, 7, 2);
+            this.home_prognose_table_main.Controls.Add(this.pufferP2, 7, 3);
+            this.home_prognose_table_main.Controls.Add(this.pufferP3, 7, 4);
+            this.home_prognose_table_main.Controls.Add(this.start_prognose_textbox_periodeN, 1, 5);
+            this.home_prognose_table_main.Controls.Add(this.start_prognose_textbox_periodeN1, 3, 5);
+            this.home_prognose_table_main.Controls.Add(this.start_prognose_textbox_periodeN2, 4, 5);
+            this.home_prognose_table_main.Controls.Add(this.start_prognose_textbox_periodeN3, 5, 5);
+            this.home_prognose_table_main.Controls.Add(this.start_prognose_textbox_puffer, 7, 5);
+            this.home_prognose_table_main.Controls.Add(this.prognoseSpeichern, 5, 7);
+            this.home_prognose_table_main.Controls.Add(this.bildSpeichOk, 7, 0);
+            this.home_prognose_table_main.Controls.Add(this.start_prognose_label_successInfo, 1, 7);
+            this.home_prognose_table_main.Name = "home_prognose_table_main";
             // 
-            // pufferP1
+            // start_prognose_label_titel
             // 
-            this.pufferP1.BackColor = System.Drawing.Color.MistyRose;
-            resources.ApplyResources(this.pufferP1, "pufferP1");
-            this.pufferP1.Increment = new decimal(new int[] {
-            10,
-            0,
-            0,
-            0});
-            this.pufferP1.Maximum = new decimal(new int[] {
-            10000,
-            0,
-            0,
-            0});
-            this.pufferP1.Name = "pufferP1";
-            this.helpProvider1.SetShowHelp(this.pufferP1, ((bool)(resources.GetObject("pufferP1.ShowHelp"))));
-            this.pufferP1.Value = new decimal(new int[] {
-            50,
-            0,
-            0,
-            0});
-            this.pufferP1.ValueChanged += new System.EventHandler(this.pufferP1_ValueChanged);
-            // 
-            // label1
-            // 
-            resources.ApplyResources(this.label1, "label1");
-            this.label1.Name = "label1";
-            this.helpProvider1.SetShowHelp(this.label1, ((bool)(resources.GetObject("label1.ShowHelp"))));
-            // 
-            // panelXML
-            // 
-            this.panelXML.Controls.Add(this.save);
-            this.panelXML.Controls.Add(this.xmlOffenOK);
-            this.panelXML.Controls.Add(this.toolAusfueren);
-            this.panelXML.Controls.Add(this.xmlTextBox);
-            this.panelXML.Controls.Add(this.pictureBox2);
-            this.panelXML.Controls.Add(this.titleXmlLaden);
-            this.panelXML.Controls.Add(this.xml_suchen);
-            resources.ApplyResources(this.panelXML, "panelXML");
-            this.panelXML.Name = "panelXML";
-            this.helpProvider1.SetShowHelp(this.panelXML, ((bool)(resources.GetObject("panelXML.ShowHelp"))));
-            // 
-            // save
-            // 
-            this.save.Cursor = System.Windows.Forms.Cursors.Default;
-            resources.ApplyResources(this.save, "save");
-            this.save.Name = "save";
-            this.helpProvider1.SetShowHelp(this.save, ((bool)(resources.GetObject("save.ShowHelp"))));
-            this.save.TabStop = false;
-            this.toolTip.SetToolTip(this.save, resources.GetString("save.ToolTip"));
-            this.save.Click += new System.EventHandler(this.save_Click);
-            // 
-            // xmlOffenOK
-            // 
-            resources.ApplyResources(this.xmlOffenOK, "xmlOffenOK");
-            this.xmlOffenOK.Name = "xmlOffenOK";
-            this.helpProvider1.SetShowHelp(this.xmlOffenOK, ((bool)(resources.GetObject("xmlOffenOK.ShowHelp"))));
-            this.xmlOffenOK.TabStop = false;
-            this.toolTip.SetToolTip(this.xmlOffenOK, resources.GetString("xmlOffenOK.ToolTip"));
-            // 
-            // toolAusfueren
-            // 
-            this.toolAusfueren.Cursor = System.Windows.Forms.Cursors.Hand;
-            resources.ApplyResources(this.toolAusfueren, "toolAusfueren");
-            this.toolAusfueren.Name = "toolAusfueren";
-            this.helpProvider1.SetShowHelp(this.toolAusfueren, ((bool)(resources.GetObject("toolAusfueren.ShowHelp"))));
-            this.toolAusfueren.TabStop = false;
-            this.toolTip.SetToolTip(this.toolAusfueren, resources.GetString("toolAusfueren.ToolTip"));
-            this.toolAusfueren.Click += new System.EventHandler(this.toolAusfueren_Click);
-            // 
-            // xmlTextBox
-            // 
-            resources.ApplyResources(this.xmlTextBox, "xmlTextBox");
-            this.xmlTextBox.Name = "xmlTextBox";
-            this.helpProvider1.SetShowHelp(this.xmlTextBox, ((bool)(resources.GetObject("xmlTextBox.ShowHelp"))));
-            // 
-            // pictureBox2
-            // 
-            resources.ApplyResources(this.pictureBox2, "pictureBox2");
-            this.pictureBox2.Name = "pictureBox2";
-            this.helpProvider1.SetShowHelp(this.pictureBox2, ((bool)(resources.GetObject("pictureBox2.ShowHelp"))));
-            this.pictureBox2.TabStop = false;
-            // 
-            // titleXmlLaden
-            // 
-            resources.ApplyResources(this.titleXmlLaden, "titleXmlLaden");
-            this.titleXmlLaden.Name = "titleXmlLaden";
-            this.helpProvider1.SetShowHelp(this.titleXmlLaden, ((bool)(resources.GetObject("titleXmlLaden.ShowHelp"))));
-            // 
-            // xml_suchen
-            // 
-            resources.ApplyResources(this.xml_suchen, "xml_suchen");
-            this.xml_suchen.Name = "xml_suchen";
-            this.helpProvider1.SetShowHelp(this.xml_suchen, ((bool)(resources.GetObject("xml_suchen.ShowHelp"))));
-            this.toolTip.SetToolTip(this.xml_suchen, resources.GetString("xml_suchen.ToolTip"));
-            this.xml_suchen.UseVisualStyleBackColor = true;
-            this.xml_suchen.Click += new System.EventHandler(this.xml_suchen_Click);
-            // 
-            // bildSpeichOk
-            // 
-            resources.ApplyResources(this.bildSpeichOk, "bildSpeichOk");
-            this.bildSpeichOk.Name = "bildSpeichOk";
-            this.helpProvider1.SetShowHelp(this.bildSpeichOk, ((bool)(resources.GetObject("bildSpeichOk.ShowHelp"))));
-            this.bildSpeichOk.TabStop = false;
-            this.toolTip.SetToolTip(this.bildSpeichOk, resources.GetString("bildSpeichOk.ToolTip"));
-            // 
-            // pictureBox1
-            // 
-            resources.ApplyResources(this.pictureBox1, "pictureBox1");
-            this.pictureBox1.Name = "pictureBox1";
-            this.helpProvider1.SetShowHelp(this.pictureBox1, ((bool)(resources.GetObject("pictureBox1.ShowHelp"))));
-            this.pictureBox1.TabStop = false;
+            this.home_prognose_table_main.SetColumnSpan(this.start_prognose_label_titel, 6);
+            resources.ApplyResources(this.start_prognose_label_titel, "start_prognose_label_titel");
+            this.start_prognose_label_titel.Name = "start_prognose_label_titel";
             // 
             // upDownP33
             // 
+            this.upDownP33.BackColor = System.Drawing.SystemColors.ControlLight;
             this.upDownP33.Increment = new decimal(new int[] {
             10,
             0,
@@ -1187,21 +1016,15 @@
             0});
             resources.ApplyResources(this.upDownP33, "upDownP33");
             this.upDownP33.Maximum = new decimal(new int[] {
-            10000,
+            1000,
             0,
             0,
             0});
             this.upDownP33.Name = "upDownP33";
-            this.helpProvider1.SetShowHelp(this.upDownP33, ((bool)(resources.GetObject("upDownP33.ShowHelp"))));
-            this.upDownP33.Value = new decimal(new int[] {
-            100,
-            0,
-            0,
-            0});
-            this.upDownP33.ValueChanged += new System.EventHandler(this.upDownP33_ValueChanged);
             // 
             // upDownP23
             // 
+            this.upDownP23.BackColor = System.Drawing.SystemColors.ControlLight;
             this.upDownP23.Increment = new decimal(new int[] {
             10,
             0,
@@ -1209,21 +1032,15 @@
             0});
             resources.ApplyResources(this.upDownP23, "upDownP23");
             this.upDownP23.Maximum = new decimal(new int[] {
-            10000,
+            1000,
             0,
             0,
             0});
             this.upDownP23.Name = "upDownP23";
-            this.helpProvider1.SetShowHelp(this.upDownP23, ((bool)(resources.GetObject("upDownP23.ShowHelp"))));
-            this.upDownP23.Value = new decimal(new int[] {
-            100,
-            0,
-            0,
-            0});
-            this.upDownP23.ValueChanged += new System.EventHandler(this.upDownP23_ValueChanged);
             // 
             // upDownP13
             // 
+            this.upDownP13.BackColor = System.Drawing.SystemColors.ControlLight;
             this.upDownP13.Increment = new decimal(new int[] {
             10,
             0,
@@ -1231,22 +1048,15 @@
             0});
             resources.ApplyResources(this.upDownP13, "upDownP13");
             this.upDownP13.Maximum = new decimal(new int[] {
-            10000,
+            1000,
             0,
             0,
             0});
             this.upDownP13.Name = "upDownP13";
-            this.helpProvider1.SetShowHelp(this.upDownP13, ((bool)(resources.GetObject("upDownP13.ShowHelp"))));
-            this.upDownP13.Value = new decimal(new int[] {
-            100,
-            0,
-            0,
-            0});
-            this.upDownP13.ValueChanged += new System.EventHandler(this.upDownP13_ValueChanged);
             // 
             // upDownAW3
             // 
-            this.upDownAW3.BackColor = System.Drawing.Color.Honeydew;
+            this.upDownAW3.BackColor = System.Drawing.Color.White;
             this.upDownAW3.Increment = new decimal(new int[] {
             10,
             0,
@@ -1254,88 +1064,30 @@
             0});
             resources.ApplyResources(this.upDownAW3, "upDownAW3");
             this.upDownAW3.Maximum = new decimal(new int[] {
-            10000,
+            1000,
             0,
             0,
             0});
             this.upDownAW3.Name = "upDownAW3";
-            this.helpProvider1.SetShowHelp(this.upDownAW3, ((bool)(resources.GetObject("upDownAW3.ShowHelp"))));
-            this.upDownAW3.Value = new decimal(new int[] {
-            100,
-            0,
-            0,
-            0});
-            this.upDownAW3.ValueChanged += new System.EventHandler(this.upDownAW3_ValueChanged);
             // 
-            // upDownP32
+            // p1
             // 
-            this.upDownP32.Increment = new decimal(new int[] {
-            10,
-            0,
-            0,
-            0});
-            resources.ApplyResources(this.upDownP32, "upDownP32");
-            this.upDownP32.Maximum = new decimal(new int[] {
-            10000,
-            0,
-            0,
-            0});
-            this.upDownP32.Name = "upDownP32";
-            this.helpProvider1.SetShowHelp(this.upDownP32, ((bool)(resources.GetObject("upDownP32.ShowHelp"))));
-            this.upDownP32.Value = new decimal(new int[] {
-            100,
-            0,
-            0,
-            0});
-            this.upDownP32.ValueChanged += new System.EventHandler(this.upDownP32_ValueChanged);
+            resources.ApplyResources(this.p1, "p1");
+            this.p1.Name = "p1";
             // 
-            // upDownP22
+            // p2
             // 
-            this.upDownP22.Increment = new decimal(new int[] {
-            10,
-            0,
-            0,
-            0});
-            resources.ApplyResources(this.upDownP22, "upDownP22");
-            this.upDownP22.Maximum = new decimal(new int[] {
-            10000,
-            0,
-            0,
-            0});
-            this.upDownP22.Name = "upDownP22";
-            this.helpProvider1.SetShowHelp(this.upDownP22, ((bool)(resources.GetObject("upDownP22.ShowHelp"))));
-            this.upDownP22.Value = new decimal(new int[] {
-            100,
-            0,
-            0,
-            0});
-            this.upDownP22.ValueChanged += new System.EventHandler(this.upDownP22_ValueChanged);
+            resources.ApplyResources(this.p2, "p2");
+            this.p2.Name = "p2";
             // 
-            // upDownP12
+            // p3
             // 
-            this.upDownP12.Increment = new decimal(new int[] {
-            10,
-            0,
-            0,
-            0});
-            resources.ApplyResources(this.upDownP12, "upDownP12");
-            this.upDownP12.Maximum = new decimal(new int[] {
-            10000,
-            0,
-            0,
-            0});
-            this.upDownP12.Name = "upDownP12";
-            this.helpProvider1.SetShowHelp(this.upDownP12, ((bool)(resources.GetObject("upDownP12.ShowHelp"))));
-            this.upDownP12.Value = new decimal(new int[] {
-            100,
-            0,
-            0,
-            0});
-            this.upDownP12.ValueChanged += new System.EventHandler(this.upDownP12_ValueChanged);
+            resources.ApplyResources(this.p3, "p3");
+            this.p3.Name = "p3";
             // 
             // upDownAW2
             // 
-            this.upDownAW2.BackColor = System.Drawing.Color.Honeydew;
+            this.upDownAW2.BackColor = System.Drawing.Color.White;
             this.upDownAW2.Increment = new decimal(new int[] {
             10,
             0,
@@ -1343,88 +1095,15 @@
             0});
             resources.ApplyResources(this.upDownAW2, "upDownAW2");
             this.upDownAW2.Maximum = new decimal(new int[] {
-            10000,
+            1000,
             0,
             0,
             0});
             this.upDownAW2.Name = "upDownAW2";
-            this.helpProvider1.SetShowHelp(this.upDownAW2, ((bool)(resources.GetObject("upDownAW2.ShowHelp"))));
-            this.upDownAW2.Value = new decimal(new int[] {
-            100,
-            0,
-            0,
-            0});
-            this.upDownAW2.ValueChanged += new System.EventHandler(this.upDownAW2_ValueChanged);
-            // 
-            // upDownP31
-            // 
-            this.upDownP31.Increment = new decimal(new int[] {
-            10,
-            0,
-            0,
-            0});
-            resources.ApplyResources(this.upDownP31, "upDownP31");
-            this.upDownP31.Maximum = new decimal(new int[] {
-            10000,
-            0,
-            0,
-            0});
-            this.upDownP31.Name = "upDownP31";
-            this.helpProvider1.SetShowHelp(this.upDownP31, ((bool)(resources.GetObject("upDownP31.ShowHelp"))));
-            this.upDownP31.Value = new decimal(new int[] {
-            100,
-            0,
-            0,
-            0});
-            this.upDownP31.ValueChanged += new System.EventHandler(this.upDownP31_ValueChanged);
-            // 
-            // upDownP21
-            // 
-            this.upDownP21.Increment = new decimal(new int[] {
-            10,
-            0,
-            0,
-            0});
-            resources.ApplyResources(this.upDownP21, "upDownP21");
-            this.upDownP21.Maximum = new decimal(new int[] {
-            10000,
-            0,
-            0,
-            0});
-            this.upDownP21.Name = "upDownP21";
-            this.helpProvider1.SetShowHelp(this.upDownP21, ((bool)(resources.GetObject("upDownP21.ShowHelp"))));
-            this.upDownP21.Value = new decimal(new int[] {
-            100,
-            0,
-            0,
-            0});
-            this.upDownP21.ValueChanged += new System.EventHandler(this.upDownP21_ValueChanged);
-            // 
-            // upDownP11
-            // 
-            this.upDownP11.Increment = new decimal(new int[] {
-            10,
-            0,
-            0,
-            0});
-            resources.ApplyResources(this.upDownP11, "upDownP11");
-            this.upDownP11.Maximum = new decimal(new int[] {
-            10000,
-            0,
-            0,
-            0});
-            this.upDownP11.Name = "upDownP11";
-            this.helpProvider1.SetShowHelp(this.upDownP11, ((bool)(resources.GetObject("upDownP11.ShowHelp"))));
-            this.upDownP11.Value = new decimal(new int[] {
-            100,
-            0,
-            0,
-            0});
-            this.upDownP11.ValueChanged += new System.EventHandler(this.upDownP11_ValueChanged);
             // 
             // upDownAW1
             // 
-            this.upDownAW1.BackColor = System.Drawing.Color.Honeydew;
+            this.upDownAW1.BackColor = System.Drawing.Color.White;
             this.upDownAW1.Increment = new decimal(new int[] {
             10,
             0,
@@ -1432,60 +1111,260 @@
             0});
             resources.ApplyResources(this.upDownAW1, "upDownAW1");
             this.upDownAW1.Maximum = new decimal(new int[] {
-            10000,
+            1000,
             0,
             0,
             0});
             this.upDownAW1.Name = "upDownAW1";
-            this.helpProvider1.SetShowHelp(this.upDownAW1, ((bool)(resources.GetObject("upDownAW1.ShowHelp"))));
-            this.upDownAW1.Value = new decimal(new int[] {
-            100,
+            // 
+            // upDownP12
+            // 
+            this.upDownP12.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.upDownP12.Increment = new decimal(new int[] {
+            10,
             0,
             0,
             0});
-            this.upDownAW1.ValueChanged += new System.EventHandler(this.upDownAW1_ValueChanged);
+            resources.ApplyResources(this.upDownP12, "upDownP12");
+            this.upDownP12.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.upDownP12.Name = "upDownP12";
             // 
-            // prognose2
+            // upDownP11
             // 
-            resources.ApplyResources(this.prognose2, "prognose2");
-            this.prognose2.Name = "prognose2";
-            this.helpProvider1.SetShowHelp(this.prognose2, ((bool)(resources.GetObject("prognose2.ShowHelp"))));
+            this.upDownP11.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.upDownP11.Increment = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            resources.ApplyResources(this.upDownP11, "upDownP11");
+            this.upDownP11.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.upDownP11.Name = "upDownP11";
+            // 
+            // upDownP22
+            // 
+            this.upDownP22.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.upDownP22.Increment = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            resources.ApplyResources(this.upDownP22, "upDownP22");
+            this.upDownP22.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.upDownP22.Name = "upDownP22";
+            // 
+            // upDownP21
+            // 
+            this.upDownP21.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.upDownP21.Increment = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            resources.ApplyResources(this.upDownP21, "upDownP21");
+            this.upDownP21.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.upDownP21.Name = "upDownP21";
+            // 
+            // upDownP32
+            // 
+            this.upDownP32.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.upDownP32.Increment = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            resources.ApplyResources(this.upDownP32, "upDownP32");
+            this.upDownP32.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.upDownP32.Name = "upDownP32";
+            // 
+            // upDownP31
+            // 
+            this.upDownP31.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.upDownP31.Increment = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            resources.ApplyResources(this.upDownP31, "upDownP31");
+            this.upDownP31.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.upDownP31.Name = "upDownP31";
             // 
             // prognose3
             // 
             resources.ApplyResources(this.prognose3, "prognose3");
             this.prognose3.Name = "prognose3";
-            this.helpProvider1.SetShowHelp(this.prognose3, ((bool)(resources.GetObject("prognose3.ShowHelp"))));
             // 
-            // aktulleWoche
+            // prognose2
             // 
-            resources.ApplyResources(this.aktulleWoche, "aktulleWoche");
-            this.aktulleWoche.Name = "aktulleWoche";
-            this.helpProvider1.SetShowHelp(this.aktulleWoche, ((bool)(resources.GetObject("aktulleWoche.ShowHelp"))));
+            resources.ApplyResources(this.prognose2, "prognose2");
+            this.prognose2.Name = "prognose2";
             // 
-            // p3
+            // prognose1
             // 
-            resources.ApplyResources(this.p3, "p3");
-            this.p3.Name = "p3";
-            this.helpProvider1.SetShowHelp(this.p3, ((bool)(resources.GetObject("p3.ShowHelp"))));
+            resources.ApplyResources(this.prognose1, "prognose1");
+            this.prognose1.Name = "prognose1";
             // 
-            // p2
+            // aktuelleWoche
             // 
-            resources.ApplyResources(this.p2, "p2");
-            this.p2.Name = "p2";
-            this.helpProvider1.SetShowHelp(this.p2, ((bool)(resources.GetObject("p2.ShowHelp"))));
+            resources.ApplyResources(this.aktuelleWoche, "aktuelleWoche");
+            this.aktuelleWoche.Name = "aktuelleWoche";
             // 
-            // p1
+            // start_prognose_label_produkte_title
             // 
-            resources.ApplyResources(this.p1, "p1");
-            this.p1.Name = "p1";
-            this.helpProvider1.SetShowHelp(this.p1, ((bool)(resources.GetObject("p1.ShowHelp"))));
+            resources.ApplyResources(this.start_prognose_label_produkte_title, "start_prognose_label_produkte_title");
+            this.start_prognose_label_produkte_title.Name = "start_prognose_label_produkte_title";
             // 
-            // titlePrognose
+            // label1
             // 
-            resources.ApplyResources(this.titlePrognose, "titlePrognose");
-            this.titlePrognose.Name = "titlePrognose";
-            this.helpProvider1.SetShowHelp(this.titlePrognose, ((bool)(resources.GetObject("titlePrognose.ShowHelp"))));
+            resources.ApplyResources(this.label1, "label1");
+            this.label1.Name = "label1";
+            // 
+            // pufferP1
+            // 
+            this.pufferP1.BackColor = System.Drawing.Color.Silver;
+            this.pufferP1.Increment = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            resources.ApplyResources(this.pufferP1, "pufferP1");
+            this.pufferP1.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.pufferP1.Name = "pufferP1";
+            // 
+            // pufferP2
+            // 
+            this.pufferP2.BackColor = System.Drawing.Color.Silver;
+            this.pufferP2.Increment = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            resources.ApplyResources(this.pufferP2, "pufferP2");
+            this.pufferP2.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.pufferP2.Name = "pufferP2";
+            // 
+            // pufferP3
+            // 
+            this.pufferP3.BackColor = System.Drawing.Color.Silver;
+            this.pufferP3.Increment = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            resources.ApplyResources(this.pufferP3, "pufferP3");
+            this.pufferP3.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.pufferP3.Name = "pufferP3";
+            // 
+            // start_prognose_textbox_periodeN
+            // 
+            this.start_prognose_textbox_periodeN.BackColor = System.Drawing.Color.LightGray;
+            this.start_prognose_textbox_periodeN.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            resources.ApplyResources(this.start_prognose_textbox_periodeN, "start_prognose_textbox_periodeN");
+            this.start_prognose_textbox_periodeN.ForeColor = System.Drawing.Color.Gray;
+            this.start_prognose_textbox_periodeN.Name = "start_prognose_textbox_periodeN";
+            // 
+            // start_prognose_textbox_periodeN1
+            // 
+            this.start_prognose_textbox_periodeN1.BackColor = System.Drawing.Color.LightGray;
+            this.start_prognose_textbox_periodeN1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            resources.ApplyResources(this.start_prognose_textbox_periodeN1, "start_prognose_textbox_periodeN1");
+            this.start_prognose_textbox_periodeN1.ForeColor = System.Drawing.Color.Gray;
+            this.start_prognose_textbox_periodeN1.Name = "start_prognose_textbox_periodeN1";
+            // 
+            // start_prognose_textbox_periodeN2
+            // 
+            this.start_prognose_textbox_periodeN2.BackColor = System.Drawing.Color.LightGray;
+            this.start_prognose_textbox_periodeN2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            resources.ApplyResources(this.start_prognose_textbox_periodeN2, "start_prognose_textbox_periodeN2");
+            this.start_prognose_textbox_periodeN2.ForeColor = System.Drawing.Color.Gray;
+            this.start_prognose_textbox_periodeN2.Name = "start_prognose_textbox_periodeN2";
+            // 
+            // start_prognose_textbox_periodeN3
+            // 
+            this.start_prognose_textbox_periodeN3.BackColor = System.Drawing.Color.LightGray;
+            this.start_prognose_textbox_periodeN3.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            resources.ApplyResources(this.start_prognose_textbox_periodeN3, "start_prognose_textbox_periodeN3");
+            this.start_prognose_textbox_periodeN3.ForeColor = System.Drawing.Color.Gray;
+            this.start_prognose_textbox_periodeN3.Name = "start_prognose_textbox_periodeN3";
+            // 
+            // start_prognose_textbox_puffer
+            // 
+            this.start_prognose_textbox_puffer.BackColor = System.Drawing.Color.LightGray;
+            this.start_prognose_textbox_puffer.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            resources.ApplyResources(this.start_prognose_textbox_puffer, "start_prognose_textbox_puffer");
+            this.start_prognose_textbox_puffer.ForeColor = System.Drawing.Color.Gray;
+            this.start_prognose_textbox_puffer.Name = "start_prognose_textbox_puffer";
+            // 
+            // prognoseSpeichern
+            // 
+            this.home_prognose_table_main.SetColumnSpan(this.prognoseSpeichern, 3);
+            resources.ApplyResources(this.prognoseSpeichern, "prognoseSpeichern");
+            this.prognoseSpeichern.Name = "prognoseSpeichern";
+            this.prognoseSpeichern.UseVisualStyleBackColor = true;
+            this.prognoseSpeichern.Click += new System.EventHandler(this.prognoseSpeichern_Click);
+            // 
+            // bildSpeichOk
+            // 
+            resources.ApplyResources(this.bildSpeichOk, "bildSpeichOk");
+            this.bildSpeichOk.Name = "bildSpeichOk";
+            this.bildSpeichOk.TabStop = false;
+            // 
+            // start_prognose_label_successInfo
+            // 
+            this.start_prognose_label_successInfo.BackColor = System.Drawing.Color.Transparent;
+            this.home_prognose_table_main.SetColumnSpan(this.start_prognose_label_successInfo, 4);
+            resources.ApplyResources(this.start_prognose_label_successInfo, "start_prognose_label_successInfo");
+            this.start_prognose_label_successInfo.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.start_prognose_label_successInfo.Name = "start_prognose_label_successInfo";
+            // 
+            // shapeContainer1
+            // 
+            resources.ApplyResources(this.shapeContainer1, "shapeContainer1");
+            this.shapeContainer1.Name = "shapeContainer1";
+            this.shapeContainer1.Shapes.AddRange(new Microsoft.VisualBasic.PowerPacks.Shape[] {
+            this.panelXML});
+            this.shapeContainer1.TabStop = false;
+            // 
+            // panelXML
+            // 
+            resources.ApplyResources(this.panelXML, "panelXML");
+            this.panelXML.Name = "panelXML";
             // 
             // tab_produktion
             // 
@@ -6949,6 +6828,13 @@
             resources.ApplyResources(this.lbl_Gesuche, "lbl_Gesuche");
             this.lbl_Gesuche.Name = "lbl_Gesuche";
             // 
+            // btn_reload_market
+            // 
+            resources.ApplyResources(this.btn_reload_market, "btn_reload_market");
+            this.btn_reload_market.Name = "btn_reload_market";
+            this.btn_reload_market.UseVisualStyleBackColor = true;
+            this.btn_reload_market.Click += new System.EventHandler(this.btn_reload_market_Click);
+            // 
             // lbl_Angebote
             // 
             resources.ApplyResources(this.lbl_Angebote, "lbl_Angebote");
@@ -7428,25 +7314,25 @@
             // 
             // chart_statistik
             // 
-            chartArea2.Name = "ChartArea2";
-            this.chart_statistik.ChartAreas.Add(chartArea2);
-            legend3.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Top;
-            legend3.Name = "Legend1";
-            legend4.DockedToChartArea = "ChartArea2";
-            legend4.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Top;
-            legend4.Name = "Legend3";
-            this.chart_statistik.Legends.Add(legend3);
-            this.chart_statistik.Legends.Add(legend4);
+            chartArea1.Name = "ChartArea2";
+            this.chart_statistik.ChartAreas.Add(chartArea1);
+            legend1.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Top;
+            legend1.Name = "Legend1";
+            legend2.DockedToChartArea = "ChartArea2";
+            legend2.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Top;
+            legend2.Name = "Legend3";
+            this.chart_statistik.Legends.Add(legend1);
+            this.chart_statistik.Legends.Add(legend2);
             resources.ApplyResources(this.chart_statistik, "chart_statistik");
             this.chart_statistik.Name = "chart_statistik";
-            series3.ChartArea = "ChartArea2";
-            series3.Legend = "Legend1";
-            series3.Name = "Bestellungen";
-            series4.ChartArea = "ChartArea2";
-            series4.Legend = "Legend1";
-            series4.Name = "Produktion";
-            this.chart_statistik.Series.Add(series3);
-            this.chart_statistik.Series.Add(series4);
+            series1.ChartArea = "ChartArea2";
+            series1.Legend = "Legend1";
+            series1.Name = "Bestellungen";
+            series2.ChartArea = "ChartArea2";
+            series2.Legend = "Legend1";
+            series2.Name = "Produktion";
+            this.chart_statistik.Series.Add(series1);
+            this.chart_statistik.Series.Add(series2);
             // 
             // tab_einstellungen
             // 
@@ -8124,13 +8010,6 @@
             this.nav_button_1.UseVisualStyleBackColor = false;
             this.nav_button_1.Click += new System.EventHandler(this.nav_button_1_Click);
             // 
-            // btn_reload_market
-            // 
-            resources.ApplyResources(this.btn_reload_market, "btn_reload_market");
-            this.btn_reload_market.Name = "btn_reload_market";
-            this.btn_reload_market.UseVisualStyleBackColor = true;
-            this.btn_reload_market.Click += new System.EventHandler(this.btn_reload_market_Click);
-            // 
             // Fahrrad
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -8147,35 +8026,28 @@
             this.Name = "Fahrrad";
             this.helpProvider1.SetShowHelp(this, ((bool)(resources.GetObject("$this.ShowHelp"))));
             this.Load += new System.EventHandler(this.Fahrrad_Load);
-            dragdropbox.ResumeLayout(false);
-            dragdropbox.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.tabs.ResumeLayout(false);
             this.tab_xml.ResumeLayout(false);
             this.tab_xml.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pufferP3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pufferP2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pufferP1)).EndInit();
-            this.panelXML.ResumeLayout(false);
-            this.panelXML.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.save)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.xmlOffenOK)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.toolAusfueren)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bildSpeichOk)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            this.home_prognose_table_main.ResumeLayout(false);
+            this.home_prognose_table_main.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.upDownP33)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.upDownP23)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.upDownP13)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.upDownAW3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.upDownP32)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.upDownP22)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.upDownP12)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.upDownAW2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.upDownP31)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.upDownP21)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.upDownP11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.upDownAW1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.upDownP12)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.upDownP11)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.upDownP22)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.upDownP21)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.upDownP32)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.upDownP31)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pufferP1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pufferP2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pufferP3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bildSpeichOk)).EndInit();
             this.tab_produktion.ResumeLayout(false);
             this.tab1.ResumeLayout(false);
             this.tab_P1.ResumeLayout(false);
@@ -8273,47 +8145,11 @@
         #endregion
 
         private System.Windows.Forms.TabControl tabs;
-        private System.Windows.Forms.TabPage tab_xml;
-        private System.Windows.Forms.Button xml_suchen;
         private System.Windows.Forms.OpenFileDialog openFileDialog;
-        private System.Windows.Forms.Label titlePrognose;
-        private System.Windows.Forms.Label titleXmlLaden;
-        private System.Windows.Forms.Label aktulleWoche;
-        private System.Windows.Forms.Label p3;
-        private System.Windows.Forms.Label p2;
-        private System.Windows.Forms.Label p1;
-        private System.Windows.Forms.NumericUpDown upDownAW3;
-        private System.Windows.Forms.NumericUpDown upDownAW2;
-        private System.Windows.Forms.NumericUpDown upDownAW1;
         private System.Windows.Forms.MenuStrip menu;
-        private System.Windows.Forms.NumericUpDown upDownP33;
-        private System.Windows.Forms.NumericUpDown upDownP23;
-        private System.Windows.Forms.NumericUpDown upDownP13;
-        private System.Windows.Forms.NumericUpDown upDownP32;
-        private System.Windows.Forms.NumericUpDown upDownP22;
-        private System.Windows.Forms.NumericUpDown upDownP12;
-        private System.Windows.Forms.NumericUpDown upDownP31;
-        private System.Windows.Forms.NumericUpDown upDownP21;
-        private System.Windows.Forms.NumericUpDown upDownP11;
-        private System.Windows.Forms.Label prognose1;
-        private System.Windows.Forms.Label prognose2;
-        private System.Windows.Forms.Label prognose3;
-        private System.Windows.Forms.Button prognoseSpeichern;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.TextBox xmlTextBox;
-        private System.Windows.Forms.PictureBox toolAusfueren;
-        private System.Windows.Forms.PictureBox bildSpeichOk;
         private System.Windows.Forms.ToolTip toolTip;
-        private System.Windows.Forms.PictureBox xmlOffenOK;
-        private System.Windows.Forms.Panel panelXML;
         private System.Windows.Forms.ToolStripMenuItem einstellungenToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem hilfeToolStripMenuItem;
-        private System.Windows.Forms.NumericUpDown pufferP3;
-        private System.Windows.Forms.NumericUpDown pufferP2;
-        private System.Windows.Forms.NumericUpDown pufferP1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.PictureBox save;
         private System.Windows.Forms.TabPage tab_produktion;
         private System.Windows.Forms.TabControl tab1;
         private System.Windows.Forms.TabPage tab_eTeil;
@@ -8983,8 +8819,6 @@
         private System.Windows.Forms.DataGridView dta_e_Angebote;
         private System.Windows.Forms.DataGridView dta_Gesuche;
         private System.Windows.Forms.DataGridView MarketPlaceGrid;
-        private System.Windows.Forms.Label labeldragdropinfo;
-        private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.TabPage tab_einstellungen;
         private System.Windows.Forms.Label LabelAbweichung;
         private System.Windows.Forms.Panel panel_change_risk_success;
@@ -9070,6 +8904,45 @@
         private System.Windows.Forms.DataGridViewButtonColumn action_gesuche;
         private System.Windows.Forms.DataGridViewTextBoxColumn hidden_gesuche;
         private System.Windows.Forms.Button btn_reload_market;
+        private System.Windows.Forms.TabPage tab_xml;
+        private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.Label labeldragdropinfo;
+        private System.Windows.Forms.TableLayoutPanel home_prognose_table_main;
+        private System.Windows.Forms.Label start_prognose_label_titel;
+        private System.Windows.Forms.NumericUpDown upDownP33;
+        private System.Windows.Forms.NumericUpDown upDownP23;
+        private System.Windows.Forms.NumericUpDown upDownP13;
+        private System.Windows.Forms.NumericUpDown upDownAW3;
+        private System.Windows.Forms.Label p1;
+        private System.Windows.Forms.Label p2;
+        private System.Windows.Forms.Label p3;
+        private System.Windows.Forms.NumericUpDown upDownAW2;
+        private System.Windows.Forms.NumericUpDown upDownAW1;
+        private System.Windows.Forms.NumericUpDown upDownP12;
+        private System.Windows.Forms.NumericUpDown upDownP11;
+        private System.Windows.Forms.NumericUpDown upDownP22;
+        private System.Windows.Forms.NumericUpDown upDownP21;
+        private System.Windows.Forms.NumericUpDown upDownP32;
+        private System.Windows.Forms.NumericUpDown upDownP31;
+        private System.Windows.Forms.Label prognose3;
+        private System.Windows.Forms.Label prognose2;
+        private System.Windows.Forms.Label prognose1;
+        private System.Windows.Forms.Label aktuelleWoche;
+        private System.Windows.Forms.Label start_prognose_label_produkte_title;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.NumericUpDown pufferP1;
+        private System.Windows.Forms.NumericUpDown pufferP2;
+        private System.Windows.Forms.NumericUpDown pufferP3;
+        private System.Windows.Forms.TextBox start_prognose_textbox_periodeN;
+        private System.Windows.Forms.TextBox start_prognose_textbox_periodeN1;
+        private System.Windows.Forms.TextBox start_prognose_textbox_periodeN2;
+        private System.Windows.Forms.TextBox start_prognose_textbox_periodeN3;
+        private System.Windows.Forms.TextBox start_prognose_textbox_puffer;
+        private System.Windows.Forms.Button prognoseSpeichern;
+        private System.Windows.Forms.PictureBox bildSpeichOk;
+        private System.Windows.Forms.Label start_prognose_label_successInfo;
+        private Microsoft.VisualBasic.PowerPacks.ShapeContainer shapeContainer1;
+        private Microsoft.VisualBasic.PowerPacks.RectangleShape panelXML;
         
     }
 }

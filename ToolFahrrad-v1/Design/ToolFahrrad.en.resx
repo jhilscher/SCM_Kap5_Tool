@@ -257,10 +257,10 @@
   <data name="prognose3.Text" xml:space="preserve">
     <value>Forcast n+3</value>
   </data>
-  <data name="aktulleWoche.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="aktuelleWoche.Size" type="System.Drawing.Size, System.Drawing">
     <value>51, 13</value>
   </data>
-  <data name="aktulleWoche.Text" xml:space="preserve">
+  <data name="aktuelleWoche.Text" xml:space="preserve">
     <value>Forcast n</value>
   </data>
   <data name="p3.Size" type="System.Drawing.Size, System.Drawing">

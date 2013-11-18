@@ -53,8 +53,8 @@ namespace ToolFahrrad_v1.Design
         private void toolAusfueren_Click(object sender, EventArgs e)
         {
             Ausführen();
-            toolAusfueren.Visible = false;
-            save.Visible = true;
+//            toolAusfueren.Visible = false;
+//            save.Visible = true;
             tab1.Visible = true;
             tab2.Visible = true;
             panelXMLerstellen.Visible = true;
@@ -68,7 +68,7 @@ namespace ToolFahrrad_v1.Design
             //Periode
             if (_culInfo.Contains("de"))
             {
-                aktulleWoche.Text = Resources.Fahrrad_toolAusfueren_Click_Periode_ + _xml.Period;
+                aktuelleWoche.Text = Resources.Fahrrad_toolAusfueren_Click_Periode_ + _xml.Period;
                 prognose1.Text = Resources.Fahrrad_toolAusfueren_Click_Periode_ + (Convert.ToInt32(_xml.Period) + 1);
                 prognose2.Text = Resources.Fahrrad_toolAusfueren_Click_Periode_ + (Convert.ToInt32(_xml.Period) + 2);
                 prognose3.Text = Resources.Fahrrad_toolAusfueren_Click_Periode_ + (Convert.ToInt32(_xml.Period) + 3);
@@ -76,7 +76,7 @@ namespace ToolFahrrad_v1.Design
             }
             else
             {
-                aktulleWoche.Text = Resources.Fahrrad_toolAusfueren_Click_Periode_en + _xml.Period;
+                aktuelleWoche.Text = Resources.Fahrrad_toolAusfueren_Click_Periode_en + _xml.Period;
                 prognose1.Text = Resources.Fahrrad_toolAusfueren_Click_Periode_en + (Convert.ToInt32(_xml.Period) + 1);
                 prognose2.Text = Resources.Fahrrad_toolAusfueren_Click_Periode_en + (Convert.ToInt32(_xml.Period) + 2);
                 prognose3.Text = Resources.Fahrrad_toolAusfueren_Click_Periode_en + (Convert.ToInt32(_xml.Period) + 3);
@@ -527,7 +527,7 @@ namespace ToolFahrrad_v1.Design
             //panelXML.Visible = true;
             _okPrognose = true;
             if (_okXml)
-                toolAusfueren.Visible = true;
+//                toolAusfueren.Visible = true;
 
             GetInfo(_culInfo.Contains("de") ? "Prognose wurde gespeichert" : "Forecast has been saved");
         }
@@ -973,19 +973,19 @@ namespace ToolFahrrad_v1.Design
             {
                 if (_xml.ReadDatei(fileDialog.FileName))
                 {
-                    xmlTextBox.Text = fileDialog.FileName;
-                    xmlOffenOK.Visible = true;
+//                    xmlTextBox.Text = fileDialog.FileName;
+//                    xmlOffenOK.Visible = true;
                     _okXml = true;
                     if (_okPrognose)
-                        toolAusfueren.Visible = true;
+//                        toolAusfueren.Visible = true;
                     GetInfo(_culInfo.Contains("de") ? "XML-Datei wurde importiert" : "XML-file is imported");
                 }
                 else
                 {
-                    xmlTextBox.Text = fileDialog.FileName;
-                    toolAusfueren.Visible = false;
-                    xmlOffenOK.Visible = false;
-                    save.Visible = false;
+//                    xmlTextBox.Text = fileDialog.FileName;
+//                    toolAusfueren.Visible = false;
+//                    xmlOffenOK.Visible = false;
+//                    save.Visible = false;
                     _okXml = false;
 
                     MessageBox.Show(Resources.Fahrrad_XmlOeffnen_TEXT, Resources.Fahrrad_XmlOeffnen_Fehlermeldung,
@@ -1135,8 +1135,8 @@ namespace ToolFahrrad_v1.Design
         {
             bildSpeichOk.Visible = false;
             _okPrognose = false;
-            toolAusfueren.Visible = false;
-            save.Visible = false;
+//            toolAusfueren.Visible = false;
+//            save.Visible = false;
         }
         private void DataGriedViewRemove(DataGridView dgv)
         {
@@ -1733,8 +1733,8 @@ namespace ToolFahrrad_v1.Design
 
                             if (_xml.ReadDatei(filePath))
                             {
-                                xmlTextBox.Text = filePath;
-                                xmlOffenOK.Visible = true;
+//                                xmlTextBox.Text = filePath;
+//                                xmlOffenOK.Visible = true;
                                 _okXml = true;
                                 if (_okPrognose)
                                     //toolAusfueren.Visible = true;
@@ -1742,10 +1742,10 @@ namespace ToolFahrrad_v1.Design
                             }
                             else
                             {
-                                xmlTextBox.Text = filePath;
-                                toolAusfueren.Visible = false;
-                                xmlOffenOK.Visible = false;
-                                save.Visible = false;
+//                                xmlTextBox.Text = filePath;
+//                                toolAusfueren.Visible = false;
+//                                xmlOffenOK.Visible = false;
+//                                save.Visible = false;
                                 _okXml = false;
 
                                 MessageBox.Show(Resources.Fahrrad_XmlOeffnen_TEXT, Resources.Fahrrad_XmlOeffnen_Fehlermeldung,
@@ -1757,7 +1757,7 @@ namespace ToolFahrrad_v1.Design
 
                         _okXml = true;
                         Ausführen();
-                        toolAusfueren.Visible = false;
+//                        toolAusfueren.Visible = false;
                         //save.Visible = true;
                         tab1.Visible = true;
                         tab2.Visible = true;
@@ -1772,7 +1772,7 @@ namespace ToolFahrrad_v1.Design
                         //Periode
                         if (_culInfo.Contains("de"))
                         {
-                            aktulleWoche.Text = Resources.Fahrrad_toolAusfueren_Click_Periode_ + _xml.Period;
+                            aktuelleWoche.Text = Resources.Fahrrad_toolAusfueren_Click_Periode_ + _xml.Period;
                             prognose1.Text = Resources.Fahrrad_toolAusfueren_Click_Periode_ + (Convert.ToInt32(_xml.Period) + 1);
                             prognose2.Text = Resources.Fahrrad_toolAusfueren_Click_Periode_ + (Convert.ToInt32(_xml.Period) + 2);
                             prognose3.Text = Resources.Fahrrad_toolAusfueren_Click_Periode_ + (Convert.ToInt32(_xml.Period) + 3);
@@ -1780,7 +1780,7 @@ namespace ToolFahrrad_v1.Design
                         }
                         else
                         {
-                            aktulleWoche.Text = Resources.Fahrrad_toolAusfueren_Click_Periode_en + _xml.Period;
+                            aktuelleWoche.Text = Resources.Fahrrad_toolAusfueren_Click_Periode_en + _xml.Period;
                             prognose1.Text = Resources.Fahrrad_toolAusfueren_Click_Periode_en + (Convert.ToInt32(_xml.Period) + 1);
                             prognose2.Text = Resources.Fahrrad_toolAusfueren_Click_Periode_en + (Convert.ToInt32(_xml.Period) + 2);
                             prognose3.Text = Resources.Fahrrad_toolAusfueren_Click_Periode_en + (Convert.ToInt32(_xml.Period) + 3);
@@ -1953,10 +1953,7 @@ namespace ToolFahrrad_v1.Design
         {
             Credentials credentials = LoadCredentials();
             Get_Market_Place(credentials);
-        }
-
-
-      
+        }     
 
     }
 }

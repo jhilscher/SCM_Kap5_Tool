@@ -110,6 +110,7 @@
     <Compile Include="XML\XMLDatei.cs" />
     <EmbeddedResource Include="Design\ToolFahrrad.en.resx">
       <DependentUpon>ToolFahrrad.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Design\ToolFahrrad.resx">
       <DependentUpon>ToolFahrrad.cs</DependentUpon>
