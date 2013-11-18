@@ -1905,8 +1905,16 @@ namespace ToolFahrrad_v1.Design
             {
                 List<FormField> fields = MarketPlaceGrid.Rows[e.RowIndex].Cells[5].Value as List<FormField>;
                 Credentials credentials = LoadCredentials();
-                DoPost(fields, credentials);
-                Get_Market_Place(credentials);
+                DialogResult dialog = System.Windows.Forms.MessageBox.Show(String.Format("Ein klick auf \"Ja\" kauft {0}mal Artikel {1} für {2}GE auf dem Marktplatz. Sicher, dass du das willst?", 
+                    MarketPlaceGrid.Rows[e.RowIndex].Cells[2].Value, 
+                    MarketPlaceGrid.Rows[e.RowIndex].Cells[1].Value, 
+                    MarketPlaceGrid.Rows[e.RowIndex].Cells[3].Value), 
+                    "Sicherheitsabfrage", MessageBoxButtons.YesNo);
+                if (dialog == DialogResult.Yes)
+                {
+                    DoPost(fields, credentials);
+                    Get_Market_Place(credentials);
+                }
             }
             
         }
@@ -1917,8 +1925,16 @@ namespace ToolFahrrad_v1.Design
             {
                 List<FormField> fields = dta_Gesuche.Rows[e.RowIndex].Cells[5].Value as List<FormField>;
                 Credentials credentials = LoadCredentials();
-                DoPost(fields, credentials);
-                Get_Market_Place(credentials);
+                DialogResult dialog = System.Windows.Forms.MessageBox.Show(String.Format("Ein klick auf \"Ja\" verkauft {0}mal Artikel {1} für {2}GE auf dem Marktplatz. Sicher, dass du das willst?",
+                    dta_Gesuche.Rows[e.RowIndex].Cells[2].Value,
+                    dta_Gesuche.Rows[e.RowIndex].Cells[1].Value,
+                    dta_Gesuche.Rows[e.RowIndex].Cells[3].Value),
+                    "Sicherheitsabfrage", MessageBoxButtons.YesNo);
+                if (dialog == DialogResult.Yes)
+                {
+                    DoPost(fields, credentials);
+                    Get_Market_Place(credentials);
+                }
             }
         }
 
@@ -1928,8 +1944,13 @@ namespace ToolFahrrad_v1.Design
             {
                 List<FormField> fields = dta_e_Angebote.Rows[e.RowIndex].Cells[5].Value as List<FormField>;
                 Credentials credentials = LoadCredentials();
-                DoPost(fields, credentials);
-                Get_Market_Place(credentials);
+                DialogResult dialog = System.Windows.Forms.MessageBox.Show(String.Format("Ein klick auf \"Ja\" löscht dein Angebot für Artikel {0} vom Marktplatz. Sicher, dass du das willst?", dta_e_Angebote.Rows[e.RowIndex].Cells[1].Value),
+                    "Sicherheitsabfrage", MessageBoxButtons.YesNo);
+                if (dialog == DialogResult.Yes)
+                {
+                    DoPost(fields, credentials);
+                    Get_Market_Place(credentials);
+                }
             }
         }
 
@@ -1939,8 +1960,13 @@ namespace ToolFahrrad_v1.Design
             {
                 List<FormField> fields = dta_e_Gesuche.Rows[e.RowIndex].Cells[5].Value as List<FormField>;
                 Credentials credentials = LoadCredentials();
-                DoPost(fields, credentials);
-                Get_Market_Place(credentials);
+                DialogResult dialog = System.Windows.Forms.MessageBox.Show(String.Format("Ein klick auf \"Ja\" löscht dein Gesuch für Artikel {0} vom Marktplatz. Sicher, dass du das willst?", dta_e_Gesuche.Rows[e.RowIndex].Cells[1].Value),
+                    "Sicherheitsabfrage", MessageBoxButtons.YesNo);
+                if (dialog == DialogResult.Yes)
+                {
+                    DoPost(fields, credentials);
+                    Get_Market_Place(credentials);
+                }
             }
         }
 
