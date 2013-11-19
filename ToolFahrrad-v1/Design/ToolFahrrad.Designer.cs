@@ -30,11 +30,11 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Fahrrad));
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.tabs = new System.Windows.Forms.TabControl();
             this.tab_xml = new System.Windows.Forms.TabPage();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
@@ -621,17 +621,6 @@
             this.tab_arbeitzeit = new System.Windows.Forms.TabPage();
             this.arbPlatzAusfueren = new System.Windows.Forms.PictureBox();
             this.DataGridViewAP = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewLinkColumn();
-            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.minus = new System.Windows.Forms.DataGridViewImageColumn();
-            this.plus = new System.Windows.Forms.DataGridViewImageColumn();
-            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewImageColumn2 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.s1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.s3 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.ueber = new System.Windows.Forms.DataGridViewImageColumn();
             this.tab_bestellverwaltung = new System.Windows.Forms.TabPage();
             this.tab2 = new System.Windows.Forms.TabControl();
             this.tabPage2 = new System.Windows.Forms.TabPage();
@@ -830,6 +819,17 @@
             this.NavPanel = new System.Windows.Forms.Panel();
             this.nav_button_1 = new System.Windows.Forms.Button();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewLinkColumn();
+            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.minus = new System.Windows.Forms.DataGridViewImageColumn();
+            this.plus = new System.Windows.Forms.DataGridViewImageColumn();
+            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewImageColumn2 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.s1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.s3 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.ueber = new System.Windows.Forms.DataGridViewImageColumn();
             this.tabs.SuspendLayout();
             this.tab_xml.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
@@ -6372,81 +6372,6 @@
             this.DataGridViewAP.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewAPlatz_CellContentClick);
             this.DataGridViewAP.CellMouseEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridViewAP_CellMouseEnter);
             // 
-            // dataGridViewTextBoxColumn5
-            // 
-            resources.ApplyResources(this.dataGridViewTextBoxColumn5, "dataGridViewTextBoxColumn5");
-            this.dataGridViewTextBoxColumn5.LinkColor = System.Drawing.Color.Blue;
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            this.dataGridViewTextBoxColumn5.ReadOnly = true;
-            this.dataGridViewTextBoxColumn5.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewTextBoxColumn5.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            // 
-            // dataGridViewTextBoxColumn7
-            // 
-            resources.ApplyResources(this.dataGridViewTextBoxColumn7, "dataGridViewTextBoxColumn7");
-            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
-            this.dataGridViewTextBoxColumn7.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn8
-            // 
-            resources.ApplyResources(this.dataGridViewTextBoxColumn8, "dataGridViewTextBoxColumn8");
-            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
-            this.dataGridViewTextBoxColumn8.ReadOnly = true;
-            this.dataGridViewTextBoxColumn8.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            // 
-            // dataGridViewTextBoxColumn9
-            // 
-            resources.ApplyResources(this.dataGridViewTextBoxColumn9, "dataGridViewTextBoxColumn9");
-            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
-            this.dataGridViewTextBoxColumn9.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            // 
-            // minus
-            // 
-            resources.ApplyResources(this.minus, "minus");
-            this.minus.Name = "minus";
-            // 
-            // plus
-            // 
-            resources.ApplyResources(this.plus, "plus");
-            this.plus.Name = "plus";
-            this.plus.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.plus.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            // 
-            // dataGridViewTextBoxColumn10
-            // 
-            resources.ApplyResources(this.dataGridViewTextBoxColumn10, "dataGridViewTextBoxColumn10");
-            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
-            this.dataGridViewTextBoxColumn10.ReadOnly = true;
-            // 
-            // dataGridViewImageColumn2
-            // 
-            resources.ApplyResources(this.dataGridViewImageColumn2, "dataGridViewImageColumn2");
-            this.dataGridViewImageColumn2.Name = "dataGridViewImageColumn2";
-            this.dataGridViewImageColumn2.ReadOnly = true;
-            this.dataGridViewImageColumn2.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // s1
-            // 
-            resources.ApplyResources(this.s1, "s1");
-            this.s1.Name = "s1";
-            this.s1.ReadOnly = true;
-            this.s1.TrueValue = "123";
-            // 
-            // s3
-            // 
-            resources.ApplyResources(this.s3, "s3");
-            this.s3.Name = "s3";
-            this.s3.ReadOnly = true;
-            this.s3.TrueValue = "";
-            // 
-            // ueber
-            // 
-            resources.ApplyResources(this.ueber, "ueber");
-            this.ueber.Name = "ueber";
-            this.ueber.ReadOnly = true;
-            this.ueber.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.ueber.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            // 
             // tab_bestellverwaltung
             // 
             this.tab_bestellverwaltung.BackColor = System.Drawing.Color.Transparent;
@@ -7330,25 +7255,25 @@
             // 
             // chart_statistik
             // 
-            chartArea1.Name = "ChartArea2";
-            this.chart_statistik.ChartAreas.Add(chartArea1);
-            legend1.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Top;
-            legend1.Name = "Legend1";
-            legend2.DockedToChartArea = "ChartArea2";
-            legend2.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Top;
-            legend2.Name = "Legend3";
-            this.chart_statistik.Legends.Add(legend1);
-            this.chart_statistik.Legends.Add(legend2);
+            chartArea2.Name = "ChartArea2";
+            this.chart_statistik.ChartAreas.Add(chartArea2);
+            legend3.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Top;
+            legend3.Name = "Legend1";
+            legend4.DockedToChartArea = "ChartArea2";
+            legend4.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Top;
+            legend4.Name = "Legend3";
+            this.chart_statistik.Legends.Add(legend3);
+            this.chart_statistik.Legends.Add(legend4);
             resources.ApplyResources(this.chart_statistik, "chart_statistik");
             this.chart_statistik.Name = "chart_statistik";
-            series1.ChartArea = "ChartArea2";
-            series1.Legend = "Legend1";
-            series1.Name = "Bestellungen";
-            series2.ChartArea = "ChartArea2";
-            series2.Legend = "Legend1";
-            series2.Name = "Produktion";
-            this.chart_statistik.Series.Add(series1);
-            this.chart_statistik.Series.Add(series2);
+            series3.ChartArea = "ChartArea2";
+            series3.Legend = "Legend1";
+            series3.Name = "Bestellungen";
+            series4.ChartArea = "ChartArea2";
+            series4.Legend = "Legend1";
+            series4.Name = "Produktion";
+            this.chart_statistik.Series.Add(series3);
+            this.chart_statistik.Series.Add(series4);
             // 
             // tab_einstellungen
             // 
@@ -7994,8 +7919,8 @@
             // 
             this.imageListPlusMinus.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageListPlusMinus.ImageStream")));
             this.imageListPlusMinus.TransparentColor = System.Drawing.Color.Transparent;
-            this.imageListPlusMinus.Images.SetKeyName(0, "minus.png");
-            this.imageListPlusMinus.Images.SetKeyName(1, "plus.png");
+            this.imageListPlusMinus.Images.SetKeyName(0, "minusimg.png");
+            this.imageListPlusMinus.Images.SetKeyName(1, "plusimg.png");
             // 
             // timer1
             // 
@@ -8025,6 +7950,88 @@
             this.nav_button_1.Name = "nav_button_1";
             this.nav_button_1.UseVisualStyleBackColor = false;
             this.nav_button_1.Click += new System.EventHandler(this.nav_button_1_Click);
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            resources.ApplyResources(this.dataGridViewTextBoxColumn5, "dataGridViewTextBoxColumn5");
+            this.dataGridViewTextBoxColumn5.LinkColor = System.Drawing.Color.Blue;
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.ReadOnly = true;
+            this.dataGridViewTextBoxColumn5.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewTextBoxColumn5.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
+            // dataGridViewTextBoxColumn7
+            // 
+            this.dataGridViewTextBoxColumn7.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            resources.ApplyResources(this.dataGridViewTextBoxColumn7, "dataGridViewTextBoxColumn7");
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            this.dataGridViewTextBoxColumn7.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn8
+            // 
+            this.dataGridViewTextBoxColumn8.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            resources.ApplyResources(this.dataGridViewTextBoxColumn8, "dataGridViewTextBoxColumn8");
+            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            this.dataGridViewTextBoxColumn8.ReadOnly = true;
+            this.dataGridViewTextBoxColumn8.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            // 
+            // dataGridViewTextBoxColumn9
+            // 
+            this.dataGridViewTextBoxColumn9.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            resources.ApplyResources(this.dataGridViewTextBoxColumn9, "dataGridViewTextBoxColumn9");
+            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
+            this.dataGridViewTextBoxColumn9.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            // 
+            // minus
+            // 
+            resources.ApplyResources(this.minus, "minus");
+            this.minus.Name = "minus";
+            // 
+            // plus
+            // 
+            resources.ApplyResources(this.plus, "plus");
+            this.plus.Name = "plus";
+            this.plus.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.plus.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
+            // dataGridViewTextBoxColumn10
+            // 
+            resources.ApplyResources(this.dataGridViewTextBoxColumn10, "dataGridViewTextBoxColumn10");
+            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
+            this.dataGridViewTextBoxColumn10.ReadOnly = true;
+            // 
+            // dataGridViewImageColumn2
+            // 
+            resources.ApplyResources(this.dataGridViewImageColumn2, "dataGridViewImageColumn2");
+            this.dataGridViewImageColumn2.Name = "dataGridViewImageColumn2";
+            this.dataGridViewImageColumn2.ReadOnly = true;
+            this.dataGridViewImageColumn2.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // s1
+            // 
+            this.s1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            resources.ApplyResources(this.s1, "s1");
+            this.s1.Name = "s1";
+            this.s1.ReadOnly = true;
+            this.s1.TrueValue = "123";
+            // 
+            // s3
+            // 
+            this.s3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            resources.ApplyResources(this.s3, "s3");
+            this.s3.Name = "s3";
+            this.s3.ReadOnly = true;
+            this.s3.TrueValue = "";
+            // 
+            // ueber
+            // 
+            this.ueber.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            resources.ApplyResources(this.ueber, "ueber");
+            this.ueber.Name = "ueber";
+            this.ueber.ReadOnly = true;
+            this.ueber.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.ueber.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
             // Fahrrad
             // 
@@ -8749,17 +8756,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn19;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn20;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn21;
-        private System.Windows.Forms.DataGridViewLinkColumn dataGridViewTextBoxColumn5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
-        private System.Windows.Forms.DataGridViewImageColumn minus;
-        private System.Windows.Forms.DataGridViewImageColumn plus;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
-        private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn2;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn s1;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn s3;
-        private System.Windows.Forms.DataGridViewImageColumn ueber;
         private System.Windows.Forms.ImageList imageListPlusMinus;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn24;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn25;
@@ -8959,6 +8955,17 @@
         private System.Windows.Forms.Label start_prognose_label_successInfo;
         private Microsoft.VisualBasic.PowerPacks.ShapeContainer shapeContainer1;
         private Microsoft.VisualBasic.PowerPacks.RectangleShape panelXML;
+        private System.Windows.Forms.DataGridViewLinkColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
+        private System.Windows.Forms.DataGridViewImageColumn minus;
+        private System.Windows.Forms.DataGridViewImageColumn plus;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
+        private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn2;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn s1;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn s3;
+        private System.Windows.Forms.DataGridViewImageColumn ueber;
         
     }
 }

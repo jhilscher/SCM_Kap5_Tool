@@ -169,4 +169,13 @@ Diese zeile wird ignoriert</value>
   <data name="Down-Arrow-Icon1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Down-Arrow-Icon1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Image1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Image1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="minusimg" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\minusimg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="plusimg" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\plusimg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>
