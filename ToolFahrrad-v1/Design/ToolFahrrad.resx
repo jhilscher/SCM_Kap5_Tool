@@ -1459,7 +1459,7 @@
     <value>2</value>
   </data>
   <data name="p1.Text" xml:space="preserve">
-    <value>Herrenfahrrad - P1</value>
+    <value>Herrenfahrrad - P3</value>
   </data>
   <data name="&gt;&gt;p1.Name" xml:space="preserve">
     <value>p1</value>
@@ -1525,7 +1525,7 @@
     <value>0</value>
   </data>
   <data name="p3.Text" xml:space="preserve">
-    <value>Kinderfahrrad - P3</value>
+    <value>Kinderfahrrad - P1</value>
   </data>
   <data name="&gt;&gt;p3.Name" xml:space="preserve">
     <value>p3</value>
@@ -20051,7 +20051,7 @@ Reserve</value>
     <value>Arbeitsplatz</value>
   </data>
   <data name="dataGridViewTextBoxColumn5.Width" type="System.Int32, mscorlib">
-    <value>102</value>
+    <value>116</value>
   </data>
   <metadata name="dataGridViewTextBoxColumn7.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -20063,7 +20063,7 @@ Reserve</value>
     <value>aus XML-Datei</value>
   </data>
   <data name="dataGridViewTextBoxColumn7.Width" type="System.Int32, mscorlib">
-    <value>155</value>
+    <value>174</value>
   </data>
   <metadata name="dataGridViewTextBoxColumn8.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -20072,7 +20072,7 @@ Reserve</value>
     <value>Kapazitätsbedarf</value>
   </data>
   <data name="dataGridViewTextBoxColumn8.Width" type="System.Int32, mscorlib">
-    <value>131</value>
+    <value>153</value>
   </data>
   <metadata name="dataGridViewTextBoxColumn9.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -20084,7 +20084,7 @@ Reserve</value>
     <value>Änderbar</value>
   </data>
   <data name="dataGridViewTextBoxColumn9.Width" type="System.Int32, mscorlib">
-    <value>103</value>
+    <value>119</value>
   </data>
   <metadata name="minus.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -20138,7 +20138,7 @@ Reserve</value>
     <value>2. Schicht ab 3600 min benötigt</value>
   </data>
   <data name="s1.Width" type="System.Int32, mscorlib">
-    <value>64</value>
+    <value>75</value>
   </data>
   <metadata name="s3.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -20150,7 +20150,7 @@ Reserve</value>
     <value>3. Schicht ab 6000 min benötigt</value>
   </data>
   <data name="s3.Width" type="System.Int32, mscorlib">
-    <value>64</value>
+    <value>75</value>
   </data>
   <metadata name="ueber.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -20162,7 +20162,7 @@ Reserve</value>
     <value>Limit = 7200 min.</value>
   </data>
   <data name="ueber.Width" type="System.Int32, mscorlib">
-    <value>59</value>
+    <value>65</value>
   </data>
   <data name="DataGridViewAP.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 3</value>
@@ -24095,7 +24095,7 @@ Reserve</value>
         AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
         LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
         ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAABS
-        CwAAAk1TRnQBSQFMAgEBAwEAAWgBBQFoAQUBEAEAARABAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
+        CwAAAk1TRnQBSQFMAgEBAwEAAXABBQFwAQUBEAEAARABAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
         AwABQAMAARADAAEBAQABCAYAAQQYAAGAAgABgAMAAoABAAGAAwABgAEAAYABAAKAAgADwAEAAcAB3AHA
         AQAB8AHKAaYBAAEzBQABMwEAATMBAAEzAQACMwIAAxYBAAMcAQADIgEAAykBAANVAQADTQEAA0IBAAM5
         AQABgAF8Af8BAAJQAf8BAAGTAQAB1gEAAf8B7AHMAQABxgHWAe8BAAHWAucBAAGQAakBrQIAAf8BMwMA
@@ -24394,7 +24394,7 @@ Reserve</value>
         AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
         LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
         ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAAAM
-        CAAAAk1TRnQBSQFMAgEBAgEAASgBAwEoAQMBEAEAARABAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
+        CAAAAk1TRnQBSQFMAgEBAgEAATABAwEwAQMBEAEAARABAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
         AwABQAMAARADAAEBAQABCAYAAQQYAAGAAgABgAMAAoABAAGAAwABgAEAAYABAAKAAgADwAEAAcAB3AHA
         AQAB8AHKAaYBAAEzBQABMwEAATMBAAEzAQACMwIAAxYBAAMcAQADIgEAAykBAANVAQADTQEAA0IBAAM5
         AQABgAF8Af8BAAJQAf8BAAGTAQAB1gEAAf8B7AHMAQABxgHWAe8BAAHWAucBAAGQAakBrQIAAf8BMwMA
@@ -24448,6 +24448,9 @@ Reserve</value>
   </data>
   <data name="nav_button_1.Text" xml:space="preserve">
     <value>Home</value>
+  </data>
+  <data name="nav_button_1.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <data name="&gt;&gt;nav_button_1.Name" xml:space="preserve">
     <value>nav_button_1</value>
