@@ -1476,6 +1476,19 @@
   <data name="p2.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 14px</value>
   </data>
+  <data name="save.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29m
+        dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAF/SURBVFhHvZdBSixBEEQbvITgPdy69RKCt3TrVhC8
+        hOAN3GpGUTGEkZXtOFX2g8fveZ3d5WfGsXozHvq/I+7Cl/Drj+IaXEuGa1yHvHnFR+g3P1dcS/Aaa2HN
+        xlX4GnK4gud/8zm87eKYnfD1W4i1t8cefNDRmT1P/7MAx+xEZ7F2el8rdGZPx7vOYu3tUwKs0Jk9He86
+        i7V/BFjhc5WOd51tPYUCn6t0vOts6ykU+FzlTUhwzE50tvUUCnyu8inEpx/imJ3obOspFLyHPnuuuJb4
+        uRwK7sNLvg1xDa4lfj4FfQ9Xo58JmgLfw9X4Z4KmcLTDeKTDeKTDeKQp8O/5anx/QFP4j98Agnv7ejl0
+        Lt0DuriH7gn9fA6dmT2g63tCNYeO91lJ6il0vM9KUk+h431WknoKHe+zktSrTam2FRJtbVNabcu1rZBo
+        a9vy6sFE2wqJtvZgUj2a6eAKCV+fHs0AviL5Q5CZPaDre0KsNfzK10fnS/eAru8JZY1t+wZNvM4bkMX7
+        TgAAAABJRU5ErkJggg==
+</value>
+  </data>
   <data name="p2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
@@ -1509,6 +1522,15 @@
   <data name="p3.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 14px</value>
   </data>
+  <data name="xmlOffenOK.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29m
+        dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAACtSURBVDhPxZCxDcIwFER/lRmYgUmYgQ3YgCotEhIj
+        0VIh0bIBUgagQoJ7wT8y4UfGaTjpKfb57luxFXRMzNYzMVv/G8B/e9mpeouLGA84iaKW6bsQV+Fl1njI
+        M19qxV2s+t27cE54mTMyZD+EwU0PscaYEGdkyA5DvAwbjILIeL4f4pstmx9F1nvDImdKYTYy/SFz4UVZ
+        60ZGDXRtlxm17IU14iBuIgpFkFXHmhc7amx51XRvSwAAAABJRU5ErkJggg==
+</value>
+  </data>
   <data name="p3.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
@@ -1541,6 +1563,20 @@
   </data>
   <data name="upDownAW2.Location" type="System.Drawing.Point, System.Drawing">
     <value>143, 110</value>
+  </data>
+  <data name="toolAusfueren.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29m
+        dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAG+SURBVFhH3ZdBR0VBFMcfEdEqIqJt3yD6Bq3aRkSr
+        VhGt2vYZWkX0AVrFo1VEtIqIVq0iIiIiIm7/3/XmOp2ZW93u3Bv9+fE697z5zztz7sw0KIriT/mXWhJ3
+        4lGsEOhb94LaBg7EhOhN1jxwI+ZFL0pNAF7EqsiqWbEpTsSleBcpc0uWJZkR++InhimSSzIu+DVn4k0w
+        +ILwosspZ2rgJjDGsihFKa+ETdgVXlvC5rTlQZS//HoUsA+IWzHb35a8DvaLsuz+wbawokLPwue1oVqC
+        81EgQA9MCisazua05VMT0nD2IR1uNSdylj56DX2C147wOQF6ZU9siEUxLVJ5ULsR+USvU+FzMF4TY8LL
+        58KXW7FP9vKHy5HwPWLF5Gx+3c5H7JAPNhm8bI/QjN8pHMdPou44phpUpfQLgwe8XgXxY5EqeVOtC7uT
+        Vh+qgNOtYBmmyr/aK/KLAk5DwaxzKfKLAk6so9+W2yjyiwIdK/KLAh0r8vNbMQdPV2Js68XbMLgwAeB6
+        5c+DHGJMxrZeeGe/ZDQB7+SFpA/wrN4u1qbPSeAV9RqzoSRcSFJfygGXHzxy7istlfqXuT+KwQc1pnZA
+        iCGZugAAAABJRU5ErkJggg==
+</value>
   </data>
   <data name="upDownAW2.Size" type="System.Drawing.Size, System.Drawing">
     <value>80, 20</value>
@@ -1587,8 +1623,21 @@
   <data name="upDownP12.Size" type="System.Drawing.Size, System.Drawing">
     <value>80, 20</value>
   </data>
-  <data name="upDownP12.TabIndex" type="System.Int32, mscorlib">
-    <value>11</value>
+    <data name="upDownP12.TabIndex" type="System.Int32, mscorlib">
+      <value>11</value>
+    </data>
+  <data name="pictureBox2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29m
+        dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAGeSURBVFhHvZc9SgRBEEY78gBGgvcwNRUEI48heDAP
+        YCoIgpFg5AEEwdRIELTeMrvUft/0dO86sw8eDF9XdY3zIzslcRTehA/hd/grKufh8yDHivazJ3szg1lb
+        nIYvoTZllY9wvcaxkntVZjFzBWfzGo4VZpVd11Vmrq4El2SsQFV2XR+T2eUxBch9Ogtb5B5swZ7snXuY
+        bQ/cSdhD7sEe2Dv3MHsrwF5m67Ogk9n6LKhwEb6FWq9SQ20NrfegQn7vW479X1ijtR5UeA+1tia1NbTW
+        gwpX4U+o9So1l2ENrfdggutw6iRYo2YK7fGgQe0keKdbw0H7POhAT6J3OORZ6EEnPBM87chxLzbPgoWx
+        eRYsjM2zYGFsngULY/MsGIEnXOta1t4KrfNAOA4/Q61rSQ+9itZ5INyFWtMrvYrWeJDY59Kreit03YOB
+        fS+9qrdC1z0Y+M+lV/Ot0DX7Ubr5YFgA9s6zvsLylAK8D3t/Ge8Ce7J3nsXscpuCQ8vs7k+zud18mgH3
+        5pAnwSx71jgbLol+Ps0pn2LMGP7yUv4A73Qy/4VBvmcAAAAASUVORK5CYII=
+</value>
   </data>
   <data name="&gt;&gt;upDownP12.Name" xml:space="preserve">
     <value>upDownP12</value>
@@ -1707,8 +1756,18 @@
   <data name="&gt;&gt;upDownP31.ZOrder" xml:space="preserve">
     <value>15</value>
   </data>
-  <data name="prognose3.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
+    <data name="prognose3.AutoSize" type="System.Boolean, mscorlib">
+      <value>True</value>
+    </data>
+  <data name="bildSpeichOk.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29m
+        dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAADoSURBVDhPxZLNBkJBGIZnFREREdEFRHcQbdtGdCvd
+        RESrVl1Gq1YR0TbOBUQXEG3rfab5jjm/i0QPD3O+n/nmzDnuHxyCX/MKVjKUa3mRD9mRwFRrNjMnacqV
+        zBf1JOxlPkfM05BxwU0uZF/msZoMW2mJRNqxy2BQOhmm0ppxLo2WPMuJfypC3p1kvEFbGktJ7O6fPnTl
+        QJI7EqjagHuwGGtgYlxLrxtHAZxJ4NWYjKyBXFxLr2cjLXiVZZdIjJzV0ZPCZ9xJS3JkLpN/AFnHr0Qt
+        PQXs0uqkppaR5Hj8ys8ga2Lkfolzb6kjXn5EgIQ+AAAAAElFTkSuQmCC
+</value>
   </data>
   <data name="prognose3.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -1740,6 +1799,20 @@ Periode n+3</value>
   </data>
   <data name="prognose2.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
+  </data>
+  <data name="pictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29m
+        dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAHkSURBVFhH3ZfdRkVBGIY3EREdRURERER0DdEFRHQN
+        EdFRdxBdQESnEV1DRxEREV1ARER01NHqfba9Ms1+Z9as3bZSLw/LzDffNz/f/KxeVVW/ii3sElvYJX9K
+        k2JLnIhb8SQYAvBNGXXYYDs2LYkj8SLqgE1gSxvajqwJcSg+hAtSAm3xga9WWhBXwjkdBXzhs0ir4lk4
+        R/Ao9sW6YGTAN2XUuTaAT3xnxZrl1vpYTImUqMPGtQV8J/NiWjwI15C13BSlwjaVO8Qg1pDOhGsAe6Kt
+        WBLnC4j1TRvCGcK9SGXxrOAMOBfzFASiTWpGgZh9YXgnnBHkRk8HartXsSJC5WaBmP2BbQ8KUiyLlA5E
+        aHspQtGhsD6G2L3roMARH6tzAxhdnGjvItSMCOtjiN26A2/C2UHcAbLd2dX0O9C0BPG+ZZqdHbRdgh3R
+        mIS7IhROSbjYziUhCRzb1XwlIeLgcEbgtiFb7kJwvALfbhvS1vmEoYONu9wZQjwLJcqNnlhD4hzv6ihO
+        3ieLInzpxPz0MsI3MbIi63OdqK/jNVGL76brGJ/FLyQeDzfCORoFfBU/SGqRxb/2JAvFtLGubu+nwJY2
+        xVNeIo5kTq5TwRM87BDflFGHzVif5f9c7n+tS2xhd1S9T87aZwbWEfO8AAAAAElFTkSuQmCC
+</value>
   </data>
   <data name="prognose2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -2303,7 +2376,7 @@ Reserve</value>
     <value>True</value>
   </data>
   <data name="tab_xml.Size" type="System.Drawing.Size, System.Drawing">
-    <value>883, 509</value>
+    <value>883, 507</value>
   </data>
   <data name="tab_xml.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -19978,7 +20051,7 @@ Reserve</value>
     <value>True</value>
   </data>
   <data name="tab_produktion.Size" type="System.Drawing.Size, System.Drawing">
-    <value>883, 509</value>
+    <value>883, 507</value>
   </data>
   <data name="tab_produktion.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -20221,6 +20294,45 @@ Reserve</value>
   <data name="&gt;&gt;tab_arbeitzeit.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
+  <data name="tabPage2.AutoScroll" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label_header_kaufteile.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label_header_kaufteile.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 24pt</value>
+  </data>
+  <data name="label_header_kaufteile.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label_header_kaufteile.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 11</value>
+  </data>
+  <data name="label_header_kaufteile.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label_header_kaufteile.Size" type="System.Drawing.Size, System.Drawing">
+    <value>200, 37</value>
+  </data>
+  <data name="label_header_kaufteile.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="label_header_kaufteile.Text" xml:space="preserve">
+    <value>Bestellungen</value>
+  </data>
+  <data name="&gt;&gt;label_header_kaufteile.Name" xml:space="preserve">
+    <value>label_header_kaufteile</value>
+  </data>
+  <data name="&gt;&gt;label_header_kaufteile.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label_header_kaufteile.Parent" xml:space="preserve">
+    <value>tabPage2</value>
+  </data>
+  <data name="&gt;&gt;label_header_kaufteile.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <metadata name="dataGridViewLinkColumn1.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -20318,7 +20430,7 @@ Reserve</value>
     <value>Bestand</value>
   </data>
   <data name="dataGridViewTextBoxColumn18.Width" type="System.Int32, mscorlib">
-    <value>50</value>
+    <value>60</value>
   </data>
   <metadata name="dataGridViewTextBoxColumn19.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -20330,7 +20442,7 @@ Reserve</value>
     <value>Bestand</value>
   </data>
   <data name="dataGridViewTextBoxColumn19.Width" type="System.Int32, mscorlib">
-    <value>50</value>
+    <value>60</value>
   </data>
   <metadata name="dataGridViewTextBoxColumn20.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -20342,7 +20454,7 @@ Reserve</value>
     <value>Bestand</value>
   </data>
   <data name="dataGridViewTextBoxColumn20.Width" type="System.Int32, mscorlib">
-    <value>50</value>
+    <value>60</value>
   </data>
   <metadata name="dataGridViewTextBoxColumn21.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -20354,19 +20466,25 @@ Reserve</value>
     <value>Bestand</value>
   </data>
   <data name="dataGridViewTextBoxColumn21.Width" type="System.Int32, mscorlib">
-    <value>50</value>
+    <value>60</value>
   </data>
-  <data name="dataGridViewKTeil.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
+  <metadata name="Trend.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="Trend.HeaderText" xml:space="preserve">
+    <value>Trend</value>
+  </data>
+  <data name="Trend.Width" type="System.Int32, mscorlib">
+    <value>60</value>
   </data>
   <data name="dataGridViewKTeil.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 3</value>
+    <value>3, 60</value>
   </data>
   <data name="dataGridViewKTeil.ShowHelp" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="dataGridViewKTeil.Size" type="System.Drawing.Size, System.Drawing">
-    <value>859, 338</value>
+    <value>859, 403</value>
   </data>
   <data name="dataGridViewKTeil.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -20381,7 +20499,7 @@ Reserve</value>
     <value>tabPage2</value>
   </data>
   <data name="&gt;&gt;dataGridViewKTeil.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="tabPage2.Location" type="System.Drawing.Point, System.Drawing">
     <value>4, 22</value>
@@ -20393,7 +20511,7 @@ Reserve</value>
     <value>True</value>
   </data>
   <data name="tabPage2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>865, 344</value>
+    <value>865, 469</value>
   </data>
   <data name="tabPage2.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -20943,7 +21061,7 @@ Reserve</value>
     <value>True</value>
   </data>
   <data name="tab_bestellung.Size" type="System.Drawing.Size, System.Drawing">
-    <value>865, 344</value>
+    <value>865, 469</value>
   </data>
   <data name="tab_bestellung.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -20970,7 +21088,7 @@ Reserve</value>
     <value>True</value>
   </data>
   <data name="tab2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>873, 370</value>
+    <value>873, 495</value>
   </data>
   <data name="tab2.TabIndex" type="System.Int32, mscorlib">
     <value>59</value>
@@ -22331,6 +22449,9 @@ Reserve</value>
   <data name="&gt;&gt;tab_beenden.ZOrder" xml:space="preserve">
     <value>6</value>
   </data>
+  <data name="tab_statistik.AutoScroll" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
   <data name="header_statistik.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -22367,11 +22488,14 @@ Reserve</value>
   <data name="&gt;&gt;header_statistik.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <data name="chart_statistik.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Bottom</value>
+  </data>
   <data name="chart_statistik.Location" type="System.Drawing.Point, System.Drawing">
-    <value>10, 44</value>
+    <value>3, 54</value>
   </data>
   <data name="chart_statistik.Size" type="System.Drawing.Size, System.Drawing">
-    <value>865, 320</value>
+    <value>877, 450</value>
   </data>
   <data name="chart_statistik.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
@@ -22418,7 +22542,183 @@ Reserve</value>
   <data name="&gt;&gt;tab_statistik.ZOrder" xml:space="preserve">
     <value>7</value>
   </data>
+
   <data name="lbl_diskont.AutoSize" type="System.Boolean, mscorlib">
+    <value>true</value>
+  </data>
+  <data name="LabelAbweichung.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="LabelAbweichung.Location" type="System.Drawing.Point, System.Drawing">
+    <value>11, 192</value>
+  </data>
+  <data name="LabelAbweichung.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="LabelAbweichung.Size" type="System.Drawing.Size, System.Drawing">
+    <value>259, 86</value>
+  </data>
+  <data name="LabelAbweichung.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="LabelAbweichung.Text" xml:space="preserve">
+    <value>Hier kann der Prozentsatz der verwendeten Abweichung angegeben werden. Der ausgewählte Prozentsatzt wird mit der Abweichung (Lieferdauer KTeile) multipliziert. 0 = keine, 100 = volle Abweichung</value>
+  </data>
+  <data name="&gt;&gt;LabelAbweichung.Name" xml:space="preserve">
+    <value>LabelAbweichung</value>
+  </data>
+  <data name="&gt;&gt;LabelAbweichung.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;LabelAbweichung.Parent" xml:space="preserve">
+    <value>tab_abweichung</value>
+  </data>
+  <data name="&gt;&gt;LabelAbweichung.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="lbl_info.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lbl_info.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lbl_info.Location" type="System.Drawing.Point, System.Drawing">
+    <value>54, 23</value>
+  </data>
+  <data name="lbl_info.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lbl_info.Size" type="System.Drawing.Size, System.Drawing">
+    <value>143, 13</value>
+  </data>
+  <data name="lbl_info.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="lbl_info.Text" xml:space="preserve">
+    <value>Abweichung wurde geändert</value>
+  </data>
+  <data name="&gt;&gt;lbl_info.Name" xml:space="preserve">
+    <value>lbl_info</value>
+  </data>
+  <data name="&gt;&gt;lbl_info.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lbl_info.Parent" xml:space="preserve">
+    <value>panel5</value>
+  </data>
+  <data name="&gt;&gt;lbl_info.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="pictureBox8.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29m
+        dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAF/SURBVFhHvZdBSixBEEQbvITgPdy69RKCt3TrVhC8
+        hOAN3GpGUTGEkZXtOFX2g8fveZ3d5WfGsXozHvq/I+7Cl/Drj+IaXEuGa1yHvHnFR+g3P1dcS/Aaa2HN
+        xlX4GnK4gud/8zm87eKYnfD1W4i1t8cefNDRmT1P/7MAx+xEZ7F2el8rdGZPx7vOYu3tUwKs0Jk9He86
+        i7V/BFjhc5WOd51tPYUCn6t0vOts6ykU+FzlTUhwzE50tvUUCnyu8inEpx/imJ3obOspFLyHPnuuuJb4
+        uRwK7sNLvg1xDa4lfj4FfQ9Xo58JmgLfw9X4Z4KmcLTDeKTDeKTDeKQp8O/5anx/QFP4j98Agnv7ejl0
+        Lt0DuriH7gn9fA6dmT2g63tCNYeO91lJ6il0vM9KUk+h431WknoKHe+zktSrTam2FRJtbVNabcu1rZBo
+        a9vy6sFE2wqJtvZgUj2a6eAKCV+fHs0AviL5Q5CZPaDre0KsNfzK10fnS/eAru8JZY1t+wZNvM4bkMX7
+        TgAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="pictureBox8.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="pictureBox8.Location" type="System.Drawing.Point, System.Drawing">
+    <value>11, 11</value>
+  </data>
+  <data name="pictureBox8.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="pictureBox8.Size" type="System.Drawing.Size, System.Drawing">
+    <value>37, 35</value>
+  </data>
+  <data name="pictureBox8.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;pictureBox8.Name" xml:space="preserve">
+    <value>pictureBox8</value>
+  </data>
+  <data name="&gt;&gt;pictureBox8.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pictureBox8.Parent" xml:space="preserve">
+    <value>panel5</value>
+  </data>
+  <data name="&gt;&gt;pictureBox8.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="panel5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 281</value>
+  </data>
+  <data name="panel5.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="panel5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>267, 60</value>
+  </data>
+  <data name="panel5.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="panel5.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;panel5.Name" xml:space="preserve">
+    <value>panel5</value>
+  </data>
+  <data name="&gt;&gt;panel5.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panel5.Parent" xml:space="preserve">
+    <value>tab_abweichung</value>
+  </data>
+  <data name="&gt;&gt;panel5.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="lbl_100.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lbl_100.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lbl_100.Location" type="System.Drawing.Point, System.Drawing">
+    <value>240, 51</value>
+  </data>
+  <data name="lbl_100.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lbl_100.Size" type="System.Drawing.Size, System.Drawing">
+    <value>36, 13</value>
+  </data>
+  <data name="lbl_100.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="lbl_100.Text" xml:space="preserve">
+    <value>100 %</value>
+  </data>
+  <data name="&gt;&gt;lbl_100.Name" xml:space="preserve">
+    <value>lbl_100</value>
+  </data>
+  <data name="&gt;&gt;lbl_100.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lbl_100.Parent" xml:space="preserve">
+    <value>tab_abweichung</value>
+  </data>
+  <data name="&gt;&gt;lbl_100.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="lbl_50.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lbl_50.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lbl_50.Location" type="System.Drawing.Point, System.Drawing">
+    <value>127, 51</value>
+  </data>
+  <data name="lbl_50.ShowHelp" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="lbl_diskont.Location" type="System.Drawing.Point, System.Drawing">
@@ -23266,8 +23566,22 @@ Reserve</value>
   <data name="&gt;&gt;lbl_language.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="einstellungen_sprache_englisch.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
+
+    <data name="einstellungen_sprache_englisch.AutoSize" type="System.Boolean, mscorlib">
+      <value>True</value>
+    </data>
+  <data name="pictureBox7.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29m
+        dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAF/SURBVFhHvZdBSixBEEQbvITgPdy69RKCt3TrVhC8
+        hOAN3GpGUTGEkZXtOFX2g8fveZ3d5WfGsXozHvq/I+7Cl/Drj+IaXEuGa1yHvHnFR+g3P1dcS/Aaa2HN
+        xlX4GnK4gud/8zm87eKYnfD1W4i1t8cefNDRmT1P/7MAx+xEZ7F2el8rdGZPx7vOYu3tUwKs0Jk9He86
+        i7V/BFjhc5WOd51tPYUCn6t0vOts6ykU+FzlTUhwzE50tvUUCnyu8inEpx/imJ3obOspFLyHPnuuuJb4
+        uRwK7sNLvg1xDa4lfj4FfQ9Xo58JmgLfw9X4Z4KmcLTDeKTDeKTDeKQp8O/5anx/QFP4j98Agnv7ejl0
+        Lt0DuriH7gn9fA6dmT2g63tCNYeO91lJ6il0vM9KUk+h431WknoKHe+zktSrTam2FRJtbVNabcu1rZBo
+        a9vy6sFE2wqJtvZgUj2a6eAKCV+fHs0AviL5Q5CZPaDre0KsNfzK10fnS/eAru8JZY1t+wZNvM4bkMX7
+        TgAAAABJRU5ErkJggg==
+</value>
   </data>
   <data name="einstellungen_sprache_englisch.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -26588,6 +26902,12 @@ Reserve</value>
     <value>dataGridViewTextBoxColumn21</value>
   </data>
   <data name="&gt;&gt;dataGridViewTextBoxColumn21.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Trend.Name" xml:space="preserve">
+    <value>Trend</value>
+  </data>
+  <data name="&gt;&gt;Trend.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;knr2.Name" xml:space="preserve">

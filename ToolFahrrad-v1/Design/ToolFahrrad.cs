@@ -122,6 +122,7 @@ namespace ToolFahrrad_v1.Design
 
         /// <summary>
         /// Informationsdarstellung
+        /// Bestellverwaltung
         /// </summary> 
         //TODO: Information()
         private void Information()
@@ -136,6 +137,8 @@ namespace ToolFahrrad_v1.Design
                 k.BruttoBedarfPer2 = 0;
                 k.BruttoBedarfPer3 = 0;
             }
+
+
             for (int i = 1; i < 4; ++i)
             {
                 _pp.RekursAufloesenKTeile(i, null, _instance.GetTeil(i) as ETeil);
@@ -152,6 +155,7 @@ namespace ToolFahrrad_v1.Design
             dataGridViewKTeil.Columns[9].HeaderText = Resources.Fahrrad_Information_B + ((Convert.ToInt32(_xml.Period)) + 2);
             dataGridViewKTeil.Columns[10].HeaderText = Resources.Fahrrad_Information_B + (Convert.ToInt32(_xml.Period) + 3);
             dataGridViewKTeil.Columns[11].HeaderText = Resources.Fahrrad_Information_B + (Convert.ToInt32(_xml.Period) + 4);
+            dataGridViewKTeil.Columns[12].HeaderText = Resources.Fahrrad_Information_Trend;
 
             foreach (var a in _instance.ListeKTeile)
             {
@@ -193,13 +197,30 @@ namespace ToolFahrrad_v1.Design
                     dataGridViewKTeil.Rows[index].Cells[11].Style.ForeColor = Color.Red;
                     dataGridViewKTeil.Rows[index].Cells[11].Style.Font = new Font(dataGridViewKTeil.Rows[index].Cells[11].InheritedStyle.Font, FontStyle.Bold);
                 }
+
+                // Trend berechnen
+                if (a.BestandPer1 > a.BestandPer4 + 50) {
+                    dataGridViewKTeil.Rows[index].Cells[12].Style.BackColor = Color.Red;
+                    dataGridViewKTeil.Rows[index].Cells[12].Value = "v";
+                }
+                else if (a.BestandPer1 <  a.BestandPer4 - 50)
+                {
+                    dataGridViewKTeil.Rows[index].Cells[12].Style.BackColor = Color.Green;
+                    dataGridViewKTeil.Rows[index].Cells[12].Value = "^";
+                }
+                else {
+                    dataGridViewKTeil.Rows[index].Cells[12].Style.BackColor = Color.Yellow;
+                    dataGridViewKTeil.Rows[index].Cells[12].Value = "-";
+                }
+
                 //Farbe
                 for (int i = 0; i < 12; ++i)
                 {
                     if (i >= 0 && i < 4)
-                        dataGridViewKTeil.Columns[i].DefaultCellStyle.BackColor = Color.FloralWhite;
+                        dataGridViewKTeil.Columns[i].DefaultCellStyle.BackColor = Color.Wheat;
                     else if (i > 3 && i < 8)
-                        dataGridViewKTeil.Columns[i].DefaultCellStyle.BackColor = Color.Honeydew;
+                        dataGridViewKTeil.Columns[i].DefaultCellStyle.BackColor = Color.AliceBlue;
+;
                 }
                 ++index;
             }
@@ -1232,7 +1253,7 @@ namespace ToolFahrrad_v1.Design
 
 
         /// <summary>
-        /// 
+        /// Klick erste Reihe bei Teile der Bestellungen: Popup
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -1705,6 +1726,7 @@ namespace ToolFahrrad_v1.Design
             this.AllowDrop = true;
             this.DragEnter += xml_DragEnter;
             this.DragDrop += xml_DragDrop;
+           
         }
 
         private void xml_DragEnter(object sender, DragEventArgs e)

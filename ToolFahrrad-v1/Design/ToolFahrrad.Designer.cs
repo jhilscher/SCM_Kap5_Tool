@@ -31,12 +31,23 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Fahrrad));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+
+            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.labeldragdropinfo = new System.Windows.Forms.Label();
+            this.prognoseSpeichern = new System.Windows.Forms.Button();
+
             this.tabs = new System.Windows.Forms.TabControl();
             this.tab_xml = new System.Windows.Forms.TabPage();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
@@ -637,6 +648,7 @@
             this.tab_bestellverwaltung = new System.Windows.Forms.TabPage();
             this.tab2 = new System.Windows.Forms.TabControl();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.label_header_kaufteile = new System.Windows.Forms.Label();
             this.dataGridViewKTeil = new System.Windows.Forms.DataGridView();
             this.dataGridViewLinkColumn1 = new System.Windows.Forms.DataGridViewLinkColumn();
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -650,6 +662,7 @@
             this.dataGridViewTextBoxColumn19 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn20 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn21 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Trend = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tab_bestellung = new System.Windows.Forms.TabPage();
             this.dvVerwenden = new System.Windows.Forms.CheckBox();
             this.addNr2 = new System.Windows.Forms.PictureBox();
@@ -6494,16 +6507,24 @@
             // 
             // tabPage2
             // 
-            this.tabPage2.BackColor = System.Drawing.Color.Transparent;
-            this.tabPage2.Controls.Add(this.dataGridViewKTeil);
             resources.ApplyResources(this.tabPage2, "tabPage2");
+            this.tabPage2.BackColor = System.Drawing.Color.Transparent;
+            this.tabPage2.Controls.Add(this.label_header_kaufteile);
+            this.tabPage2.Controls.Add(this.dataGridViewKTeil);
             this.tabPage2.Name = "tabPage2";
             this.helpProvider1.SetShowHelp(this.tabPage2, ((bool)(resources.GetObject("tabPage2.ShowHelp"))));
+            // 
+            // label_header_kaufteile
+            // 
+            resources.ApplyResources(this.label_header_kaufteile, "label_header_kaufteile");
+            this.label_header_kaufteile.Name = "label_header_kaufteile";
+            this.helpProvider1.SetShowHelp(this.label_header_kaufteile, ((bool)(resources.GetObject("label_header_kaufteile.ShowHelp"))));
             // 
             // dataGridViewKTeil
             // 
             this.dataGridViewKTeil.AllowUserToAddRows = false;
             this.dataGridViewKTeil.AllowUserToDeleteRows = false;
+            this.dataGridViewKTeil.AllowUserToOrderColumns = true;
             this.dataGridViewKTeil.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dataGridViewKTeil.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridViewKTeil.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -6519,17 +6540,28 @@
             this.dataGridViewTextBoxColumn18,
             this.dataGridViewTextBoxColumn19,
             this.dataGridViewTextBoxColumn20,
-            this.dataGridViewTextBoxColumn21});
+            this.dataGridViewTextBoxColumn21,
+            this.Trend});
+            this.dataGridViewKTeil.GridColor = System.Drawing.SystemColors.ControlDarkDark;
             resources.ApplyResources(this.dataGridViewKTeil, "dataGridViewKTeil");
             this.dataGridViewKTeil.Name = "dataGridViewKTeil";
             this.dataGridViewKTeil.ReadOnly = true;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.Padding = new System.Windows.Forms.Padding(0, 14, 0, 14);
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewKTeil.RowHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.helpProvider1.SetShowHelp(this.dataGridViewKTeil, ((bool)(resources.GetObject("dataGridViewKTeil.ShowHelp"))));
             this.dataGridViewKTeil.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewKTeil_CellContentClick_1);
             // 
             // dataGridViewLinkColumn1
             // 
             resources.ApplyResources(this.dataGridViewLinkColumn1, "dataGridViewLinkColumn1");
-            this.dataGridViewLinkColumn1.LinkColor = System.Drawing.Color.Blue;
+            this.dataGridViewLinkColumn1.LinkColor = System.Drawing.Color.DimGray;
             this.dataGridViewLinkColumn1.Name = "dataGridViewLinkColumn1";
             this.dataGridViewLinkColumn1.ReadOnly = true;
             this.dataGridViewLinkColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
@@ -6600,6 +6632,12 @@
             resources.ApplyResources(this.dataGridViewTextBoxColumn21, "dataGridViewTextBoxColumn21");
             this.dataGridViewTextBoxColumn21.Name = "dataGridViewTextBoxColumn21";
             this.dataGridViewTextBoxColumn21.ReadOnly = true;
+            // 
+            // Trend
+            // 
+            resources.ApplyResources(this.Trend, "Trend");
+            this.Trend.Name = "Trend";
+            this.Trend.ReadOnly = true;
             // 
             // tab_bestellung
             // 
@@ -7344,9 +7382,9 @@
             // 
             // tab_statistik
             // 
+            resources.ApplyResources(this.tab_statistik, "tab_statistik");
             this.tab_statistik.Controls.Add(this.header_statistik);
             this.tab_statistik.Controls.Add(this.chart_statistik);
-            resources.ApplyResources(this.tab_statistik, "tab_statistik");
             this.tab_statistik.Name = "tab_statistik";
             this.tab_statistik.UseVisualStyleBackColor = true;
             // 
@@ -7358,16 +7396,32 @@
             // 
             // chart_statistik
             // 
+            
+            chartArea1.InnerPlotPosition.Auto = false;
+            chartArea1.InnerPlotPosition.Height = 60F;
+            chartArea1.InnerPlotPosition.Width = 92.69213F;
+            chartArea1.InnerPlotPosition.X = 6.25787F;
+            chartArea1.InnerPlotPosition.Y = 3.500001F;
             chartArea1.Name = "ChartArea2";
+            chartArea2.InnerPlotPosition.Auto = false;
+            chartArea2.InnerPlotPosition.Height = 60F;
+            chartArea2.InnerPlotPosition.Width = 92.69213F;
+            chartArea2.InnerPlotPosition.X = 6.25787F;
+            chartArea2.InnerPlotPosition.Y = 6.999995F;
+            chartArea2.Name = "ChartArea3";
             this.chart_statistik.ChartAreas.Add(chartArea1);
+            this.chart_statistik.ChartAreas.Add(chartArea2);
+            resources.ApplyResources(this.chart_statistik, "chart_statistik");
+            legend1.DockedToChartArea = "ChartArea3";
             legend1.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Top;
-            legend1.Name = "Legend1";
+            legend1.IsDockedInsideChartArea = false;
+            legend1.Name = "Legend3";
             legend2.DockedToChartArea = "ChartArea2";
             legend2.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Top;
-            legend2.Name = "Legend3";
+            legend2.IsDockedInsideChartArea = false;
+            legend2.Name = "Legend1";
             this.chart_statistik.Legends.Add(legend1);
             this.chart_statistik.Legends.Add(legend2);
-            resources.ApplyResources(this.chart_statistik, "chart_statistik");
             this.chart_statistik.Name = "chart_statistik";
             series1.ChartArea = "ChartArea2";
             series1.Legend = "Legend1";
@@ -7375,8 +7429,18 @@
             series2.ChartArea = "ChartArea2";
             series2.Legend = "Legend1";
             series2.Name = "Produktion";
+            series3.ChartArea = "ChartArea3";
+            series3.Legend = "Legend3";
+            series3.Name = "Kapazitaet";
+            series4.ChartArea = "ChartArea3";
+            series4.Legend = "Legend3";
+            series4.Name = "KapazitaetNeed";
             this.chart_statistik.Series.Add(series1);
             this.chart_statistik.Series.Add(series2);
+            this.chart_statistik.Series.Add(series3);
+            this.chart_statistik.Series.Add(series4);
+            title1.Name = "Title1";
+            this.chart_statistik.Titles.Add(title1);
             // 
             // tab_einstellungen
             // 
@@ -8118,6 +8182,7 @@
             this.tab_bestellverwaltung.ResumeLayout(false);
             this.tab2.ResumeLayout(false);
             this.tabPage2.ResumeLayout(false);
+            this.tabPage2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewKTeil)).EndInit();
             this.tab_bestellung.ResumeLayout(false);
             this.tab_bestellung.PerformLayout();
@@ -8765,18 +8830,6 @@
         private System.Windows.Forms.PictureBox arbPlatzAusfueren;
         private System.Windows.Forms.PictureBox addNr;
         private System.Windows.Forms.PictureBox xml_export;
-        private System.Windows.Forms.DataGridViewLinkColumn dataGridViewLinkColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn13;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn14;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn15;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn16;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn17;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn18;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn19;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn20;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn21;
         private System.Windows.Forms.ImageList imageListPlusMinus;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn24;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn25;
@@ -8888,6 +8941,7 @@
         private System.Windows.Forms.Button einstellungen_button1;
         private System.Windows.Forms.Button button_nav_9;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
+
         private System.Windows.Forms.Panel panel_abweichung;
         private System.Windows.Forms.Button btn_change_language;
         private System.Windows.Forms.RadioButton radio_risk_afin;
@@ -8903,6 +8957,22 @@
         private System.Windows.Forms.Label lbl_schichten;
         private System.Windows.Forms.Label lbl_diskont;
         private System.Windows.Forms.Label lbl_Gesuche;
+
+        private System.Windows.Forms.Label label_header_kaufteile;
+        private System.Windows.Forms.DataGridViewLinkColumn dataGridViewLinkColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn13;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn14;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn15;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn16;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn17;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn18;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn19;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn20;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn21;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Trend;
+
 
         private System.Windows.Forms.Panel panel_password;
         private System.Windows.Forms.Panel panel10;
