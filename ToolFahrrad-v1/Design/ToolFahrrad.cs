@@ -1880,7 +1880,7 @@ namespace ToolFahrrad_v1.Design
             {
                 _instance.VerwendeAbweichung = 0;
             }
-            panel_change_risk_success.Visible = true;
+//            panel_change_risk_success.Visible = true;
         }
 
         private void btn_change_language_Click(object sender, EventArgs e)
@@ -1899,9 +1899,9 @@ namespace ToolFahrrad_v1.Design
         {
             _instance.DiskountGrenze = Convert.ToDouble(diskGrenze.Value);
             _instance.GrenzeMenge = Convert.ToDouble(mengeGrenze.Value);
-            _instance.VerwendeDiskount = trackBar1.Value * 10;
+            _instance.VerwendeDiskount = (double)numericUpDown3.Value * 10;
 
-            panel6.Visible = true;
+//            panel6.Visible = true;
         }
 
         private void btn_schicht_save_Click(object sender, EventArgs e)
@@ -1909,7 +1909,7 @@ namespace ToolFahrrad_v1.Design
             _instance.ErsteSchichtMitUeberStunden = (int)numericUpDown1.Value;
             _instance.ZweiteSchichtMitUeberstunden = (int)numericUpDown2.Value;
 
-            panel4.Visible = true;
+//            panel4.Visible = true;
         }
 
         private void hilfeToolStripMenuItem_Click(object sender, EventArgs e)
@@ -2022,6 +2022,12 @@ namespace ToolFahrrad_v1.Design
             Credentials credentials = LoadCredentials();
             Get_Market_Place(credentials);
         }
+
+        private void tab_einstellungen_Click(object sender, EventArgs e)
+        {
+
+        }
+
     }
 }
 
