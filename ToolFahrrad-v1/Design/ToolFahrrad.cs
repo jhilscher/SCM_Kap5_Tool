@@ -15,6 +15,7 @@ using ToolFahrrad_v1.Design.Partial;
 using ToolFahrrad_v1.Design;
 
 using System.Runtime.Serialization.Formatters.Binary;
+using System.Windows.Forms.DataVisualization.Charting;
 
 namespace ToolFahrrad_v1.Design
 {
@@ -57,7 +58,7 @@ namespace ToolFahrrad_v1.Design
 //            toolAusfueren.Visible = false;
 //            save.Visible = true;
             tab1.Visible = true;
-            tab2.Visible = true;
+            Bestellungen.Visible = true;
             panelXMLerstellen.Visible = true;
             arbPlatzAusfueren.Visible = true;
             DataGridViewAP.Visible = true;
@@ -122,10 +123,25 @@ namespace ToolFahrrad_v1.Design
 
         /// <summary>
         /// Informationsdarstellung
+        /// Bestellverwaltung
         /// </summary> 
         //TODO: Information()
         private void Information()
         {
+            Series series4 = this.chart_statistik.Series.First(x => x.Name == "Kapazitaet Bedarf");
+
+            // baue datapoints zusammen
+            var listDpKapa = new List<DataPoint>();
+            var listDpKapHave = new List<DataPoint>();
+
+            var listKap2 = DataContainer.Instance.ArbeitsplatzList.OrderBy(x => x.GetNummerArbeitsplatz).Select(x =>
+            {
+                var dp = new DataPoint(x.GetNummerArbeitsplatz / 2, x.GetBenoetigteZeit);
+                dp.AxisLabel = x.GetNummerArbeitsplatz.ToString();
+                return dp;
+            }).ToList();
+
+
             // KTeile
             #region KTEILE
             //Bruttobedarf
@@ -136,6 +152,8 @@ namespace ToolFahrrad_v1.Design
                 k.BruttoBedarfPer2 = 0;
                 k.BruttoBedarfPer3 = 0;
             }
+
+
             for (int i = 1; i < 4; ++i)
             {
                 _pp.RekursAufloesenKTeile(i, null, _instance.GetTeil(i) as ETeil);
@@ -152,6 +170,7 @@ namespace ToolFahrrad_v1.Design
             dataGridViewKTeil.Columns[9].HeaderText = Resources.Fahrrad_Information_B + ((Convert.ToInt32(_xml.Period)) + 2);
             dataGridViewKTeil.Columns[10].HeaderText = Resources.Fahrrad_Information_B + (Convert.ToInt32(_xml.Period) + 3);
             dataGridViewKTeil.Columns[11].HeaderText = Resources.Fahrrad_Information_B + (Convert.ToInt32(_xml.Period) + 4);
+            dataGridViewKTeil.Columns[12].HeaderText = Resources.Fahrrad_Information_Trend;
 
             foreach (var a in _instance.ListeKTeile)
             {
@@ -193,13 +212,30 @@ namespace ToolFahrrad_v1.Design
                     dataGridViewKTeil.Rows[index].Cells[11].Style.ForeColor = Color.Red;
                     dataGridViewKTeil.Rows[index].Cells[11].Style.Font = new Font(dataGridViewKTeil.Rows[index].Cells[11].InheritedStyle.Font, FontStyle.Bold);
                 }
+
+                // Trend berechnen
+                if (a.BestandPer1 > a.BestandPer4 + 50) {
+                    dataGridViewKTeil.Rows[index].Cells[12].Style.BackColor = Color.Red;
+                    dataGridViewKTeil.Rows[index].Cells[12].Value = "v";
+                }
+                else if (a.BestandPer1 <  a.BestandPer4 - 50)
+                {
+                    dataGridViewKTeil.Rows[index].Cells[12].Style.BackColor = Color.Green;
+                    dataGridViewKTeil.Rows[index].Cells[12].Value = "^";
+                }
+                else {
+                    dataGridViewKTeil.Rows[index].Cells[12].Style.BackColor = Color.Yellow;
+                    dataGridViewKTeil.Rows[index].Cells[12].Value = "-";
+                }
+
                 //Farbe
                 for (int i = 0; i < 12; ++i)
                 {
                     if (i >= 0 && i < 4)
-                        dataGridViewKTeil.Columns[i].DefaultCellStyle.BackColor = Color.FloralWhite;
+                        dataGridViewKTeil.Columns[i].DefaultCellStyle.BackColor = Color.Wheat;
                     else if (i > 3 && i < 8)
-                        dataGridViewKTeil.Columns[i].DefaultCellStyle.BackColor = Color.Honeydew;
+                        dataGridViewKTeil.Columns[i].DefaultCellStyle.BackColor = Color.AliceBlue;
+;
                 }
                 ++index;
             }
@@ -315,6 +351,10 @@ namespace ToolFahrrad_v1.Design
                 DataGridViewAP.Rows[index].Cells[3].Value = a.RuestungCustom;
                 int gesammt = a.RuestungCustom + sum;
                 DataGridViewAP.Rows[index].Cells[6].Value = gesammt + " min";
+
+                listDpKapa.Add(new DataPoint(a.GetNummerArbeitsplatz, gesammt));
+
+
                 DataGridViewAP.Rows[index].Cells[10].Value = imageListAmpel.Images[2];
 
                 if (gesammt <= a.ZeitErsteSchicht)
@@ -378,6 +418,8 @@ namespace ToolFahrrad_v1.Design
                         DataGridViewAP.Columns[i].DefaultCellStyle.BackColor = Color.LightYellow;
                 }
                 ++index;
+
+                listDpKapHave.Add(new DataPoint(a.GetNummerArbeitsplatz, apXml[1] * 2400 + apXml[2]));
             }
             _instance.ApKapazitaet = _xmlAp;
             #endregion
@@ -393,19 +435,103 @@ namespace ToolFahrrad_v1.Design
             {
                 dataGridViewBestellung.Rows.Add();
                 dataGridViewBestellung.Rows[index].Cells[0].Value = a.Kaufteil.Nummer;
-                dataGridViewBestellung.Rows[index].Cells[1].Value = a.Menge;
+                dataGridViewBestellung.Rows[index].Cells[1].Value = a.Kaufteil.Bezeichnung;
+                dataGridViewBestellung.Rows[index].Cells[2].Value = a.Kaufteil.Lagerstand;
+
+                dataGridViewBestellung.Rows[index].Cells[3].Value = a.Kaufteil.Lieferdauer;
+
+                dataGridViewBestellung.Rows[index].Cells[4].Value = a.Menge;
+                
+                Color rowColor = Color.FloralWhite;
+                
                 if (a.Eil)
                 {
-                    dataGridViewBestellung.Rows[index].Cells[2].Value = true;
+                    dataGridViewBestellung.Rows[index].Cells[5].Value = true;
+                    rowColor = Color.LightCoral;
                 }
 
-                //Farbe
-                for (int i = 0; i < 4; ++i)
-                {
-                    dataGridViewBestellung.Columns[i].DefaultCellStyle.BackColor = i == 0 ? Color.FloralWhite : Color.LightYellow;
-                }
+                
+
+                dataGridViewBestellung.Rows[index].DefaultCellStyle.BackColor = rowColor;
+                
                 ++index;
             }
+            #endregion
+
+            #region statistik
+
+            this.chart_statistik.ChartAreas.First().AxisX.Interval = 1;
+
+            /// 
+            /// Bestellungen Anzahl
+            /// 
+            Series series1 = this.chart_statistik.Series.FirstOrDefault(x => x.Name == "Bestellungen");
+
+            var bestellSumme = 0.00;
+
+            // baue datapoints zusammen
+            var listBv = _bv.BvPositionen.Select<Bestellposition, DataPoint>(x =>
+            {
+                var dp = new DataPoint(x.Kaufteil.Nummer / 2, x.Menge);
+                dp.AxisLabel = x.Kaufteil.ToString();
+                bestellSumme += x.Kaufteil.Preis;
+                return dp;
+            }).ToList();
+
+            // hinzu zur serie!
+            listBv.ForEach(x => series1.Points.Add(x));
+
+            series1.Enabled = true;
+
+            ///
+            /// Produktion Anzahl
+            /// 
+
+            Series series2 = this.chart_statistik.Series.FirstOrDefault(x => x.Name == "Produktion");
+
+            // baue datapoints zusammen
+            var listPv = _pp.ProdListe.Select(x =>
+            {
+                var dp = new DataPoint(x.Key / 2, x.Value);
+                dp.AxisLabel = x.Key.ToString();
+                return dp;
+            }).ToList();
+
+            // hinzu zur serie!
+            listPv.ForEach(x => series2.Points.Add(x));
+
+            series2.Enabled = true;
+            //series2.
+
+            ///
+            /// Kapazitat Arbeitsplatz Anzahl
+            /// 
+
+            Series series3 = this.chart_statistik.Series.First(x => x.Name == "Kapazitaet");
+
+            // baue datapoints zusammen
+           /*
+            var listKap = DataContainer.Instance.ArbeitsplatzList.OrderBy(x => x.GetNummerArbeitsplatz).Select(x =>
+            {
+                var dp = new DataPoint(x.GetNummerArbeitsplatz / 2, _instance.ApKapazitaet.Where(c => c[0] == x.GetNummerArbeitsplatz)
+                    .Select(c => c[2]).First());
+                dp.AxisLabel = x.GetNummerArbeitsplatz.ToString();
+                return dp;
+            }).ToList();
+            */
+            // hinzu zur serie!
+            listDpKapHave.ForEach(x => series3.Points.Add(x));
+
+            ///
+            /// Kapazitat Arbeitsplatz Anzahl
+            /// 
+
+
+
+            // hinzu zur serie!
+            listDpKapa.ForEach(x => series4.Points.Add(x));
+
+
             #endregion
 
             #region Direktverkauf
@@ -1232,7 +1358,7 @@ namespace ToolFahrrad_v1.Design
 
 
         /// <summary>
-        /// 
+        /// Klick erste Reihe bei Teile der Bestellungen: Popup
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -1705,6 +1831,7 @@ namespace ToolFahrrad_v1.Design
             this.AllowDrop = true;
             this.DragEnter += xml_DragEnter;
             this.DragDrop += xml_DragDrop;
+           
         }
 
         private void xml_DragEnter(object sender, DragEventArgs e)
@@ -1757,7 +1884,7 @@ namespace ToolFahrrad_v1.Design
                                     //                        toolAusfueren.Visible = false;
                                     //save.Visible = true;
                                     tab1.Visible = true;
-                                    tab2.Visible = true;
+                                    Bestellungen.Visible = true;
                                     panelXMLerstellen.Visible = true;
                                     arbPlatzAusfueren.Visible = true;
                                     DataGridViewAP.Visible = true;
@@ -1858,7 +1985,7 @@ namespace ToolFahrrad_v1.Design
             {
                 _instance.VerwendeAbweichung = 0;
             }
-            panel_change_risk_success.Visible = true;
+//            panel_change_risk_success.Visible = true;
         }
 
         private void btn_change_language_Click(object sender, EventArgs e)
@@ -1877,9 +2004,9 @@ namespace ToolFahrrad_v1.Design
         {
             _instance.DiskountGrenze = Convert.ToDouble(diskGrenze.Value);
             _instance.GrenzeMenge = Convert.ToDouble(mengeGrenze.Value);
-            _instance.VerwendeDiskount = trackBar1.Value * 10;
+            _instance.VerwendeDiskount = (double)numericUpDown3.Value * 10;
 
-            panel6.Visible = true;
+//            panel6.Visible = true;
         }
 
         private void btn_schicht_save_Click(object sender, EventArgs e)
@@ -1887,7 +2014,7 @@ namespace ToolFahrrad_v1.Design
             _instance.ErsteSchichtMitUeberStunden = (int)numericUpDown1.Value;
             _instance.ZweiteSchichtMitUeberstunden = (int)numericUpDown2.Value;
 
-            panel4.Visible = true;
+//            panel4.Visible = true;
         }
 
         private void hilfeToolStripMenuItem_Click(object sender, EventArgs e)
@@ -2000,6 +2127,13 @@ namespace ToolFahrrad_v1.Design
             Credentials credentials = LoadCredentials();
             Get_Market_Place(credentials);
         }
+
+        private void tab_einstellungen_Click(object sender, EventArgs e)
+        {
+
+        }
+
+
     }
 }
 

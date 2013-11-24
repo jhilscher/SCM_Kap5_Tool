@@ -20051,7 +20051,7 @@ Reserve</value>
     <value>Arbeitsplatz</value>
   </data>
   <data name="dataGridViewTextBoxColumn5.Width" type="System.Int32, mscorlib">
-    <value>116</value>
+    <value>84</value>
   </data>
   <metadata name="dataGridViewTextBoxColumn7.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -20063,7 +20063,7 @@ Reserve</value>
     <value>aus XML-Datei</value>
   </data>
   <data name="dataGridViewTextBoxColumn7.Width" type="System.Int32, mscorlib">
-    <value>174</value>
+    <value>123</value>
   </data>
   <metadata name="dataGridViewTextBoxColumn8.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -20072,7 +20072,7 @@ Reserve</value>
     <value>Kapazitätsbedarf</value>
   </data>
   <data name="dataGridViewTextBoxColumn8.Width" type="System.Int32, mscorlib">
-    <value>153</value>
+    <value>109</value>
   </data>
   <metadata name="dataGridViewTextBoxColumn9.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -20084,7 +20084,7 @@ Reserve</value>
     <value>Änderbar</value>
   </data>
   <data name="dataGridViewTextBoxColumn9.Width" type="System.Int32, mscorlib">
-    <value>119</value>
+    <value>85</value>
   </data>
   <metadata name="minus.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -20138,7 +20138,7 @@ Reserve</value>
     <value>2. Schicht ab 3600 min benötigt</value>
   </data>
   <data name="s1.Width" type="System.Int32, mscorlib">
-    <value>75</value>
+    <value>53</value>
   </data>
   <metadata name="s3.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -20150,7 +20150,7 @@ Reserve</value>
     <value>3. Schicht ab 6000 min benötigt</value>
   </data>
   <data name="s3.Width" type="System.Int32, mscorlib">
-    <value>75</value>
+    <value>53</value>
   </data>
   <metadata name="ueber.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -20162,7 +20162,7 @@ Reserve</value>
     <value>Limit = 7200 min.</value>
   </data>
   <data name="ueber.Width" type="System.Int32, mscorlib">
-    <value>65</value>
+    <value>51</value>
   </data>
   <data name="DataGridViewAP.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 3</value>
@@ -20220,6 +20220,309 @@ Reserve</value>
   </data>
   <data name="&gt;&gt;tab_arbeitzeit.ZOrder" xml:space="preserve">
     <value>2</value>
+  </data>
+  <data name="label3.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label3.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 24pt</value>
+  </data>
+  <data name="label3.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 11</value>
+  </data>
+  <data name="label3.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>200, 37</value>
+  </data>
+  <data name="label3.TabIndex" type="System.Int32, mscorlib">
+    <value>68</value>
+  </data>
+  <data name="label3.Text" xml:space="preserve">
+    <value>Bestellungen</value>
+  </data>
+  <data name="&gt;&gt;label3.Name" xml:space="preserve">
+    <value>label3</value>
+  </data>
+  <data name="&gt;&gt;label3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label3.Parent" xml:space="preserve">
+    <value>tab_BestellungenAufgeben</value>
+  </data>
+  <data name="&gt;&gt;label3.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="addNr.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29m
+        dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAD7SURBVDhPnZNBCgIxEAT35Ml/CILgVRD8k/8QBB/j
+        yR8IngTBqw8QBEEQtCukl+y42YMNDZmezuxkkm16MBE34lF8Z7JGIzeItfgUPxWSw/ODkbgXMb3EnbgS
+        0SFrNHJ48KK32IokbuIcoQJyePBypISZyDmpzrrEIbMEHrzsmSL467QYgQ4j8LZdXHKwJAioFcCLfibw
+        YDwUWvbGSB8HL/GdIBbwbfSRHBiLxA+Caw4WBAHeGIEXPR3BA2GYEbUCHnzaM3SNtOy2jfIaW7+74JHE
+        IiXI+SF1OmaAHh7VSfJ8Da4NzQPH23nKxt8/Uwn/zifRG1n3/M5N8wW4eG/fCAGusgAAAABJRU5ErkJg
+        gg==
+</value>
+  </data>
+  <data name="addNr.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="addNr.Location" type="System.Drawing.Point, System.Drawing">
+    <value>218, 22</value>
+  </data>
+  <data name="addNr.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="addNr.Size" type="System.Drawing.Size, System.Drawing">
+    <value>22, 19</value>
+  </data>
+  <data name="addNr.TabIndex" type="System.Int32, mscorlib">
+    <value>67</value>
+  </data>
+  <data name="addNr.ToolTip" xml:space="preserve">
+    <value>Neue Zeile hinzufügen</value>
+  </data>
+  <data name="&gt;&gt;addNr.Name" xml:space="preserve">
+    <value>addNr</value>
+  </data>
+  <data name="&gt;&gt;addNr.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;addNr.Parent" xml:space="preserve">
+    <value>tab_BestellungenAufgeben</value>
+  </data>
+  <data name="&gt;&gt;addNr.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="zurueck.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29m
+        dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAADOSURBVDhPzZIxCsJAEEVTWQmClWDlbWwFwRtYCZ4w
+        IAiCIAiC4AG8gZVVfC9kQ0wGFbTww4PdP3+XyWyyoii+4ufqwQo2cK9wrWftpcZwBPuKsGYmlLefwOAV
+        FmBYXOtZMxN2YosGLjDUaEnvDGbMdrQFi/NyF2sGZsx25LAsDspdrD6YMdvRuwtysN5Er9YONG0zUqo3
+        2UOtNWg6qGiII3DA6bBrvVrtZ3SYBmQCyvWh4ulwkm+eLmnifKbwkezEz/H39fANfLYl/KWy7AFhXnQd
+        DEtoLQAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="zurueck.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="zurueck.Location" type="System.Drawing.Point, System.Drawing">
+    <value>274, 22</value>
+  </data>
+  <data name="zurueck.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="zurueck.Size" type="System.Drawing.Size, System.Drawing">
+    <value>22, 19</value>
+  </data>
+  <data name="zurueck.TabIndex" type="System.Int32, mscorlib">
+    <value>65</value>
+  </data>
+  <data name="zurueck.ToolTip" xml:space="preserve">
+    <value>Änderungen zurück setzen</value>
+  </data>
+  <data name="&gt;&gt;zurueck.Name" xml:space="preserve">
+    <value>zurueck</value>
+  </data>
+  <data name="&gt;&gt;zurueck.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;zurueck.Parent" xml:space="preserve">
+    <value>tab_BestellungenAufgeben</value>
+  </data>
+  <data name="&gt;&gt;zurueck.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="saveAenderungen.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29m
+        dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAACsSURBVDhPnZNRCsIwEAUDvZlfvVlB8Dx+9UiCN9Ad
+        ydu+prWNDgx52XSD4KYEQzgRjDl8fZEzoIfecg05cNomvFTJwHojPOvGUZMrlFnp3XwAqrlCOevtB6Ca
+        O1bJoPoSjHuoeitnoH0Gbu9Fv2R1wb/uFn8xA/9xL5qH1QVwNIFSk6j9EuraI2TeK54JmX2UVTwTWB8E
+        HoQXewTWz2PiSfIi4WgCpSYxesrwBjTZs3EhGb7+AAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="saveAenderungen.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="saveAenderungen.Location" type="System.Drawing.Point, System.Drawing">
+    <value>246, 22</value>
+  </data>
+  <data name="saveAenderungen.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="saveAenderungen.Size" type="System.Drawing.Size, System.Drawing">
+    <value>22, 19</value>
+  </data>
+  <data name="saveAenderungen.TabIndex" type="System.Int32, mscorlib">
+    <value>64</value>
+  </data>
+  <data name="saveAenderungen.ToolTip" xml:space="preserve">
+    <value>Änderungen speichern</value>
+  </data>
+  <data name="&gt;&gt;saveAenderungen.Name" xml:space="preserve">
+    <value>saveAenderungen</value>
+  </data>
+  <data name="&gt;&gt;saveAenderungen.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;saveAenderungen.Parent" xml:space="preserve">
+    <value>tab_BestellungenAufgeben</value>
+  </data>
+  <data name="&gt;&gt;saveAenderungen.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <metadata name="kNr.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="kNr.HeaderText" xml:space="preserve">
+    <value>Nummer</value>
+  </data>
+  <data name="kNr.Width" type="System.Int32, mscorlib">
+    <value>50</value>
+  </data>
+  <metadata name="Bezeichnung.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="Bezeichnung.HeaderText" xml:space="preserve">
+    <value>Bezeichnung</value>
+  </data>
+  <data name="Bezeichnung.Width" type="System.Int32, mscorlib">
+    <value>200</value>
+  </data>
+  <metadata name="Lagerbestand.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="Lagerbestand.HeaderText" xml:space="preserve">
+    <value>Lagerbestand</value>
+  </data>
+  <metadata name="Lieferdauer.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="Lieferdauer.HeaderText" xml:space="preserve">
+    <value>Lieferdauer</value>
+  </data>
+  <metadata name="menge.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="menge.HeaderText" xml:space="preserve">
+    <value>Menge</value>
+  </data>
+  <data name="menge.Width" type="System.Int32, mscorlib">
+    <value>70</value>
+  </data>
+  <metadata name="eil.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="eil.HeaderText" xml:space="preserve">
+    <value>Eilbestellung</value>
+  </data>
+  <data name="eil.Width" type="System.Int32, mscorlib">
+    <value>70</value>
+  </data>
+  <metadata name="del.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="del.HeaderText" xml:space="preserve">
+    <value>Löschen</value>
+  </data>
+  <data name="del.Width" type="System.Int32, mscorlib">
+    <value>60</value>
+  </data>
+  <data name="dataGridViewBestellung.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 65</value>
+  </data>
+  <data name="dataGridViewBestellung.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="dataGridViewBestellung.Size" type="System.Drawing.Size, System.Drawing">
+    <value>853, 403</value>
+  </data>
+  <data name="dataGridViewBestellung.TabIndex" type="System.Int32, mscorlib">
+    <value>63</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewBestellung.Name" xml:space="preserve">
+    <value>dataGridViewBestellung</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewBestellung.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewBestellung.Parent" xml:space="preserve">
+    <value>tab_BestellungenAufgeben</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewBestellung.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="tab_BestellungenAufgeben.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 22</value>
+  </data>
+  <data name="tab_BestellungenAufgeben.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
+  </data>
+  <data name="tab_BestellungenAufgeben.Size" type="System.Drawing.Size, System.Drawing">
+    <value>865, 469</value>
+  </data>
+  <data name="tab_BestellungenAufgeben.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="tab_BestellungenAufgeben.Text" xml:space="preserve">
+    <value>Bestellungen</value>
+  </data>
+  <data name="&gt;&gt;tab_BestellungenAufgeben.Name" xml:space="preserve">
+    <value>tab_BestellungenAufgeben</value>
+  </data>
+  <data name="&gt;&gt;tab_BestellungenAufgeben.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tab_BestellungenAufgeben.Parent" xml:space="preserve">
+    <value>Bestellungen</value>
+  </data>
+  <data name="&gt;&gt;tab_BestellungenAufgeben.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="tabPage2.AutoScroll" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label_header_kaufteile.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label_header_kaufteile.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 24pt</value>
+  </data>
+  <data name="label_header_kaufteile.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label_header_kaufteile.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 11</value>
+  </data>
+  <data name="label_header_kaufteile.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label_header_kaufteile.Size" type="System.Drawing.Size, System.Drawing">
+    <value>344, 37</value>
+  </data>
+  <data name="label_header_kaufteile.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="label_header_kaufteile.Text" xml:space="preserve">
+    <value>Bestellungen Übersicht</value>
+  </data>
+  <data name="&gt;&gt;label_header_kaufteile.Name" xml:space="preserve">
+    <value>label_header_kaufteile</value>
+  </data>
+  <data name="&gt;&gt;label_header_kaufteile.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label_header_kaufteile.Parent" xml:space="preserve">
+    <value>tabPage2</value>
+  </data>
+  <data name="&gt;&gt;label_header_kaufteile.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <metadata name="dataGridViewLinkColumn1.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -20318,7 +20621,7 @@ Reserve</value>
     <value>Bestand</value>
   </data>
   <data name="dataGridViewTextBoxColumn18.Width" type="System.Int32, mscorlib">
-    <value>50</value>
+    <value>60</value>
   </data>
   <metadata name="dataGridViewTextBoxColumn19.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -20330,7 +20633,7 @@ Reserve</value>
     <value>Bestand</value>
   </data>
   <data name="dataGridViewTextBoxColumn19.Width" type="System.Int32, mscorlib">
-    <value>50</value>
+    <value>60</value>
   </data>
   <metadata name="dataGridViewTextBoxColumn20.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -20342,7 +20645,7 @@ Reserve</value>
     <value>Bestand</value>
   </data>
   <data name="dataGridViewTextBoxColumn20.Width" type="System.Int32, mscorlib">
-    <value>50</value>
+    <value>60</value>
   </data>
   <metadata name="dataGridViewTextBoxColumn21.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -20354,19 +20657,25 @@ Reserve</value>
     <value>Bestand</value>
   </data>
   <data name="dataGridViewTextBoxColumn21.Width" type="System.Int32, mscorlib">
-    <value>50</value>
+    <value>60</value>
   </data>
-  <data name="dataGridViewKTeil.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
+  <metadata name="Trend.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="Trend.HeaderText" xml:space="preserve">
+    <value>Trend</value>
+  </data>
+  <data name="Trend.Width" type="System.Int32, mscorlib">
+    <value>60</value>
   </data>
   <data name="dataGridViewKTeil.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 3</value>
+    <value>3, 60</value>
   </data>
   <data name="dataGridViewKTeil.ShowHelp" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="dataGridViewKTeil.Size" type="System.Drawing.Size, System.Drawing">
-    <value>859, 338</value>
+    <value>859, 403</value>
   </data>
   <data name="dataGridViewKTeil.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -20381,7 +20690,7 @@ Reserve</value>
     <value>tabPage2</value>
   </data>
   <data name="&gt;&gt;dataGridViewKTeil.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="tabPage2.Location" type="System.Drawing.Point, System.Drawing">
     <value>4, 22</value>
@@ -20393,7 +20702,7 @@ Reserve</value>
     <value>True</value>
   </data>
   <data name="tabPage2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>865, 344</value>
+    <value>865, 469</value>
   </data>
   <data name="tabPage2.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -20408,37 +20717,22 @@ Reserve</value>
     <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;tabPage2.Parent" xml:space="preserve">
-    <value>tab2</value>
+    <value>Bestellungen</value>
   </data>
   <data name="&gt;&gt;tabPage2.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="dvVerwenden.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="dvVerwenden.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 9.75pt</value>
+    <value>1</value>
   </data>
   <data name="dvVerwenden.Location" type="System.Drawing.Point, System.Drawing">
-    <value>521, 32</value>
-  </data>
-  <data name="dvVerwenden.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
-    <value>Yes</value>
+    <value>263, 72</value>
   </data>
   <data name="dvVerwenden.ShowHelp" type="System.Boolean, mscorlib">
-    <value>True</value>
+    <value>False</value>
   </data>
   <data name="dvVerwenden.Size" type="System.Drawing.Size, System.Drawing">
-    <value>175, 20</value>
+    <value>104, 24</value>
   </data>
   <data name="dvVerwenden.TabIndex" type="System.Int32, mscorlib">
-    <value>68</value>
-  </data>
-  <data name="dvVerwenden.Text" xml:space="preserve">
-    <value>Direktverkauf verwenden</value>
-  </data>
-  <data name="dvVerwenden.ToolTip" xml:space="preserve">
-    <value>Direktverkauf verwenden</value>
+    <value>0</value>
   </data>
   <data name="&gt;&gt;dvVerwenden.Name" xml:space="preserve">
     <value>dvVerwenden</value>
@@ -20452,34 +20746,17 @@ Reserve</value>
   <data name="&gt;&gt;dvVerwenden.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="addNr2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29m
-        dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAD7SURBVDhPnZNBCgIxEAT35Ml/CILgVRD8k/8QBB/j
-        yR8IngTBqw8QBEEQtCukl+y42YMNDZmezuxkkm16MBE34lF8Z7JGIzeItfgUPxWSw/ODkbgXMb3EnbgS
-        0SFrNHJ48KK32IokbuIcoQJyePBypISZyDmpzrrEIbMEHrzsmSL467QYgQ4j8LZdXHKwJAioFcCLfibw
-        YDwUWvbGSB8HL/GdIBbwbfSRHBiLxA+Caw4WBAHeGIEXPR3BA2GYEbUCHnzaM3SNtOy2jfIaW7+74JHE
-        IiXI+SF1OmaAHh7VSfJ8Da4NzQPH23nKxt8/Uwn/zifRG1n3/M5N8wW4eG/fCAGusgAAAABJRU5ErkJg
-        gg==
-</value>
-  </data>
-  <data name="addNr2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
   <data name="addNr2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>618, 10</value>
+    <value>263, 13</value>
   </data>
   <data name="addNr2.ShowHelp" type="System.Boolean, mscorlib">
-    <value>True</value>
+    <value>False</value>
   </data>
   <data name="addNr2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>22, 19</value>
+    <value>100, 50</value>
   </data>
   <data name="addNr2.TabIndex" type="System.Int32, mscorlib">
-    <value>67</value>
-  </data>
-  <data name="addNr2.ToolTip" xml:space="preserve">
-    <value>Neue Zeile hinzufügen</value>
+    <value>1</value>
   </data>
   <data name="&gt;&gt;addNr2.Name" xml:space="preserve">
     <value>addNr2</value>
@@ -20493,33 +20770,17 @@ Reserve</value>
   <data name="&gt;&gt;addNr2.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="zurueck2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29m
-        dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAADOSURBVDhPzZIxCsJAEEVTWQmClWDlbWwFwRtYCZ4w
-        IAiCIAiC4AG8gZVVfC9kQ0wGFbTww4PdP3+XyWyyoii+4ufqwQo2cK9wrWftpcZwBPuKsGYmlLefwOAV
-        FmBYXOtZMxN2YosGLjDUaEnvDGbMdrQFi/NyF2sGZsx25LAsDspdrD6YMdvRuwtysN5Er9YONG0zUqo3
-        2UOtNWg6qGiII3DA6bBrvVrtZ3SYBmQCyvWh4ulwkm+eLmnifKbwkezEz/H39fANfLYl/KWy7AFhXnQd
-        DEtoLQAAAABJRU5ErkJggg==
-</value>
-  </data>
-  <data name="zurueck2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
   <data name="zurueck2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>674, 10</value>
+    <value>0, 0</value>
   </data>
   <data name="zurueck2.ShowHelp" type="System.Boolean, mscorlib">
-    <value>True</value>
+    <value>False</value>
   </data>
   <data name="zurueck2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>22, 19</value>
+    <value>100, 50</value>
   </data>
   <data name="zurueck2.TabIndex" type="System.Int32, mscorlib">
-    <value>66</value>
-  </data>
-  <data name="zurueck2.ToolTip" xml:space="preserve">
-    <value>Änderungen zurück setzen</value>
+    <value>2</value>
   </data>
   <data name="&gt;&gt;zurueck2.Name" xml:space="preserve">
     <value>zurueck2</value>
@@ -20533,32 +20794,17 @@ Reserve</value>
   <data name="&gt;&gt;zurueck2.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="saveAenderungen2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29m
-        dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAACsSURBVDhPnZNRCsIwEAUDvZlfvVlB8Dx+9UiCN9Ad
-        ydu+prWNDgx52XSD4KYEQzgRjDl8fZEzoIfecg05cNomvFTJwHojPOvGUZMrlFnp3XwAqrlCOevtB6Ca
-        O1bJoPoSjHuoeitnoH0Gbu9Fv2R1wb/uFn8xA/9xL5qH1QVwNIFSk6j9EuraI2TeK54JmX2UVTwTWB8E
-        HoQXewTWz2PiSfIi4WgCpSYxesrwBjTZs3EhGb7+AAAAAElFTkSuQmCC
-</value>
-  </data>
-  <data name="saveAenderungen2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
   <data name="saveAenderungen2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>646, 10</value>
+    <value>0, 0</value>
   </data>
   <data name="saveAenderungen2.ShowHelp" type="System.Boolean, mscorlib">
-    <value>True</value>
+    <value>False</value>
   </data>
   <data name="saveAenderungen2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>22, 19</value>
+    <value>100, 50</value>
   </data>
   <data name="saveAenderungen2.TabIndex" type="System.Int32, mscorlib">
-    <value>65</value>
-  </data>
-  <data name="saveAenderungen2.ToolTip" xml:space="preserve">
-    <value>Änderungen speichern</value>
+    <value>3</value>
   </data>
   <data name="&gt;&gt;saveAenderungen2.Name" xml:space="preserve">
     <value>saveAenderungen2</value>
@@ -20572,29 +20818,17 @@ Reserve</value>
   <data name="&gt;&gt;saveAenderungen2.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
-  <data name="label275.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="label275.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 14.25pt</value>
-  </data>
-  <data name="label275.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
   <data name="label275.Location" type="System.Drawing.Point, System.Drawing">
-    <value>399, 7</value>
+    <value>0, 0</value>
   </data>
   <data name="label275.ShowHelp" type="System.Boolean, mscorlib">
-    <value>True</value>
+    <value>False</value>
   </data>
   <data name="label275.Size" type="System.Drawing.Size, System.Drawing">
-    <value>117, 24</value>
+    <value>100, 23</value>
   </data>
   <data name="label275.TabIndex" type="System.Int32, mscorlib">
-    <value>64</value>
-  </data>
-  <data name="label275.Text" xml:space="preserve">
-    <value>Direktverkauf</value>
+    <value>4</value>
   </data>
   <data name="&gt;&gt;label275.Name" xml:space="preserve">
     <value>label275</value>
@@ -20608,62 +20842,17 @@ Reserve</value>
   <data name="&gt;&gt;label275.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
-  <metadata name="knr2.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="knr2.HeaderText" xml:space="preserve">
-    <value>Nummer</value>
-  </data>
-  <data name="knr2.Width" type="System.Int32, mscorlib">
-    <value>50</value>
-  </data>
-  <metadata name="dataGridViewTextBoxColumn32.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="dataGridViewTextBoxColumn32.HeaderText" xml:space="preserve">
-    <value>Menge</value>
-  </data>
-  <data name="dataGridViewTextBoxColumn32.Width" type="System.Int32, mscorlib">
-    <value>70</value>
-  </data>
-  <metadata name="pr.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="pr.HeaderText" xml:space="preserve">
-    <value>Preis</value>
-  </data>
-  <data name="pr.Width" type="System.Int32, mscorlib">
-    <value>60</value>
-  </data>
-  <metadata name="str.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="str.HeaderText" xml:space="preserve">
-    <value>Strafe</value>
-  </data>
-  <data name="str.Width" type="System.Int32, mscorlib">
-    <value>60</value>
-  </data>
-  <metadata name="dataGridViewCheckBoxColumn2.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="dataGridViewCheckBoxColumn2.HeaderText" xml:space="preserve">
-    <value>Löschen</value>
-  </data>
-  <data name="dataGridViewCheckBoxColumn2.Width" type="System.Int32, mscorlib">
-    <value>60</value>
-  </data>
   <data name="dataGridViewDirektverkauf.Location" type="System.Drawing.Point, System.Drawing">
-    <value>356, 56</value>
+    <value>215, 138</value>
   </data>
   <data name="dataGridViewDirektverkauf.ShowHelp" type="System.Boolean, mscorlib">
-    <value>True</value>
+    <value>False</value>
   </data>
   <data name="dataGridViewDirektverkauf.Size" type="System.Drawing.Size, System.Drawing">
-    <value>370, 282</value>
+    <value>240, 150</value>
   </data>
   <data name="dataGridViewDirektverkauf.TabIndex" type="System.Int32, mscorlib">
-    <value>63</value>
+    <value>5</value>
   </data>
   <data name="&gt;&gt;dataGridViewDirektverkauf.Name" xml:space="preserve">
     <value>dataGridViewDirektverkauf</value>
@@ -20677,110 +20866,17 @@ Reserve</value>
   <data name="&gt;&gt;dataGridViewDirektverkauf.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
-  <data name="addNr.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29m
-        dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAD7SURBVDhPnZNBCgIxEAT35Ml/CILgVRD8k/8QBB/j
-        yR8IngTBqw8QBEEQtCukl+y42YMNDZmezuxkkm16MBE34lF8Z7JGIzeItfgUPxWSw/ODkbgXMb3EnbgS
-        0SFrNHJ48KK32IokbuIcoQJyePBypISZyDmpzrrEIbMEHrzsmSL467QYgQ4j8LZdXHKwJAioFcCLfibw
-        YDwUWvbGSB8HL/GdIBbwbfSRHBiLxA+Caw4WBAHeGIEXPR3BA2GYEbUCHnzaM3SNtOy2jfIaW7+74JHE
-        IiXI+SF1OmaAHh7VSfJ8Da4NzQPH23nKxt8/Uwn/zifRG1n3/M5N8wW4eG/fCAGusgAAAABJRU5ErkJg
-        gg==
-</value>
-  </data>
-  <data name="addNr.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="addNr.Location" type="System.Drawing.Point, System.Drawing">
-    <value>215, 10</value>
-  </data>
-  <data name="addNr.ShowHelp" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="addNr.Size" type="System.Drawing.Size, System.Drawing">
-    <value>22, 19</value>
-  </data>
-  <data name="addNr.TabIndex" type="System.Int32, mscorlib">
-    <value>62</value>
-  </data>
-  <data name="addNr.ToolTip" xml:space="preserve">
-    <value>Neue Zeile hinzufügen</value>
-  </data>
-  <data name="&gt;&gt;addNr.Name" xml:space="preserve">
-    <value>addNr</value>
-  </data>
-  <data name="&gt;&gt;addNr.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;addNr.Parent" xml:space="preserve">
-    <value>tab_bestellung</value>
-  </data>
-  <data name="&gt;&gt;addNr.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="label3.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="label3.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 14.25pt</value>
-  </data>
-  <data name="label3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>46, 7</value>
-  </data>
-  <data name="label3.ShowHelp" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>98, 24</value>
-  </data>
-  <data name="label3.TabIndex" type="System.Int32, mscorlib">
-    <value>61</value>
-  </data>
-  <data name="label3.Text" xml:space="preserve">
-    <value>Bestellung</value>
-  </data>
-  <data name="&gt;&gt;label3.Name" xml:space="preserve">
-    <value>label3</value>
-  </data>
-  <data name="&gt;&gt;label3.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label3.Parent" xml:space="preserve">
-    <value>tab_bestellung</value>
-  </data>
-  <data name="&gt;&gt;label3.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="uebernehmenXML.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29m
-        dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAF0SURBVFhH1ZZNSgQxFIR75RkE7+HWrSC48hiCx3Mr
-        CIKrAVeuBEHwAK4EQauaaclUKu91pHsGP/hg6FeZ/HTSZFiBM/gIvxOZYXZx3qHr0MlskyN4De/gJ9TG
-        rRloLtNyAjfQNSh1M3C5yArO/Am6sPoGFc0oWX1cdg05OftzqGhOyerDPSwD3AOncC5lW6pk9WrDHcMe
-        yrZUqepcxufiQUtm3JIrrm3kuJFcwRme2y2uXeTwKg8i3a5XeiY0/t8F/No+iGSG2Qy+pjlfw51TdAWj
-        QbDGzKq0BsFTsXrnEzqIvXY+cQn5fih//3sOOqGDvlLtfK+DaHU+ydrvIJa+w3V/2Lg5XMDJbEb3p9gV
-        IjO6J+QKkRlc1hfo2pYyM74CLShZPYKX27LtB6woA1TJ6i14k7qFZdsHWFEGqJLV554iegMrNKRk9bmb
-        jld9XvkrXDhSmXPs2Dn3g8U1iFSiGxCv+Fx2O/OJ7g/H0vzpDrcMw/ADL27aGfjYuXUAAAAASUVORK5C
-        YII=
-</value>
-  </data>
-  <data name="uebernehmenXML.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
   <data name="uebernehmenXML.Location" type="System.Drawing.Point, System.Drawing">
-    <value>823, 302</value>
+    <value>0, 0</value>
   </data>
   <data name="uebernehmenXML.ShowHelp" type="System.Boolean, mscorlib">
-    <value>True</value>
+    <value>False</value>
   </data>
   <data name="uebernehmenXML.Size" type="System.Drawing.Size, System.Drawing">
-    <value>36, 36</value>
+    <value>100, 50</value>
   </data>
   <data name="uebernehmenXML.TabIndex" type="System.Int32, mscorlib">
-    <value>60</value>
-  </data>
-  <data name="uebernehmenXML.ToolTip" xml:space="preserve">
-    <value>in XML übernehmen</value>
+    <value>6</value>
   </data>
   <data name="&gt;&gt;uebernehmenXML.Name" xml:space="preserve">
     <value>uebernehmenXML</value>
@@ -20792,164 +20888,22 @@ Reserve</value>
     <value>tab_bestellung</value>
   </data>
   <data name="&gt;&gt;uebernehmenXML.ZOrder" xml:space="preserve">
-    <value>8</value>
-  </data>
-  <data name="zurueck.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29m
-        dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAADOSURBVDhPzZIxCsJAEEVTWQmClWDlbWwFwRtYCZ4w
-        IAiCIAiC4AG8gZVVfC9kQ0wGFbTww4PdP3+XyWyyoii+4ufqwQo2cK9wrWftpcZwBPuKsGYmlLefwOAV
-        FmBYXOtZMxN2YosGLjDUaEnvDGbMdrQFi/NyF2sGZsx25LAsDspdrD6YMdvRuwtysN5Er9YONG0zUqo3
-        2UOtNWg6qGiII3DA6bBrvVrtZ3SYBmQCyvWh4ulwkm+eLmnifKbwkezEz/H39fANfLYl/KWy7AFhXnQd
-        DEtoLQAAAABJRU5ErkJggg==
-</value>
-  </data>
-  <data name="zurueck.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="zurueck.Location" type="System.Drawing.Point, System.Drawing">
-    <value>271, 10</value>
-  </data>
-  <data name="zurueck.ShowHelp" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="zurueck.Size" type="System.Drawing.Size, System.Drawing">
-    <value>22, 19</value>
-  </data>
-  <data name="zurueck.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="zurueck.ToolTip" xml:space="preserve">
-    <value>Änderungen zurück setzen</value>
-  </data>
-  <data name="&gt;&gt;zurueck.Name" xml:space="preserve">
-    <value>zurueck</value>
-  </data>
-  <data name="&gt;&gt;zurueck.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;zurueck.Parent" xml:space="preserve">
-    <value>tab_bestellung</value>
-  </data>
-  <data name="&gt;&gt;zurueck.ZOrder" xml:space="preserve">
-    <value>9</value>
-  </data>
-  <data name="saveAenderungen.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29m
-        dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAACsSURBVDhPnZNRCsIwEAUDvZlfvVlB8Dx+9UiCN9Ad
-        ydu+prWNDgx52XSD4KYEQzgRjDl8fZEzoIfecg05cNomvFTJwHojPOvGUZMrlFnp3XwAqrlCOevtB6Ca
-        O1bJoPoSjHuoeitnoH0Gbu9Fv2R1wb/uFn8xA/9xL5qH1QVwNIFSk6j9EuraI2TeK54JmX2UVTwTWB8E
-        HoQXewTWz2PiSfIi4WgCpSYxesrwBjTZs3EhGb7+AAAAAElFTkSuQmCC
-</value>
-  </data>
-  <data name="saveAenderungen.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="saveAenderungen.Location" type="System.Drawing.Point, System.Drawing">
-    <value>243, 10</value>
-  </data>
-  <data name="saveAenderungen.ShowHelp" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="saveAenderungen.Size" type="System.Drawing.Size, System.Drawing">
-    <value>22, 19</value>
-  </data>
-  <data name="saveAenderungen.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="saveAenderungen.ToolTip" xml:space="preserve">
-    <value>Änderungen speichern</value>
-  </data>
-  <data name="&gt;&gt;saveAenderungen.Name" xml:space="preserve">
-    <value>saveAenderungen</value>
-  </data>
-  <data name="&gt;&gt;saveAenderungen.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;saveAenderungen.Parent" xml:space="preserve">
-    <value>tab_bestellung</value>
-  </data>
-  <data name="&gt;&gt;saveAenderungen.ZOrder" xml:space="preserve">
-    <value>10</value>
-  </data>
-  <metadata name="kNr.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="kNr.HeaderText" xml:space="preserve">
-    <value>Nummer</value>
-  </data>
-  <data name="kNr.Width" type="System.Int32, mscorlib">
-    <value>50</value>
-  </data>
-  <metadata name="menge.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="menge.HeaderText" xml:space="preserve">
-    <value>Menge</value>
-  </data>
-  <data name="menge.Width" type="System.Int32, mscorlib">
-    <value>70</value>
-  </data>
-  <metadata name="eil.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="eil.HeaderText" xml:space="preserve">
-    <value>Eilbestellung</value>
-  </data>
-  <data name="eil.Width" type="System.Int32, mscorlib">
-    <value>70</value>
-  </data>
-  <metadata name="del.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="del.HeaderText" xml:space="preserve">
-    <value>Löschen</value>
-  </data>
-  <data name="del.Width" type="System.Int32, mscorlib">
-    <value>60</value>
-  </data>
-  <data name="dataGridViewBestellung.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 33</value>
-  </data>
-  <data name="dataGridViewBestellung.ShowHelp" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="dataGridViewBestellung.Size" type="System.Drawing.Size, System.Drawing">
-    <value>335, 305</value>
-  </data>
-  <data name="dataGridViewBestellung.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;dataGridViewBestellung.Name" xml:space="preserve">
-    <value>dataGridViewBestellung</value>
-  </data>
-  <data name="&gt;&gt;dataGridViewBestellung.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;dataGridViewBestellung.Parent" xml:space="preserve">
-    <value>tab_bestellung</value>
-  </data>
-  <data name="&gt;&gt;dataGridViewBestellung.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>6</value>
   </data>
   <data name="tab_bestellung.Location" type="System.Drawing.Point, System.Drawing">
     <value>4, 22</value>
   </data>
-  <data name="tab_bestellung.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 3, 3, 3</value>
-  </data>
   <data name="tab_bestellung.ShowHelp" type="System.Boolean, mscorlib">
-    <value>True</value>
+    <value>False</value>
   </data>
   <data name="tab_bestellung.Size" type="System.Drawing.Size, System.Drawing">
-    <value>865, 344</value>
+    <value>865, 469</value>
   </data>
   <data name="tab_bestellung.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
+    <value>3</value>
   </data>
   <data name="tab_bestellung.Text" xml:space="preserve">
-    <value>Liste Bestellung/Direktverkauf</value>
+    <value>Direktverkauf</value>
   </data>
   <data name="&gt;&gt;tab_bestellung.Name" xml:space="preserve">
     <value>tab_bestellung</value>
@@ -20958,36 +20912,36 @@ Reserve</value>
     <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;tab_bestellung.Parent" xml:space="preserve">
-    <value>tab2</value>
+    <value>Bestellungen</value>
   </data>
   <data name="&gt;&gt;tab_bestellung.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
-  <data name="tab2.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="Bestellungen.Location" type="System.Drawing.Point, System.Drawing">
     <value>5, 6</value>
   </data>
-  <data name="tab2.ShowHelp" type="System.Boolean, mscorlib">
+  <data name="Bestellungen.ShowHelp" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="tab2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>873, 370</value>
+  <data name="Bestellungen.Size" type="System.Drawing.Size, System.Drawing">
+    <value>873, 495</value>
   </data>
-  <data name="tab2.TabIndex" type="System.Int32, mscorlib">
+  <data name="Bestellungen.TabIndex" type="System.Int32, mscorlib">
     <value>59</value>
   </data>
-  <data name="tab2.Visible" type="System.Boolean, mscorlib">
+  <data name="Bestellungen.Visible" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <data name="&gt;&gt;tab2.Name" xml:space="preserve">
-    <value>tab2</value>
+  <data name="&gt;&gt;Bestellungen.Name" xml:space="preserve">
+    <value>Bestellungen</value>
   </data>
-  <data name="&gt;&gt;tab2.Type" xml:space="preserve">
+  <data name="&gt;&gt;Bestellungen.Type" xml:space="preserve">
     <value>System.Windows.Forms.TabControl, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;tab2.Parent" xml:space="preserve">
+  <data name="&gt;&gt;Bestellungen.Parent" xml:space="preserve">
     <value>tab_bestellverwaltung</value>
   </data>
-  <data name="&gt;&gt;tab2.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;Bestellungen.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <data name="tab_bestellverwaltung.Location" type="System.Drawing.Point, System.Drawing">
@@ -22331,6 +22285,9 @@ Reserve</value>
   <data name="&gt;&gt;tab_beenden.ZOrder" xml:space="preserve">
     <value>6</value>
   </data>
+  <data name="tab_statistik.AutoScroll" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
   <data name="header_statistik.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -22367,11 +22324,14 @@ Reserve</value>
   <data name="&gt;&gt;header_statistik.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <data name="chart_statistik.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Bottom</value>
+  </data>
   <data name="chart_statistik.Location" type="System.Drawing.Point, System.Drawing">
-    <value>10, 44</value>
+    <value>3, 56</value>
   </data>
   <data name="chart_statistik.Size" type="System.Drawing.Size, System.Drawing">
-    <value>865, 320</value>
+    <value>877, 450</value>
   </data>
   <data name="chart_statistik.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
@@ -22418,11 +22378,122 @@ Reserve</value>
   <data name="&gt;&gt;tab_statistik.ZOrder" xml:space="preserve">
     <value>7</value>
   </data>
+  <data name="label284.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label284.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 9.75pt, style=Bold</value>
+  </data>
+  <data name="label284.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label284.Location" type="System.Drawing.Point, System.Drawing">
+    <value>80, 0</value>
+  </data>
+  <data name="label284.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label284.Size" type="System.Drawing.Size, System.Drawing">
+    <value>107, 16</value>
+  </data>
+  <data name="label284.TabIndex" type="System.Int32, mscorlib">
+    <value>58</value>
+  </data>
+  <data name="label284.Text" xml:space="preserve">
+    <value>Diskontgrenze</value>
+  </data>
+  <data name="&gt;&gt;label284.Name" xml:space="preserve">
+    <value>label284</value>
+  </data>
+  <data name="&gt;&gt;label284.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label284.Parent" xml:space="preserve">
+    <value>panel9</value>
+  </data>
+  <data name="&gt;&gt;label284.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="label281.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label281.Location" type="System.Drawing.Point, System.Drawing">
+    <value>181, 277</value>
+  </data>
+  <data name="label281.Size" type="System.Drawing.Size, System.Drawing">
+    <value>15, 13</value>
+  </data>
+  <data name="label281.TabIndex" type="System.Int32, mscorlib">
+    <value>23</value>
+  </data>
+  <data name="label281.Text" xml:space="preserve">
+    <value>%</value>
+  </data>
+  <data name="&gt;&gt;label281.Name" xml:space="preserve">
+    <value>label281</value>
+  </data>
+  <data name="&gt;&gt;label281.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label281.Parent" xml:space="preserve">
+    <value>panel9</value>
+  </data>
+  <data name="&gt;&gt;label281.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="label280.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label280.Location" type="System.Drawing.Point, System.Drawing">
+    <value>43, 277</value>
+  </data>
+  <data name="label280.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 13</value>
+  </data>
+  <data name="label280.TabIndex" type="System.Int32, mscorlib">
+    <value>22</value>
+  </data>
+  <data name="label280.Text" xml:space="preserve">
+    <value>Diskontmenge</value>
+  </data>
+  <data name="&gt;&gt;label280.Name" xml:space="preserve">
+    <value>label280</value>
+  </data>
+  <data name="&gt;&gt;label280.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label280.Parent" xml:space="preserve">
+    <value>panel9</value>
+  </data>
+  <data name="&gt;&gt;label280.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="numericUpDown3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>136, 275</value>
+  </data>
+  <data name="numericUpDown3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>39, 20</value>
+  </data>
+  <data name="numericUpDown3.TabIndex" type="System.Int32, mscorlib">
+    <value>21</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown3.Name" xml:space="preserve">
+    <value>numericUpDown3</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown3.Parent" xml:space="preserve">
+    <value>panel9</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown3.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
   <data name="lbl_diskont.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="lbl_diskont.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1, 3</value>
+    <value>14, 148</value>
   </data>
   <data name="lbl_diskont.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 13</value>
@@ -22443,46 +22514,13 @@ Reserve</value>
     <value>panel9</value>
   </data>
   <data name="&gt;&gt;lbl_diskont.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="label280.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="label280.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="label280.Location" type="System.Drawing.Point, System.Drawing">
-    <value>233, 152</value>
-  </data>
-  <data name="label280.ShowHelp" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="label280.Size" type="System.Drawing.Size, System.Drawing">
-    <value>36, 13</value>
-  </data>
-  <data name="label280.TabIndex" type="System.Int32, mscorlib">
-    <value>13</value>
-  </data>
-  <data name="label280.Text" xml:space="preserve">
-    <value>100 %</value>
-  </data>
-  <data name="&gt;&gt;label280.Name" xml:space="preserve">
-    <value>label280</value>
-  </data>
-  <data name="&gt;&gt;label280.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label280.Parent" xml:space="preserve">
-    <value>panel9</value>
-  </data>
-  <data name="&gt;&gt;label280.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>4</value>
   </data>
   <data name="LabelDiskont.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="LabelDiskont.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 201</value>
+    <value>3, 32</value>
   </data>
   <data name="LabelDiskont.ShowHelp" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -22494,7 +22532,9 @@ Reserve</value>
     <value>19</value>
   </data>
   <data name="LabelDiskont.Text" xml:space="preserve">
-    <value>Diskontgrenze gibt an, bis zu welchem Preis immer Diskontmenge bestellt wird. Mengegrenze gibt an, ab welchem Preis immer die Mengenanzahl bestellt wird. Dazwischen verwendung des Prozentsatzes. Je niedriger desto unwahrscheinliche Verwendung Diskontmenge.</value>
+    <value>Diskontgrenze: Zu welchem Preis wird immer Diskontmenge bestellt.
+Mengegrenze:  Ab welchem Preis wird immer die Mengenanzahl bestellt.  
+Prozentsatz: Je niedriger desto unwahrscheinliche Verwendung Diskontmenge.</value>
   </data>
   <data name="&gt;&gt;LabelDiskont.Name" xml:space="preserve">
     <value>LabelDiskont</value>
@@ -22506,73 +22546,7 @@ Reserve</value>
     <value>panel9</value>
   </data>
   <data name="&gt;&gt;LabelDiskont.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="label281.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="label281.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="label281.Location" type="System.Drawing.Point, System.Drawing">
-    <value>120, 152</value>
-  </data>
-  <data name="label281.ShowHelp" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="label281.Size" type="System.Drawing.Size, System.Drawing">
-    <value>30, 13</value>
-  </data>
-  <data name="label281.TabIndex" type="System.Int32, mscorlib">
-    <value>12</value>
-  </data>
-  <data name="label281.Text" xml:space="preserve">
-    <value>50 %</value>
-  </data>
-  <data name="&gt;&gt;label281.Name" xml:space="preserve">
-    <value>label281</value>
-  </data>
-  <data name="&gt;&gt;label281.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label281.Parent" xml:space="preserve">
-    <value>panel9</value>
-  </data>
-  <data name="&gt;&gt;label281.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="label282.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="label282.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="label282.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 152</value>
-  </data>
-  <data name="label282.ShowHelp" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="label282.Size" type="System.Drawing.Size, System.Drawing">
-    <value>24, 13</value>
-  </data>
-  <data name="label282.TabIndex" type="System.Int32, mscorlib">
-    <value>11</value>
-  </data>
-  <data name="label282.Text" xml:space="preserve">
-    <value>0 %</value>
-  </data>
-  <data name="&gt;&gt;label282.Name" xml:space="preserve">
-    <value>label282</value>
-  </data>
-  <data name="&gt;&gt;label282.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label282.Parent" xml:space="preserve">
-    <value>panel9</value>
-  </data>
-  <data name="&gt;&gt;label282.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="label273.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -22581,7 +22555,7 @@ Reserve</value>
     <value>NoControl</value>
   </data>
   <data name="label273.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 103</value>
+    <value>17, 248</value>
   </data>
   <data name="label273.ShowHelp" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -22605,37 +22579,10 @@ Reserve</value>
     <value>panel9</value>
   </data>
   <data name="&gt;&gt;label273.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="trackBar1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="trackBar1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>-1, 119</value>
-  </data>
-  <data name="trackBar1.ShowHelp" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="trackBar1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>259, 45</value>
-  </data>
-  <data name="trackBar1.TabIndex" type="System.Int32, mscorlib">
-    <value>8</value>
-  </data>
-  <data name="&gt;&gt;trackBar1.Name" xml:space="preserve">
-    <value>trackBar1</value>
-  </data>
-  <data name="&gt;&gt;trackBar1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TrackBar, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;trackBar1.Parent" xml:space="preserve">
-    <value>panel9</value>
-  </data>
-  <data name="&gt;&gt;trackBar1.ZOrder" xml:space="preserve">
     <value>6</value>
   </data>
   <data name="mengeGrenze.Location" type="System.Drawing.Point, System.Drawing">
-    <value>123, 57</value>
+    <value>136, 202</value>
   </data>
   <data name="mengeGrenze.ShowHelp" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -22662,7 +22609,7 @@ Reserve</value>
     <value>NoControl</value>
   </data>
   <data name="diskSpeichern.Location" type="System.Drawing.Point, System.Drawing">
-    <value>7, 175</value>
+    <value>20, 320</value>
   </data>
   <data name="diskSpeichern.ShowHelp" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -22689,7 +22636,7 @@ Reserve</value>
     <value>8</value>
   </data>
   <data name="diskGrenze.Location" type="System.Drawing.Point, System.Drawing">
-    <value>123, 26</value>
+    <value>136, 171</value>
   </data>
   <data name="diskGrenze.ShowHelp" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -22712,106 +22659,6 @@ Reserve</value>
   <data name="&gt;&gt;diskGrenze.ZOrder" xml:space="preserve">
     <value>9</value>
   </data>
-  <data name="label277.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="label277.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="label277.Location" type="System.Drawing.Point, System.Drawing">
-    <value>54, 23</value>
-  </data>
-  <data name="label277.ShowHelp" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="label277.Size" type="System.Drawing.Size, System.Drawing">
-    <value>120, 13</value>
-  </data>
-  <data name="label277.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
-  <data name="label277.Text" xml:space="preserve">
-    <value>Diskont wurde geändert</value>
-  </data>
-  <data name="&gt;&gt;label277.Name" xml:space="preserve">
-    <value>label277</value>
-  </data>
-  <data name="&gt;&gt;label277.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label277.Parent" xml:space="preserve">
-    <value>panel6</value>
-  </data>
-  <data name="&gt;&gt;label277.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="pictureBox6.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29m
-        dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAF/SURBVFhHvZdBSixBEEQbvITgPdy69RKCt3TrVhC8
-        hOAN3GpGUTGEkZXtOFX2g8fveZ3d5WfGsXozHvq/I+7Cl/Drj+IaXEuGa1yHvHnFR+g3P1dcS/Aaa2HN
-        xlX4GnK4gud/8zm87eKYnfD1W4i1t8cefNDRmT1P/7MAx+xEZ7F2el8rdGZPx7vOYu3tUwKs0Jk9He86
-        i7V/BFjhc5WOd51tPYUCn6t0vOts6ykU+FzlTUhwzE50tvUUCnyu8inEpx/imJ3obOspFLyHPnuuuJb4
-        uRwK7sNLvg1xDa4lfj4FfQ9Xo58JmgLfw9X4Z4KmcLTDeKTDeKTDeKQp8O/5anx/QFP4j98Agnv7ejl0
-        Lt0DuriH7gn9fA6dmT2g63tCNYeO91lJ6il0vM9KUk+h431WknoKHe+zktSrTam2FRJtbVNabcu1rZBo
-        a9vy6sFE2wqJtvZgUj2a6eAKCV+fHs0AviL5Q5CZPaDre0KsNfzK10fnS/eAru8JZY1t+wZNvM4bkMX7
-        TgAAAABJRU5ErkJggg==
-</value>
-  </data>
-  <data name="pictureBox6.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="pictureBox6.Location" type="System.Drawing.Point, System.Drawing">
-    <value>11, 11</value>
-  </data>
-  <data name="pictureBox6.ShowHelp" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="pictureBox6.Size" type="System.Drawing.Size, System.Drawing">
-    <value>37, 35</value>
-  </data>
-  <data name="pictureBox6.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
-  <data name="&gt;&gt;pictureBox6.Name" xml:space="preserve">
-    <value>pictureBox6</value>
-  </data>
-  <data name="&gt;&gt;pictureBox6.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;pictureBox6.Parent" xml:space="preserve">
-    <value>panel6</value>
-  </data>
-  <data name="&gt;&gt;pictureBox6.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="panel6.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1, 290</value>
-  </data>
-  <data name="panel6.ShowHelp" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="panel6.Size" type="System.Drawing.Size, System.Drawing">
-    <value>267, 60</value>
-  </data>
-  <data name="panel6.TabIndex" type="System.Int32, mscorlib">
-    <value>10</value>
-  </data>
-  <data name="panel6.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;panel6.Name" xml:space="preserve">
-    <value>panel6</value>
-  </data>
-  <data name="&gt;&gt;panel6.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;panel6.Parent" xml:space="preserve">
-    <value>panel9</value>
-  </data>
-  <data name="&gt;&gt;panel6.ZOrder" xml:space="preserve">
-    <value>10</value>
-  </data>
   <data name="label276.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -22819,7 +22666,7 @@ Reserve</value>
     <value>NoControl</value>
   </data>
   <data name="label276.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 59</value>
+    <value>17, 204</value>
   </data>
   <data name="label276.ShowHelp" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -22843,7 +22690,7 @@ Reserve</value>
     <value>panel9</value>
   </data>
   <data name="&gt;&gt;label276.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>10</value>
   </data>
   <data name="label279.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -22852,7 +22699,7 @@ Reserve</value>
     <value>NoControl</value>
   </data>
   <data name="label279.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 28</value>
+    <value>17, 173</value>
   </data>
   <data name="label279.ShowHelp" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -22876,7 +22723,7 @@ Reserve</value>
     <value>panel9</value>
   </data>
   <data name="&gt;&gt;label279.ZOrder" xml:space="preserve">
-    <value>12</value>
+    <value>11</value>
   </data>
   <data name="panel9.Location" type="System.Drawing.Point, System.Drawing">
     <value>25, 26</value>
@@ -22899,11 +22746,70 @@ Reserve</value>
   <data name="&gt;&gt;panel9.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <data name="label277.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label277.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 9.75pt, style=Bold</value>
+  </data>
+  <data name="label277.Location" type="System.Drawing.Point, System.Drawing">
+    <value>55, 0</value>
+  </data>
+  <data name="label277.Size" type="System.Drawing.Size, System.Drawing">
+    <value>119, 16</value>
+  </data>
+  <data name="label277.TabIndex" type="System.Int32, mscorlib">
+    <value>56</value>
+  </data>
+  <data name="label277.Text" xml:space="preserve">
+    <value>Stundenplanung</value>
+  </data>
+  <data name="&gt;&gt;label277.Name" xml:space="preserve">
+    <value>label277</value>
+  </data>
+  <data name="&gt;&gt;label277.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label277.Parent" xml:space="preserve">
+    <value>panel8</value>
+  </data>
+  <data name="&gt;&gt;label277.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="label283.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label283.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 32</value>
+  </data>
+  <data name="label283.Size" type="System.Drawing.Size, System.Drawing">
+    <value>184, 39</value>
+  </data>
+  <data name="label283.TabIndex" type="System.Int32, mscorlib">
+    <value>55</value>
+  </data>
+  <data name="label283.Text" xml:space="preserve">
+    <value>Legen sie fest, ab wievielen Stunden 
+Arbeitszeit eine 2. bzw 3. Schicht 
+begonnen wird</value>
+  </data>
+  <data name="&gt;&gt;label283.Name" xml:space="preserve">
+    <value>label283</value>
+  </data>
+  <data name="&gt;&gt;label283.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label283.Parent" xml:space="preserve">
+    <value>panel8</value>
+  </data>
+  <data name="&gt;&gt;label283.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
   <data name="lbl_schichten.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="lbl_schichten.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 4</value>
+    <value>4, 110</value>
   </data>
   <data name="lbl_schichten.Size" type="System.Drawing.Size, System.Drawing">
     <value>55, 13</value>
@@ -22924,10 +22830,10 @@ Reserve</value>
     <value>panel8</value>
   </data>
   <data name="&gt;&gt;lbl_schichten.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>2</value>
   </data>
   <data name="numericUpDown2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>123, 53</value>
+    <value>123, 159</value>
   </data>
   <data name="numericUpDown2.ShowHelp" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -22948,40 +22854,10 @@ Reserve</value>
     <value>panel8</value>
   </data>
   <data name="&gt;&gt;numericUpDown2.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="LabelSchichten.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="LabelSchichten.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 114</value>
-  </data>
-  <data name="LabelSchichten.ShowHelp" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="LabelSchichten.Size" type="System.Drawing.Size, System.Drawing">
-    <value>217, 79</value>
-  </data>
-  <data name="LabelSchichten.TabIndex" type="System.Int32, mscorlib">
-    <value>53</value>
-  </data>
-  <data name="LabelSchichten.Text" xml:space="preserve">
-    <value>Hier köennen die Verwendung der 2. und 3. Schicht eingestellt werden. Dabei können die Stunden angegeben werden, ab denen eine 2. bzw. 3. Schicht verwendet wird.</value>
-  </data>
-  <data name="&gt;&gt;LabelSchichten.Name" xml:space="preserve">
-    <value>LabelSchichten</value>
-  </data>
-  <data name="&gt;&gt;LabelSchichten.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;LabelSchichten.Parent" xml:space="preserve">
-    <value>panel8</value>
-  </data>
-  <data name="&gt;&gt;LabelSchichten.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="numericUpDown1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>123, 22</value>
+    <value>123, 128</value>
   </data>
   <data name="numericUpDown1.ShowHelp" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -23002,113 +22878,13 @@ Reserve</value>
     <value>panel8</value>
   </data>
   <data name="&gt;&gt;numericUpDown1.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="label278.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="label278.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="label278.Location" type="System.Drawing.Point, System.Drawing">
-    <value>54, 29</value>
-  </data>
-  <data name="label278.ShowHelp" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="label278.Size" type="System.Drawing.Size, System.Drawing">
-    <value>132, 13</value>
-  </data>
-  <data name="label278.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
-  <data name="label278.Text" xml:space="preserve">
-    <value>Schichten wurde geändert</value>
-  </data>
-  <data name="&gt;&gt;label278.Name" xml:space="preserve">
-    <value>label278</value>
-  </data>
-  <data name="&gt;&gt;label278.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label278.Parent" xml:space="preserve">
-    <value>panel4</value>
-  </data>
-  <data name="&gt;&gt;label278.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="pictureBox7.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29m
-        dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAF/SURBVFhHvZdBSixBEEQbvITgPdy69RKCt3TrVhC8
-        hOAN3GpGUTGEkZXtOFX2g8fveZ3d5WfGsXozHvq/I+7Cl/Drj+IaXEuGa1yHvHnFR+g3P1dcS/Aaa2HN
-        xlX4GnK4gud/8zm87eKYnfD1W4i1t8cefNDRmT1P/7MAx+xEZ7F2el8rdGZPx7vOYu3tUwKs0Jk9He86
-        i7V/BFjhc5WOd51tPYUCn6t0vOts6ykU+FzlTUhwzE50tvUUCnyu8inEpx/imJ3obOspFLyHPnuuuJb4
-        uRwK7sNLvg1xDa4lfj4FfQ9Xo58JmgLfw9X4Z4KmcLTDeKTDeKTDeKQp8O/5anx/QFP4j98Agnv7ejl0
-        Lt0DuriH7gn9fA6dmT2g63tCNYeO91lJ6il0vM9KUk+h431WknoKHe+zktSrTam2FRJtbVNabcu1rZBo
-        a9vy6sFE2wqJtvZgUj2a6eAKCV+fHs0AviL5Q5CZPaDre0KsNfzK10fnS/eAru8JZY1t+wZNvM4bkMX7
-        TgAAAABJRU5ErkJggg==
-</value>
-  </data>
-  <data name="pictureBox7.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="pictureBox7.Location" type="System.Drawing.Point, System.Drawing">
-    <value>11, 11</value>
-  </data>
-  <data name="pictureBox7.ShowHelp" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="pictureBox7.Size" type="System.Drawing.Size, System.Drawing">
-    <value>37, 35</value>
-  </data>
-  <data name="pictureBox7.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
-  <data name="&gt;&gt;pictureBox7.Name" xml:space="preserve">
-    <value>pictureBox7</value>
-  </data>
-  <data name="&gt;&gt;pictureBox7.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;pictureBox7.Parent" xml:space="preserve">
-    <value>panel4</value>
-  </data>
-  <data name="&gt;&gt;pictureBox7.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="panel4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>7, 205</value>
-  </data>
-  <data name="panel4.ShowHelp" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="panel4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>214, 60</value>
-  </data>
-  <data name="panel4.TabIndex" type="System.Int32, mscorlib">
-    <value>52</value>
-  </data>
-  <data name="panel4.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;panel4.Name" xml:space="preserve">
-    <value>panel4</value>
-  </data>
-  <data name="&gt;&gt;panel4.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;panel4.Parent" xml:space="preserve">
-    <value>panel8</value>
-  </data>
-  <data name="&gt;&gt;panel4.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
   <data name="lbl_3schicht.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="lbl_3schicht.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 55</value>
+    <value>4, 161</value>
   </data>
   <data name="lbl_3schicht.ShowHelp" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -23138,7 +22914,7 @@ Reserve</value>
     <value>NoControl</value>
   </data>
   <data name="btn_schicht_save.Location" type="System.Drawing.Point, System.Drawing">
-    <value>7, 81</value>
+    <value>7, 187</value>
   </data>
   <data name="btn_schicht_save.ShowHelp" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -23168,7 +22944,7 @@ Reserve</value>
     <value>NoControl</value>
   </data>
   <data name="lbl_2schicht.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 24</value>
+    <value>4, 130</value>
   </data>
   <data name="lbl_2schicht.ShowHelp" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -23215,6 +22991,42 @@ Reserve</value>
   <data name="&gt;&gt;panel8.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
+  <data name="label286.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label286.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 9.75pt, style=Bold</value>
+  </data>
+  <data name="label286.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label286.Location" type="System.Drawing.Point, System.Drawing">
+    <value>55, 4</value>
+  </data>
+  <data name="label286.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label286.Size" type="System.Drawing.Size, System.Drawing">
+    <value>118, 16</value>
+  </data>
+  <data name="label286.TabIndex" type="System.Int32, mscorlib">
+    <value>59</value>
+  </data>
+  <data name="label286.Text" xml:space="preserve">
+    <value>Sprache ändern</value>
+  </data>
+  <data name="&gt;&gt;label286.Name" xml:space="preserve">
+    <value>label286</value>
+  </data>
+  <data name="&gt;&gt;label286.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label286.Parent" xml:space="preserve">
+    <value>panel7</value>
+  </data>
+  <data name="&gt;&gt;label286.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="btn_change_language.Location" type="System.Drawing.Point, System.Drawing">
     <value>7, 50</value>
   </data>
@@ -23237,33 +23049,6 @@ Reserve</value>
     <value>panel7</value>
   </data>
   <data name="&gt;&gt;btn_change_language.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="lbl_language.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="lbl_language.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 4</value>
-  </data>
-  <data name="lbl_language.Size" type="System.Drawing.Size, System.Drawing">
-    <value>83, 13</value>
-  </data>
-  <data name="lbl_language.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
-  <data name="lbl_language.Text" xml:space="preserve">
-    <value>Sprache ändern</value>
-  </data>
-  <data name="&gt;&gt;lbl_language.Name" xml:space="preserve">
-    <value>lbl_language</value>
-  </data>
-  <data name="&gt;&gt;lbl_language.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lbl_language.Parent" xml:space="preserve">
-    <value>panel7</value>
-  </data>
-  <data name="&gt;&gt;lbl_language.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
   <data name="einstellungen_sprache_englisch.AutoSize" type="System.Boolean, mscorlib">
@@ -23353,6 +23138,42 @@ Reserve</value>
   <data name="&gt;&gt;panel7.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
+  <data name="label285.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label285.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 9.75pt, style=Bold</value>
+  </data>
+  <data name="label285.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label285.Location" type="System.Drawing.Point, System.Drawing">
+    <value>73, 4</value>
+  </data>
+  <data name="label285.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label285.Size" type="System.Drawing.Size, System.Drawing">
+    <value>62, 16</value>
+  </data>
+  <data name="label285.TabIndex" type="System.Int32, mscorlib">
+    <value>59</value>
+  </data>
+  <data name="label285.Text" xml:space="preserve">
+    <value>Support</value>
+  </data>
+  <data name="&gt;&gt;label285.Name" xml:space="preserve">
+    <value>label285</value>
+  </data>
+  <data name="&gt;&gt;label285.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label285.Parent" xml:space="preserve">
+    <value>panel5</value>
+  </data>
+  <data name="&gt;&gt;label285.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="einstellungen_button3.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
@@ -23381,33 +23202,6 @@ Reserve</value>
     <value>panel5</value>
   </data>
   <data name="&gt;&gt;einstellungen_button3.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="lbl_support.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="lbl_support.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 4</value>
-  </data>
-  <data name="lbl_support.Size" type="System.Drawing.Size, System.Drawing">
-    <value>44, 13</value>
-  </data>
-  <data name="lbl_support.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="lbl_support.Text" xml:space="preserve">
-    <value>Support</value>
-  </data>
-  <data name="&gt;&gt;lbl_support.Name" xml:space="preserve">
-    <value>lbl_support</value>
-  </data>
-  <data name="&gt;&gt;lbl_support.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lbl_support.Parent" xml:space="preserve">
-    <value>panel5</value>
-  </data>
-  <data name="&gt;&gt;lbl_support.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
   <data name="einstellungen_button2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
@@ -23479,6 +23273,9 @@ Reserve</value>
   <data name="panel5.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
   </data>
+  <data name="panel5.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="&gt;&gt;panel5.Name" xml:space="preserve">
     <value>panel5</value>
   </data>
@@ -23494,11 +23291,78 @@ Reserve</value>
   <data name="panel_abweichung.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
   </data>
+  <data name="label278.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label278.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 9.75pt, style=Bold</value>
+  </data>
+  <data name="label278.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label278.Location" type="System.Drawing.Point, System.Drawing">
+    <value>55, -1</value>
+  </data>
+  <data name="label278.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label278.Size" type="System.Drawing.Size, System.Drawing">
+    <value>116, 16</value>
+  </data>
+  <data name="label278.TabIndex" type="System.Int32, mscorlib">
+    <value>57</value>
+  </data>
+  <data name="label278.Text" xml:space="preserve">
+    <value>Risikoverhalten</value>
+  </data>
+  <data name="&gt;&gt;label278.Name" xml:space="preserve">
+    <value>label278</value>
+  </data>
+  <data name="&gt;&gt;label278.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label278.Parent" xml:space="preserve">
+    <value>panel_abweichung</value>
+  </data>
+  <data name="&gt;&gt;label278.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="label282.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label282.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 32</value>
+  </data>
+  <data name="label282.Size" type="System.Drawing.Size, System.Drawing">
+    <value>185, 65</value>
+  </data>
+  <data name="label282.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="label282.Text" xml:space="preserve">
+    <value>Das Risikoverhalten bestimmt 
+die klakulierte Lieferzeitabweichung. 
+Risikoavers = maximale Abweichung. 
+Neutral = mittlere Abweichung. 
+Afin = keine Abweichung.</value>
+  </data>
+  <data name="&gt;&gt;label282.Name" xml:space="preserve">
+    <value>label282</value>
+  </data>
+  <data name="&gt;&gt;label282.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label282.Parent" xml:space="preserve">
+    <value>panel_abweichung</value>
+  </data>
+  <data name="&gt;&gt;label282.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
   <data name="lbl_risk_preferences.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="lbl_risk_preferences.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 3</value>
+    <value>4, 109</value>
   </data>
   <data name="lbl_risk_preferences.Size" type="System.Drawing.Size, System.Drawing">
     <value>80, 13</value>
@@ -23519,13 +23383,13 @@ Reserve</value>
     <value>panel_abweichung</value>
   </data>
   <data name="&gt;&gt;lbl_risk_preferences.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>2</value>
   </data>
   <data name="radio_risk_afin.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="radio_risk_afin.Location" type="System.Drawing.Point, System.Drawing">
-    <value>140, 36</value>
+    <value>141, 142</value>
   </data>
   <data name="radio_risk_afin.Size" type="System.Drawing.Size, System.Drawing">
     <value>42, 17</value>
@@ -23546,13 +23410,13 @@ Reserve</value>
     <value>panel_abweichung</value>
   </data>
   <data name="&gt;&gt;radio_risk_afin.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>3</value>
   </data>
   <data name="radio_risk_neutral.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="radio_risk_neutral.Location" type="System.Drawing.Point, System.Drawing">
-    <value>77, 36</value>
+    <value>78, 142</value>
   </data>
   <data name="radio_risk_neutral.Size" type="System.Drawing.Size, System.Drawing">
     <value>57, 17</value>
@@ -23573,13 +23437,13 @@ Reserve</value>
     <value>panel_abweichung</value>
   </data>
   <data name="&gt;&gt;radio_risk_neutral.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>4</value>
   </data>
   <data name="radio_risk_avers.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="radio_risk_avers.Location" type="System.Drawing.Point, System.Drawing">
-    <value>20, 36</value>
+    <value>21, 142</value>
   </data>
   <data name="radio_risk_avers.Size" type="System.Drawing.Size, System.Drawing">
     <value>51, 17</value>
@@ -23600,143 +23464,13 @@ Reserve</value>
     <value>panel_abweichung</value>
   </data>
   <data name="&gt;&gt;radio_risk_avers.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="LabelAbweichung.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="LabelAbweichung.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 113</value>
-  </data>
-  <data name="LabelAbweichung.ShowHelp" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="LabelAbweichung.Size" type="System.Drawing.Size, System.Drawing">
-    <value>218, 69</value>
-  </data>
-  <data name="LabelAbweichung.TabIndex" type="System.Int32, mscorlib">
-    <value>8</value>
-  </data>
-  <data name="LabelAbweichung.Text" xml:space="preserve">
-    <value>Hier kann der Prozentsatz der verwendeten Abweichung angegeben werden. Der ausgewählte Prozentsatzt wird mit der Abweichung (Lieferdauer KTeile) multipliziert. 0 = keine, 100 = volle Abweichung</value>
-  </data>
-  <data name="&gt;&gt;LabelAbweichung.Name" xml:space="preserve">
-    <value>LabelAbweichung</value>
-  </data>
-  <data name="&gt;&gt;LabelAbweichung.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;LabelAbweichung.Parent" xml:space="preserve">
-    <value>panel_abweichung</value>
-  </data>
-  <data name="&gt;&gt;LabelAbweichung.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="lbl_info.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="lbl_info.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="lbl_info.Location" type="System.Drawing.Point, System.Drawing">
-    <value>54, 29</value>
-  </data>
-  <data name="lbl_info.ShowHelp" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="lbl_info.Size" type="System.Drawing.Size, System.Drawing">
-    <value>143, 13</value>
-  </data>
-  <data name="lbl_info.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
-  <data name="lbl_info.Text" xml:space="preserve">
-    <value>Abweichung wurde geändert</value>
-  </data>
-  <data name="&gt;&gt;lbl_info.Name" xml:space="preserve">
-    <value>lbl_info</value>
-  </data>
-  <data name="&gt;&gt;lbl_info.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lbl_info.Parent" xml:space="preserve">
-    <value>panel_change_risk_success</value>
-  </data>
-  <data name="&gt;&gt;lbl_info.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="pictureBox8.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29m
-        dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAF/SURBVFhHvZdBSixBEEQbvITgPdy69RKCt3TrVhC8
-        hOAN3GpGUTGEkZXtOFX2g8fveZ3d5WfGsXozHvq/I+7Cl/Drj+IaXEuGa1yHvHnFR+g3P1dcS/Aaa2HN
-        xlX4GnK4gud/8zm87eKYnfD1W4i1t8cefNDRmT1P/7MAx+xEZ7F2el8rdGZPx7vOYu3tUwKs0Jk9He86
-        i7V/BFjhc5WOd51tPYUCn6t0vOts6ykU+FzlTUhwzE50tvUUCnyu8inEpx/imJ3obOspFLyHPnuuuJb4
-        uRwK7sNLvg1xDa4lfj4FfQ9Xo58JmgLfw9X4Z4KmcLTDeKTDeKTDeKQp8O/5anx/QFP4j98Agnv7ejl0
-        Lt0DuriH7gn9fA6dmT2g63tCNYeO91lJ6il0vM9KUk+h431WknoKHe+zktSrTam2FRJtbVNabcu1rZBo
-        a9vy6sFE2wqJtvZgUj2a6eAKCV+fHs0AviL5Q5CZPaDre0KsNfzK10fnS/eAru8JZY1t+wZNvM4bkMX7
-        TgAAAABJRU5ErkJggg==
-</value>
-  </data>
-  <data name="pictureBox8.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="pictureBox8.Location" type="System.Drawing.Point, System.Drawing">
-    <value>11, 11</value>
-  </data>
-  <data name="pictureBox8.ShowHelp" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="pictureBox8.Size" type="System.Drawing.Size, System.Drawing">
-    <value>37, 35</value>
-  </data>
-  <data name="pictureBox8.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
-  <data name="&gt;&gt;pictureBox8.Name" xml:space="preserve">
-    <value>pictureBox8</value>
-  </data>
-  <data name="&gt;&gt;pictureBox8.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;pictureBox8.Parent" xml:space="preserve">
-    <value>panel_change_risk_success</value>
-  </data>
-  <data name="&gt;&gt;pictureBox8.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="panel_change_risk_success.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 204</value>
-  </data>
-  <data name="panel_change_risk_success.ShowHelp" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="panel_change_risk_success.Size" type="System.Drawing.Size, System.Drawing">
-    <value>220, 60</value>
-  </data>
-  <data name="panel_change_risk_success.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
-  </data>
-  <data name="panel_change_risk_success.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;panel_change_risk_success.Name" xml:space="preserve">
-    <value>panel_change_risk_success</value>
-  </data>
-  <data name="&gt;&gt;panel_change_risk_success.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;panel_change_risk_success.Parent" xml:space="preserve">
-    <value>panel_abweichung</value>
-  </data>
-  <data name="&gt;&gt;panel_change_risk_success.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
   <data name="btn_ok.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="btn_ok.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 81</value>
+    <value>4, 187</value>
   </data>
   <data name="btn_ok.ShowHelp" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -24095,7 +23829,7 @@ Reserve</value>
         AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
         LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
         ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAABS
-        CwAAAk1TRnQBSQFMAgEBAwEAAXgBBQF4AQUBEAEAARABAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
+        CwAAAk1TRnQBSQFMAgEBAwEAAcABBQHAAQUBEAEAARABAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
         AwABQAMAARADAAEBAQABCAYAAQQYAAGAAgABgAMAAoABAAGAAwABgAEAAYABAAKAAgADwAEAAcAB3AHA
         AQAB8AHKAaYBAAEzBQABMwEAATMBAAEzAQACMwIAAxYBAAMcAQADIgEAAykBAANVAQADTQEAA0IBAAM5
         AQABgAF8Af8BAAJQAf8BAAGTAQAB1gEAAf8B7AHMAQABxgHWAe8BAAHWAucBAAGQAakBrQIAAf8BMwMA
@@ -24394,7 +24128,7 @@ Reserve</value>
         AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
         LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
         ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAAAM
-        CAAAAk1TRnQBSQFMAgEBAgEAATgBAwE4AQMBEAEAARABAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
+        CAAAAk1TRnQBSQFMAgEBAgEAAYABAwGAAQMBEAEAARABAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
         AwABQAMAARADAAEBAQABCAYAAQQYAAGAAgABgAMAAoABAAGAAwABgAEAAYABAAKAAgADwAEAAcAB3AHA
         AQAB8AHKAaYBAAEzBQABMwEAATMBAAEzAQACMwIAAxYBAAMcAQADIgEAAykBAANVAQADTQEAA0IBAAM5
         AQABgAF8Af8BAAJQAf8BAAGTAQAB1gEAAf8B7AHMAQABxgHWAe8BAAHWAucBAAGQAakBrQIAAf8BMwMA
@@ -26518,6 +26252,48 @@ Reserve</value>
   <data name="&gt;&gt;ueber.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridViewImageColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="&gt;&gt;kNr.Name" xml:space="preserve">
+    <value>kNr</value>
+  </data>
+  <data name="&gt;&gt;kNr.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Bezeichnung.Name" xml:space="preserve">
+    <value>Bezeichnung</value>
+  </data>
+  <data name="&gt;&gt;Bezeichnung.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Lagerbestand.Name" xml:space="preserve">
+    <value>Lagerbestand</value>
+  </data>
+  <data name="&gt;&gt;Lagerbestand.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Lieferdauer.Name" xml:space="preserve">
+    <value>Lieferdauer</value>
+  </data>
+  <data name="&gt;&gt;Lieferdauer.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;menge.Name" xml:space="preserve">
+    <value>menge</value>
+  </data>
+  <data name="&gt;&gt;menge.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;eil.Name" xml:space="preserve">
+    <value>eil</value>
+  </data>
+  <data name="&gt;&gt;eil.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewCheckBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;del.Name" xml:space="preserve">
+    <value>del</value>
+  </data>
+  <data name="&gt;&gt;del.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewCheckBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="&gt;&gt;dataGridViewLinkColumn1.Name" xml:space="preserve">
     <value>dataGridViewLinkColumn1</value>
   </data>
@@ -26590,6 +26366,12 @@ Reserve</value>
   <data name="&gt;&gt;dataGridViewTextBoxColumn21.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="&gt;&gt;Trend.Name" xml:space="preserve">
+    <value>Trend</value>
+  </data>
+  <data name="&gt;&gt;Trend.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="&gt;&gt;knr2.Name" xml:space="preserve">
     <value>knr2</value>
   </data>
@@ -26618,30 +26400,6 @@ Reserve</value>
     <value>dataGridViewCheckBoxColumn2</value>
   </data>
   <data name="&gt;&gt;dataGridViewCheckBoxColumn2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewCheckBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;kNr.Name" xml:space="preserve">
-    <value>kNr</value>
-  </data>
-  <data name="&gt;&gt;kNr.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;menge.Name" xml:space="preserve">
-    <value>menge</value>
-  </data>
-  <data name="&gt;&gt;menge.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;eil.Name" xml:space="preserve">
-    <value>eil</value>
-  </data>
-  <data name="&gt;&gt;eil.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewCheckBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;del.Name" xml:space="preserve">
-    <value>del</value>
-  </data>
-  <data name="&gt;&gt;del.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridViewCheckBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;dataGridViewTextBoxColumn42.Name" xml:space="preserve">

@@ -148,7 +148,7 @@ Diese zeile wird ignoriert</value>
     <value>Eigenfertigte Teil N</value>
   </data>
   <data name="Fahrrad_Information_B" xml:space="preserve">
-    <value>B</value>
+    <value>Bestand</value>
   </data>
   <data name="Fahrrad_pictureBox3_Click_Kaufteil_N" xml:space="preserve">
     <value>Kaufteil N</value>
@@ -157,7 +157,7 @@ Diese zeile wird ignoriert</value>
     <value>kein Fehld darf null sein</value>
   </data>
   <data name="Fahrrad_Information_P" xml:space="preserve">
-    <value>P</value>
+    <value>Periode</value>
   </data>
   <data name="Fahrrad_XmlOeffnen_Fehlermeldung" xml:space="preserve">
     <value>Fehlermeldung</value>
@@ -177,5 +177,8 @@ Diese zeile wird ignoriert</value>
   </data>
   <data name="Down-Arrow-Icon1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Down-Arrow-Icon1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Fahrrad_Information_Trend" xml:space="preserve">
+    <value>Trend</value>
   </data>
 </root>
