@@ -93,16 +93,13 @@ namespace ToolFahrrad_v1.Design
                 credentials = format.Deserialize(eing) as Credentials;
                 eing.Close();
                 this.Get_Market_Place(credentials);
-                panel_password.Visible = false;
-                
             }
-            
             tabs.SelectedTab = tab_marktplatz;
         }
 
         public Credentials LoadCredentials()
         {
-            Credentials credentials = new Credentials();
+            Credentials credentials = new Credentials("","");
             Boolean exists = File.Exists(this.path + @"\userdata");
             if (File.Exists(this.path + @"\userdata"))
             {

@@ -2026,8 +2026,11 @@ namespace ToolFahrrad_v1.Design
         {
             this.path = System.Environment.GetEnvironmentVariable("LOCALAPPDATA") + @"\scm";
             BinaryFormatter format = new BinaryFormatter();
-            
 
+            if (txt_benutzername.Text.Equals("") || txt_passwort.Text.Equals(""))
+            {
+                return;
+            }
             if (Directory.Exists(path))
             {
             }
@@ -2043,7 +2046,6 @@ namespace ToolFahrrad_v1.Design
                 ausg.Close();
             }
             this.Get_Market_Place(credentials);
-            panel_password.Visible = false; 
         }
 
         private void MarketPlaceGrid_CellContentClick(object sender, DataGridViewCellEventArgs e)

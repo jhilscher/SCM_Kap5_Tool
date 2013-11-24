@@ -22,6 +22,7 @@ namespace ToolFahrrad_v1.Design
 
         public void Get_Market_Place(Credentials credentials)
         {
+            lbl_in_progress.Visible = true;
             String url = "http://www.iwi.hs-karlsruhe.de/scs/";
             try
             {
@@ -125,11 +126,15 @@ namespace ToolFahrrad_v1.Design
                 }
 
                 GetUrl(false, url, "logout", container);
+                lbl_in_progress.Visible = false;
 
+                panel_password.Visible = false;
+                panel_password2.Visible = false;
             }
             catch (Exception e)
             {
                 System.Windows.Forms.MessageBox.Show("oops, da ging wohl was schief: " + e.Message);
+                lbl_in_progress.Visible = false;
             }
 
 
