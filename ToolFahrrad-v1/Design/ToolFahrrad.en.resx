@@ -279,6 +279,26 @@
   <data name="s3.HeaderText" xml:space="preserve">
     <value>3nd tier</value>
   </data>
+    <data name="s3.HeaderText" xml:space="preserve">
+    <value>3nd tier</value>
+  </data>
+
+    <data name="tab_BestellungenAufgeben.Text" xml:space="preserve">
+    <value>Orders</value>
+  </data>
+  
+      <data name="Bezeichnung.HeaderText" xml:space="preserve">
+    <value>Description</value>
+  </data>
+        <data name="Lagerbestand.HeaderText" xml:space="preserve">
+    <value>Inventory</value>
+  </data>
+        <data name="Lieferdauer.HeaderText" xml:space="preserve">
+    <value>Delivery time</value>
+  </data>
+        <data name="label_header_kaufteile.Text" xml:space="preserve">
+    <value>Purchase parts</value>
+  </data>
   
 
 
