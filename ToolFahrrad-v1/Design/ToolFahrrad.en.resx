@@ -123,6 +123,21 @@
   <data name="tab_produktion.Text" xml:space="preserve">
     <value>Production planning</value>
   </data>
+
+  <data name="tab_marktplatz.Text" xml:space="preserve">
+    <value>Marketplace</value>
+  </data>
+  <data name="tab_beenden.Text" xml:space="preserve">
+    <value>Finish order</value>
+  </data>
+  <data name="tab_einstellungen.Text" xml:space="preserve">
+    <value>Settings</value>
+  </data>
+  <data name="tab_Statistik.Text" xml:space="preserve">
+    <value>Statistics</value>
+  </data>
+
+
   <data name="tab_arbeitzeit.Text" xml:space="preserve">
     <value>Capacity planning</value>
   </data>
@@ -242,6 +257,36 @@
   <data name="prognoseSpeichern.Text" xml:space="preserve">
     <value>Save</value>
   </data>
+  
+  
+  
+  
+  <data name="start_prognose_label_titel.Text" xml:space="preserve">
+    <value>Forecast</value>
+  </data>
+  <data name="start_prognose_label_produkte_title.Text" xml:space="preserve">
+    <value>prediction</value>
+  </data>
+  <data name="label1.Text" xml:space="preserve">
+    <value>buffer</value>
+  </data>
+  <data name="labeldragdropinfo.Text" xml:space="preserve">
+    <value>Please drag and drop your XML File onto this space</value>
+  </data>
+  <data name="s1.HeaderText" xml:space="preserve">
+    <value>2nd tier</value>
+  </data>
+  <data name="s3.HeaderText" xml:space="preserve">
+    <value>3nd tier</value>
+  </data>
+  
+
+
+
+
+
+
+
   <data name="prognoseSpeichern.ToolTip" xml:space="preserve">
     <value>save forecast</value>
   </data>
