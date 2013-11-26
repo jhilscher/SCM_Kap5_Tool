@@ -656,9 +656,15 @@ namespace ToolFahrrad_v1.Design
             if (_okXml) {
                 //toolAusfueren.Visible = true;
             }
-             start_prognose_label_successInfo.Visible = true;
 
-            GetInfo(_culInfo.Contains("de") ? "Prognose wurde gespeichert" : "Forecast has been saved");
+            if (_culInfo.Contains("de")) {
+                start_prognose_label_successInfo.Visible = true;
+                GetInfo("Prognose wurde gespeichert");
+            } else {
+                start_prognose_label_successInfo.Visible = true;
+                start_prognose_label_successInfo.Text = "Forecast successfully inserted";
+                GetInfo("Forecast has been saved");
+            }
         }
 
         /// <summary>
@@ -1153,8 +1159,10 @@ namespace ToolFahrrad_v1.Design
 //                    xmlOffenOK.Visible = true;
                     _okXml = true;
                     if (_okPrognose)
+                    {
 //                        toolAusfueren.Visible = true;
-                    GetInfo(_culInfo.Contains("de") ? "XML-Datei wurde importiert" : "XML-file is imported");
+                        GetInfo(_culInfo.Contains("de") ? "XML-Datei wurde importiert" : "XML-file is imported");
+                    }
                 }
                 else
                 {
@@ -1923,7 +1931,14 @@ namespace ToolFahrrad_v1.Design
                                     labeldragdropinfo.Font = new Font(labeldragdropinfo.Font, FontStyle.Bold);
                                     labeldragdropinfo.ForeColor = Color.Green;
 
-                                    GetInfo(_culInfo.Contains("de") ? "XML-Datei wurde importiert" : "XML-file is imported");
+                                    if (_culInfo.Contains("de")) {
+                                        labeldragdropinfo.Text = "XML wurde erfolgreich gespeichert.";
+                                        GetInfo("XML-Datei wurde importiert");
+                                    } else {
+                                        labeldragdropinfo.Text = "XML was successfully saved.";
+                                        GetInfo("XML-file is imported");
+                                    }
+
                                     //panelXML.Visible = true;
 
                                     _okXml = true;
