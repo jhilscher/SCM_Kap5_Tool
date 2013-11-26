@@ -1211,6 +1211,10 @@ namespace ToolFahrrad_v1.Design
         private void englischToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             ChangeLanguage("englisch");
+            dataGridViewTextBoxColumn14.HeaderText = "P(N)";
+            dataGridViewTextBoxColumn15.HeaderText = "P(N+1)";
+            dataGridViewTextBoxColumn16.HeaderText = "P(N+2)";
+            dataGridViewTextBoxColumn17.HeaderText = "P(N+3)";
             englischToolStripMenuItem1.Checked = true;
             deutschToolStripMenuItem1.Checked = false;
         }
@@ -2059,6 +2063,10 @@ namespace ToolFahrrad_v1.Design
             else 
             {
                 ChangeLanguage("englisch");
+                dataGridViewTextBoxColumn14.HeaderText = "P(N)";
+                dataGridViewTextBoxColumn15.HeaderText = "P(N+1)";
+                dataGridViewTextBoxColumn16.HeaderText = "P(N+2)";
+                dataGridViewTextBoxColumn17.HeaderText = "P(N+3)";
             }
         }
 

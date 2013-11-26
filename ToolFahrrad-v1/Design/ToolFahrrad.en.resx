@@ -133,7 +133,7 @@
   <data name="tab_einstellungen.Text" xml:space="preserve">
     <value>Settings</value>
   </data>
-  <data name="tab_Statistik.Text" xml:space="preserve">
+  <data name="tab_statistik.Text" xml:space="preserve">
     <value>Statistics</value>
   </data>
 
@@ -298,6 +298,111 @@
   </data>
         <data name="label_header_kaufteile.Text" xml:space="preserve">
     <value>Purchase parts</value>
+  </data>
+  
+   <data name="lbl_benutzername.Text" xml:space="preserve">
+    <value>Username</value>
+  </data> 
+    <data name="lbl_passwort.Text" xml:space="preserve">
+    <value>Password</value>
+  </data> 
+      <data name="btn_anmelden.Text" xml:space="preserve">
+    <value>Login</value>
+  </data> 
+     <data name="chk_save.Text" xml:space="preserve">
+    <value>save data?</value>
+  </data> 
+
+     <data name="lbl_Angebote.Text" xml:space="preserve">
+    <value>Offers</value>
+  </data> 
+       <data name="lbl_Gesuche.Text" xml:space="preserve">
+    <value>Looking for</value>
+  </data>  
+       <data name="lbl_eigene_Angebote.Text" xml:space="preserve">
+    <value>Own Offers</value>
+  </data> 
+       <data name="lbl_eigene_Gesuche.Text" xml:space="preserve">
+    <value>Looking for own</value>
+  </data> 
+   <data name="btn_reload_market.Text" xml:space="preserve">
+    <value>Refresh</value>
+  </data> 
+  
+     <data name="dataGridViewTextBoxColumn34.HeaderText" xml:space="preserve">
+    <value>Customer</value>
+  </data> 
+       <data name="dataGridViewTextBoxColumn35.HeaderText" xml:space="preserve">
+    <value>Article</value>
+  </data> 
+       <data name="dataGridViewTextBoxColumn36.HeaderText" xml:space="preserve">
+    <value>Quantity</value>
+  </data> 
+       <data name="dataGridViewTextBoxColumn37.HeaderText" xml:space="preserve">
+    <value>Price</value>
+  </data>   
+  
+  
+      <data name="dataGridViewTextBoxColumn38.HeaderText" xml:space="preserve">
+    <value>Seller</value>
+  </data> 
+       <data name="dataGridViewTextBoxColumn39.HeaderText" xml:space="preserve">
+    <value>Article</value>
+  </data> 
+       <data name="dataGridViewTextBoxColumn40.HeaderText" xml:space="preserve">
+    <value>Quantity</value>
+  </data> 
+       <data name="dataGridViewTextBoxColumn41.HeaderText" xml:space="preserve">
+    <value>Price</value>
+  </data>   
+  
+        <data name="dataGridViewTextBoxColumn42.HeaderText" xml:space="preserve">
+    <value>Costumer</value>
+  </data> 
+       <data name="dataGridViewTextBoxColumn43.HeaderText" xml:space="preserve">
+    <value>Article</value>
+  </data> 
+       <data name="dataGridViewTextBoxColumn44.HeaderText" xml:space="preserve">
+    <value>Quantity</value>
+  </data> 
+       <data name="dataGridViewTextBoxColumn45.HeaderText" xml:space="preserve">
+    <value>Price</value>
+  </data>   
+  
+<data name="action_eangebote.Text" xml:space="preserve">
+    <value>Delete</value>
+  </data>   
+  <data name="action_egesuche.Text" xml:space="preserve">
+    <value>Delete</value>
+  </data>   
+    
+  
+         <data name="verkäufer.HeaderText" xml:space="preserve">
+    <value>Seller</value>
+  </data> 
+           <data name="artikel.HeaderText" xml:space="preserve">
+    <value>Article</value>
+  </data> 
+           <data name="angebot_menge.HeaderText" xml:space="preserve">
+    <value>Quantity</value>
+  </data> 
+           <data name="preis.HeaderText" xml:space="preserve">
+    <value>Price</value>
+  </data> 
+  <data name="action_Angebote.Text" xml:space="preserve">
+    <value>ok</value>
+  </data> 
+  <data name="dataGridViewTextBoxColumn14.HeaderText" xml:space="preserve">
+    <value>P(N)</value>
+  </data>
+  <data name="dataGridViewTextBoxColumn15.HeaderText" xml:space="preserve">
+    <value>P(N+1)</value>
+  </data>
+  <data name="dataGridViewTextBoxColumn16.HeaderText" xml:space="preserve">
+    <value>P(N+2)</value>
+  </data>
+    <data name="dataGridViewTextBoxColumn17.HeaderText" xml:space="preserve">
+    <value>P(N+3)</value>
   </data>
   
 
