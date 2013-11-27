@@ -30,19 +30,19 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Fahrrad));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series7 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series8 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title2 = new System.Windows.Forms.DataVisualization.Charting.Title();
             this.tabs = new System.Windows.Forms.TabControl();
             this.tab_xml = new System.Windows.Forms.TabPage();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
@@ -839,6 +839,9 @@
             this.NavPanel = new System.Windows.Forms.Panel();
             this.nav_button_1 = new System.Windows.Forms.Button();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.label_mehrfachverwendung_p1 = new System.Windows.Forms.Label();
+            this.label_mehrfachverwendung_p2 = new System.Windows.Forms.Label();
+            this.label_mehrfachverwendung_p3 = new System.Windows.Forms.Label();
             this.tabs.SuspendLayout();
             this.tab_xml.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
@@ -1415,6 +1418,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.label_mehrfachverwendung_p1);
             this.panel1.Controls.Add(this.label91);
             this.panel1.Controls.Add(this.label90);
             this.panel1.Controls.Add(this.label89);
@@ -2201,7 +2205,7 @@
             // 
             // p1plus_18
             // 
-            this.p1plus_18.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.p1plus_18.BackColor = System.Drawing.Color.Khaki;
             this.p1plus_18.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p1plus_18, "p1plus_18");
             this.p1plus_18.Name = "p1plus_18";
@@ -2218,7 +2222,7 @@
             // 
             // p1ls_18
             // 
-            this.p1ls_18.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.p1ls_18.BackColor = System.Drawing.Color.White;
             this.p1ls_18.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p1ls_18, "p1ls_18");
             this.p1ls_18.Name = "p1ls_18";
@@ -2228,7 +2232,7 @@
             // 
             // p1iws_18
             // 
-            this.p1iws_18.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.p1iws_18.BackColor = System.Drawing.Color.White;
             this.p1iws_18.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p1iws_18, "p1iws_18");
             this.p1iws_18.Name = "p1iws_18";
@@ -2238,7 +2242,7 @@
             // 
             // p1ib_18
             // 
-            this.p1ib_18.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.p1ib_18.BackColor = System.Drawing.Color.White;
             this.p1ib_18.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p1ib_18, "p1ib_18");
             this.p1ib_18.Name = "p1ib_18";
@@ -2248,7 +2252,7 @@
             // 
             // p1pm_18
             // 
-            this.p1pm_18.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.p1pm_18.BackColor = System.Drawing.Color.White;
             this.p1pm_18.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p1pm_18, "p1pm_18");
             this.p1pm_18.Name = "p1pm_18";
@@ -2258,7 +2262,7 @@
             // 
             // p1vw_18
             // 
-            this.p1vw_18.BackColor = System.Drawing.Color.MistyRose;
+            this.p1vw_18.BackColor = System.Drawing.Color.LightCoral;
             this.p1vw_18.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p1vw_18, "p1vw_18");
             this.p1vw_18.Name = "p1vw_18";
@@ -2268,7 +2272,7 @@
             // 
             // p1plus_7
             // 
-            this.p1plus_7.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.p1plus_7.BackColor = System.Drawing.Color.Khaki;
             this.p1plus_7.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p1plus_7, "p1plus_7");
             this.p1plus_7.Name = "p1plus_7";
@@ -2285,7 +2289,7 @@
             // 
             // p1ls_7
             // 
-            this.p1ls_7.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.p1ls_7.BackColor = System.Drawing.Color.White;
             this.p1ls_7.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p1ls_7, "p1ls_7");
             this.p1ls_7.Name = "p1ls_7";
@@ -2295,7 +2299,7 @@
             // 
             // p1iws_7
             // 
-            this.p1iws_7.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.p1iws_7.BackColor = System.Drawing.Color.White;
             this.p1iws_7.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p1iws_7, "p1iws_7");
             this.p1iws_7.Name = "p1iws_7";
@@ -2305,7 +2309,7 @@
             // 
             // p1ib_7
             // 
-            this.p1ib_7.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.p1ib_7.BackColor = System.Drawing.Color.White;
             this.p1ib_7.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p1ib_7, "p1ib_7");
             this.p1ib_7.Name = "p1ib_7";
@@ -2315,7 +2319,7 @@
             // 
             // p1pm_7
             // 
-            this.p1pm_7.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.p1pm_7.BackColor = System.Drawing.Color.White;
             this.p1pm_7.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p1pm_7, "p1pm_7");
             this.p1pm_7.Name = "p1pm_7";
@@ -2325,7 +2329,7 @@
             // 
             // p1vw_7
             // 
-            this.p1vw_7.BackColor = System.Drawing.Color.MistyRose;
+            this.p1vw_7.BackColor = System.Drawing.Color.LightCoral;
             this.p1vw_7.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p1vw_7, "p1vw_7");
             this.p1vw_7.Name = "p1vw_7";
@@ -2335,7 +2339,7 @@
             // 
             // p1plus_13
             // 
-            this.p1plus_13.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.p1plus_13.BackColor = System.Drawing.Color.Khaki;
             this.p1plus_13.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p1plus_13, "p1plus_13");
             this.p1plus_13.Name = "p1plus_13";
@@ -2352,7 +2356,7 @@
             // 
             // p1ls_13
             // 
-            this.p1ls_13.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.p1ls_13.BackColor = System.Drawing.Color.White;
             this.p1ls_13.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p1ls_13, "p1ls_13");
             this.p1ls_13.Name = "p1ls_13";
@@ -2362,7 +2366,7 @@
             // 
             // p1iws_13
             // 
-            this.p1iws_13.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.p1iws_13.BackColor = System.Drawing.Color.White;
             this.p1iws_13.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p1iws_13, "p1iws_13");
             this.p1iws_13.Name = "p1iws_13";
@@ -2372,7 +2376,7 @@
             // 
             // p1ib_13
             // 
-            this.p1ib_13.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.p1ib_13.BackColor = System.Drawing.Color.White;
             this.p1ib_13.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p1ib_13, "p1ib_13");
             this.p1ib_13.Name = "p1ib_13";
@@ -2382,7 +2386,7 @@
             // 
             // p1pm_13
             // 
-            this.p1pm_13.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.p1pm_13.BackColor = System.Drawing.Color.White;
             this.p1pm_13.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p1pm_13, "p1pm_13");
             this.p1pm_13.Name = "p1pm_13";
@@ -2392,7 +2396,7 @@
             // 
             // p1vw_13
             // 
-            this.p1vw_13.BackColor = System.Drawing.Color.MistyRose;
+            this.p1vw_13.BackColor = System.Drawing.Color.LightCoral;
             this.p1vw_13.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p1vw_13, "p1vw_13");
             this.p1vw_13.Name = "p1vw_13";
@@ -2402,7 +2406,7 @@
             // 
             // p1plus_49
             // 
-            this.p1plus_49.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.p1plus_49.BackColor = System.Drawing.Color.Khaki;
             this.p1plus_49.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p1plus_49, "p1plus_49");
             this.p1plus_49.Name = "p1plus_49";
@@ -2419,7 +2423,7 @@
             // 
             // p1ls_49
             // 
-            this.p1ls_49.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.p1ls_49.BackColor = System.Drawing.Color.White;
             this.p1ls_49.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p1ls_49, "p1ls_49");
             this.p1ls_49.Name = "p1ls_49";
@@ -2429,7 +2433,7 @@
             // 
             // p1iws_49
             // 
-            this.p1iws_49.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.p1iws_49.BackColor = System.Drawing.Color.Khaki;
             this.p1iws_49.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p1iws_49, "p1iws_49");
             this.p1iws_49.Name = "p1iws_49";
@@ -2439,7 +2443,7 @@
             // 
             // p1ib_49
             // 
-            this.p1ib_49.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.p1ib_49.BackColor = System.Drawing.Color.White;
             this.p1ib_49.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p1ib_49, "p1ib_49");
             this.p1ib_49.Name = "p1ib_49";
@@ -2449,7 +2453,7 @@
             // 
             // p1pm_49
             // 
-            this.p1pm_49.BackColor = System.Drawing.Color.MistyRose;
+            this.p1pm_49.BackColor = System.Drawing.Color.LightCoral;
             this.p1pm_49.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p1pm_49, "p1pm_49");
             this.p1pm_49.Name = "p1pm_49";
@@ -2459,7 +2463,7 @@
             // 
             // p1vw_49
             // 
-            this.p1vw_49.BackColor = System.Drawing.Color.MistyRose;
+            this.p1vw_49.BackColor = System.Drawing.Color.LightCoral;
             this.p1vw_49.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p1vw_49, "p1vw_49");
             this.p1vw_49.Name = "p1vw_49";
@@ -2469,7 +2473,7 @@
             // 
             // p1plus_4
             // 
-            this.p1plus_4.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.p1plus_4.BackColor = System.Drawing.Color.Khaki;
             this.p1plus_4.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p1plus_4, "p1plus_4");
             this.p1plus_4.Name = "p1plus_4";
@@ -2486,7 +2490,7 @@
             // 
             // p1ls_4
             // 
-            this.p1ls_4.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.p1ls_4.BackColor = System.Drawing.Color.White;
             this.p1ls_4.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p1ls_4, "p1ls_4");
             this.p1ls_4.Name = "p1ls_4";
@@ -2496,7 +2500,7 @@
             // 
             // p1iws_4
             // 
-            this.p1iws_4.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.p1iws_4.BackColor = System.Drawing.Color.White;
             this.p1iws_4.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p1iws_4, "p1iws_4");
             this.p1iws_4.Name = "p1iws_4";
@@ -2506,7 +2510,7 @@
             // 
             // p1ib_4
             // 
-            this.p1ib_4.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.p1ib_4.BackColor = System.Drawing.Color.White;
             this.p1ib_4.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p1ib_4, "p1ib_4");
             this.p1ib_4.Name = "p1ib_4";
@@ -2516,7 +2520,7 @@
             // 
             // p1pm_4
             // 
-            this.p1pm_4.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.p1pm_4.BackColor = System.Drawing.Color.White;
             this.p1pm_4.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p1pm_4, "p1pm_4");
             this.p1pm_4.Name = "p1pm_4";
@@ -2526,7 +2530,7 @@
             // 
             // p1vw_4
             // 
-            this.p1vw_4.BackColor = System.Drawing.Color.MistyRose;
+            this.p1vw_4.BackColor = System.Drawing.Color.LightCoral;
             this.p1vw_4.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p1vw_4, "p1vw_4");
             this.p1vw_4.Name = "p1vw_4";
@@ -2536,7 +2540,7 @@
             // 
             // p1plus_10
             // 
-            this.p1plus_10.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.p1plus_10.BackColor = System.Drawing.Color.Khaki;
             this.p1plus_10.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p1plus_10, "p1plus_10");
             this.p1plus_10.Name = "p1plus_10";
@@ -2553,7 +2557,7 @@
             // 
             // p1ls_10
             // 
-            this.p1ls_10.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.p1ls_10.BackColor = System.Drawing.Color.White;
             this.p1ls_10.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p1ls_10, "p1ls_10");
             this.p1ls_10.Name = "p1ls_10";
@@ -2563,7 +2567,7 @@
             // 
             // p1iws_10
             // 
-            this.p1iws_10.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.p1iws_10.BackColor = System.Drawing.Color.White;
             this.p1iws_10.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p1iws_10, "p1iws_10");
             this.p1iws_10.Name = "p1iws_10";
@@ -2573,7 +2577,7 @@
             // 
             // p1ib_10
             // 
-            this.p1ib_10.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.p1ib_10.BackColor = System.Drawing.Color.White;
             this.p1ib_10.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p1ib_10, "p1ib_10");
             this.p1ib_10.Name = "p1ib_10";
@@ -2583,7 +2587,7 @@
             // 
             // p1pm_10
             // 
-            this.p1pm_10.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.p1pm_10.BackColor = System.Drawing.Color.White;
             this.p1pm_10.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p1pm_10, "p1pm_10");
             this.p1pm_10.Name = "p1pm_10";
@@ -2593,7 +2597,7 @@
             // 
             // p1vw_10
             // 
-            this.p1vw_10.BackColor = System.Drawing.Color.MistyRose;
+            this.p1vw_10.BackColor = System.Drawing.Color.LightCoral;
             this.p1vw_10.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p1vw_10, "p1vw_10");
             this.p1vw_10.Name = "p1vw_10";
@@ -2603,7 +2607,7 @@
             // 
             // p1plus_50
             // 
-            this.p1plus_50.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.p1plus_50.BackColor = System.Drawing.Color.Khaki;
             this.p1plus_50.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p1plus_50, "p1plus_50");
             this.p1plus_50.Name = "p1plus_50";
@@ -2620,7 +2624,7 @@
             // 
             // p1ls_50
             // 
-            this.p1ls_50.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.p1ls_50.BackColor = System.Drawing.Color.White;
             this.p1ls_50.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p1ls_50, "p1ls_50");
             this.p1ls_50.Name = "p1ls_50";
@@ -2630,7 +2634,7 @@
             // 
             // p1iws_50
             // 
-            this.p1iws_50.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.p1iws_50.BackColor = System.Drawing.Color.Khaki;
             this.p1iws_50.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p1iws_50, "p1iws_50");
             this.p1iws_50.Name = "p1iws_50";
@@ -2640,7 +2644,7 @@
             // 
             // p1ib_50
             // 
-            this.p1ib_50.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.p1ib_50.BackColor = System.Drawing.Color.White;
             this.p1ib_50.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p1ib_50, "p1ib_50");
             this.p1ib_50.Name = "p1ib_50";
@@ -2650,7 +2654,7 @@
             // 
             // p1pm_50
             // 
-            this.p1pm_50.BackColor = System.Drawing.Color.MistyRose;
+            this.p1pm_50.BackColor = System.Drawing.Color.LightCoral;
             this.p1pm_50.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p1pm_50, "p1pm_50");
             this.p1pm_50.Name = "p1pm_50";
@@ -2660,7 +2664,7 @@
             // 
             // p1vw_50
             // 
-            this.p1vw_50.BackColor = System.Drawing.Color.MistyRose;
+            this.p1vw_50.BackColor = System.Drawing.Color.LightCoral;
             this.p1vw_50.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p1vw_50, "p1vw_50");
             this.p1vw_50.Name = "p1vw_50";
@@ -2670,7 +2674,7 @@
             // 
             // p1plus_16
             // 
-            this.p1plus_16.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.p1plus_16.BackColor = System.Drawing.Color.Khaki;
             this.p1plus_16.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p1plus_16, "p1plus_16");
             this.p1plus_16.Name = "p1plus_16";
@@ -2687,7 +2691,7 @@
             // 
             // p1ls_16
             // 
-            this.p1ls_16.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.p1ls_16.BackColor = System.Drawing.Color.White;
             this.p1ls_16.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p1ls_16, "p1ls_16");
             this.p1ls_16.Name = "p1ls_16";
@@ -2697,7 +2701,7 @@
             // 
             // p1iws_16
             // 
-            this.p1iws_16.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.p1iws_16.BackColor = System.Drawing.Color.White;
             this.p1iws_16.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p1iws_16, "p1iws_16");
             this.p1iws_16.Name = "p1iws_16";
@@ -2707,7 +2711,7 @@
             // 
             // p1ib_16
             // 
-            this.p1ib_16.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.p1ib_16.BackColor = System.Drawing.Color.White;
             this.p1ib_16.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p1ib_16, "p1ib_16");
             this.p1ib_16.Name = "p1ib_16";
@@ -2717,7 +2721,7 @@
             // 
             // p1pm_16
             // 
-            this.p1pm_16.BackColor = System.Drawing.Color.LemonChiffon;
+            this.p1pm_16.BackColor = System.Drawing.Color.White;
             this.p1pm_16.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p1pm_16, "p1pm_16");
             this.p1pm_16.Name = "p1pm_16";
@@ -2727,7 +2731,7 @@
             // 
             // p1vw_16
             // 
-            this.p1vw_16.BackColor = System.Drawing.Color.MistyRose;
+            this.p1vw_16.BackColor = System.Drawing.Color.LightCoral;
             this.p1vw_16.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p1vw_16, "p1vw_16");
             this.p1vw_16.Name = "p1vw_16";
@@ -2737,7 +2741,7 @@
             // 
             // p1plus_17
             // 
-            this.p1plus_17.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.p1plus_17.BackColor = System.Drawing.Color.Khaki;
             this.p1plus_17.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p1plus_17, "p1plus_17");
             this.p1plus_17.Name = "p1plus_17";
@@ -2754,7 +2758,7 @@
             // 
             // p1ls_17
             // 
-            this.p1ls_17.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.p1ls_17.BackColor = System.Drawing.Color.White;
             this.p1ls_17.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p1ls_17, "p1ls_17");
             this.p1ls_17.Name = "p1ls_17";
@@ -2764,7 +2768,7 @@
             // 
             // p1iws_17
             // 
-            this.p1iws_17.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.p1iws_17.BackColor = System.Drawing.Color.White;
             this.p1iws_17.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p1iws_17, "p1iws_17");
             this.p1iws_17.Name = "p1iws_17";
@@ -2774,7 +2778,7 @@
             // 
             // p1ib_17
             // 
-            this.p1ib_17.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.p1ib_17.BackColor = System.Drawing.Color.White;
             this.p1ib_17.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p1ib_17, "p1ib_17");
             this.p1ib_17.Name = "p1ib_17";
@@ -2784,7 +2788,7 @@
             // 
             // p1pm_17
             // 
-            this.p1pm_17.BackColor = System.Drawing.Color.LemonChiffon;
+            this.p1pm_17.BackColor = System.Drawing.Color.White;
             this.p1pm_17.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p1pm_17, "p1pm_17");
             this.p1pm_17.Name = "p1pm_17";
@@ -2794,7 +2798,7 @@
             // 
             // p1vw_17
             // 
-            this.p1vw_17.BackColor = System.Drawing.Color.MistyRose;
+            this.p1vw_17.BackColor = System.Drawing.Color.LightCoral;
             this.p1vw_17.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p1vw_17, "p1vw_17");
             this.p1vw_17.Name = "p1vw_17";
@@ -2804,7 +2808,7 @@
             // 
             // p1plus_26
             // 
-            this.p1plus_26.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.p1plus_26.BackColor = System.Drawing.Color.Khaki;
             this.p1plus_26.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p1plus_26, "p1plus_26");
             this.p1plus_26.Name = "p1plus_26";
@@ -2821,7 +2825,7 @@
             // 
             // p1ls_26
             // 
-            this.p1ls_26.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.p1ls_26.BackColor = System.Drawing.Color.White;
             this.p1ls_26.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p1ls_26, "p1ls_26");
             this.p1ls_26.Name = "p1ls_26";
@@ -2831,7 +2835,7 @@
             // 
             // p1iws_26
             // 
-            this.p1iws_26.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.p1iws_26.BackColor = System.Drawing.Color.White;
             this.p1iws_26.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p1iws_26, "p1iws_26");
             this.p1iws_26.Name = "p1iws_26";
@@ -2841,7 +2845,7 @@
             // 
             // p1ib_26
             // 
-            this.p1ib_26.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.p1ib_26.BackColor = System.Drawing.Color.White;
             this.p1ib_26.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p1ib_26, "p1ib_26");
             this.p1ib_26.Name = "p1ib_26";
@@ -2851,7 +2855,7 @@
             // 
             // p1pm_26
             // 
-            this.p1pm_26.BackColor = System.Drawing.Color.LemonChiffon;
+            this.p1pm_26.BackColor = System.Drawing.Color.White;
             this.p1pm_26.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p1pm_26, "p1pm_26");
             this.p1pm_26.Name = "p1pm_26";
@@ -2861,7 +2865,7 @@
             // 
             // p1vw_26
             // 
-            this.p1vw_26.BackColor = System.Drawing.Color.MistyRose;
+            this.p1vw_26.BackColor = System.Drawing.Color.LightCoral;
             this.p1vw_26.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p1vw_26, "p1vw_26");
             this.p1vw_26.Name = "p1vw_26";
@@ -2871,7 +2875,7 @@
             // 
             // p1plus_51
             // 
-            this.p1plus_51.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.p1plus_51.BackColor = System.Drawing.Color.Khaki;
             this.p1plus_51.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p1plus_51, "p1plus_51");
             this.p1plus_51.Name = "p1plus_51";
@@ -2888,7 +2892,7 @@
             // 
             // p1ls_51
             // 
-            this.p1ls_51.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.p1ls_51.BackColor = System.Drawing.Color.White;
             this.p1ls_51.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p1ls_51, "p1ls_51");
             this.p1ls_51.Name = "p1ls_51";
@@ -2898,7 +2902,7 @@
             // 
             // p1iws_51
             // 
-            this.p1iws_51.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.p1iws_51.BackColor = System.Drawing.Color.Khaki;
             this.p1iws_51.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p1iws_51, "p1iws_51");
             this.p1iws_51.Name = "p1iws_51";
@@ -2908,7 +2912,7 @@
             // 
             // p1ib_51
             // 
-            this.p1ib_51.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.p1ib_51.BackColor = System.Drawing.Color.White;
             this.p1ib_51.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p1ib_51, "p1ib_51");
             this.p1ib_51.Name = "p1ib_51";
@@ -2918,7 +2922,7 @@
             // 
             // p1pm_51
             // 
-            this.p1pm_51.BackColor = System.Drawing.Color.MistyRose;
+            this.p1pm_51.BackColor = System.Drawing.Color.LightCoral;
             this.p1pm_51.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p1pm_51, "p1pm_51");
             this.p1pm_51.Name = "p1pm_51";
@@ -2928,7 +2932,7 @@
             // 
             // p1vw_51
             // 
-            this.p1vw_51.BackColor = System.Drawing.Color.MistyRose;
+            this.p1vw_51.BackColor = System.Drawing.Color.LightCoral;
             this.p1vw_51.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p1vw_51, "p1vw_51");
             this.p1vw_51.Name = "p1vw_51";
@@ -2945,7 +2949,7 @@
             // 
             // p1ls_0
             // 
-            this.p1ls_0.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.p1ls_0.BackColor = System.Drawing.Color.White;
             this.p1ls_0.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p1ls_0, "p1ls_0");
             this.p1ls_0.Name = "p1ls_0";
@@ -2955,7 +2959,7 @@
             // 
             // p1iws_0
             // 
-            this.p1iws_0.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.p1iws_0.BackColor = System.Drawing.Color.Khaki;
             this.p1iws_0.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p1iws_0, "p1iws_0");
             this.p1iws_0.Name = "p1iws_0";
@@ -2965,7 +2969,7 @@
             // 
             // p1ib_0
             // 
-            this.p1ib_0.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.p1ib_0.BackColor = System.Drawing.Color.White;
             this.p1ib_0.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p1ib_0, "p1ib_0");
             this.p1ib_0.Name = "p1ib_0";
@@ -2975,7 +2979,7 @@
             // 
             // p1pm_0
             // 
-            this.p1pm_0.BackColor = System.Drawing.Color.MistyRose;
+            this.p1pm_0.BackColor = System.Drawing.Color.LightCoral;
             this.p1pm_0.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p1pm_0, "p1pm_0");
             this.p1pm_0.Name = "p1pm_0";
@@ -2985,7 +2989,7 @@
             // 
             // p1vw_0
             // 
-            this.p1vw_0.BackColor = System.Drawing.Color.LightYellow;
+            this.p1vw_0.BackColor = System.Drawing.Color.White;
             this.p1vw_0.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             resources.ApplyResources(this.p1vw_0, "p1vw_0");
             this.p1vw_0.Name = "p1vw_0";
@@ -3011,6 +3015,7 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.label_mehrfachverwendung_p2);
             this.panel2.Controls.Add(this.p2ETAusfueren);
             this.panel2.Controls.Add(this.label92);
             this.panel2.Controls.Add(this.label93);
@@ -3807,7 +3812,7 @@
             // 
             // p2plus_19
             // 
-            this.p2plus_19.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.p2plus_19.BackColor = System.Drawing.Color.Khaki;
             this.p2plus_19.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p2plus_19, "p2plus_19");
             this.p2plus_19.Name = "p2plus_19";
@@ -3824,7 +3829,7 @@
             // 
             // p2ls_19
             // 
-            this.p2ls_19.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.p2ls_19.BackColor = System.Drawing.Color.White;
             this.p2ls_19.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p2ls_19, "p2ls_19");
             this.p2ls_19.Name = "p2ls_19";
@@ -3834,7 +3839,7 @@
             // 
             // p2iws_19
             // 
-            this.p2iws_19.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.p2iws_19.BackColor = System.Drawing.Color.White;
             this.p2iws_19.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p2iws_19, "p2iws_19");
             this.p2iws_19.Name = "p2iws_19";
@@ -3844,7 +3849,7 @@
             // 
             // p2ib_19
             // 
-            this.p2ib_19.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.p2ib_19.BackColor = System.Drawing.Color.White;
             this.p2ib_19.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p2ib_19, "p2ib_19");
             this.p2ib_19.Name = "p2ib_19";
@@ -3854,7 +3859,7 @@
             // 
             // p2pm_19
             // 
-            this.p2pm_19.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.p2pm_19.BackColor = System.Drawing.Color.White;
             this.p2pm_19.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p2pm_19, "p2pm_19");
             this.p2pm_19.Name = "p2pm_19";
@@ -3864,7 +3869,7 @@
             // 
             // p2vw_19
             // 
-            this.p2vw_19.BackColor = System.Drawing.Color.MistyRose;
+            this.p2vw_19.BackColor = System.Drawing.Color.LightCoral;
             this.p2vw_19.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p2vw_19, "p2vw_19");
             this.p2vw_19.Name = "p2vw_19";
@@ -3874,7 +3879,7 @@
             // 
             // p2plus_8
             // 
-            this.p2plus_8.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.p2plus_8.BackColor = System.Drawing.Color.Khaki;
             this.p2plus_8.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p2plus_8, "p2plus_8");
             this.p2plus_8.Name = "p2plus_8";
@@ -3891,7 +3896,7 @@
             // 
             // p2ls_8
             // 
-            this.p2ls_8.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.p2ls_8.BackColor = System.Drawing.Color.White;
             this.p2ls_8.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p2ls_8, "p2ls_8");
             this.p2ls_8.Name = "p2ls_8";
@@ -3901,7 +3906,7 @@
             // 
             // p2iws_8
             // 
-            this.p2iws_8.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.p2iws_8.BackColor = System.Drawing.Color.White;
             this.p2iws_8.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p2iws_8, "p2iws_8");
             this.p2iws_8.Name = "p2iws_8";
@@ -3911,7 +3916,7 @@
             // 
             // p2ib_8
             // 
-            this.p2ib_8.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.p2ib_8.BackColor = System.Drawing.Color.White;
             this.p2ib_8.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p2ib_8, "p2ib_8");
             this.p2ib_8.Name = "p2ib_8";
@@ -3921,7 +3926,7 @@
             // 
             // p2pm_8
             // 
-            this.p2pm_8.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.p2pm_8.BackColor = System.Drawing.Color.White;
             this.p2pm_8.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p2pm_8, "p2pm_8");
             this.p2pm_8.Name = "p2pm_8";
@@ -3931,7 +3936,7 @@
             // 
             // p2vw_8
             // 
-            this.p2vw_8.BackColor = System.Drawing.Color.MistyRose;
+            this.p2vw_8.BackColor = System.Drawing.Color.LightCoral;
             this.p2vw_8.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p2vw_8, "p2vw_8");
             this.p2vw_8.Name = "p2vw_8";
@@ -3941,7 +3946,7 @@
             // 
             // p2plus_14
             // 
-            this.p2plus_14.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.p2plus_14.BackColor = System.Drawing.Color.Khaki;
             this.p2plus_14.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p2plus_14, "p2plus_14");
             this.p2plus_14.Name = "p2plus_14";
@@ -3958,7 +3963,7 @@
             // 
             // p2ls_14
             // 
-            this.p2ls_14.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.p2ls_14.BackColor = System.Drawing.Color.White;
             this.p2ls_14.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p2ls_14, "p2ls_14");
             this.p2ls_14.Name = "p2ls_14";
@@ -3968,7 +3973,7 @@
             // 
             // p2iws_14
             // 
-            this.p2iws_14.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.p2iws_14.BackColor = System.Drawing.Color.White;
             this.p2iws_14.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p2iws_14, "p2iws_14");
             this.p2iws_14.Name = "p2iws_14";
@@ -3978,7 +3983,7 @@
             // 
             // p2ib_14
             // 
-            this.p2ib_14.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.p2ib_14.BackColor = System.Drawing.Color.White;
             this.p2ib_14.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p2ib_14, "p2ib_14");
             this.p2ib_14.Name = "p2ib_14";
@@ -3988,7 +3993,7 @@
             // 
             // p2pm_14
             // 
-            this.p2pm_14.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.p2pm_14.BackColor = System.Drawing.Color.White;
             this.p2pm_14.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p2pm_14, "p2pm_14");
             this.p2pm_14.Name = "p2pm_14";
@@ -3998,7 +4003,7 @@
             // 
             // p2vw_14
             // 
-            this.p2vw_14.BackColor = System.Drawing.Color.MistyRose;
+            this.p2vw_14.BackColor = System.Drawing.Color.LightCoral;
             this.p2vw_14.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p2vw_14, "p2vw_14");
             this.p2vw_14.Name = "p2vw_14";
@@ -4008,7 +4013,7 @@
             // 
             // p2plus_54
             // 
-            this.p2plus_54.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.p2plus_54.BackColor = System.Drawing.Color.Khaki;
             this.p2plus_54.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p2plus_54, "p2plus_54");
             this.p2plus_54.Name = "p2plus_54";
@@ -4025,7 +4030,7 @@
             // 
             // p2ls_54
             // 
-            this.p2ls_54.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.p2ls_54.BackColor = System.Drawing.Color.White;
             this.p2ls_54.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p2ls_54, "p2ls_54");
             this.p2ls_54.Name = "p2ls_54";
@@ -4035,7 +4040,7 @@
             // 
             // p2iws_54
             // 
-            this.p2iws_54.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.p2iws_54.BackColor = System.Drawing.Color.Khaki;
             this.p2iws_54.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p2iws_54, "p2iws_54");
             this.p2iws_54.Name = "p2iws_54";
@@ -4045,7 +4050,7 @@
             // 
             // p2ib_54
             // 
-            this.p2ib_54.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.p2ib_54.BackColor = System.Drawing.Color.White;
             this.p2ib_54.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p2ib_54, "p2ib_54");
             this.p2ib_54.Name = "p2ib_54";
@@ -4055,7 +4060,7 @@
             // 
             // p2pm_54
             // 
-            this.p2pm_54.BackColor = System.Drawing.Color.MistyRose;
+            this.p2pm_54.BackColor = System.Drawing.Color.LightCoral;
             this.p2pm_54.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p2pm_54, "p2pm_54");
             this.p2pm_54.Name = "p2pm_54";
@@ -4065,7 +4070,7 @@
             // 
             // p2vw_54
             // 
-            this.p2vw_54.BackColor = System.Drawing.Color.MistyRose;
+            this.p2vw_54.BackColor = System.Drawing.Color.LightCoral;
             this.p2vw_54.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p2vw_54, "p2vw_54");
             this.p2vw_54.Name = "p2vw_54";
@@ -4075,7 +4080,7 @@
             // 
             // p2plus_5
             // 
-            this.p2plus_5.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.p2plus_5.BackColor = System.Drawing.Color.Khaki;
             this.p2plus_5.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p2plus_5, "p2plus_5");
             this.p2plus_5.Name = "p2plus_5";
@@ -4092,7 +4097,7 @@
             // 
             // p2ls_5
             // 
-            this.p2ls_5.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.p2ls_5.BackColor = System.Drawing.Color.White;
             this.p2ls_5.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p2ls_5, "p2ls_5");
             this.p2ls_5.Name = "p2ls_5";
@@ -4102,7 +4107,7 @@
             // 
             // p2iws_5
             // 
-            this.p2iws_5.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.p2iws_5.BackColor = System.Drawing.Color.White;
             this.p2iws_5.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p2iws_5, "p2iws_5");
             this.p2iws_5.Name = "p2iws_5";
@@ -4112,7 +4117,7 @@
             // 
             // p2ib_5
             // 
-            this.p2ib_5.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.p2ib_5.BackColor = System.Drawing.Color.White;
             this.p2ib_5.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p2ib_5, "p2ib_5");
             this.p2ib_5.Name = "p2ib_5";
@@ -4122,7 +4127,7 @@
             // 
             // p2pm_5
             // 
-            this.p2pm_5.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.p2pm_5.BackColor = System.Drawing.Color.White;
             this.p2pm_5.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p2pm_5, "p2pm_5");
             this.p2pm_5.Name = "p2pm_5";
@@ -4132,7 +4137,7 @@
             // 
             // p2vw_5
             // 
-            this.p2vw_5.BackColor = System.Drawing.Color.MistyRose;
+            this.p2vw_5.BackColor = System.Drawing.Color.LightCoral;
             this.p2vw_5.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p2vw_5, "p2vw_5");
             this.p2vw_5.Name = "p2vw_5";
@@ -4142,7 +4147,7 @@
             // 
             // p2plus_11
             // 
-            this.p2plus_11.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.p2plus_11.BackColor = System.Drawing.Color.Khaki;
             this.p2plus_11.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p2plus_11, "p2plus_11");
             this.p2plus_11.Name = "p2plus_11";
@@ -4159,7 +4164,7 @@
             // 
             // p2ls_11
             // 
-            this.p2ls_11.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.p2ls_11.BackColor = System.Drawing.Color.White;
             this.p2ls_11.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p2ls_11, "p2ls_11");
             this.p2ls_11.Name = "p2ls_11";
@@ -4169,7 +4174,7 @@
             // 
             // p2iws_11
             // 
-            this.p2iws_11.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.p2iws_11.BackColor = System.Drawing.Color.White;
             this.p2iws_11.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p2iws_11, "p2iws_11");
             this.p2iws_11.Name = "p2iws_11";
@@ -4179,7 +4184,7 @@
             // 
             // p2ib_11
             // 
-            this.p2ib_11.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.p2ib_11.BackColor = System.Drawing.Color.White;
             this.p2ib_11.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p2ib_11, "p2ib_11");
             this.p2ib_11.Name = "p2ib_11";
@@ -4189,7 +4194,7 @@
             // 
             // p2pm_11
             // 
-            this.p2pm_11.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.p2pm_11.BackColor = System.Drawing.Color.White;
             this.p2pm_11.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p2pm_11, "p2pm_11");
             this.p2pm_11.Name = "p2pm_11";
@@ -4199,7 +4204,7 @@
             // 
             // p2vw_11
             // 
-            this.p2vw_11.BackColor = System.Drawing.Color.MistyRose;
+            this.p2vw_11.BackColor = System.Drawing.Color.LightCoral;
             this.p2vw_11.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p2vw_11, "p2vw_11");
             this.p2vw_11.Name = "p2vw_11";
@@ -4209,7 +4214,7 @@
             // 
             // p2plus_55
             // 
-            this.p2plus_55.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.p2plus_55.BackColor = System.Drawing.Color.Khaki;
             this.p2plus_55.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p2plus_55, "p2plus_55");
             this.p2plus_55.Name = "p2plus_55";
@@ -4226,7 +4231,7 @@
             // 
             // p2ls_55
             // 
-            this.p2ls_55.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.p2ls_55.BackColor = System.Drawing.Color.White;
             this.p2ls_55.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p2ls_55, "p2ls_55");
             this.p2ls_55.Name = "p2ls_55";
@@ -4236,7 +4241,7 @@
             // 
             // p2iws_55
             // 
-            this.p2iws_55.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.p2iws_55.BackColor = System.Drawing.Color.Khaki;
             this.p2iws_55.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p2iws_55, "p2iws_55");
             this.p2iws_55.Name = "p2iws_55";
@@ -4246,7 +4251,7 @@
             // 
             // p2ib_55
             // 
-            this.p2ib_55.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.p2ib_55.BackColor = System.Drawing.Color.White;
             this.p2ib_55.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p2ib_55, "p2ib_55");
             this.p2ib_55.Name = "p2ib_55";
@@ -4256,7 +4261,7 @@
             // 
             // p2pm_55
             // 
-            this.p2pm_55.BackColor = System.Drawing.Color.MistyRose;
+            this.p2pm_55.BackColor = System.Drawing.Color.LightCoral;
             this.p2pm_55.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p2pm_55, "p2pm_55");
             this.p2pm_55.Name = "p2pm_55";
@@ -4266,7 +4271,7 @@
             // 
             // p2vw_55
             // 
-            this.p2vw_55.BackColor = System.Drawing.Color.MistyRose;
+            this.p2vw_55.BackColor = System.Drawing.Color.LightCoral;
             this.p2vw_55.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p2vw_55, "p2vw_55");
             this.p2vw_55.Name = "p2vw_55";
@@ -4276,7 +4281,7 @@
             // 
             // p2plus_16
             // 
-            this.p2plus_16.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.p2plus_16.BackColor = System.Drawing.Color.Khaki;
             this.p2plus_16.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p2plus_16, "p2plus_16");
             this.p2plus_16.Name = "p2plus_16";
@@ -4323,7 +4328,7 @@
             // 
             // p2pm_16
             // 
-            this.p2pm_16.BackColor = System.Drawing.Color.LemonChiffon;
+            this.p2pm_16.BackColor = System.Drawing.Color.White;
             this.p2pm_16.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p2pm_16, "p2pm_16");
             this.p2pm_16.Name = "p2pm_16";
@@ -4333,7 +4338,7 @@
             // 
             // p2vw_16
             // 
-            this.p2vw_16.BackColor = System.Drawing.Color.MistyRose;
+            this.p2vw_16.BackColor = System.Drawing.Color.LightCoral;
             this.p2vw_16.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p2vw_16, "p2vw_16");
             this.p2vw_16.Name = "p2vw_16";
@@ -4343,7 +4348,7 @@
             // 
             // p2plus_17
             // 
-            this.p2plus_17.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.p2plus_17.BackColor = System.Drawing.Color.Khaki;
             this.p2plus_17.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p2plus_17, "p2plus_17");
             this.p2plus_17.Name = "p2plus_17";
@@ -4390,7 +4395,7 @@
             // 
             // p2pm_17
             // 
-            this.p2pm_17.BackColor = System.Drawing.Color.LemonChiffon;
+            this.p2pm_17.BackColor = System.Drawing.Color.White;
             this.p2pm_17.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p2pm_17, "p2pm_17");
             this.p2pm_17.Name = "p2pm_17";
@@ -4400,7 +4405,7 @@
             // 
             // p2vw_17
             // 
-            this.p2vw_17.BackColor = System.Drawing.Color.MistyRose;
+            this.p2vw_17.BackColor = System.Drawing.Color.LightCoral;
             this.p2vw_17.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p2vw_17, "p2vw_17");
             this.p2vw_17.Name = "p2vw_17";
@@ -4410,7 +4415,7 @@
             // 
             // p2plus_26
             // 
-            this.p2plus_26.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.p2plus_26.BackColor = System.Drawing.Color.Khaki;
             this.p2plus_26.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p2plus_26, "p2plus_26");
             this.p2plus_26.Name = "p2plus_26";
@@ -4457,7 +4462,7 @@
             // 
             // p2pm_26
             // 
-            this.p2pm_26.BackColor = System.Drawing.Color.LemonChiffon;
+            this.p2pm_26.BackColor = System.Drawing.Color.White;
             this.p2pm_26.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p2pm_26, "p2pm_26");
             this.p2pm_26.Name = "p2pm_26";
@@ -4467,7 +4472,7 @@
             // 
             // p2vw_26
             // 
-            this.p2vw_26.BackColor = System.Drawing.Color.MistyRose;
+            this.p2vw_26.BackColor = System.Drawing.Color.LightCoral;
             this.p2vw_26.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p2vw_26, "p2vw_26");
             this.p2vw_26.Name = "p2vw_26";
@@ -4477,7 +4482,7 @@
             // 
             // p2plus_56
             // 
-            this.p2plus_56.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.p2plus_56.BackColor = System.Drawing.Color.Khaki;
             this.p2plus_56.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p2plus_56, "p2plus_56");
             this.p2plus_56.Name = "p2plus_56";
@@ -4494,7 +4499,7 @@
             // 
             // p2ls_56
             // 
-            this.p2ls_56.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.p2ls_56.BackColor = System.Drawing.Color.White;
             this.p2ls_56.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p2ls_56, "p2ls_56");
             this.p2ls_56.Name = "p2ls_56";
@@ -4504,7 +4509,7 @@
             // 
             // p2iws_56
             // 
-            this.p2iws_56.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.p2iws_56.BackColor = System.Drawing.Color.Khaki;
             this.p2iws_56.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p2iws_56, "p2iws_56");
             this.p2iws_56.Name = "p2iws_56";
@@ -4514,7 +4519,7 @@
             // 
             // p2ib_56
             // 
-            this.p2ib_56.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.p2ib_56.BackColor = System.Drawing.Color.White;
             this.p2ib_56.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p2ib_56, "p2ib_56");
             this.p2ib_56.Name = "p2ib_56";
@@ -4524,7 +4529,7 @@
             // 
             // p2pm_56
             // 
-            this.p2pm_56.BackColor = System.Drawing.Color.MistyRose;
+            this.p2pm_56.BackColor = System.Drawing.Color.LightCoral;
             this.p2pm_56.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p2pm_56, "p2pm_56");
             this.p2pm_56.Name = "p2pm_56";
@@ -4534,7 +4539,7 @@
             // 
             // p2vw_56
             // 
-            this.p2vw_56.BackColor = System.Drawing.Color.MistyRose;
+            this.p2vw_56.BackColor = System.Drawing.Color.LightCoral;
             this.p2vw_56.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p2vw_56, "p2vw_56");
             this.p2vw_56.Name = "p2vw_56";
@@ -4551,7 +4556,7 @@
             // 
             // p2ls_0
             // 
-            this.p2ls_0.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.p2ls_0.BackColor = System.Drawing.Color.White;
             this.p2ls_0.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p2ls_0, "p2ls_0");
             this.p2ls_0.Name = "p2ls_0";
@@ -4561,7 +4566,7 @@
             // 
             // p2iws_0
             // 
-            this.p2iws_0.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.p2iws_0.BackColor = System.Drawing.Color.Khaki;
             this.p2iws_0.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p2iws_0, "p2iws_0");
             this.p2iws_0.Name = "p2iws_0";
@@ -4571,7 +4576,7 @@
             // 
             // p2ib_0
             // 
-            this.p2ib_0.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.p2ib_0.BackColor = System.Drawing.Color.White;
             this.p2ib_0.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p2ib_0, "p2ib_0");
             this.p2ib_0.Name = "p2ib_0";
@@ -4581,7 +4586,7 @@
             // 
             // p2pm_0
             // 
-            this.p2pm_0.BackColor = System.Drawing.Color.MistyRose;
+            this.p2pm_0.BackColor = System.Drawing.Color.LightCoral;
             this.p2pm_0.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p2pm_0, "p2pm_0");
             this.p2pm_0.Name = "p2pm_0";
@@ -4591,7 +4596,7 @@
             // 
             // p2vw_0
             // 
-            this.p2vw_0.BackColor = System.Drawing.Color.LightYellow;
+            this.p2vw_0.BackColor = System.Drawing.Color.White;
             this.p2vw_0.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             resources.ApplyResources(this.p2vw_0, "p2vw_0");
             this.p2vw_0.Name = "p2vw_0";
@@ -4607,6 +4612,7 @@
             // 
             // panel3
             // 
+            this.panel3.Controls.Add(this.label_mehrfachverwendung_p3);
             this.panel3.Controls.Add(this.p3ETAusfueren);
             this.panel3.Controls.Add(this.label181);
             this.panel3.Controls.Add(this.label182);
@@ -5402,7 +5408,7 @@
             // 
             // p3plus_20
             // 
-            this.p3plus_20.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.p3plus_20.BackColor = System.Drawing.Color.Khaki;
             this.p3plus_20.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p3plus_20, "p3plus_20");
             this.p3plus_20.Name = "p3plus_20";
@@ -5419,7 +5425,7 @@
             // 
             // p3ls_20
             // 
-            this.p3ls_20.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.p3ls_20.BackColor = System.Drawing.Color.White;
             this.p3ls_20.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p3ls_20, "p3ls_20");
             this.p3ls_20.Name = "p3ls_20";
@@ -5429,7 +5435,7 @@
             // 
             // p3iws_20
             // 
-            this.p3iws_20.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.p3iws_20.BackColor = System.Drawing.Color.White;
             this.p3iws_20.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p3iws_20, "p3iws_20");
             this.p3iws_20.Name = "p3iws_20";
@@ -5439,7 +5445,7 @@
             // 
             // p3ib_20
             // 
-            this.p3ib_20.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.p3ib_20.BackColor = System.Drawing.Color.White;
             this.p3ib_20.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p3ib_20, "p3ib_20");
             this.p3ib_20.Name = "p3ib_20";
@@ -5449,7 +5455,7 @@
             // 
             // p3pm_20
             // 
-            this.p3pm_20.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.p3pm_20.BackColor = System.Drawing.Color.White;
             this.p3pm_20.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p3pm_20, "p3pm_20");
             this.p3pm_20.Name = "p3pm_20";
@@ -5459,7 +5465,7 @@
             // 
             // p3vw_20
             // 
-            this.p3vw_20.BackColor = System.Drawing.Color.MistyRose;
+            this.p3vw_20.BackColor = System.Drawing.Color.LightCoral;
             this.p3vw_20.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p3vw_20, "p3vw_20");
             this.p3vw_20.Name = "p3vw_20";
@@ -5469,7 +5475,7 @@
             // 
             // p3plus_9
             // 
-            this.p3plus_9.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.p3plus_9.BackColor = System.Drawing.Color.Khaki;
             this.p3plus_9.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p3plus_9, "p3plus_9");
             this.p3plus_9.Name = "p3plus_9";
@@ -5486,7 +5492,7 @@
             // 
             // p3ls_9
             // 
-            this.p3ls_9.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.p3ls_9.BackColor = System.Drawing.Color.White;
             this.p3ls_9.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p3ls_9, "p3ls_9");
             this.p3ls_9.Name = "p3ls_9";
@@ -5496,7 +5502,7 @@
             // 
             // p3iws_9
             // 
-            this.p3iws_9.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.p3iws_9.BackColor = System.Drawing.Color.White;
             this.p3iws_9.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p3iws_9, "p3iws_9");
             this.p3iws_9.Name = "p3iws_9";
@@ -5506,7 +5512,7 @@
             // 
             // p3ib_9
             // 
-            this.p3ib_9.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.p3ib_9.BackColor = System.Drawing.Color.White;
             this.p3ib_9.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p3ib_9, "p3ib_9");
             this.p3ib_9.Name = "p3ib_9";
@@ -5516,7 +5522,7 @@
             // 
             // p3pm_9
             // 
-            this.p3pm_9.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.p3pm_9.BackColor = System.Drawing.Color.White;
             this.p3pm_9.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p3pm_9, "p3pm_9");
             this.p3pm_9.Name = "p3pm_9";
@@ -5526,7 +5532,7 @@
             // 
             // p3vw_9
             // 
-            this.p3vw_9.BackColor = System.Drawing.Color.MistyRose;
+            this.p3vw_9.BackColor = System.Drawing.Color.LightCoral;
             this.p3vw_9.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p3vw_9, "p3vw_9");
             this.p3vw_9.Name = "p3vw_9";
@@ -5536,7 +5542,7 @@
             // 
             // p3plus_15
             // 
-            this.p3plus_15.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.p3plus_15.BackColor = System.Drawing.Color.Khaki;
             this.p3plus_15.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p3plus_15, "p3plus_15");
             this.p3plus_15.Name = "p3plus_15";
@@ -5553,7 +5559,7 @@
             // 
             // p3ls_15
             // 
-            this.p3ls_15.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.p3ls_15.BackColor = System.Drawing.Color.White;
             this.p3ls_15.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p3ls_15, "p3ls_15");
             this.p3ls_15.Name = "p3ls_15";
@@ -5563,7 +5569,7 @@
             // 
             // p3iws_15
             // 
-            this.p3iws_15.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.p3iws_15.BackColor = System.Drawing.Color.White;
             this.p3iws_15.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p3iws_15, "p3iws_15");
             this.p3iws_15.Name = "p3iws_15";
@@ -5573,7 +5579,7 @@
             // 
             // p3ib_15
             // 
-            this.p3ib_15.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.p3ib_15.BackColor = System.Drawing.Color.White;
             this.p3ib_15.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p3ib_15, "p3ib_15");
             this.p3ib_15.Name = "p3ib_15";
@@ -5583,7 +5589,7 @@
             // 
             // p3pm_15
             // 
-            this.p3pm_15.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.p3pm_15.BackColor = System.Drawing.Color.White;
             this.p3pm_15.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p3pm_15, "p3pm_15");
             this.p3pm_15.Name = "p3pm_15";
@@ -5593,7 +5599,7 @@
             // 
             // p3vw_15
             // 
-            this.p3vw_15.BackColor = System.Drawing.Color.MistyRose;
+            this.p3vw_15.BackColor = System.Drawing.Color.LightCoral;
             this.p3vw_15.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p3vw_15, "p3vw_15");
             this.p3vw_15.Name = "p3vw_15";
@@ -5603,7 +5609,7 @@
             // 
             // p3plus_29
             // 
-            this.p3plus_29.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.p3plus_29.BackColor = System.Drawing.Color.Khaki;
             this.p3plus_29.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p3plus_29, "p3plus_29");
             this.p3plus_29.Name = "p3plus_29";
@@ -5620,7 +5626,7 @@
             // 
             // p3ls_29
             // 
-            this.p3ls_29.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.p3ls_29.BackColor = System.Drawing.Color.White;
             this.p3ls_29.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p3ls_29, "p3ls_29");
             this.p3ls_29.Name = "p3ls_29";
@@ -5630,7 +5636,7 @@
             // 
             // p3iws_29
             // 
-            this.p3iws_29.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.p3iws_29.BackColor = System.Drawing.Color.Khaki;
             this.p3iws_29.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p3iws_29, "p3iws_29");
             this.p3iws_29.Name = "p3iws_29";
@@ -5640,7 +5646,7 @@
             // 
             // p3ib_29
             // 
-            this.p3ib_29.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.p3ib_29.BackColor = System.Drawing.Color.White;
             this.p3ib_29.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p3ib_29, "p3ib_29");
             this.p3ib_29.Name = "p3ib_29";
@@ -5650,7 +5656,7 @@
             // 
             // p3pm_29
             // 
-            this.p3pm_29.BackColor = System.Drawing.Color.MistyRose;
+            this.p3pm_29.BackColor = System.Drawing.Color.LightCoral;
             this.p3pm_29.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p3pm_29, "p3pm_29");
             this.p3pm_29.Name = "p3pm_29";
@@ -5660,7 +5666,7 @@
             // 
             // p3vw_29
             // 
-            this.p3vw_29.BackColor = System.Drawing.Color.MistyRose;
+            this.p3vw_29.BackColor = System.Drawing.Color.LightCoral;
             this.p3vw_29.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p3vw_29, "p3vw_29");
             this.p3vw_29.Name = "p3vw_29";
@@ -5670,7 +5676,7 @@
             // 
             // p3plus_6
             // 
-            this.p3plus_6.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.p3plus_6.BackColor = System.Drawing.Color.Khaki;
             this.p3plus_6.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p3plus_6, "p3plus_6");
             this.p3plus_6.Name = "p3plus_6";
@@ -5687,7 +5693,7 @@
             // 
             // p3ls_6
             // 
-            this.p3ls_6.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.p3ls_6.BackColor = System.Drawing.Color.White;
             this.p3ls_6.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p3ls_6, "p3ls_6");
             this.p3ls_6.Name = "p3ls_6";
@@ -5697,7 +5703,7 @@
             // 
             // p3iws_6
             // 
-            this.p3iws_6.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.p3iws_6.BackColor = System.Drawing.Color.White;
             this.p3iws_6.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p3iws_6, "p3iws_6");
             this.p3iws_6.Name = "p3iws_6";
@@ -5707,7 +5713,7 @@
             // 
             // p3ib_6
             // 
-            this.p3ib_6.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.p3ib_6.BackColor = System.Drawing.Color.White;
             this.p3ib_6.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p3ib_6, "p3ib_6");
             this.p3ib_6.Name = "p3ib_6";
@@ -5717,7 +5723,7 @@
             // 
             // p3pm_6
             // 
-            this.p3pm_6.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.p3pm_6.BackColor = System.Drawing.Color.White;
             this.p3pm_6.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p3pm_6, "p3pm_6");
             this.p3pm_6.Name = "p3pm_6";
@@ -5727,7 +5733,7 @@
             // 
             // p3vw_6
             // 
-            this.p3vw_6.BackColor = System.Drawing.Color.MistyRose;
+            this.p3vw_6.BackColor = System.Drawing.Color.LightCoral;
             this.p3vw_6.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p3vw_6, "p3vw_6");
             this.p3vw_6.Name = "p3vw_6";
@@ -5737,7 +5743,7 @@
             // 
             // p3plus_12
             // 
-            this.p3plus_12.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.p3plus_12.BackColor = System.Drawing.Color.Khaki;
             this.p3plus_12.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p3plus_12, "p3plus_12");
             this.p3plus_12.Name = "p3plus_12";
@@ -5754,7 +5760,7 @@
             // 
             // p3ls_12
             // 
-            this.p3ls_12.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.p3ls_12.BackColor = System.Drawing.Color.White;
             this.p3ls_12.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p3ls_12, "p3ls_12");
             this.p3ls_12.Name = "p3ls_12";
@@ -5764,7 +5770,7 @@
             // 
             // p3iws_12
             // 
-            this.p3iws_12.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.p3iws_12.BackColor = System.Drawing.Color.White;
             this.p3iws_12.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p3iws_12, "p3iws_12");
             this.p3iws_12.Name = "p3iws_12";
@@ -5774,7 +5780,7 @@
             // 
             // p3ib_12
             // 
-            this.p3ib_12.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.p3ib_12.BackColor = System.Drawing.Color.White;
             this.p3ib_12.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p3ib_12, "p3ib_12");
             this.p3ib_12.Name = "p3ib_12";
@@ -5784,7 +5790,7 @@
             // 
             // p3pm_12
             // 
-            this.p3pm_12.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.p3pm_12.BackColor = System.Drawing.Color.White;
             this.p3pm_12.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p3pm_12, "p3pm_12");
             this.p3pm_12.Name = "p3pm_12";
@@ -5794,7 +5800,7 @@
             // 
             // p3vw_12
             // 
-            this.p3vw_12.BackColor = System.Drawing.Color.MistyRose;
+            this.p3vw_12.BackColor = System.Drawing.Color.LightCoral;
             this.p3vw_12.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p3vw_12, "p3vw_12");
             this.p3vw_12.Name = "p3vw_12";
@@ -5804,7 +5810,7 @@
             // 
             // p3plus_30
             // 
-            this.p3plus_30.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.p3plus_30.BackColor = System.Drawing.Color.Khaki;
             this.p3plus_30.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p3plus_30, "p3plus_30");
             this.p3plus_30.Name = "p3plus_30";
@@ -5821,7 +5827,7 @@
             // 
             // p3ls_30
             // 
-            this.p3ls_30.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.p3ls_30.BackColor = System.Drawing.Color.White;
             this.p3ls_30.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p3ls_30, "p3ls_30");
             this.p3ls_30.Name = "p3ls_30";
@@ -5831,7 +5837,7 @@
             // 
             // p3iws_30
             // 
-            this.p3iws_30.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.p3iws_30.BackColor = System.Drawing.Color.Khaki;
             this.p3iws_30.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p3iws_30, "p3iws_30");
             this.p3iws_30.Name = "p3iws_30";
@@ -5841,7 +5847,7 @@
             // 
             // p3ib_30
             // 
-            this.p3ib_30.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.p3ib_30.BackColor = System.Drawing.Color.White;
             this.p3ib_30.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p3ib_30, "p3ib_30");
             this.p3ib_30.Name = "p3ib_30";
@@ -5851,7 +5857,7 @@
             // 
             // p3pm_30
             // 
-            this.p3pm_30.BackColor = System.Drawing.Color.MistyRose;
+            this.p3pm_30.BackColor = System.Drawing.Color.LightCoral;
             this.p3pm_30.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p3pm_30, "p3pm_30");
             this.p3pm_30.Name = "p3pm_30";
@@ -5861,7 +5867,7 @@
             // 
             // p3vw_30
             // 
-            this.p3vw_30.BackColor = System.Drawing.Color.MistyRose;
+            this.p3vw_30.BackColor = System.Drawing.Color.LightCoral;
             this.p3vw_30.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p3vw_30, "p3vw_30");
             this.p3vw_30.Name = "p3vw_30";
@@ -5871,7 +5877,7 @@
             // 
             // p3plus_16
             // 
-            this.p3plus_16.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.p3plus_16.BackColor = System.Drawing.Color.Khaki;
             this.p3plus_16.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p3plus_16, "p3plus_16");
             this.p3plus_16.Name = "p3plus_16";
@@ -5918,7 +5924,7 @@
             // 
             // p3pm_16
             // 
-            this.p3pm_16.BackColor = System.Drawing.Color.LemonChiffon;
+            this.p3pm_16.BackColor = System.Drawing.Color.White;
             this.p3pm_16.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p3pm_16, "p3pm_16");
             this.p3pm_16.Name = "p3pm_16";
@@ -5928,7 +5934,7 @@
             // 
             // p3vw_16
             // 
-            this.p3vw_16.BackColor = System.Drawing.Color.MistyRose;
+            this.p3vw_16.BackColor = System.Drawing.Color.LightCoral;
             this.p3vw_16.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p3vw_16, "p3vw_16");
             this.p3vw_16.Name = "p3vw_16";
@@ -5938,7 +5944,7 @@
             // 
             // p3plus_17
             // 
-            this.p3plus_17.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.p3plus_17.BackColor = System.Drawing.Color.Khaki;
             this.p3plus_17.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p3plus_17, "p3plus_17");
             this.p3plus_17.Name = "p3plus_17";
@@ -5985,7 +5991,7 @@
             // 
             // p3pm_17
             // 
-            this.p3pm_17.BackColor = System.Drawing.Color.LemonChiffon;
+            this.p3pm_17.BackColor = System.Drawing.Color.White;
             this.p3pm_17.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p3pm_17, "p3pm_17");
             this.p3pm_17.Name = "p3pm_17";
@@ -5995,7 +6001,7 @@
             // 
             // p3vw_17
             // 
-            this.p3vw_17.BackColor = System.Drawing.Color.MistyRose;
+            this.p3vw_17.BackColor = System.Drawing.Color.LightCoral;
             this.p3vw_17.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p3vw_17, "p3vw_17");
             this.p3vw_17.Name = "p3vw_17";
@@ -6005,7 +6011,7 @@
             // 
             // p3plus_26
             // 
-            this.p3plus_26.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.p3plus_26.BackColor = System.Drawing.Color.Khaki;
             this.p3plus_26.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p3plus_26, "p3plus_26");
             this.p3plus_26.Name = "p3plus_26";
@@ -6052,7 +6058,7 @@
             // 
             // p3pm_26
             // 
-            this.p3pm_26.BackColor = System.Drawing.Color.LemonChiffon;
+            this.p3pm_26.BackColor = System.Drawing.Color.White;
             this.p3pm_26.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p3pm_26, "p3pm_26");
             this.p3pm_26.Name = "p3pm_26";
@@ -6062,7 +6068,7 @@
             // 
             // p3vw_26
             // 
-            this.p3vw_26.BackColor = System.Drawing.Color.MistyRose;
+            this.p3vw_26.BackColor = System.Drawing.Color.LightCoral;
             this.p3vw_26.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p3vw_26, "p3vw_26");
             this.p3vw_26.Name = "p3vw_26";
@@ -6072,7 +6078,7 @@
             // 
             // p3plus_31
             // 
-            this.p3plus_31.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.p3plus_31.BackColor = System.Drawing.Color.Khaki;
             this.p3plus_31.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p3plus_31, "p3plus_31");
             this.p3plus_31.Name = "p3plus_31";
@@ -6089,7 +6095,7 @@
             // 
             // p3ls_31
             // 
-            this.p3ls_31.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.p3ls_31.BackColor = System.Drawing.Color.White;
             this.p3ls_31.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p3ls_31, "p3ls_31");
             this.p3ls_31.Name = "p3ls_31";
@@ -6099,7 +6105,7 @@
             // 
             // p3iws_31
             // 
-            this.p3iws_31.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.p3iws_31.BackColor = System.Drawing.Color.Khaki;
             this.p3iws_31.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p3iws_31, "p3iws_31");
             this.p3iws_31.Name = "p3iws_31";
@@ -6109,7 +6115,7 @@
             // 
             // p3ib_31
             // 
-            this.p3ib_31.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.p3ib_31.BackColor = System.Drawing.Color.White;
             this.p3ib_31.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p3ib_31, "p3ib_31");
             this.p3ib_31.Name = "p3ib_31";
@@ -6119,7 +6125,7 @@
             // 
             // p3pm_31
             // 
-            this.p3pm_31.BackColor = System.Drawing.Color.MistyRose;
+            this.p3pm_31.BackColor = System.Drawing.Color.LightCoral;
             this.p3pm_31.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p3pm_31, "p3pm_31");
             this.p3pm_31.Name = "p3pm_31";
@@ -6129,7 +6135,7 @@
             // 
             // p3vw_31
             // 
-            this.p3vw_31.BackColor = System.Drawing.Color.MistyRose;
+            this.p3vw_31.BackColor = System.Drawing.Color.LightCoral;
             this.p3vw_31.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p3vw_31, "p3vw_31");
             this.p3vw_31.Name = "p3vw_31";
@@ -6146,7 +6152,7 @@
             // 
             // p3ls_0
             // 
-            this.p3ls_0.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.p3ls_0.BackColor = System.Drawing.Color.White;
             this.p3ls_0.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p3ls_0, "p3ls_0");
             this.p3ls_0.Name = "p3ls_0";
@@ -6156,7 +6162,7 @@
             // 
             // p3iws_0
             // 
-            this.p3iws_0.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.p3iws_0.BackColor = System.Drawing.Color.Khaki;
             this.p3iws_0.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p3iws_0, "p3iws_0");
             this.p3iws_0.Name = "p3iws_0";
@@ -6166,7 +6172,7 @@
             // 
             // p3ib_0
             // 
-            this.p3ib_0.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.p3ib_0.BackColor = System.Drawing.Color.White;
             this.p3ib_0.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p3ib_0, "p3ib_0");
             this.p3ib_0.Name = "p3ib_0";
@@ -6176,7 +6182,7 @@
             // 
             // p3pm_0
             // 
-            this.p3pm_0.BackColor = System.Drawing.Color.MistyRose;
+            this.p3pm_0.BackColor = System.Drawing.Color.LightCoral;
             this.p3pm_0.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p3pm_0, "p3pm_0");
             this.p3pm_0.Name = "p3pm_0";
@@ -6186,7 +6192,7 @@
             // 
             // p3vw_0
             // 
-            this.p3vw_0.BackColor = System.Drawing.Color.LightYellow;
+            this.p3vw_0.BackColor = System.Drawing.Color.White;
             this.p3vw_0.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             resources.ApplyResources(this.p3vw_0, "p3vw_0");
             this.p3vw_0.Name = "p3vw_0";
@@ -6358,15 +6364,15 @@
             this.DataGridViewAP.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.DataGridViewAP.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.DataGridViewAP.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.Padding = new System.Windows.Forms.Padding(0, 14, 0, 14);
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DataGridViewAP.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.Padding = new System.Windows.Forms.Padding(0, 14, 0, 14);
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DataGridViewAP.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.DataGridViewAP.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DataGridViewAP.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn5,
@@ -6385,14 +6391,14 @@
             resources.ApplyResources(this.DataGridViewAP, "DataGridViewAP");
             this.DataGridViewAP.Name = "DataGridViewAP";
             this.DataGridViewAP.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DataGridViewAP.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DataGridViewAP.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.helpProvider1.SetShowHelp(this.DataGridViewAP, ((bool)(resources.GetObject("DataGridViewAP.ShowHelp"))));
             this.DataGridViewAP.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewAPlatz_CellContentClick);
             this.DataGridViewAP.CellMouseEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridViewAP_CellMouseEnter);
@@ -7133,16 +7139,16 @@
             // 
             // verkäufer
             // 
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            this.verkäufer.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
+            this.verkäufer.DefaultCellStyle = dataGridViewCellStyle7;
             this.verkäufer.DividerWidth = 2;
             resources.ApplyResources(this.verkäufer, "verkäufer");
             this.verkäufer.Name = "verkäufer";
             // 
             // artikel
             // 
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
-            this.artikel.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.White;
+            this.artikel.DefaultCellStyle = dataGridViewCellStyle8;
             this.artikel.DividerWidth = 2;
             resources.ApplyResources(this.artikel, "artikel");
             this.artikel.Name = "artikel";
@@ -7447,50 +7453,50 @@
             // 
             // chart_statistik
             // 
-            chartArea1.InnerPlotPosition.Auto = false;
-            chartArea1.InnerPlotPosition.Height = 60F;
-            chartArea1.InnerPlotPosition.Width = 92.69213F;
-            chartArea1.InnerPlotPosition.X = 6.25787F;
-            chartArea1.InnerPlotPosition.Y = 3.500001F;
-            chartArea1.Name = "ChartArea2";
-            chartArea2.InnerPlotPosition.Auto = false;
-            chartArea2.InnerPlotPosition.Height = 60F;
-            chartArea2.InnerPlotPosition.Width = 92.69213F;
-            chartArea2.InnerPlotPosition.X = 6.25787F;
-            chartArea2.InnerPlotPosition.Y = 6.999995F;
-            chartArea2.Name = "ChartArea3";
-            this.chart_statistik.ChartAreas.Add(chartArea1);
-            this.chart_statistik.ChartAreas.Add(chartArea2);
+            chartArea3.InnerPlotPosition.Auto = false;
+            chartArea3.InnerPlotPosition.Height = 60F;
+            chartArea3.InnerPlotPosition.Width = 92.69213F;
+            chartArea3.InnerPlotPosition.X = 6.25787F;
+            chartArea3.InnerPlotPosition.Y = 3.500001F;
+            chartArea3.Name = "ChartArea2";
+            chartArea4.InnerPlotPosition.Auto = false;
+            chartArea4.InnerPlotPosition.Height = 60F;
+            chartArea4.InnerPlotPosition.Width = 92.69213F;
+            chartArea4.InnerPlotPosition.X = 6.25787F;
+            chartArea4.InnerPlotPosition.Y = 6.999995F;
+            chartArea4.Name = "ChartArea3";
+            this.chart_statistik.ChartAreas.Add(chartArea3);
+            this.chart_statistik.ChartAreas.Add(chartArea4);
             resources.ApplyResources(this.chart_statistik, "chart_statistik");
-            legend1.DockedToChartArea = "ChartArea3";
-            legend1.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Top;
-            legend1.IsDockedInsideChartArea = false;
-            legend1.Name = "Legend3";
-            legend2.DockedToChartArea = "ChartArea2";
-            legend2.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Top;
-            legend2.IsDockedInsideChartArea = false;
-            legend2.Name = "Legend1";
-            this.chart_statistik.Legends.Add(legend1);
-            this.chart_statistik.Legends.Add(legend2);
+            legend3.DockedToChartArea = "ChartArea3";
+            legend3.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Top;
+            legend3.IsDockedInsideChartArea = false;
+            legend3.Name = "Legend3";
+            legend4.DockedToChartArea = "ChartArea2";
+            legend4.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Top;
+            legend4.IsDockedInsideChartArea = false;
+            legend4.Name = "Legend1";
+            this.chart_statistik.Legends.Add(legend3);
+            this.chart_statistik.Legends.Add(legend4);
             this.chart_statistik.Name = "chart_statistik";
-            series1.ChartArea = "ChartArea2";
-            series1.Legend = "Legend1";
-            series1.Name = "Bestellungen";
-            series2.ChartArea = "ChartArea2";
-            series2.Legend = "Legend1";
-            series2.Name = "Produktion";
-            series3.ChartArea = "ChartArea3";
-            series3.Legend = "Legend3";
-            series3.Name = "Kapazitaet";
-            series4.ChartArea = "ChartArea3";
-            series4.Legend = "Legend3";
-            series4.Name = "Kapazitaet Bedarf";
-            this.chart_statistik.Series.Add(series1);
-            this.chart_statistik.Series.Add(series2);
-            this.chart_statistik.Series.Add(series3);
-            this.chart_statistik.Series.Add(series4);
-            title1.Name = "Title1";
-            this.chart_statistik.Titles.Add(title1);
+            series5.ChartArea = "ChartArea2";
+            series5.Legend = "Legend1";
+            series5.Name = "Bestellungen";
+            series6.ChartArea = "ChartArea2";
+            series6.Legend = "Legend1";
+            series6.Name = "Produktion";
+            series7.ChartArea = "ChartArea3";
+            series7.Legend = "Legend3";
+            series7.Name = "Kapazitaet";
+            series8.ChartArea = "ChartArea3";
+            series8.Legend = "Legend3";
+            series8.Name = "Kapazitaet Bedarf";
+            this.chart_statistik.Series.Add(series5);
+            this.chart_statistik.Series.Add(series6);
+            this.chart_statistik.Series.Add(series7);
+            this.chart_statistik.Series.Add(series8);
+            title2.Name = "Title1";
+            this.chart_statistik.Titles.Add(title2);
             // 
             // tab_einstellungen
             // 
@@ -8112,6 +8118,24 @@
             this.nav_button_1.Name = "nav_button_1";
             this.nav_button_1.UseVisualStyleBackColor = false;
             this.nav_button_1.Click += new System.EventHandler(this.nav_button_1_Click);
+            // 
+            // label_mehrfachverwendung_p1
+            // 
+            resources.ApplyResources(this.label_mehrfachverwendung_p1, "label_mehrfachverwendung_p1");
+            this.label_mehrfachverwendung_p1.Name = "label_mehrfachverwendung_p1";
+            this.helpProvider1.SetShowHelp(this.label_mehrfachverwendung_p1, ((bool)(resources.GetObject("label_mehrfachverwendung_p1.ShowHelp"))));
+            // 
+            // label_mehrfachverwendung_p2
+            // 
+            resources.ApplyResources(this.label_mehrfachverwendung_p2, "label_mehrfachverwendung_p2");
+            this.label_mehrfachverwendung_p2.Name = "label_mehrfachverwendung_p2";
+            this.helpProvider1.SetShowHelp(this.label_mehrfachverwendung_p2, ((bool)(resources.GetObject("label_mehrfachverwendung_p2.ShowHelp"))));
+            // 
+            // label_mehrfachverwendung_p3
+            // 
+            resources.ApplyResources(this.label_mehrfachverwendung_p3, "label_mehrfachverwendung_p3");
+            this.label_mehrfachverwendung_p3.Name = "label_mehrfachverwendung_p3";
+            this.helpProvider1.SetShowHelp(this.label_mehrfachverwendung_p3, ((bool)(resources.GetObject("label_mehrfachverwendung_p3.ShowHelp"))));
             // 
             // Fahrrad
             // 
@@ -9043,6 +9067,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn preis;
         private System.Windows.Forms.DataGridViewButtonColumn action_Angebote;
         private System.Windows.Forms.DataGridViewTextBoxColumn hidden_angebote;
+        private System.Windows.Forms.Label label_mehrfachverwendung_p1;
+        private System.Windows.Forms.Label label_mehrfachverwendung_p2;
+        private System.Windows.Forms.Label label_mehrfachverwendung_p3;
         
     }
 }
