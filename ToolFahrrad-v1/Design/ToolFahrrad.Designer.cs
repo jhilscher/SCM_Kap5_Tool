@@ -29,20 +29,20 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series7 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series8 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title2 = new System.Windows.Forms.DataVisualization.Charting.Title();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Fahrrad));
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea7 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea8 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend7 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend8 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series13 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series14 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series15 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series16 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title4 = new System.Windows.Forms.DataVisualization.Charting.Title();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tabs = new System.Windows.Forms.TabControl();
             this.tab_xml = new System.Windows.Forms.TabPage();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
@@ -648,13 +648,6 @@
             this.zurueck = new System.Windows.Forms.PictureBox();
             this.saveAenderungen = new System.Windows.Forms.PictureBox();
             this.dataGridViewBestellung = new System.Windows.Forms.DataGridView();
-            this.kNr = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Bezeichnung = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Lagerbestand = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Lieferdauer = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.menge = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.eil = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.del = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.label_header_kaufteile = new System.Windows.Forms.Label();
             this.dataGridViewKTeil = new System.Windows.Forms.DataGridView();
@@ -701,9 +694,33 @@
             this.lbl_eigene_Angebote = new System.Windows.Forms.Label();
             this.lbl_eigene_Gesuche = new System.Windows.Forms.Label();
             this.dta_e_Gesuche = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn42 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn43 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn44 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn45 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.action_egesuche = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.hidden_egesuche = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dta_e_Angebote = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn38 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn39 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn40 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn41 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.action_eangebote = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.hidden_eangebote = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dta_Gesuche = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn34 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn35 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn36 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn37 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.action_gesuche = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.hidden_gesuche = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MarketPlaceGrid = new System.Windows.Forms.DataGridView();
+            this.verkäufer = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.artikel = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.angebot_menge = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.preis = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.action_Angebote = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.hidden_angebote = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.xmlOutput = new System.Windows.Forms.TabPage();
             this.panelXMLerstellen = new System.Windows.Forms.Panel();
             this.dataGridViewPrAuftraege = new System.Windows.Forms.DataGridView();
@@ -815,30 +832,13 @@
             this.NavPanel = new System.Windows.Forms.Panel();
             this.nav_button_1 = new System.Windows.Forms.Button();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.verkäufer = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.artikel = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.angebot_menge = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.preis = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.action_Angebote = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.hidden_angebote = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn42 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn43 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn44 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn45 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.action_egesuche = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.hidden_egesuche = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn38 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn39 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn40 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn41 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.action_eangebote = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.hidden_eangebote = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn34 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn35 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn36 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn37 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.action_gesuche = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.hidden_gesuche = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.kNr = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Bezeichnung = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Lagerbestand = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Lieferdauer = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.menge = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.eil = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.Loeschen = new System.Windows.Forms.DataGridViewButtonColumn();
             this.tabs.SuspendLayout();
             this.tab_xml.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
@@ -6358,15 +6358,15 @@
             this.DataGridViewAP.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.DataGridViewAP.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.DataGridViewAP.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle13.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle13.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle13.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle13.Padding = new System.Windows.Forms.Padding(0, 14, 0, 14);
-            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DataGridViewAP.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.Padding = new System.Windows.Forms.Padding(0, 14, 0, 14);
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DataGridViewAP.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.DataGridViewAP.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DataGridViewAP.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn5,
@@ -6385,14 +6385,14 @@
             resources.ApplyResources(this.DataGridViewAP, "DataGridViewAP");
             this.DataGridViewAP.Name = "DataGridViewAP";
             this.DataGridViewAP.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle14.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle14.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
-            dataGridViewCellStyle14.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DataGridViewAP.RowHeadersDefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DataGridViewAP.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.helpProvider1.SetShowHelp(this.DataGridViewAP, ((bool)(resources.GetObject("DataGridViewAP.ShowHelp"))));
             this.DataGridViewAP.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewAPlatz_CellContentClick);
             this.DataGridViewAP.CellMouseEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridViewAP_CellMouseEnter);
@@ -6546,8 +6546,10 @@
             // 
             this.dataGridViewBestellung.AllowUserToDeleteRows = false;
             this.dataGridViewBestellung.AllowUserToOrderColumns = true;
-            this.dataGridViewBestellung.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.dataGridViewBestellung.BackgroundColor = System.Drawing.SystemColors.MenuBar;
             this.dataGridViewBestellung.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridViewBestellung.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.dataGridViewBestellung.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             this.dataGridViewBestellung.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewBestellung.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.kNr,
@@ -6556,51 +6558,12 @@
             this.Lieferdauer,
             this.menge,
             this.eil,
-            this.del});
+            this.Loeschen});
             resources.ApplyResources(this.dataGridViewBestellung, "dataGridViewBestellung");
             this.dataGridViewBestellung.Name = "dataGridViewBestellung";
             this.helpProvider1.SetShowHelp(this.dataGridViewBestellung, ((bool)(resources.GetObject("dataGridViewBestellung.ShowHelp"))));
-            // 
-            // kNr
-            // 
-            resources.ApplyResources(this.kNr, "kNr");
-            this.kNr.Name = "kNr";
-            this.kNr.ReadOnly = true;
-            // 
-            // Bezeichnung
-            // 
-            resources.ApplyResources(this.Bezeichnung, "Bezeichnung");
-            this.Bezeichnung.Name = "Bezeichnung";
-            // 
-            // Lagerbestand
-            // 
-            resources.ApplyResources(this.Lagerbestand, "Lagerbestand");
-            this.Lagerbestand.Name = "Lagerbestand";
-            // 
-            // Lieferdauer
-            // 
-            resources.ApplyResources(this.Lieferdauer, "Lieferdauer");
-            this.Lieferdauer.Name = "Lieferdauer";
-            // 
-            // menge
-            // 
-            resources.ApplyResources(this.menge, "menge");
-            this.menge.Name = "menge";
-            // 
-            // eil
-            // 
-            this.eil.FalseValue = "false";
-            resources.ApplyResources(this.eil, "eil");
-            this.eil.Name = "eil";
-            this.eil.TrueValue = "true";
-            // 
-            // del
-            // 
-            this.del.FalseValue = "false";
-            resources.ApplyResources(this.del, "del");
-            this.del.IndeterminateValue = "false";
-            this.del.Name = "del";
-            this.del.TrueValue = "true";
+            this.dataGridViewBestellung.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewBestellung_CellContentClick);
+            this.dataGridViewBestellung.UserAddedRow += new System.Windows.Forms.DataGridViewRowEventHandler(this.dataGridViewBestellung_UserAddedRow);
             // 
             // tabPage2
             // 
@@ -6866,6 +6829,7 @@
             this.panel_password.Controls.Add(this.panel10);
             resources.ApplyResources(this.panel_password, "panel_password");
             this.panel_password.Name = "panel_password";
+            this.helpProvider1.SetShowHelp(this.panel_password, ((bool)(resources.GetObject("panel_password.ShowHelp"))));
             // 
             // panel10
             // 
@@ -6960,6 +6924,44 @@
             this.helpProvider1.SetShowHelp(this.dta_e_Gesuche, ((bool)(resources.GetObject("dta_e_Gesuche.ShowHelp"))));
             this.dta_e_Gesuche.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dta_e_Gesuche_CellContentClick);
             // 
+            // dataGridViewTextBoxColumn42
+            // 
+            this.dataGridViewTextBoxColumn42.DividerWidth = 2;
+            resources.ApplyResources(this.dataGridViewTextBoxColumn42, "dataGridViewTextBoxColumn42");
+            this.dataGridViewTextBoxColumn42.Name = "dataGridViewTextBoxColumn42";
+            // 
+            // dataGridViewTextBoxColumn43
+            // 
+            this.dataGridViewTextBoxColumn43.DividerWidth = 2;
+            resources.ApplyResources(this.dataGridViewTextBoxColumn43, "dataGridViewTextBoxColumn43");
+            this.dataGridViewTextBoxColumn43.Name = "dataGridViewTextBoxColumn43";
+            // 
+            // dataGridViewTextBoxColumn44
+            // 
+            this.dataGridViewTextBoxColumn44.DividerWidth = 2;
+            resources.ApplyResources(this.dataGridViewTextBoxColumn44, "dataGridViewTextBoxColumn44");
+            this.dataGridViewTextBoxColumn44.Name = "dataGridViewTextBoxColumn44";
+            // 
+            // dataGridViewTextBoxColumn45
+            // 
+            this.dataGridViewTextBoxColumn45.DividerWidth = 2;
+            resources.ApplyResources(this.dataGridViewTextBoxColumn45, "dataGridViewTextBoxColumn45");
+            this.dataGridViewTextBoxColumn45.Name = "dataGridViewTextBoxColumn45";
+            // 
+            // action_egesuche
+            // 
+            this.action_egesuche.DividerWidth = 2;
+            resources.ApplyResources(this.action_egesuche, "action_egesuche");
+            this.action_egesuche.Name = "action_egesuche";
+            this.action_egesuche.Text = "Löschen";
+            this.action_egesuche.UseColumnTextForButtonValue = true;
+            // 
+            // hidden_egesuche
+            // 
+            this.hidden_egesuche.DividerWidth = 2;
+            resources.ApplyResources(this.hidden_egesuche, "hidden_egesuche");
+            this.hidden_egesuche.Name = "hidden_egesuche";
+            // 
             // dta_e_Angebote
             // 
             this.dta_e_Angebote.BackgroundColor = System.Drawing.SystemColors.MenuBar;
@@ -6980,6 +6982,44 @@
             this.helpProvider1.SetShowHelp(this.dta_e_Angebote, ((bool)(resources.GetObject("dta_e_Angebote.ShowHelp"))));
             this.dta_e_Angebote.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dta_e_Angebote_CellContentClick);
             // 
+            // dataGridViewTextBoxColumn38
+            // 
+            this.dataGridViewTextBoxColumn38.DividerWidth = 2;
+            resources.ApplyResources(this.dataGridViewTextBoxColumn38, "dataGridViewTextBoxColumn38");
+            this.dataGridViewTextBoxColumn38.Name = "dataGridViewTextBoxColumn38";
+            // 
+            // dataGridViewTextBoxColumn39
+            // 
+            this.dataGridViewTextBoxColumn39.DividerWidth = 2;
+            resources.ApplyResources(this.dataGridViewTextBoxColumn39, "dataGridViewTextBoxColumn39");
+            this.dataGridViewTextBoxColumn39.Name = "dataGridViewTextBoxColumn39";
+            // 
+            // dataGridViewTextBoxColumn40
+            // 
+            this.dataGridViewTextBoxColumn40.DividerWidth = 2;
+            resources.ApplyResources(this.dataGridViewTextBoxColumn40, "dataGridViewTextBoxColumn40");
+            this.dataGridViewTextBoxColumn40.Name = "dataGridViewTextBoxColumn40";
+            // 
+            // dataGridViewTextBoxColumn41
+            // 
+            this.dataGridViewTextBoxColumn41.DividerWidth = 2;
+            resources.ApplyResources(this.dataGridViewTextBoxColumn41, "dataGridViewTextBoxColumn41");
+            this.dataGridViewTextBoxColumn41.Name = "dataGridViewTextBoxColumn41";
+            // 
+            // action_eangebote
+            // 
+            this.action_eangebote.DividerWidth = 2;
+            resources.ApplyResources(this.action_eangebote, "action_eangebote");
+            this.action_eangebote.Name = "action_eangebote";
+            this.action_eangebote.Text = "Löschen";
+            this.action_eangebote.UseColumnTextForButtonValue = true;
+            // 
+            // hidden_eangebote
+            // 
+            this.hidden_eangebote.DividerWidth = 2;
+            resources.ApplyResources(this.hidden_eangebote, "hidden_eangebote");
+            this.hidden_eangebote.Name = "hidden_eangebote";
+            // 
             // dta_Gesuche
             // 
             this.dta_Gesuche.BackgroundColor = System.Drawing.SystemColors.MenuBar;
@@ -6999,6 +7039,44 @@
             this.helpProvider1.SetShowHelp(this.dta_Gesuche, ((bool)(resources.GetObject("dta_Gesuche.ShowHelp"))));
             this.dta_Gesuche.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dta_Gesuche_CellContentClick);
             // 
+            // dataGridViewTextBoxColumn34
+            // 
+            this.dataGridViewTextBoxColumn34.DividerWidth = 2;
+            resources.ApplyResources(this.dataGridViewTextBoxColumn34, "dataGridViewTextBoxColumn34");
+            this.dataGridViewTextBoxColumn34.Name = "dataGridViewTextBoxColumn34";
+            // 
+            // dataGridViewTextBoxColumn35
+            // 
+            this.dataGridViewTextBoxColumn35.DividerWidth = 2;
+            resources.ApplyResources(this.dataGridViewTextBoxColumn35, "dataGridViewTextBoxColumn35");
+            this.dataGridViewTextBoxColumn35.Name = "dataGridViewTextBoxColumn35";
+            // 
+            // dataGridViewTextBoxColumn36
+            // 
+            this.dataGridViewTextBoxColumn36.DividerWidth = 2;
+            resources.ApplyResources(this.dataGridViewTextBoxColumn36, "dataGridViewTextBoxColumn36");
+            this.dataGridViewTextBoxColumn36.Name = "dataGridViewTextBoxColumn36";
+            // 
+            // dataGridViewTextBoxColumn37
+            // 
+            this.dataGridViewTextBoxColumn37.DividerWidth = 2;
+            resources.ApplyResources(this.dataGridViewTextBoxColumn37, "dataGridViewTextBoxColumn37");
+            this.dataGridViewTextBoxColumn37.Name = "dataGridViewTextBoxColumn37";
+            // 
+            // action_gesuche
+            // 
+            this.action_gesuche.DividerWidth = 2;
+            resources.ApplyResources(this.action_gesuche, "action_gesuche");
+            this.action_gesuche.Name = "action_gesuche";
+            this.action_gesuche.Text = "ok";
+            this.action_gesuche.UseColumnTextForButtonValue = true;
+            // 
+            // hidden_gesuche
+            // 
+            this.hidden_gesuche.DividerWidth = 2;
+            resources.ApplyResources(this.hidden_gesuche, "hidden_gesuche");
+            this.hidden_gesuche.Name = "hidden_gesuche";
+            // 
             // MarketPlaceGrid
             // 
             this.MarketPlaceGrid.BackgroundColor = System.Drawing.SystemColors.MenuBar;
@@ -7016,6 +7094,48 @@
             this.MarketPlaceGrid.Name = "MarketPlaceGrid";
             this.MarketPlaceGrid.RowHeadersVisible = false;
             this.MarketPlaceGrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.MarketPlaceGrid_CellContentClick);
+            // 
+            // verkäufer
+            // 
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
+            this.verkäufer.DefaultCellStyle = dataGridViewCellStyle7;
+            this.verkäufer.DividerWidth = 2;
+            resources.ApplyResources(this.verkäufer, "verkäufer");
+            this.verkäufer.Name = "verkäufer";
+            // 
+            // artikel
+            // 
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.White;
+            this.artikel.DefaultCellStyle = dataGridViewCellStyle8;
+            this.artikel.DividerWidth = 2;
+            resources.ApplyResources(this.artikel, "artikel");
+            this.artikel.Name = "artikel";
+            // 
+            // angebot_menge
+            // 
+            this.angebot_menge.DividerWidth = 2;
+            resources.ApplyResources(this.angebot_menge, "angebot_menge");
+            this.angebot_menge.Name = "angebot_menge";
+            // 
+            // preis
+            // 
+            this.preis.DividerWidth = 2;
+            resources.ApplyResources(this.preis, "preis");
+            this.preis.Name = "preis";
+            // 
+            // action_Angebote
+            // 
+            this.action_Angebote.DividerWidth = 2;
+            resources.ApplyResources(this.action_Angebote, "action_Angebote");
+            this.action_Angebote.Name = "action_Angebote";
+            this.action_Angebote.Text = "ok";
+            this.action_Angebote.UseColumnTextForButtonValue = true;
+            // 
+            // hidden_angebote
+            // 
+            this.hidden_angebote.DividerWidth = 2;
+            resources.ApplyResources(this.hidden_angebote, "hidden_angebote");
+            this.hidden_angebote.Name = "hidden_angebote";
             // 
             // xmlOutput
             // 
@@ -7291,50 +7411,50 @@
             // 
             // chart_statistik
             // 
-            chartArea7.InnerPlotPosition.Auto = false;
-            chartArea7.InnerPlotPosition.Height = 60F;
-            chartArea7.InnerPlotPosition.Width = 92.69213F;
-            chartArea7.InnerPlotPosition.X = 6.25787F;
-            chartArea7.InnerPlotPosition.Y = 3.500001F;
-            chartArea7.Name = "ChartArea2";
-            chartArea8.InnerPlotPosition.Auto = false;
-            chartArea8.InnerPlotPosition.Height = 60F;
-            chartArea8.InnerPlotPosition.Width = 92.69213F;
-            chartArea8.InnerPlotPosition.X = 6.25787F;
-            chartArea8.InnerPlotPosition.Y = 6.999995F;
-            chartArea8.Name = "ChartArea3";
-            this.chart_statistik.ChartAreas.Add(chartArea7);
-            this.chart_statistik.ChartAreas.Add(chartArea8);
+            chartArea3.InnerPlotPosition.Auto = false;
+            chartArea3.InnerPlotPosition.Height = 60F;
+            chartArea3.InnerPlotPosition.Width = 92.69213F;
+            chartArea3.InnerPlotPosition.X = 6.25787F;
+            chartArea3.InnerPlotPosition.Y = 3.500001F;
+            chartArea3.Name = "ChartArea2";
+            chartArea4.InnerPlotPosition.Auto = false;
+            chartArea4.InnerPlotPosition.Height = 60F;
+            chartArea4.InnerPlotPosition.Width = 92.69213F;
+            chartArea4.InnerPlotPosition.X = 6.25787F;
+            chartArea4.InnerPlotPosition.Y = 6.999995F;
+            chartArea4.Name = "ChartArea3";
+            this.chart_statistik.ChartAreas.Add(chartArea3);
+            this.chart_statistik.ChartAreas.Add(chartArea4);
             resources.ApplyResources(this.chart_statistik, "chart_statistik");
-            legend7.DockedToChartArea = "ChartArea3";
-            legend7.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Top;
-            legend7.IsDockedInsideChartArea = false;
-            legend7.Name = "Legend3";
-            legend8.DockedToChartArea = "ChartArea2";
-            legend8.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Top;
-            legend8.IsDockedInsideChartArea = false;
-            legend8.Name = "Legend1";
-            this.chart_statistik.Legends.Add(legend7);
-            this.chart_statistik.Legends.Add(legend8);
+            legend3.DockedToChartArea = "ChartArea3";
+            legend3.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Top;
+            legend3.IsDockedInsideChartArea = false;
+            legend3.Name = "Legend3";
+            legend4.DockedToChartArea = "ChartArea2";
+            legend4.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Top;
+            legend4.IsDockedInsideChartArea = false;
+            legend4.Name = "Legend1";
+            this.chart_statistik.Legends.Add(legend3);
+            this.chart_statistik.Legends.Add(legend4);
             this.chart_statistik.Name = "chart_statistik";
-            series13.ChartArea = "ChartArea2";
-            series13.Legend = "Legend1";
-            series13.Name = "Bestellungen";
-            series14.ChartArea = "ChartArea2";
-            series14.Legend = "Legend1";
-            series14.Name = "Produktion";
-            series15.ChartArea = "ChartArea3";
-            series15.Legend = "Legend3";
-            series15.Name = "Kapazitaet";
-            series16.ChartArea = "ChartArea3";
-            series16.Legend = "Legend3";
-            series16.Name = "Kapazitaet Bedarf";
-            this.chart_statistik.Series.Add(series13);
-            this.chart_statistik.Series.Add(series14);
-            this.chart_statistik.Series.Add(series15);
-            this.chart_statistik.Series.Add(series16);
-            title4.Name = "Title1";
-            this.chart_statistik.Titles.Add(title4);
+            series5.ChartArea = "ChartArea2";
+            series5.Legend = "Legend1";
+            series5.Name = "Bestellungen";
+            series6.ChartArea = "ChartArea2";
+            series6.Legend = "Legend1";
+            series6.Name = "Produktion";
+            series7.ChartArea = "ChartArea3";
+            series7.Legend = "Legend3";
+            series7.Name = "Kapazitaet";
+            series8.ChartArea = "ChartArea3";
+            series8.Legend = "Legend3";
+            series8.Name = "Kapazitaet Bedarf";
+            this.chart_statistik.Series.Add(series5);
+            this.chart_statistik.Series.Add(series6);
+            this.chart_statistik.Series.Add(series7);
+            this.chart_statistik.Series.Add(series8);
+            title2.Name = "Title1";
+            this.chart_statistik.Titles.Add(title2);
             // 
             // tab_einstellungen
             // 
@@ -7957,161 +8077,52 @@
             this.nav_button_1.UseVisualStyleBackColor = false;
             this.nav_button_1.Click += new System.EventHandler(this.nav_button_1_Click);
             // 
-            // verkäufer
+            // kNr
             // 
-            dataGridViewCellStyle15.BackColor = System.Drawing.Color.White;
-            this.verkäufer.DefaultCellStyle = dataGridViewCellStyle15;
-            this.verkäufer.DividerWidth = 2;
-            resources.ApplyResources(this.verkäufer, "verkäufer");
-            this.verkäufer.Name = "verkäufer";
+            this.kNr.DividerWidth = 2;
+            resources.ApplyResources(this.kNr, "kNr");
+            this.kNr.Name = "kNr";
             // 
-            // artikel
+            // Bezeichnung
             // 
-            dataGridViewCellStyle16.BackColor = System.Drawing.Color.White;
-            this.artikel.DefaultCellStyle = dataGridViewCellStyle16;
-            this.artikel.DividerWidth = 2;
-            resources.ApplyResources(this.artikel, "artikel");
-            this.artikel.Name = "artikel";
+            this.Bezeichnung.DividerWidth = 2;
+            resources.ApplyResources(this.Bezeichnung, "Bezeichnung");
+            this.Bezeichnung.Name = "Bezeichnung";
+            this.Bezeichnung.ReadOnly = true;
             // 
-            // angebot_menge
+            // Lagerbestand
             // 
-            this.angebot_menge.DividerWidth = 2;
-            resources.ApplyResources(this.angebot_menge, "angebot_menge");
-            this.angebot_menge.Name = "angebot_menge";
+            this.Lagerbestand.DividerWidth = 2;
+            resources.ApplyResources(this.Lagerbestand, "Lagerbestand");
+            this.Lagerbestand.Name = "Lagerbestand";
+            this.Lagerbestand.ReadOnly = true;
             // 
-            // preis
+            // Lieferdauer
             // 
-            this.preis.DividerWidth = 2;
-            resources.ApplyResources(this.preis, "preis");
-            this.preis.Name = "preis";
+            this.Lieferdauer.DividerWidth = 2;
+            resources.ApplyResources(this.Lieferdauer, "Lieferdauer");
+            this.Lieferdauer.Name = "Lieferdauer";
+            this.Lieferdauer.ReadOnly = true;
             // 
-            // action_Angebote
+            // menge
             // 
-            this.action_Angebote.DividerWidth = 2;
-            resources.ApplyResources(this.action_Angebote, "action_Angebote");
-            this.action_Angebote.Name = "action_Angebote";
-            this.action_Angebote.Text = "ok";
-            this.action_Angebote.UseColumnTextForButtonValue = true;
+            this.menge.DividerWidth = 2;
+            resources.ApplyResources(this.menge, "menge");
+            this.menge.Name = "menge";
             // 
-            // hidden_angebote
+            // eil
             // 
-            this.hidden_angebote.DividerWidth = 2;
-            resources.ApplyResources(this.hidden_angebote, "hidden_angebote");
-            this.hidden_angebote.Name = "hidden_angebote";
+            this.eil.DividerWidth = 2;
+            this.eil.FalseValue = "false";
+            resources.ApplyResources(this.eil, "eil");
+            this.eil.Name = "eil";
+            this.eil.TrueValue = "true";
             // 
-            // dataGridViewTextBoxColumn42
+            // Loeschen
             // 
-            this.dataGridViewTextBoxColumn42.DividerWidth = 2;
-            resources.ApplyResources(this.dataGridViewTextBoxColumn42, "dataGridViewTextBoxColumn42");
-            this.dataGridViewTextBoxColumn42.Name = "dataGridViewTextBoxColumn42";
-            // 
-            // dataGridViewTextBoxColumn43
-            // 
-            this.dataGridViewTextBoxColumn43.DividerWidth = 2;
-            resources.ApplyResources(this.dataGridViewTextBoxColumn43, "dataGridViewTextBoxColumn43");
-            this.dataGridViewTextBoxColumn43.Name = "dataGridViewTextBoxColumn43";
-            // 
-            // dataGridViewTextBoxColumn44
-            // 
-            this.dataGridViewTextBoxColumn44.DividerWidth = 2;
-            resources.ApplyResources(this.dataGridViewTextBoxColumn44, "dataGridViewTextBoxColumn44");
-            this.dataGridViewTextBoxColumn44.Name = "dataGridViewTextBoxColumn44";
-            // 
-            // dataGridViewTextBoxColumn45
-            // 
-            this.dataGridViewTextBoxColumn45.DividerWidth = 2;
-            resources.ApplyResources(this.dataGridViewTextBoxColumn45, "dataGridViewTextBoxColumn45");
-            this.dataGridViewTextBoxColumn45.Name = "dataGridViewTextBoxColumn45";
-            // 
-            // action_egesuche
-            // 
-            this.action_egesuche.DividerWidth = 2;
-            resources.ApplyResources(this.action_egesuche, "action_egesuche");
-            this.action_egesuche.Name = "action_egesuche";
-            this.action_egesuche.Text = "Löschen";
-            this.action_egesuche.UseColumnTextForButtonValue = true;
-            // 
-            // hidden_egesuche
-            // 
-            this.hidden_egesuche.DividerWidth = 2;
-            resources.ApplyResources(this.hidden_egesuche, "hidden_egesuche");
-            this.hidden_egesuche.Name = "hidden_egesuche";
-            // 
-            // dataGridViewTextBoxColumn38
-            // 
-            this.dataGridViewTextBoxColumn38.DividerWidth = 2;
-            resources.ApplyResources(this.dataGridViewTextBoxColumn38, "dataGridViewTextBoxColumn38");
-            this.dataGridViewTextBoxColumn38.Name = "dataGridViewTextBoxColumn38";
-            // 
-            // dataGridViewTextBoxColumn39
-            // 
-            this.dataGridViewTextBoxColumn39.DividerWidth = 2;
-            resources.ApplyResources(this.dataGridViewTextBoxColumn39, "dataGridViewTextBoxColumn39");
-            this.dataGridViewTextBoxColumn39.Name = "dataGridViewTextBoxColumn39";
-            // 
-            // dataGridViewTextBoxColumn40
-            // 
-            this.dataGridViewTextBoxColumn40.DividerWidth = 2;
-            resources.ApplyResources(this.dataGridViewTextBoxColumn40, "dataGridViewTextBoxColumn40");
-            this.dataGridViewTextBoxColumn40.Name = "dataGridViewTextBoxColumn40";
-            // 
-            // dataGridViewTextBoxColumn41
-            // 
-            this.dataGridViewTextBoxColumn41.DividerWidth = 2;
-            resources.ApplyResources(this.dataGridViewTextBoxColumn41, "dataGridViewTextBoxColumn41");
-            this.dataGridViewTextBoxColumn41.Name = "dataGridViewTextBoxColumn41";
-            // 
-            // action_eangebote
-            // 
-            this.action_eangebote.DividerWidth = 2;
-            resources.ApplyResources(this.action_eangebote, "action_eangebote");
-            this.action_eangebote.Name = "action_eangebote";
-            this.action_eangebote.Text = "Löschen";
-            this.action_eangebote.UseColumnTextForButtonValue = true;
-            // 
-            // hidden_eangebote
-            // 
-            this.hidden_eangebote.DividerWidth = 2;
-            resources.ApplyResources(this.hidden_eangebote, "hidden_eangebote");
-            this.hidden_eangebote.Name = "hidden_eangebote";
-            // 
-            // dataGridViewTextBoxColumn34
-            // 
-            this.dataGridViewTextBoxColumn34.DividerWidth = 2;
-            resources.ApplyResources(this.dataGridViewTextBoxColumn34, "dataGridViewTextBoxColumn34");
-            this.dataGridViewTextBoxColumn34.Name = "dataGridViewTextBoxColumn34";
-            // 
-            // dataGridViewTextBoxColumn35
-            // 
-            this.dataGridViewTextBoxColumn35.DividerWidth = 2;
-            resources.ApplyResources(this.dataGridViewTextBoxColumn35, "dataGridViewTextBoxColumn35");
-            this.dataGridViewTextBoxColumn35.Name = "dataGridViewTextBoxColumn35";
-            // 
-            // dataGridViewTextBoxColumn36
-            // 
-            this.dataGridViewTextBoxColumn36.DividerWidth = 2;
-            resources.ApplyResources(this.dataGridViewTextBoxColumn36, "dataGridViewTextBoxColumn36");
-            this.dataGridViewTextBoxColumn36.Name = "dataGridViewTextBoxColumn36";
-            // 
-            // dataGridViewTextBoxColumn37
-            // 
-            this.dataGridViewTextBoxColumn37.DividerWidth = 2;
-            resources.ApplyResources(this.dataGridViewTextBoxColumn37, "dataGridViewTextBoxColumn37");
-            this.dataGridViewTextBoxColumn37.Name = "dataGridViewTextBoxColumn37";
-            // 
-            // action_gesuche
-            // 
-            this.action_gesuche.DividerWidth = 2;
-            resources.ApplyResources(this.action_gesuche, "action_gesuche");
-            this.action_gesuche.Name = "action_gesuche";
-            this.action_gesuche.Text = "ok";
-            this.action_gesuche.UseColumnTextForButtonValue = true;
-            // 
-            // hidden_gesuche
-            // 
-            this.hidden_gesuche.DividerWidth = 2;
-            resources.ApplyResources(this.hidden_gesuche, "hidden_gesuche");
-            this.hidden_gesuche.Name = "hidden_gesuche";
+            resources.ApplyResources(this.Loeschen, "Loeschen");
+            this.Loeschen.Name = "Loeschen";
+            this.Loeschen.Text = "Aktion";
             // 
             // Fahrrad
             // 
@@ -9010,13 +9021,6 @@
         private System.Windows.Forms.PictureBox zurueck;
         private System.Windows.Forms.PictureBox saveAenderungen;
         private System.Windows.Forms.DataGridView dataGridViewBestellung;
-        private System.Windows.Forms.DataGridViewTextBoxColumn kNr;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Bezeichnung;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Lagerbestand;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Lieferdauer;
-        private System.Windows.Forms.DataGridViewTextBoxColumn menge;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn eil;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn del;
         private System.Windows.Forms.Panel panel_password2;
         private System.Windows.Forms.Label lbl_in_progress;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn42;
@@ -9043,6 +9047,13 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn preis;
         private System.Windows.Forms.DataGridViewButtonColumn action_Angebote;
         private System.Windows.Forms.DataGridViewTextBoxColumn hidden_angebote;
+        private System.Windows.Forms.DataGridViewTextBoxColumn kNr;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Bezeichnung;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Lagerbestand;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Lieferdauer;
+        private System.Windows.Forms.DataGridViewTextBoxColumn menge;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn eil;
+        private System.Windows.Forms.DataGridViewButtonColumn Loeschen;
         
     }
 }

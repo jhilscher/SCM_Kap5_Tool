@@ -55,8 +55,8 @@ namespace ToolFahrrad_v1.Design
         private void toolAusfueren_Click(object sender, EventArgs e)
         {
             Ausführen();
-//            toolAusfueren.Visible = false;
-//            save.Visible = true;
+            //            toolAusfueren.Visible = false;
+            //            save.Visible = true;
             tab1.Visible = true;
             Bestellungen.Visible = true;
             panelXMLerstellen.Visible = true;
@@ -214,16 +214,18 @@ namespace ToolFahrrad_v1.Design
                 }
 
                 // Trend berechnen
-                if (a.BestandPer1 > a.BestandPer4 + 50) {
+                if (a.BestandPer1 > a.BestandPer4 + 50)
+                {
                     dataGridViewKTeil.Rows[index].Cells[12].Style.BackColor = Color.Red;
                     dataGridViewKTeil.Rows[index].Cells[12].Value = "v";
                 }
-                else if (a.BestandPer1 <  a.BestandPer4 - 50)
+                else if (a.BestandPer1 < a.BestandPer4 - 50)
                 {
                     dataGridViewKTeil.Rows[index].Cells[12].Style.BackColor = Color.Green;
                     dataGridViewKTeil.Rows[index].Cells[12].Value = "^";
                 }
-                else {
+                else
+                {
                     dataGridViewKTeil.Rows[index].Cells[12].Style.BackColor = Color.Yellow;
                     dataGridViewKTeil.Rows[index].Cells[12].Value = "-";
                 }
@@ -235,7 +237,7 @@ namespace ToolFahrrad_v1.Design
                         dataGridViewKTeil.Columns[i].DefaultCellStyle.BackColor = Color.Wheat;
                     else if (i > 3 && i < 8)
                         dataGridViewKTeil.Columns[i].DefaultCellStyle.BackColor = Color.AliceBlue;
-;
+                    ;
                 }
                 ++index;
             }
@@ -441,19 +443,22 @@ namespace ToolFahrrad_v1.Design
                 dataGridViewBestellung.Rows[index].Cells[3].Value = a.Kaufteil.Lieferdauer;
 
                 dataGridViewBestellung.Rows[index].Cells[4].Value = a.Menge;
-                
+
+                // spalte löschen
+                dataGridViewBestellung.Rows[index].Cells[6].Value = _culInfo.Contains("de") ? "Löschen" : "Delete";
+
                 Color rowColor = Color.FloralWhite;
-                
+
                 if (a.Eil)
                 {
                     dataGridViewBestellung.Rows[index].Cells[5].Value = true;
                     rowColor = Color.LightCoral;
                 }
 
-                
+
 
                 dataGridViewBestellung.Rows[index].DefaultCellStyle.BackColor = rowColor;
-                
+
                 ++index;
             }
             #endregion
@@ -510,15 +515,15 @@ namespace ToolFahrrad_v1.Design
             Series series3 = this.chart_statistik.Series.First(x => x.Name == "Kapazitaet");
 
             // baue datapoints zusammen
-           /*
-            var listKap = DataContainer.Instance.ArbeitsplatzList.OrderBy(x => x.GetNummerArbeitsplatz).Select(x =>
-            {
-                var dp = new DataPoint(x.GetNummerArbeitsplatz / 2, _instance.ApKapazitaet.Where(c => c[0] == x.GetNummerArbeitsplatz)
-                    .Select(c => c[2]).First());
-                dp.AxisLabel = x.GetNummerArbeitsplatz.ToString();
-                return dp;
-            }).ToList();
-            */
+            /*
+             var listKap = DataContainer.Instance.ArbeitsplatzList.OrderBy(x => x.GetNummerArbeitsplatz).Select(x =>
+             {
+                 var dp = new DataPoint(x.GetNummerArbeitsplatz / 2, _instance.ApKapazitaet.Where(c => c[0] == x.GetNummerArbeitsplatz)
+                     .Select(c => c[2]).First());
+                 dp.AxisLabel = x.GetNummerArbeitsplatz.ToString();
+                 return dp;
+             }).ToList();
+             */
             // hinzu zur serie!
             listDpKapHave.ForEach(x => series3.Points.Add(x));
 
@@ -540,15 +545,20 @@ namespace ToolFahrrad_v1.Design
                 _bv.GeneriereListeDv();
             List<DvPosition> dv = _bv.DvPositionen;
             index = 0;
-            foreach (var a in dv)
-            {
-                dataGridViewDirektverkauf.Rows.Add();
-                dataGridViewDirektverkauf.Rows[index].Cells[0].Value = a.DvTeilNr;
-                dataGridViewDirektverkauf.Rows[index].Cells[1].Value = a.DvMenge;
-                dataGridViewDirektverkauf.Rows[index].Cells[2].Value = a.DvPreis;
-                dataGridViewDirektverkauf.Rows[index].Cells[3].Value = a.DvStrafe;
 
-                ++index;
+            if (dv != null)
+            {
+
+                foreach (var a in dv)
+                {
+                    dataGridViewDirektverkauf.Rows.Add();
+                    dataGridViewDirektverkauf.Rows[index].Cells[0].Value = a.DvTeilNr;
+                    dataGridViewDirektverkauf.Rows[index].Cells[1].Value = a.DvMenge;
+                    dataGridViewDirektverkauf.Rows[index].Cells[2].Value = a.DvPreis;
+                    dataGridViewDirektverkauf.Rows[index].Cells[3].Value = a.DvStrafe;
+
+                    ++index;
+                }
             }
             #endregion
 
@@ -653,10 +663,11 @@ namespace ToolFahrrad_v1.Design
             //bildSpeichOk.Visible = true;
             //panelXML.Visible = true;
             _okPrognose = true;
-            if (_okXml) {
+            if (_okXml)
+            {
                 //toolAusfueren.Visible = true;
             }
-             start_prognose_label_successInfo.Visible = true;
+            start_prognose_label_successInfo.Visible = true;
 
             GetInfo(_culInfo.Contains("de") ? "Prognose wurde gespeichert" : "Forecast has been saved");
         }
@@ -1102,19 +1113,19 @@ namespace ToolFahrrad_v1.Design
             {
                 if (_xml.ReadDatei(fileDialog.FileName))
                 {
-//                    xmlTextBox.Text = fileDialog.FileName;
-//                    xmlOffenOK.Visible = true;
+                    //                    xmlTextBox.Text = fileDialog.FileName;
+                    //                    xmlOffenOK.Visible = true;
                     _okXml = true;
                     if (_okPrognose)
-//                        toolAusfueren.Visible = true;
-                    GetInfo(_culInfo.Contains("de") ? "XML-Datei wurde importiert" : "XML-file is imported");
+                        //                        toolAusfueren.Visible = true;
+                        GetInfo(_culInfo.Contains("de") ? "XML-Datei wurde importiert" : "XML-file is imported");
                 }
                 else
                 {
-//                    xmlTextBox.Text = fileDialog.FileName;
-//                    toolAusfueren.Visible = false;
-//                    xmlOffenOK.Visible = false;
-//                    save.Visible = false;
+                    //                    xmlTextBox.Text = fileDialog.FileName;
+                    //                    toolAusfueren.Visible = false;
+                    //                    xmlOffenOK.Visible = false;
+                    //                    save.Visible = false;
                     _okXml = false;
 
                     MessageBox.Show(Resources.Fahrrad_XmlOeffnen_TEXT, Resources.Fahrrad_XmlOeffnen_Fehlermeldung,
@@ -1210,29 +1221,29 @@ namespace ToolFahrrad_v1.Design
         {
             switch (keyData)
             {
-       /*         case Keys.F1:
-                    BenutzerHandbuch();
-                    break;
-                case Keys.F2:
-                    VideoTutorial();
-                    break;
-                case (Keys.Alt | Keys.E):
-                    ChangeLanguage("englisch");
-                    englischToolStripMenuItem1.Checked = true;
-                    deutschToolStripMenuItem1.Checked = false;
-                    break;
-                case (Keys.Alt | Keys.D):
-                    ChangeLanguage("deutsch");
-                    englischToolStripMenuItem1.Checked = false;
-                    deutschToolStripMenuItem1.Checked = true;
-                    break;
-                case (Keys.Control | Keys.E):
-                    var einstellungen = new Einstellungen();
-                    einstellungen.Show();
-                    break;
-                case (Keys.Alt | Keys.F4):
-                    Close();
-                    break;*/
+                /*         case Keys.F1:
+                             BenutzerHandbuch();
+                             break;
+                         case Keys.F2:
+                             VideoTutorial();
+                             break;
+                         case (Keys.Alt | Keys.E):
+                             ChangeLanguage("englisch");
+                             englischToolStripMenuItem1.Checked = true;
+                             deutschToolStripMenuItem1.Checked = false;
+                             break;
+                         case (Keys.Alt | Keys.D):
+                             ChangeLanguage("deutsch");
+                             englischToolStripMenuItem1.Checked = false;
+                             deutschToolStripMenuItem1.Checked = true;
+                             break;
+                         case (Keys.Control | Keys.E):
+                             var einstellungen = new Einstellungen();
+                             einstellungen.Show();
+                             break;
+                         case (Keys.Alt | Keys.F4):
+                             Close();
+                             break;*/
                 case (Keys.Control | Keys.E):
                     var einstellungen = new Einstellungen();
                     tabs.SelectedTab = tab_einstellungen;
@@ -1264,8 +1275,8 @@ namespace ToolFahrrad_v1.Design
         {
             bildSpeichOk.Visible = false;
             _okPrognose = false;
-//            toolAusfueren.Visible = false;
-//            save.Visible = false;
+            //            toolAusfueren.Visible = false;
+            //            save.Visible = false;
         }
         private void DataGriedViewRemove(DataGridView dgv)
         {
@@ -1831,7 +1842,7 @@ namespace ToolFahrrad_v1.Design
             this.AllowDrop = true;
             this.DragEnter += xml_DragEnter;
             this.DragDrop += xml_DragDrop;
-           
+
         }
 
         private void xml_DragEnter(object sender, DragEventArgs e)
@@ -1924,16 +1935,16 @@ namespace ToolFahrrad_v1.Design
                                        MessageBoxButtons.OK, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button1);
 
                                 }
-                                
+
                             }
                             else
                             {
                                 MessageBox.Show("XML wurde bereits importiert! Import abgebrochen", "Fehler",
                                      MessageBoxButtons.OK, MessageBoxIcon.Error);
                             }
-                            
+
                         }
-                        
+
                     }
                 }
             }
@@ -1973,7 +1984,7 @@ namespace ToolFahrrad_v1.Design
 
         private void btn_ok_Click(object sender, EventArgs e)
         {
-            if (radio_risk_afin.Checked) 
+            if (radio_risk_afin.Checked)
             {
                 _instance.VerwendeAbweichung = 100;
             }
@@ -1981,11 +1992,11 @@ namespace ToolFahrrad_v1.Design
             {
                 _instance.VerwendeAbweichung = 50;
             }
-            else 
+            else
             {
                 _instance.VerwendeAbweichung = 0;
             }
-//            panel_change_risk_success.Visible = true;
+            //            panel_change_risk_success.Visible = true;
         }
 
         private void btn_change_language_Click(object sender, EventArgs e)
@@ -1994,7 +2005,7 @@ namespace ToolFahrrad_v1.Design
             {
                 ChangeLanguage("deutsch");
             }
-            else 
+            else
             {
                 ChangeLanguage("englisch");
             }
@@ -2006,7 +2017,7 @@ namespace ToolFahrrad_v1.Design
             _instance.GrenzeMenge = Convert.ToDouble(mengeGrenze.Value);
             _instance.VerwendeDiskount = (double)numericUpDown3.Value * 10;
 
-//            panel6.Visible = true;
+            //            panel6.Visible = true;
         }
 
         private void btn_schicht_save_Click(object sender, EventArgs e)
@@ -2014,7 +2025,7 @@ namespace ToolFahrrad_v1.Design
             _instance.ErsteSchichtMitUeberStunden = (int)numericUpDown1.Value;
             _instance.ZweiteSchichtMitUeberstunden = (int)numericUpDown2.Value;
 
-//            panel4.Visible = true;
+            //            panel4.Visible = true;
         }
 
         private void hilfeToolStripMenuItem_Click(object sender, EventArgs e)
@@ -2054,10 +2065,10 @@ namespace ToolFahrrad_v1.Design
             {
                 List<FormField> fields = MarketPlaceGrid.Rows[e.RowIndex].Cells[5].Value as List<FormField>;
                 Credentials credentials = LoadCredentials();
-                DialogResult dialog = System.Windows.Forms.MessageBox.Show(String.Format("Ein klick auf \"Ja\" kauft {0}mal Artikel {1} für {2}GE auf dem Marktplatz. Sicher, dass du das willst?", 
-                    MarketPlaceGrid.Rows[e.RowIndex].Cells[2].Value, 
-                    MarketPlaceGrid.Rows[e.RowIndex].Cells[1].Value, 
-                    MarketPlaceGrid.Rows[e.RowIndex].Cells[3].Value), 
+                DialogResult dialog = System.Windows.Forms.MessageBox.Show(String.Format("Ein klick auf \"Ja\" kauft {0}mal Artikel {1} für {2}GE auf dem Marktplatz. Sicher, dass du das willst?",
+                    MarketPlaceGrid.Rows[e.RowIndex].Cells[2].Value,
+                    MarketPlaceGrid.Rows[e.RowIndex].Cells[1].Value,
+                    MarketPlaceGrid.Rows[e.RowIndex].Cells[3].Value),
                     "Sicherheitsabfrage", MessageBoxButtons.YesNo);
                 if (dialog == DialogResult.Yes)
                 {
@@ -2065,7 +2076,7 @@ namespace ToolFahrrad_v1.Design
                     Get_Market_Place(credentials);
                 }
             }
-            
+
         }
 
         private void dta_Gesuche_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -2135,7 +2146,15 @@ namespace ToolFahrrad_v1.Design
 
         }
 
+        private void dataGridViewBestellung_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            ReiheLoeschenBestellung(sender, e);
+        }
 
+        private void dataGridViewBestellung_UserAddedRow(object sender, DataGridViewRowEventArgs e)
+        {
+            AddRowToBestellungen(sender, e);
+        }
     }
 }
 
