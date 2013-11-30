@@ -330,92 +330,83 @@
   <data name="&gt;&gt;tab_P3.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <metadata name="dataGridViewTextBoxColumn1.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <data name="label287.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
-  </metadata>
-  <data name="dataGridViewTextBoxColumn1.HeaderText" xml:space="preserve">
-    <value>Nr.</value>
   </data>
-  <data name="dataGridViewTextBoxColumn1.ToolTipText" xml:space="preserve">
-    <value>Nummer des Teils</value>
+  <data name="label287.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Lucida Sans Unicode, 9pt</value>
   </data>
-  <data name="dataGridViewTextBoxColumn1.Width" type="System.Int32, mscorlib">
-    <value>50</value>
+  <data name="label287.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
-  <metadata name="dataGridViewTextBoxColumn2.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="dataGridViewTextBoxColumn2.HeaderText" xml:space="preserve">
-    <value>Bezeichnung</value>
-  </data>
-  <metadata name="dataGridViewTextBoxColumn3.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="dataGridViewTextBoxColumn3.HeaderText" xml:space="preserve">
-    <value>Lagerbestand</value>
-  </data>
-  <data name="dataGridViewTextBoxColumn3.Width" type="System.Int32, mscorlib">
-    <value>80</value>
-  </data>
-  <metadata name="dataGridViewTextBoxColumn4.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="dataGridViewTextBoxColumn4.HeaderText" xml:space="preserve">
-    <value>Prozentual</value>
-  </data>
-  <data name="dataGridViewTextBoxColumn4.Width" type="System.Int32, mscorlib">
-    <value>70</value>
-  </data>
-  <metadata name="dataGridViewImageColumn1.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="dataGridViewImageColumn1.HeaderText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="dataGridViewImageColumn1.ToolTipText" xml:space="preserve">
-    <value>rot &lt; 40% ; gelb &gt; 100% ; grün &lt;= 100%</value>
-  </data>
-  <data name="dataGridViewImageColumn1.Width" type="System.Int32, mscorlib">
-    <value>19</value>
-  </data>
-  <metadata name="colWarteschlange.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="colWarteschlange.HeaderText" xml:space="preserve">
-    <value>Warteschlange</value>
-  </data>
-  <data name="colWarteschlange.Width" type="System.Int32, mscorlib">
-    <value>80</value>
-  </data>
-  <metadata name="colBearbeitung.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="colBearbeitung.HeaderText" xml:space="preserve">
-    <value>Bearbeitung</value>
-  </data>
-  <data name="colBearbeitung.Width" type="System.Int32, mscorlib">
-    <value>70</value>
-  </data>
-  <metadata name="colPlanung.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="colPlanung.HeaderText" xml:space="preserve">
-    <value>Planung</value>
-  </data>
-  <data name="colPlanung.Width" type="System.Int32, mscorlib">
-    <value>70</value>
-  </data>
-  <data name="dataGridViewETeil.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="dataGridViewETeil.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 3</value>
+  <data name="label287.Location" type="System.Drawing.Point, System.Drawing">
+    <value>681, 32</value>
   </data>
   <metadata name="helpProvider1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>619, 19</value>
   </metadata>
   <data name="helpProvider1.HelpNamespace" xml:space="preserve">
     <value>E:\Server\Projecte C#\GIT\tool2\ToolFahrrad-v1\bin\Debug\chm\Benutzerhandbuch.chm</value>
+  </data>
+  <data name="label287.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label287.Size" type="System.Drawing.Size, System.Drawing">
+    <value>141, 16</value>
+  </data>
+  <data name="label287.TabIndex" type="System.Int32, mscorlib">
+    <value>178</value>
+  </data>
+  <data name="label287.Text" xml:space="preserve">
+    <value>* Mehrfachverwendung</value>
+  </data>
+  <data name="&gt;&gt;label287.Name" xml:space="preserve">
+    <value>label287</value>
+  </data>
+  <data name="&gt;&gt;label287.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label287.Parent" xml:space="preserve">
+    <value>tab_eTeil</value>
+  </data>
+  <data name="&gt;&gt;label287.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <metadata name="dataGridViewTextBoxColumn1.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="KinderFahrradColumn.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="DamenFahrradColumn.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="HerrenFahrradColumn.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="dataGridViewTextBoxColumn2.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="dataGridViewTextBoxColumn3.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="dataGridViewTextBoxColumn4.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="colWarteschlange.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="colBearbeitung.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="colPlanung.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="dataGridViewETeil.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="dataGridViewETeil.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 3</value>
   </data>
   <data name="dataGridViewETeil.ShowHelp" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -436,7 +427,7 @@
     <value>tab_eTeil</value>
   </data>
   <data name="&gt;&gt;dataGridViewETeil.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="tab_eTeil.Location" type="System.Drawing.Point, System.Drawing">
     <value>4, 22</value>
@@ -514,7 +505,7 @@
     <value>True</value>
   </data>
   <data name="tabPage1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>865, 340</value>
+    <value>865, 474</value>
   </data>
   <data name="tabPage1.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
@@ -5819,6 +5810,42 @@ Reserve</value>
     <value>tab_P1</value>
   </data>
   <data name="&gt;&gt;panel1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="label_mehrfachverwendung_p1.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label_mehrfachverwendung_p1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Lucida Sans Unicode, 9pt</value>
+  </data>
+  <data name="label_mehrfachverwendung_p1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label_mehrfachverwendung_p1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>24, 317</value>
+  </data>
+  <data name="label_mehrfachverwendung_p1.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label_mehrfachverwendung_p1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>141, 16</value>
+  </data>
+  <data name="label_mehrfachverwendung_p1.TabIndex" type="System.Int32, mscorlib">
+    <value>176</value>
+  </data>
+  <data name="label_mehrfachverwendung_p1.Text" xml:space="preserve">
+    <value>* Mehrfachverwendung</value>
+  </data>
+  <data name="&gt;&gt;label_mehrfachverwendung_p1.Name" xml:space="preserve">
+    <value>label_mehrfachverwendung_p1</value>
+  </data>
+  <data name="&gt;&gt;label_mehrfachverwendung_p1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label_mehrfachverwendung_p1.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;label_mehrfachverwendung_p1.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <data name="label91.AutoSize" type="System.Boolean, mscorlib">
@@ -13639,6 +13666,42 @@ bestand</value>
     <value>tab_P2</value>
   </data>
   <data name="&gt;&gt;panel2.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="label_mehrfachverwendung_p2.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label_mehrfachverwendung_p2.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Lucida Sans Unicode, 9pt</value>
+  </data>
+  <data name="label_mehrfachverwendung_p2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label_mehrfachverwendung_p2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>24, 317</value>
+  </data>
+  <data name="label_mehrfachverwendung_p2.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label_mehrfachverwendung_p2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>141, 16</value>
+  </data>
+  <data name="label_mehrfachverwendung_p2.TabIndex" type="System.Int32, mscorlib">
+    <value>177</value>
+  </data>
+  <data name="label_mehrfachverwendung_p2.Text" xml:space="preserve">
+    <value>* Mehrfachverwendung</value>
+  </data>
+  <data name="&gt;&gt;label_mehrfachverwendung_p2.Name" xml:space="preserve">
+    <value>label_mehrfachverwendung_p2</value>
+  </data>
+  <data name="&gt;&gt;label_mehrfachverwendung_p2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label_mehrfachverwendung_p2.Parent" xml:space="preserve">
+    <value>panel2</value>
+  </data>
+  <data name="&gt;&gt;label_mehrfachverwendung_p2.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <data name="p2ETAusfueren.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
@@ -21488,6 +21551,42 @@ bestand</value>
   <data name="&gt;&gt;panel3.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <data name="label_mehrfachverwendung_p3.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label_mehrfachverwendung_p3.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Lucida Sans Unicode, 9pt</value>
+  </data>
+  <data name="label_mehrfachverwendung_p3.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label_mehrfachverwendung_p3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>24, 317</value>
+  </data>
+  <data name="label_mehrfachverwendung_p3.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label_mehrfachverwendung_p3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>141, 16</value>
+  </data>
+  <data name="label_mehrfachverwendung_p3.TabIndex" type="System.Int32, mscorlib">
+    <value>178</value>
+  </data>
+  <data name="label_mehrfachverwendung_p3.Text" xml:space="preserve">
+    <value>* Mehrfachverwendung</value>
+  </data>
+  <data name="&gt;&gt;label_mehrfachverwendung_p3.Name" xml:space="preserve">
+    <value>label_mehrfachverwendung_p3</value>
+  </data>
+  <data name="&gt;&gt;label_mehrfachverwendung_p3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label_mehrfachverwendung_p3.Parent" xml:space="preserve">
+    <value>panel3</value>
+  </data>
+  <data name="&gt;&gt;label_mehrfachverwendung_p3.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="p3ETAusfueren.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29m
@@ -27220,6 +27319,102 @@ bestand</value>
   <data name="&gt;&gt;p3vw_0.ZOrder" xml:space="preserve">
     <value>173</value>
   </data>
+  <metadata name="dataGridViewTextBoxColumn1.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="dataGridViewTextBoxColumn1.HeaderText" xml:space="preserve">
+    <value>Nr.</value>
+  </data>
+  <data name="dataGridViewTextBoxColumn1.ToolTipText" xml:space="preserve">
+    <value>Nummer des Teils</value>
+  </data>
+  <data name="dataGridViewTextBoxColumn1.Width" type="System.Int32, mscorlib">
+    <value>50</value>
+  </data>
+  <metadata name="KinderFahrradColumn.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="KinderFahrradColumn.HeaderText" xml:space="preserve">
+    <value>K</value>
+  </data>
+  <data name="KinderFahrradColumn.Width" type="System.Int32, mscorlib">
+    <value>20</value>
+  </data>
+  <metadata name="DamenFahrradColumn.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="DamenFahrradColumn.HeaderText" xml:space="preserve">
+    <value>D</value>
+  </data>
+  <data name="DamenFahrradColumn.Width" type="System.Int32, mscorlib">
+    <value>20</value>
+  </data>
+  <metadata name="HerrenFahrradColumn.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="HerrenFahrradColumn.HeaderText" xml:space="preserve">
+    <value>H</value>
+  </data>
+  <data name="HerrenFahrradColumn.Width" type="System.Int32, mscorlib">
+    <value>20</value>
+  </data>
+  <metadata name="dataGridViewTextBoxColumn2.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="dataGridViewTextBoxColumn2.HeaderText" xml:space="preserve">
+    <value>Bezeichnung</value>
+  </data>
+  <metadata name="dataGridViewTextBoxColumn3.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="dataGridViewTextBoxColumn3.HeaderText" xml:space="preserve">
+    <value>Lagerbestand</value>
+  </data>
+  <data name="dataGridViewTextBoxColumn3.Width" type="System.Int32, mscorlib">
+    <value>80</value>
+  </data>
+  <metadata name="dataGridViewTextBoxColumn4.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="dataGridViewTextBoxColumn4.HeaderText" xml:space="preserve">
+    <value>Prozentual</value>
+  </data>
+  <data name="dataGridViewTextBoxColumn4.Width" type="System.Int32, mscorlib">
+    <value>70</value>
+  </data>
+  <data name="dataGridViewTextBoxStatusIndicator.HeaderText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="dataGridViewTextBoxStatusIndicator.Width" type="System.Int32, mscorlib">
+    <value>20</value>
+  </data>
+  <metadata name="colWarteschlange.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="colWarteschlange.HeaderText" xml:space="preserve">
+    <value>Warteschlange</value>
+  </data>
+  <data name="colWarteschlange.Width" type="System.Int32, mscorlib">
+    <value>90</value>
+  </data>
+  <metadata name="colBearbeitung.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="colBearbeitung.HeaderText" xml:space="preserve">
+    <value>Bearbeitung</value>
+  </data>
+  <data name="colBearbeitung.Width" type="System.Int32, mscorlib">
+    <value>70</value>
+  </data>
+  <metadata name="colPlanung.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="colPlanung.HeaderText" xml:space="preserve">
+    <value>Planung</value>
+  </data>
+  <data name="colPlanung.Width" type="System.Int32, mscorlib">
+    <value>70</value>
+  </data>
   <data name="pictureBox4.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29m
@@ -32004,7 +32199,7 @@ Afin = keine Abweichung.</value>
         AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
         LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
         ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAABS
-        CwAAAk1TRnQBSQFMAgEBAwEAAQgBBgEIAQYBEAEAARABAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
+        CwAAAk1TRnQBSQFMAgEBAwEAATgBBgE4AQYBEAEAARABAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
         AwABQAMAARADAAEBAQABCAYAAQQYAAGAAgABgAMAAoABAAGAAwABgAEAAYABAAKAAgADwAEAAcAB3AHA
         AQAB8AHKAaYBAAEzBQABMwEAATMBAAEzAQACMwIAAxYBAAMcAQADIgEAAykBAANVAQADTQEAA0IBAAM5
         AQABgAF8Af8BAAJQAf8BAAGTAQAB1gEAAf8B7AHMAQABxgHWAe8BAAHWAucBAAGQAakBrQIAAf8BMwMA
@@ -32303,7 +32498,7 @@ Afin = keine Abweichung.</value>
         AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
         LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
         ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAAAM
-        CAAAAk1TRnQBSQFMAgEBAgEAAcgBAwHIAQMBEAEAARABAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
+        CAAAAk1TRnQBSQFMAgEBAgEAAfgBAwH4AQMBEAEAARABAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
         AwABQAMAARADAAEBAQABCAYAAQQYAAGAAgABgAMAAoABAAGAAwABgAEAAYABAAKAAgADwAEAAcAB3AHA
         AQAB8AHKAaYBAAEzBQABMwEAATMBAAEzAQACMwIAAxYBAAMcAQADIgEAAykBAANVAQADTQEAA0IBAAM5
         AQABgAF8Af8BAAJQAf8BAAGTAQAB1gEAAf8B7AHMAQABxgHWAe8BAAHWAucBAAGQAakBrQIAAf8BMwMA
@@ -32409,114 +32604,6 @@ Afin = keine Abweichung.</value>
   <metadata name="backgroundWorker1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 58</value>
   </metadata>
-  <data name="label_mehrfachverwendung_p1.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="label_mehrfachverwendung_p1.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Lucida Sans Unicode, 9pt</value>
-  </data>
-  <data name="label_mehrfachverwendung_p1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="label_mehrfachverwendung_p1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>24, 317</value>
-  </data>
-  <data name="label_mehrfachverwendung_p1.ShowHelp" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="label_mehrfachverwendung_p1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>141, 16</value>
-  </data>
-  <data name="label_mehrfachverwendung_p1.TabIndex" type="System.Int32, mscorlib">
-    <value>176</value>
-  </data>
-  <data name="label_mehrfachverwendung_p1.Text" xml:space="preserve">
-    <value>* Mehrfachverwendung</value>
-  </data>
-  <data name="&gt;&gt;label_mehrfachverwendung_p1.Name" xml:space="preserve">
-    <value>label_mehrfachverwendung_p1</value>
-  </data>
-  <data name="&gt;&gt;label_mehrfachverwendung_p1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label_mehrfachverwendung_p1.Parent" xml:space="preserve">
-    <value>panel1</value>
-  </data>
-  <data name="&gt;&gt;label_mehrfachverwendung_p1.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="label_mehrfachverwendung_p2.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="label_mehrfachverwendung_p2.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Lucida Sans Unicode, 9pt</value>
-  </data>
-  <data name="label_mehrfachverwendung_p2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="label_mehrfachverwendung_p2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>24, 317</value>
-  </data>
-  <data name="label_mehrfachverwendung_p2.ShowHelp" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="label_mehrfachverwendung_p2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>141, 16</value>
-  </data>
-  <data name="label_mehrfachverwendung_p2.TabIndex" type="System.Int32, mscorlib">
-    <value>177</value>
-  </data>
-  <data name="label_mehrfachverwendung_p2.Text" xml:space="preserve">
-    <value>* Mehrfachverwendung</value>
-  </data>
-  <data name="&gt;&gt;label_mehrfachverwendung_p2.Name" xml:space="preserve">
-    <value>label_mehrfachverwendung_p2</value>
-  </data>
-  <data name="&gt;&gt;label_mehrfachverwendung_p2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label_mehrfachverwendung_p2.Parent" xml:space="preserve">
-    <value>panel2</value>
-  </data>
-  <data name="&gt;&gt;label_mehrfachverwendung_p2.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="label_mehrfachverwendung_p3.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="label_mehrfachverwendung_p3.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Lucida Sans Unicode, 9pt</value>
-  </data>
-  <data name="label_mehrfachverwendung_p3.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="label_mehrfachverwendung_p3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>24, 317</value>
-  </data>
-  <data name="label_mehrfachverwendung_p3.ShowHelp" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="label_mehrfachverwendung_p3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>141, 16</value>
-  </data>
-  <data name="label_mehrfachverwendung_p3.TabIndex" type="System.Int32, mscorlib">
-    <value>178</value>
-  </data>
-  <data name="label_mehrfachverwendung_p3.Text" xml:space="preserve">
-    <value>* Mehrfachverwendung</value>
-  </data>
-  <data name="&gt;&gt;label_mehrfachverwendung_p3.Name" xml:space="preserve">
-    <value>label_mehrfachverwendung_p3</value>
-  </data>
-  <data name="&gt;&gt;label_mehrfachverwendung_p3.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label_mehrfachverwendung_p3.Parent" xml:space="preserve">
-    <value>panel3</value>
-  </data>
-  <data name="&gt;&gt;label_mehrfachverwendung_p3.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -34427,6 +34514,24 @@ Afin = keine Abweichung.</value>
   <data name="&gt;&gt;dataGridViewTextBoxColumn1.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="&gt;&gt;KinderFahrradColumn.Name" xml:space="preserve">
+    <value>KinderFahrradColumn</value>
+  </data>
+  <data name="&gt;&gt;KinderFahrradColumn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;DamenFahrradColumn.Name" xml:space="preserve">
+    <value>DamenFahrradColumn</value>
+  </data>
+  <data name="&gt;&gt;DamenFahrradColumn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;HerrenFahrradColumn.Name" xml:space="preserve">
+    <value>HerrenFahrradColumn</value>
+  </data>
+  <data name="&gt;&gt;HerrenFahrradColumn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="&gt;&gt;dataGridViewTextBoxColumn2.Name" xml:space="preserve">
     <value>dataGridViewTextBoxColumn2</value>
   </data>
@@ -34445,11 +34550,11 @@ Afin = keine Abweichung.</value>
   <data name="&gt;&gt;dataGridViewTextBoxColumn4.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;dataGridViewImageColumn1.Name" xml:space="preserve">
-    <value>dataGridViewImageColumn1</value>
+  <data name="&gt;&gt;dataGridViewTextBoxStatusIndicator.Name" xml:space="preserve">
+    <value>dataGridViewTextBoxStatusIndicator</value>
   </data>
-  <data name="&gt;&gt;dataGridViewImageColumn1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewImageColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;dataGridViewTextBoxStatusIndicator.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;colWarteschlange.Name" xml:space="preserve">
     <value>colWarteschlange</value>

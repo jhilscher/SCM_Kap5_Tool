@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Fahrrad));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -43,6 +42,7 @@
             System.Windows.Forms.DataVisualization.Charting.Series series7 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.Windows.Forms.DataVisualization.Charting.Series series8 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.Windows.Forms.DataVisualization.Charting.Title title2 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Fahrrad));
             this.tabs = new System.Windows.Forms.TabControl();
             this.tab_xml = new System.Windows.Forms.TabPage();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
@@ -87,6 +87,7 @@
             this.tab1 = new System.Windows.Forms.TabControl();
             this.tab_P1 = new System.Windows.Forms.TabPage();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label_mehrfachverwendung_p1 = new System.Windows.Forms.Label();
             this.label91 = new System.Windows.Forms.Label();
             this.label90 = new System.Windows.Forms.Label();
             this.label89 = new System.Windows.Forms.Label();
@@ -262,6 +263,7 @@
             this.p1ETAusfueren = new System.Windows.Forms.PictureBox();
             this.tab_P2 = new System.Windows.Forms.TabPage();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label_mehrfachverwendung_p2 = new System.Windows.Forms.Label();
             this.p2ETAusfueren = new System.Windows.Forms.PictureBox();
             this.label92 = new System.Windows.Forms.Label();
             this.label93 = new System.Windows.Forms.Label();
@@ -437,6 +439,7 @@
             this.p2vw_0 = new System.Windows.Forms.TextBox();
             this.tab_P3 = new System.Windows.Forms.TabPage();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.label_mehrfachverwendung_p3 = new System.Windows.Forms.Label();
             this.p3ETAusfueren = new System.Windows.Forms.PictureBox();
             this.label181 = new System.Windows.Forms.Label();
             this.label182 = new System.Windows.Forms.Label();
@@ -613,10 +616,13 @@
             this.tab_eTeil = new System.Windows.Forms.TabPage();
             this.dataGridViewETeil = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.KinderFahrradColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DamenFahrradColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.HerrenFahrradColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.dataGridViewTextBoxStatusIndicator = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colWarteschlange = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colBearbeitung = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colPlanung = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -839,9 +845,7 @@
             this.NavPanel = new System.Windows.Forms.Panel();
             this.nav_button_1 = new System.Windows.Forms.Button();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.label_mehrfachverwendung_p1 = new System.Windows.Forms.Label();
-            this.label_mehrfachverwendung_p2 = new System.Windows.Forms.Label();
-            this.label_mehrfachverwendung_p3 = new System.Windows.Forms.Label();
+            this.label287 = new System.Windows.Forms.Label();
             this.tabs.SuspendLayout();
             this.tab_xml.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
@@ -1597,6 +1601,12 @@
             this.panel1.Name = "panel1";
             this.helpProvider1.SetShowHelp(this.panel1, ((bool)(resources.GetObject("panel1.ShowHelp"))));
             this.toolTip.SetToolTip(this.panel1, resources.GetString("panel1.ToolTip"));
+            // 
+            // label_mehrfachverwendung_p1
+            // 
+            resources.ApplyResources(this.label_mehrfachverwendung_p1, "label_mehrfachverwendung_p1");
+            this.label_mehrfachverwendung_p1.Name = "label_mehrfachverwendung_p1";
+            this.helpProvider1.SetShowHelp(this.label_mehrfachverwendung_p1, ((bool)(resources.GetObject("label_mehrfachverwendung_p1.ShowHelp"))));
             // 
             // label91
             // 
@@ -3195,6 +3205,12 @@
             this.helpProvider1.SetShowHelp(this.panel2, ((bool)(resources.GetObject("panel2.ShowHelp"))));
             this.toolTip.SetToolTip(this.panel2, resources.GetString("panel2.ToolTip"));
             // 
+            // label_mehrfachverwendung_p2
+            // 
+            resources.ApplyResources(this.label_mehrfachverwendung_p2, "label_mehrfachverwendung_p2");
+            this.label_mehrfachverwendung_p2.Name = "label_mehrfachverwendung_p2";
+            this.helpProvider1.SetShowHelp(this.label_mehrfachverwendung_p2, ((bool)(resources.GetObject("label_mehrfachverwendung_p2.ShowHelp"))));
+            // 
             // p2ETAusfueren
             // 
             this.p2ETAusfueren.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -4791,6 +4807,12 @@
             this.panel3.Name = "panel3";
             this.helpProvider1.SetShowHelp(this.panel3, ((bool)(resources.GetObject("panel3.ShowHelp"))));
             // 
+            // label_mehrfachverwendung_p3
+            // 
+            resources.ApplyResources(this.label_mehrfachverwendung_p3, "label_mehrfachverwendung_p3");
+            this.label_mehrfachverwendung_p3.Name = "label_mehrfachverwendung_p3";
+            this.helpProvider1.SetShowHelp(this.label_mehrfachverwendung_p3, ((bool)(resources.GetObject("label_mehrfachverwendung_p3.ShowHelp"))));
+            // 
             // p3ETAusfueren
             // 
             this.p3ETAusfueren.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -6201,6 +6223,7 @@
             // tab_eTeil
             // 
             this.tab_eTeil.BackColor = System.Drawing.Color.Transparent;
+            this.tab_eTeil.Controls.Add(this.label287);
             this.tab_eTeil.Controls.Add(this.dataGridViewETeil);
             resources.ApplyResources(this.tab_eTeil, "tab_eTeil");
             this.tab_eTeil.Name = "tab_eTeil";
@@ -6215,10 +6238,13 @@
             this.dataGridViewETeil.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewETeil.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
+            this.KinderFahrradColumn,
+            this.DamenFahrradColumn,
+            this.HerrenFahrradColumn,
             this.dataGridViewTextBoxColumn2,
             this.dataGridViewTextBoxColumn3,
             this.dataGridViewTextBoxColumn4,
-            this.dataGridViewImageColumn1,
+            this.dataGridViewTextBoxStatusIndicator,
             this.colWarteschlange,
             this.colBearbeitung,
             this.colPlanung});
@@ -6232,6 +6258,21 @@
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
             this.dataGridViewTextBoxColumn1.ReadOnly = true;
             this.dataGridViewTextBoxColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            // 
+            // KinderFahrradColumn
+            // 
+            resources.ApplyResources(this.KinderFahrradColumn, "KinderFahrradColumn");
+            this.KinderFahrradColumn.Name = "KinderFahrradColumn";
+            // 
+            // DamenFahrradColumn
+            // 
+            resources.ApplyResources(this.DamenFahrradColumn, "DamenFahrradColumn");
+            this.DamenFahrradColumn.Name = "DamenFahrradColumn";
+            // 
+            // HerrenFahrradColumn
+            // 
+            resources.ApplyResources(this.HerrenFahrradColumn, "HerrenFahrradColumn");
+            this.HerrenFahrradColumn.Name = "HerrenFahrradColumn";
             // 
             // dataGridViewTextBoxColumn2
             // 
@@ -6251,12 +6292,11 @@
             this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
             this.dataGridViewTextBoxColumn4.ReadOnly = true;
             // 
-            // dataGridViewImageColumn1
+            // dataGridViewTextBoxStatusIndicator
             // 
-            resources.ApplyResources(this.dataGridViewImageColumn1, "dataGridViewImageColumn1");
-            this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
-            this.dataGridViewImageColumn1.ReadOnly = true;
-            this.dataGridViewImageColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            resources.ApplyResources(this.dataGridViewTextBoxStatusIndicator, "dataGridViewTextBoxStatusIndicator");
+            this.dataGridViewTextBoxStatusIndicator.Name = "dataGridViewTextBoxStatusIndicator";
+            this.dataGridViewTextBoxStatusIndicator.ReadOnly = true;
             // 
             // colWarteschlange
             // 
@@ -8119,23 +8159,11 @@
             this.nav_button_1.UseVisualStyleBackColor = false;
             this.nav_button_1.Click += new System.EventHandler(this.nav_button_1_Click);
             // 
-            // label_mehrfachverwendung_p1
+            // label287
             // 
-            resources.ApplyResources(this.label_mehrfachverwendung_p1, "label_mehrfachverwendung_p1");
-            this.label_mehrfachverwendung_p1.Name = "label_mehrfachverwendung_p1";
-            this.helpProvider1.SetShowHelp(this.label_mehrfachverwendung_p1, ((bool)(resources.GetObject("label_mehrfachverwendung_p1.ShowHelp"))));
-            // 
-            // label_mehrfachverwendung_p2
-            // 
-            resources.ApplyResources(this.label_mehrfachverwendung_p2, "label_mehrfachverwendung_p2");
-            this.label_mehrfachverwendung_p2.Name = "label_mehrfachverwendung_p2";
-            this.helpProvider1.SetShowHelp(this.label_mehrfachverwendung_p2, ((bool)(resources.GetObject("label_mehrfachverwendung_p2.ShowHelp"))));
-            // 
-            // label_mehrfachverwendung_p3
-            // 
-            resources.ApplyResources(this.label_mehrfachverwendung_p3, "label_mehrfachverwendung_p3");
-            this.label_mehrfachverwendung_p3.Name = "label_mehrfachverwendung_p3";
-            this.helpProvider1.SetShowHelp(this.label_mehrfachverwendung_p3, ((bool)(resources.GetObject("label_mehrfachverwendung_p3.ShowHelp"))));
+            resources.ApplyResources(this.label287, "label287");
+            this.label287.Name = "label287";
+            this.helpProvider1.SetShowHelp(this.label287, ((bool)(resources.GetObject("label287.ShowHelp"))));
             // 
             // Fahrrad
             // 
@@ -8190,6 +8218,7 @@
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.p3ETAusfueren)).EndInit();
             this.tab_eTeil.ResumeLayout(false);
+            this.tab_eTeil.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewETeil)).EndInit();
             this.tabPage1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
@@ -8847,14 +8876,6 @@
         private System.Windows.Forms.DataGridView dataGridViewDirektverkauf;
         private System.Windows.Forms.CheckBox dvVerwenden;
         private System.Windows.Forms.SaveFileDialog saveFileDialog1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colWarteschlange;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colBearbeitung;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colPlanung;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.DataGridView dataGridViewProduktAuftrag;
         private System.Windows.Forms.PictureBox pictureBox4;
@@ -9070,6 +9091,18 @@
         private System.Windows.Forms.Label label_mehrfachverwendung_p1;
         private System.Windows.Forms.Label label_mehrfachverwendung_p2;
         private System.Windows.Forms.Label label_mehrfachverwendung_p3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn KinderFahrradColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DamenFahrradColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn HerrenFahrradColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxStatusIndicator;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colWarteschlange;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colBearbeitung;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colPlanung;
+        private System.Windows.Forms.Label label287;
         
     }
 }

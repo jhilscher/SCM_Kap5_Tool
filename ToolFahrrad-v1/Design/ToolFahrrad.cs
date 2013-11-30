@@ -247,34 +247,100 @@ namespace ToolFahrrad_v1.Design
             foreach (var a in _instance.ListeETeile)
             {
                 dataGridViewETeil.Rows.Add();
-                dataGridViewETeil.Rows[index].Cells[0].Value = a.Nummer;
-                dataGridViewETeil.Rows[index].Cells[1].Value = a.Verwendung + " - " + a.Bezeichnung;
-                dataGridViewETeil.Rows[index].Cells[2].Value = a.Lagerstand;
-                dataGridViewETeil.Rows[index].Cells[3].Value = a.Verhaeltnis + "%";
-                if (a.Verhaeltnis < 40)
-                    dataGridViewETeil.Rows[index].Cells[4].Value = imageListAmpel.Images[0];
-                else if (a.Verhaeltnis <= 100)
-                    dataGridViewETeil.Rows[index].Cells[4].Value = imageListAmpel.Images[2];
+
+                int countETeileColumns = dataGridViewETeil.ColumnCount;
+
+                //Farbe
+                for (int i = 0; i < countETeileColumns; ++i)
+                {
+                    if (i == (countETeileColumns - 1))
+                    {
+                        if (a.Verwendung.Equals("KDH"))
+                        {
+                            dataGridViewETeil.Rows[index].Cells[i].Style.BackColor = Color.MediumSeaGreen;
+                        }
+                        else
+                        {
+                            dataGridViewETeil.Rows[index].Cells[i].Style.BackColor = Color.PaleGreen;
+                        }
+                    }
+                    else
+                    {
+                        if (a.Verwendung.Equals("KDH"))
+                        {
+                            dataGridViewETeil.Rows[index].Cells[i].Style.BackColor = Color.LightGray;
+                        }
+                        else
+                        {
+                            dataGridViewETeil.Rows[index].Cells[i].Style.BackColor = Color.White;
+                        }
+                    }
+                }
+                
+                // Data
+
+                if (a.Nummer.Equals(1) || a.Nummer.Equals(2) || a.Nummer.Equals(3))
+                {
+                    dataGridViewETeil.Rows[index].Cells[0].Value = "P " + a.Nummer;
+                }
                 else
-                    dataGridViewETeil.Rows[index].Cells[4].Value = imageListAmpel.Images[1];
-                dataGridViewETeil.Rows[index].Cells[5].Value = a.InWartschlange;
-                dataGridViewETeil.Rows[index].Cells[6].Value = a.InBearbeitung;
+                {
+                    if (a.Verwendung.Equals("KDH"))
+                    {
+                        dataGridViewETeil.Rows[index].Cells[0].Value = "E " + a.Nummer + " *";
+                    }
+                    else
+                    {
+                        dataGridViewETeil.Rows[index].Cells[0].Value = "E " + a.Nummer;
+                    }
+                }
+
+                // K Spalte
+                if (a.Verwendung.Contains("K"))
+                {
+                    dataGridViewETeil.Rows[index].Cells[1].Value = " x";
+                }
+
+                // D Spalte
+                if (a.Verwendung.Contains("D"))
+                {
+                    dataGridViewETeil.Rows[index].Cells[2].Value = " x";
+                }
+
+                // H Spalte
+                if (a.Verwendung.Contains("H"))
+                {
+                    dataGridViewETeil.Rows[index].Cells[3].Value = " x";
+                }
+
+                dataGridViewETeil.Rows[index].Cells[4].Value = a.Bezeichnung;
+                dataGridViewETeil.Rows[index].Cells[5].Value = a.Lagerstand;
+                dataGridViewETeil.Rows[index].Cells[6].Value = a.Verhaeltnis + "%";
+
+                if (a.Verhaeltnis < 40) {
+                    dataGridViewETeil.Rows[index].Cells[7].Value = "";
+                    dataGridViewETeil.Rows[index].Cells[7].Style.BackColor = Color.Red;
+                }
+                else if (a.Verhaeltnis <= 100)
+                {
+                    dataGridViewETeil.Rows[index].Cells[7].Value = "";
+                    dataGridViewETeil.Rows[index].Cells[7].Style.BackColor = Color.Green;
+                }
+                else
+                {
+                    dataGridViewETeil.Rows[index].Cells[7].Value = "";
+                    dataGridViewETeil.Rows[index].Cells[7].Style.BackColor = Color.Yellow;
+                }
+                
+                dataGridViewETeil.Rows[index].Cells[8].Value = a.InWartschlange;
+                dataGridViewETeil.Rows[index].Cells[9].Value = a.InBearbeitung;
+
                 if (!a.Verwendung.Equals("KDH"))
-                    dataGridViewETeil.Rows[index].Cells[7].Value = a.ProduktionsMengePer0;
+                    dataGridViewETeil.Rows[index].Cells[10].Value = a.ProduktionsMengePer0;
                 else
                 {
                     int prodMenge = a.KdhProduktionsmenge.Sum(pair => pair.Value);
-                    dataGridViewETeil.Rows[index].Cells[7].Value = prodMenge;
-                }
-
-                //Farbe
-                for (int i = 0; i < 8; ++i)
-                {
-                    dataGridViewETeil.Columns[i].DefaultCellStyle.BackColor = i == 7 ? Color.Honeydew : Color.FloralWhite;
-                }
-                if (a.Verwendung.Equals("KDH"))
-                {
-                    dataGridViewETeil.Rows[index].DefaultCellStyle.BackColor = Color.LemonChiffon;
+                    dataGridViewETeil.Rows[index].Cells[10].Value = prodMenge;
                 }
 
                 ++index;
