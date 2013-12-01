@@ -124,6 +124,55 @@
     <value>Production planning</value>
   </data>
 
+
+
+  <data name="label284.Text" xml:space="preserve">
+    <value>Sales discount</value>
+  </data>
+  <data name="LabelDiskont.Text" xml:space="preserve">
+    <value>Sales discount: Determines to which price and amount orders will be placed
+    price limit: Determines the price
+    amount limit: Determines the amount</value>
+  </data>
+  <data name="lbl_diskont.Text" xml:space="preserve">
+    <value>Sales discount</value>
+  </data>
+  <data name="label279.Text" xml:space="preserve">
+    <value>Price limit €:</value>
+  </data>
+  <data name="label276.Text" xml:space="preserve">
+    <value>Amount limit:</value>
+  </data>
+  <data name="label273.Text" xml:space="preserve">
+    <value>Percentage to use sales discount:</value>
+  </data>
+  <data name="label280.Text" xml:space="preserve">
+    <value>Sales discount</value>
+  </data>
+
+  <data name="label87.Text" xml:space="preserve">
+    <value>Security stock</value>
+  </data>
+  <data name="label96.Text" xml:space="preserve">
+    <value>Security stock</value>
+  </data>
+  <data name="label185.Text" xml:space="preserve">
+    <value>Security stock</value>
+  </data>
+
+  <data name="label_mehrfachverwendung_p1.Text" xml:space="preserve">
+    <value>*used multiple times</value>
+  </data>
+  <data name="label_mehrfachverwendung_p2.Text" xml:space="preserve">
+    <value>*used multiple times</value>
+  </data>
+  <data name="label287.Text" xml:space="preserve">
+    <value>*used multiple times</value>
+  </data>
+  <data name="dataGridViewImageColumn2.HeaderText" xml:space="preserve">
+    <value>Additionally needed</value>
+  </data>
+
   <data name="tab_marktplatz.Text" xml:space="preserve">
     <value>Marketplace</value>
   </data>
