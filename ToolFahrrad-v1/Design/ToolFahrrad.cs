@@ -421,11 +421,15 @@ namespace ToolFahrrad_v1.Design
                 listDpKapa.Add(new DataPoint(a.GetNummerArbeitsplatz, gesammt));
 
 
-                DataGridViewAP.Rows[index].Cells[10].Value = imageListAmpel.Images[2];
+                //DataGridViewAP.Rows[index].Cells[10].Value = imageListAmpel.Images[2];
+                DataGridViewAP.Rows[index].Cells[10].Value = "Kap. Maximum nicht erreicht"; //gesammt > 7200
+                DataGridViewAP.Rows[index].Cells[10].Style.BackColor = Color.LightGreen;
 
                 if (gesammt <= a.ZeitErsteSchicht)
                 { // newTeim <= 2400 
-                    DataGridViewAP.Rows[index].Cells[7].Value = imageListAmpel.Images[2];
+                    //DataGridViewAP.Rows[index].Cells[7].Value = imageListAmpel.Images[2];
+                    DataGridViewAP.Rows[index].Cells[7].Value = "-";
+                    DataGridViewAP.Rows[index].Cells[7].Style.BackColor = Color.LightGreen;
                     apXml[1] = 1;
                     apXml[2] = 0;
                 }
@@ -434,11 +438,24 @@ namespace ToolFahrrad_v1.Design
                     if (gesammt > _instance.ZweiteSchichtMitUeberstunden)
                     {   // gesammt > 6000
                         if (gesammt > 7200)
-                            DataGridViewAP.Rows[index].Cells[10].Value = imageListAmpel.Images[0]; //gesammt > 7200
+                        //    DataGridViewAP.Rows[index].Cells[10].Value = imageListAmpel.Images[0]; //gesammt > 7200
+                        {
+                            DataGridViewAP.Rows[index].Cells[10].Value = "Kap. Maximum überschritten"; //gesammt > 7200
+                            DataGridViewAP.Rows[index].Cells[10].Style.BackColor = Color.Red;
+                        }
                         else if (gesammt < 7200)
-                            DataGridViewAP.Rows[index].Cells[10].Value = imageListAmpel.Images[1]; //gesammt < 7200
+                        //    DataGridViewAP.Rows[index].Cells[10].Value = imageListAmpel.Images[1]; //gesammt < 7200
+                        {
+                            DataGridViewAP.Rows[index].Cells[10].Value = "Kap. Maximum nicht erreicht"; //gesammt > 7200
+                            DataGridViewAP.Rows[index].Cells[10].Style.BackColor = Color.LightGreen;
+                        }
                         else
-                            DataGridViewAP.Rows[index].Cells[10].Value = imageListAmpel.Images[2]; //gesammt = 7200
+                        //                            DataGridViewAP.Rows[index].Cells[10].Value = imageListAmpel.Images[2]; //gesammt = 7200
+                        {
+                            DataGridViewAP.Rows[index].Cells[10].Value = "Kap. Maximum erreicht"; //gesammt > 7200
+                            DataGridViewAP.Rows[index].Cells[10].Style.BackColor = Color.Yellow;
+                        }
+
                         apXml[1] = 3; // 3 SCHICHT
                         if (gesammt < 7200)
                             apXml[2] = gesammt - a.ZeitZweiteSchicht;
@@ -447,7 +464,9 @@ namespace ToolFahrrad_v1.Design
                     }
                     if (gesammt < _instance.ZweiteSchichtMitUeberstunden)
                     {
-                        DataGridViewAP.Rows[index].Cells[7].Value = imageListAmpel.Images[0];
+                        //DataGridViewAP.Rows[index].Cells[7].Value = imageListAmpel.Images[0];
+                        DataGridViewAP.Rows[index].Cells[7].Value = "Schicht";
+                        DataGridViewAP.Rows[index].Cells[7].Style.BackColor = Color.Red;
                         DataGridViewAP.Rows[index].Cells[8].Value = true;
                         if (gesammt > a.ZeitZweiteSchicht)
                             apXml[2] = gesammt - a.ZeitZweiteSchicht;
@@ -457,7 +476,9 @@ namespace ToolFahrrad_v1.Design
                     }
                     else if (gesammt > _instance.ZweiteSchichtMitUeberstunden)
                     {
-                        DataGridViewAP.Rows[index].Cells[7].Value = imageListAmpel.Images[0];
+                        //DataGridViewAP.Rows[index].Cells[7].Value = imageListAmpel.Images[0];
+                        DataGridViewAP.Rows[index].Cells[7].Value = "Schicht";
+                        DataGridViewAP.Rows[index].Cells[7].Style.BackColor = Color.Red;
                         DataGridViewAP.Rows[index].Cells[9].Value = true;
                         apXml[1] = 3;
                         apXml[2] = gesammt - _instance.ZweiteSchichtMitUeberstunden;
@@ -465,23 +486,27 @@ namespace ToolFahrrad_v1.Design
                 }
                 else if (gesammt > a.ZeitErsteSchicht && gesammt <= _instance.ErsteSchichtMitUeberStunden)
                 { // 2400 < newTime < 3600 Überstunden
-                    DataGridViewAP.Rows[index].Cells[7].Value = imageListAmpel.Images[1];
+                    //DataGridViewAP.Rows[index].Cells[7].Value = imageListAmpel.Images[1];
+                    DataGridViewAP.Rows[index].Cells[7].Value = "Überstunden";
+                    DataGridViewAP.Rows[index].Cells[7].Style.BackColor = Color.Yellow;
                     apXml[1] = 1;
                     apXml[2] = gesammt - a.ZeitErsteSchicht;
                 }
                 else
                 {
-                    DataGridViewAP.Rows[index].Cells[7].Value = imageListAmpel.Images[2];
+                    //DataGridViewAP.Rows[index].Cells[7].Value = imageListAmpel.Images[2];
+                    DataGridViewAP.Rows[index].Cells[7].Value = "-";
+                    DataGridViewAP.Rows[index].Cells[7].Style.BackColor = Color.LightGreen;
                 }
 
                 _xmlAp.Add(apXml);
                 //Farbe
                 for (int i = 0; i < 11; ++i)
                 {
-                    if (i < 2)
-                        DataGridViewAP.Columns[i].DefaultCellStyle.BackColor = Color.FloralWhite;
-                    else if (i == 2 || i > 3)
-                        DataGridViewAP.Columns[i].DefaultCellStyle.BackColor = Color.LightYellow;
+                //    if (i < 2)
+               //         DataGridViewAP.Columns[i].DefaultCellStyle.BackColor = Color.FloralWhite;
+                 //   else if (i == 2 || i > 3)
+                //        DataGridViewAP.Columns[i].DefaultCellStyle.BackColor = Color.LightYellow;
                 }
                 ++index;
 

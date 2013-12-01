@@ -13977,22 +13977,37 @@ bestand</value>
     <value>141, 16</value>
   </data>
   <data name="label_mehrfachverwendung_p3.TabIndex" type="System.Int32, mscorlib">
-    <value>178</value>
-  </data>
-  <data name="label_mehrfachverwendung_p3.Text" xml:space="preserve">
-    <value>* Mehrfachverwendung</value>
-  </data>
-  <data name="&gt;&gt;label_mehrfachverwendung_p3.Name" xml:space="preserve">
-    <value>label_mehrfachverwendung_p3</value>
-  </data>
-  <data name="&gt;&gt;label_mehrfachverwendung_p3.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label_mehrfachverwendung_p3.Parent" xml:space="preserve">
-    <value>panel3</value>
-  </data>
-  <data name="&gt;&gt;label_mehrfachverwendung_p3.ZOrder" xml:space="preserve">
     <value>0</value>
+  </data>
+  <data name="tab_P2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 22</value>
+  </data>
+  <data name="tab_P2.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
+  </data>
+  <data name="tab_P2.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="tab_P2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>865, 340</value>
+  </data>
+  <data name="tab_P2.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="tab_P2.Text" xml:space="preserve">
+    <value>Damenfahrrad</value>
+  </data>
+  <data name="&gt;&gt;tab_P2.Name" xml:space="preserve">
+    <value>tab_P2</value>
+  </data>
+  <data name="&gt;&gt;tab_P2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tab_P2.Parent" xml:space="preserve">
+    <value>tab1</value>
+  </data>
+  <data name="&gt;&gt;tab_P2.ZOrder" xml:space="preserve">
+    <value>1</value>
   </data>
   <data name="p3ETAusfueren.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
