@@ -29,20 +29,20 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series7 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series8 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title2 = new System.Windows.Forms.DataVisualization.Charting.Title();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Fahrrad));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
             this.tabs = new System.Windows.Forms.TabControl();
             this.tab_xml = new System.Windows.Forms.TabPage();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
@@ -87,6 +87,7 @@
             this.tab1 = new System.Windows.Forms.TabControl();
             this.tab_P1 = new System.Windows.Forms.TabPage();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label_mehrfachverwendung_p1 = new System.Windows.Forms.Label();
             this.label91 = new System.Windows.Forms.Label();
             this.label90 = new System.Windows.Forms.Label();
             this.label89 = new System.Windows.Forms.Label();
@@ -262,6 +263,7 @@
             this.p1ETAusfueren = new System.Windows.Forms.PictureBox();
             this.tab_P2 = new System.Windows.Forms.TabPage();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label_mehrfachverwendung_p2 = new System.Windows.Forms.Label();
             this.p2ETAusfueren = new System.Windows.Forms.PictureBox();
             this.label92 = new System.Windows.Forms.Label();
             this.label93 = new System.Windows.Forms.Label();
@@ -437,6 +439,7 @@
             this.p2vw_0 = new System.Windows.Forms.TextBox();
             this.tab_P3 = new System.Windows.Forms.TabPage();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.label_mehrfachverwendung_p3 = new System.Windows.Forms.Label();
             this.p3ETAusfueren = new System.Windows.Forms.PictureBox();
             this.label181 = new System.Windows.Forms.Label();
             this.label182 = new System.Windows.Forms.Label();
@@ -611,12 +614,16 @@
             this.p3pm_0 = new System.Windows.Forms.TextBox();
             this.p3vw_0 = new System.Windows.Forms.TextBox();
             this.tab_eTeil = new System.Windows.Forms.TabPage();
+            this.label287 = new System.Windows.Forms.Label();
             this.dataGridViewETeil = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.KinderFahrradColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DamenFahrradColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.HerrenFahrradColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.dataGridViewTextBoxStatusIndicator = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colWarteschlange = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colBearbeitung = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colPlanung = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -641,42 +648,6 @@
             this.s3 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.ueber = new System.Windows.Forms.DataGridViewImageColumn();
             this.tab_bestellverwaltung = new System.Windows.Forms.TabPage();
-            this.Bestellungen = new System.Windows.Forms.TabControl();
-            this.tab_BestellungenAufgeben = new System.Windows.Forms.TabPage();
-            this.label3 = new System.Windows.Forms.Label();
-            this.addNr = new System.Windows.Forms.PictureBox();
-            this.zurueck = new System.Windows.Forms.PictureBox();
-            this.saveAenderungen = new System.Windows.Forms.PictureBox();
-            this.dataGridViewBestellung = new System.Windows.Forms.DataGridView();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.label_header_kaufteile = new System.Windows.Forms.Label();
-            this.dataGridViewKTeil = new System.Windows.Forms.DataGridView();
-            this.dataGridViewLinkColumn1 = new System.Windows.Forms.DataGridViewLinkColumn();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn18 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn19 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn20 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn21 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Trend = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tab_bestellung = new System.Windows.Forms.TabPage();
-            this.dvVerwenden = new System.Windows.Forms.CheckBox();
-            this.addNr2 = new System.Windows.Forms.PictureBox();
-            this.zurueck2 = new System.Windows.Forms.PictureBox();
-            this.saveAenderungen2 = new System.Windows.Forms.PictureBox();
-            this.label275 = new System.Windows.Forms.Label();
-            this.dataGridViewDirektverkauf = new System.Windows.Forms.DataGridView();
-            this.knr2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn32 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pr = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.str = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewCheckBoxColumn2 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.uebernehmenXML = new System.Windows.Forms.PictureBox();
             this.tab_marktplatz = new System.Windows.Forms.TabPage();
             this.panel_password2 = new System.Windows.Forms.Panel();
             this.lbl_in_progress = new System.Windows.Forms.Label();
@@ -832,6 +803,13 @@
             this.NavPanel = new System.Windows.Forms.Panel();
             this.nav_button_1 = new System.Windows.Forms.Button();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.Bestellungen = new System.Windows.Forms.TabControl();
+            this.tab_BestellungenAufgeben = new System.Windows.Forms.TabPage();
+            this.label3 = new System.Windows.Forms.Label();
+            this.addNr = new System.Windows.Forms.PictureBox();
+            this.zurueck = new System.Windows.Forms.PictureBox();
+            this.saveAenderungen = new System.Windows.Forms.PictureBox();
+            this.dataGridViewBestellung = new System.Windows.Forms.DataGridView();
             this.kNr = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Bezeichnung = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Lagerbestand = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -839,6 +817,35 @@
             this.menge = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.eil = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.Loeschen = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.label_header_kaufteile = new System.Windows.Forms.Label();
+            this.dataGridViewKTeil = new System.Windows.Forms.DataGridView();
+            this.dataGridViewLinkColumn1 = new System.Windows.Forms.DataGridViewLinkColumn();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn18 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn19 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn20 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn21 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Trend = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tab_bestellung = new System.Windows.Forms.TabPage();
+            this.dvVerwenden = new System.Windows.Forms.CheckBox();
+            this.addNr2 = new System.Windows.Forms.PictureBox();
+            this.zurueck2 = new System.Windows.Forms.PictureBox();
+            this.saveAenderungen2 = new System.Windows.Forms.PictureBox();
+            this.label275 = new System.Windows.Forms.Label();
+            this.dataGridViewDirektverkauf = new System.Windows.Forms.DataGridView();
+            this.knr2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn32 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pr = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.str = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewCheckBoxColumn2 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.uebernehmenXML = new System.Windows.Forms.PictureBox();
             this.tabs.SuspendLayout();
             this.tab_xml.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
@@ -880,20 +887,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.arbPlatzAusfueren)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridViewAP)).BeginInit();
             this.tab_bestellverwaltung.SuspendLayout();
-            this.Bestellungen.SuspendLayout();
-            this.tab_BestellungenAufgeben.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.addNr)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.zurueck)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.saveAenderungen)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewBestellung)).BeginInit();
-            this.tabPage2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewKTeil)).BeginInit();
-            this.tab_bestellung.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.addNr2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.zurueck2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.saveAenderungen2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDirektverkauf)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.uebernehmenXML)).BeginInit();
             this.tab_marktplatz.SuspendLayout();
             this.panel_password.SuspendLayout();
             this.panel10.SuspendLayout();
@@ -925,6 +918,20 @@
             this.menu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.xml_export)).BeginInit();
             this.NavPanel.SuspendLayout();
+            this.Bestellungen.SuspendLayout();
+            this.tab_BestellungenAufgeben.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.addNr)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.zurueck)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.saveAenderungen)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewBestellung)).BeginInit();
+            this.tabPage2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewKTeil)).BeginInit();
+            this.tab_bestellung.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.addNr2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.zurueck2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.saveAenderungen2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDirektverkauf)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.uebernehmenXML)).BeginInit();
             this.SuspendLayout();
             // 
             // tabs
@@ -1415,6 +1422,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.label_mehrfachverwendung_p1);
             this.panel1.Controls.Add(this.label91);
             this.panel1.Controls.Add(this.label90);
             this.panel1.Controls.Add(this.label89);
@@ -1593,6 +1601,12 @@
             this.panel1.Name = "panel1";
             this.helpProvider1.SetShowHelp(this.panel1, ((bool)(resources.GetObject("panel1.ShowHelp"))));
             this.toolTip.SetToolTip(this.panel1, resources.GetString("panel1.ToolTip"));
+            // 
+            // label_mehrfachverwendung_p1
+            // 
+            resources.ApplyResources(this.label_mehrfachverwendung_p1, "label_mehrfachverwendung_p1");
+            this.label_mehrfachverwendung_p1.Name = "label_mehrfachverwendung_p1";
+            this.helpProvider1.SetShowHelp(this.label_mehrfachverwendung_p1, ((bool)(resources.GetObject("label_mehrfachverwendung_p1.ShowHelp"))));
             // 
             // label91
             // 
@@ -2201,7 +2215,7 @@
             // 
             // p1plus_18
             // 
-            this.p1plus_18.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.p1plus_18.BackColor = System.Drawing.Color.Khaki;
             this.p1plus_18.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p1plus_18, "p1plus_18");
             this.p1plus_18.Name = "p1plus_18";
@@ -2218,7 +2232,7 @@
             // 
             // p1ls_18
             // 
-            this.p1ls_18.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.p1ls_18.BackColor = System.Drawing.Color.White;
             this.p1ls_18.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p1ls_18, "p1ls_18");
             this.p1ls_18.Name = "p1ls_18";
@@ -2228,7 +2242,7 @@
             // 
             // p1iws_18
             // 
-            this.p1iws_18.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.p1iws_18.BackColor = System.Drawing.Color.White;
             this.p1iws_18.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p1iws_18, "p1iws_18");
             this.p1iws_18.Name = "p1iws_18";
@@ -2238,7 +2252,7 @@
             // 
             // p1ib_18
             // 
-            this.p1ib_18.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.p1ib_18.BackColor = System.Drawing.Color.White;
             this.p1ib_18.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p1ib_18, "p1ib_18");
             this.p1ib_18.Name = "p1ib_18";
@@ -2248,7 +2262,7 @@
             // 
             // p1pm_18
             // 
-            this.p1pm_18.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.p1pm_18.BackColor = System.Drawing.Color.White;
             this.p1pm_18.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p1pm_18, "p1pm_18");
             this.p1pm_18.Name = "p1pm_18";
@@ -2258,7 +2272,7 @@
             // 
             // p1vw_18
             // 
-            this.p1vw_18.BackColor = System.Drawing.Color.MistyRose;
+            this.p1vw_18.BackColor = System.Drawing.Color.LightCoral;
             this.p1vw_18.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p1vw_18, "p1vw_18");
             this.p1vw_18.Name = "p1vw_18";
@@ -2268,7 +2282,7 @@
             // 
             // p1plus_7
             // 
-            this.p1plus_7.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.p1plus_7.BackColor = System.Drawing.Color.Khaki;
             this.p1plus_7.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p1plus_7, "p1plus_7");
             this.p1plus_7.Name = "p1plus_7";
@@ -2285,7 +2299,7 @@
             // 
             // p1ls_7
             // 
-            this.p1ls_7.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.p1ls_7.BackColor = System.Drawing.Color.White;
             this.p1ls_7.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p1ls_7, "p1ls_7");
             this.p1ls_7.Name = "p1ls_7";
@@ -2295,7 +2309,7 @@
             // 
             // p1iws_7
             // 
-            this.p1iws_7.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.p1iws_7.BackColor = System.Drawing.Color.White;
             this.p1iws_7.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p1iws_7, "p1iws_7");
             this.p1iws_7.Name = "p1iws_7";
@@ -2305,7 +2319,7 @@
             // 
             // p1ib_7
             // 
-            this.p1ib_7.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.p1ib_7.BackColor = System.Drawing.Color.White;
             this.p1ib_7.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p1ib_7, "p1ib_7");
             this.p1ib_7.Name = "p1ib_7";
@@ -2315,7 +2329,7 @@
             // 
             // p1pm_7
             // 
-            this.p1pm_7.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.p1pm_7.BackColor = System.Drawing.Color.White;
             this.p1pm_7.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p1pm_7, "p1pm_7");
             this.p1pm_7.Name = "p1pm_7";
@@ -2325,7 +2339,7 @@
             // 
             // p1vw_7
             // 
-            this.p1vw_7.BackColor = System.Drawing.Color.MistyRose;
+            this.p1vw_7.BackColor = System.Drawing.Color.LightCoral;
             this.p1vw_7.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p1vw_7, "p1vw_7");
             this.p1vw_7.Name = "p1vw_7";
@@ -2335,7 +2349,7 @@
             // 
             // p1plus_13
             // 
-            this.p1plus_13.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.p1plus_13.BackColor = System.Drawing.Color.Khaki;
             this.p1plus_13.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p1plus_13, "p1plus_13");
             this.p1plus_13.Name = "p1plus_13";
@@ -2352,7 +2366,7 @@
             // 
             // p1ls_13
             // 
-            this.p1ls_13.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.p1ls_13.BackColor = System.Drawing.Color.White;
             this.p1ls_13.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p1ls_13, "p1ls_13");
             this.p1ls_13.Name = "p1ls_13";
@@ -2362,7 +2376,7 @@
             // 
             // p1iws_13
             // 
-            this.p1iws_13.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.p1iws_13.BackColor = System.Drawing.Color.White;
             this.p1iws_13.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p1iws_13, "p1iws_13");
             this.p1iws_13.Name = "p1iws_13";
@@ -2372,7 +2386,7 @@
             // 
             // p1ib_13
             // 
-            this.p1ib_13.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.p1ib_13.BackColor = System.Drawing.Color.White;
             this.p1ib_13.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p1ib_13, "p1ib_13");
             this.p1ib_13.Name = "p1ib_13";
@@ -2382,7 +2396,7 @@
             // 
             // p1pm_13
             // 
-            this.p1pm_13.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.p1pm_13.BackColor = System.Drawing.Color.White;
             this.p1pm_13.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p1pm_13, "p1pm_13");
             this.p1pm_13.Name = "p1pm_13";
@@ -2392,7 +2406,7 @@
             // 
             // p1vw_13
             // 
-            this.p1vw_13.BackColor = System.Drawing.Color.MistyRose;
+            this.p1vw_13.BackColor = System.Drawing.Color.LightCoral;
             this.p1vw_13.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p1vw_13, "p1vw_13");
             this.p1vw_13.Name = "p1vw_13";
@@ -2402,7 +2416,7 @@
             // 
             // p1plus_49
             // 
-            this.p1plus_49.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.p1plus_49.BackColor = System.Drawing.Color.Khaki;
             this.p1plus_49.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p1plus_49, "p1plus_49");
             this.p1plus_49.Name = "p1plus_49";
@@ -2419,7 +2433,7 @@
             // 
             // p1ls_49
             // 
-            this.p1ls_49.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.p1ls_49.BackColor = System.Drawing.Color.White;
             this.p1ls_49.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p1ls_49, "p1ls_49");
             this.p1ls_49.Name = "p1ls_49";
@@ -2429,7 +2443,7 @@
             // 
             // p1iws_49
             // 
-            this.p1iws_49.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.p1iws_49.BackColor = System.Drawing.Color.Khaki;
             this.p1iws_49.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p1iws_49, "p1iws_49");
             this.p1iws_49.Name = "p1iws_49";
@@ -2439,7 +2453,7 @@
             // 
             // p1ib_49
             // 
-            this.p1ib_49.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.p1ib_49.BackColor = System.Drawing.Color.White;
             this.p1ib_49.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p1ib_49, "p1ib_49");
             this.p1ib_49.Name = "p1ib_49";
@@ -2449,7 +2463,7 @@
             // 
             // p1pm_49
             // 
-            this.p1pm_49.BackColor = System.Drawing.Color.MistyRose;
+            this.p1pm_49.BackColor = System.Drawing.Color.LightCoral;
             this.p1pm_49.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p1pm_49, "p1pm_49");
             this.p1pm_49.Name = "p1pm_49";
@@ -2459,7 +2473,7 @@
             // 
             // p1vw_49
             // 
-            this.p1vw_49.BackColor = System.Drawing.Color.MistyRose;
+            this.p1vw_49.BackColor = System.Drawing.Color.LightCoral;
             this.p1vw_49.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p1vw_49, "p1vw_49");
             this.p1vw_49.Name = "p1vw_49";
@@ -2469,7 +2483,7 @@
             // 
             // p1plus_4
             // 
-            this.p1plus_4.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.p1plus_4.BackColor = System.Drawing.Color.Khaki;
             this.p1plus_4.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p1plus_4, "p1plus_4");
             this.p1plus_4.Name = "p1plus_4";
@@ -2486,7 +2500,7 @@
             // 
             // p1ls_4
             // 
-            this.p1ls_4.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.p1ls_4.BackColor = System.Drawing.Color.White;
             this.p1ls_4.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p1ls_4, "p1ls_4");
             this.p1ls_4.Name = "p1ls_4";
@@ -2496,7 +2510,7 @@
             // 
             // p1iws_4
             // 
-            this.p1iws_4.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.p1iws_4.BackColor = System.Drawing.Color.White;
             this.p1iws_4.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p1iws_4, "p1iws_4");
             this.p1iws_4.Name = "p1iws_4";
@@ -2506,7 +2520,7 @@
             // 
             // p1ib_4
             // 
-            this.p1ib_4.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.p1ib_4.BackColor = System.Drawing.Color.White;
             this.p1ib_4.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p1ib_4, "p1ib_4");
             this.p1ib_4.Name = "p1ib_4";
@@ -2516,7 +2530,7 @@
             // 
             // p1pm_4
             // 
-            this.p1pm_4.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.p1pm_4.BackColor = System.Drawing.Color.White;
             this.p1pm_4.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p1pm_4, "p1pm_4");
             this.p1pm_4.Name = "p1pm_4";
@@ -2526,7 +2540,7 @@
             // 
             // p1vw_4
             // 
-            this.p1vw_4.BackColor = System.Drawing.Color.MistyRose;
+            this.p1vw_4.BackColor = System.Drawing.Color.LightCoral;
             this.p1vw_4.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p1vw_4, "p1vw_4");
             this.p1vw_4.Name = "p1vw_4";
@@ -2536,7 +2550,7 @@
             // 
             // p1plus_10
             // 
-            this.p1plus_10.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.p1plus_10.BackColor = System.Drawing.Color.Khaki;
             this.p1plus_10.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p1plus_10, "p1plus_10");
             this.p1plus_10.Name = "p1plus_10";
@@ -2553,7 +2567,7 @@
             // 
             // p1ls_10
             // 
-            this.p1ls_10.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.p1ls_10.BackColor = System.Drawing.Color.White;
             this.p1ls_10.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p1ls_10, "p1ls_10");
             this.p1ls_10.Name = "p1ls_10";
@@ -2563,7 +2577,7 @@
             // 
             // p1iws_10
             // 
-            this.p1iws_10.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.p1iws_10.BackColor = System.Drawing.Color.White;
             this.p1iws_10.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p1iws_10, "p1iws_10");
             this.p1iws_10.Name = "p1iws_10";
@@ -2573,7 +2587,7 @@
             // 
             // p1ib_10
             // 
-            this.p1ib_10.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.p1ib_10.BackColor = System.Drawing.Color.White;
             this.p1ib_10.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p1ib_10, "p1ib_10");
             this.p1ib_10.Name = "p1ib_10";
@@ -2583,7 +2597,7 @@
             // 
             // p1pm_10
             // 
-            this.p1pm_10.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.p1pm_10.BackColor = System.Drawing.Color.White;
             this.p1pm_10.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p1pm_10, "p1pm_10");
             this.p1pm_10.Name = "p1pm_10";
@@ -2593,7 +2607,7 @@
             // 
             // p1vw_10
             // 
-            this.p1vw_10.BackColor = System.Drawing.Color.MistyRose;
+            this.p1vw_10.BackColor = System.Drawing.Color.LightCoral;
             this.p1vw_10.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p1vw_10, "p1vw_10");
             this.p1vw_10.Name = "p1vw_10";
@@ -2603,7 +2617,7 @@
             // 
             // p1plus_50
             // 
-            this.p1plus_50.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.p1plus_50.BackColor = System.Drawing.Color.Khaki;
             this.p1plus_50.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p1plus_50, "p1plus_50");
             this.p1plus_50.Name = "p1plus_50";
@@ -2620,7 +2634,7 @@
             // 
             // p1ls_50
             // 
-            this.p1ls_50.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.p1ls_50.BackColor = System.Drawing.Color.White;
             this.p1ls_50.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p1ls_50, "p1ls_50");
             this.p1ls_50.Name = "p1ls_50";
@@ -2630,7 +2644,7 @@
             // 
             // p1iws_50
             // 
-            this.p1iws_50.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.p1iws_50.BackColor = System.Drawing.Color.Khaki;
             this.p1iws_50.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p1iws_50, "p1iws_50");
             this.p1iws_50.Name = "p1iws_50";
@@ -2640,7 +2654,7 @@
             // 
             // p1ib_50
             // 
-            this.p1ib_50.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.p1ib_50.BackColor = System.Drawing.Color.White;
             this.p1ib_50.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p1ib_50, "p1ib_50");
             this.p1ib_50.Name = "p1ib_50";
@@ -2650,7 +2664,7 @@
             // 
             // p1pm_50
             // 
-            this.p1pm_50.BackColor = System.Drawing.Color.MistyRose;
+            this.p1pm_50.BackColor = System.Drawing.Color.LightCoral;
             this.p1pm_50.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p1pm_50, "p1pm_50");
             this.p1pm_50.Name = "p1pm_50";
@@ -2660,7 +2674,7 @@
             // 
             // p1vw_50
             // 
-            this.p1vw_50.BackColor = System.Drawing.Color.MistyRose;
+            this.p1vw_50.BackColor = System.Drawing.Color.LightCoral;
             this.p1vw_50.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p1vw_50, "p1vw_50");
             this.p1vw_50.Name = "p1vw_50";
@@ -2670,7 +2684,7 @@
             // 
             // p1plus_16
             // 
-            this.p1plus_16.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.p1plus_16.BackColor = System.Drawing.Color.Khaki;
             this.p1plus_16.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p1plus_16, "p1plus_16");
             this.p1plus_16.Name = "p1plus_16";
@@ -2687,7 +2701,7 @@
             // 
             // p1ls_16
             // 
-            this.p1ls_16.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.p1ls_16.BackColor = System.Drawing.Color.White;
             this.p1ls_16.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p1ls_16, "p1ls_16");
             this.p1ls_16.Name = "p1ls_16";
@@ -2697,7 +2711,7 @@
             // 
             // p1iws_16
             // 
-            this.p1iws_16.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.p1iws_16.BackColor = System.Drawing.Color.White;
             this.p1iws_16.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p1iws_16, "p1iws_16");
             this.p1iws_16.Name = "p1iws_16";
@@ -2707,7 +2721,7 @@
             // 
             // p1ib_16
             // 
-            this.p1ib_16.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.p1ib_16.BackColor = System.Drawing.Color.White;
             this.p1ib_16.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p1ib_16, "p1ib_16");
             this.p1ib_16.Name = "p1ib_16";
@@ -2717,7 +2731,7 @@
             // 
             // p1pm_16
             // 
-            this.p1pm_16.BackColor = System.Drawing.Color.LemonChiffon;
+            this.p1pm_16.BackColor = System.Drawing.Color.White;
             this.p1pm_16.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p1pm_16, "p1pm_16");
             this.p1pm_16.Name = "p1pm_16";
@@ -2727,7 +2741,7 @@
             // 
             // p1vw_16
             // 
-            this.p1vw_16.BackColor = System.Drawing.Color.MistyRose;
+            this.p1vw_16.BackColor = System.Drawing.Color.LightCoral;
             this.p1vw_16.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p1vw_16, "p1vw_16");
             this.p1vw_16.Name = "p1vw_16";
@@ -2737,7 +2751,7 @@
             // 
             // p1plus_17
             // 
-            this.p1plus_17.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.p1plus_17.BackColor = System.Drawing.Color.Khaki;
             this.p1plus_17.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p1plus_17, "p1plus_17");
             this.p1plus_17.Name = "p1plus_17";
@@ -2754,7 +2768,7 @@
             // 
             // p1ls_17
             // 
-            this.p1ls_17.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.p1ls_17.BackColor = System.Drawing.Color.White;
             this.p1ls_17.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p1ls_17, "p1ls_17");
             this.p1ls_17.Name = "p1ls_17";
@@ -2764,7 +2778,7 @@
             // 
             // p1iws_17
             // 
-            this.p1iws_17.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.p1iws_17.BackColor = System.Drawing.Color.White;
             this.p1iws_17.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p1iws_17, "p1iws_17");
             this.p1iws_17.Name = "p1iws_17";
@@ -2774,7 +2788,7 @@
             // 
             // p1ib_17
             // 
-            this.p1ib_17.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.p1ib_17.BackColor = System.Drawing.Color.White;
             this.p1ib_17.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p1ib_17, "p1ib_17");
             this.p1ib_17.Name = "p1ib_17";
@@ -2784,7 +2798,7 @@
             // 
             // p1pm_17
             // 
-            this.p1pm_17.BackColor = System.Drawing.Color.LemonChiffon;
+            this.p1pm_17.BackColor = System.Drawing.Color.White;
             this.p1pm_17.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p1pm_17, "p1pm_17");
             this.p1pm_17.Name = "p1pm_17";
@@ -2794,7 +2808,7 @@
             // 
             // p1vw_17
             // 
-            this.p1vw_17.BackColor = System.Drawing.Color.MistyRose;
+            this.p1vw_17.BackColor = System.Drawing.Color.LightCoral;
             this.p1vw_17.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p1vw_17, "p1vw_17");
             this.p1vw_17.Name = "p1vw_17";
@@ -2804,7 +2818,7 @@
             // 
             // p1plus_26
             // 
-            this.p1plus_26.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.p1plus_26.BackColor = System.Drawing.Color.Khaki;
             this.p1plus_26.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p1plus_26, "p1plus_26");
             this.p1plus_26.Name = "p1plus_26";
@@ -2821,7 +2835,7 @@
             // 
             // p1ls_26
             // 
-            this.p1ls_26.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.p1ls_26.BackColor = System.Drawing.Color.White;
             this.p1ls_26.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p1ls_26, "p1ls_26");
             this.p1ls_26.Name = "p1ls_26";
@@ -2831,7 +2845,7 @@
             // 
             // p1iws_26
             // 
-            this.p1iws_26.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.p1iws_26.BackColor = System.Drawing.Color.White;
             this.p1iws_26.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p1iws_26, "p1iws_26");
             this.p1iws_26.Name = "p1iws_26";
@@ -2841,7 +2855,7 @@
             // 
             // p1ib_26
             // 
-            this.p1ib_26.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.p1ib_26.BackColor = System.Drawing.Color.White;
             this.p1ib_26.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p1ib_26, "p1ib_26");
             this.p1ib_26.Name = "p1ib_26";
@@ -2851,7 +2865,7 @@
             // 
             // p1pm_26
             // 
-            this.p1pm_26.BackColor = System.Drawing.Color.LemonChiffon;
+            this.p1pm_26.BackColor = System.Drawing.Color.White;
             this.p1pm_26.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p1pm_26, "p1pm_26");
             this.p1pm_26.Name = "p1pm_26";
@@ -2861,7 +2875,7 @@
             // 
             // p1vw_26
             // 
-            this.p1vw_26.BackColor = System.Drawing.Color.MistyRose;
+            this.p1vw_26.BackColor = System.Drawing.Color.LightCoral;
             this.p1vw_26.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p1vw_26, "p1vw_26");
             this.p1vw_26.Name = "p1vw_26";
@@ -2871,7 +2885,7 @@
             // 
             // p1plus_51
             // 
-            this.p1plus_51.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.p1plus_51.BackColor = System.Drawing.Color.Khaki;
             this.p1plus_51.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p1plus_51, "p1plus_51");
             this.p1plus_51.Name = "p1plus_51";
@@ -2888,7 +2902,7 @@
             // 
             // p1ls_51
             // 
-            this.p1ls_51.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.p1ls_51.BackColor = System.Drawing.Color.White;
             this.p1ls_51.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p1ls_51, "p1ls_51");
             this.p1ls_51.Name = "p1ls_51";
@@ -2898,7 +2912,7 @@
             // 
             // p1iws_51
             // 
-            this.p1iws_51.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.p1iws_51.BackColor = System.Drawing.Color.Khaki;
             this.p1iws_51.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p1iws_51, "p1iws_51");
             this.p1iws_51.Name = "p1iws_51";
@@ -2908,7 +2922,7 @@
             // 
             // p1ib_51
             // 
-            this.p1ib_51.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.p1ib_51.BackColor = System.Drawing.Color.White;
             this.p1ib_51.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p1ib_51, "p1ib_51");
             this.p1ib_51.Name = "p1ib_51";
@@ -2918,7 +2932,7 @@
             // 
             // p1pm_51
             // 
-            this.p1pm_51.BackColor = System.Drawing.Color.MistyRose;
+            this.p1pm_51.BackColor = System.Drawing.Color.LightCoral;
             this.p1pm_51.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p1pm_51, "p1pm_51");
             this.p1pm_51.Name = "p1pm_51";
@@ -2928,7 +2942,7 @@
             // 
             // p1vw_51
             // 
-            this.p1vw_51.BackColor = System.Drawing.Color.MistyRose;
+            this.p1vw_51.BackColor = System.Drawing.Color.LightCoral;
             this.p1vw_51.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p1vw_51, "p1vw_51");
             this.p1vw_51.Name = "p1vw_51";
@@ -2945,7 +2959,7 @@
             // 
             // p1ls_0
             // 
-            this.p1ls_0.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.p1ls_0.BackColor = System.Drawing.Color.White;
             this.p1ls_0.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p1ls_0, "p1ls_0");
             this.p1ls_0.Name = "p1ls_0";
@@ -2955,7 +2969,7 @@
             // 
             // p1iws_0
             // 
-            this.p1iws_0.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.p1iws_0.BackColor = System.Drawing.Color.Khaki;
             this.p1iws_0.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p1iws_0, "p1iws_0");
             this.p1iws_0.Name = "p1iws_0";
@@ -2965,7 +2979,7 @@
             // 
             // p1ib_0
             // 
-            this.p1ib_0.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.p1ib_0.BackColor = System.Drawing.Color.White;
             this.p1ib_0.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p1ib_0, "p1ib_0");
             this.p1ib_0.Name = "p1ib_0";
@@ -2975,7 +2989,7 @@
             // 
             // p1pm_0
             // 
-            this.p1pm_0.BackColor = System.Drawing.Color.MistyRose;
+            this.p1pm_0.BackColor = System.Drawing.Color.LightCoral;
             this.p1pm_0.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p1pm_0, "p1pm_0");
             this.p1pm_0.Name = "p1pm_0";
@@ -2985,7 +2999,7 @@
             // 
             // p1vw_0
             // 
-            this.p1vw_0.BackColor = System.Drawing.Color.LightYellow;
+            this.p1vw_0.BackColor = System.Drawing.Color.White;
             this.p1vw_0.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             resources.ApplyResources(this.p1vw_0, "p1vw_0");
             this.p1vw_0.Name = "p1vw_0";
@@ -3011,6 +3025,7 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.label_mehrfachverwendung_p2);
             this.panel2.Controls.Add(this.p2ETAusfueren);
             this.panel2.Controls.Add(this.label92);
             this.panel2.Controls.Add(this.label93);
@@ -3189,6 +3204,12 @@
             this.panel2.Name = "panel2";
             this.helpProvider1.SetShowHelp(this.panel2, ((bool)(resources.GetObject("panel2.ShowHelp"))));
             this.toolTip.SetToolTip(this.panel2, resources.GetString("panel2.ToolTip"));
+            // 
+            // label_mehrfachverwendung_p2
+            // 
+            resources.ApplyResources(this.label_mehrfachverwendung_p2, "label_mehrfachverwendung_p2");
+            this.label_mehrfachverwendung_p2.Name = "label_mehrfachverwendung_p2";
+            this.helpProvider1.SetShowHelp(this.label_mehrfachverwendung_p2, ((bool)(resources.GetObject("label_mehrfachverwendung_p2.ShowHelp"))));
             // 
             // p2ETAusfueren
             // 
@@ -3807,7 +3828,7 @@
             // 
             // p2plus_19
             // 
-            this.p2plus_19.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.p2plus_19.BackColor = System.Drawing.Color.Khaki;
             this.p2plus_19.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p2plus_19, "p2plus_19");
             this.p2plus_19.Name = "p2plus_19";
@@ -3824,7 +3845,7 @@
             // 
             // p2ls_19
             // 
-            this.p2ls_19.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.p2ls_19.BackColor = System.Drawing.Color.White;
             this.p2ls_19.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p2ls_19, "p2ls_19");
             this.p2ls_19.Name = "p2ls_19";
@@ -3834,7 +3855,7 @@
             // 
             // p2iws_19
             // 
-            this.p2iws_19.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.p2iws_19.BackColor = System.Drawing.Color.White;
             this.p2iws_19.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p2iws_19, "p2iws_19");
             this.p2iws_19.Name = "p2iws_19";
@@ -3844,7 +3865,7 @@
             // 
             // p2ib_19
             // 
-            this.p2ib_19.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.p2ib_19.BackColor = System.Drawing.Color.White;
             this.p2ib_19.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p2ib_19, "p2ib_19");
             this.p2ib_19.Name = "p2ib_19";
@@ -3854,7 +3875,7 @@
             // 
             // p2pm_19
             // 
-            this.p2pm_19.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.p2pm_19.BackColor = System.Drawing.Color.White;
             this.p2pm_19.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p2pm_19, "p2pm_19");
             this.p2pm_19.Name = "p2pm_19";
@@ -3864,7 +3885,7 @@
             // 
             // p2vw_19
             // 
-            this.p2vw_19.BackColor = System.Drawing.Color.MistyRose;
+            this.p2vw_19.BackColor = System.Drawing.Color.LightCoral;
             this.p2vw_19.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p2vw_19, "p2vw_19");
             this.p2vw_19.Name = "p2vw_19";
@@ -3874,7 +3895,7 @@
             // 
             // p2plus_8
             // 
-            this.p2plus_8.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.p2plus_8.BackColor = System.Drawing.Color.Khaki;
             this.p2plus_8.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p2plus_8, "p2plus_8");
             this.p2plus_8.Name = "p2plus_8";
@@ -3891,7 +3912,7 @@
             // 
             // p2ls_8
             // 
-            this.p2ls_8.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.p2ls_8.BackColor = System.Drawing.Color.White;
             this.p2ls_8.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p2ls_8, "p2ls_8");
             this.p2ls_8.Name = "p2ls_8";
@@ -3901,7 +3922,7 @@
             // 
             // p2iws_8
             // 
-            this.p2iws_8.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.p2iws_8.BackColor = System.Drawing.Color.White;
             this.p2iws_8.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p2iws_8, "p2iws_8");
             this.p2iws_8.Name = "p2iws_8";
@@ -3911,7 +3932,7 @@
             // 
             // p2ib_8
             // 
-            this.p2ib_8.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.p2ib_8.BackColor = System.Drawing.Color.White;
             this.p2ib_8.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p2ib_8, "p2ib_8");
             this.p2ib_8.Name = "p2ib_8";
@@ -3921,7 +3942,7 @@
             // 
             // p2pm_8
             // 
-            this.p2pm_8.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.p2pm_8.BackColor = System.Drawing.Color.White;
             this.p2pm_8.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p2pm_8, "p2pm_8");
             this.p2pm_8.Name = "p2pm_8";
@@ -3931,7 +3952,7 @@
             // 
             // p2vw_8
             // 
-            this.p2vw_8.BackColor = System.Drawing.Color.MistyRose;
+            this.p2vw_8.BackColor = System.Drawing.Color.LightCoral;
             this.p2vw_8.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p2vw_8, "p2vw_8");
             this.p2vw_8.Name = "p2vw_8";
@@ -3941,7 +3962,7 @@
             // 
             // p2plus_14
             // 
-            this.p2plus_14.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.p2plus_14.BackColor = System.Drawing.Color.Khaki;
             this.p2plus_14.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p2plus_14, "p2plus_14");
             this.p2plus_14.Name = "p2plus_14";
@@ -3958,7 +3979,7 @@
             // 
             // p2ls_14
             // 
-            this.p2ls_14.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.p2ls_14.BackColor = System.Drawing.Color.White;
             this.p2ls_14.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p2ls_14, "p2ls_14");
             this.p2ls_14.Name = "p2ls_14";
@@ -3968,7 +3989,7 @@
             // 
             // p2iws_14
             // 
-            this.p2iws_14.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.p2iws_14.BackColor = System.Drawing.Color.White;
             this.p2iws_14.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p2iws_14, "p2iws_14");
             this.p2iws_14.Name = "p2iws_14";
@@ -3978,7 +3999,7 @@
             // 
             // p2ib_14
             // 
-            this.p2ib_14.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.p2ib_14.BackColor = System.Drawing.Color.White;
             this.p2ib_14.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p2ib_14, "p2ib_14");
             this.p2ib_14.Name = "p2ib_14";
@@ -3988,7 +4009,7 @@
             // 
             // p2pm_14
             // 
-            this.p2pm_14.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.p2pm_14.BackColor = System.Drawing.Color.White;
             this.p2pm_14.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p2pm_14, "p2pm_14");
             this.p2pm_14.Name = "p2pm_14";
@@ -3998,7 +4019,7 @@
             // 
             // p2vw_14
             // 
-            this.p2vw_14.BackColor = System.Drawing.Color.MistyRose;
+            this.p2vw_14.BackColor = System.Drawing.Color.LightCoral;
             this.p2vw_14.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p2vw_14, "p2vw_14");
             this.p2vw_14.Name = "p2vw_14";
@@ -4008,7 +4029,7 @@
             // 
             // p2plus_54
             // 
-            this.p2plus_54.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.p2plus_54.BackColor = System.Drawing.Color.Khaki;
             this.p2plus_54.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p2plus_54, "p2plus_54");
             this.p2plus_54.Name = "p2plus_54";
@@ -4025,7 +4046,7 @@
             // 
             // p2ls_54
             // 
-            this.p2ls_54.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.p2ls_54.BackColor = System.Drawing.Color.White;
             this.p2ls_54.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p2ls_54, "p2ls_54");
             this.p2ls_54.Name = "p2ls_54";
@@ -4035,7 +4056,7 @@
             // 
             // p2iws_54
             // 
-            this.p2iws_54.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.p2iws_54.BackColor = System.Drawing.Color.Khaki;
             this.p2iws_54.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p2iws_54, "p2iws_54");
             this.p2iws_54.Name = "p2iws_54";
@@ -4045,7 +4066,7 @@
             // 
             // p2ib_54
             // 
-            this.p2ib_54.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.p2ib_54.BackColor = System.Drawing.Color.White;
             this.p2ib_54.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p2ib_54, "p2ib_54");
             this.p2ib_54.Name = "p2ib_54";
@@ -4055,7 +4076,7 @@
             // 
             // p2pm_54
             // 
-            this.p2pm_54.BackColor = System.Drawing.Color.MistyRose;
+            this.p2pm_54.BackColor = System.Drawing.Color.LightCoral;
             this.p2pm_54.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p2pm_54, "p2pm_54");
             this.p2pm_54.Name = "p2pm_54";
@@ -4065,7 +4086,7 @@
             // 
             // p2vw_54
             // 
-            this.p2vw_54.BackColor = System.Drawing.Color.MistyRose;
+            this.p2vw_54.BackColor = System.Drawing.Color.LightCoral;
             this.p2vw_54.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p2vw_54, "p2vw_54");
             this.p2vw_54.Name = "p2vw_54";
@@ -4075,7 +4096,7 @@
             // 
             // p2plus_5
             // 
-            this.p2plus_5.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.p2plus_5.BackColor = System.Drawing.Color.Khaki;
             this.p2plus_5.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p2plus_5, "p2plus_5");
             this.p2plus_5.Name = "p2plus_5";
@@ -4092,7 +4113,7 @@
             // 
             // p2ls_5
             // 
-            this.p2ls_5.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.p2ls_5.BackColor = System.Drawing.Color.White;
             this.p2ls_5.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p2ls_5, "p2ls_5");
             this.p2ls_5.Name = "p2ls_5";
@@ -4102,7 +4123,7 @@
             // 
             // p2iws_5
             // 
-            this.p2iws_5.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.p2iws_5.BackColor = System.Drawing.Color.White;
             this.p2iws_5.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p2iws_5, "p2iws_5");
             this.p2iws_5.Name = "p2iws_5";
@@ -4112,7 +4133,7 @@
             // 
             // p2ib_5
             // 
-            this.p2ib_5.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.p2ib_5.BackColor = System.Drawing.Color.White;
             this.p2ib_5.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p2ib_5, "p2ib_5");
             this.p2ib_5.Name = "p2ib_5";
@@ -4122,7 +4143,7 @@
             // 
             // p2pm_5
             // 
-            this.p2pm_5.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.p2pm_5.BackColor = System.Drawing.Color.White;
             this.p2pm_5.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p2pm_5, "p2pm_5");
             this.p2pm_5.Name = "p2pm_5";
@@ -4132,7 +4153,7 @@
             // 
             // p2vw_5
             // 
-            this.p2vw_5.BackColor = System.Drawing.Color.MistyRose;
+            this.p2vw_5.BackColor = System.Drawing.Color.LightCoral;
             this.p2vw_5.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p2vw_5, "p2vw_5");
             this.p2vw_5.Name = "p2vw_5";
@@ -4142,7 +4163,7 @@
             // 
             // p2plus_11
             // 
-            this.p2plus_11.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.p2plus_11.BackColor = System.Drawing.Color.Khaki;
             this.p2plus_11.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p2plus_11, "p2plus_11");
             this.p2plus_11.Name = "p2plus_11";
@@ -4159,7 +4180,7 @@
             // 
             // p2ls_11
             // 
-            this.p2ls_11.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.p2ls_11.BackColor = System.Drawing.Color.White;
             this.p2ls_11.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p2ls_11, "p2ls_11");
             this.p2ls_11.Name = "p2ls_11";
@@ -4169,7 +4190,7 @@
             // 
             // p2iws_11
             // 
-            this.p2iws_11.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.p2iws_11.BackColor = System.Drawing.Color.White;
             this.p2iws_11.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p2iws_11, "p2iws_11");
             this.p2iws_11.Name = "p2iws_11";
@@ -4179,7 +4200,7 @@
             // 
             // p2ib_11
             // 
-            this.p2ib_11.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.p2ib_11.BackColor = System.Drawing.Color.White;
             this.p2ib_11.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p2ib_11, "p2ib_11");
             this.p2ib_11.Name = "p2ib_11";
@@ -4189,7 +4210,7 @@
             // 
             // p2pm_11
             // 
-            this.p2pm_11.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.p2pm_11.BackColor = System.Drawing.Color.White;
             this.p2pm_11.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p2pm_11, "p2pm_11");
             this.p2pm_11.Name = "p2pm_11";
@@ -4199,7 +4220,7 @@
             // 
             // p2vw_11
             // 
-            this.p2vw_11.BackColor = System.Drawing.Color.MistyRose;
+            this.p2vw_11.BackColor = System.Drawing.Color.LightCoral;
             this.p2vw_11.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p2vw_11, "p2vw_11");
             this.p2vw_11.Name = "p2vw_11";
@@ -4209,7 +4230,7 @@
             // 
             // p2plus_55
             // 
-            this.p2plus_55.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.p2plus_55.BackColor = System.Drawing.Color.Khaki;
             this.p2plus_55.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p2plus_55, "p2plus_55");
             this.p2plus_55.Name = "p2plus_55";
@@ -4226,7 +4247,7 @@
             // 
             // p2ls_55
             // 
-            this.p2ls_55.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.p2ls_55.BackColor = System.Drawing.Color.White;
             this.p2ls_55.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p2ls_55, "p2ls_55");
             this.p2ls_55.Name = "p2ls_55";
@@ -4236,7 +4257,7 @@
             // 
             // p2iws_55
             // 
-            this.p2iws_55.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.p2iws_55.BackColor = System.Drawing.Color.Khaki;
             this.p2iws_55.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p2iws_55, "p2iws_55");
             this.p2iws_55.Name = "p2iws_55";
@@ -4246,7 +4267,7 @@
             // 
             // p2ib_55
             // 
-            this.p2ib_55.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.p2ib_55.BackColor = System.Drawing.Color.White;
             this.p2ib_55.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p2ib_55, "p2ib_55");
             this.p2ib_55.Name = "p2ib_55";
@@ -4256,7 +4277,7 @@
             // 
             // p2pm_55
             // 
-            this.p2pm_55.BackColor = System.Drawing.Color.MistyRose;
+            this.p2pm_55.BackColor = System.Drawing.Color.LightCoral;
             this.p2pm_55.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p2pm_55, "p2pm_55");
             this.p2pm_55.Name = "p2pm_55";
@@ -4266,7 +4287,7 @@
             // 
             // p2vw_55
             // 
-            this.p2vw_55.BackColor = System.Drawing.Color.MistyRose;
+            this.p2vw_55.BackColor = System.Drawing.Color.LightCoral;
             this.p2vw_55.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p2vw_55, "p2vw_55");
             this.p2vw_55.Name = "p2vw_55";
@@ -4276,7 +4297,7 @@
             // 
             // p2plus_16
             // 
-            this.p2plus_16.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.p2plus_16.BackColor = System.Drawing.Color.Khaki;
             this.p2plus_16.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p2plus_16, "p2plus_16");
             this.p2plus_16.Name = "p2plus_16";
@@ -4323,7 +4344,7 @@
             // 
             // p2pm_16
             // 
-            this.p2pm_16.BackColor = System.Drawing.Color.LemonChiffon;
+            this.p2pm_16.BackColor = System.Drawing.Color.White;
             this.p2pm_16.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p2pm_16, "p2pm_16");
             this.p2pm_16.Name = "p2pm_16";
@@ -4333,7 +4354,7 @@
             // 
             // p2vw_16
             // 
-            this.p2vw_16.BackColor = System.Drawing.Color.MistyRose;
+            this.p2vw_16.BackColor = System.Drawing.Color.LightCoral;
             this.p2vw_16.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p2vw_16, "p2vw_16");
             this.p2vw_16.Name = "p2vw_16";
@@ -4343,7 +4364,7 @@
             // 
             // p2plus_17
             // 
-            this.p2plus_17.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.p2plus_17.BackColor = System.Drawing.Color.Khaki;
             this.p2plus_17.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p2plus_17, "p2plus_17");
             this.p2plus_17.Name = "p2plus_17";
@@ -4390,7 +4411,7 @@
             // 
             // p2pm_17
             // 
-            this.p2pm_17.BackColor = System.Drawing.Color.LemonChiffon;
+            this.p2pm_17.BackColor = System.Drawing.Color.White;
             this.p2pm_17.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p2pm_17, "p2pm_17");
             this.p2pm_17.Name = "p2pm_17";
@@ -4400,7 +4421,7 @@
             // 
             // p2vw_17
             // 
-            this.p2vw_17.BackColor = System.Drawing.Color.MistyRose;
+            this.p2vw_17.BackColor = System.Drawing.Color.LightCoral;
             this.p2vw_17.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p2vw_17, "p2vw_17");
             this.p2vw_17.Name = "p2vw_17";
@@ -4410,7 +4431,7 @@
             // 
             // p2plus_26
             // 
-            this.p2plus_26.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.p2plus_26.BackColor = System.Drawing.Color.Khaki;
             this.p2plus_26.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p2plus_26, "p2plus_26");
             this.p2plus_26.Name = "p2plus_26";
@@ -4457,7 +4478,7 @@
             // 
             // p2pm_26
             // 
-            this.p2pm_26.BackColor = System.Drawing.Color.LemonChiffon;
+            this.p2pm_26.BackColor = System.Drawing.Color.White;
             this.p2pm_26.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p2pm_26, "p2pm_26");
             this.p2pm_26.Name = "p2pm_26";
@@ -4467,7 +4488,7 @@
             // 
             // p2vw_26
             // 
-            this.p2vw_26.BackColor = System.Drawing.Color.MistyRose;
+            this.p2vw_26.BackColor = System.Drawing.Color.LightCoral;
             this.p2vw_26.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p2vw_26, "p2vw_26");
             this.p2vw_26.Name = "p2vw_26";
@@ -4477,7 +4498,7 @@
             // 
             // p2plus_56
             // 
-            this.p2plus_56.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.p2plus_56.BackColor = System.Drawing.Color.Khaki;
             this.p2plus_56.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p2plus_56, "p2plus_56");
             this.p2plus_56.Name = "p2plus_56";
@@ -4494,7 +4515,7 @@
             // 
             // p2ls_56
             // 
-            this.p2ls_56.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.p2ls_56.BackColor = System.Drawing.Color.White;
             this.p2ls_56.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p2ls_56, "p2ls_56");
             this.p2ls_56.Name = "p2ls_56";
@@ -4504,7 +4525,7 @@
             // 
             // p2iws_56
             // 
-            this.p2iws_56.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.p2iws_56.BackColor = System.Drawing.Color.Khaki;
             this.p2iws_56.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p2iws_56, "p2iws_56");
             this.p2iws_56.Name = "p2iws_56";
@@ -4514,7 +4535,7 @@
             // 
             // p2ib_56
             // 
-            this.p2ib_56.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.p2ib_56.BackColor = System.Drawing.Color.White;
             this.p2ib_56.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p2ib_56, "p2ib_56");
             this.p2ib_56.Name = "p2ib_56";
@@ -4524,7 +4545,7 @@
             // 
             // p2pm_56
             // 
-            this.p2pm_56.BackColor = System.Drawing.Color.MistyRose;
+            this.p2pm_56.BackColor = System.Drawing.Color.LightCoral;
             this.p2pm_56.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p2pm_56, "p2pm_56");
             this.p2pm_56.Name = "p2pm_56";
@@ -4534,7 +4555,7 @@
             // 
             // p2vw_56
             // 
-            this.p2vw_56.BackColor = System.Drawing.Color.MistyRose;
+            this.p2vw_56.BackColor = System.Drawing.Color.LightCoral;
             this.p2vw_56.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p2vw_56, "p2vw_56");
             this.p2vw_56.Name = "p2vw_56";
@@ -4551,7 +4572,7 @@
             // 
             // p2ls_0
             // 
-            this.p2ls_0.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.p2ls_0.BackColor = System.Drawing.Color.White;
             this.p2ls_0.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p2ls_0, "p2ls_0");
             this.p2ls_0.Name = "p2ls_0";
@@ -4561,7 +4582,7 @@
             // 
             // p2iws_0
             // 
-            this.p2iws_0.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.p2iws_0.BackColor = System.Drawing.Color.Khaki;
             this.p2iws_0.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p2iws_0, "p2iws_0");
             this.p2iws_0.Name = "p2iws_0";
@@ -4571,7 +4592,7 @@
             // 
             // p2ib_0
             // 
-            this.p2ib_0.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.p2ib_0.BackColor = System.Drawing.Color.White;
             this.p2ib_0.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p2ib_0, "p2ib_0");
             this.p2ib_0.Name = "p2ib_0";
@@ -4581,7 +4602,7 @@
             // 
             // p2pm_0
             // 
-            this.p2pm_0.BackColor = System.Drawing.Color.MistyRose;
+            this.p2pm_0.BackColor = System.Drawing.Color.LightCoral;
             this.p2pm_0.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p2pm_0, "p2pm_0");
             this.p2pm_0.Name = "p2pm_0";
@@ -4591,7 +4612,7 @@
             // 
             // p2vw_0
             // 
-            this.p2vw_0.BackColor = System.Drawing.Color.LightYellow;
+            this.p2vw_0.BackColor = System.Drawing.Color.White;
             this.p2vw_0.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             resources.ApplyResources(this.p2vw_0, "p2vw_0");
             this.p2vw_0.Name = "p2vw_0";
@@ -4607,6 +4628,7 @@
             // 
             // panel3
             // 
+            this.panel3.Controls.Add(this.label_mehrfachverwendung_p3);
             this.panel3.Controls.Add(this.p3ETAusfueren);
             this.panel3.Controls.Add(this.label181);
             this.panel3.Controls.Add(this.label182);
@@ -4784,6 +4806,12 @@
             resources.ApplyResources(this.panel3, "panel3");
             this.panel3.Name = "panel3";
             this.helpProvider1.SetShowHelp(this.panel3, ((bool)(resources.GetObject("panel3.ShowHelp"))));
+            // 
+            // label_mehrfachverwendung_p3
+            // 
+            resources.ApplyResources(this.label_mehrfachverwendung_p3, "label_mehrfachverwendung_p3");
+            this.label_mehrfachverwendung_p3.Name = "label_mehrfachverwendung_p3";
+            this.helpProvider1.SetShowHelp(this.label_mehrfachverwendung_p3, ((bool)(resources.GetObject("label_mehrfachverwendung_p3.ShowHelp"))));
             // 
             // p3ETAusfueren
             // 
@@ -5402,7 +5430,7 @@
             // 
             // p3plus_20
             // 
-            this.p3plus_20.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.p3plus_20.BackColor = System.Drawing.Color.Khaki;
             this.p3plus_20.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p3plus_20, "p3plus_20");
             this.p3plus_20.Name = "p3plus_20";
@@ -5419,7 +5447,7 @@
             // 
             // p3ls_20
             // 
-            this.p3ls_20.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.p3ls_20.BackColor = System.Drawing.Color.White;
             this.p3ls_20.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p3ls_20, "p3ls_20");
             this.p3ls_20.Name = "p3ls_20";
@@ -5429,7 +5457,7 @@
             // 
             // p3iws_20
             // 
-            this.p3iws_20.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.p3iws_20.BackColor = System.Drawing.Color.White;
             this.p3iws_20.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p3iws_20, "p3iws_20");
             this.p3iws_20.Name = "p3iws_20";
@@ -5439,7 +5467,7 @@
             // 
             // p3ib_20
             // 
-            this.p3ib_20.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.p3ib_20.BackColor = System.Drawing.Color.White;
             this.p3ib_20.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p3ib_20, "p3ib_20");
             this.p3ib_20.Name = "p3ib_20";
@@ -5449,7 +5477,7 @@
             // 
             // p3pm_20
             // 
-            this.p3pm_20.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.p3pm_20.BackColor = System.Drawing.Color.White;
             this.p3pm_20.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p3pm_20, "p3pm_20");
             this.p3pm_20.Name = "p3pm_20";
@@ -5459,7 +5487,7 @@
             // 
             // p3vw_20
             // 
-            this.p3vw_20.BackColor = System.Drawing.Color.MistyRose;
+            this.p3vw_20.BackColor = System.Drawing.Color.LightCoral;
             this.p3vw_20.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p3vw_20, "p3vw_20");
             this.p3vw_20.Name = "p3vw_20";
@@ -5469,7 +5497,7 @@
             // 
             // p3plus_9
             // 
-            this.p3plus_9.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.p3plus_9.BackColor = System.Drawing.Color.Khaki;
             this.p3plus_9.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p3plus_9, "p3plus_9");
             this.p3plus_9.Name = "p3plus_9";
@@ -5486,7 +5514,7 @@
             // 
             // p3ls_9
             // 
-            this.p3ls_9.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.p3ls_9.BackColor = System.Drawing.Color.White;
             this.p3ls_9.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p3ls_9, "p3ls_9");
             this.p3ls_9.Name = "p3ls_9";
@@ -5496,7 +5524,7 @@
             // 
             // p3iws_9
             // 
-            this.p3iws_9.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.p3iws_9.BackColor = System.Drawing.Color.White;
             this.p3iws_9.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p3iws_9, "p3iws_9");
             this.p3iws_9.Name = "p3iws_9";
@@ -5506,7 +5534,7 @@
             // 
             // p3ib_9
             // 
-            this.p3ib_9.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.p3ib_9.BackColor = System.Drawing.Color.White;
             this.p3ib_9.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p3ib_9, "p3ib_9");
             this.p3ib_9.Name = "p3ib_9";
@@ -5516,7 +5544,7 @@
             // 
             // p3pm_9
             // 
-            this.p3pm_9.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.p3pm_9.BackColor = System.Drawing.Color.White;
             this.p3pm_9.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p3pm_9, "p3pm_9");
             this.p3pm_9.Name = "p3pm_9";
@@ -5526,7 +5554,7 @@
             // 
             // p3vw_9
             // 
-            this.p3vw_9.BackColor = System.Drawing.Color.MistyRose;
+            this.p3vw_9.BackColor = System.Drawing.Color.LightCoral;
             this.p3vw_9.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p3vw_9, "p3vw_9");
             this.p3vw_9.Name = "p3vw_9";
@@ -5536,7 +5564,7 @@
             // 
             // p3plus_15
             // 
-            this.p3plus_15.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.p3plus_15.BackColor = System.Drawing.Color.Khaki;
             this.p3plus_15.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p3plus_15, "p3plus_15");
             this.p3plus_15.Name = "p3plus_15";
@@ -5553,7 +5581,7 @@
             // 
             // p3ls_15
             // 
-            this.p3ls_15.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.p3ls_15.BackColor = System.Drawing.Color.White;
             this.p3ls_15.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p3ls_15, "p3ls_15");
             this.p3ls_15.Name = "p3ls_15";
@@ -5563,7 +5591,7 @@
             // 
             // p3iws_15
             // 
-            this.p3iws_15.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.p3iws_15.BackColor = System.Drawing.Color.White;
             this.p3iws_15.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p3iws_15, "p3iws_15");
             this.p3iws_15.Name = "p3iws_15";
@@ -5573,7 +5601,7 @@
             // 
             // p3ib_15
             // 
-            this.p3ib_15.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.p3ib_15.BackColor = System.Drawing.Color.White;
             this.p3ib_15.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p3ib_15, "p3ib_15");
             this.p3ib_15.Name = "p3ib_15";
@@ -5583,7 +5611,7 @@
             // 
             // p3pm_15
             // 
-            this.p3pm_15.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.p3pm_15.BackColor = System.Drawing.Color.White;
             this.p3pm_15.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p3pm_15, "p3pm_15");
             this.p3pm_15.Name = "p3pm_15";
@@ -5593,7 +5621,7 @@
             // 
             // p3vw_15
             // 
-            this.p3vw_15.BackColor = System.Drawing.Color.MistyRose;
+            this.p3vw_15.BackColor = System.Drawing.Color.LightCoral;
             this.p3vw_15.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p3vw_15, "p3vw_15");
             this.p3vw_15.Name = "p3vw_15";
@@ -5603,7 +5631,7 @@
             // 
             // p3plus_29
             // 
-            this.p3plus_29.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.p3plus_29.BackColor = System.Drawing.Color.Khaki;
             this.p3plus_29.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p3plus_29, "p3plus_29");
             this.p3plus_29.Name = "p3plus_29";
@@ -5620,7 +5648,7 @@
             // 
             // p3ls_29
             // 
-            this.p3ls_29.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.p3ls_29.BackColor = System.Drawing.Color.White;
             this.p3ls_29.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p3ls_29, "p3ls_29");
             this.p3ls_29.Name = "p3ls_29";
@@ -5630,7 +5658,7 @@
             // 
             // p3iws_29
             // 
-            this.p3iws_29.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.p3iws_29.BackColor = System.Drawing.Color.Khaki;
             this.p3iws_29.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p3iws_29, "p3iws_29");
             this.p3iws_29.Name = "p3iws_29";
@@ -5640,7 +5668,7 @@
             // 
             // p3ib_29
             // 
-            this.p3ib_29.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.p3ib_29.BackColor = System.Drawing.Color.White;
             this.p3ib_29.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p3ib_29, "p3ib_29");
             this.p3ib_29.Name = "p3ib_29";
@@ -5650,7 +5678,7 @@
             // 
             // p3pm_29
             // 
-            this.p3pm_29.BackColor = System.Drawing.Color.MistyRose;
+            this.p3pm_29.BackColor = System.Drawing.Color.LightCoral;
             this.p3pm_29.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p3pm_29, "p3pm_29");
             this.p3pm_29.Name = "p3pm_29";
@@ -5660,7 +5688,7 @@
             // 
             // p3vw_29
             // 
-            this.p3vw_29.BackColor = System.Drawing.Color.MistyRose;
+            this.p3vw_29.BackColor = System.Drawing.Color.LightCoral;
             this.p3vw_29.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p3vw_29, "p3vw_29");
             this.p3vw_29.Name = "p3vw_29";
@@ -5670,7 +5698,7 @@
             // 
             // p3plus_6
             // 
-            this.p3plus_6.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.p3plus_6.BackColor = System.Drawing.Color.Khaki;
             this.p3plus_6.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p3plus_6, "p3plus_6");
             this.p3plus_6.Name = "p3plus_6";
@@ -5687,7 +5715,7 @@
             // 
             // p3ls_6
             // 
-            this.p3ls_6.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.p3ls_6.BackColor = System.Drawing.Color.White;
             this.p3ls_6.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p3ls_6, "p3ls_6");
             this.p3ls_6.Name = "p3ls_6";
@@ -5697,7 +5725,7 @@
             // 
             // p3iws_6
             // 
-            this.p3iws_6.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.p3iws_6.BackColor = System.Drawing.Color.White;
             this.p3iws_6.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p3iws_6, "p3iws_6");
             this.p3iws_6.Name = "p3iws_6";
@@ -5707,7 +5735,7 @@
             // 
             // p3ib_6
             // 
-            this.p3ib_6.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.p3ib_6.BackColor = System.Drawing.Color.White;
             this.p3ib_6.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p3ib_6, "p3ib_6");
             this.p3ib_6.Name = "p3ib_6";
@@ -5717,7 +5745,7 @@
             // 
             // p3pm_6
             // 
-            this.p3pm_6.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.p3pm_6.BackColor = System.Drawing.Color.White;
             this.p3pm_6.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p3pm_6, "p3pm_6");
             this.p3pm_6.Name = "p3pm_6";
@@ -5727,7 +5755,7 @@
             // 
             // p3vw_6
             // 
-            this.p3vw_6.BackColor = System.Drawing.Color.MistyRose;
+            this.p3vw_6.BackColor = System.Drawing.Color.LightCoral;
             this.p3vw_6.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p3vw_6, "p3vw_6");
             this.p3vw_6.Name = "p3vw_6";
@@ -5737,7 +5765,7 @@
             // 
             // p3plus_12
             // 
-            this.p3plus_12.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.p3plus_12.BackColor = System.Drawing.Color.Khaki;
             this.p3plus_12.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p3plus_12, "p3plus_12");
             this.p3plus_12.Name = "p3plus_12";
@@ -5754,7 +5782,7 @@
             // 
             // p3ls_12
             // 
-            this.p3ls_12.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.p3ls_12.BackColor = System.Drawing.Color.White;
             this.p3ls_12.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p3ls_12, "p3ls_12");
             this.p3ls_12.Name = "p3ls_12";
@@ -5764,7 +5792,7 @@
             // 
             // p3iws_12
             // 
-            this.p3iws_12.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.p3iws_12.BackColor = System.Drawing.Color.White;
             this.p3iws_12.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p3iws_12, "p3iws_12");
             this.p3iws_12.Name = "p3iws_12";
@@ -5774,7 +5802,7 @@
             // 
             // p3ib_12
             // 
-            this.p3ib_12.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.p3ib_12.BackColor = System.Drawing.Color.White;
             this.p3ib_12.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p3ib_12, "p3ib_12");
             this.p3ib_12.Name = "p3ib_12";
@@ -5784,7 +5812,7 @@
             // 
             // p3pm_12
             // 
-            this.p3pm_12.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.p3pm_12.BackColor = System.Drawing.Color.White;
             this.p3pm_12.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p3pm_12, "p3pm_12");
             this.p3pm_12.Name = "p3pm_12";
@@ -5794,7 +5822,7 @@
             // 
             // p3vw_12
             // 
-            this.p3vw_12.BackColor = System.Drawing.Color.MistyRose;
+            this.p3vw_12.BackColor = System.Drawing.Color.LightCoral;
             this.p3vw_12.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p3vw_12, "p3vw_12");
             this.p3vw_12.Name = "p3vw_12";
@@ -5804,7 +5832,7 @@
             // 
             // p3plus_30
             // 
-            this.p3plus_30.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.p3plus_30.BackColor = System.Drawing.Color.Khaki;
             this.p3plus_30.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p3plus_30, "p3plus_30");
             this.p3plus_30.Name = "p3plus_30";
@@ -5821,7 +5849,7 @@
             // 
             // p3ls_30
             // 
-            this.p3ls_30.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.p3ls_30.BackColor = System.Drawing.Color.White;
             this.p3ls_30.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p3ls_30, "p3ls_30");
             this.p3ls_30.Name = "p3ls_30";
@@ -5831,7 +5859,7 @@
             // 
             // p3iws_30
             // 
-            this.p3iws_30.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.p3iws_30.BackColor = System.Drawing.Color.Khaki;
             this.p3iws_30.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p3iws_30, "p3iws_30");
             this.p3iws_30.Name = "p3iws_30";
@@ -5841,7 +5869,7 @@
             // 
             // p3ib_30
             // 
-            this.p3ib_30.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.p3ib_30.BackColor = System.Drawing.Color.White;
             this.p3ib_30.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p3ib_30, "p3ib_30");
             this.p3ib_30.Name = "p3ib_30";
@@ -5851,7 +5879,7 @@
             // 
             // p3pm_30
             // 
-            this.p3pm_30.BackColor = System.Drawing.Color.MistyRose;
+            this.p3pm_30.BackColor = System.Drawing.Color.LightCoral;
             this.p3pm_30.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p3pm_30, "p3pm_30");
             this.p3pm_30.Name = "p3pm_30";
@@ -5861,7 +5889,7 @@
             // 
             // p3vw_30
             // 
-            this.p3vw_30.BackColor = System.Drawing.Color.MistyRose;
+            this.p3vw_30.BackColor = System.Drawing.Color.LightCoral;
             this.p3vw_30.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p3vw_30, "p3vw_30");
             this.p3vw_30.Name = "p3vw_30";
@@ -5871,7 +5899,7 @@
             // 
             // p3plus_16
             // 
-            this.p3plus_16.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.p3plus_16.BackColor = System.Drawing.Color.Khaki;
             this.p3plus_16.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p3plus_16, "p3plus_16");
             this.p3plus_16.Name = "p3plus_16";
@@ -5918,7 +5946,7 @@
             // 
             // p3pm_16
             // 
-            this.p3pm_16.BackColor = System.Drawing.Color.LemonChiffon;
+            this.p3pm_16.BackColor = System.Drawing.Color.White;
             this.p3pm_16.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p3pm_16, "p3pm_16");
             this.p3pm_16.Name = "p3pm_16";
@@ -5928,7 +5956,7 @@
             // 
             // p3vw_16
             // 
-            this.p3vw_16.BackColor = System.Drawing.Color.MistyRose;
+            this.p3vw_16.BackColor = System.Drawing.Color.LightCoral;
             this.p3vw_16.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p3vw_16, "p3vw_16");
             this.p3vw_16.Name = "p3vw_16";
@@ -5938,7 +5966,7 @@
             // 
             // p3plus_17
             // 
-            this.p3plus_17.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.p3plus_17.BackColor = System.Drawing.Color.Khaki;
             this.p3plus_17.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p3plus_17, "p3plus_17");
             this.p3plus_17.Name = "p3plus_17";
@@ -5985,7 +6013,7 @@
             // 
             // p3pm_17
             // 
-            this.p3pm_17.BackColor = System.Drawing.Color.LemonChiffon;
+            this.p3pm_17.BackColor = System.Drawing.Color.White;
             this.p3pm_17.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p3pm_17, "p3pm_17");
             this.p3pm_17.Name = "p3pm_17";
@@ -5995,7 +6023,7 @@
             // 
             // p3vw_17
             // 
-            this.p3vw_17.BackColor = System.Drawing.Color.MistyRose;
+            this.p3vw_17.BackColor = System.Drawing.Color.LightCoral;
             this.p3vw_17.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p3vw_17, "p3vw_17");
             this.p3vw_17.Name = "p3vw_17";
@@ -6005,7 +6033,7 @@
             // 
             // p3plus_26
             // 
-            this.p3plus_26.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.p3plus_26.BackColor = System.Drawing.Color.Khaki;
             this.p3plus_26.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p3plus_26, "p3plus_26");
             this.p3plus_26.Name = "p3plus_26";
@@ -6052,7 +6080,7 @@
             // 
             // p3pm_26
             // 
-            this.p3pm_26.BackColor = System.Drawing.Color.LemonChiffon;
+            this.p3pm_26.BackColor = System.Drawing.Color.White;
             this.p3pm_26.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p3pm_26, "p3pm_26");
             this.p3pm_26.Name = "p3pm_26";
@@ -6062,7 +6090,7 @@
             // 
             // p3vw_26
             // 
-            this.p3vw_26.BackColor = System.Drawing.Color.MistyRose;
+            this.p3vw_26.BackColor = System.Drawing.Color.LightCoral;
             this.p3vw_26.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p3vw_26, "p3vw_26");
             this.p3vw_26.Name = "p3vw_26";
@@ -6072,7 +6100,7 @@
             // 
             // p3plus_31
             // 
-            this.p3plus_31.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.p3plus_31.BackColor = System.Drawing.Color.Khaki;
             this.p3plus_31.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p3plus_31, "p3plus_31");
             this.p3plus_31.Name = "p3plus_31";
@@ -6089,7 +6117,7 @@
             // 
             // p3ls_31
             // 
-            this.p3ls_31.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.p3ls_31.BackColor = System.Drawing.Color.White;
             this.p3ls_31.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p3ls_31, "p3ls_31");
             this.p3ls_31.Name = "p3ls_31";
@@ -6099,7 +6127,7 @@
             // 
             // p3iws_31
             // 
-            this.p3iws_31.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.p3iws_31.BackColor = System.Drawing.Color.Khaki;
             this.p3iws_31.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p3iws_31, "p3iws_31");
             this.p3iws_31.Name = "p3iws_31";
@@ -6109,7 +6137,7 @@
             // 
             // p3ib_31
             // 
-            this.p3ib_31.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.p3ib_31.BackColor = System.Drawing.Color.White;
             this.p3ib_31.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p3ib_31, "p3ib_31");
             this.p3ib_31.Name = "p3ib_31";
@@ -6119,7 +6147,7 @@
             // 
             // p3pm_31
             // 
-            this.p3pm_31.BackColor = System.Drawing.Color.MistyRose;
+            this.p3pm_31.BackColor = System.Drawing.Color.LightCoral;
             this.p3pm_31.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p3pm_31, "p3pm_31");
             this.p3pm_31.Name = "p3pm_31";
@@ -6129,7 +6157,7 @@
             // 
             // p3vw_31
             // 
-            this.p3vw_31.BackColor = System.Drawing.Color.MistyRose;
+            this.p3vw_31.BackColor = System.Drawing.Color.LightCoral;
             this.p3vw_31.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p3vw_31, "p3vw_31");
             this.p3vw_31.Name = "p3vw_31";
@@ -6146,7 +6174,7 @@
             // 
             // p3ls_0
             // 
-            this.p3ls_0.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.p3ls_0.BackColor = System.Drawing.Color.White;
             this.p3ls_0.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p3ls_0, "p3ls_0");
             this.p3ls_0.Name = "p3ls_0";
@@ -6156,7 +6184,7 @@
             // 
             // p3iws_0
             // 
-            this.p3iws_0.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.p3iws_0.BackColor = System.Drawing.Color.Khaki;
             this.p3iws_0.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p3iws_0, "p3iws_0");
             this.p3iws_0.Name = "p3iws_0";
@@ -6166,7 +6194,7 @@
             // 
             // p3ib_0
             // 
-            this.p3ib_0.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.p3ib_0.BackColor = System.Drawing.Color.White;
             this.p3ib_0.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p3ib_0, "p3ib_0");
             this.p3ib_0.Name = "p3ib_0";
@@ -6176,7 +6204,7 @@
             // 
             // p3pm_0
             // 
-            this.p3pm_0.BackColor = System.Drawing.Color.MistyRose;
+            this.p3pm_0.BackColor = System.Drawing.Color.LightCoral;
             this.p3pm_0.Cursor = System.Windows.Forms.Cursors.No;
             resources.ApplyResources(this.p3pm_0, "p3pm_0");
             this.p3pm_0.Name = "p3pm_0";
@@ -6186,7 +6214,7 @@
             // 
             // p3vw_0
             // 
-            this.p3vw_0.BackColor = System.Drawing.Color.LightYellow;
+            this.p3vw_0.BackColor = System.Drawing.Color.White;
             this.p3vw_0.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             resources.ApplyResources(this.p3vw_0, "p3vw_0");
             this.p3vw_0.Name = "p3vw_0";
@@ -6195,10 +6223,17 @@
             // tab_eTeil
             // 
             this.tab_eTeil.BackColor = System.Drawing.Color.Transparent;
+            this.tab_eTeil.Controls.Add(this.label287);
             this.tab_eTeil.Controls.Add(this.dataGridViewETeil);
             resources.ApplyResources(this.tab_eTeil, "tab_eTeil");
             this.tab_eTeil.Name = "tab_eTeil";
             this.helpProvider1.SetShowHelp(this.tab_eTeil, ((bool)(resources.GetObject("tab_eTeil.ShowHelp"))));
+            // 
+            // label287
+            // 
+            resources.ApplyResources(this.label287, "label287");
+            this.label287.Name = "label287";
+            this.helpProvider1.SetShowHelp(this.label287, ((bool)(resources.GetObject("label287.ShowHelp"))));
             // 
             // dataGridViewETeil
             // 
@@ -6209,10 +6244,13 @@
             this.dataGridViewETeil.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewETeil.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
+            this.KinderFahrradColumn,
+            this.DamenFahrradColumn,
+            this.HerrenFahrradColumn,
             this.dataGridViewTextBoxColumn2,
             this.dataGridViewTextBoxColumn3,
             this.dataGridViewTextBoxColumn4,
-            this.dataGridViewImageColumn1,
+            this.dataGridViewTextBoxStatusIndicator,
             this.colWarteschlange,
             this.colBearbeitung,
             this.colPlanung});
@@ -6226,6 +6264,21 @@
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
             this.dataGridViewTextBoxColumn1.ReadOnly = true;
             this.dataGridViewTextBoxColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            // 
+            // KinderFahrradColumn
+            // 
+            resources.ApplyResources(this.KinderFahrradColumn, "KinderFahrradColumn");
+            this.KinderFahrradColumn.Name = "KinderFahrradColumn";
+            // 
+            // DamenFahrradColumn
+            // 
+            resources.ApplyResources(this.DamenFahrradColumn, "DamenFahrradColumn");
+            this.DamenFahrradColumn.Name = "DamenFahrradColumn";
+            // 
+            // HerrenFahrradColumn
+            // 
+            resources.ApplyResources(this.HerrenFahrradColumn, "HerrenFahrradColumn");
+            this.HerrenFahrradColumn.Name = "HerrenFahrradColumn";
             // 
             // dataGridViewTextBoxColumn2
             // 
@@ -6245,12 +6298,11 @@
             this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
             this.dataGridViewTextBoxColumn4.ReadOnly = true;
             // 
-            // dataGridViewImageColumn1
+            // dataGridViewTextBoxStatusIndicator
             // 
-            resources.ApplyResources(this.dataGridViewImageColumn1, "dataGridViewImageColumn1");
-            this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
-            this.dataGridViewImageColumn1.ReadOnly = true;
-            this.dataGridViewImageColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            resources.ApplyResources(this.dataGridViewTextBoxStatusIndicator, "dataGridViewTextBoxStatusIndicator");
+            this.dataGridViewTextBoxStatusIndicator.Name = "dataGridViewTextBoxStatusIndicator";
+            this.dataGridViewTextBoxStatusIndicator.ReadOnly = true;
             // 
             // colWarteschlange
             // 
@@ -6358,15 +6410,15 @@
             this.DataGridViewAP.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.DataGridViewAP.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.DataGridViewAP.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle5.Padding = new System.Windows.Forms.Padding(0, 14, 0, 14);
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DataGridViewAP.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.Padding = new System.Windows.Forms.Padding(0, 14, 0, 14);
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DataGridViewAP.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.DataGridViewAP.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DataGridViewAP.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn5,
@@ -6385,14 +6437,14 @@
             resources.ApplyResources(this.DataGridViewAP, "DataGridViewAP");
             this.DataGridViewAP.Name = "DataGridViewAP";
             this.DataGridViewAP.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DataGridViewAP.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DataGridViewAP.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.helpProvider1.SetShowHelp(this.DataGridViewAP, ((bool)(resources.GetObject("DataGridViewAP.ShowHelp"))));
             this.DataGridViewAP.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewAPlatz_CellContentClick);
             this.DataGridViewAP.CellMouseEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridViewAP_CellMouseEnter);
@@ -6487,315 +6539,6 @@
             this.tab_bestellverwaltung.Name = "tab_bestellverwaltung";
             this.helpProvider1.SetShowHelp(this.tab_bestellverwaltung, ((bool)(resources.GetObject("tab_bestellverwaltung.ShowHelp"))));
             // 
-            // Bestellungen
-            // 
-            this.Bestellungen.Controls.Add(this.tab_BestellungenAufgeben);
-            this.Bestellungen.Controls.Add(this.tabPage2);
-            this.Bestellungen.Controls.Add(this.tab_bestellung);
-            resources.ApplyResources(this.Bestellungen, "Bestellungen");
-            this.Bestellungen.Name = "Bestellungen";
-            this.Bestellungen.SelectedIndex = 0;
-            this.helpProvider1.SetShowHelp(this.Bestellungen, ((bool)(resources.GetObject("Bestellungen.ShowHelp"))));
-            // 
-            // tab_BestellungenAufgeben
-            // 
-            this.tab_BestellungenAufgeben.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.tab_BestellungenAufgeben.Controls.Add(this.label3);
-            this.tab_BestellungenAufgeben.Controls.Add(this.addNr);
-            this.tab_BestellungenAufgeben.Controls.Add(this.zurueck);
-            this.tab_BestellungenAufgeben.Controls.Add(this.saveAenderungen);
-            this.tab_BestellungenAufgeben.Controls.Add(this.dataGridViewBestellung);
-            resources.ApplyResources(this.tab_BestellungenAufgeben, "tab_BestellungenAufgeben");
-            this.tab_BestellungenAufgeben.Name = "tab_BestellungenAufgeben";
-            // 
-            // label3
-            // 
-            resources.ApplyResources(this.label3, "label3");
-            this.label3.Name = "label3";
-            this.helpProvider1.SetShowHelp(this.label3, ((bool)(resources.GetObject("label3.ShowHelp"))));
-            // 
-            // addNr
-            // 
-            this.addNr.Cursor = System.Windows.Forms.Cursors.Hand;
-            resources.ApplyResources(this.addNr, "addNr");
-            this.addNr.Name = "addNr";
-            this.helpProvider1.SetShowHelp(this.addNr, ((bool)(resources.GetObject("addNr.ShowHelp"))));
-            this.addNr.TabStop = false;
-            this.toolTip.SetToolTip(this.addNr, resources.GetString("addNr.ToolTip"));
-            this.addNr.Click += new System.EventHandler(this.addNr_Click);
-            // 
-            // zurueck
-            // 
-            this.zurueck.Cursor = System.Windows.Forms.Cursors.Hand;
-            resources.ApplyResources(this.zurueck, "zurueck");
-            this.zurueck.Name = "zurueck";
-            this.helpProvider1.SetShowHelp(this.zurueck, ((bool)(resources.GetObject("zurueck.ShowHelp"))));
-            this.zurueck.TabStop = false;
-            this.toolTip.SetToolTip(this.zurueck, resources.GetString("zurueck.ToolTip"));
-            // 
-            // saveAenderungen
-            // 
-            this.saveAenderungen.Cursor = System.Windows.Forms.Cursors.Hand;
-            resources.ApplyResources(this.saveAenderungen, "saveAenderungen");
-            this.saveAenderungen.Name = "saveAenderungen";
-            this.helpProvider1.SetShowHelp(this.saveAenderungen, ((bool)(resources.GetObject("saveAenderungen.ShowHelp"))));
-            this.saveAenderungen.TabStop = false;
-            this.toolTip.SetToolTip(this.saveAenderungen, resources.GetString("saveAenderungen.ToolTip"));
-            // 
-            // dataGridViewBestellung
-            // 
-            this.dataGridViewBestellung.AllowUserToDeleteRows = false;
-            this.dataGridViewBestellung.AllowUserToOrderColumns = true;
-            this.dataGridViewBestellung.BackgroundColor = System.Drawing.SystemColors.MenuBar;
-            this.dataGridViewBestellung.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridViewBestellung.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            this.dataGridViewBestellung.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            this.dataGridViewBestellung.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewBestellung.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.kNr,
-            this.Bezeichnung,
-            this.Lagerbestand,
-            this.Lieferdauer,
-            this.menge,
-            this.eil,
-            this.Loeschen});
-            resources.ApplyResources(this.dataGridViewBestellung, "dataGridViewBestellung");
-            this.dataGridViewBestellung.Name = "dataGridViewBestellung";
-            this.helpProvider1.SetShowHelp(this.dataGridViewBestellung, ((bool)(resources.GetObject("dataGridViewBestellung.ShowHelp"))));
-            this.dataGridViewBestellung.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewBestellung_CellContentClick);
-            this.dataGridViewBestellung.UserAddedRow += new System.Windows.Forms.DataGridViewRowEventHandler(this.dataGridViewBestellung_UserAddedRow);
-            // 
-            // tabPage2
-            // 
-            resources.ApplyResources(this.tabPage2, "tabPage2");
-            this.tabPage2.BackColor = System.Drawing.Color.Transparent;
-            this.tabPage2.Controls.Add(this.label_header_kaufteile);
-            this.tabPage2.Controls.Add(this.dataGridViewKTeil);
-            this.tabPage2.Name = "tabPage2";
-            this.helpProvider1.SetShowHelp(this.tabPage2, ((bool)(resources.GetObject("tabPage2.ShowHelp"))));
-            // 
-            // label_header_kaufteile
-            // 
-            resources.ApplyResources(this.label_header_kaufteile, "label_header_kaufteile");
-            this.label_header_kaufteile.Name = "label_header_kaufteile";
-            this.helpProvider1.SetShowHelp(this.label_header_kaufteile, ((bool)(resources.GetObject("label_header_kaufteile.ShowHelp"))));
-            // 
-            // dataGridViewKTeil
-            // 
-            this.dataGridViewKTeil.AllowUserToAddRows = false;
-            this.dataGridViewKTeil.AllowUserToDeleteRows = false;
-            this.dataGridViewKTeil.AllowUserToOrderColumns = true;
-            this.dataGridViewKTeil.BackgroundColor = System.Drawing.SystemColors.Control;
-            this.dataGridViewKTeil.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridViewKTeil.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewKTeil.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewLinkColumn1,
-            this.dataGridViewTextBoxColumn6,
-            this.dataGridViewTextBoxColumn11,
-            this.dataGridViewTextBoxColumn13,
-            this.dataGridViewTextBoxColumn14,
-            this.dataGridViewTextBoxColumn15,
-            this.dataGridViewTextBoxColumn16,
-            this.dataGridViewTextBoxColumn17,
-            this.dataGridViewTextBoxColumn18,
-            this.dataGridViewTextBoxColumn19,
-            this.dataGridViewTextBoxColumn20,
-            this.dataGridViewTextBoxColumn21,
-            this.Trend});
-            this.dataGridViewKTeil.GridColor = System.Drawing.SystemColors.ControlDarkDark;
-            resources.ApplyResources(this.dataGridViewKTeil, "dataGridViewKTeil");
-            this.dataGridViewKTeil.Name = "dataGridViewKTeil";
-            this.dataGridViewKTeil.ReadOnly = true;
-            this.helpProvider1.SetShowHelp(this.dataGridViewKTeil, ((bool)(resources.GetObject("dataGridViewKTeil.ShowHelp"))));
-            this.dataGridViewKTeil.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewKTeil_CellContentClick_1);
-            // 
-            // dataGridViewLinkColumn1
-            // 
-            resources.ApplyResources(this.dataGridViewLinkColumn1, "dataGridViewLinkColumn1");
-            this.dataGridViewLinkColumn1.LinkColor = System.Drawing.Color.DimGray;
-            this.dataGridViewLinkColumn1.Name = "dataGridViewLinkColumn1";
-            this.dataGridViewLinkColumn1.ReadOnly = true;
-            this.dataGridViewLinkColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewLinkColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            // 
-            // dataGridViewTextBoxColumn6
-            // 
-            resources.ApplyResources(this.dataGridViewTextBoxColumn6, "dataGridViewTextBoxColumn6");
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            this.dataGridViewTextBoxColumn6.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn11
-            // 
-            resources.ApplyResources(this.dataGridViewTextBoxColumn11, "dataGridViewTextBoxColumn11");
-            this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
-            this.dataGridViewTextBoxColumn11.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn13
-            // 
-            resources.ApplyResources(this.dataGridViewTextBoxColumn13, "dataGridViewTextBoxColumn13");
-            this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
-            this.dataGridViewTextBoxColumn13.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn14
-            // 
-            resources.ApplyResources(this.dataGridViewTextBoxColumn14, "dataGridViewTextBoxColumn14");
-            this.dataGridViewTextBoxColumn14.Name = "dataGridViewTextBoxColumn14";
-            this.dataGridViewTextBoxColumn14.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn15
-            // 
-            resources.ApplyResources(this.dataGridViewTextBoxColumn15, "dataGridViewTextBoxColumn15");
-            this.dataGridViewTextBoxColumn15.Name = "dataGridViewTextBoxColumn15";
-            this.dataGridViewTextBoxColumn15.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn16
-            // 
-            resources.ApplyResources(this.dataGridViewTextBoxColumn16, "dataGridViewTextBoxColumn16");
-            this.dataGridViewTextBoxColumn16.Name = "dataGridViewTextBoxColumn16";
-            this.dataGridViewTextBoxColumn16.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn17
-            // 
-            resources.ApplyResources(this.dataGridViewTextBoxColumn17, "dataGridViewTextBoxColumn17");
-            this.dataGridViewTextBoxColumn17.Name = "dataGridViewTextBoxColumn17";
-            this.dataGridViewTextBoxColumn17.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn18
-            // 
-            resources.ApplyResources(this.dataGridViewTextBoxColumn18, "dataGridViewTextBoxColumn18");
-            this.dataGridViewTextBoxColumn18.Name = "dataGridViewTextBoxColumn18";
-            this.dataGridViewTextBoxColumn18.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn19
-            // 
-            resources.ApplyResources(this.dataGridViewTextBoxColumn19, "dataGridViewTextBoxColumn19");
-            this.dataGridViewTextBoxColumn19.Name = "dataGridViewTextBoxColumn19";
-            this.dataGridViewTextBoxColumn19.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn20
-            // 
-            resources.ApplyResources(this.dataGridViewTextBoxColumn20, "dataGridViewTextBoxColumn20");
-            this.dataGridViewTextBoxColumn20.Name = "dataGridViewTextBoxColumn20";
-            this.dataGridViewTextBoxColumn20.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn21
-            // 
-            resources.ApplyResources(this.dataGridViewTextBoxColumn21, "dataGridViewTextBoxColumn21");
-            this.dataGridViewTextBoxColumn21.Name = "dataGridViewTextBoxColumn21";
-            this.dataGridViewTextBoxColumn21.ReadOnly = true;
-            // 
-            // Trend
-            // 
-            resources.ApplyResources(this.Trend, "Trend");
-            this.Trend.Name = "Trend";
-            this.Trend.ReadOnly = true;
-            // 
-            // tab_bestellung
-            // 
-            this.tab_bestellung.BackColor = System.Drawing.Color.Transparent;
-            this.tab_bestellung.Controls.Add(this.dvVerwenden);
-            this.tab_bestellung.Controls.Add(this.addNr2);
-            this.tab_bestellung.Controls.Add(this.zurueck2);
-            this.tab_bestellung.Controls.Add(this.saveAenderungen2);
-            this.tab_bestellung.Controls.Add(this.label275);
-            this.tab_bestellung.Controls.Add(this.dataGridViewDirektverkauf);
-            this.tab_bestellung.Controls.Add(this.uebernehmenXML);
-            resources.ApplyResources(this.tab_bestellung, "tab_bestellung");
-            this.tab_bestellung.Name = "tab_bestellung";
-            this.helpProvider1.SetShowHelp(this.tab_bestellung, ((bool)(resources.GetObject("tab_bestellung.ShowHelp"))));
-            // 
-            // dvVerwenden
-            // 
-            this.dvVerwenden.BackColor = System.Drawing.SystemColors.Control;
-            resources.ApplyResources(this.dvVerwenden, "dvVerwenden");
-            this.dvVerwenden.Name = "dvVerwenden";
-            this.helpProvider1.SetShowHelp(this.dvVerwenden, ((bool)(resources.GetObject("dvVerwenden.ShowHelp"))));
-            this.dvVerwenden.UseVisualStyleBackColor = false;
-            // 
-            // addNr2
-            // 
-            this.addNr2.Cursor = System.Windows.Forms.Cursors.Hand;
-            resources.ApplyResources(this.addNr2, "addNr2");
-            this.addNr2.Name = "addNr2";
-            this.helpProvider1.SetShowHelp(this.addNr2, ((bool)(resources.GetObject("addNr2.ShowHelp"))));
-            this.addNr2.TabStop = false;
-            this.addNr2.Click += new System.EventHandler(this.addNr2_Click);
-            // 
-            // zurueck2
-            // 
-            this.zurueck2.Cursor = System.Windows.Forms.Cursors.Hand;
-            resources.ApplyResources(this.zurueck2, "zurueck2");
-            this.zurueck2.Name = "zurueck2";
-            this.helpProvider1.SetShowHelp(this.zurueck2, ((bool)(resources.GetObject("zurueck2.ShowHelp"))));
-            this.zurueck2.TabStop = false;
-            this.zurueck2.Click += new System.EventHandler(this.zurueck2_Click);
-            // 
-            // saveAenderungen2
-            // 
-            this.saveAenderungen2.Cursor = System.Windows.Forms.Cursors.Hand;
-            resources.ApplyResources(this.saveAenderungen2, "saveAenderungen2");
-            this.saveAenderungen2.Name = "saveAenderungen2";
-            this.helpProvider1.SetShowHelp(this.saveAenderungen2, ((bool)(resources.GetObject("saveAenderungen2.ShowHelp"))));
-            this.saveAenderungen2.TabStop = false;
-            this.saveAenderungen2.Click += new System.EventHandler(this.saveAenderungen2_Click);
-            // 
-            // label275
-            // 
-            resources.ApplyResources(this.label275, "label275");
-            this.label275.Name = "label275";
-            this.helpProvider1.SetShowHelp(this.label275, ((bool)(resources.GetObject("label275.ShowHelp"))));
-            // 
-            // dataGridViewDirektverkauf
-            // 
-            this.dataGridViewDirektverkauf.AllowUserToAddRows = false;
-            this.dataGridViewDirektverkauf.AllowUserToDeleteRows = false;
-            this.dataGridViewDirektverkauf.AllowUserToOrderColumns = true;
-            this.dataGridViewDirektverkauf.BackgroundColor = System.Drawing.SystemColors.Control;
-            this.dataGridViewDirektverkauf.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridViewDirektverkauf.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewDirektverkauf.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.knr2,
-            this.dataGridViewTextBoxColumn32,
-            this.pr,
-            this.str,
-            this.dataGridViewCheckBoxColumn2});
-            resources.ApplyResources(this.dataGridViewDirektverkauf, "dataGridViewDirektverkauf");
-            this.dataGridViewDirektverkauf.Name = "dataGridViewDirektverkauf";
-            this.helpProvider1.SetShowHelp(this.dataGridViewDirektverkauf, ((bool)(resources.GetObject("dataGridViewDirektverkauf.ShowHelp"))));
-            // 
-            // knr2
-            // 
-            this.knr2.Name = "knr2";
-            this.knr2.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn32
-            // 
-            this.dataGridViewTextBoxColumn32.Name = "dataGridViewTextBoxColumn32";
-            // 
-            // pr
-            // 
-            this.pr.Name = "pr";
-            // 
-            // str
-            // 
-            this.str.Name = "str";
-            // 
-            // dataGridViewCheckBoxColumn2
-            // 
-            this.dataGridViewCheckBoxColumn2.FalseValue = "false";
-            this.dataGridViewCheckBoxColumn2.IndeterminateValue = "false";
-            this.dataGridViewCheckBoxColumn2.Name = "dataGridViewCheckBoxColumn2";
-            this.dataGridViewCheckBoxColumn2.TrueValue = "true";
-            // 
-            // uebernehmenXML
-            // 
-            this.uebernehmenXML.Cursor = System.Windows.Forms.Cursors.Hand;
-            resources.ApplyResources(this.uebernehmenXML, "uebernehmenXML");
-            this.uebernehmenXML.Name = "uebernehmenXML";
-            this.helpProvider1.SetShowHelp(this.uebernehmenXML, ((bool)(resources.GetObject("uebernehmenXML.ShowHelp"))));
-            this.uebernehmenXML.TabStop = false;
-            this.uebernehmenXML.Click += new System.EventHandler(this.uebernehmenXML_Click);
-            // 
             // tab_marktplatz
             // 
             this.tab_marktplatz.BackColor = System.Drawing.Color.Transparent;
@@ -6829,7 +6572,6 @@
             this.panel_password.Controls.Add(this.panel10);
             resources.ApplyResources(this.panel_password, "panel_password");
             this.panel_password.Name = "panel_password";
-            this.helpProvider1.SetShowHelp(this.panel_password, ((bool)(resources.GetObject("panel_password.ShowHelp"))));
             // 
             // panel10
             // 
@@ -7097,16 +6839,16 @@
             // 
             // verkäufer
             // 
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
-            this.verkäufer.DefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            this.verkäufer.DefaultCellStyle = dataGridViewCellStyle3;
             this.verkäufer.DividerWidth = 2;
             resources.ApplyResources(this.verkäufer, "verkäufer");
             this.verkäufer.Name = "verkäufer";
             // 
             // artikel
             // 
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.White;
-            this.artikel.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            this.artikel.DefaultCellStyle = dataGridViewCellStyle4;
             this.artikel.DividerWidth = 2;
             resources.ApplyResources(this.artikel, "artikel");
             this.artikel.Name = "artikel";
@@ -7411,50 +7153,50 @@
             // 
             // chart_statistik
             // 
-            chartArea3.InnerPlotPosition.Auto = false;
-            chartArea3.InnerPlotPosition.Height = 60F;
-            chartArea3.InnerPlotPosition.Width = 92.69213F;
-            chartArea3.InnerPlotPosition.X = 6.25787F;
-            chartArea3.InnerPlotPosition.Y = 3.500001F;
-            chartArea3.Name = "ChartArea2";
-            chartArea4.InnerPlotPosition.Auto = false;
-            chartArea4.InnerPlotPosition.Height = 60F;
-            chartArea4.InnerPlotPosition.Width = 92.69213F;
-            chartArea4.InnerPlotPosition.X = 6.25787F;
-            chartArea4.InnerPlotPosition.Y = 6.999995F;
-            chartArea4.Name = "ChartArea3";
-            this.chart_statistik.ChartAreas.Add(chartArea3);
-            this.chart_statistik.ChartAreas.Add(chartArea4);
+            chartArea1.InnerPlotPosition.Auto = false;
+            chartArea1.InnerPlotPosition.Height = 60F;
+            chartArea1.InnerPlotPosition.Width = 92.69213F;
+            chartArea1.InnerPlotPosition.X = 6.25787F;
+            chartArea1.InnerPlotPosition.Y = 3.500001F;
+            chartArea1.Name = "ChartArea2";
+            chartArea2.InnerPlotPosition.Auto = false;
+            chartArea2.InnerPlotPosition.Height = 60F;
+            chartArea2.InnerPlotPosition.Width = 92.69213F;
+            chartArea2.InnerPlotPosition.X = 6.25787F;
+            chartArea2.InnerPlotPosition.Y = 6.999995F;
+            chartArea2.Name = "ChartArea3";
+            this.chart_statistik.ChartAreas.Add(chartArea1);
+            this.chart_statistik.ChartAreas.Add(chartArea2);
             resources.ApplyResources(this.chart_statistik, "chart_statistik");
-            legend3.DockedToChartArea = "ChartArea3";
-            legend3.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Top;
-            legend3.IsDockedInsideChartArea = false;
-            legend3.Name = "Legend3";
-            legend4.DockedToChartArea = "ChartArea2";
-            legend4.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Top;
-            legend4.IsDockedInsideChartArea = false;
-            legend4.Name = "Legend1";
-            this.chart_statistik.Legends.Add(legend3);
-            this.chart_statistik.Legends.Add(legend4);
+            legend1.DockedToChartArea = "ChartArea3";
+            legend1.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Top;
+            legend1.IsDockedInsideChartArea = false;
+            legend1.Name = "Legend3";
+            legend2.DockedToChartArea = "ChartArea2";
+            legend2.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Top;
+            legend2.IsDockedInsideChartArea = false;
+            legend2.Name = "Legend1";
+            this.chart_statistik.Legends.Add(legend1);
+            this.chart_statistik.Legends.Add(legend2);
             this.chart_statistik.Name = "chart_statistik";
-            series5.ChartArea = "ChartArea2";
-            series5.Legend = "Legend1";
-            series5.Name = "Bestellungen";
-            series6.ChartArea = "ChartArea2";
-            series6.Legend = "Legend1";
-            series6.Name = "Produktion";
-            series7.ChartArea = "ChartArea3";
-            series7.Legend = "Legend3";
-            series7.Name = "Kapazitaet";
-            series8.ChartArea = "ChartArea3";
-            series8.Legend = "Legend3";
-            series8.Name = "Kapazitaet Bedarf";
-            this.chart_statistik.Series.Add(series5);
-            this.chart_statistik.Series.Add(series6);
-            this.chart_statistik.Series.Add(series7);
-            this.chart_statistik.Series.Add(series8);
-            title2.Name = "Title1";
-            this.chart_statistik.Titles.Add(title2);
+            series1.ChartArea = "ChartArea2";
+            series1.Legend = "Legend1";
+            series1.Name = "Bestellungen";
+            series2.ChartArea = "ChartArea2";
+            series2.Legend = "Legend1";
+            series2.Name = "Produktion";
+            series3.ChartArea = "ChartArea3";
+            series3.Legend = "Legend3";
+            series3.Name = "Kapazitaet";
+            series4.ChartArea = "ChartArea3";
+            series4.Legend = "Legend3";
+            series4.Name = "Kapazitaet Bedarf";
+            this.chart_statistik.Series.Add(series1);
+            this.chart_statistik.Series.Add(series2);
+            this.chart_statistik.Series.Add(series3);
+            this.chart_statistik.Series.Add(series4);
+            title1.Name = "Title1";
+            this.chart_statistik.Titles.Add(title1);
             // 
             // tab_einstellungen
             // 
@@ -8077,6 +7819,87 @@
             this.nav_button_1.UseVisualStyleBackColor = false;
             this.nav_button_1.Click += new System.EventHandler(this.nav_button_1_Click);
             // 
+            // Bestellungen
+            // 
+            this.Bestellungen.Controls.Add(this.tab_BestellungenAufgeben);
+            this.Bestellungen.Controls.Add(this.tabPage2);
+            this.Bestellungen.Controls.Add(this.tab_bestellung);
+            resources.ApplyResources(this.Bestellungen, "Bestellungen");
+            this.Bestellungen.Name = "Bestellungen";
+            this.Bestellungen.SelectedIndex = 0;
+            this.helpProvider1.SetShowHelp(this.Bestellungen, ((bool)(resources.GetObject("Bestellungen.ShowHelp"))));
+            // 
+            // tab_BestellungenAufgeben
+            // 
+            this.tab_BestellungenAufgeben.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.tab_BestellungenAufgeben.Controls.Add(this.label3);
+            this.tab_BestellungenAufgeben.Controls.Add(this.addNr);
+            this.tab_BestellungenAufgeben.Controls.Add(this.zurueck);
+            this.tab_BestellungenAufgeben.Controls.Add(this.saveAenderungen);
+            this.tab_BestellungenAufgeben.Controls.Add(this.dataGridViewBestellung);
+            resources.ApplyResources(this.tab_BestellungenAufgeben, "tab_BestellungenAufgeben");
+            this.tab_BestellungenAufgeben.Name = "tab_BestellungenAufgeben";
+            this.helpProvider1.SetShowHelp(this.tab_BestellungenAufgeben, ((bool)(resources.GetObject("tab_BestellungenAufgeben.ShowHelp"))));
+            // 
+            // label3
+            // 
+            resources.ApplyResources(this.label3, "label3");
+            this.label3.Name = "label3";
+            this.helpProvider1.SetShowHelp(this.label3, ((bool)(resources.GetObject("label3.ShowHelp"))));
+            // 
+            // addNr
+            // 
+            this.addNr.Cursor = System.Windows.Forms.Cursors.Hand;
+            resources.ApplyResources(this.addNr, "addNr");
+            this.addNr.Name = "addNr";
+            this.helpProvider1.SetShowHelp(this.addNr, ((bool)(resources.GetObject("addNr.ShowHelp"))));
+            this.addNr.TabStop = false;
+            this.toolTip.SetToolTip(this.addNr, resources.GetString("addNr.ToolTip"));
+            // 
+            // zurueck
+            // 
+            this.zurueck.Cursor = System.Windows.Forms.Cursors.Hand;
+            resources.ApplyResources(this.zurueck, "zurueck");
+            this.zurueck.Name = "zurueck";
+            this.helpProvider1.SetShowHelp(this.zurueck, ((bool)(resources.GetObject("zurueck.ShowHelp"))));
+            this.zurueck.TabStop = false;
+            this.toolTip.SetToolTip(this.zurueck, resources.GetString("zurueck.ToolTip"));
+            // 
+            // saveAenderungen
+            // 
+            this.saveAenderungen.Cursor = System.Windows.Forms.Cursors.Hand;
+            resources.ApplyResources(this.saveAenderungen, "saveAenderungen");
+            this.saveAenderungen.Name = "saveAenderungen";
+            this.helpProvider1.SetShowHelp(this.saveAenderungen, ((bool)(resources.GetObject("saveAenderungen.ShowHelp"))));
+            this.saveAenderungen.TabStop = false;
+            this.toolTip.SetToolTip(this.saveAenderungen, resources.GetString("saveAenderungen.ToolTip"));
+            // 
+            // dataGridViewBestellung
+            // 
+            this.dataGridViewBestellung.AllowUserToDeleteRows = false;
+            this.dataGridViewBestellung.AllowUserToOrderColumns = true;
+            this.dataGridViewBestellung.BackgroundColor = System.Drawing.SystemColors.MenuBar;
+            this.dataGridViewBestellung.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridViewBestellung.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.dataGridViewBestellung.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            this.dataGridViewBestellung.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+
+            this.dataGridViewBestellung.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewBestellung_CellContentClick);
+            this.dataGridViewBestellung.UserAddedRow += new System.Windows.Forms.DataGridViewRowEventHandler(this.dataGridViewBestellung_UserAddedRow);
+            
+            
+            this.dataGridViewBestellung.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.kNr,
+            this.Bezeichnung,
+            this.Lagerbestand,
+            this.Lieferdauer,
+            this.menge,
+            this.eil,
+            this.Loeschen});
+            resources.ApplyResources(this.dataGridViewBestellung, "dataGridViewBestellung");
+            this.dataGridViewBestellung.Name = "dataGridViewBestellung";
+            this.helpProvider1.SetShowHelp(this.dataGridViewBestellung, ((bool)(resources.GetObject("dataGridViewBestellung.ShowHelp"))));
+            // 
             // kNr
             // 
             this.kNr.DividerWidth = 2;
@@ -8123,6 +7946,232 @@
             resources.ApplyResources(this.Loeschen, "Loeschen");
             this.Loeschen.Name = "Loeschen";
             this.Loeschen.Text = "Aktion";
+            // 
+            // tabPage2
+            // 
+            resources.ApplyResources(this.tabPage2, "tabPage2");
+            this.tabPage2.BackColor = System.Drawing.Color.Transparent;
+            this.tabPage2.Controls.Add(this.label_header_kaufteile);
+            this.tabPage2.Controls.Add(this.dataGridViewKTeil);
+            this.tabPage2.Name = "tabPage2";
+            this.helpProvider1.SetShowHelp(this.tabPage2, ((bool)(resources.GetObject("tabPage2.ShowHelp"))));
+            // 
+            // label_header_kaufteile
+            // 
+            resources.ApplyResources(this.label_header_kaufteile, "label_header_kaufteile");
+            this.label_header_kaufteile.Name = "label_header_kaufteile";
+            this.helpProvider1.SetShowHelp(this.label_header_kaufteile, ((bool)(resources.GetObject("label_header_kaufteile.ShowHelp"))));
+            // 
+            // dataGridViewKTeil
+            // 
+            this.dataGridViewKTeil.AllowUserToAddRows = false;
+            this.dataGridViewKTeil.AllowUserToDeleteRows = false;
+            this.dataGridViewKTeil.AllowUserToOrderColumns = true;
+            this.dataGridViewKTeil.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.dataGridViewKTeil.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridViewKTeil.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewKTeil.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewLinkColumn1,
+            this.dataGridViewTextBoxColumn6,
+            this.dataGridViewTextBoxColumn11,
+            this.dataGridViewTextBoxColumn13,
+            this.dataGridViewTextBoxColumn14,
+            this.dataGridViewTextBoxColumn15,
+            this.dataGridViewTextBoxColumn16,
+            this.dataGridViewTextBoxColumn17,
+            this.dataGridViewTextBoxColumn18,
+            this.dataGridViewTextBoxColumn19,
+            this.dataGridViewTextBoxColumn20,
+            this.dataGridViewTextBoxColumn21,
+            this.Trend});
+            this.dataGridViewKTeil.GridColor = System.Drawing.SystemColors.ControlDarkDark;
+            resources.ApplyResources(this.dataGridViewKTeil, "dataGridViewKTeil");
+            this.dataGridViewKTeil.Name = "dataGridViewKTeil";
+            this.dataGridViewKTeil.ReadOnly = true;
+            this.helpProvider1.SetShowHelp(this.dataGridViewKTeil, ((bool)(resources.GetObject("dataGridViewKTeil.ShowHelp"))));
+            // 
+            // dataGridViewLinkColumn1
+            // 
+            resources.ApplyResources(this.dataGridViewLinkColumn1, "dataGridViewLinkColumn1");
+            this.dataGridViewLinkColumn1.LinkColor = System.Drawing.Color.DimGray;
+            this.dataGridViewLinkColumn1.Name = "dataGridViewLinkColumn1";
+            this.dataGridViewLinkColumn1.ReadOnly = true;
+            this.dataGridViewLinkColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewLinkColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            resources.ApplyResources(this.dataGridViewTextBoxColumn6, "dataGridViewTextBoxColumn6");
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            this.dataGridViewTextBoxColumn6.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn11
+            // 
+            resources.ApplyResources(this.dataGridViewTextBoxColumn11, "dataGridViewTextBoxColumn11");
+            this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
+            this.dataGridViewTextBoxColumn11.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn13
+            // 
+            resources.ApplyResources(this.dataGridViewTextBoxColumn13, "dataGridViewTextBoxColumn13");
+            this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
+            this.dataGridViewTextBoxColumn13.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn14
+            // 
+            resources.ApplyResources(this.dataGridViewTextBoxColumn14, "dataGridViewTextBoxColumn14");
+            this.dataGridViewTextBoxColumn14.Name = "dataGridViewTextBoxColumn14";
+            this.dataGridViewTextBoxColumn14.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn15
+            // 
+            resources.ApplyResources(this.dataGridViewTextBoxColumn15, "dataGridViewTextBoxColumn15");
+            this.dataGridViewTextBoxColumn15.Name = "dataGridViewTextBoxColumn15";
+            this.dataGridViewTextBoxColumn15.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn16
+            // 
+            resources.ApplyResources(this.dataGridViewTextBoxColumn16, "dataGridViewTextBoxColumn16");
+            this.dataGridViewTextBoxColumn16.Name = "dataGridViewTextBoxColumn16";
+            this.dataGridViewTextBoxColumn16.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn17
+            // 
+            resources.ApplyResources(this.dataGridViewTextBoxColumn17, "dataGridViewTextBoxColumn17");
+            this.dataGridViewTextBoxColumn17.Name = "dataGridViewTextBoxColumn17";
+            this.dataGridViewTextBoxColumn17.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn18
+            // 
+            resources.ApplyResources(this.dataGridViewTextBoxColumn18, "dataGridViewTextBoxColumn18");
+            this.dataGridViewTextBoxColumn18.Name = "dataGridViewTextBoxColumn18";
+            this.dataGridViewTextBoxColumn18.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn19
+            // 
+            resources.ApplyResources(this.dataGridViewTextBoxColumn19, "dataGridViewTextBoxColumn19");
+            this.dataGridViewTextBoxColumn19.Name = "dataGridViewTextBoxColumn19";
+            this.dataGridViewTextBoxColumn19.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn20
+            // 
+            resources.ApplyResources(this.dataGridViewTextBoxColumn20, "dataGridViewTextBoxColumn20");
+            this.dataGridViewTextBoxColumn20.Name = "dataGridViewTextBoxColumn20";
+            this.dataGridViewTextBoxColumn20.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn21
+            // 
+            resources.ApplyResources(this.dataGridViewTextBoxColumn21, "dataGridViewTextBoxColumn21");
+            this.dataGridViewTextBoxColumn21.Name = "dataGridViewTextBoxColumn21";
+            this.dataGridViewTextBoxColumn21.ReadOnly = true;
+            // 
+            // Trend
+            // 
+            resources.ApplyResources(this.Trend, "Trend");
+            this.Trend.Name = "Trend";
+            this.Trend.ReadOnly = true;
+            // 
+            // tab_bestellung
+            // 
+            this.tab_bestellung.BackColor = System.Drawing.Color.Transparent;
+            this.tab_bestellung.Controls.Add(this.dvVerwenden);
+            this.tab_bestellung.Controls.Add(this.addNr2);
+            this.tab_bestellung.Controls.Add(this.zurueck2);
+            this.tab_bestellung.Controls.Add(this.saveAenderungen2);
+            this.tab_bestellung.Controls.Add(this.label275);
+            this.tab_bestellung.Controls.Add(this.dataGridViewDirektverkauf);
+            this.tab_bestellung.Controls.Add(this.uebernehmenXML);
+            resources.ApplyResources(this.tab_bestellung, "tab_bestellung");
+            this.tab_bestellung.Name = "tab_bestellung";
+            this.helpProvider1.SetShowHelp(this.tab_bestellung, ((bool)(resources.GetObject("tab_bestellung.ShowHelp"))));
+            // 
+            // dvVerwenden
+            // 
+            this.dvVerwenden.BackColor = System.Drawing.SystemColors.Control;
+            resources.ApplyResources(this.dvVerwenden, "dvVerwenden");
+            this.dvVerwenden.Name = "dvVerwenden";
+            this.helpProvider1.SetShowHelp(this.dvVerwenden, ((bool)(resources.GetObject("dvVerwenden.ShowHelp"))));
+            this.dvVerwenden.UseVisualStyleBackColor = false;
+            // 
+            // addNr2
+            // 
+            this.addNr2.Cursor = System.Windows.Forms.Cursors.Hand;
+            resources.ApplyResources(this.addNr2, "addNr2");
+            this.addNr2.Name = "addNr2";
+            this.helpProvider1.SetShowHelp(this.addNr2, ((bool)(resources.GetObject("addNr2.ShowHelp"))));
+            this.addNr2.TabStop = false;
+            // 
+            // zurueck2
+            // 
+            this.zurueck2.Cursor = System.Windows.Forms.Cursors.Hand;
+            resources.ApplyResources(this.zurueck2, "zurueck2");
+            this.zurueck2.Name = "zurueck2";
+            this.helpProvider1.SetShowHelp(this.zurueck2, ((bool)(resources.GetObject("zurueck2.ShowHelp"))));
+            this.zurueck2.TabStop = false;
+            // 
+            // saveAenderungen2
+            // 
+            this.saveAenderungen2.Cursor = System.Windows.Forms.Cursors.Hand;
+            resources.ApplyResources(this.saveAenderungen2, "saveAenderungen2");
+            this.saveAenderungen2.Name = "saveAenderungen2";
+            this.helpProvider1.SetShowHelp(this.saveAenderungen2, ((bool)(resources.GetObject("saveAenderungen2.ShowHelp"))));
+            this.saveAenderungen2.TabStop = false;
+            // 
+            // label275
+            // 
+            resources.ApplyResources(this.label275, "label275");
+            this.label275.Name = "label275";
+            this.helpProvider1.SetShowHelp(this.label275, ((bool)(resources.GetObject("label275.ShowHelp"))));
+            // 
+            // dataGridViewDirektverkauf
+            // 
+            this.dataGridViewDirektverkauf.AllowUserToAddRows = false;
+            this.dataGridViewDirektverkauf.AllowUserToDeleteRows = false;
+            this.dataGridViewDirektverkauf.AllowUserToOrderColumns = true;
+            this.dataGridViewDirektverkauf.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.dataGridViewDirektverkauf.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridViewDirektverkauf.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewDirektverkauf.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.knr2,
+            this.dataGridViewTextBoxColumn32,
+            this.pr,
+            this.str,
+            this.dataGridViewCheckBoxColumn2});
+            resources.ApplyResources(this.dataGridViewDirektverkauf, "dataGridViewDirektverkauf");
+            this.dataGridViewDirektverkauf.Name = "dataGridViewDirektverkauf";
+            this.helpProvider1.SetShowHelp(this.dataGridViewDirektverkauf, ((bool)(resources.GetObject("dataGridViewDirektverkauf.ShowHelp"))));
+            // 
+            // knr2
+            // 
+            this.knr2.Name = "knr2";
+            this.knr2.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn32
+            // 
+            this.dataGridViewTextBoxColumn32.Name = "dataGridViewTextBoxColumn32";
+            // 
+            // pr
+            // 
+            this.pr.Name = "pr";
+            // 
+            // str
+            // 
+            this.str.Name = "str";
+            // 
+            // dataGridViewCheckBoxColumn2
+            // 
+            this.dataGridViewCheckBoxColumn2.FalseValue = "false";
+            this.dataGridViewCheckBoxColumn2.IndeterminateValue = "false";
+            this.dataGridViewCheckBoxColumn2.Name = "dataGridViewCheckBoxColumn2";
+            this.dataGridViewCheckBoxColumn2.TrueValue = "true";
+            // 
+            // uebernehmenXML
+            // 
+            this.uebernehmenXML.Cursor = System.Windows.Forms.Cursors.Hand;
+            resources.ApplyResources(this.uebernehmenXML, "uebernehmenXML");
+            this.uebernehmenXML.Name = "uebernehmenXML";
+            this.helpProvider1.SetShowHelp(this.uebernehmenXML, ((bool)(resources.GetObject("uebernehmenXML.ShowHelp"))));
+            this.uebernehmenXML.TabStop = false;
             // 
             // Fahrrad
             // 
@@ -8177,6 +8226,7 @@
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.p3ETAusfueren)).EndInit();
             this.tab_eTeil.ResumeLayout(false);
+            this.tab_eTeil.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewETeil)).EndInit();
             this.tabPage1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
@@ -8186,22 +8236,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.arbPlatzAusfueren)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridViewAP)).EndInit();
             this.tab_bestellverwaltung.ResumeLayout(false);
-            this.Bestellungen.ResumeLayout(false);
-            this.tab_BestellungenAufgeben.ResumeLayout(false);
-            this.tab_BestellungenAufgeben.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.addNr)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.zurueck)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.saveAenderungen)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewBestellung)).EndInit();
-            this.tabPage2.ResumeLayout(false);
-            this.tabPage2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewKTeil)).EndInit();
-            this.tab_bestellung.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.addNr2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.zurueck2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.saveAenderungen2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDirektverkauf)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.uebernehmenXML)).EndInit();
             this.tab_marktplatz.ResumeLayout(false);
             this.tab_marktplatz.PerformLayout();
             this.panel_password.ResumeLayout(false);
@@ -8244,6 +8278,22 @@
             this.menu.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.xml_export)).EndInit();
             this.NavPanel.ResumeLayout(false);
+            this.Bestellungen.ResumeLayout(false);
+            this.tab_BestellungenAufgeben.ResumeLayout(false);
+            this.tab_BestellungenAufgeben.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.addNr)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.zurueck)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.saveAenderungen)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewBestellung)).EndInit();
+            this.tabPage2.ResumeLayout(false);
+            this.tabPage2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewKTeil)).EndInit();
+            this.tab_bestellung.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.addNr2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.zurueck2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.saveAenderungen2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDirektverkauf)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.uebernehmenXML)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -8275,10 +8325,6 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.HelpProvider helpProvider1;
         private System.Windows.Forms.TabPage tab_bestellverwaltung;
-        private System.Windows.Forms.TabControl Bestellungen;
-        private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.DataGridView dataGridViewKTeil;
-        private System.Windows.Forms.TabPage tab_bestellung;
         private System.Windows.Forms.DataGridView dataGridViewETeil;
         private System.Windows.Forms.TabPage tab_P1;
         private System.Windows.Forms.Panel panel1;
@@ -8807,7 +8853,6 @@
         private System.Windows.Forms.PictureBox p3ETAusfueren;
         private System.Windows.Forms.TabPage tab_arbeitzeit;
         private System.Windows.Forms.DataGridView DataGridViewAP;
-        private System.Windows.Forms.PictureBox uebernehmenXML;
         private System.Windows.Forms.TabPage xmlOutput;
         private System.Windows.Forms.Panel panelXMLerstellen;
         private System.Windows.Forms.DataGridView dataGridViewProduktKapazit;
@@ -8827,21 +8872,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn24;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn25;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn26;
-        private System.Windows.Forms.PictureBox addNr2;
-        private System.Windows.Forms.PictureBox zurueck2;
-        private System.Windows.Forms.PictureBox saveAenderungen2;
-        private System.Windows.Forms.Label label275;
-        private System.Windows.Forms.DataGridView dataGridViewDirektverkauf;
-        private System.Windows.Forms.CheckBox dvVerwenden;
         private System.Windows.Forms.SaveFileDialog saveFileDialog1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colWarteschlange;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colBearbeitung;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colPlanung;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.DataGridView dataGridViewProduktAuftrag;
         private System.Windows.Forms.PictureBox pictureBox4;
@@ -8853,11 +8884,6 @@
         private System.Windows.Forms.ToolStripMenuItem videoF2ToolStripMenuItem;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn27;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn28;
-        private System.Windows.Forms.DataGridViewTextBoxColumn knr2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn32;
-        private System.Windows.Forms.DataGridViewTextBoxColumn pr;
-        private System.Windows.Forms.DataGridViewTextBoxColumn str;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn dataGridViewCheckBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn12;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn22;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn23;
@@ -8928,21 +8954,6 @@
         private System.Windows.Forms.Label lbl_schichten;
         private System.Windows.Forms.Label lbl_diskont;
         private System.Windows.Forms.Label lbl_Gesuche;
-
-        private System.Windows.Forms.Label label_header_kaufteile;
-        private System.Windows.Forms.DataGridViewLinkColumn dataGridViewLinkColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn13;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn14;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn15;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn16;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn17;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn18;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn19;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn20;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn21;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Trend;
 
 
         private System.Windows.Forms.Panel panel_password;
@@ -9015,12 +9026,6 @@
         private System.Windows.Forms.Label label286;
         private System.Windows.Forms.Label label285;
         private System.Windows.Forms.Label label278;
-        private System.Windows.Forms.TabPage tab_BestellungenAufgeben;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.PictureBox addNr;
-        private System.Windows.Forms.PictureBox zurueck;
-        private System.Windows.Forms.PictureBox saveAenderungen;
-        private System.Windows.Forms.DataGridView dataGridViewBestellung;
         private System.Windows.Forms.Panel panel_password2;
         private System.Windows.Forms.Label lbl_in_progress;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn42;
@@ -9047,6 +9052,28 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn preis;
         private System.Windows.Forms.DataGridViewButtonColumn action_Angebote;
         private System.Windows.Forms.DataGridViewTextBoxColumn hidden_angebote;
+        private System.Windows.Forms.Label label_mehrfachverwendung_p1;
+        private System.Windows.Forms.Label label_mehrfachverwendung_p2;
+        private System.Windows.Forms.Label label_mehrfachverwendung_p3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn KinderFahrradColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DamenFahrradColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn HerrenFahrradColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxStatusIndicator;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colWarteschlange;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colBearbeitung;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colPlanung;
+        private System.Windows.Forms.Label label287;
+        private System.Windows.Forms.TabControl Bestellungen;
+        private System.Windows.Forms.TabPage tab_BestellungenAufgeben;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.PictureBox addNr;
+        private System.Windows.Forms.PictureBox zurueck;
+        private System.Windows.Forms.PictureBox saveAenderungen;
+        private System.Windows.Forms.DataGridView dataGridViewBestellung;
         private System.Windows.Forms.DataGridViewTextBoxColumn kNr;
         private System.Windows.Forms.DataGridViewTextBoxColumn Bezeichnung;
         private System.Windows.Forms.DataGridViewTextBoxColumn Lagerbestand;
@@ -9054,6 +9081,35 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn menge;
         private System.Windows.Forms.DataGridViewCheckBoxColumn eil;
         private System.Windows.Forms.DataGridViewButtonColumn Loeschen;
+        private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.Label label_header_kaufteile;
+        private System.Windows.Forms.DataGridView dataGridViewKTeil;
+        private System.Windows.Forms.DataGridViewLinkColumn dataGridViewLinkColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn13;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn14;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn15;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn16;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn17;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn18;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn19;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn20;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn21;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Trend;
+        private System.Windows.Forms.TabPage tab_bestellung;
+        private System.Windows.Forms.CheckBox dvVerwenden;
+        private System.Windows.Forms.PictureBox addNr2;
+        private System.Windows.Forms.PictureBox zurueck2;
+        private System.Windows.Forms.PictureBox saveAenderungen2;
+        private System.Windows.Forms.Label label275;
+        private System.Windows.Forms.DataGridView dataGridViewDirektverkauf;
+        private System.Windows.Forms.DataGridViewTextBoxColumn knr2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn32;
+        private System.Windows.Forms.DataGridViewTextBoxColumn pr;
+        private System.Windows.Forms.DataGridViewTextBoxColumn str;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn dataGridViewCheckBoxColumn2;
+        private System.Windows.Forms.PictureBox uebernehmenXML;
         
     }
 }

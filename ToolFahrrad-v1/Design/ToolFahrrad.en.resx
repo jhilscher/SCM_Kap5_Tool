@@ -123,6 +123,21 @@
   <data name="tab_produktion.Text" xml:space="preserve">
     <value>Production planning</value>
   </data>
+
+  <data name="tab_marktplatz.Text" xml:space="preserve">
+    <value>Marketplace</value>
+  </data>
+  <data name="tab_beenden.Text" xml:space="preserve">
+    <value>Finish order</value>
+  </data>
+  <data name="tab_einstellungen.Text" xml:space="preserve">
+    <value>Settings</value>
+  </data>
+  <data name="tab_statistik.Text" xml:space="preserve">
+    <value>Statistics</value>
+  </data>
+
+
   <data name="tab_arbeitzeit.Text" xml:space="preserve">
     <value>Capacity planning</value>
   </data>
@@ -242,6 +257,229 @@
   <data name="prognoseSpeichern.Text" xml:space="preserve">
     <value>Save</value>
   </data>
+  
+  
+  
+  
+  <data name="start_prognose_label_titel.Text" xml:space="preserve">
+    <value>Forecast</value>
+  </data>
+  <data name="start_prognose_label_produkte_title.Text" xml:space="preserve">
+    <value>prediction</value>
+  </data>
+  <data name="label1.Text" xml:space="preserve">
+    <value>buffer</value>
+  </data>
+  <data name="labeldragdropinfo.Text" xml:space="preserve">
+    <value>Please drag and drop your XML File onto this space</value>
+  </data>
+  <data name="s1.HeaderText" xml:space="preserve">
+    <value>2nd tier</value>
+  </data>
+  <data name="s3.HeaderText" xml:space="preserve">
+    <value>3nd tier</value>
+  </data>
+    <data name="s3.HeaderText" xml:space="preserve">
+    <value>3nd tier</value>
+  </data>
+
+    <data name="tab_BestellungenAufgeben.Text" xml:space="preserve">
+    <value>Orders</value>
+  </data>
+  
+      <data name="Bezeichnung.HeaderText" xml:space="preserve">
+    <value>Description</value>
+  </data>
+        <data name="Lagerbestand.HeaderText" xml:space="preserve">
+    <value>Inventory</value>
+  </data>
+        <data name="Lieferdauer.HeaderText" xml:space="preserve">
+    <value>Delivery time</value>
+  </data>
+        <data name="label_header_kaufteile.Text" xml:space="preserve">
+    <value>Purchase parts</value>
+  </data>
+  
+   <data name="lbl_benutzername.Text" xml:space="preserve">
+    <value>Username</value>
+  </data> 
+    <data name="lbl_passwort.Text" xml:space="preserve">
+    <value>Password</value>
+  </data> 
+      <data name="btn_anmelden.Text" xml:space="preserve">
+    <value>Login</value>
+  </data> 
+     <data name="chk_save.Text" xml:space="preserve">
+    <value>save data?</value>
+  </data> 
+
+     <data name="lbl_Angebote.Text" xml:space="preserve">
+    <value>Offers</value>
+  </data> 
+       <data name="lbl_Gesuche.Text" xml:space="preserve">
+    <value>Looking for</value>
+  </data>  
+       <data name="lbl_eigene_Angebote.Text" xml:space="preserve">
+    <value>Own Offers</value>
+  </data> 
+       <data name="lbl_eigene_Gesuche.Text" xml:space="preserve">
+    <value>Looking for own</value>
+  </data> 
+   <data name="btn_reload_market.Text" xml:space="preserve">
+    <value>Refresh</value>
+  </data> 
+  
+     <data name="dataGridViewTextBoxColumn34.HeaderText" xml:space="preserve">
+    <value>Customer</value>
+  </data> 
+       <data name="dataGridViewTextBoxColumn35.HeaderText" xml:space="preserve">
+    <value>Article</value>
+  </data> 
+       <data name="dataGridViewTextBoxColumn36.HeaderText" xml:space="preserve">
+    <value>Quantity</value>
+  </data> 
+       <data name="dataGridViewTextBoxColumn37.HeaderText" xml:space="preserve">
+    <value>Price</value>
+  </data>   
+  
+  
+      <data name="dataGridViewTextBoxColumn38.HeaderText" xml:space="preserve">
+    <value>Seller</value>
+  </data> 
+       <data name="dataGridViewTextBoxColumn39.HeaderText" xml:space="preserve">
+    <value>Article</value>
+  </data> 
+       <data name="dataGridViewTextBoxColumn40.HeaderText" xml:space="preserve">
+    <value>Quantity</value>
+  </data> 
+       <data name="dataGridViewTextBoxColumn41.HeaderText" xml:space="preserve">
+    <value>Price</value>
+  </data>   
+         <data name="diskSpeichern.Text" xml:space="preserve">
+    <value>Save</value>
+  </data>  
+           <data name="btn_schicht_save.Text" xml:space="preserve">
+    <value>Save</value>
+  </data>  
+           <data name="btn_ok.Text" xml:space="preserve">
+    <value>Save</value>
+  </data>  
+<data name="label278.Text" xml:space="preserve">
+    <value>Risk Management</value>
+  </data>  
+             <data name="einstellungen_button1.Text" xml:space="preserve">
+    <value>Manual</value>
+  </data>  
+ <data name="einstellungen_sprache_deutsch.Text" xml:space="preserve">
+    <value>German</value>
+  </data>  
+  
+  
+    <data name="label282.Text" xml:space="preserve">
+    <value>The risk behavior determines the calculated delivery time deviations.</value>
+  </data>  
+      <data name="lbl_risk_preferences.Text" xml:space="preserve">
+    <value>Risk preferences</value>
+  </data>  
+        <data name="radio_risk_avers.Text" xml:space="preserve">
+    <value>Aversives</value>
+  </data> 
+         <data name="radio_risk_afin.Text" xml:space="preserve">
+    <value>Affinity</value>
+  </data>  
+    
+  <data name="label277.Text" xml:space="preserve">
+    <value>Work time management</value>
+  </data>            
+    <data name="label283.Text" xml:space="preserve">
+    <value>You can select at which time the 2nd and 3rd
+    shift will start</value>
+  </data>  
+  
+             <data name="lbl_schichten.Text" xml:space="preserve">
+    <value>Shifts</value>
+  </data>  
+             <data name="lbl_2schicht.Text" xml:space="preserve">
+    <value>2nd starts at</value>
+  </data>  
+             <data name="lbl_3schicht.Text" xml:space="preserve">
+    <value>3rd starts at</value>
+  </data>  
+    
+ <data name="einstellungen_sprache_englisch.Text" xml:space="preserve">
+    <value>English</value>
+  </data>  
+  <data name="header_statistik.Text" xml:space="preserve">
+    <value>Statistics</value>
+  </data>  
+  <data name="header_xmlExport.Text" xml:space="preserve">
+    <value>XML Preview</value>
+  </data>  
+  <data name="button_exportXml.Text" xml:space="preserve">
+    <value>Export XML</value>
+  </data>  
+             <data name="btn_ok.Text" xml:space="preserve">
+    <value>save</value>
+  </data>  
+ <data name="btn_change_language.Text" xml:space="preserve">
+    <value>Change Language</value>
+  </data>  
+        <data name="dataGridViewTextBoxColumn42.HeaderText" xml:space="preserve">
+    <value>Costumer</value>
+  </data> 
+       <data name="dataGridViewTextBoxColumn43.HeaderText" xml:space="preserve">
+    <value>Article</value>
+  </data> 
+       <data name="dataGridViewTextBoxColumn44.HeaderText" xml:space="preserve">
+    <value>Quantity</value>
+  </data> 
+       <data name="dataGridViewTextBoxColumn45.HeaderText" xml:space="preserve">
+    <value>Price</value>
+  </data>   
+  
+<data name="action_eangebote.Text" xml:space="preserve">
+    <value>Delete</value>
+  </data>   
+  <data name="action_egesuche.Text" xml:space="preserve">
+    <value>Delete</value>
+  </data>   
+    
+  
+         <data name="verkäufer.HeaderText" xml:space="preserve">
+    <value>Seller</value>
+  </data> 
+           <data name="artikel.HeaderText" xml:space="preserve">
+    <value>Article</value>
+  </data> 
+           <data name="angebot_menge.HeaderText" xml:space="preserve">
+    <value>Quantity</value>
+  </data> 
+           <data name="preis.HeaderText" xml:space="preserve">
+    <value>Price</value>
+  </data> 
+  <data name="action_Angebote.Text" xml:space="preserve">
+    <value>ok</value>
+  </data> 
+  <data name="dataGridViewTextBoxColumn14.HeaderText" xml:space="preserve">
+    <value>P(N)</value>
+  </data>
+  <data name="dataGridViewTextBoxColumn15.HeaderText" xml:space="preserve">
+    <value>P(N+1)</value>
+  </data>
+  <data name="dataGridViewTextBoxColumn16.HeaderText" xml:space="preserve">
+    <value>P(N+2)</value>
+  </data>
+    <data name="dataGridViewTextBoxColumn17.HeaderText" xml:space="preserve">
+    <value>P(N+3)</value>
+  </data>
+  
+
+
+
+
+
+
+
   <data name="prognoseSpeichern.ToolTip" xml:space="preserve">
     <value>save forecast</value>
   </data>
@@ -503,6 +741,11 @@
   <data name="colPlanung.HeaderText" xml:space="preserve">
     <value>Planned</value>
   </data>
+  
+     <data name="label286.Text" xml:space="preserve">
+    <value>Change Language</value>
+  </data>
+    
   <data name="tabPage1.Text" xml:space="preserve">
     <value>Production list</value>
   </data>
@@ -978,7 +1221,7 @@
         AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
         LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
         ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAABS
-        CwAAAk1TRnQBSQFMAgEBAwEAAYgBAgGMAQIBEAEAARABAAT/AQkBEAj/AUIBTQE2AQQGAAE2AQQCAAEo
+        CwAAAk1TRnQBSQFMAgEBAwEAAYgBAgGIAQIBEAEAARABAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
         AwABQAMAARADAAEBAQABCAYAAQQYAAGAAgABgAMAAoABAAGAAwABgAEAAYABAAKAAgADwAEAAcAB3AHA
         AQAB8AHKAaYBAAEzBQABMwEAATMBAAEzAQACMwIAAxYBAAMcAQADIgEAAykBAANVAQADTQEAA0IBAAM5
         AQABgAF8Af8BAAJQAf8BAAGTAQAB1gEAAf8B7AHMAQABxgHWAe8BAAHWAucBAAGQAakBrQIAAf8BMwMA
@@ -1026,7 +1269,7 @@
         AQ8B4AEPAeABDwIAAeABDwHgAQ8B4AEPAgABgAEDAYABAwGAAQMCAAGAAQMBgAEDAYABAwIAAYABAwGA
         AQMBgAEDAgABgAEDAYABAwGAAQMCAAGAAQMBgAEDAYABAwIAAYABAwGAAQMBgAEDAgABgAEDAYABAwGA
         AQMCAAGAAQMBgAEDAYABAwIAAYABAwGAAQMBgAEDAwABAQEAAQEBAAEBAwABAQEAAQEBAAEBAwABAQEA
-        AQEBAAEBAgAB4AEPAeABDwHgAQ8YAAs=
+        AQEBAAEBAgAB4AEPAeABDwHgAQ8CAAs=
 </value>
   </data>
   <data name="imageListPlusMinus.ImageStream" mimetype="application/x-microsoft.net.object.binary.base64">
@@ -1034,7 +1277,7 @@
         AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
         LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
         ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAAAM
-        CAAAAk1TRnQBSQFMAgEBAgEAAUgBAAFMAQABEAEAARABAAT/AQkBEAj/AUIBTQE2AQQGAAE2AQQCAAEo
+        CAAAAk1TRnQBSQFMAgEBAgEAAUgBAAFIAQABEAEAARABAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
         AwABQAMAARADAAEBAQABCAYAAQQYAAGAAgABgAMAAoABAAGAAwABgAEAAYABAAKAAgADwAEAAcAB3AHA
         AQAB8AHKAaYBAAEzBQABMwEAATMBAAEzAQACMwIAAxYBAAMcAQADIgEAAykBAANVAQADTQEAA0IBAAM5
         AQABgAF8Af8BAAJQAf8BAAGTAQAB1gEAAf8B7AHMAQABxgHWAe8BAAHWAucBAAGQAakBrQIAAf8BMwMA
@@ -1068,7 +1311,7 @@
         ARAgAAHvDgAC7w4AAe8gAAH/Ae8BEQoAAREB7wL/Ae8BEQoAAREB7wH/IAABQgFNAT4HAAE+AwABKAMA
         AUADAAEQAwABAQEAAQEFAAGAFwAD/xEAAR8B+AEfAfgEAAE/AfwBPwH8BAABPwH8AT4BfAQAAT8B/AE+
         AXwEAAE/AfwBPgF8BAABMAEMATABDAQAATABDAEwAQwEAAE/AfwBPgF8BAABPwH8AT4BfAQAAT8B/AE+
-        AXwEAAE/AfwBPwH8BAABHwH4AR8B+CoACw==
+        AXwEAAE/AfwBPwH8BAABHwH4AR8B+BQACw==
 </value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
@@ -2938,8 +3181,5 @@
         AAAAAAAAAC0tLSkzMzPYMzMz7zMzM+YzMzPmMzMz7zMzM9YxMTFTICAgAwAAAAAAAAAAAAAAAPw/AAD4
         HwAA8I8AAAAAAAAEIAAAnDkAABgYAAAYGAAAEAgAAAAAAAAAAAAACBAAAM/jAADD4wAAwAcAAPAHAAA=
 </value>
-  </data>
-  <data name="string_delete" xml:space="preserve">
-    <value>delete</value>
   </data>
 </root>

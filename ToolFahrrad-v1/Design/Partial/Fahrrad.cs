@@ -205,12 +205,14 @@ namespace ToolFahrrad_v1.Design
         }
 
 
+
         /// <summary>
         /// Klick auf Aktionsbutton einer Bestellung aus dem DataGrid
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void ReiheLoeschenBestellung(object sender, DataGridViewCellEventArgs e) {
+        private void ReiheLoeschenBestellung(object sender, DataGridViewCellEventArgs e)
+        {
 
 
 
@@ -221,7 +223,8 @@ namespace ToolFahrrad_v1.Design
 
             var row = dataGridViewBestellung.Rows[i];
 
-            if (row.Cells[6].Value == "Hinzufügen" || row.Cells[6].Value == "Add") {
+            if (row.Cells[6].Value == "Hinzufügen" || row.Cells[6].Value == "Add")
+            {
                 ReiheHinzu(row);
                 return;
             }
@@ -233,9 +236,11 @@ namespace ToolFahrrad_v1.Design
 
             // reset menge auf null up in here
             var bp = _bv.BvPositionen;
-            foreach (var a in bp) {
+            foreach (var a in bp)
+            {
 
-                if (a.Kaufteil.Nummer == artNr) {
+                if (a.Kaufteil.Nummer == artNr)
+                {
 
                     a.Menge = 0;
 
@@ -250,63 +255,64 @@ namespace ToolFahrrad_v1.Design
             DataGridViewRow row = e.Row;
 
             row.Cells[6].Value = _culInfo.Contains("de") ? "Hinzufügen" : "Add";
-            
+
 
         }
 
-        private void ReiheHinzu(DataGridViewRow newRow) {
-        try
+        private void ReiheHinzu(DataGridViewRow newRow)
+        {
+            try
             {
                 if (dataGridViewBestellung.AllowUserToAddRows)
                 {
                     dataGridViewBestellung.AllowUserToAddRows = false;
                     kNr.ReadOnly = true;
                 }
-                
 
-                
-                 _bp = new List<Bestellposition>();
 
-                 foreach (DataGridViewRow row in dataGridViewBestellung.Rows)
-                 {
-                     var check2 = (DataGridViewCheckBoxCell)row.Cells[5];
-                     bool c = check2.Value != null;
 
-                     var value = row.Cells[0].Value;
-                     if (value != null)
-                     {
-                         var teil = _instance.GetTeil(Convert.ToInt32(value.ToString())) as KTeil;
-                         if (teil != null)
-                         {
-                             if (row.Cells[4].Value != null)
-                             {
+                _bp = new List<Bestellposition>();
 
-                                 var bbp = new Bestellposition(teil, Convert.ToInt32(row.Cells[4].Value.ToString()),
-                                                               c);
-                                 _bp.Add(bbp);
+                foreach (DataGridViewRow row in dataGridViewBestellung.Rows)
+                {
+                    var check2 = (DataGridViewCheckBoxCell)row.Cells[5];
+                    bool c = check2.Value != null;
 
-                             }
-                             else
-                                 MessageBox.Show(
-                                     Resources.Fahrrad_pictureBox3_Click_Kaufteil_N + value +
-                                     Resources.Fahrrad_pictureBox3_Click_, Resources.Fahrrad_XmlOeffnen_Fehlermeldung,
-                                     MessageBoxButtons.OK, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button1);
-                         }
-                         else
-                             MessageBox.Show(
-                                 Resources.Fahrrad_pictureBox3_Click_Kaufteil_N + value +
-                                 Resources.Fahrrad_pictureBox3_Click_1, Resources.Fahrrad_XmlOeffnen_Fehlermeldung,
-                                 MessageBoxButtons.OK, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button1);
-                     }
-                     else
-                     {
-                         MessageBox.Show(Resources.Fahrrad_pictureBox3_Click_Kaufteil_kann_nicht_NULL_sein,
-                                         Resources.Fahrrad_XmlOeffnen_Fehlermeldung,
-                                         MessageBoxButtons.OK, MessageBoxIcon.Exclamation,
-                                         MessageBoxDefaultButton.Button1);
-                     }
+                    var value = row.Cells[0].Value;
+                    if (value != null)
+                    {
+                        var teil = _instance.GetTeil(Convert.ToInt32(value.ToString())) as KTeil;
+                        if (teil != null)
+                        {
+                            if (row.Cells[4].Value != null)
+                            {
 
-                 }
+                                var bbp = new Bestellposition(teil, Convert.ToInt32(row.Cells[4].Value.ToString()),
+                                                              c);
+                                _bp.Add(bbp);
+
+                            }
+                            else
+                                MessageBox.Show(
+                                    Resources.Fahrrad_pictureBox3_Click_Kaufteil_N + value +
+                                    Resources.Fahrrad_pictureBox3_Click_, Resources.Fahrrad_XmlOeffnen_Fehlermeldung,
+                                    MessageBoxButtons.OK, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button1);
+                        }
+                        else
+                            MessageBox.Show(
+                                Resources.Fahrrad_pictureBox3_Click_Kaufteil_N + value +
+                                Resources.Fahrrad_pictureBox3_Click_1, Resources.Fahrrad_XmlOeffnen_Fehlermeldung,
+                                MessageBoxButtons.OK, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button1);
+                    }
+                    else
+                    {
+                        MessageBox.Show(Resources.Fahrrad_pictureBox3_Click_Kaufteil_kann_nicht_NULL_sein,
+                                        Resources.Fahrrad_XmlOeffnen_Fehlermeldung,
+                                        MessageBoxButtons.OK, MessageBoxIcon.Exclamation,
+                                        MessageBoxDefaultButton.Button1);
+                    }
+
+                }
 
                 newRow.Cells[6].Value = _culInfo.Contains("de") ? "Löschen" : "Delete";
 

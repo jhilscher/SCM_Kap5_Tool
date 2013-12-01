@@ -61,6 +61,42 @@ namespace ToolFahrrad_v1.Properties {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die P(N) ähnelt.
+        /// </summary>
+        internal static string _ {
+            get {
+                return ResourceManager.GetString("", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die P(N+1) ähnelt.
+        /// </summary>
+        internal static string dataGridViewTextBoxColumn15_HeaderText {
+            get {
+                return ResourceManager.GetString("dataGridViewTextBoxColumn15.HeaderText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die P(N+2) ähnelt.
+        /// </summary>
+        internal static string dataGridViewTextBoxColumn16_HeaderText {
+            get {
+                return ResourceManager.GetString("dataGridViewTextBoxColumn16.HeaderText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die P(N+3) ähnelt.
+        /// </summary>
+        internal static string dataGridViewTextBoxColumn17_HeaderText {
+            get {
+                return ResourceManager.GetString("dataGridViewTextBoxColumn17.HeaderText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap Down_Arrow_Icon1 {
