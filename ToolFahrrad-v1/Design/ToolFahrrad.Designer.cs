@@ -648,6 +648,46 @@
             this.s3 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.ueber = new System.Windows.Forms.DataGridViewImageColumn();
             this.tab_bestellverwaltung = new System.Windows.Forms.TabPage();
+            this.Bestellungen = new System.Windows.Forms.TabControl();
+            this.tab_BestellungenAufgeben = new System.Windows.Forms.TabPage();
+            this.label3 = new System.Windows.Forms.Label();
+            this.dataGridViewBestellung = new System.Windows.Forms.DataGridView();
+            this.kNr = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Bezeichnung = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Lagerbestand = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Lieferdauer = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.menge = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.eil = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.Loeschen = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.label_header_kaufteile = new System.Windows.Forms.Label();
+            this.dataGridViewKTeil = new System.Windows.Forms.DataGridView();
+            this.dataGridViewLinkColumn1 = new System.Windows.Forms.DataGridViewLinkColumn();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn18 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn19 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn20 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn21 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Trend = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tab_bestellung = new System.Windows.Forms.TabPage();
+            this.dvVerwenden = new System.Windows.Forms.CheckBox();
+            this.addNr2 = new System.Windows.Forms.PictureBox();
+            this.zurueck2 = new System.Windows.Forms.PictureBox();
+            this.saveAenderungen2 = new System.Windows.Forms.PictureBox();
+            this.label275 = new System.Windows.Forms.Label();
+            this.dataGridViewDirektverkauf = new System.Windows.Forms.DataGridView();
+            this.knr2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn32 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pr = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.str = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewCheckBoxColumn2 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.uebernehmenXML = new System.Windows.Forms.PictureBox();
             this.tab_marktplatz = new System.Windows.Forms.TabPage();
             this.panel_password2 = new System.Windows.Forms.Panel();
             this.lbl_in_progress = new System.Windows.Forms.Label();
@@ -803,49 +843,6 @@
             this.NavPanel = new System.Windows.Forms.Panel();
             this.nav_button_1 = new System.Windows.Forms.Button();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.Bestellungen = new System.Windows.Forms.TabControl();
-            this.tab_BestellungenAufgeben = new System.Windows.Forms.TabPage();
-            this.label3 = new System.Windows.Forms.Label();
-            this.addNr = new System.Windows.Forms.PictureBox();
-            this.zurueck = new System.Windows.Forms.PictureBox();
-            this.saveAenderungen = new System.Windows.Forms.PictureBox();
-            this.dataGridViewBestellung = new System.Windows.Forms.DataGridView();
-            this.kNr = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Bezeichnung = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Lagerbestand = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Lieferdauer = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.menge = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.eil = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.Loeschen = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.label_header_kaufteile = new System.Windows.Forms.Label();
-            this.dataGridViewKTeil = new System.Windows.Forms.DataGridView();
-            this.dataGridViewLinkColumn1 = new System.Windows.Forms.DataGridViewLinkColumn();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn18 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn19 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn20 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn21 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Trend = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tab_bestellung = new System.Windows.Forms.TabPage();
-            this.dvVerwenden = new System.Windows.Forms.CheckBox();
-            this.addNr2 = new System.Windows.Forms.PictureBox();
-            this.zurueck2 = new System.Windows.Forms.PictureBox();
-            this.saveAenderungen2 = new System.Windows.Forms.PictureBox();
-            this.label275 = new System.Windows.Forms.Label();
-            this.dataGridViewDirektverkauf = new System.Windows.Forms.DataGridView();
-            this.knr2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn32 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pr = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.str = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewCheckBoxColumn2 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.uebernehmenXML = new System.Windows.Forms.PictureBox();
             this.tabs.SuspendLayout();
             this.tab_xml.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
@@ -887,6 +884,17 @@
             ((System.ComponentModel.ISupportInitialize)(this.arbPlatzAusfueren)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridViewAP)).BeginInit();
             this.tab_bestellverwaltung.SuspendLayout();
+            this.Bestellungen.SuspendLayout();
+            this.tab_BestellungenAufgeben.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewBestellung)).BeginInit();
+            this.tabPage2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewKTeil)).BeginInit();
+            this.tab_bestellung.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.addNr2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.zurueck2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.saveAenderungen2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDirektverkauf)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.uebernehmenXML)).BeginInit();
             this.tab_marktplatz.SuspendLayout();
             this.panel_password.SuspendLayout();
             this.panel10.SuspendLayout();
@@ -918,20 +926,6 @@
             this.menu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.xml_export)).BeginInit();
             this.NavPanel.SuspendLayout();
-            this.Bestellungen.SuspendLayout();
-            this.tab_BestellungenAufgeben.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.addNr)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.zurueck)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.saveAenderungen)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewBestellung)).BeginInit();
-            this.tabPage2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewKTeil)).BeginInit();
-            this.tab_bestellung.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.addNr2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.zurueck2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.saveAenderungen2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDirektverkauf)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.uebernehmenXML)).BeginInit();
             this.SuspendLayout();
             // 
             // tabs
@@ -1010,6 +1004,7 @@
             this.home_prognose_table_main.Controls.Add(this.bildSpeichOk, 7, 0);
             this.home_prognose_table_main.Controls.Add(this.start_prognose_label_successInfo, 1, 7);
             this.home_prognose_table_main.Name = "home_prognose_table_main";
+            this.home_prognose_table_main.Paint += new System.Windows.Forms.PaintEventHandler(this.home_prognose_table_main_Paint);
             // 
             // start_prognose_label_titel
             // 
@@ -6539,6 +6534,342 @@
             this.tab_bestellverwaltung.Name = "tab_bestellverwaltung";
             this.helpProvider1.SetShowHelp(this.tab_bestellverwaltung, ((bool)(resources.GetObject("tab_bestellverwaltung.ShowHelp"))));
             // 
+            // Bestellungen
+            // 
+            this.Bestellungen.Controls.Add(this.tab_BestellungenAufgeben);
+            this.Bestellungen.Controls.Add(this.tabPage2);
+            this.Bestellungen.Controls.Add(this.tab_bestellung);
+            resources.ApplyResources(this.Bestellungen, "Bestellungen");
+            this.Bestellungen.Name = "Bestellungen";
+            this.Bestellungen.SelectedIndex = 0;
+            this.helpProvider1.SetShowHelp(this.Bestellungen, ((bool)(resources.GetObject("Bestellungen.ShowHelp"))));
+            // 
+            // tab_BestellungenAufgeben
+            // 
+            this.tab_BestellungenAufgeben.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.tab_BestellungenAufgeben.Controls.Add(this.label3);
+            this.tab_BestellungenAufgeben.Controls.Add(this.dataGridViewBestellung);
+            resources.ApplyResources(this.tab_BestellungenAufgeben, "tab_BestellungenAufgeben");
+            this.tab_BestellungenAufgeben.Name = "tab_BestellungenAufgeben";
+            this.helpProvider1.SetShowHelp(this.tab_BestellungenAufgeben, ((bool)(resources.GetObject("tab_BestellungenAufgeben.ShowHelp"))));
+            // 
+            // label3
+            // 
+            resources.ApplyResources(this.label3, "label3");
+            this.label3.Name = "label3";
+            this.helpProvider1.SetShowHelp(this.label3, ((bool)(resources.GetObject("label3.ShowHelp"))));
+            // 
+            // dataGridViewBestellung
+            // 
+            this.dataGridViewBestellung.AllowUserToDeleteRows = false;
+            this.dataGridViewBestellung.AllowUserToOrderColumns = true;
+            this.dataGridViewBestellung.BackgroundColor = System.Drawing.SystemColors.MenuBar;
+            this.dataGridViewBestellung.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridViewBestellung.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.dataGridViewBestellung.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            this.dataGridViewBestellung.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewBestellung.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.kNr,
+            this.Bezeichnung,
+            this.Lagerbestand,
+            this.Lieferdauer,
+            this.menge,
+            this.eil,
+            this.Loeschen});
+            resources.ApplyResources(this.dataGridViewBestellung, "dataGridViewBestellung");
+            this.dataGridViewBestellung.Name = "dataGridViewBestellung";
+            this.helpProvider1.SetShowHelp(this.dataGridViewBestellung, ((bool)(resources.GetObject("dataGridViewBestellung.ShowHelp"))));
+            this.dataGridViewBestellung.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewBestellung_CellContentClick);
+            this.dataGridViewBestellung.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewBestellung_CellEnter);
+            this.dataGridViewBestellung.UserAddedRow += new System.Windows.Forms.DataGridViewRowEventHandler(this.dataGridViewBestellung_UserAddedRow);
+            this.dataGridViewBestellung.KeyDown += new System.Windows.Forms.KeyEventHandler(this.dataGridViewBestellung_KeyDown);
+            // 
+            // kNr
+            // 
+            this.kNr.DividerWidth = 2;
+            resources.ApplyResources(this.kNr, "kNr");
+            this.kNr.Name = "kNr";
+            // 
+            // Bezeichnung
+            // 
+            this.Bezeichnung.DividerWidth = 2;
+            resources.ApplyResources(this.Bezeichnung, "Bezeichnung");
+            this.Bezeichnung.Name = "Bezeichnung";
+            this.Bezeichnung.ReadOnly = true;
+            // 
+            // Lagerbestand
+            // 
+            this.Lagerbestand.DividerWidth = 2;
+            resources.ApplyResources(this.Lagerbestand, "Lagerbestand");
+            this.Lagerbestand.Name = "Lagerbestand";
+            this.Lagerbestand.ReadOnly = true;
+            // 
+            // Lieferdauer
+            // 
+            this.Lieferdauer.DividerWidth = 2;
+            resources.ApplyResources(this.Lieferdauer, "Lieferdauer");
+            this.Lieferdauer.Name = "Lieferdauer";
+            this.Lieferdauer.ReadOnly = true;
+            // 
+            // menge
+            // 
+            this.menge.DividerWidth = 2;
+            resources.ApplyResources(this.menge, "menge");
+            this.menge.Name = "menge";
+            // 
+            // eil
+            // 
+            this.eil.DividerWidth = 2;
+            this.eil.FalseValue = "false";
+            resources.ApplyResources(this.eil, "eil");
+            this.eil.Name = "eil";
+            this.eil.TrueValue = "true";
+            // 
+            // Loeschen
+            // 
+            resources.ApplyResources(this.Loeschen, "Loeschen");
+            this.Loeschen.Name = "Loeschen";
+            this.Loeschen.Text = "Aktion";
+            // 
+            // tabPage2
+            // 
+            resources.ApplyResources(this.tabPage2, "tabPage2");
+            this.tabPage2.BackColor = System.Drawing.Color.Transparent;
+            this.tabPage2.Controls.Add(this.label_header_kaufteile);
+            this.tabPage2.Controls.Add(this.dataGridViewKTeil);
+            this.tabPage2.Name = "tabPage2";
+            this.helpProvider1.SetShowHelp(this.tabPage2, ((bool)(resources.GetObject("tabPage2.ShowHelp"))));
+            // 
+            // label_header_kaufteile
+            // 
+            resources.ApplyResources(this.label_header_kaufteile, "label_header_kaufteile");
+            this.label_header_kaufteile.Name = "label_header_kaufteile";
+            this.helpProvider1.SetShowHelp(this.label_header_kaufteile, ((bool)(resources.GetObject("label_header_kaufteile.ShowHelp"))));
+            // 
+            // dataGridViewKTeil
+            // 
+            this.dataGridViewKTeil.AllowUserToAddRows = false;
+            this.dataGridViewKTeil.AllowUserToDeleteRows = false;
+            this.dataGridViewKTeil.AllowUserToOrderColumns = true;
+            this.dataGridViewKTeil.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.dataGridViewKTeil.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridViewKTeil.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewKTeil.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewLinkColumn1,
+            this.dataGridViewTextBoxColumn6,
+            this.dataGridViewTextBoxColumn11,
+            this.dataGridViewTextBoxColumn13,
+            this.dataGridViewTextBoxColumn14,
+            this.dataGridViewTextBoxColumn15,
+            this.dataGridViewTextBoxColumn16,
+            this.dataGridViewTextBoxColumn17,
+            this.dataGridViewTextBoxColumn18,
+            this.dataGridViewTextBoxColumn19,
+            this.dataGridViewTextBoxColumn20,
+            this.dataGridViewTextBoxColumn21,
+            this.Trend});
+            this.dataGridViewKTeil.GridColor = System.Drawing.SystemColors.ControlDarkDark;
+            resources.ApplyResources(this.dataGridViewKTeil, "dataGridViewKTeil");
+            this.dataGridViewKTeil.Name = "dataGridViewKTeil";
+            this.dataGridViewKTeil.ReadOnly = true;
+            this.helpProvider1.SetShowHelp(this.dataGridViewKTeil, ((bool)(resources.GetObject("dataGridViewKTeil.ShowHelp"))));
+            // 
+            // dataGridViewLinkColumn1
+            // 
+            this.dataGridViewLinkColumn1.DividerWidth = 2;
+            resources.ApplyResources(this.dataGridViewLinkColumn1, "dataGridViewLinkColumn1");
+            this.dataGridViewLinkColumn1.LinkColor = System.Drawing.Color.DimGray;
+            this.dataGridViewLinkColumn1.Name = "dataGridViewLinkColumn1";
+            this.dataGridViewLinkColumn1.ReadOnly = true;
+            this.dataGridViewLinkColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewLinkColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.DividerWidth = 2;
+            resources.ApplyResources(this.dataGridViewTextBoxColumn6, "dataGridViewTextBoxColumn6");
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            this.dataGridViewTextBoxColumn6.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn11
+            // 
+            this.dataGridViewTextBoxColumn11.DividerWidth = 2;
+            resources.ApplyResources(this.dataGridViewTextBoxColumn11, "dataGridViewTextBoxColumn11");
+            this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
+            this.dataGridViewTextBoxColumn11.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn13
+            // 
+            this.dataGridViewTextBoxColumn13.DividerWidth = 2;
+            resources.ApplyResources(this.dataGridViewTextBoxColumn13, "dataGridViewTextBoxColumn13");
+            this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
+            this.dataGridViewTextBoxColumn13.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn14
+            // 
+            this.dataGridViewTextBoxColumn14.DividerWidth = 2;
+            resources.ApplyResources(this.dataGridViewTextBoxColumn14, "dataGridViewTextBoxColumn14");
+            this.dataGridViewTextBoxColumn14.Name = "dataGridViewTextBoxColumn14";
+            this.dataGridViewTextBoxColumn14.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn15
+            // 
+            this.dataGridViewTextBoxColumn15.DividerWidth = 2;
+            resources.ApplyResources(this.dataGridViewTextBoxColumn15, "dataGridViewTextBoxColumn15");
+            this.dataGridViewTextBoxColumn15.Name = "dataGridViewTextBoxColumn15";
+            this.dataGridViewTextBoxColumn15.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn16
+            // 
+            this.dataGridViewTextBoxColumn16.DividerWidth = 2;
+            resources.ApplyResources(this.dataGridViewTextBoxColumn16, "dataGridViewTextBoxColumn16");
+            this.dataGridViewTextBoxColumn16.Name = "dataGridViewTextBoxColumn16";
+            this.dataGridViewTextBoxColumn16.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn17
+            // 
+            this.dataGridViewTextBoxColumn17.DividerWidth = 2;
+            resources.ApplyResources(this.dataGridViewTextBoxColumn17, "dataGridViewTextBoxColumn17");
+            this.dataGridViewTextBoxColumn17.Name = "dataGridViewTextBoxColumn17";
+            this.dataGridViewTextBoxColumn17.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn18
+            // 
+            this.dataGridViewTextBoxColumn18.DividerWidth = 2;
+            resources.ApplyResources(this.dataGridViewTextBoxColumn18, "dataGridViewTextBoxColumn18");
+            this.dataGridViewTextBoxColumn18.Name = "dataGridViewTextBoxColumn18";
+            this.dataGridViewTextBoxColumn18.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn19
+            // 
+            this.dataGridViewTextBoxColumn19.DividerWidth = 2;
+            resources.ApplyResources(this.dataGridViewTextBoxColumn19, "dataGridViewTextBoxColumn19");
+            this.dataGridViewTextBoxColumn19.Name = "dataGridViewTextBoxColumn19";
+            this.dataGridViewTextBoxColumn19.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn20
+            // 
+            this.dataGridViewTextBoxColumn20.DividerWidth = 2;
+            resources.ApplyResources(this.dataGridViewTextBoxColumn20, "dataGridViewTextBoxColumn20");
+            this.dataGridViewTextBoxColumn20.Name = "dataGridViewTextBoxColumn20";
+            this.dataGridViewTextBoxColumn20.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn21
+            // 
+            this.dataGridViewTextBoxColumn21.DividerWidth = 2;
+            resources.ApplyResources(this.dataGridViewTextBoxColumn21, "dataGridViewTextBoxColumn21");
+            this.dataGridViewTextBoxColumn21.Name = "dataGridViewTextBoxColumn21";
+            this.dataGridViewTextBoxColumn21.ReadOnly = true;
+            // 
+            // Trend
+            // 
+            this.Trend.DividerWidth = 2;
+            resources.ApplyResources(this.Trend, "Trend");
+            this.Trend.Name = "Trend";
+            this.Trend.ReadOnly = true;
+            // 
+            // tab_bestellung
+            // 
+            this.tab_bestellung.BackColor = System.Drawing.Color.Transparent;
+            this.tab_bestellung.Controls.Add(this.dvVerwenden);
+            this.tab_bestellung.Controls.Add(this.addNr2);
+            this.tab_bestellung.Controls.Add(this.zurueck2);
+            this.tab_bestellung.Controls.Add(this.saveAenderungen2);
+            this.tab_bestellung.Controls.Add(this.label275);
+            this.tab_bestellung.Controls.Add(this.dataGridViewDirektverkauf);
+            this.tab_bestellung.Controls.Add(this.uebernehmenXML);
+            resources.ApplyResources(this.tab_bestellung, "tab_bestellung");
+            this.tab_bestellung.Name = "tab_bestellung";
+            this.helpProvider1.SetShowHelp(this.tab_bestellung, ((bool)(resources.GetObject("tab_bestellung.ShowHelp"))));
+            // 
+            // dvVerwenden
+            // 
+            this.dvVerwenden.BackColor = System.Drawing.SystemColors.Control;
+            resources.ApplyResources(this.dvVerwenden, "dvVerwenden");
+            this.dvVerwenden.Name = "dvVerwenden";
+            this.helpProvider1.SetShowHelp(this.dvVerwenden, ((bool)(resources.GetObject("dvVerwenden.ShowHelp"))));
+            this.dvVerwenden.UseVisualStyleBackColor = false;
+            // 
+            // addNr2
+            // 
+            this.addNr2.Cursor = System.Windows.Forms.Cursors.Hand;
+            resources.ApplyResources(this.addNr2, "addNr2");
+            this.addNr2.Name = "addNr2";
+            this.helpProvider1.SetShowHelp(this.addNr2, ((bool)(resources.GetObject("addNr2.ShowHelp"))));
+            this.addNr2.TabStop = false;
+            // 
+            // zurueck2
+            // 
+            this.zurueck2.Cursor = System.Windows.Forms.Cursors.Hand;
+            resources.ApplyResources(this.zurueck2, "zurueck2");
+            this.zurueck2.Name = "zurueck2";
+            this.helpProvider1.SetShowHelp(this.zurueck2, ((bool)(resources.GetObject("zurueck2.ShowHelp"))));
+            this.zurueck2.TabStop = false;
+            // 
+            // saveAenderungen2
+            // 
+            this.saveAenderungen2.Cursor = System.Windows.Forms.Cursors.Hand;
+            resources.ApplyResources(this.saveAenderungen2, "saveAenderungen2");
+            this.saveAenderungen2.Name = "saveAenderungen2";
+            this.helpProvider1.SetShowHelp(this.saveAenderungen2, ((bool)(resources.GetObject("saveAenderungen2.ShowHelp"))));
+            this.saveAenderungen2.TabStop = false;
+            // 
+            // label275
+            // 
+            resources.ApplyResources(this.label275, "label275");
+            this.label275.Name = "label275";
+            this.helpProvider1.SetShowHelp(this.label275, ((bool)(resources.GetObject("label275.ShowHelp"))));
+            // 
+            // dataGridViewDirektverkauf
+            // 
+            this.dataGridViewDirektverkauf.AllowUserToAddRows = false;
+            this.dataGridViewDirektverkauf.AllowUserToDeleteRows = false;
+            this.dataGridViewDirektverkauf.AllowUserToOrderColumns = true;
+            this.dataGridViewDirektverkauf.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.dataGridViewDirektverkauf.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridViewDirektverkauf.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewDirektverkauf.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.knr2,
+            this.dataGridViewTextBoxColumn32,
+            this.pr,
+            this.str,
+            this.dataGridViewCheckBoxColumn2});
+            resources.ApplyResources(this.dataGridViewDirektverkauf, "dataGridViewDirektverkauf");
+            this.dataGridViewDirektverkauf.Name = "dataGridViewDirektverkauf";
+            this.helpProvider1.SetShowHelp(this.dataGridViewDirektverkauf, ((bool)(resources.GetObject("dataGridViewDirektverkauf.ShowHelp"))));
+            // 
+            // knr2
+            // 
+            this.knr2.Name = "knr2";
+            this.knr2.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn32
+            // 
+            this.dataGridViewTextBoxColumn32.Name = "dataGridViewTextBoxColumn32";
+            // 
+            // pr
+            // 
+            this.pr.Name = "pr";
+            // 
+            // str
+            // 
+            this.str.Name = "str";
+            // 
+            // dataGridViewCheckBoxColumn2
+            // 
+            this.dataGridViewCheckBoxColumn2.FalseValue = "false";
+            this.dataGridViewCheckBoxColumn2.IndeterminateValue = "false";
+            this.dataGridViewCheckBoxColumn2.Name = "dataGridViewCheckBoxColumn2";
+            this.dataGridViewCheckBoxColumn2.TrueValue = "true";
+            // 
+            // uebernehmenXML
+            // 
+            this.uebernehmenXML.Cursor = System.Windows.Forms.Cursors.Hand;
+            resources.ApplyResources(this.uebernehmenXML, "uebernehmenXML");
+            this.uebernehmenXML.Name = "uebernehmenXML";
+            this.helpProvider1.SetShowHelp(this.uebernehmenXML, ((bool)(resources.GetObject("uebernehmenXML.ShowHelp"))));
+            this.uebernehmenXML.TabStop = false;
+            // 
             // tab_marktplatz
             // 
             this.tab_marktplatz.BackColor = System.Drawing.Color.Transparent;
@@ -7819,360 +8150,6 @@
             this.nav_button_1.UseVisualStyleBackColor = false;
             this.nav_button_1.Click += new System.EventHandler(this.nav_button_1_Click);
             // 
-            // Bestellungen
-            // 
-            this.Bestellungen.Controls.Add(this.tab_BestellungenAufgeben);
-            this.Bestellungen.Controls.Add(this.tabPage2);
-            this.Bestellungen.Controls.Add(this.tab_bestellung);
-            resources.ApplyResources(this.Bestellungen, "Bestellungen");
-            this.Bestellungen.Name = "Bestellungen";
-            this.Bestellungen.SelectedIndex = 0;
-            this.helpProvider1.SetShowHelp(this.Bestellungen, ((bool)(resources.GetObject("Bestellungen.ShowHelp"))));
-            // 
-            // tab_BestellungenAufgeben
-            // 
-            this.tab_BestellungenAufgeben.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.tab_BestellungenAufgeben.Controls.Add(this.label3);
-            this.tab_BestellungenAufgeben.Controls.Add(this.addNr);
-            this.tab_BestellungenAufgeben.Controls.Add(this.zurueck);
-            this.tab_BestellungenAufgeben.Controls.Add(this.saveAenderungen);
-            this.tab_BestellungenAufgeben.Controls.Add(this.dataGridViewBestellung);
-            resources.ApplyResources(this.tab_BestellungenAufgeben, "tab_BestellungenAufgeben");
-            this.tab_BestellungenAufgeben.Name = "tab_BestellungenAufgeben";
-            this.helpProvider1.SetShowHelp(this.tab_BestellungenAufgeben, ((bool)(resources.GetObject("tab_BestellungenAufgeben.ShowHelp"))));
-            // 
-            // label3
-            // 
-            resources.ApplyResources(this.label3, "label3");
-            this.label3.Name = "label3";
-            this.helpProvider1.SetShowHelp(this.label3, ((bool)(resources.GetObject("label3.ShowHelp"))));
-            // 
-            // addNr
-            // 
-            this.addNr.Cursor = System.Windows.Forms.Cursors.Hand;
-            resources.ApplyResources(this.addNr, "addNr");
-            this.addNr.Name = "addNr";
-            this.helpProvider1.SetShowHelp(this.addNr, ((bool)(resources.GetObject("addNr.ShowHelp"))));
-            this.addNr.TabStop = false;
-            this.toolTip.SetToolTip(this.addNr, resources.GetString("addNr.ToolTip"));
-            // 
-            // zurueck
-            // 
-            this.zurueck.Cursor = System.Windows.Forms.Cursors.Hand;
-            resources.ApplyResources(this.zurueck, "zurueck");
-            this.zurueck.Name = "zurueck";
-            this.helpProvider1.SetShowHelp(this.zurueck, ((bool)(resources.GetObject("zurueck.ShowHelp"))));
-            this.zurueck.TabStop = false;
-            this.toolTip.SetToolTip(this.zurueck, resources.GetString("zurueck.ToolTip"));
-            // 
-            // saveAenderungen
-            // 
-            this.saveAenderungen.Cursor = System.Windows.Forms.Cursors.Hand;
-            resources.ApplyResources(this.saveAenderungen, "saveAenderungen");
-            this.saveAenderungen.Name = "saveAenderungen";
-            this.helpProvider1.SetShowHelp(this.saveAenderungen, ((bool)(resources.GetObject("saveAenderungen.ShowHelp"))));
-            this.saveAenderungen.TabStop = false;
-            this.toolTip.SetToolTip(this.saveAenderungen, resources.GetString("saveAenderungen.ToolTip"));
-            // 
-            // dataGridViewBestellung
-            // 
-            this.dataGridViewBestellung.AllowUserToDeleteRows = false;
-            this.dataGridViewBestellung.AllowUserToOrderColumns = true;
-            this.dataGridViewBestellung.BackgroundColor = System.Drawing.SystemColors.MenuBar;
-            this.dataGridViewBestellung.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridViewBestellung.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            this.dataGridViewBestellung.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            this.dataGridViewBestellung.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-
-            this.dataGridViewBestellung.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewBestellung_CellContentClick);
-            this.dataGridViewBestellung.UserAddedRow += new System.Windows.Forms.DataGridViewRowEventHandler(this.dataGridViewBestellung_UserAddedRow);
-            
-            
-            this.dataGridViewBestellung.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.kNr,
-            this.Bezeichnung,
-            this.Lagerbestand,
-            this.Lieferdauer,
-            this.menge,
-            this.eil,
-            this.Loeschen});
-            resources.ApplyResources(this.dataGridViewBestellung, "dataGridViewBestellung");
-            this.dataGridViewBestellung.Name = "dataGridViewBestellung";
-            this.helpProvider1.SetShowHelp(this.dataGridViewBestellung, ((bool)(resources.GetObject("dataGridViewBestellung.ShowHelp"))));
-            // 
-            // kNr
-            // 
-            this.kNr.DividerWidth = 2;
-            resources.ApplyResources(this.kNr, "kNr");
-            this.kNr.Name = "kNr";
-            // 
-            // Bezeichnung
-            // 
-            this.Bezeichnung.DividerWidth = 2;
-            resources.ApplyResources(this.Bezeichnung, "Bezeichnung");
-            this.Bezeichnung.Name = "Bezeichnung";
-            this.Bezeichnung.ReadOnly = true;
-            // 
-            // Lagerbestand
-            // 
-            this.Lagerbestand.DividerWidth = 2;
-            resources.ApplyResources(this.Lagerbestand, "Lagerbestand");
-            this.Lagerbestand.Name = "Lagerbestand";
-            this.Lagerbestand.ReadOnly = true;
-            // 
-            // Lieferdauer
-            // 
-            this.Lieferdauer.DividerWidth = 2;
-            resources.ApplyResources(this.Lieferdauer, "Lieferdauer");
-            this.Lieferdauer.Name = "Lieferdauer";
-            this.Lieferdauer.ReadOnly = true;
-            // 
-            // menge
-            // 
-            this.menge.DividerWidth = 2;
-            resources.ApplyResources(this.menge, "menge");
-            this.menge.Name = "menge";
-            // 
-            // eil
-            // 
-            this.eil.DividerWidth = 2;
-            this.eil.FalseValue = "false";
-            resources.ApplyResources(this.eil, "eil");
-            this.eil.Name = "eil";
-            this.eil.TrueValue = "true";
-            // 
-            // Loeschen
-            // 
-            resources.ApplyResources(this.Loeschen, "Loeschen");
-            this.Loeschen.Name = "Loeschen";
-            this.Loeschen.Text = "Aktion";
-            // 
-            // tabPage2
-            // 
-            resources.ApplyResources(this.tabPage2, "tabPage2");
-            this.tabPage2.BackColor = System.Drawing.Color.Transparent;
-            this.tabPage2.Controls.Add(this.label_header_kaufteile);
-            this.tabPage2.Controls.Add(this.dataGridViewKTeil);
-            this.tabPage2.Name = "tabPage2";
-            this.helpProvider1.SetShowHelp(this.tabPage2, ((bool)(resources.GetObject("tabPage2.ShowHelp"))));
-            // 
-            // label_header_kaufteile
-            // 
-            resources.ApplyResources(this.label_header_kaufteile, "label_header_kaufteile");
-            this.label_header_kaufteile.Name = "label_header_kaufteile";
-            this.helpProvider1.SetShowHelp(this.label_header_kaufteile, ((bool)(resources.GetObject("label_header_kaufteile.ShowHelp"))));
-            // 
-            // dataGridViewKTeil
-            // 
-            this.dataGridViewKTeil.AllowUserToAddRows = false;
-            this.dataGridViewKTeil.AllowUserToDeleteRows = false;
-            this.dataGridViewKTeil.AllowUserToOrderColumns = true;
-            this.dataGridViewKTeil.BackgroundColor = System.Drawing.SystemColors.Control;
-            this.dataGridViewKTeil.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridViewKTeil.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewKTeil.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewLinkColumn1,
-            this.dataGridViewTextBoxColumn6,
-            this.dataGridViewTextBoxColumn11,
-            this.dataGridViewTextBoxColumn13,
-            this.dataGridViewTextBoxColumn14,
-            this.dataGridViewTextBoxColumn15,
-            this.dataGridViewTextBoxColumn16,
-            this.dataGridViewTextBoxColumn17,
-            this.dataGridViewTextBoxColumn18,
-            this.dataGridViewTextBoxColumn19,
-            this.dataGridViewTextBoxColumn20,
-            this.dataGridViewTextBoxColumn21,
-            this.Trend});
-            this.dataGridViewKTeil.GridColor = System.Drawing.SystemColors.ControlDarkDark;
-            resources.ApplyResources(this.dataGridViewKTeil, "dataGridViewKTeil");
-            this.dataGridViewKTeil.Name = "dataGridViewKTeil";
-            this.dataGridViewKTeil.ReadOnly = true;
-            this.helpProvider1.SetShowHelp(this.dataGridViewKTeil, ((bool)(resources.GetObject("dataGridViewKTeil.ShowHelp"))));
-            // 
-            // dataGridViewLinkColumn1
-            // 
-            resources.ApplyResources(this.dataGridViewLinkColumn1, "dataGridViewLinkColumn1");
-            this.dataGridViewLinkColumn1.LinkColor = System.Drawing.Color.DimGray;
-            this.dataGridViewLinkColumn1.Name = "dataGridViewLinkColumn1";
-            this.dataGridViewLinkColumn1.ReadOnly = true;
-            this.dataGridViewLinkColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewLinkColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            // 
-            // dataGridViewTextBoxColumn6
-            // 
-            resources.ApplyResources(this.dataGridViewTextBoxColumn6, "dataGridViewTextBoxColumn6");
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            this.dataGridViewTextBoxColumn6.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn11
-            // 
-            resources.ApplyResources(this.dataGridViewTextBoxColumn11, "dataGridViewTextBoxColumn11");
-            this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
-            this.dataGridViewTextBoxColumn11.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn13
-            // 
-            resources.ApplyResources(this.dataGridViewTextBoxColumn13, "dataGridViewTextBoxColumn13");
-            this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
-            this.dataGridViewTextBoxColumn13.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn14
-            // 
-            resources.ApplyResources(this.dataGridViewTextBoxColumn14, "dataGridViewTextBoxColumn14");
-            this.dataGridViewTextBoxColumn14.Name = "dataGridViewTextBoxColumn14";
-            this.dataGridViewTextBoxColumn14.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn15
-            // 
-            resources.ApplyResources(this.dataGridViewTextBoxColumn15, "dataGridViewTextBoxColumn15");
-            this.dataGridViewTextBoxColumn15.Name = "dataGridViewTextBoxColumn15";
-            this.dataGridViewTextBoxColumn15.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn16
-            // 
-            resources.ApplyResources(this.dataGridViewTextBoxColumn16, "dataGridViewTextBoxColumn16");
-            this.dataGridViewTextBoxColumn16.Name = "dataGridViewTextBoxColumn16";
-            this.dataGridViewTextBoxColumn16.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn17
-            // 
-            resources.ApplyResources(this.dataGridViewTextBoxColumn17, "dataGridViewTextBoxColumn17");
-            this.dataGridViewTextBoxColumn17.Name = "dataGridViewTextBoxColumn17";
-            this.dataGridViewTextBoxColumn17.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn18
-            // 
-            resources.ApplyResources(this.dataGridViewTextBoxColumn18, "dataGridViewTextBoxColumn18");
-            this.dataGridViewTextBoxColumn18.Name = "dataGridViewTextBoxColumn18";
-            this.dataGridViewTextBoxColumn18.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn19
-            // 
-            resources.ApplyResources(this.dataGridViewTextBoxColumn19, "dataGridViewTextBoxColumn19");
-            this.dataGridViewTextBoxColumn19.Name = "dataGridViewTextBoxColumn19";
-            this.dataGridViewTextBoxColumn19.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn20
-            // 
-            resources.ApplyResources(this.dataGridViewTextBoxColumn20, "dataGridViewTextBoxColumn20");
-            this.dataGridViewTextBoxColumn20.Name = "dataGridViewTextBoxColumn20";
-            this.dataGridViewTextBoxColumn20.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn21
-            // 
-            resources.ApplyResources(this.dataGridViewTextBoxColumn21, "dataGridViewTextBoxColumn21");
-            this.dataGridViewTextBoxColumn21.Name = "dataGridViewTextBoxColumn21";
-            this.dataGridViewTextBoxColumn21.ReadOnly = true;
-            // 
-            // Trend
-            // 
-            resources.ApplyResources(this.Trend, "Trend");
-            this.Trend.Name = "Trend";
-            this.Trend.ReadOnly = true;
-            // 
-            // tab_bestellung
-            // 
-            this.tab_bestellung.BackColor = System.Drawing.Color.Transparent;
-            this.tab_bestellung.Controls.Add(this.dvVerwenden);
-            this.tab_bestellung.Controls.Add(this.addNr2);
-            this.tab_bestellung.Controls.Add(this.zurueck2);
-            this.tab_bestellung.Controls.Add(this.saveAenderungen2);
-            this.tab_bestellung.Controls.Add(this.label275);
-            this.tab_bestellung.Controls.Add(this.dataGridViewDirektverkauf);
-            this.tab_bestellung.Controls.Add(this.uebernehmenXML);
-            resources.ApplyResources(this.tab_bestellung, "tab_bestellung");
-            this.tab_bestellung.Name = "tab_bestellung";
-            this.helpProvider1.SetShowHelp(this.tab_bestellung, ((bool)(resources.GetObject("tab_bestellung.ShowHelp"))));
-            // 
-            // dvVerwenden
-            // 
-            this.dvVerwenden.BackColor = System.Drawing.SystemColors.Control;
-            resources.ApplyResources(this.dvVerwenden, "dvVerwenden");
-            this.dvVerwenden.Name = "dvVerwenden";
-            this.helpProvider1.SetShowHelp(this.dvVerwenden, ((bool)(resources.GetObject("dvVerwenden.ShowHelp"))));
-            this.dvVerwenden.UseVisualStyleBackColor = false;
-            // 
-            // addNr2
-            // 
-            this.addNr2.Cursor = System.Windows.Forms.Cursors.Hand;
-            resources.ApplyResources(this.addNr2, "addNr2");
-            this.addNr2.Name = "addNr2";
-            this.helpProvider1.SetShowHelp(this.addNr2, ((bool)(resources.GetObject("addNr2.ShowHelp"))));
-            this.addNr2.TabStop = false;
-            // 
-            // zurueck2
-            // 
-            this.zurueck2.Cursor = System.Windows.Forms.Cursors.Hand;
-            resources.ApplyResources(this.zurueck2, "zurueck2");
-            this.zurueck2.Name = "zurueck2";
-            this.helpProvider1.SetShowHelp(this.zurueck2, ((bool)(resources.GetObject("zurueck2.ShowHelp"))));
-            this.zurueck2.TabStop = false;
-            // 
-            // saveAenderungen2
-            // 
-            this.saveAenderungen2.Cursor = System.Windows.Forms.Cursors.Hand;
-            resources.ApplyResources(this.saveAenderungen2, "saveAenderungen2");
-            this.saveAenderungen2.Name = "saveAenderungen2";
-            this.helpProvider1.SetShowHelp(this.saveAenderungen2, ((bool)(resources.GetObject("saveAenderungen2.ShowHelp"))));
-            this.saveAenderungen2.TabStop = false;
-            // 
-            // label275
-            // 
-            resources.ApplyResources(this.label275, "label275");
-            this.label275.Name = "label275";
-            this.helpProvider1.SetShowHelp(this.label275, ((bool)(resources.GetObject("label275.ShowHelp"))));
-            // 
-            // dataGridViewDirektverkauf
-            // 
-            this.dataGridViewDirektverkauf.AllowUserToAddRows = false;
-            this.dataGridViewDirektverkauf.AllowUserToDeleteRows = false;
-            this.dataGridViewDirektverkauf.AllowUserToOrderColumns = true;
-            this.dataGridViewDirektverkauf.BackgroundColor = System.Drawing.SystemColors.Control;
-            this.dataGridViewDirektverkauf.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridViewDirektverkauf.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewDirektverkauf.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.knr2,
-            this.dataGridViewTextBoxColumn32,
-            this.pr,
-            this.str,
-            this.dataGridViewCheckBoxColumn2});
-            resources.ApplyResources(this.dataGridViewDirektverkauf, "dataGridViewDirektverkauf");
-            this.dataGridViewDirektverkauf.Name = "dataGridViewDirektverkauf";
-            this.helpProvider1.SetShowHelp(this.dataGridViewDirektverkauf, ((bool)(resources.GetObject("dataGridViewDirektverkauf.ShowHelp"))));
-            // 
-            // knr2
-            // 
-            this.knr2.Name = "knr2";
-            this.knr2.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn32
-            // 
-            this.dataGridViewTextBoxColumn32.Name = "dataGridViewTextBoxColumn32";
-            // 
-            // pr
-            // 
-            this.pr.Name = "pr";
-            // 
-            // str
-            // 
-            this.str.Name = "str";
-            // 
-            // dataGridViewCheckBoxColumn2
-            // 
-            this.dataGridViewCheckBoxColumn2.FalseValue = "false";
-            this.dataGridViewCheckBoxColumn2.IndeterminateValue = "false";
-            this.dataGridViewCheckBoxColumn2.Name = "dataGridViewCheckBoxColumn2";
-            this.dataGridViewCheckBoxColumn2.TrueValue = "true";
-            // 
-            // uebernehmenXML
-            // 
-            this.uebernehmenXML.Cursor = System.Windows.Forms.Cursors.Hand;
-            resources.ApplyResources(this.uebernehmenXML, "uebernehmenXML");
-            this.uebernehmenXML.Name = "uebernehmenXML";
-            this.helpProvider1.SetShowHelp(this.uebernehmenXML, ((bool)(resources.GetObject("uebernehmenXML.ShowHelp"))));
-            this.uebernehmenXML.TabStop = false;
-            // 
             // Fahrrad
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -8236,6 +8213,19 @@
             ((System.ComponentModel.ISupportInitialize)(this.arbPlatzAusfueren)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridViewAP)).EndInit();
             this.tab_bestellverwaltung.ResumeLayout(false);
+            this.Bestellungen.ResumeLayout(false);
+            this.tab_BestellungenAufgeben.ResumeLayout(false);
+            this.tab_BestellungenAufgeben.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewBestellung)).EndInit();
+            this.tabPage2.ResumeLayout(false);
+            this.tabPage2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewKTeil)).EndInit();
+            this.tab_bestellung.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.addNr2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.zurueck2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.saveAenderungen2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDirektverkauf)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.uebernehmenXML)).EndInit();
             this.tab_marktplatz.ResumeLayout(false);
             this.tab_marktplatz.PerformLayout();
             this.panel_password.ResumeLayout(false);
@@ -8278,22 +8268,6 @@
             this.menu.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.xml_export)).EndInit();
             this.NavPanel.ResumeLayout(false);
-            this.Bestellungen.ResumeLayout(false);
-            this.tab_BestellungenAufgeben.ResumeLayout(false);
-            this.tab_BestellungenAufgeben.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.addNr)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.zurueck)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.saveAenderungen)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewBestellung)).EndInit();
-            this.tabPage2.ResumeLayout(false);
-            this.tabPage2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewKTeil)).EndInit();
-            this.tab_bestellung.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.addNr2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.zurueck2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.saveAenderungen2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDirektverkauf)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.uebernehmenXML)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -9070,9 +9044,6 @@
         private System.Windows.Forms.TabControl Bestellungen;
         private System.Windows.Forms.TabPage tab_BestellungenAufgeben;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.PictureBox addNr;
-        private System.Windows.Forms.PictureBox zurueck;
-        private System.Windows.Forms.PictureBox saveAenderungen;
         private System.Windows.Forms.DataGridView dataGridViewBestellung;
         private System.Windows.Forms.DataGridViewTextBoxColumn kNr;
         private System.Windows.Forms.DataGridViewTextBoxColumn Bezeichnung;

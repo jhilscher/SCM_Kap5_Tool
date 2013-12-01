@@ -493,7 +493,7 @@ namespace ToolFahrrad_v1.Design
             //Bestellung
             #region Bestellung
             DataGriedViewRemove(dataGridViewBestellung);
-            if (_bestellungUpdate == false)
+            if (!_bestellungUpdate)
                 _bv.GeneriereBestellListe();
             var bp = _bv.BvPositionen;
             index = 0;
@@ -525,6 +525,11 @@ namespace ToolFahrrad_v1.Design
 
                 ++index;
             }
+
+            // letzte reihe hinzufügen
+            if (index < dataGridViewBestellung.Rows.Count)
+                dataGridViewBestellung.Rows[index].Cells[6].Value = _culInfo.Contains("de") ? "Hinzufügen" : "Add";
+
             #endregion
 
             #region statistik
@@ -607,17 +612,8 @@ namespace ToolFahrrad_v1.Design
             DataGriedViewRemove(dataGridViewDirektverkauf);
             if (_dvUpdate == false)
                 _bv.GeneriereListeDv();
-           
-            List<DvPosition> dv;
-
-            if (_bv.DvPositionen != null)
-                dv = _bv.DvPositionen;
-            else 
-                 dv = new List<DvPosition>();
-           
+            List<DvPosition> dv = _bv.DvPositionen;
             index = 0;
-
-
             foreach (var a in dv)
             {
                 dataGridViewDirektverkauf.Rows.Add();
@@ -2275,6 +2271,11 @@ namespace ToolFahrrad_v1.Design
 
         }
 
+        private void home_prognose_table_main_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
         private void dataGridViewBestellung_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             ReiheLoeschenBestellung(sender, e);
@@ -2284,6 +2285,30 @@ namespace ToolFahrrad_v1.Design
         {
             AddRowToBestellungen(sender, e);
         }
+
+        private void dataGridViewBestellung_KeyDown(object sender, KeyEventArgs e)
+        {
+            /*var cell = dataGridViewBestellung.SelectedCells[0];
+
+            if (cell.ColumnIndex != 4)
+                return;
+
+            var row = dataGridViewBestellung.Rows[cell.RowIndex];
+
+            row.Cells[6].Value = _culInfo.Contains("de") ? "Speichern" : "Save";
+            */
+            //ReiheHinzu(row);
+        }
+
+        private void dataGridViewBestellung_CellEnter(object sender, DataGridViewCellEventArgs e)
+        {
+            var row = dataGridViewBestellung.Rows[e.RowIndex];
+
+            if (row.Cells[6].Value == "Löschen" || row.Cells[6].Value == "Delete")
+                ReiheLoeschenBestellung(sender, e);
+        }
+
+
 
 
     }

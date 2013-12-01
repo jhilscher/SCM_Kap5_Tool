@@ -142,6 +142,9 @@ namespace ToolFahrrad_v1.Design
         private void button_nav_7_Click(object sender, EventArgs e)
         {
             tabs.SelectedTab = tab_beenden;
+
+            XmlVorbereitung(100);
+
             string xmlText = _xml.ToString();
             this.TextBox_xmlOutput.Text = xmlText;
 
@@ -204,15 +207,12 @@ namespace ToolFahrrad_v1.Design
             tabs.SelectedTab = tab_einstellungen;
         }
 
-
-
-        /// <summary>
+         /// <summary>
         /// Klick auf Aktionsbutton einer Bestellung aus dem DataGrid
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void ReiheLoeschenBestellung(object sender, DataGridViewCellEventArgs e)
-        {
+        private void ReiheLoeschenBestellung(object sender, DataGridViewCellEventArgs e) {
 
 
 
@@ -220,27 +220,41 @@ namespace ToolFahrrad_v1.Design
                 return;
 
             int i = e.RowIndex;
+            int f = e.ColumnIndex;
 
             var row = dataGridViewBestellung.Rows[i];
 
-            if (row.Cells[6].Value == "Hinzufügen" || row.Cells[6].Value == "Add")
+             if (f == 4 || f == 5) {
+                row.Cells[6].Value = _culInfo.Contains("de") ? "Speichern" : "Save";
+            }
+
+            if (f != 6)
+                return;
+
+
+
+
+            if (row.Cells[6].Value == "Hinzufügen" || row.Cells[6].Value == "Add" || row.Cells[6].Value == "Speichern" || row.Cells[6].Value == "Save")
             {
                 ReiheHinzu(row);
                 return;
             }
+           
 
             int artNr = Convert.ToInt32(row.Cells[0].Value);
 
             // haut die reihe weg
-            dataGridViewBestellung.Rows.Remove(row);
+            try
+            {
+                dataGridViewBestellung.Rows.Remove(row);
+            }
+            catch (Exception ex) { }
 
             // reset menge auf null up in here
             var bp = _bv.BvPositionen;
-            foreach (var a in bp)
-            {
+            foreach (var a in bp) {
 
-                if (a.Kaufteil.Nummer == artNr)
-                {
+                if (a.Kaufteil.Nummer == artNr) {
 
                     a.Menge = 0;
 
@@ -255,7 +269,7 @@ namespace ToolFahrrad_v1.Design
             DataGridViewRow row = e.Row;
 
             row.Cells[6].Value = _culInfo.Contains("de") ? "Hinzufügen" : "Add";
-
+            
 
         }
 
@@ -263,12 +277,13 @@ namespace ToolFahrrad_v1.Design
         {
             try
             {
+                /*
                 if (dataGridViewBestellung.AllowUserToAddRows)
                 {
                     dataGridViewBestellung.AllowUserToAddRows = false;
                     kNr.ReadOnly = true;
                 }
-
+                */
 
 
                 _bp = new List<Bestellposition>();
@@ -304,13 +319,13 @@ namespace ToolFahrrad_v1.Design
                                 Resources.Fahrrad_pictureBox3_Click_1, Resources.Fahrrad_XmlOeffnen_Fehlermeldung,
                                 MessageBoxButtons.OK, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button1);
                     }
-                    else
+                    /*else
                     {
                         MessageBox.Show(Resources.Fahrrad_pictureBox3_Click_Kaufteil_kann_nicht_NULL_sein,
                                         Resources.Fahrrad_XmlOeffnen_Fehlermeldung,
                                         MessageBoxButtons.OK, MessageBoxIcon.Exclamation,
                                         MessageBoxDefaultButton.Button1);
-                    }
+                    }*/
 
                 }
 
@@ -326,12 +341,6 @@ namespace ToolFahrrad_v1.Design
             }
 
 
-            // fuer update
-            _dvUpdate = true;
-            _bestellungUpdate = true;
-            _bv.SetDvPositionen(_dirv);
-            Information();
         }
-
     }
 }
