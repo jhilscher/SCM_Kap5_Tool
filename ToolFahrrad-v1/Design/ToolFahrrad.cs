@@ -362,6 +362,7 @@ namespace ToolFahrrad_v1.Design
                 if (gesammt <= a.ZeitErsteSchicht)
                 { // newTeim <= 2400 
                     //DataGridViewAP.Rows[index].Cells[7].Value = imageListAmpel.Images[2];
+                    DataGridViewAP.Rows[index].Cells[7].Value = "-";
                     DataGridViewAP.Rows[index].Cells[7].Style.BackColor = Color.LightGreen;
                     apXml[1] = 1;
                     apXml[2] = 0;
@@ -398,6 +399,7 @@ namespace ToolFahrrad_v1.Design
                     if (gesammt < _instance.ZweiteSchichtMitUeberstunden)
                     {
                         //DataGridViewAP.Rows[index].Cells[7].Value = imageListAmpel.Images[0];
+                        DataGridViewAP.Rows[index].Cells[7].Value = "Schicht";
                         DataGridViewAP.Rows[index].Cells[7].Style.BackColor = Color.Red;
                         DataGridViewAP.Rows[index].Cells[8].Value = true;
                         if (gesammt > a.ZeitZweiteSchicht)
@@ -409,6 +411,7 @@ namespace ToolFahrrad_v1.Design
                     else if (gesammt > _instance.ZweiteSchichtMitUeberstunden)
                     {
                         //DataGridViewAP.Rows[index].Cells[7].Value = imageListAmpel.Images[0];
+                        DataGridViewAP.Rows[index].Cells[7].Value = "Schicht";
                         DataGridViewAP.Rows[index].Cells[7].Style.BackColor = Color.Red;
                         DataGridViewAP.Rows[index].Cells[9].Value = true;
                         apXml[1] = 3;
@@ -418,6 +421,7 @@ namespace ToolFahrrad_v1.Design
                 else if (gesammt > a.ZeitErsteSchicht && gesammt <= _instance.ErsteSchichtMitUeberStunden)
                 { // 2400 < newTime < 3600 Überstunden
                     //DataGridViewAP.Rows[index].Cells[7].Value = imageListAmpel.Images[1];
+                    DataGridViewAP.Rows[index].Cells[7].Value = "Überstunden";
                     DataGridViewAP.Rows[index].Cells[7].Style.BackColor = Color.Yellow;
                     apXml[1] = 1;
                     apXml[2] = gesammt - a.ZeitErsteSchicht;
@@ -425,6 +429,7 @@ namespace ToolFahrrad_v1.Design
                 else
                 {
                     //DataGridViewAP.Rows[index].Cells[7].Value = imageListAmpel.Images[2];
+                    DataGridViewAP.Rows[index].Cells[7].Value = "-";
                     DataGridViewAP.Rows[index].Cells[7].Style.BackColor = Color.LightGreen;
                 }
 
