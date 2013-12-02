@@ -1312,6 +1312,14 @@ namespace ToolFahrrad_v1.Design
             ChangeLanguage("englisch");
             englischToolStripMenuItem1.Checked = true;
             deutschToolStripMenuItem1.Checked = false;
+            button_nav_3.Text = "Production planning";
+            button_nav_4.Text = "Capacity planning";
+            button_nav_5.Text = " Order planning";
+            button__nav_6.Text = " Marketplace";
+            button_nav_8.Text = " Statistics";
+            button_nav_9.Text = " Settings";
+
+
         }
         private void deutschToolStripMenuItem1_Click(object sender, EventArgs e)
         {
@@ -1338,6 +1346,12 @@ namespace ToolFahrrad_v1.Design
                     Events.Dispose();
                     InitializeComponent();
                     _okXml = false;
+                                button_nav_3.Text = "Production planning";
+            button_nav_4.Text = "Capacity planning";
+            button_nav_5.Text = " Order planning";
+            button__nav_6.Text = " Marketplace";
+            button_nav_8.Text = " Statistics";
+            button_nav_9.Text = " Settings";
                     break;
             }
         }
