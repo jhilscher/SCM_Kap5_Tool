@@ -510,7 +510,7 @@ namespace ToolFahrrad_v1.Design
                 }
                 ++index;
 
-                listDpKapHave.Add(new DataPoint(a.GetNummerArbeitsplatz, apXml[1] * 2400 + ((apXml[2] > 1200) ? 1200 : apXml[2])));
+                listDpKapHave.Add(new DataPoint(a.GetNummerArbeitsplatz, apXml[1] * 2400 + (apXml[1] > 2 ? 0 : (apXml[2] > 1200) ? 1200 : apXml[2])));
             }
             _instance.ApKapazitaet = _xmlAp;
             #endregion

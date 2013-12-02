@@ -123,7 +123,7 @@ namespace ToolFahrrad_v1.XML
             //Vertriebswunsch
             sw.WriteLine("<sellwish>");
             for (int i = 1; i < 4; ++i) {
-                sw.WriteLine("<item article=\"" + i + "\" quantity=\"" + _dc.GetTeil(i).VerbrauchPer1 + "\"/>");
+                sw.WriteLine("<item article=\"" + i + "\" quantity=\"" + _dc.GetTeil(i).VertriebPer0 + "\"/>");
             }
             sw.WriteLine("</sellwish>");
 
@@ -188,7 +188,7 @@ namespace ToolFahrrad_v1.XML
             for (int i = 1; i < 4; ++i)
             {
                 sw.Append(tab);
-                sw.Append("<item article=\"" + i + "\" quantity=\"" + _dc.GetTeil(i).VerbrauchPer1 + "\"/>").AppendLine();
+                sw.Append("<item article=\"" + i + "\" quantity=\"" + _dc.GetTeil(i).VertriebPer0 + "\"/>").AppendLine();
             }
             sw.Append("</sellwish>").AppendLine();
 
