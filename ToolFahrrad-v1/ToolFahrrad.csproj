@@ -187,6 +187,45 @@
   <ItemGroup>
     <None Include="Resources\minusimg.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Help.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Language-skills.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Gear.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\File-Xml.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exit.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Germany.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\United-Kingdom-flag.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Home.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Bike.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Factory.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Purchase-Order.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Emblem-Money.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Statistics.ico" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

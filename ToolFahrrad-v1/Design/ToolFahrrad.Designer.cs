@@ -30,19 +30,19 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Fahrrad));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series7 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series8 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title2 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
             this.tabs = new System.Windows.Forms.TabControl();
             this.tab_xml = new System.Windows.Forms.TabPage();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
@@ -6385,14 +6385,14 @@
             this.DataGridViewAP.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.DataGridViewAP.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.DataGridViewAP.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DataGridViewAP.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DataGridViewAP.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.DataGridViewAP.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DataGridViewAP.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn5,
@@ -6410,14 +6410,14 @@
             resources.ApplyResources(this.DataGridViewAP, "DataGridViewAP");
             this.DataGridViewAP.Name = "DataGridViewAP";
             this.DataGridViewAP.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DataGridViewAP.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DataGridViewAP.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.DataGridViewAP.RowHeadersVisible = false;
             // 
             // dataGridViewTextBoxColumn5
@@ -7152,16 +7152,16 @@
             // 
             // verkäufer
             // 
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
-            this.verkäufer.DefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            this.verkäufer.DefaultCellStyle = dataGridViewCellStyle3;
             this.verkäufer.DividerWidth = 2;
             resources.ApplyResources(this.verkäufer, "verkäufer");
             this.verkäufer.Name = "verkäufer";
             // 
             // artikel
             // 
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.White;
-            this.artikel.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            this.artikel.DefaultCellStyle = dataGridViewCellStyle4;
             this.artikel.DividerWidth = 2;
             resources.ApplyResources(this.artikel, "artikel");
             this.artikel.Name = "artikel";
@@ -7466,50 +7466,50 @@
             // 
             // chart_statistik
             // 
-            chartArea3.InnerPlotPosition.Auto = false;
-            chartArea3.InnerPlotPosition.Height = 60F;
-            chartArea3.InnerPlotPosition.Width = 92.69213F;
-            chartArea3.InnerPlotPosition.X = 6.25787F;
-            chartArea3.InnerPlotPosition.Y = 3.500001F;
-            chartArea3.Name = "ChartArea2";
-            chartArea4.InnerPlotPosition.Auto = false;
-            chartArea4.InnerPlotPosition.Height = 60F;
-            chartArea4.InnerPlotPosition.Width = 92.69213F;
-            chartArea4.InnerPlotPosition.X = 6.25787F;
-            chartArea4.InnerPlotPosition.Y = 6.999995F;
-            chartArea4.Name = "ChartArea3";
-            this.chart_statistik.ChartAreas.Add(chartArea3);
-            this.chart_statistik.ChartAreas.Add(chartArea4);
+            chartArea1.InnerPlotPosition.Auto = false;
+            chartArea1.InnerPlotPosition.Height = 60F;
+            chartArea1.InnerPlotPosition.Width = 92.69213F;
+            chartArea1.InnerPlotPosition.X = 6.25787F;
+            chartArea1.InnerPlotPosition.Y = 3.500001F;
+            chartArea1.Name = "ChartArea2";
+            chartArea2.InnerPlotPosition.Auto = false;
+            chartArea2.InnerPlotPosition.Height = 60F;
+            chartArea2.InnerPlotPosition.Width = 92.69213F;
+            chartArea2.InnerPlotPosition.X = 6.25787F;
+            chartArea2.InnerPlotPosition.Y = 6.999995F;
+            chartArea2.Name = "ChartArea3";
+            this.chart_statistik.ChartAreas.Add(chartArea1);
+            this.chart_statistik.ChartAreas.Add(chartArea2);
             resources.ApplyResources(this.chart_statistik, "chart_statistik");
-            legend3.DockedToChartArea = "ChartArea3";
-            legend3.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Top;
-            legend3.IsDockedInsideChartArea = false;
-            legend3.Name = "Legend3";
-            legend4.DockedToChartArea = "ChartArea2";
-            legend4.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Top;
-            legend4.IsDockedInsideChartArea = false;
-            legend4.Name = "Legend1";
-            this.chart_statistik.Legends.Add(legend3);
-            this.chart_statistik.Legends.Add(legend4);
+            legend1.DockedToChartArea = "ChartArea3";
+            legend1.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Top;
+            legend1.IsDockedInsideChartArea = false;
+            legend1.Name = "Legend3";
+            legend2.DockedToChartArea = "ChartArea2";
+            legend2.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Top;
+            legend2.IsDockedInsideChartArea = false;
+            legend2.Name = "Legend1";
+            this.chart_statistik.Legends.Add(legend1);
+            this.chart_statistik.Legends.Add(legend2);
             this.chart_statistik.Name = "chart_statistik";
-            series5.ChartArea = "ChartArea2";
-            series5.Legend = "Legend1";
-            series5.Name = "Bestellungen";
-            series6.ChartArea = "ChartArea2";
-            series6.Legend = "Legend1";
-            series6.Name = "Produktion";
-            series7.ChartArea = "ChartArea3";
-            series7.Legend = "Legend3";
-            series7.Name = "Kapazitaet";
-            series8.ChartArea = "ChartArea3";
-            series8.Legend = "Legend3";
-            series8.Name = "Kapazitaet Bedarf";
-            this.chart_statistik.Series.Add(series5);
-            this.chart_statistik.Series.Add(series6);
-            this.chart_statistik.Series.Add(series7);
-            this.chart_statistik.Series.Add(series8);
-            title2.Name = "Title1";
-            this.chart_statistik.Titles.Add(title2);
+            series1.ChartArea = "ChartArea2";
+            series1.Legend = "Legend1";
+            series1.Name = "Bestellungen";
+            series2.ChartArea = "ChartArea2";
+            series2.Legend = "Legend1";
+            series2.Name = "Produktion";
+            series3.ChartArea = "ChartArea3";
+            series3.Legend = "Legend3";
+            series3.Name = "Kapazitaet";
+            series4.ChartArea = "ChartArea3";
+            series4.Legend = "Legend3";
+            series4.Name = "Kapazitaet Bedarf";
+            this.chart_statistik.Series.Add(series1);
+            this.chart_statistik.Series.Add(series2);
+            this.chart_statistik.Series.Add(series3);
+            this.chart_statistik.Series.Add(series4);
+            title1.Name = "Title1";
+            this.chart_statistik.Titles.Add(title1);
             // 
             // tab_einstellungen
             // 
@@ -7903,6 +7903,7 @@
             // 
             // dateiÖffnenToolStripMenuItem
             // 
+            this.dateiÖffnenToolStripMenuItem.Image = global::ToolFahrrad_v1.Properties.Resources.Down_Arrow_Icon1;
             this.dateiÖffnenToolStripMenuItem.Name = "dateiÖffnenToolStripMenuItem";
             resources.ApplyResources(this.dateiÖffnenToolStripMenuItem, "dateiÖffnenToolStripMenuItem");
             this.dateiÖffnenToolStripMenuItem.Click += new System.EventHandler(this.dateiÖffnenToolStripMenuItem_Click);
@@ -7910,6 +7911,7 @@
             // xMLexportToolStripMenuItem
             // 
             resources.ApplyResources(this.xMLexportToolStripMenuItem, "xMLexportToolStripMenuItem");
+            this.xMLexportToolStripMenuItem.Image = global::ToolFahrrad_v1.Properties.Resources.File_Xml;
             this.xMLexportToolStripMenuItem.Name = "xMLexportToolStripMenuItem";
             this.xMLexportToolStripMenuItem.Click += new System.EventHandler(this.xMLexportToolStripMenuItem_Click);
             // 
@@ -7920,6 +7922,7 @@
             // 
             // schließenToolStripMenuItem
             // 
+            this.schließenToolStripMenuItem.Image = global::ToolFahrrad_v1.Properties.Resources.exit;
             this.schließenToolStripMenuItem.Name = "schließenToolStripMenuItem";
             resources.ApplyResources(this.schließenToolStripMenuItem, "schließenToolStripMenuItem");
             this.schließenToolStripMenuItem.Click += new System.EventHandler(this.schließenToolStripMenuItem_Click_1);
@@ -7938,6 +7941,7 @@
             this.hilfeToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.handbuchToolStripMenuItem,
             this.videoF2ToolStripMenuItem});
+            this.hilfeToolStripMenuItem.Image = global::ToolFahrrad_v1.Properties.Resources.Help;
             this.hilfeToolStripMenuItem.Name = "hilfeToolStripMenuItem";
             resources.ApplyResources(this.hilfeToolStripMenuItem, "hilfeToolStripMenuItem");
             this.hilfeToolStripMenuItem.Click += new System.EventHandler(this.hilfeToolStripMenuItem_Click);
@@ -7959,6 +7963,7 @@
             this.spracheToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.deutschToolStripMenuItem1,
             this.englischToolStripMenuItem1});
+            this.spracheToolStripMenuItem1.Image = global::ToolFahrrad_v1.Properties.Resources.Language_skills;
             this.spracheToolStripMenuItem1.Name = "spracheToolStripMenuItem1";
             resources.ApplyResources(this.spracheToolStripMenuItem1, "spracheToolStripMenuItem1");
             // 
@@ -7966,18 +7971,23 @@
             // 
             this.deutschToolStripMenuItem1.Checked = true;
             this.deutschToolStripMenuItem1.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.deutschToolStripMenuItem1.Image = global::ToolFahrrad_v1.Properties.Resources.Germany;
             this.deutschToolStripMenuItem1.Name = "deutschToolStripMenuItem1";
             resources.ApplyResources(this.deutschToolStripMenuItem1, "deutschToolStripMenuItem1");
+            this.deutschToolStripMenuItem1.TextDirection = System.Windows.Forms.ToolStripTextDirection.Horizontal;
             this.deutschToolStripMenuItem1.Click += new System.EventHandler(this.deutschToolStripMenuItem1_Click);
             // 
             // englischToolStripMenuItem1
             // 
+            this.englischToolStripMenuItem1.Image = global::ToolFahrrad_v1.Properties.Resources.United_Kingdom_flag;
             this.englischToolStripMenuItem1.Name = "englischToolStripMenuItem1";
             resources.ApplyResources(this.englischToolStripMenuItem1, "englischToolStripMenuItem1");
+            this.englischToolStripMenuItem1.TextDirection = System.Windows.Forms.ToolStripTextDirection.Horizontal;
             this.englischToolStripMenuItem1.Click += new System.EventHandler(this.englischToolStripMenuItem1_Click);
             // 
             // gewichtungToolStripMenuItem
             // 
+            this.gewichtungToolStripMenuItem.Image = global::ToolFahrrad_v1.Properties.Resources.Gear;
             this.gewichtungToolStripMenuItem.Name = "gewichtungToolStripMenuItem";
             resources.ApplyResources(this.gewichtungToolStripMenuItem, "gewichtungToolStripMenuItem");
             this.gewichtungToolStripMenuItem.Click += new System.EventHandler(this.gewichtungToolStripMenuItem_Click);
@@ -8017,6 +8027,7 @@
             // button_nav_2
             // 
             this.button_nav_2.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.button_nav_2.Image = global::ToolFahrrad_v1.Properties.Resources.Home;
             resources.ApplyResources(this.button_nav_2, "button_nav_2");
             this.button_nav_2.Name = "button_nav_2";
             this.helpProvider1.SetShowHelp(this.button_nav_2, ((bool)(resources.GetObject("button_nav_2.ShowHelp"))));
@@ -8026,6 +8037,7 @@
             // button_nav_3
             // 
             this.button_nav_3.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.button_nav_3.Image = global::ToolFahrrad_v1.Properties.Resources.Bike;
             resources.ApplyResources(this.button_nav_3, "button_nav_3");
             this.button_nav_3.Name = "button_nav_3";
             this.helpProvider1.SetShowHelp(this.button_nav_3, ((bool)(resources.GetObject("button_nav_3.ShowHelp"))));
@@ -8035,6 +8047,7 @@
             // button_nav_4
             // 
             this.button_nav_4.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.button_nav_4.Image = global::ToolFahrrad_v1.Properties.Resources.Factory;
             resources.ApplyResources(this.button_nav_4, "button_nav_4");
             this.button_nav_4.Name = "button_nav_4";
             this.helpProvider1.SetShowHelp(this.button_nav_4, ((bool)(resources.GetObject("button_nav_4.ShowHelp"))));
@@ -8044,6 +8057,7 @@
             // button_nav_5
             // 
             this.button_nav_5.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.button_nav_5.Image = global::ToolFahrrad_v1.Properties.Resources.Purchase_Order;
             resources.ApplyResources(this.button_nav_5, "button_nav_5");
             this.button_nav_5.Name = "button_nav_5";
             this.helpProvider1.SetShowHelp(this.button_nav_5, ((bool)(resources.GetObject("button_nav_5.ShowHelp"))));
@@ -8053,6 +8067,7 @@
             // button__nav_6
             // 
             this.button__nav_6.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.button__nav_6.Image = global::ToolFahrrad_v1.Properties.Resources.Emblem_Money;
             resources.ApplyResources(this.button__nav_6, "button__nav_6");
             this.button__nav_6.Name = "button__nav_6";
             this.helpProvider1.SetShowHelp(this.button__nav_6, ((bool)(resources.GetObject("button__nav_6.ShowHelp"))));
@@ -8062,6 +8077,7 @@
             // button_nav_7
             // 
             this.button_nav_7.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.button_nav_7.Image = global::ToolFahrrad_v1.Properties.Resources.File_Xml;
             resources.ApplyResources(this.button_nav_7, "button_nav_7");
             this.button_nav_7.Name = "button_nav_7";
             this.helpProvider1.SetShowHelp(this.button_nav_7, ((bool)(resources.GetObject("button_nav_7.ShowHelp"))));
@@ -8071,6 +8087,7 @@
             // button_nav_8
             // 
             this.button_nav_8.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.button_nav_8.Image = global::ToolFahrrad_v1.Properties.Resources.Statistics;
             resources.ApplyResources(this.button_nav_8, "button_nav_8");
             this.button_nav_8.Name = "button_nav_8";
             this.helpProvider1.SetShowHelp(this.button_nav_8, ((bool)(resources.GetObject("button_nav_8.ShowHelp"))));
@@ -8080,6 +8097,7 @@
             // button_nav_9
             // 
             this.button_nav_9.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.button_nav_9.Image = global::ToolFahrrad_v1.Properties.Resources.Gear;
             resources.ApplyResources(this.button_nav_9, "button_nav_9");
             this.button_nav_9.Name = "button_nav_9";
             this.helpProvider1.SetShowHelp(this.button_nav_9, ((bool)(resources.GetObject("button_nav_9.ShowHelp"))));
@@ -8117,6 +8135,7 @@
             // nav_button_1
             // 
             this.nav_button_1.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.nav_button_1.Image = global::ToolFahrrad_v1.Properties.Resources.Home;
             resources.ApplyResources(this.nav_button_1, "nav_button_1");
             this.nav_button_1.Name = "nav_button_1";
             this.nav_button_1.UseVisualStyleBackColor = false;
