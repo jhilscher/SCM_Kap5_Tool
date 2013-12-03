@@ -20108,6 +20108,54 @@ bestand</value>
   <data name="&gt;&gt;tab_produktion.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
+  <data name="lblausgabe2viewap.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblausgabe2viewap.Location" type="System.Drawing.Point, System.Drawing">
+    <value>154, 352</value>
+  </data>
+  <data name="lblausgabe2viewap.Size" type="System.Drawing.Size, System.Drawing">
+    <value>0, 13</value>
+  </data>
+  <data name="lblausgabe2viewap.TabIndex" type="System.Int32, mscorlib">
+    <value>181</value>
+  </data>
+  <data name="&gt;&gt;lblausgabe2viewap.Name" xml:space="preserve">
+    <value>lblausgabe2viewap</value>
+  </data>
+  <data name="&gt;&gt;lblausgabe2viewap.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblausgabe2viewap.Parent" xml:space="preserve">
+    <value>tab_arbeitzeit</value>
+  </data>
+  <data name="&gt;&gt;lblausgabe2viewap.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="lblausgabeviewap.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblausgabeviewap.Location" type="System.Drawing.Point, System.Drawing">
+    <value>9, 352</value>
+  </data>
+  <data name="lblausgabeviewap.Size" type="System.Drawing.Size, System.Drawing">
+    <value>0, 13</value>
+  </data>
+  <data name="lblausgabeviewap.TabIndex" type="System.Int32, mscorlib">
+    <value>180</value>
+  </data>
+  <data name="&gt;&gt;lblausgabeviewap.Name" xml:space="preserve">
+    <value>lblausgabeviewap</value>
+  </data>
+  <data name="&gt;&gt;lblausgabeviewap.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblausgabeviewap.Parent" xml:space="preserve">
+    <value>tab_arbeitzeit</value>
+  </data>
+  <data name="&gt;&gt;lblausgabeviewap.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
   <data name="button5.Location" type="System.Drawing.Point, System.Drawing">
     <value>805, 483</value>
   </data>
@@ -20130,7 +20178,7 @@ bestand</value>
     <value>tab_arbeitzeit</value>
   </data>
   <data name="&gt;&gt;button5.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>2</value>
   </data>
   <metadata name="dataGridViewTextBoxColumn5.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -20265,7 +20313,7 @@ bestand</value>
     <value>150</value>
   </data>
   <data name="DataGridViewAP.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 24</value>
+    <value>3, 3</value>
   </data>
   <data name="DataGridViewAP.ScrollBars" type="System.Windows.Forms.ScrollBars, System.Windows.Forms">
     <value>None</value>
@@ -20289,7 +20337,7 @@ bestand</value>
     <value>tab_arbeitzeit</value>
   </data>
   <data name="&gt;&gt;DataGridViewAP.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>3</value>
   </data>
   <data name="tab_arbeitzeit.Location" type="System.Drawing.Point, System.Drawing">
     <value>4, 22</value>
@@ -23781,7 +23829,7 @@ Afin = keine Abweichung.</value>
         AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
         LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
         ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAABS
-        CwAAAk1TRnQBSQFMAgEBAwEAARABBwEQAQcBEAEAARABAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
+        CwAAAk1TRnQBSQFMAgEBAwEAASABBwEgAQcBEAEAARABAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
         AwABQAMAARADAAEBAQABCAYAAQQYAAGAAgABgAMAAoABAAGAAwABgAEAAYABAAKAAgADwAEAAcAB3AHA
         AQAB8AHKAaYBAAEzBQABMwEAATMBAAEzAQACMwIAAxYBAAMcAQADIgEAAykBAANVAQADTQEAA0IBAAM5
         AQABgAF8Af8BAAJQAf8BAAGTAQAB1gEAAf8B7AHMAQABxgHWAe8BAAHWAucBAAGQAakBrQIAAf8BMwMA
@@ -24125,7 +24173,7 @@ Afin = keine Abweichung.</value>
         AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
         LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
         ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAAAM
-        CAAAAk1TRnQBSQFMAgEBAgEAAdABBAHQAQQBEAEAARABAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
+        CAAAAk1TRnQBSQFMAgEBAgEAAeABBAHgAQQBEAEAARABAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
         AwABQAMAARADAAEBAQABCAYAAQQYAAGAAgABgAMAAoABAAGAAwABgAEAAYABAAKAAgADwAEAAcAB3AHA
         AQAB8AHKAaYBAAEzBQABMwEAATMBAAEzAQACMwIAAxYBAAMcAQADIgEAAykBAANVAQADTQEAA0IBAAM5
         AQABgAF8Af8BAAJQAf8BAAGTAQAB1gEAAf8B7AHMAQABxgHWAe8BAAHWAucBAAGQAakBrQIAAf8BMwMA

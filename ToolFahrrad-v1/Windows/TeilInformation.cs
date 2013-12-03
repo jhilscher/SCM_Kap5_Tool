@@ -27,7 +27,7 @@ namespace ToolFahrrad_v1.Windows
         private const String enBKosten = "Order costs: ";
         private const String deSumme = "Summe: ";
         private const String enSumme = "Sum: ";
-        private const String deRZeit = "Rüstungszeit ";
+        private const String deRZeit = "Rüstzeit ";
         private const String enRZeit = "Setup time: ";
         private const String deKBedarf = "Kapazitätsbedarf: ";
         private const String enKBedarf = "Capacity demand: ";
@@ -95,9 +95,9 @@ namespace ToolFahrrad_v1.Windows
             }
             ausgabe.Text += (_culInfo.Contains(de) ? deSumme : enSumme) + sum;
         }
-        internal void GetZeitInformation()
+        internal void GetZeitInformation(out String ausgabe2, out String ausgabe)
         {
-            ausgabe2.Text = (_culInfo.Contains(de) ? deRZeit : enRZeit) + "\n";
+            ausgabe2 = (_culInfo.Contains(de) ? deRZeit : enRZeit) + "\n";
             int sum = 0;
             int val = 0;
             int prMenge = 0;
@@ -115,11 +115,11 @@ namespace ToolFahrrad_v1.Windows
                         val = prMenge >= 0 ? kvp.Value : 0;
                     }
                 }
-                ausgabe2.Text += (_culInfo.Contains(de) ? deTeil : enTeil) + kvp.Key + ": " + val + " min. \n";
+                ausgabe2 += (_culInfo.Contains(de) ? deTeil : enTeil) + kvp.Key + ": " + val + " min. \n";
                 sum += val;
             }
-            ausgabe2.Text += (_culInfo.Contains(de) ? deSumme : enSumme) + sum + "\n\n";
-            ausgabe.Text += (_culInfo.Contains(de) ? deKBedarf : enKBedarf) + "\n";
+            ausgabe2 += (_culInfo.Contains(de) ? deSumme : enSumme) + sum + "\n\n";
+            ausgabe = (_culInfo.Contains(de) ? deKBedarf : enKBedarf) + "\n";
             sum = 0;
             prMenge = 0;
             foreach (KeyValuePair<int, int> kvp in _dc.GetArbeitsplatz(_nummer).WerkZeiten)
@@ -137,14 +137,14 @@ namespace ToolFahrrad_v1.Windows
                     {
                         prMenge = 0;
                     }
-                    ausgabe.Text
+                    ausgabe
                         += (_culInfo.Contains(de) ? deTeil : enTeil) + kvp.Key + ": " + kvp.Value + " * " + prMenge
                         + " = " + kvp.Value * prMenge + " min.\n";
                     sum += kvp.Value * prMenge;
                     prMenge = 0;
                 }
             }
-            ausgabe.Text += (_culInfo.Contains(de) ? deSumme : enSumme) + sum + "\n\n";
+            ausgabe += (_culInfo.Contains(de) ? deSumme : enSumme) + sum + "\n\n";
         }
     }
 }

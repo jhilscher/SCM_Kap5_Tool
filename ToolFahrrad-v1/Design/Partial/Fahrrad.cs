@@ -60,6 +60,8 @@ namespace ToolFahrrad_v1.Design
         /// <param name="e"></param>
         private void button_nav_4_Click(object sender, EventArgs e)
         {
+            lblausgabe2viewap.Text = "";
+            lblausgabeviewap.Text = "";
             tabs.SelectedTab = tab_arbeitzeit;
         }
 

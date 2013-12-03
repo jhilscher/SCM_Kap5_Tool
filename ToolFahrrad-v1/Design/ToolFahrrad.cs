@@ -1539,15 +1539,16 @@ namespace ToolFahrrad_v1.Design
                 ti.Show();
             }
         }
-        private void dataGridViewAPlatz_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void dataGridViewAP_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            String ausgabe = "", ausgabe2 = "";
             int zahl = Convert.ToInt32(DataGridViewAP.Rows[e.RowIndex].Cells[3].Value.ToString());
             switch (e.ColumnIndex)
             {
                 case 0:
                     var ti = new TeilInformation("arbeitsplatz", Convert.ToInt32(DataGridViewAP.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString()));
-                    ti.GetZeitInformation();
-                    ti.Show();
+                    ti.GetZeitInformation(out ausgabe2, out ausgabe);
+                    //ti.Show();
                     break;
                 case 4:
                     if (zahl - 10 > 0)
@@ -1559,7 +1560,14 @@ namespace ToolFahrrad_v1.Design
                     DataGridViewAP.Rows[e.RowIndex].Cells[3].Value = zahl + 10;
                     break;
             }
+            //MessageBox.Show("Arbeitsplatz:" + Convert.ToInt32(DataGridViewAP.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString()) + 
+            //    "\n" + ausgabe +
+            //    "\n" + ausgabe2
+            //    );
+            lblausgabeviewap.Text = ausgabe;
+            lblausgabe2viewap.Text = ausgabe2;
         }
+        
         private void DataGridViewAP_CellMouseEnter(object sender, DataGridViewCellEventArgs e)
         {
 
@@ -2468,6 +2476,7 @@ namespace ToolFahrrad_v1.Design
             XmlVorbereitung(5);
             GetInfo(_culInfo.Contains("de") ? "Daten wurde in XML übernommen" : "Take in XML data has been");
         }
+
 
 
 

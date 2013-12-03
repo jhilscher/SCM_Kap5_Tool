@@ -634,6 +634,8 @@
             this.dataGridViewTextBoxColumn27 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn28 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tab_arbeitzeit = new System.Windows.Forms.TabPage();
+            this.lblausgabe2viewap = new System.Windows.Forms.Label();
+            this.lblausgabeviewap = new System.Windows.Forms.Label();
             this.button5 = new System.Windows.Forms.Button();
             this.DataGridViewAP = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewLinkColumn();
@@ -6362,11 +6364,23 @@
             // tab_arbeitzeit
             // 
             this.tab_arbeitzeit.BackColor = System.Drawing.Color.Transparent;
+            this.tab_arbeitzeit.Controls.Add(this.lblausgabe2viewap);
+            this.tab_arbeitzeit.Controls.Add(this.lblausgabeviewap);
             this.tab_arbeitzeit.Controls.Add(this.button5);
             this.tab_arbeitzeit.Controls.Add(this.DataGridViewAP);
             resources.ApplyResources(this.tab_arbeitzeit, "tab_arbeitzeit");
             this.tab_arbeitzeit.Name = "tab_arbeitzeit";
             this.helpProvider1.SetShowHelp(this.tab_arbeitzeit, ((bool)(resources.GetObject("tab_arbeitzeit.ShowHelp"))));
+            // 
+            // lblausgabe2viewap
+            // 
+            resources.ApplyResources(this.lblausgabe2viewap, "lblausgabe2viewap");
+            this.lblausgabe2viewap.Name = "lblausgabe2viewap";
+            // 
+            // lblausgabeviewap
+            // 
+            resources.ApplyResources(this.lblausgabeviewap, "lblausgabeviewap");
+            this.lblausgabeviewap.Name = "lblausgabeviewap";
             // 
             // button5
             // 
@@ -6419,6 +6433,7 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.DataGridViewAP.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.DataGridViewAP.RowHeadersVisible = false;
+            this.DataGridViewAP.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewAP_CellContentClick);
             // 
             // dataGridViewTextBoxColumn5
             // 
@@ -8196,6 +8211,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewProduktAuftrag)).EndInit();
             this.tab_arbeitzeit.ResumeLayout(false);
+            this.tab_arbeitzeit.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridViewAP)).EndInit();
             this.tab_bestellverwaltung.ResumeLayout(false);
             this.Bestellungen.ResumeLayout(false);
@@ -9064,6 +9080,8 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Label lblausgabe2viewap;
+        private System.Windows.Forms.Label lblausgabeviewap;
         
     }
 }
