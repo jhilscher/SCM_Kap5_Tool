@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Fahrrad));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Fahrrad));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
@@ -87,6 +87,7 @@
             this.tab1 = new System.Windows.Forms.TabControl();
             this.tab_P1 = new System.Windows.Forms.TabPage();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.label_mehrfachverwendung_p1 = new System.Windows.Forms.Label();
             this.label91 = new System.Windows.Forms.Label();
             this.label90 = new System.Windows.Forms.Label();
@@ -260,11 +261,10 @@
             this.p1ib_0 = new System.Windows.Forms.TextBox();
             this.p1pm_0 = new System.Windows.Forms.TextBox();
             this.p1vw_0 = new System.Windows.Forms.TextBox();
-            this.p1ETAusfueren = new System.Windows.Forms.PictureBox();
             this.tab_P2 = new System.Windows.Forms.TabPage();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.button2 = new System.Windows.Forms.Button();
             this.label_mehrfachverwendung_p2 = new System.Windows.Forms.Label();
-            this.p2ETAusfueren = new System.Windows.Forms.PictureBox();
             this.label92 = new System.Windows.Forms.Label();
             this.label93 = new System.Windows.Forms.Label();
             this.label94 = new System.Windows.Forms.Label();
@@ -439,8 +439,8 @@
             this.p2vw_0 = new System.Windows.Forms.TextBox();
             this.tab_P3 = new System.Windows.Forms.TabPage();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.button3 = new System.Windows.Forms.Button();
             this.label_mehrfachverwendung_p3 = new System.Windows.Forms.Label();
-            this.p3ETAusfueren = new System.Windows.Forms.PictureBox();
             this.label181 = new System.Windows.Forms.Label();
             this.label182 = new System.Windows.Forms.Label();
             this.label183 = new System.Windows.Forms.Label();
@@ -628,12 +628,13 @@
             this.colBearbeitung = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colPlanung = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.button4 = new System.Windows.Forms.Button();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.dataGridViewProduktAuftrag = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn27 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn28 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tab_arbeitzeit = new System.Windows.Forms.TabPage();
+            this.button5 = new System.Windows.Forms.Button();
             this.DataGridViewAP = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewLinkColumn();
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -646,7 +647,6 @@
             this.s1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.s3 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.ueber = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.arbPlatzAusfueren = new System.Windows.Forms.PictureBox();
             this.tab_bestellverwaltung = new System.Windows.Forms.TabPage();
             this.Bestellungen = new System.Windows.Forms.TabControl();
             this.tab_BestellungenAufgeben = new System.Windows.Forms.TabPage();
@@ -825,7 +825,6 @@
             this.scimToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.startSeiteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
-            this.xml_export = new System.Windows.Forms.PictureBox();
             this.info = new System.Windows.Forms.Label();
             this.imageListAmpel = new System.Windows.Forms.ImageList(this.components);
             this.helpProvider1 = new System.Windows.Forms.HelpProvider();
@@ -867,22 +866,17 @@
             this.tab1.SuspendLayout();
             this.tab_P1.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.p1ETAusfueren)).BeginInit();
             this.tab_P2.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.p2ETAusfueren)).BeginInit();
             this.tab_P3.SuspendLayout();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.p3ETAusfueren)).BeginInit();
             this.tab_eTeil.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewETeil)).BeginInit();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewProduktAuftrag)).BeginInit();
             this.tab_arbeitzeit.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridViewAP)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.arbPlatzAusfueren)).BeginInit();
             this.tab_bestellverwaltung.SuspendLayout();
             this.Bestellungen.SuspendLayout();
             this.tab_BestellungenAufgeben.SuspendLayout();
@@ -924,7 +918,6 @@
             this.panel5.SuspendLayout();
             this.panel_abweichung.SuspendLayout();
             this.menu.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.xml_export)).BeginInit();
             this.NavPanel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -1417,6 +1410,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.label_mehrfachverwendung_p1);
             this.panel1.Controls.Add(this.label91);
             this.panel1.Controls.Add(this.label90);
@@ -1590,12 +1584,18 @@
             this.panel1.Controls.Add(this.p1ib_0);
             this.panel1.Controls.Add(this.p1pm_0);
             this.panel1.Controls.Add(this.p1vw_0);
-            this.panel1.Controls.Add(this.p1ETAusfueren);
             this.panel1.Cursor = System.Windows.Forms.Cursors.Default;
             resources.ApplyResources(this.panel1, "panel1");
             this.panel1.Name = "panel1";
             this.helpProvider1.SetShowHelp(this.panel1, ((bool)(resources.GetObject("panel1.ShowHelp"))));
             this.toolTip.SetToolTip(this.panel1, resources.GetString("panel1.ToolTip"));
+            // 
+            // button1
+            // 
+            resources.ApplyResources(this.button1, "button1");
+            this.button1.Name = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label_mehrfachverwendung_p1
             // 
@@ -3000,16 +3000,6 @@
             this.p1vw_0.Name = "p1vw_0";
             this.helpProvider1.SetShowHelp(this.p1vw_0, ((bool)(resources.GetObject("p1vw_0.ShowHelp"))));
             // 
-            // p1ETAusfueren
-            // 
-            this.p1ETAusfueren.Cursor = System.Windows.Forms.Cursors.Hand;
-            resources.ApplyResources(this.p1ETAusfueren, "p1ETAusfueren");
-            this.p1ETAusfueren.Name = "p1ETAusfueren";
-            this.helpProvider1.SetShowHelp(this.p1ETAusfueren, ((bool)(resources.GetObject("p1ETAusfueren.ShowHelp"))));
-            this.p1ETAusfueren.TabStop = false;
-            this.toolTip.SetToolTip(this.p1ETAusfueren, resources.GetString("p1ETAusfueren.ToolTip"));
-            this.p1ETAusfueren.Click += new System.EventHandler(this.p1ETAusfueren_Click);
-            // 
             // tab_P2
             // 
             this.tab_P2.BackColor = System.Drawing.Color.Transparent;
@@ -3020,8 +3010,8 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.button2);
             this.panel2.Controls.Add(this.label_mehrfachverwendung_p2);
-            this.panel2.Controls.Add(this.p2ETAusfueren);
             this.panel2.Controls.Add(this.label92);
             this.panel2.Controls.Add(this.label93);
             this.panel2.Controls.Add(this.label94);
@@ -3200,21 +3190,18 @@
             this.helpProvider1.SetShowHelp(this.panel2, ((bool)(resources.GetObject("panel2.ShowHelp"))));
             this.toolTip.SetToolTip(this.panel2, resources.GetString("panel2.ToolTip"));
             // 
+            // button2
+            // 
+            resources.ApplyResources(this.button2, "button2");
+            this.button2.Name = "button2";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // label_mehrfachverwendung_p2
             // 
             resources.ApplyResources(this.label_mehrfachverwendung_p2, "label_mehrfachverwendung_p2");
             this.label_mehrfachverwendung_p2.Name = "label_mehrfachverwendung_p2";
             this.helpProvider1.SetShowHelp(this.label_mehrfachverwendung_p2, ((bool)(resources.GetObject("label_mehrfachverwendung_p2.ShowHelp"))));
-            // 
-            // p2ETAusfueren
-            // 
-            this.p2ETAusfueren.Cursor = System.Windows.Forms.Cursors.Hand;
-            resources.ApplyResources(this.p2ETAusfueren, "p2ETAusfueren");
-            this.p2ETAusfueren.Name = "p2ETAusfueren";
-            this.helpProvider1.SetShowHelp(this.p2ETAusfueren, ((bool)(resources.GetObject("p2ETAusfueren.ShowHelp"))));
-            this.p2ETAusfueren.TabStop = false;
-            this.toolTip.SetToolTip(this.p2ETAusfueren, resources.GetString("p2ETAusfueren.ToolTip"));
-            this.p2ETAusfueren.Click += new System.EventHandler(this.p2ETAusfueren_Click);
             // 
             // label92
             // 
@@ -4623,8 +4610,8 @@
             // 
             // panel3
             // 
+            this.panel3.Controls.Add(this.button3);
             this.panel3.Controls.Add(this.label_mehrfachverwendung_p3);
-            this.panel3.Controls.Add(this.p3ETAusfueren);
             this.panel3.Controls.Add(this.label181);
             this.panel3.Controls.Add(this.label182);
             this.panel3.Controls.Add(this.label183);
@@ -4802,21 +4789,18 @@
             this.panel3.Name = "panel3";
             this.helpProvider1.SetShowHelp(this.panel3, ((bool)(resources.GetObject("panel3.ShowHelp"))));
             // 
+            // button3
+            // 
+            resources.ApplyResources(this.button3, "button3");
+            this.button3.Name = "button3";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
             // label_mehrfachverwendung_p3
             // 
             resources.ApplyResources(this.label_mehrfachverwendung_p3, "label_mehrfachverwendung_p3");
             this.label_mehrfachverwendung_p3.Name = "label_mehrfachverwendung_p3";
             this.helpProvider1.SetShowHelp(this.label_mehrfachverwendung_p3, ((bool)(resources.GetObject("label_mehrfachverwendung_p3.ShowHelp"))));
-            // 
-            // p3ETAusfueren
-            // 
-            this.p3ETAusfueren.Cursor = System.Windows.Forms.Cursors.Hand;
-            resources.ApplyResources(this.p3ETAusfueren, "p3ETAusfueren");
-            this.p3ETAusfueren.Name = "p3ETAusfueren";
-            this.helpProvider1.SetShowHelp(this.p3ETAusfueren, ((bool)(resources.GetObject("p3ETAusfueren.ShowHelp"))));
-            this.p3ETAusfueren.TabStop = false;
-            this.toolTip.SetToolTip(this.p3ETAusfueren, resources.GetString("p3ETAusfueren.ToolTip"));
-            this.p3ETAusfueren.Click += new System.EventHandler(this.p3ETAusfueren_Click);
             // 
             // label181
             // 
@@ -6320,12 +6304,19 @@
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.Color.Transparent;
+            this.tabPage1.Controls.Add(this.button4);
             this.tabPage1.Controls.Add(this.pictureBox4);
-            this.tabPage1.Controls.Add(this.pictureBox3);
             this.tabPage1.Controls.Add(this.dataGridViewProduktAuftrag);
             resources.ApplyResources(this.tabPage1, "tabPage1");
             this.tabPage1.Name = "tabPage1";
             this.helpProvider1.SetShowHelp(this.tabPage1, ((bool)(resources.GetObject("tabPage1.ShowHelp"))));
+            // 
+            // button4
+            // 
+            resources.ApplyResources(this.button4, "button4");
+            this.button4.Name = "button4";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // pictureBox4
             // 
@@ -6336,16 +6327,6 @@
             this.pictureBox4.TabStop = false;
             this.toolTip.SetToolTip(this.pictureBox4, resources.GetString("pictureBox4.ToolTip"));
             this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Cursor = System.Windows.Forms.Cursors.Hand;
-            resources.ApplyResources(this.pictureBox3, "pictureBox3");
-            this.pictureBox3.Name = "pictureBox3";
-            this.helpProvider1.SetShowHelp(this.pictureBox3, ((bool)(resources.GetObject("pictureBox3.ShowHelp"))));
-            this.pictureBox3.TabStop = false;
-            this.toolTip.SetToolTip(this.pictureBox3, resources.GetString("pictureBox3.ToolTip"));
-            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click_1);
             // 
             // dataGridViewProduktAuftrag
             // 
@@ -6381,11 +6362,18 @@
             // tab_arbeitzeit
             // 
             this.tab_arbeitzeit.BackColor = System.Drawing.Color.Transparent;
+            this.tab_arbeitzeit.Controls.Add(this.button5);
             this.tab_arbeitzeit.Controls.Add(this.DataGridViewAP);
-            this.tab_arbeitzeit.Controls.Add(this.arbPlatzAusfueren);
             resources.ApplyResources(this.tab_arbeitzeit, "tab_arbeitzeit");
             this.tab_arbeitzeit.Name = "tab_arbeitzeit";
             this.helpProvider1.SetShowHelp(this.tab_arbeitzeit, ((bool)(resources.GetObject("tab_arbeitzeit.ShowHelp"))));
+            // 
+            // button5
+            // 
+            resources.ApplyResources(this.button5, "button5");
+            this.button5.Name = "button5";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // DataGridViewAP
             // 
@@ -6521,16 +6509,6 @@
             this.ueber.Name = "ueber";
             this.ueber.ReadOnly = true;
             this.ueber.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            // 
-            // arbPlatzAusfueren
-            // 
-            this.arbPlatzAusfueren.Cursor = System.Windows.Forms.Cursors.Hand;
-            resources.ApplyResources(this.arbPlatzAusfueren, "arbPlatzAusfueren");
-            this.arbPlatzAusfueren.Name = "arbPlatzAusfueren";
-            this.helpProvider1.SetShowHelp(this.arbPlatzAusfueren, ((bool)(resources.GetObject("arbPlatzAusfueren.ShowHelp"))));
-            this.arbPlatzAusfueren.TabStop = false;
-            this.toolTip.SetToolTip(this.arbPlatzAusfueren, resources.GetString("arbPlatzAusfueren.ToolTip"));
-            this.arbPlatzAusfueren.Click += new System.EventHandler(this.arbPlatzAusfueren_Click);
             // 
             // tab_bestellverwaltung
             // 
@@ -7925,8 +7903,8 @@
             // 
             // dateiÖffnenToolStripMenuItem
             // 
-            resources.ApplyResources(this.dateiÖffnenToolStripMenuItem, "dateiÖffnenToolStripMenuItem");
             this.dateiÖffnenToolStripMenuItem.Name = "dateiÖffnenToolStripMenuItem";
+            resources.ApplyResources(this.dateiÖffnenToolStripMenuItem, "dateiÖffnenToolStripMenuItem");
             this.dateiÖffnenToolStripMenuItem.Click += new System.EventHandler(this.dateiÖffnenToolStripMenuItem_Click);
             // 
             // xMLexportToolStripMenuItem
@@ -7942,8 +7920,8 @@
             // 
             // schließenToolStripMenuItem
             // 
-            resources.ApplyResources(this.schließenToolStripMenuItem, "schließenToolStripMenuItem");
             this.schließenToolStripMenuItem.Name = "schließenToolStripMenuItem";
+            resources.ApplyResources(this.schließenToolStripMenuItem, "schließenToolStripMenuItem");
             this.schließenToolStripMenuItem.Click += new System.EventHandler(this.schließenToolStripMenuItem_Click_1);
             // 
             // einstellungenToolStripMenuItem
@@ -7960,8 +7938,8 @@
             this.hilfeToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.handbuchToolStripMenuItem,
             this.videoF2ToolStripMenuItem});
-            resources.ApplyResources(this.hilfeToolStripMenuItem, "hilfeToolStripMenuItem");
             this.hilfeToolStripMenuItem.Name = "hilfeToolStripMenuItem";
+            resources.ApplyResources(this.hilfeToolStripMenuItem, "hilfeToolStripMenuItem");
             this.hilfeToolStripMenuItem.Click += new System.EventHandler(this.hilfeToolStripMenuItem_Click);
             // 
             // handbuchToolStripMenuItem
@@ -8000,8 +7978,8 @@
             // 
             // gewichtungToolStripMenuItem
             // 
-            resources.ApplyResources(this.gewichtungToolStripMenuItem, "gewichtungToolStripMenuItem");
             this.gewichtungToolStripMenuItem.Name = "gewichtungToolStripMenuItem";
+            resources.ApplyResources(this.gewichtungToolStripMenuItem, "gewichtungToolStripMenuItem");
             this.gewichtungToolStripMenuItem.Click += new System.EventHandler(this.gewichtungToolStripMenuItem_Click);
             // 
             // scimToolStripMenuItem
@@ -8016,16 +7994,6 @@
             this.startSeiteToolStripMenuItem.Name = "startSeiteToolStripMenuItem";
             resources.ApplyResources(this.startSeiteToolStripMenuItem, "startSeiteToolStripMenuItem");
             this.startSeiteToolStripMenuItem.Click += new System.EventHandler(this.startSeiteToolStripMenuItem_Click);
-            // 
-            // xml_export
-            // 
-            this.xml_export.Cursor = System.Windows.Forms.Cursors.Hand;
-            resources.ApplyResources(this.xml_export, "xml_export");
-            this.xml_export.Name = "xml_export";
-            this.helpProvider1.SetShowHelp(this.xml_export, ((bool)(resources.GetObject("xml_export.ShowHelp"))));
-            this.xml_export.TabStop = false;
-            this.toolTip.SetToolTip(this.xml_export, resources.GetString("xml_export.ToolTip"));
-            this.xml_export.Click += new System.EventHandler(this.xml_export_Click);
             // 
             // info
             // 
@@ -8160,7 +8128,6 @@
             resources.ApplyResources(this, "$this");
             this.Controls.Add(this.NavPanel);
             this.Controls.Add(this.info);
-            this.Controls.Add(this.xml_export);
             this.Controls.Add(this.menu);
             this.Controls.Add(this.tabs);
             this.HelpButton = true;
@@ -8197,25 +8164,20 @@
             this.tab_P1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.p1ETAusfueren)).EndInit();
             this.tab_P2.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.p2ETAusfueren)).EndInit();
             this.tab_P3.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.p3ETAusfueren)).EndInit();
             this.tab_eTeil.ResumeLayout(false);
             this.tab_eTeil.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewETeil)).EndInit();
             this.tabPage1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewProduktAuftrag)).EndInit();
             this.tab_arbeitzeit.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.DataGridViewAP)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.arbPlatzAusfueren)).EndInit();
             this.tab_bestellverwaltung.ResumeLayout(false);
             this.Bestellungen.ResumeLayout(false);
             this.tab_BestellungenAufgeben.ResumeLayout(false);
@@ -8270,7 +8232,6 @@
             this.panel_abweichung.PerformLayout();
             this.menu.ResumeLayout(false);
             this.menu.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.xml_export)).EndInit();
             this.NavPanel.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -8826,9 +8787,6 @@
         private System.Windows.Forms.TextBox p3ib_0;
         private System.Windows.Forms.TextBox p3pm_0;
         private System.Windows.Forms.TextBox p3vw_0;
-        private System.Windows.Forms.PictureBox p1ETAusfueren;
-        private System.Windows.Forms.PictureBox p2ETAusfueren;
-        private System.Windows.Forms.PictureBox p3ETAusfueren;
         private System.Windows.Forms.TabPage tab_arbeitzeit;
         private System.Windows.Forms.TabPage xmlOutput;
         private System.Windows.Forms.Panel panelXMLerstellen;
@@ -8843,8 +8801,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dg_p2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dg_p3;
         private System.Windows.Forms.Label label270;
-        private System.Windows.Forms.PictureBox arbPlatzAusfueren;
-        private System.Windows.Forms.PictureBox xml_export;
         private System.Windows.Forms.ImageList imageListPlusMinus;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn24;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn25;
@@ -8853,7 +8809,6 @@
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.DataGridView dataGridViewProduktAuftrag;
         private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.DataGridView dataGridViewPrAuftraege;
         private System.Windows.Forms.Label lb12;
         private System.Windows.Forms.Label info;
@@ -9085,6 +9040,11 @@
         private System.Windows.Forms.DataGridViewCheckBoxColumn s1;
         private System.Windows.Forms.DataGridViewCheckBoxColumn s3;
         private System.Windows.Forms.DataGridViewTextBoxColumn ueber;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button5;
         
     }
 }

@@ -60,12 +60,12 @@ namespace ToolFahrrad_v1.Design
             tab1.Visible = true;
             Bestellungen.Visible = true;
             panelXMLerstellen.Visible = true;
-            arbPlatzAusfueren.Visible = true;
+            //arbPlatzAusfueren.Visible = true;
             DataGridViewAP.Visible = true;
             _bestellungUpdate = false;
             _dvUpdate = false;
             xMLexportToolStripMenuItem.Enabled = true;
-            xml_export.Visible = true;
+            //xml_export.Visible = true;
 
             //Periode
             if (_culInfo.Contains("de"))
@@ -1220,12 +1220,12 @@ namespace ToolFahrrad_v1.Design
             tab1.Visible = true;
             Bestellungen.Visible = true;
             panelXMLerstellen.Visible = true;
-            arbPlatzAusfueren.Visible = true;
+            //arbPlatzAusfueren.Visible = true;
             DataGridViewAP.Visible = true;
             _bestellungUpdate = false;
             _dvUpdate = false;
             xMLexportToolStripMenuItem.Enabled = true;
-            xml_export.Visible = true;
+            //xml_export.Visible = true;
 
             //Periode
             if (_culInfo.Contains("de"))
@@ -2061,12 +2061,12 @@ namespace ToolFahrrad_v1.Design
                                     tab1.Visible = true;
                                     Bestellungen.Visible = true;
                                     panelXMLerstellen.Visible = true;
-                                    arbPlatzAusfueren.Visible = true;
+                                    //arbPlatzAusfueren.Visible = true;
                                     DataGridViewAP.Visible = true;
                                     _bestellungUpdate = false;
                                     _dvUpdate = false;
                                     xMLexportToolStripMenuItem.Enabled = true;
-                                    xml_export.Visible = true;
+                                    //xml_export.Visible = true;
 
                                     //Periode
                                     if (_culInfo.Contains("de"))
@@ -2345,6 +2345,128 @@ namespace ToolFahrrad_v1.Design
 
             if (row.Cells[6].Value == "Löschen" || row.Cells[6].Value == "Delete")
                 ReiheLoeschenBestellung(sender, e);
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            (_instance.GetTeil(1) as ETeil).VertriebPer0 = Convert.ToInt32(p1vw_0.Text);
+            (_instance.GetTeil(1) as ETeil).Puffer = Convert.ToInt32(p1r_0.Text);
+            ProdMenge(1, 1, Convert.ToInt32(p1r_0.Text));
+            (_instance.GetTeil(51) as ETeil).Puffer = Convert.ToInt32(p1r_51.Text);
+            ProdMenge(1, 51, Convert.ToInt32(p1r_51.Text));
+            (_instance.GetTeil(50) as ETeil).Puffer = Convert.ToInt32(p1r_50.Text);
+            ProdMenge(1, 50, Convert.ToInt32(p1r_50.Text));
+            (_instance.GetTeil(4) as ETeil).Puffer = Convert.ToInt32(p1r_4.Text);
+            ProdMenge(1, 4, Convert.ToInt32(p1r_4.Text));
+            (_instance.GetTeil(10) as ETeil).Puffer = Convert.ToInt32(p1r_10.Text);
+            ProdMenge(1, 10, Convert.ToInt32(p1r_10.Text));
+            (_instance.GetTeil(49) as ETeil).Puffer = Convert.ToInt32(p1r_49.Text);
+            ProdMenge(1, 49, Convert.ToInt32(p1r_49.Text));
+            (_instance.GetTeil(7) as ETeil).Puffer = Convert.ToInt32(p1r_7.Text);
+            ProdMenge(1, 7, Convert.ToInt32(p1r_7.Text));
+            (_instance.GetTeil(13) as ETeil).Puffer = Convert.ToInt32(p1r_13.Text);
+            ProdMenge(1, 13, Convert.ToInt32(p1r_13.Text));
+            (_instance.GetTeil(18) as ETeil).Puffer = Convert.ToInt32(p1r_18.Text);
+            ProdMenge(1, 18, Convert.ToInt32(p1r_18.Text));
+            (_instance.GetTeil(26) as ETeil).KdhPuffer[(_instance.GetTeil(26) as ETeil).KdhPuffer.Keys.ToList()[0]][0] = Convert.ToInt32(p1r_26.Text);
+            ProdMenge(1, 26, Convert.ToInt32(p1r_26.Text));
+            (_instance.GetTeil(16) as ETeil).KdhPuffer[(_instance.GetTeil(16) as ETeil).KdhPuffer.Keys.ToList()[1]][0] = Convert.ToInt32(p1r_16.Text);
+            ProdMenge(1, 16, Convert.ToInt32(p1r_16.Text));
+            (_instance.GetTeil(17) as ETeil).KdhPuffer[(_instance.GetTeil(17) as ETeil).KdhPuffer.Keys.ToList()[2]][0] = Convert.ToInt32(p1r_17.Text);
+            ProdMenge(1, 17, Convert.ToInt32(p1r_17.Text));
+
+            DispositionDarstellung(1);
+            Information();
+            XmlVorbereitung(100);
+
+            GetInfo(_culInfo.Contains("de") ? "Daten wurde in XML übernommen" : "Take in XML data has been");
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            (_instance.GetTeil(2) as ETeil).VertriebPer0 = Convert.ToInt32(p2vw_0.Text);
+            (_instance.GetTeil(2) as ETeil).Puffer = Convert.ToInt32(p2r_0.Text);
+            ProdMenge(2, 2, Convert.ToInt32(p2r_0.Text));
+            (_instance.GetTeil(56) as ETeil).Puffer = Convert.ToInt32(p2r_56.Text);
+            ProdMenge(2, 56, Convert.ToInt32(p2r_56.Text));
+            (_instance.GetTeil(55) as ETeil).Puffer = Convert.ToInt32(p2r_55.Text);
+            ProdMenge(2, 55, Convert.ToInt32(p2r_55.Text));
+            (_instance.GetTeil(5) as ETeil).Puffer = Convert.ToInt32(p2r_5.Text);
+            ProdMenge(2, 5, Convert.ToInt32(p2r_5.Text));
+            (_instance.GetTeil(11) as ETeil).Puffer = Convert.ToInt32(p2r_11.Text);
+            ProdMenge(2, 11, Convert.ToInt32(p2r_11.Text));
+            (_instance.GetTeil(54) as ETeil).Puffer = Convert.ToInt32(p2r_54.Text);
+            ProdMenge(2, 54, Convert.ToInt32(p2r_54.Text));
+            (_instance.GetTeil(8) as ETeil).Puffer = Convert.ToInt32(p2r_8.Text);
+            ProdMenge(2, 8, Convert.ToInt32(p2r_8.Text));
+            (_instance.GetTeil(14) as ETeil).Puffer = Convert.ToInt32(p2r_14.Text);
+            ProdMenge(2, 14, Convert.ToInt32(p2r_14.Text));
+            (_instance.GetTeil(19) as ETeil).Puffer = Convert.ToInt32(p2r_19.Text);
+            ProdMenge(2, 19, Convert.ToInt32(p2r_19.Text));
+            (_instance.GetTeil(26) as ETeil).KdhPuffer[(_instance.GetTeil(26) as ETeil).KdhPuffer.Keys.ToList()[0]][1] = Convert.ToInt32(p2r_26.Text);
+            ProdMenge(2, 26, Convert.ToInt32(p2r_26.Text));
+            (_instance.GetTeil(16) as ETeil).KdhPuffer[(_instance.GetTeil(16) as ETeil).KdhPuffer.Keys.ToList()[1]][1] = Convert.ToInt32(p2r_16.Text);
+            ProdMenge(2, 16, Convert.ToInt32(p2r_16.Text));
+            (_instance.GetTeil(17) as ETeil).KdhPuffer[(_instance.GetTeil(17) as ETeil).KdhPuffer.Keys.ToList()[2]][1] = Convert.ToInt32(p2r_17.Text);
+            ProdMenge(2, 17, Convert.ToInt32(p2r_17.Text));
+
+            DispositionDarstellung(2);
+            Information();
+            XmlVorbereitung(100);
+            GetInfo(_culInfo.Contains("de") ? "Daten wurde in XML übernommen" : "Take in XML data has been");
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            (_instance.GetTeil(3) as ETeil).VertriebPer0 = Convert.ToInt32(p3vw_0.Text);
+            (_instance.GetTeil(3) as ETeil).Puffer = Convert.ToInt32(p3r_0.Text);
+            ProdMenge(3, 3, Convert.ToInt32(p3r_0.Text));
+            (_instance.GetTeil(31) as ETeil).Puffer = Convert.ToInt32(p3r_31.Text);
+            ProdMenge(3, 31, Convert.ToInt32(p3r_31.Text));
+            (_instance.GetTeil(30) as ETeil).Puffer = Convert.ToInt32(p3r_30.Text);
+            ProdMenge(3, 30, Convert.ToInt32(p3r_30.Text));
+            (_instance.GetTeil(6) as ETeil).Puffer = Convert.ToInt32(p3r_6.Text);
+            ProdMenge(3, 6, Convert.ToInt32(p3r_6.Text));
+            (_instance.GetTeil(12) as ETeil).Puffer = Convert.ToInt32(p3r_12.Text);
+            ProdMenge(3, 12, Convert.ToInt32(p3r_12.Text));
+            (_instance.GetTeil(29) as ETeil).Puffer = Convert.ToInt32(p3r_29.Text);
+            ProdMenge(3, 29, Convert.ToInt32(p3r_29.Text));
+            (_instance.GetTeil(9) as ETeil).Puffer = Convert.ToInt32(p3r_9.Text);
+            ProdMenge(3, 9, Convert.ToInt32(p3r_9.Text));
+            (_instance.GetTeil(15) as ETeil).Puffer = Convert.ToInt32(p3r_15.Text);
+            ProdMenge(3, 15, Convert.ToInt32(p3r_15.Text));
+            (_instance.GetTeil(20) as ETeil).Puffer = Convert.ToInt32(p3r_20.Text);
+            ProdMenge(3, 20, Convert.ToInt32(p3r_20.Text));
+            (_instance.GetTeil(26) as ETeil).KdhPuffer[(_instance.GetTeil(26) as ETeil).KdhPuffer.Keys.ToList()[0]][2] = Convert.ToInt32(p3r_26.Text);
+            ProdMenge(3, 26, Convert.ToInt32(p3r_26.Text));
+            (_instance.GetTeil(16) as ETeil).KdhPuffer[(_instance.GetTeil(16) as ETeil).KdhPuffer.Keys.ToList()[1]][2] = Convert.ToInt32(p3r_16.Text);
+            ProdMenge(3, 16, Convert.ToInt32(p3r_16.Text));
+            (_instance.GetTeil(17) as ETeil).KdhPuffer[(_instance.GetTeil(17) as ETeil).KdhPuffer.Keys.ToList()[2]][2] = Convert.ToInt32(p3r_17.Text);
+            ProdMenge(3, 17, Convert.ToInt32(p3r_17.Text));
+
+            DispositionDarstellung(3);
+            Information();
+            XmlVorbereitung(100);
+            GetInfo(_culInfo.Contains("de") ? "Daten wurde in XML übernommen" : "Take in XML data has been");
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            XmlVorbereitung(4);
+            GetInfo(_culInfo.Contains("de") ? "Daten wurde in XML übernommen" : "Take in XML data has been");
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            _bv.ClearBvPositionen();
+            for (int index = 0; index < DataGridViewAP.Rows.Count; ++index)
+            {
+                _instance.GetArbeitsplatz(Convert.ToInt32(DataGridViewAP.Rows[index].Cells[0].Value.ToString())).RuestungCustom =
+                    (Convert.ToInt32(DataGridViewAP.Rows[index].Cells[3].Value.ToString()));
+            }
+            Information();
+            XmlVorbereitung(5);
+            GetInfo(_culInfo.Contains("de") ? "Daten wurde in XML übernommen" : "Take in XML data has been");
         }
 
 
