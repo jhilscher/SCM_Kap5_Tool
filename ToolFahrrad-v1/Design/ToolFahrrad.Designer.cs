@@ -924,6 +924,7 @@
             // 
             // tabs
             // 
+            resources.ApplyResources(this.tabs, "tabs");
             this.tabs.Controls.Add(this.tab_xml);
             this.tabs.Controls.Add(this.tab_produktion);
             this.tabs.Controls.Add(this.tab_arbeitzeit);
@@ -933,10 +934,10 @@
             this.tabs.Controls.Add(this.tab_beenden);
             this.tabs.Controls.Add(this.tab_statistik);
             this.tabs.Controls.Add(this.tab_einstellungen);
-            resources.ApplyResources(this.tabs, "tabs");
             this.tabs.Name = "tabs";
             this.tabs.SelectedIndex = 0;
             this.helpProvider1.SetShowHelp(this.tabs, ((bool)(resources.GetObject("tabs.ShowHelp"))));
+            this.tabs.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             // 
             // tab_xml
             // 
@@ -7529,6 +7530,7 @@
             this.chart_statistik.Series.Add(series2);
             this.chart_statistik.Series.Add(series3);
             this.chart_statistik.Series.Add(series4);
+            this.helpProvider1.SetShowHelp(this.chart_statistik, ((bool)(resources.GetObject("chart_statistik.ShowHelp"))));
             title1.Name = "Title1";
             this.chart_statistik.Titles.Add(title1);
             // 
@@ -8240,6 +8242,13 @@
             this.tab_beenden.PerformLayout();
             this.tab_statistik.ResumeLayout(false);
             this.tab_statistik.PerformLayout();
+
+            /// tabs#
+            /// 
+            this.tabs.ItemSize = new System.Drawing.Size(0, 1);
+            this.tabs.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
+            this.tabs.Appearance = System.Windows.Forms.TabAppearance.FlatButtons;
+            /// bis hier
             ((System.ComponentModel.ISupportInitialize)(this.chart_statistik)).EndInit();
             this.tab_einstellungen.ResumeLayout(false);
             this.panel9.ResumeLayout(false);

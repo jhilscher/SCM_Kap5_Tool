@@ -117,6 +117,10 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="tabs.Appearance" type="System.Windows.Forms.TabAppearance, System.Windows.Forms">
+    <value>FlatButtons</value>
+  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="pictureBox5.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -1255,7 +1259,6 @@
         KKKKACiiigAooooAKKKKACiiigAooooAKKKKAP/Z
 </value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="pictureBox5.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
@@ -2279,7 +2282,7 @@ Reserve</value>
     <value>634, 200</value>
   </data>
   <data name="shapeContainer1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>877, 503</value>
+    <value>877, 492</value>
   </data>
   <data name="shapeContainer1.TabIndex" type="System.Int32, mscorlib">
     <value>67</value>
@@ -2297,7 +2300,7 @@ Reserve</value>
     <value>3</value>
   </data>
   <data name="tab_xml.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 22</value>
+    <value>4, 33</value>
   </data>
   <data name="tab_xml.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 3, 3, 3</value>
@@ -2312,7 +2315,7 @@ Reserve</value>
     <value>True</value>
   </data>
   <data name="tab_xml.Size" type="System.Drawing.Size, System.Drawing">
-    <value>883, 509</value>
+    <value>883, 498</value>
   </data>
   <data name="tab_xml.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -20115,7 +20118,7 @@ bestand</value>
     <value>0</value>
   </data>
   <data name="tab_produktion.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 22</value>
+    <value>4, 25</value>
   </data>
   <data name="tab_produktion.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 3, 3, 3</value>
@@ -20124,7 +20127,7 @@ bestand</value>
     <value>True</value>
   </data>
   <data name="tab_produktion.Size" type="System.Drawing.Size, System.Drawing">
-    <value>883, 509</value>
+    <value>883, 504</value>
   </data>
   <data name="tab_produktion.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -20376,7 +20379,7 @@ bestand</value>
     <value>3</value>
   </data>
   <data name="tab_arbeitzeit.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 22</value>
+    <value>4, 25</value>
   </data>
   <data name="tab_arbeitzeit.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 3, 3, 3</value>
@@ -20385,7 +20388,7 @@ bestand</value>
     <value>True</value>
   </data>
   <data name="tab_arbeitzeit.Size" type="System.Drawing.Size, System.Drawing">
-    <value>883, 509</value>
+    <value>883, 504</value>
   </data>
   <data name="tab_arbeitzeit.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -21027,7 +21030,7 @@ bestand</value>
     <value>0</value>
   </data>
   <data name="tab_bestellverwaltung.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 22</value>
+    <value>4, 25</value>
   </data>
   <data name="tab_bestellverwaltung.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 3, 3, 3</value>
@@ -21036,7 +21039,7 @@ bestand</value>
     <value>True</value>
   </data>
   <data name="tab_bestellverwaltung.Size" type="System.Drawing.Size, System.Drawing">
-    <value>883, 509</value>
+    <value>883, 504</value>
   </data>
   <data name="tab_bestellverwaltung.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -21765,10 +21768,10 @@ bestand</value>
     <value>11</value>
   </data>
   <data name="tab_marktplatz.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 22</value>
+    <value>4, 25</value>
   </data>
   <data name="tab_marktplatz.Size" type="System.Drawing.Size, System.Drawing">
-    <value>883, 509</value>
+    <value>883, 504</value>
   </data>
   <data name="tab_marktplatz.TabIndex" type="System.Int32, mscorlib">
     <value>8</value>
@@ -22251,7 +22254,7 @@ bestand</value>
     <value>True</value>
   </data>
   <data name="panelXMLerstellen.Size" type="System.Drawing.Size, System.Drawing">
-    <value>877, 503</value>
+    <value>877, 498</value>
   </data>
   <data name="panelXMLerstellen.TabIndex" type="System.Int32, mscorlib">
     <value>10</value>
@@ -22272,7 +22275,7 @@ bestand</value>
     <value>0</value>
   </data>
   <data name="xmlOutput.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 22</value>
+    <value>4, 25</value>
   </data>
   <data name="xmlOutput.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 3, 3, 3</value>
@@ -22281,7 +22284,7 @@ bestand</value>
     <value>True</value>
   </data>
   <data name="xmlOutput.Size" type="System.Drawing.Size, System.Drawing">
-    <value>883, 509</value>
+    <value>883, 504</value>
   </data>
   <data name="xmlOutput.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
@@ -22389,7 +22392,7 @@ bestand</value>
     <value>2</value>
   </data>
   <data name="tab_beenden.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 22</value>
+    <value>4, 25</value>
   </data>
   <data name="tab_beenden.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 3, 3, 3</value>
@@ -22398,7 +22401,7 @@ bestand</value>
     <value>True</value>
   </data>
   <data name="tab_beenden.Size" type="System.Drawing.Size, System.Drawing">
-    <value>883, 509</value>
+    <value>883, 504</value>
   </data>
   <data name="tab_beenden.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
@@ -22461,7 +22464,10 @@ bestand</value>
     <value>Bottom</value>
   </data>
   <data name="chart_statistik.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 56</value>
+    <value>3, 73</value>
+  </data>
+  <data name="chart_statistik.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
   <data name="chart_statistik.Size" type="System.Drawing.Size, System.Drawing">
     <value>877, 450</value>
@@ -22485,13 +22491,13 @@ bestand</value>
     <value>1</value>
   </data>
   <data name="tab_statistik.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 22</value>
+    <value>4, 5</value>
   </data>
   <data name="tab_statistik.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 3, 3, 3</value>
   </data>
   <data name="tab_statistik.Size" type="System.Drawing.Size, System.Drawing">
-    <value>883, 509</value>
+    <value>883, 526</value>
   </data>
   <data name="tab_statistik.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>
@@ -23648,13 +23654,13 @@ Afin = keine Abweichung.</value>
     <value>4</value>
   </data>
   <data name="tab_einstellungen.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 22</value>
+    <value>4, 25</value>
   </data>
   <data name="tab_einstellungen.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 3, 3, 3</value>
   </data>
   <data name="tab_einstellungen.Size" type="System.Drawing.Size, System.Drawing">
-    <value>883, 509</value>
+    <value>883, 504</value>
   </data>
   <data name="tab_einstellungen.TabIndex" type="System.Int32, mscorlib">
     <value>9</value>
@@ -23675,7 +23681,7 @@ Afin = keine Abweichung.</value>
     <value>8</value>
   </data>
   <data name="tabs.Location" type="System.Drawing.Point, System.Drawing">
-    <value>117, 27</value>
+    <value>117, 25</value>
   </data>
   <data name="tabs.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
     <value>No</value>
@@ -23853,7 +23859,7 @@ Afin = keine Abweichung.</value>
         AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
         LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
         ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAABS
-        CwAAAk1TRnQBSQFMAgEBAwEAAUgBBwFIAQcBEAEAARABAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
+        CwAAAk1TRnQBSQFMAgEBAwEAAVABBwFQAQcBEAEAARABAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
         AwABQAMAARADAAEBAQABCAYAAQQYAAGAAgABgAMAAoABAAGAAwABgAEAAYABAAKAAgADwAEAAcAB3AHA
         AQAB8AHKAaYBAAEzBQABMwEAATMBAAEzAQACMwIAAxYBAAMcAQADIgEAAykBAANVAQADTQEAA0IBAAM5
         AQABgAF8Af8BAAJQAf8BAAGTAQAB1gEAAf8B7AHMAQABxgHWAe8BAAHWAucBAAGQAakBrQIAAf8BMwMA
@@ -24197,7 +24203,7 @@ Afin = keine Abweichung.</value>
         AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
         LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
         ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAAAM
-        CAAAAk1TRnQBSQFMAgEBAgEAAQgBBQEIAQUBEAEAARABAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
+        CAAAAk1TRnQBSQFMAgEBAgEAARABBQEQAQUBEAEAARABAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
         AwABQAMAARADAAEBAQABCAYAAQQYAAGAAgABgAMAAoABAAGAAwABgAEAAYABAAKAAgADwAEAAcAB3AHA
         AQAB8AHKAaYBAAEzBQABMwEAATMBAAEzAQACMwIAAxYBAAMcAQADIgEAAykBAANVAQADTQEAA0IBAAM5
         AQABgAF8Af8BAAJQAf8BAAGTAQAB1gEAAf8B7AHMAQABxgHWAe8BAAHWAucBAAGQAakBrQIAAf8BMwMA
@@ -24271,7 +24277,7 @@ Afin = keine Abweichung.</value>
     <value>8</value>
   </data>
   <data name="NavPanel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 27</value>
+    <value>4, 55</value>
   </data>
   <data name="NavPanel.Size" type="System.Drawing.Size, System.Drawing">
     <value>111, 386</value>
