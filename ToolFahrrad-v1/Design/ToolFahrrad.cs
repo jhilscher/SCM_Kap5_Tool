@@ -2478,7 +2478,12 @@ namespace ToolFahrrad_v1.Design
             XmlVorbereitung(5);
             GetInfo(_culInfo.Contains("de") ? "Daten wurde in XML übernommen" : "Take in XML data has been");
         }
-
+        
+        /// <summary>
+        /// alles von hier...
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btn_special_Click(object sender, EventArgs e)
         {
             String path = Directory.GetCurrentDirectory() + @"\awer4qt4ffe";
@@ -2548,7 +2553,7 @@ namespace ToolFahrrad_v1.Design
                 "'";
         }
 
-
+        /// bis hier kann gelöscht werden... iwin für pierre
 
 
 
