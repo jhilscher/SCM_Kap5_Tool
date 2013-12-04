@@ -843,6 +843,7 @@
             this.NavPanel = new System.Windows.Forms.Panel();
             this.nav_button_1 = new System.Windows.Forms.Button();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.btn_special = new System.Windows.Forms.Button();
             this.tabs.SuspendLayout();
             this.tab_xml.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
@@ -8150,10 +8151,18 @@
             this.nav_button_1.UseVisualStyleBackColor = false;
             this.nav_button_1.Click += new System.EventHandler(this.nav_button_1_Click);
             // 
+            // btn_special
+            // 
+            resources.ApplyResources(this.btn_special, "btn_special");
+            this.btn_special.Name = "btn_special";
+            this.btn_special.UseVisualStyleBackColor = true;
+            this.btn_special.Click += new System.EventHandler(this.btn_special_Click);
+            // 
             // Fahrrad
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             resources.ApplyResources(this, "$this");
+            this.Controls.Add(this.btn_special);
             this.Controls.Add(this.NavPanel);
             this.Controls.Add(this.info);
             this.Controls.Add(this.menu);
@@ -8242,13 +8251,6 @@
             this.tab_beenden.PerformLayout();
             this.tab_statistik.ResumeLayout(false);
             this.tab_statistik.PerformLayout();
-
-            /// tabs#
-            /// 
-            this.tabs.ItemSize = new System.Drawing.Size(0, 1);
-            this.tabs.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
-            this.tabs.Appearance = System.Windows.Forms.TabAppearance.FlatButtons;
-            /// bis hier
             ((System.ComponentModel.ISupportInitialize)(this.chart_statistik)).EndInit();
             this.tab_einstellungen.ResumeLayout(false);
             this.panel9.ResumeLayout(false);
@@ -9082,6 +9084,7 @@
         private System.Windows.Forms.Label lblausgabe2viewap;
         private System.Windows.Forms.Label lblausgabeviewap;
         private System.Windows.Forms.Label label288;
+        private System.Windows.Forms.Button btn_special;
         
     }
 }

@@ -2282,7 +2282,7 @@ Reserve</value>
     <value>634, 200</value>
   </data>
   <data name="shapeContainer1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>877, 492</value>
+    <value>877, 520</value>
   </data>
   <data name="shapeContainer1.TabIndex" type="System.Int32, mscorlib">
     <value>67</value>
@@ -2300,7 +2300,7 @@ Reserve</value>
     <value>3</value>
   </data>
   <data name="tab_xml.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 33</value>
+    <value>4, 5</value>
   </data>
   <data name="tab_xml.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 3, 3, 3</value>
@@ -2315,7 +2315,7 @@ Reserve</value>
     <value>True</value>
   </data>
   <data name="tab_xml.Size" type="System.Drawing.Size, System.Drawing">
-    <value>883, 498</value>
+    <value>883, 526</value>
   </data>
   <data name="tab_xml.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -20118,7 +20118,7 @@ bestand</value>
     <value>0</value>
   </data>
   <data name="tab_produktion.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 25</value>
+    <value>4, 5</value>
   </data>
   <data name="tab_produktion.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 3, 3, 3</value>
@@ -20127,7 +20127,7 @@ bestand</value>
     <value>True</value>
   </data>
   <data name="tab_produktion.Size" type="System.Drawing.Size, System.Drawing">
-    <value>883, 504</value>
+    <value>883, 526</value>
   </data>
   <data name="tab_produktion.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -20379,7 +20379,7 @@ bestand</value>
     <value>3</value>
   </data>
   <data name="tab_arbeitzeit.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 25</value>
+    <value>4, 5</value>
   </data>
   <data name="tab_arbeitzeit.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 3, 3, 3</value>
@@ -20388,7 +20388,7 @@ bestand</value>
     <value>True</value>
   </data>
   <data name="tab_arbeitzeit.Size" type="System.Drawing.Size, System.Drawing">
-    <value>883, 504</value>
+    <value>883, 526</value>
   </data>
   <data name="tab_arbeitzeit.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -21030,7 +21030,7 @@ bestand</value>
     <value>0</value>
   </data>
   <data name="tab_bestellverwaltung.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 25</value>
+    <value>4, 5</value>
   </data>
   <data name="tab_bestellverwaltung.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 3, 3, 3</value>
@@ -21039,7 +21039,7 @@ bestand</value>
     <value>True</value>
   </data>
   <data name="tab_bestellverwaltung.Size" type="System.Drawing.Size, System.Drawing">
-    <value>883, 504</value>
+    <value>883, 526</value>
   </data>
   <data name="tab_bestellverwaltung.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -21768,10 +21768,10 @@ bestand</value>
     <value>11</value>
   </data>
   <data name="tab_marktplatz.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 25</value>
+    <value>4, 5</value>
   </data>
   <data name="tab_marktplatz.Size" type="System.Drawing.Size, System.Drawing">
-    <value>883, 504</value>
+    <value>883, 526</value>
   </data>
   <data name="tab_marktplatz.TabIndex" type="System.Int32, mscorlib">
     <value>8</value>
@@ -22254,7 +22254,7 @@ bestand</value>
     <value>True</value>
   </data>
   <data name="panelXMLerstellen.Size" type="System.Drawing.Size, System.Drawing">
-    <value>877, 498</value>
+    <value>877, 520</value>
   </data>
   <data name="panelXMLerstellen.TabIndex" type="System.Int32, mscorlib">
     <value>10</value>
@@ -22275,7 +22275,7 @@ bestand</value>
     <value>0</value>
   </data>
   <data name="xmlOutput.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 25</value>
+    <value>4, 5</value>
   </data>
   <data name="xmlOutput.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 3, 3, 3</value>
@@ -22284,7 +22284,7 @@ bestand</value>
     <value>True</value>
   </data>
   <data name="xmlOutput.Size" type="System.Drawing.Size, System.Drawing">
-    <value>883, 504</value>
+    <value>883, 526</value>
   </data>
   <data name="xmlOutput.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
@@ -22392,7 +22392,7 @@ bestand</value>
     <value>2</value>
   </data>
   <data name="tab_beenden.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 25</value>
+    <value>4, 5</value>
   </data>
   <data name="tab_beenden.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 3, 3, 3</value>
@@ -22401,7 +22401,7 @@ bestand</value>
     <value>True</value>
   </data>
   <data name="tab_beenden.Size" type="System.Drawing.Size, System.Drawing">
-    <value>883, 504</value>
+    <value>883, 526</value>
   </data>
   <data name="tab_beenden.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
@@ -23654,13 +23654,13 @@ Afin = keine Abweichung.</value>
     <value>4</value>
   </data>
   <data name="tab_einstellungen.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 25</value>
+    <value>4, 5</value>
   </data>
   <data name="tab_einstellungen.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 3, 3, 3</value>
   </data>
   <data name="tab_einstellungen.Size" type="System.Drawing.Size, System.Drawing">
-    <value>883, 504</value>
+    <value>883, 526</value>
   </data>
   <data name="tab_einstellungen.TabIndex" type="System.Int32, mscorlib">
     <value>9</value>
@@ -23679,6 +23679,9 @@ Afin = keine Abweichung.</value>
   </data>
   <data name="&gt;&gt;tab_einstellungen.ZOrder" xml:space="preserve">
     <value>8</value>
+  </data>
+  <data name="tabs.ItemSize" type="System.Drawing.Size, System.Drawing">
+    <value>0, 1</value>
   </data>
   <data name="tabs.Location" type="System.Drawing.Point, System.Drawing">
     <value>117, 25</value>
@@ -23705,7 +23708,7 @@ Afin = keine Abweichung.</value>
     <value>$this</value>
   </data>
   <data name="&gt;&gt;tabs.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
   <metadata name="openFileDialog.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
@@ -23816,7 +23819,7 @@ Afin = keine Abweichung.</value>
     <value>$this</value>
   </data>
   <data name="&gt;&gt;menu.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="info.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -23849,7 +23852,7 @@ Afin = keine Abweichung.</value>
     <value>$this</value>
   </data>
   <data name="&gt;&gt;info.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <metadata name="imageListAmpel.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>480, 19</value>
@@ -23859,7 +23862,7 @@ Afin = keine Abweichung.</value>
         AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
         LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
         ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAABS
-        CwAAAk1TRnQBSQFMAgEBAwEAAVABBwFQAQcBEAEAARABAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
+        CwAAAk1TRnQBSQFMAgEBAwEAAVgBBwFYAQcBEAEAARABAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
         AwABQAMAARADAAEBAQABCAYAAQQYAAGAAgABgAMAAoABAAGAAwABgAEAAYABAAKAAgADwAEAAcAB3AHA
         AQAB8AHKAaYBAAEzBQABMwEAATMBAAEzAQACMwIAAxYBAAMcAQADIgEAAykBAANVAQADTQEAA0IBAAM5
         AQABgAF8Af8BAAJQAf8BAAGTAQAB1gEAAf8B7AHMAQABxgHWAe8BAAHWAucBAAGQAakBrQIAAf8BMwMA
@@ -24203,7 +24206,7 @@ Afin = keine Abweichung.</value>
         AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
         LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
         ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAAAM
-        CAAAAk1TRnQBSQFMAgEBAgEAARABBQEQAQUBEAEAARABAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
+        CAAAAk1TRnQBSQFMAgEBAgEAARgBBQEYAQUBEAEAARABAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
         AwABQAMAARADAAEBAQABCAYAAQQYAAGAAgABgAMAAoABAAGAAwABgAEAAYABAAKAAgADwAEAAcAB3AHA
         AQAB8AHKAaYBAAEzBQABMwEAATMBAAEzAQACMwIAAxYBAAMcAQADIgEAAykBAANVAQADTQEAA0IBAAM5
         AQABgAF8Af8BAAJQAf8BAAGTAQAB1gEAAf8B7AHMAQABxgHWAe8BAAHWAucBAAGQAakBrQIAAf8BMwMA
@@ -24295,11 +24298,35 @@ Afin = keine Abweichung.</value>
     <value>$this</value>
   </data>
   <data name="&gt;&gt;NavPanel.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <metadata name="backgroundWorker1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 58</value>
   </metadata>
+  <data name="btn_special.Location" type="System.Drawing.Point, System.Drawing">
+    <value>22, 465</value>
+  </data>
+  <data name="btn_special.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 23</value>
+  </data>
+  <data name="btn_special.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="btn_special.Text" xml:space="preserve">
+    <value>I win</value>
+  </data>
+  <data name="&gt;&gt;btn_special.Name" xml:space="preserve">
+    <value>btn_special</value>
+  </data>
+  <data name="&gt;&gt;btn_special.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btn_special.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;btn_special.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
