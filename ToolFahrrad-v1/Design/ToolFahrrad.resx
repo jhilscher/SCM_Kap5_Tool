@@ -20922,13 +20922,13 @@ bestand</value>
     <value>4</value>
   </data>
   <data name="dataGridViewDirektverkauf.Location" type="System.Drawing.Point, System.Drawing">
-    <value>215, 138</value>
+    <value>16, 89</value>
   </data>
   <data name="dataGridViewDirektverkauf.ShowHelp" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
   <data name="dataGridViewDirektverkauf.Size" type="System.Drawing.Size, System.Drawing">
-    <value>240, 150</value>
+    <value>589, 150</value>
   </data>
   <data name="dataGridViewDirektverkauf.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
@@ -23853,7 +23853,7 @@ Afin = keine Abweichung.</value>
         AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
         LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
         ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAABS
-        CwAAAk1TRnQBSQFMAgEBAwEAATgBBwE4AQcBEAEAARABAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
+        CwAAAk1TRnQBSQFMAgEBAwEAAUgBBwFIAQcBEAEAARABAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
         AwABQAMAARADAAEBAQABCAYAAQQYAAGAAgABgAMAAoABAAGAAwABgAEAAYABAAKAAgADwAEAAcAB3AHA
         AQAB8AHKAaYBAAEzBQABMwEAATMBAAEzAQACMwIAAxYBAAMcAQADIgEAAykBAANVAQADTQEAA0IBAAM5
         AQABgAF8Af8BAAJQAf8BAAGTAQAB1gEAAf8B7AHMAQABxgHWAe8BAAHWAucBAAGQAakBrQIAAf8BMwMA
@@ -23911,7 +23911,7 @@ Afin = keine Abweichung.</value>
     <value>NoControl</value>
   </data>
   <data name="button_nav_2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 48</value>
+    <value>0, 0</value>
   </data>
   <data name="button_nav_2.ShowHelp" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -23944,7 +23944,7 @@ Afin = keine Abweichung.</value>
     <value>NoControl</value>
   </data>
   <data name="button_nav_3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 96</value>
+    <value>0, 48</value>
   </data>
   <data name="button_nav_3.ShowHelp" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -23980,7 +23980,7 @@ Afin = keine Abweichung.</value>
     <value>NoControl</value>
   </data>
   <data name="button_nav_4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 144</value>
+    <value>0, 96</value>
   </data>
   <data name="button_nav_4.ShowHelp" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -24016,7 +24016,7 @@ Afin = keine Abweichung.</value>
     <value>NoControl</value>
   </data>
   <data name="button_nav_5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 192</value>
+    <value>0, 144</value>
   </data>
   <data name="button_nav_5.ShowHelp" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -24052,7 +24052,7 @@ Afin = keine Abweichung.</value>
     <value>NoControl</value>
   </data>
   <data name="button__nav_6.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 240</value>
+    <value>0, 192</value>
   </data>
   <data name="button__nav_6.ShowHelp" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -24088,7 +24088,7 @@ Afin = keine Abweichung.</value>
     <value>NoControl</value>
   </data>
   <data name="button_nav_7.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 336</value>
+    <value>0, 288</value>
   </data>
   <data name="button_nav_7.ShowHelp" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -24124,7 +24124,7 @@ Afin = keine Abweichung.</value>
     <value>NoControl</value>
   </data>
   <data name="button_nav_8.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 288</value>
+    <value>0, 240</value>
   </data>
   <data name="button_nav_8.ShowHelp" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -24160,7 +24160,7 @@ Afin = keine Abweichung.</value>
     <value>NoControl</value>
   </data>
   <data name="button_nav_9.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 384</value>
+    <value>0, 336</value>
   </data>
   <data name="button_nav_9.ShowHelp" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -24197,7 +24197,7 @@ Afin = keine Abweichung.</value>
         AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
         LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
         ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAAAM
-        CAAAAk1TRnQBSQFMAgEBAgEAAfgBBAH4AQQBEAEAARABAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
+        CAAAAk1TRnQBSQFMAgEBAgEAAQgBBQEIAQUBEAEAARABAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
         AwABQAMAARADAAEBAQABCAYAAQQYAAGAAgABgAMAAoABAAGAAwABgAEAAYABAAKAAgADwAEAAcAB3AHA
         AQAB8AHKAaYBAAEzBQABMwEAATMBAAEzAQACMwIAAxYBAAMcAQADIgEAAykBAANVAQADTQEAA0IBAAM5
         AQABgAF8Af8BAAJQAf8BAAGTAQAB1gEAAf8B7AHMAQABxgHWAe8BAAHWAucBAAGQAakBrQIAAf8BMwMA
@@ -24247,7 +24247,7 @@ Afin = keine Abweichung.</value>
     <value>0, 0</value>
   </data>
   <data name="nav_button_1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>111, 50</value>
+    <value>0, 0</value>
   </data>
   <data name="nav_button_1.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -24274,7 +24274,7 @@ Afin = keine Abweichung.</value>
     <value>0, 27</value>
   </data>
   <data name="NavPanel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>111, 535</value>
+    <value>111, 386</value>
   </data>
   <data name="NavPanel.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>

@@ -21,7 +21,22 @@ namespace ToolFahrrad_v1.Design
     /// </summary>
     partial class Fahrrad
     {
-
+        /// <summary>
+        /// set color of buttons
+        /// </summary>
+        /// <param name="sender"></param>
+        private void reset_buttons(object sender)
+        {
+            this.button_nav_2.BackColor = ButtonBase.DefaultBackColor;
+            this.button_nav_3.BackColor = ButtonBase.DefaultBackColor;
+            this.button_nav_4.BackColor = ButtonBase.DefaultBackColor;
+            this.button_nav_5.BackColor = ButtonBase.DefaultBackColor;
+            this.button__nav_6.BackColor = ButtonBase.DefaultBackColor;
+            this.button_nav_7.BackColor = ButtonBase.DefaultBackColor;
+            this.button_nav_8.BackColor = ButtonBase.DefaultBackColor;
+            this.button_nav_9.BackColor = ButtonBase.DefaultBackColor;
+            ((Button)sender).BackColor = System.Drawing.Color.LightGray;
+        }
 
         /// <summary>
         /// 1. Button links
@@ -30,7 +45,9 @@ namespace ToolFahrrad_v1.Design
         /// <param name="e"></param>
         private void nav_button_1_Click(object sender, EventArgs e)
         {
+            this.reset_buttons(sender);
             tabs.SelectedTab = tab_xml;
+            
         }
 
         /// <summary>
@@ -40,6 +57,7 @@ namespace ToolFahrrad_v1.Design
         /// <param name="e"></param>
         private void button_nav_2_Click(object sender, EventArgs e)
         {
+            this.reset_buttons(sender);
             tabs.SelectedTab = tab_xml;
         }
 
@@ -50,6 +68,7 @@ namespace ToolFahrrad_v1.Design
         /// <param name="e"></param>
         private void button_nav_3_Click(object sender, EventArgs e)
         {
+            this.reset_buttons(sender);
             tabs.SelectedTab = tab_produktion;
         }
 
@@ -60,6 +79,7 @@ namespace ToolFahrrad_v1.Design
         /// <param name="e"></param>
         private void button_nav_4_Click(object sender, EventArgs e)
         {
+            this.reset_buttons(sender);
             lblausgabe2viewap.Text = "";
             lblausgabeviewap.Text = "";
             tabs.SelectedTab = tab_arbeitzeit;
@@ -72,6 +92,7 @@ namespace ToolFahrrad_v1.Design
         /// <param name="e"></param>
         private void button_nav_5_Click(object sender, EventArgs e)
         {
+            this.reset_buttons(sender);
             tabs.SelectedTab = tab_bestellverwaltung;
         }
         
@@ -82,6 +103,7 @@ namespace ToolFahrrad_v1.Design
         /// <param name="e"></param>
         private void button_nav_6_Click(object sender, EventArgs e)
         {
+            this.reset_buttons(sender);
             this.Select_Marketplace();
         }
 
@@ -128,11 +150,9 @@ namespace ToolFahrrad_v1.Design
         /// <param name="e"></param>
         private void button_nav_8_Click(object sender, EventArgs e)
         {
+            this.reset_buttons(sender);
             tabs.SelectedTab = tab_statistik;
-
-           
-
-
+         
         }
                 
 
@@ -143,6 +163,7 @@ namespace ToolFahrrad_v1.Design
         /// <param name="e"></param>
         private void button_nav_7_Click(object sender, EventArgs e)
         {
+            this.reset_buttons(sender); 
             tabs.SelectedTab = tab_beenden;
 
             XmlVorbereitung(100);
@@ -199,12 +220,14 @@ namespace ToolFahrrad_v1.Design
         /// <param name="e"></param>
         private void button_exportXml_Click(object sender, EventArgs e)
         {
+            this.reset_buttons(sender);
             XmlExport();
         }
 
 
         private void button_nav_9_Click(object sender, EventArgs e)
         {
+            this.reset_buttons(sender);
             var einstellungen = new Einstellungen();
             tabs.SelectedTab = tab_einstellungen;
         }

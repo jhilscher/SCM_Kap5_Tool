@@ -8033,7 +8033,7 @@
             // 
             // button_nav_2
             // 
-            this.button_nav_2.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.button_nav_2.BackColor = System.Drawing.Color.LightGray;
             this.button_nav_2.Image = global::ToolFahrrad_v1.Properties.Resources.Home;
             resources.ApplyResources(this.button_nav_2, "button_nav_2");
             this.button_nav_2.Name = "button_nav_2";

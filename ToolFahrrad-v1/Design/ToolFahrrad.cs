@@ -1512,6 +1512,8 @@ namespace ToolFahrrad_v1.Design
             {
                 index = 0;
                 DataGriedViewRemove(dataGridViewProduktKapazit);
+                if (_xmlAp == null)
+                    return;
                 foreach (int[] i in _xmlAp)
                 {
                     dataGridViewProduktKapazit.Rows.Add();
