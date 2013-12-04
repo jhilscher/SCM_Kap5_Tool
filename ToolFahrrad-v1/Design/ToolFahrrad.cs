@@ -1305,7 +1305,7 @@ namespace ToolFahrrad_v1.Design
         }
         private void startSeiteToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            System.Diagnostics.Process.Start("http://scsim.de/");
+            
         }
         private void englischToolStripMenuItem1_Click(object sender, EventArgs e)
         {
@@ -1372,7 +1372,7 @@ namespace ToolFahrrad_v1.Design
         }
         private void videoF2ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            VideoTutorial();
+            System.Diagnostics.Process.Start("http://scsim.de/");
         }
         protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
         {

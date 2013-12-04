@@ -439,6 +439,7 @@
             this.p2vw_0 = new System.Windows.Forms.TextBox();
             this.tab_P3 = new System.Windows.Forms.TabPage();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.label288 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
             this.label_mehrfachverwendung_p3 = new System.Windows.Forms.Label();
             this.label181 = new System.Windows.Forms.Label();
@@ -824,8 +825,6 @@
             this.deutschToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.englischToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.gewichtungToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.scimToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.startSeiteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
             this.info = new System.Windows.Forms.Label();
             this.imageListAmpel = new System.Windows.Forms.ImageList(this.components);
@@ -4612,6 +4611,7 @@
             // 
             // panel3
             // 
+            this.panel3.Controls.Add(this.label288);
             this.panel3.Controls.Add(this.button3);
             this.panel3.Controls.Add(this.label_mehrfachverwendung_p3);
             this.panel3.Controls.Add(this.label181);
@@ -4790,6 +4790,12 @@
             resources.ApplyResources(this.panel3, "panel3");
             this.panel3.Name = "panel3";
             this.helpProvider1.SetShowHelp(this.panel3, ((bool)(resources.GetObject("panel3.ShowHelp"))));
+            // 
+            // label288
+            // 
+            resources.ApplyResources(this.label288, "label288");
+            this.label288.Name = "label288";
+            this.helpProvider1.SetShowHelp(this.label288, ((bool)(resources.GetObject("label288.ShowHelp"))));
             // 
             // button3
             // 
@@ -7900,8 +7906,7 @@
             this.menu.BackColor = System.Drawing.Color.Transparent;
             this.menu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.dateiToolStripMenuItem,
-            this.einstellungenToolStripMenuItem,
-            this.scimToolStripMenuItem});
+            this.einstellungenToolStripMenuItem});
             resources.ApplyResources(this.menu, "menu");
             this.menu.Name = "menu";
             this.helpProvider1.SetShowHelp(this.menu, ((bool)(resources.GetObject("menu.ShowHelp"))));
@@ -8006,19 +8011,6 @@
             this.gewichtungToolStripMenuItem.Name = "gewichtungToolStripMenuItem";
             resources.ApplyResources(this.gewichtungToolStripMenuItem, "gewichtungToolStripMenuItem");
             this.gewichtungToolStripMenuItem.Click += new System.EventHandler(this.gewichtungToolStripMenuItem_Click);
-            // 
-            // scimToolStripMenuItem
-            // 
-            this.scimToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.startSeiteToolStripMenuItem});
-            this.scimToolStripMenuItem.Name = "scimToolStripMenuItem";
-            resources.ApplyResources(this.scimToolStripMenuItem, "scimToolStripMenuItem");
-            // 
-            // startSeiteToolStripMenuItem
-            // 
-            this.startSeiteToolStripMenuItem.Name = "startSeiteToolStripMenuItem";
-            resources.ApplyResources(this.startSeiteToolStripMenuItem, "startSeiteToolStripMenuItem");
-            this.startSeiteToolStripMenuItem.Click += new System.EventHandler(this.startSeiteToolStripMenuItem_Click);
             // 
             // info
             // 
@@ -8287,8 +8279,6 @@
         private System.Windows.Forms.ImageList imageListAmpel;
         private System.Windows.Forms.ToolStripMenuItem gewichtungToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem handbuchToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem scimToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem startSeiteToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem spracheToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem deutschToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem englischToolStripMenuItem1;
@@ -9082,6 +9072,7 @@
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Label lblausgabe2viewap;
         private System.Windows.Forms.Label lblausgabeviewap;
+        private System.Windows.Forms.Label label288;
         
     }
 }
