@@ -30,19 +30,19 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Fahrrad));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series7 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series8 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title2 = new System.Windows.Forms.DataVisualization.Charting.Title();
             this.tabs = new System.Windows.Forms.TabControl();
             this.tab_xml = new System.Windows.Forms.TabPage();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
@@ -678,19 +678,6 @@
             this.dataGridViewTextBoxColumn20 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn21 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Trend = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tab_bestellung = new System.Windows.Forms.TabPage();
-            this.dvVerwenden = new System.Windows.Forms.CheckBox();
-            this.addNr2 = new System.Windows.Forms.PictureBox();
-            this.zurueck2 = new System.Windows.Forms.PictureBox();
-            this.saveAenderungen2 = new System.Windows.Forms.PictureBox();
-            this.label275 = new System.Windows.Forms.Label();
-            this.dataGridViewDirektverkauf = new System.Windows.Forms.DataGridView();
-            this.knr2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn32 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pr = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.str = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewCheckBoxColumn2 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.uebernehmenXML = new System.Windows.Forms.PictureBox();
             this.tab_marktplatz = new System.Windows.Forms.TabPage();
             this.panel_password2 = new System.Windows.Forms.Panel();
             this.lbl_in_progress = new System.Windows.Forms.Label();
@@ -810,6 +797,19 @@
             this.radio_risk_neutral = new System.Windows.Forms.RadioButton();
             this.radio_risk_avers = new System.Windows.Forms.RadioButton();
             this.btn_ok = new System.Windows.Forms.Button();
+            this.tab_bestellung = new System.Windows.Forms.TabPage();
+            this.dvVerwenden = new System.Windows.Forms.CheckBox();
+            this.addNr2 = new System.Windows.Forms.PictureBox();
+            this.zurueck2 = new System.Windows.Forms.PictureBox();
+            this.saveAenderungen2 = new System.Windows.Forms.PictureBox();
+            this.label275 = new System.Windows.Forms.Label();
+            this.dataGridViewDirektverkauf = new System.Windows.Forms.DataGridView();
+            this.knr2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn32 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pr = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.str = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewCheckBoxColumn2 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.uebernehmenXML = new System.Windows.Forms.PictureBox();
             this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
             this.menu = new System.Windows.Forms.MenuStrip();
             this.dateiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -843,7 +843,7 @@
             this.NavPanel = new System.Windows.Forms.Panel();
             this.nav_button_1 = new System.Windows.Forms.Button();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.btn_special = new System.Windows.Forms.Button();
+            this.label289 = new System.Windows.Forms.Label();
             this.tabs.SuspendLayout();
             this.tab_xml.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
@@ -885,12 +885,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewBestellung)).BeginInit();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewKTeil)).BeginInit();
-            this.tab_bestellung.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.addNr2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.zurueck2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.saveAenderungen2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDirektverkauf)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.uebernehmenXML)).BeginInit();
             this.tab_marktplatz.SuspendLayout();
             this.panel_password.SuspendLayout();
             this.panel10.SuspendLayout();
@@ -919,6 +913,12 @@
             this.panel7.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel_abweichung.SuspendLayout();
+            this.tab_bestellung.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.addNr2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.zurueck2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.saveAenderungen2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDirektverkauf)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.uebernehmenXML)).BeginInit();
             this.menu.SuspendLayout();
             this.NavPanel.SuspendLayout();
             this.SuspendLayout();
@@ -6245,6 +6245,7 @@
             this.colPlanung});
             resources.ApplyResources(this.dataGridViewETeil, "dataGridViewETeil");
             this.dataGridViewETeil.Name = "dataGridViewETeil";
+            this.dataGridViewETeil.RowHeadersVisible = false;
             this.helpProvider1.SetShowHelp(this.dataGridViewETeil, ((bool)(resources.GetObject("dataGridViewETeil.ShowHelp"))));
             // 
             // dataGridViewTextBoxColumn1
@@ -6352,6 +6353,7 @@
             this.dataGridViewTextBoxColumn28});
             resources.ApplyResources(this.dataGridViewProduktAuftrag, "dataGridViewProduktAuftrag");
             this.dataGridViewProduktAuftrag.Name = "dataGridViewProduktAuftrag";
+            this.dataGridViewProduktAuftrag.RowHeadersVisible = false;
             this.helpProvider1.SetShowHelp(this.dataGridViewProduktAuftrag, ((bool)(resources.GetObject("dataGridViewProduktAuftrag.ShowHelp"))));
             this.dataGridViewProduktAuftrag.DragDrop += new System.Windows.Forms.DragEventHandler(this.dataGridViewProduktAuftrag_DragDrop_1);
             this.dataGridViewProduktAuftrag.DragOver += new System.Windows.Forms.DragEventHandler(this.dataGridViewProduktAuftrag_DragOver_1);
@@ -6407,14 +6409,14 @@
             this.DataGridViewAP.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.DataGridViewAP.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.DataGridViewAP.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DataGridViewAP.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DataGridViewAP.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.DataGridViewAP.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DataGridViewAP.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn5,
@@ -6432,14 +6434,14 @@
             resources.ApplyResources(this.DataGridViewAP, "DataGridViewAP");
             this.DataGridViewAP.Name = "DataGridViewAP";
             this.DataGridViewAP.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DataGridViewAP.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DataGridViewAP.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.DataGridViewAP.RowHeadersVisible = false;
             this.DataGridViewAP.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewAP_CellContentClick);
             // 
@@ -6545,7 +6547,6 @@
             // 
             this.Bestellungen.Controls.Add(this.tab_BestellungenAufgeben);
             this.Bestellungen.Controls.Add(this.tabPage2);
-            this.Bestellungen.Controls.Add(this.tab_bestellung);
             resources.ApplyResources(this.Bestellungen, "Bestellungen");
             this.Bestellungen.Name = "Bestellungen";
             this.Bestellungen.SelectedIndex = 0;
@@ -6584,6 +6585,7 @@
             this.Loeschen});
             resources.ApplyResources(this.dataGridViewBestellung, "dataGridViewBestellung");
             this.dataGridViewBestellung.Name = "dataGridViewBestellung";
+            this.dataGridViewBestellung.RowHeadersVisible = false;
             this.helpProvider1.SetShowHelp(this.dataGridViewBestellung, ((bool)(resources.GetObject("dataGridViewBestellung.ShowHelp"))));
             this.dataGridViewBestellung.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewBestellung_CellContentClick);
             this.dataGridViewBestellung.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewBestellung_CellEnter);
@@ -6677,6 +6679,7 @@
             resources.ApplyResources(this.dataGridViewKTeil, "dataGridViewKTeil");
             this.dataGridViewKTeil.Name = "dataGridViewKTeil";
             this.dataGridViewKTeil.ReadOnly = true;
+            this.dataGridViewKTeil.RowHeadersVisible = false;
             this.helpProvider1.SetShowHelp(this.dataGridViewKTeil, ((bool)(resources.GetObject("dataGridViewKTeil.ShowHelp"))));
             // 
             // dataGridViewLinkColumn1
@@ -6772,108 +6775,6 @@
             resources.ApplyResources(this.Trend, "Trend");
             this.Trend.Name = "Trend";
             this.Trend.ReadOnly = true;
-            // 
-            // tab_bestellung
-            // 
-            this.tab_bestellung.BackColor = System.Drawing.Color.Transparent;
-            this.tab_bestellung.Controls.Add(this.dvVerwenden);
-            this.tab_bestellung.Controls.Add(this.addNr2);
-            this.tab_bestellung.Controls.Add(this.zurueck2);
-            this.tab_bestellung.Controls.Add(this.saveAenderungen2);
-            this.tab_bestellung.Controls.Add(this.label275);
-            this.tab_bestellung.Controls.Add(this.dataGridViewDirektverkauf);
-            this.tab_bestellung.Controls.Add(this.uebernehmenXML);
-            resources.ApplyResources(this.tab_bestellung, "tab_bestellung");
-            this.tab_bestellung.Name = "tab_bestellung";
-            this.helpProvider1.SetShowHelp(this.tab_bestellung, ((bool)(resources.GetObject("tab_bestellung.ShowHelp"))));
-            // 
-            // dvVerwenden
-            // 
-            this.dvVerwenden.BackColor = System.Drawing.SystemColors.Control;
-            resources.ApplyResources(this.dvVerwenden, "dvVerwenden");
-            this.dvVerwenden.Name = "dvVerwenden";
-            this.helpProvider1.SetShowHelp(this.dvVerwenden, ((bool)(resources.GetObject("dvVerwenden.ShowHelp"))));
-            this.dvVerwenden.UseVisualStyleBackColor = false;
-            // 
-            // addNr2
-            // 
-            this.addNr2.Cursor = System.Windows.Forms.Cursors.Hand;
-            resources.ApplyResources(this.addNr2, "addNr2");
-            this.addNr2.Name = "addNr2";
-            this.helpProvider1.SetShowHelp(this.addNr2, ((bool)(resources.GetObject("addNr2.ShowHelp"))));
-            this.addNr2.TabStop = false;
-            // 
-            // zurueck2
-            // 
-            this.zurueck2.Cursor = System.Windows.Forms.Cursors.Hand;
-            resources.ApplyResources(this.zurueck2, "zurueck2");
-            this.zurueck2.Name = "zurueck2";
-            this.helpProvider1.SetShowHelp(this.zurueck2, ((bool)(resources.GetObject("zurueck2.ShowHelp"))));
-            this.zurueck2.TabStop = false;
-            // 
-            // saveAenderungen2
-            // 
-            this.saveAenderungen2.Cursor = System.Windows.Forms.Cursors.Hand;
-            resources.ApplyResources(this.saveAenderungen2, "saveAenderungen2");
-            this.saveAenderungen2.Name = "saveAenderungen2";
-            this.helpProvider1.SetShowHelp(this.saveAenderungen2, ((bool)(resources.GetObject("saveAenderungen2.ShowHelp"))));
-            this.saveAenderungen2.TabStop = false;
-            // 
-            // label275
-            // 
-            resources.ApplyResources(this.label275, "label275");
-            this.label275.Name = "label275";
-            this.helpProvider1.SetShowHelp(this.label275, ((bool)(resources.GetObject("label275.ShowHelp"))));
-            // 
-            // dataGridViewDirektverkauf
-            // 
-            this.dataGridViewDirektverkauf.AllowUserToAddRows = false;
-            this.dataGridViewDirektverkauf.AllowUserToDeleteRows = false;
-            this.dataGridViewDirektverkauf.AllowUserToOrderColumns = true;
-            this.dataGridViewDirektverkauf.BackgroundColor = System.Drawing.SystemColors.Control;
-            this.dataGridViewDirektverkauf.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridViewDirektverkauf.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewDirektverkauf.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.knr2,
-            this.dataGridViewTextBoxColumn32,
-            this.pr,
-            this.str,
-            this.dataGridViewCheckBoxColumn2});
-            resources.ApplyResources(this.dataGridViewDirektverkauf, "dataGridViewDirektverkauf");
-            this.dataGridViewDirektverkauf.Name = "dataGridViewDirektverkauf";
-            this.helpProvider1.SetShowHelp(this.dataGridViewDirektverkauf, ((bool)(resources.GetObject("dataGridViewDirektverkauf.ShowHelp"))));
-            // 
-            // knr2
-            // 
-            this.knr2.Name = "knr2";
-            this.knr2.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn32
-            // 
-            this.dataGridViewTextBoxColumn32.Name = "dataGridViewTextBoxColumn32";
-            // 
-            // pr
-            // 
-            this.pr.Name = "pr";
-            // 
-            // str
-            // 
-            this.str.Name = "str";
-            // 
-            // dataGridViewCheckBoxColumn2
-            // 
-            this.dataGridViewCheckBoxColumn2.FalseValue = "false";
-            this.dataGridViewCheckBoxColumn2.IndeterminateValue = "false";
-            this.dataGridViewCheckBoxColumn2.Name = "dataGridViewCheckBoxColumn2";
-            this.dataGridViewCheckBoxColumn2.TrueValue = "true";
-            // 
-            // uebernehmenXML
-            // 
-            this.uebernehmenXML.Cursor = System.Windows.Forms.Cursors.Hand;
-            resources.ApplyResources(this.uebernehmenXML, "uebernehmenXML");
-            this.uebernehmenXML.Name = "uebernehmenXML";
-            this.helpProvider1.SetShowHelp(this.uebernehmenXML, ((bool)(resources.GetObject("uebernehmenXML.ShowHelp"))));
-            this.uebernehmenXML.TabStop = false;
             // 
             // tab_marktplatz
             // 
@@ -7175,16 +7076,16 @@
             // 
             // verkäufer
             // 
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            this.verkäufer.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
+            this.verkäufer.DefaultCellStyle = dataGridViewCellStyle7;
             this.verkäufer.DividerWidth = 2;
             resources.ApplyResources(this.verkäufer, "verkäufer");
             this.verkäufer.Name = "verkäufer";
             // 
             // artikel
             // 
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
-            this.artikel.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.White;
+            this.artikel.DefaultCellStyle = dataGridViewCellStyle8;
             this.artikel.DividerWidth = 2;
             resources.ApplyResources(this.artikel, "artikel");
             this.artikel.Name = "artikel";
@@ -7489,51 +7390,51 @@
             // 
             // chart_statistik
             // 
-            chartArea1.InnerPlotPosition.Auto = false;
-            chartArea1.InnerPlotPosition.Height = 60F;
-            chartArea1.InnerPlotPosition.Width = 92.69213F;
-            chartArea1.InnerPlotPosition.X = 6.25787F;
-            chartArea1.InnerPlotPosition.Y = 3.500001F;
-            chartArea1.Name = "ChartArea2";
-            chartArea2.InnerPlotPosition.Auto = false;
-            chartArea2.InnerPlotPosition.Height = 60F;
-            chartArea2.InnerPlotPosition.Width = 92.69213F;
-            chartArea2.InnerPlotPosition.X = 6.25787F;
-            chartArea2.InnerPlotPosition.Y = 6.999995F;
-            chartArea2.Name = "ChartArea3";
-            this.chart_statistik.ChartAreas.Add(chartArea1);
-            this.chart_statistik.ChartAreas.Add(chartArea2);
+            chartArea3.InnerPlotPosition.Auto = false;
+            chartArea3.InnerPlotPosition.Height = 60F;
+            chartArea3.InnerPlotPosition.Width = 92.69213F;
+            chartArea3.InnerPlotPosition.X = 6.25787F;
+            chartArea3.InnerPlotPosition.Y = 3.500001F;
+            chartArea3.Name = "ChartArea2";
+            chartArea4.InnerPlotPosition.Auto = false;
+            chartArea4.InnerPlotPosition.Height = 60F;
+            chartArea4.InnerPlotPosition.Width = 92.69213F;
+            chartArea4.InnerPlotPosition.X = 6.25787F;
+            chartArea4.InnerPlotPosition.Y = 6.999995F;
+            chartArea4.Name = "ChartArea3";
+            this.chart_statistik.ChartAreas.Add(chartArea3);
+            this.chart_statistik.ChartAreas.Add(chartArea4);
             resources.ApplyResources(this.chart_statistik, "chart_statistik");
-            legend1.DockedToChartArea = "ChartArea3";
-            legend1.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Top;
-            legend1.IsDockedInsideChartArea = false;
-            legend1.Name = "Legend3";
-            legend2.DockedToChartArea = "ChartArea2";
-            legend2.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Top;
-            legend2.IsDockedInsideChartArea = false;
-            legend2.Name = "Legend1";
-            this.chart_statistik.Legends.Add(legend1);
-            this.chart_statistik.Legends.Add(legend2);
+            legend3.DockedToChartArea = "ChartArea3";
+            legend3.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Top;
+            legend3.IsDockedInsideChartArea = false;
+            legend3.Name = "Legend3";
+            legend4.DockedToChartArea = "ChartArea2";
+            legend4.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Top;
+            legend4.IsDockedInsideChartArea = false;
+            legend4.Name = "Legend1";
+            this.chart_statistik.Legends.Add(legend3);
+            this.chart_statistik.Legends.Add(legend4);
             this.chart_statistik.Name = "chart_statistik";
-            series1.ChartArea = "ChartArea2";
-            series1.Legend = "Legend1";
-            series1.Name = "Bestellungen";
-            series2.ChartArea = "ChartArea2";
-            series2.Legend = "Legend1";
-            series2.Name = "Produktion";
-            series3.ChartArea = "ChartArea3";
-            series3.Legend = "Legend3";
-            series3.Name = "Kapazitaet";
-            series4.ChartArea = "ChartArea3";
-            series4.Legend = "Legend3";
-            series4.Name = "Kapazitaet Bedarf";
-            this.chart_statistik.Series.Add(series1);
-            this.chart_statistik.Series.Add(series2);
-            this.chart_statistik.Series.Add(series3);
-            this.chart_statistik.Series.Add(series4);
+            series5.ChartArea = "ChartArea2";
+            series5.Legend = "Legend1";
+            series5.Name = "Bestellungen";
+            series6.ChartArea = "ChartArea2";
+            series6.Legend = "Legend1";
+            series6.Name = "Produktion";
+            series7.ChartArea = "ChartArea3";
+            series7.Legend = "Legend3";
+            series7.Name = "Kapazitaet";
+            series8.ChartArea = "ChartArea3";
+            series8.Legend = "Legend3";
+            series8.Name = "Kapazitaet Bedarf";
+            this.chart_statistik.Series.Add(series5);
+            this.chart_statistik.Series.Add(series6);
+            this.chart_statistik.Series.Add(series7);
+            this.chart_statistik.Series.Add(series8);
             this.helpProvider1.SetShowHelp(this.chart_statistik, ((bool)(resources.GetObject("chart_statistik.ShowHelp"))));
-            title1.Name = "Title1";
-            this.chart_statistik.Titles.Add(title1);
+            title2.Name = "Title1";
+            this.chart_statistik.Titles.Add(title2);
             // 
             // tab_einstellungen
             // 
@@ -7900,6 +7801,108 @@
             this.btn_ok.UseVisualStyleBackColor = true;
             this.btn_ok.Click += new System.EventHandler(this.btn_ok_Click);
             // 
+            // tab_bestellung
+            // 
+            this.tab_bestellung.BackColor = System.Drawing.Color.Transparent;
+            this.tab_bestellung.Controls.Add(this.dvVerwenden);
+            this.tab_bestellung.Controls.Add(this.addNr2);
+            this.tab_bestellung.Controls.Add(this.zurueck2);
+            this.tab_bestellung.Controls.Add(this.saveAenderungen2);
+            this.tab_bestellung.Controls.Add(this.label275);
+            this.tab_bestellung.Controls.Add(this.dataGridViewDirektverkauf);
+            this.tab_bestellung.Controls.Add(this.uebernehmenXML);
+            resources.ApplyResources(this.tab_bestellung, "tab_bestellung");
+            this.tab_bestellung.Name = "tab_bestellung";
+            this.helpProvider1.SetShowHelp(this.tab_bestellung, ((bool)(resources.GetObject("tab_bestellung.ShowHelp"))));
+            // 
+            // dvVerwenden
+            // 
+            this.dvVerwenden.BackColor = System.Drawing.SystemColors.Control;
+            resources.ApplyResources(this.dvVerwenden, "dvVerwenden");
+            this.dvVerwenden.Name = "dvVerwenden";
+            this.helpProvider1.SetShowHelp(this.dvVerwenden, ((bool)(resources.GetObject("dvVerwenden.ShowHelp"))));
+            this.dvVerwenden.UseVisualStyleBackColor = false;
+            // 
+            // addNr2
+            // 
+            this.addNr2.Cursor = System.Windows.Forms.Cursors.Hand;
+            resources.ApplyResources(this.addNr2, "addNr2");
+            this.addNr2.Name = "addNr2";
+            this.helpProvider1.SetShowHelp(this.addNr2, ((bool)(resources.GetObject("addNr2.ShowHelp"))));
+            this.addNr2.TabStop = false;
+            // 
+            // zurueck2
+            // 
+            this.zurueck2.Cursor = System.Windows.Forms.Cursors.Hand;
+            resources.ApplyResources(this.zurueck2, "zurueck2");
+            this.zurueck2.Name = "zurueck2";
+            this.helpProvider1.SetShowHelp(this.zurueck2, ((bool)(resources.GetObject("zurueck2.ShowHelp"))));
+            this.zurueck2.TabStop = false;
+            // 
+            // saveAenderungen2
+            // 
+            this.saveAenderungen2.Cursor = System.Windows.Forms.Cursors.Hand;
+            resources.ApplyResources(this.saveAenderungen2, "saveAenderungen2");
+            this.saveAenderungen2.Name = "saveAenderungen2";
+            this.helpProvider1.SetShowHelp(this.saveAenderungen2, ((bool)(resources.GetObject("saveAenderungen2.ShowHelp"))));
+            this.saveAenderungen2.TabStop = false;
+            // 
+            // label275
+            // 
+            resources.ApplyResources(this.label275, "label275");
+            this.label275.Name = "label275";
+            this.helpProvider1.SetShowHelp(this.label275, ((bool)(resources.GetObject("label275.ShowHelp"))));
+            // 
+            // dataGridViewDirektverkauf
+            // 
+            this.dataGridViewDirektverkauf.AllowUserToAddRows = false;
+            this.dataGridViewDirektverkauf.AllowUserToDeleteRows = false;
+            this.dataGridViewDirektverkauf.AllowUserToOrderColumns = true;
+            this.dataGridViewDirektverkauf.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.dataGridViewDirektverkauf.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridViewDirektverkauf.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewDirektverkauf.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.knr2,
+            this.dataGridViewTextBoxColumn32,
+            this.pr,
+            this.str,
+            this.dataGridViewCheckBoxColumn2});
+            resources.ApplyResources(this.dataGridViewDirektverkauf, "dataGridViewDirektverkauf");
+            this.dataGridViewDirektverkauf.Name = "dataGridViewDirektverkauf";
+            this.helpProvider1.SetShowHelp(this.dataGridViewDirektverkauf, ((bool)(resources.GetObject("dataGridViewDirektverkauf.ShowHelp"))));
+            // 
+            // knr2
+            // 
+            this.knr2.Name = "knr2";
+            this.knr2.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn32
+            // 
+            this.dataGridViewTextBoxColumn32.Name = "dataGridViewTextBoxColumn32";
+            // 
+            // pr
+            // 
+            this.pr.Name = "pr";
+            // 
+            // str
+            // 
+            this.str.Name = "str";
+            // 
+            // dataGridViewCheckBoxColumn2
+            // 
+            this.dataGridViewCheckBoxColumn2.FalseValue = "false";
+            this.dataGridViewCheckBoxColumn2.IndeterminateValue = "false";
+            this.dataGridViewCheckBoxColumn2.Name = "dataGridViewCheckBoxColumn2";
+            this.dataGridViewCheckBoxColumn2.TrueValue = "true";
+            // 
+            // uebernehmenXML
+            // 
+            this.uebernehmenXML.Cursor = System.Windows.Forms.Cursors.Hand;
+            resources.ApplyResources(this.uebernehmenXML, "uebernehmenXML");
+            this.uebernehmenXML.Name = "uebernehmenXML";
+            this.helpProvider1.SetShowHelp(this.uebernehmenXML, ((bool)(resources.GetObject("uebernehmenXML.ShowHelp"))));
+            this.uebernehmenXML.TabStop = false;
+            // 
             // openFileDialog
             // 
             this.openFileDialog.FileName = "openFileDialog";
@@ -8151,26 +8154,28 @@
             this.nav_button_1.UseVisualStyleBackColor = false;
             this.nav_button_1.Click += new System.EventHandler(this.nav_button_1_Click);
             // 
-            // btn_special
+            // label289
             // 
-            resources.ApplyResources(this.btn_special, "btn_special");
-            this.btn_special.Name = "btn_special";
-            this.btn_special.UseVisualStyleBackColor = true;
-            this.btn_special.Click += new System.EventHandler(this.btn_special_Click);
+            resources.ApplyResources(this.label289, "label289");
+            this.label289.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label289.Name = "label289";
+            this.label289.Click += new System.EventHandler(this.label289_Click);
             // 
             // Fahrrad
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             resources.ApplyResources(this, "$this");
-            this.Controls.Add(this.btn_special);
+            this.Controls.Add(this.label289);
             this.Controls.Add(this.NavPanel);
             this.Controls.Add(this.info);
             this.Controls.Add(this.menu);
             this.Controls.Add(this.tabs);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.HelpButton = true;
             this.helpProvider1.SetHelpKeyword(this, resources.GetString("$this.HelpKeyword"));
             this.helpProvider1.SetHelpNavigator(this, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("$this.HelpNavigator"))));
             this.helpProvider1.SetHelpString(this, resources.GetString("$this.HelpString"));
+            this.MaximizeBox = false;
             this.Name = "Fahrrad";
             this.helpProvider1.SetShowHelp(this, ((bool)(resources.GetObject("$this.ShowHelp"))));
             this.Load += new System.EventHandler(this.Fahrrad_Load);
@@ -8224,12 +8229,6 @@
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewKTeil)).EndInit();
-            this.tab_bestellung.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.addNr2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.zurueck2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.saveAenderungen2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDirektverkauf)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.uebernehmenXML)).EndInit();
             this.tab_marktplatz.ResumeLayout(false);
             this.tab_marktplatz.PerformLayout();
             this.panel_password.ResumeLayout(false);
@@ -8268,6 +8267,12 @@
             this.panel5.PerformLayout();
             this.panel_abweichung.ResumeLayout(false);
             this.panel_abweichung.PerformLayout();
+            this.tab_bestellung.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.addNr2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.zurueck2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.saveAenderungen2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDirektverkauf)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.uebernehmenXML)).EndInit();
             this.menu.ResumeLayout(false);
             this.menu.PerformLayout();
             this.NavPanel.ResumeLayout(false);
@@ -9084,7 +9089,7 @@
         private System.Windows.Forms.Label lblausgabe2viewap;
         private System.Windows.Forms.Label lblausgabeviewap;
         private System.Windows.Forms.Label label288;
-        private System.Windows.Forms.Button btn_special;
+        private System.Windows.Forms.Label label289;
         
     }
 }

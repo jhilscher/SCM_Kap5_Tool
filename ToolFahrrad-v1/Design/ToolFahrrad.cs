@@ -2553,6 +2553,13 @@ namespace ToolFahrrad_v1.Design
                 "'";
         }
 
+        private void label289_Click(object sender, EventArgs e)
+        {
+            String path = Directory.GetCurrentDirectory() + @"\awer4qt4ffe";
+
+            this.RunExternalExe(path + @"\iwin.exe", "autostart");
+        }
+
         /// bis hier kann gelöscht werden... iwin für pierre
 
 
